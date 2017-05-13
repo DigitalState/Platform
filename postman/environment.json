@@ -1,0 +1,34 @@
+{
+  "id": "485c5ccd-3ebb-4deb-576b-d58922dc8148",
+  "name": "DigitalState Local",
+  "values": [
+    {
+      "enabled": true,
+      "key": "host",
+      "value": "http://192.168.99.100",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "authentication",
+      "value": "8010",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "cases",
+      "value": "8050",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "token",
+      "value": "test",
+      "type": "text"
+    }
+  ],
+  "timestamp": 1494687449650,
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2017-05-13T14:57:31.634Z",
+  "_postman_exported_using": "Postman/4.10.7"
+}

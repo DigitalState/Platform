@@ -1,0 +1,141 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DigitalState",
+		"_postman_id": "7aff3a6d-35c7-78fb-e720-28905d904109",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"description": "",
+			"item": [
+				{
+					"name": "/acl/permissions",
+					"request": {
+						"url": "{{host}}:{{authentication}}/app_dev.php/acl/permissions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/registration",
+					"request": {
+						"url": "{{host}}:{{authentication}}/app_dev.php/registration",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "user@ds",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "user",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/login_check",
+					"request": {
+						"url": "{{host}}:{{authentication}}/app_dev.php/login_check",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "user@ds",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "user",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cases",
+			"description": "",
+			"item": [
+				{
+					"name": "/cases",
+					"request": {
+						"url": "{{host}}:{{cases}}/app_dev.php/cases",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
