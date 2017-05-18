@@ -14,17 +14,17 @@
 				{
 					"name": "/acl/permissions",
 					"request": {
-						"url": "{{host}}:{{authentication}}/app_dev.php/acl/permissions",
+						"url": "{{authentication}}/app_dev.php/acl/permissions",
 						"method": "GET",
 						"header": [
 							{
-								"key": "Content-Type",
-								"value": "application/json",
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
 								"description": ""
 							},
 							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
+								"key": "Content-Type",
+								"value": "application/json",
 								"description": ""
 							}
 						],
@@ -39,7 +39,7 @@
 				{
 					"name": "/registration",
 					"request": {
-						"url": "{{host}}:{{authentication}}/app_dev.php/registration",
+						"url": "{{authentication}}/app_dev.php/registration",
 						"method": "POST",
 						"header": [
 							{
@@ -72,7 +72,7 @@
 				{
 					"name": "/login_check",
 					"request": {
-						"url": "{{host}}:{{authentication}}/app_dev.php/login_check",
+						"url": "{{authentication}}/app_dev.php/login_check",
 						"method": "POST",
 						"header": [
 							{
@@ -109,9 +109,31 @@
 			"description": "",
 			"item": [
 				{
+					"name": "/acl/permissions",
+					"request": {
+						"url": "{{cases}}/app_dev.php/acl/permissions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/cases",
 					"request": {
-						"url": "{{host}}:{{cases}}/app_dev.php/cases",
+						"url": "{{cases}}/app_dev.php/cases",
 						"method": "GET",
 						"header": [
 							{
@@ -131,6 +153,183 @@
 							}
 						],
 						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"description": "",
+			"item": [
+				{
+					"name": "/services",
+					"request": {
+						"url": "{{services}}/app_dev.php/services",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/services",
+					"request": {
+						"url": "{{services}}/app_dev.php/services",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"3f26e701-daf9-46c0-ae4d-d74f35eef278\",\r\n  \"title\": { \"en\": \"Service 1\" },\r\n  \"description\": { \"en\": \"Description\" },\r\n  \"presentation\": { \"en\": \"Presentation\" },\r\n  \"enabled\": true\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/submissions",
+					"request": {
+						"url": "{{services}}/app_dev.php/submissions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/submissions",
+					"request": {
+						"url": "{{services}}/app_dev.php/submissions",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"3f26e701-daf9-46c0-ae4d-d74f35eef278\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"0609ccde-e1d2-4c63-ae40-d9c52d14f235\",\r\n  \"service\": \"/app_dev.php/services/30d905f7-3ce7-4c88-a5e0-02d3ab0db082\",\r\n  \"data\": { \"test\":\"test\" }\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/categories",
+					"request": {
+						"url": "{{services}}/app_dev.php/categories",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/categories",
+					"request": {
+						"url": "{{services}}/app_dev.php/categories",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"f7711a36-53e7-4d43-8b2b-9d86b1dc7d49\",\r\n  \"title\": { \"en\":\"Category 1\" },\r\n  \"description\": { \"en\":\"Description\" },\r\n  \"presentation\": { \"en\":\"Presentation\" },\r\n  \"services\": [\r\n  ],\r\n  \"enabled\": true\r\n}"
+						},
 						"description": ""
 					},
 					"response": []
