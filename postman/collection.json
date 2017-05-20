@@ -160,6 +160,126 @@
 			]
 		},
 		{
+			"name": "Records",
+			"description": "",
+			"item": [
+				{
+					"name": "/records",
+					"request": {
+						"url": "{{records}}/app_dev.php/records",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/records",
+					"request": {
+						"url": "{{records}}/app_dev.php/records",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Record 1\" }\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/record-associations",
+					"request": {
+						"url": "{{records}}/app_dev.php/record-associations",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/record-associations",
+					"request": {
+						"url": "{{records}}/app_dev.php/record-associations",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"record\": \"/app_dev.php/records/9092335b-c0ab-4fa8-8a97-c101e14f8017\",\r\n  \"entity\": \"Case\",\r\n  \"entityUuid\": \"19ee32f9-0b1c-44ec-b497-a9d44fb55248\",\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"109a59c9-2752-44b7-994e-5eb3d713c888\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Services",
 			"description": "",
 			"item": [
