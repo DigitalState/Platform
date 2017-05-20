@@ -8,6 +8,126 @@
 	},
 	"item": [
 		{
+			"name": "Assets",
+			"description": "",
+			"item": [
+				{
+					"name": "/assets",
+					"request": {
+						"url": "{{assets}}/app_dev.php/assets",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/assets",
+					"request": {
+						"url": "{{assets}}/app_dev.php/assets",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Asset 1\" }\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/asset-associations",
+					"request": {
+						"url": "{{assets}}/app_dev.php/asset-associations",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/asset-associations",
+					"request": {
+						"url": "{{assets}}/app_dev.php/asset-associations",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"asset\": \"/app_dev.php/assets/16fab887-d04f-4bf1-8b71-23c88c501ebc\",\r\n  \"entity\": \"Case\",\r\n  \"entityUuid\": \"19ee32f9-0b1c-44ec-b497-a9d44fb55248\",\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"109a59c9-2752-44b7-994e-5eb3d713c888\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Authentication",
 			"description": "",
 			"item": [

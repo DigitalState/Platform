@@ -28,13 +28,25 @@
     },
     {
       "enabled": true,
+      "key": "records",
+      "value": "{{host}}:8052",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "assets",
+      "value": "{{host}}:8053",
+      "type": "text"
+    },
+    {
+      "enabled": true,
       "key": "token",
-      "value": "eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0lORElWSURVQUwiLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJ1c2VyQGRzIiwiaXAiOiIxOTIuMTY4Ljk5LjEiLCJjbGkiOiI1ZDlhMzdjNiIsImlkZW4iOiJJbmRpdmlkdWFsIiwiaWRlbl91dWlkIjoiNmVkOWY1ZTUtMmMwOC00N2VjLTgyOTUtZDZkMTVkYzgwM2U2IiwiZXhwIjoxNDk1MDc0NjkyLCJpYXQiOjE0OTUwNzEwOTJ9.klp1oE65L78NNNWOH3esve0clW_IuMDQx2KtWup-Hv7LQ17-QOG5JIJ42WiOLmCWj5JddgE9pFo1Q0qJTQVS1jGXFao245PTiDjPY0fUs1mZ6QRU_iYHFbGfuBGYdpCLuFiTzyE0EQJU78e28H4Fa2nsA0Lqo2yXpH1pz2LxhbXU81GxGWKyAVTAQHkYcNYVlp7s9QD2AuQBeFoRylM09NDku87uflQnJvDY8U1UhkNS1UVSVnIdxyITUFveU4jdkHYBHiXMfQp_8LRm8l9MkH57J0oYfJZ1v_DuuWcH0q7_dgHbYNdEbEvQGFRjs0yXrOKtL_SGODNZgUHqekyqF0E7UWS3n8EETxC0JfAlzeHphFiDaovBHeBt5jRmoWrfoKd9uHjfujkd4xOEyJwU3lf6u-ZjlxaYvcEj7AatXw1tfZwy4DIZCKRKzKHOGf5SeNxgOKgBfwwTad76G8J6QievzteMSPCZxaRD4kjLQhC-6E7Ay3vRR7e2RE_JkhYPcZA3k8dQGoD7i1NmWxeTx6q3qiYyy0WgJExgIy0Su4hIS9hQXQ9S7OvInWG2XN6H_rhTQyM2GbsBJUg3lVEZjKEswhBvMzEeDhDBZQVx7zYs7V2tCMB-zgH2KzpTZgWQmbV1onVSJJLligbFceY2r19DLBYUxWxGIlSyEwsfpEA",
+      "value": "eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0lORElWSURVQUwiLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJ1c2VyQGRzIiwiaXAiOiIxOTIuMTY4Ljk5LjEiLCJjbGkiOiI1ZDlhMzdjNiIsImlkZW4iOiJJbmRpdmlkdWFsIiwiaWRlbl91dWlkIjoiNmVkOWY1ZTUtMmMwOC00N2VjLTgyOTUtZDZkMTVkYzgwM2U2IiwiZXhwIjoxNDk1Mjk4MjY0LCJpYXQiOjE0OTUyOTQ2NjR9.wDEbhuwBHZs3dPgdJHVbR0JEmUzylqXxq6n__6TeQBxENdWgSK_B9JhtJksN4yOhoXa1dsZKNZ7q1Gu14plkUF4qTKAuvS5qYvNPQPk5Yqw31mkuFvlZslg_cnlTdXkMrvgYEWbI1w5BzJ9yFsjqLUuFbMM3GxlspZ8myRQTHoq_c6INIrx1EHnXyfCo-Ql6yFot9vJLvm1iCITiy_zDEofeU5EfT56UDJCB_Db397ni0g329mAJWf86xrMa3Nrx3B37Dnc4qXSZvt_SmrlQ99UMdYDmv1rrG5e1FVfXmXekxvZ_NUodWqBIX-JkBrL4IiH_wmO6JvAlpTvMbyKu7obLhe3LfOXY8Tr5BQJkpOH91g2MtZSKVccmJF50yykgyUk1HNPF_BDtxxpbAo-Gf6r-rAwBOuQ4THOY1sdlYqcEqDxG_2dIfJqH6TOXrHAmX_xei6Dmmjwa_bJgxTOWZJDiLQXoiA8CoDhQoYIj3v3BXIFmBzsyG3M0Ht3jVWpCLjWSOSvHygSQe_nBwO7hbHILj2ovy0HR6TmH3hJA55d3sHMbSiJS2of1L-TxdRjsyCme2A05MF01Zoo3uwYjyCEKt4etQJcDJe7OFZErJPS4vqcGSNpQqpI46ohEwMkhsWBOkuUcougRP-GHSrgmyxbBtsm69BLW_hZ9y_-IUoE",
       "type": "text"
     }
   ],
-  "timestamp": 1495071097120,
+  "timestamp": 1495294676717,
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2017-05-18T01:38:42.866Z",
+  "_postman_exported_at": "2017-05-20T15:54:48.015Z",
   "_postman_exported_using": "Postman/4.10.7"
 }
