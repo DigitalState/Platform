@@ -12,9 +12,31 @@
 			"description": "",
 			"item": [
 				{
+					"name": "/acl/permissions",
+					"request": {
+						"url": "{{assets}}{{environment}}/acl/permissions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/assets",
 					"request": {
-						"url": "{{assets}}/app_dev.php/assets",
+						"url": "{{assets}}{{environment}}/assets",
 						"method": "GET",
 						"header": [
 							{
@@ -41,7 +63,7 @@
 				{
 					"name": "/assets",
 					"request": {
-						"url": "{{assets}}/app_dev.php/assets",
+						"url": "{{assets}}{{environment}}/assets",
 						"method": "POST",
 						"header": [
 							{
@@ -71,7 +93,7 @@
 				{
 					"name": "/asset-associations",
 					"request": {
-						"url": "{{assets}}/app_dev.php/asset-associations",
+						"url": "{{assets}}{{environment}}/asset-associations",
 						"method": "GET",
 						"header": [
 							{
@@ -98,7 +120,7 @@
 				{
 					"name": "/asset-associations",
 					"request": {
-						"url": "{{assets}}/app_dev.php/asset-associations",
+						"url": "{{assets}}{{environment}}/asset-associations",
 						"method": "POST",
 						"header": [
 							{
@@ -134,7 +156,7 @@
 				{
 					"name": "/acl/permissions",
 					"request": {
-						"url": "{{authentication}}/app_dev.php/acl/permissions",
+						"url": "{{authentication}}{{environment}}/acl/permissions",
 						"method": "GET",
 						"header": [
 							{
@@ -159,7 +181,7 @@
 				{
 					"name": "/registration",
 					"request": {
-						"url": "{{authentication}}/app_dev.php/registration",
+						"url": "{{authentication}}{{environment}}/registration",
 						"method": "POST",
 						"header": [
 							{
@@ -192,7 +214,7 @@
 				{
 					"name": "/login_check",
 					"request": {
-						"url": "{{authentication}}/app_dev.php/login_check",
+						"url": "{{authentication}}{{environment}}/login_check",
 						"method": "POST",
 						"header": [
 							{
@@ -231,7 +253,7 @@
 				{
 					"name": "/acl/permissions",
 					"request": {
-						"url": "{{cases}}/app_dev.php/acl/permissions",
+						"url": "{{cases}}{{environment}}/acl/permissions",
 						"method": "GET",
 						"header": [
 							{
@@ -253,7 +275,7 @@
 				{
 					"name": "/cases",
 					"request": {
-						"url": "{{cases}}/app_dev.php/cases",
+						"url": "{{cases}}{{environment}}/cases",
 						"method": "GET",
 						"header": [
 							{
@@ -280,13 +302,348 @@
 			]
 		},
 		{
+			"name": "Identities",
+			"description": "",
+			"item": [
+				{
+					"name": "/acl/permissions",
+					"request": {
+						"url": "{{identities}}{{environment}}/acl/permissions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/individuals",
+					"request": {
+						"url": "{{identities}}{{environment}}/individuals",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/individuals",
+					"request": {
+						"url": "{{identities}}{{environment}}/individuals",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Individual 1\" }\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/individual-personas",
+					"request": {
+						"url": "{{identities}}{{environment}}/individual-personas",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/individual-personas",
+					"request": {
+						"url": "{{identities}}{{environment}}/individual-personas",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Persona 1\" },\r\n  \"individual\": \"/app_dev.php/individuals/7dd978b9-5187-4bac-880b-c17cdc93329e\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/business-units",
+					"request": {
+						"url": "{{identities}}{{environment}}/business-units",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/business-units",
+					"request": {
+						"url": "{{identities}}{{environment}}/business-units",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"BusinessUnit 1\" }\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/anonymouses",
+					"request": {
+						"url": "{{identities}}{{environment}}/anonymouses",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/anonymouses",
+					"request": {
+						"url": "{{identities}}{{environment}}/anonymouses",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Anonymous 1\" }\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/anonymous-personas",
+					"request": {
+						"url": "{{identities}}{{environment}}/anonymous-personas",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/anonymous-personas",
+					"request": {
+						"url": "{{identities}}{{environment}}/anonymous-personas",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Persona 1\" },\r\n  \"anonymous\": \"/app_dev.php/anonymouses/cf6f9ddf-f307-4911-9ebe-64761d4d6bca\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Records",
 			"description": "",
 			"item": [
 				{
+					"name": "/acl/permissions",
+					"request": {
+						"url": "{{records}}{{environment}}/acl/permissions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/records",
 					"request": {
-						"url": "{{records}}/app_dev.php/records",
+						"url": "{{records}}{{environment}}/records",
 						"method": "GET",
 						"header": [
 							{
@@ -313,7 +670,7 @@
 				{
 					"name": "/records",
 					"request": {
-						"url": "{{records}}/app_dev.php/records",
+						"url": "{{records}}{{environment}}/records",
 						"method": "POST",
 						"header": [
 							{
@@ -343,7 +700,7 @@
 				{
 					"name": "/record-associations",
 					"request": {
-						"url": "{{records}}/app_dev.php/record-associations",
+						"url": "{{records}}{{environment}}/record-associations",
 						"method": "GET",
 						"header": [
 							{
@@ -370,7 +727,7 @@
 				{
 					"name": "/record-associations",
 					"request": {
-						"url": "{{records}}/app_dev.php/record-associations",
+						"url": "{{records}}{{environment}}/record-associations",
 						"method": "POST",
 						"header": [
 							{
@@ -404,9 +761,31 @@
 			"description": "",
 			"item": [
 				{
+					"name": "/acl/permissions",
+					"request": {
+						"url": "{{services}}{{environment}}/acl/permissions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/services",
 					"request": {
-						"url": "{{services}}/app_dev.php/services",
+						"url": "{{services}}{{environment}}/services",
 						"method": "GET",
 						"header": [
 							{
@@ -433,7 +812,7 @@
 				{
 					"name": "/services",
 					"request": {
-						"url": "{{services}}/app_dev.php/services",
+						"url": "{{services}}{{environment}}/services",
 						"method": "POST",
 						"header": [
 							{
@@ -463,7 +842,7 @@
 				{
 					"name": "/submissions",
 					"request": {
-						"url": "{{services}}/app_dev.php/submissions",
+						"url": "{{services}}{{environment}}/submissions",
 						"method": "GET",
 						"header": [
 							{
@@ -490,7 +869,7 @@
 				{
 					"name": "/submissions",
 					"request": {
-						"url": "{{services}}/app_dev.php/submissions",
+						"url": "{{services}}{{environment}}/submissions",
 						"method": "POST",
 						"header": [
 							{
@@ -520,7 +899,7 @@
 				{
 					"name": "/categories",
 					"request": {
-						"url": "{{services}}/app_dev.php/categories",
+						"url": "{{services}}{{environment}}/categories",
 						"method": "GET",
 						"header": [
 							{
@@ -547,7 +926,7 @@
 				{
 					"name": "/categories",
 					"request": {
-						"url": "{{services}}/app_dev.php/categories",
+						"url": "{{services}}{{environment}}/categories",
 						"method": "POST",
 						"header": [
 							{
