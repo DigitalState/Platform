@@ -10,6 +10,18 @@
     },
     {
       "enabled": true,
+      "key": "environment",
+      "value": "/app_dev.php",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "token",
+      "value": "eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0lORElWSURVQUwiLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJtb3JnYW4iLCJpcCI6IjE5Mi4xNjguOTkuMSIsImNsaSI6IjVkOWEzN2M2IiwiaWRlbiI6IkluZGl2aWR1YWwiLCJpZGVuX3V1aWQiOiI5YmUwYWYyOC1lZjQxLTQ5YjctODZkOS03MmEyZDliZWIwNTEiLCJpYXQiOjE0OTYxODY0NzIsImV4cCI6MTQ5NjI3Mjg3Mn0.JQxt0kL_e-LHbUrTNXQBiAXmyWvjQ52tmNjrTJ-aND8OByShe6Fa6-NKqHlEhAvH9suPat4RtR8SOhitmWqGrl1f5ihwqKqk5edCiz6ZayYbqTvyXEHTZK5zqHLip-EQZQ4TQQeX_jv9iMupso4-Dyg68BRGmBE7ip0qU-IcLTNme0r0AX2WnSeDVrkE4opWQseZrj6kuZRwsgt9eFQYAj3KWT3iOFooNRuQ0XgPeDOgB-TjTms2dydWRvzxqEwfaNFcsEEnULGkrcEsaa16qCHj233RwwuwkM5V3qtk9k_I6MtkduN5rJWj95cRwgLr-tTu4nMd_mdU4jxSMkKRgA_P0vPw_btspDrxGqdxRvf_yu1MhJiZ_DGKeJdGHUTLk0WKfekqOfVUIS0nVbsXVxsVMOmmBl7ck-lxT7Xk1lcuH3PqaM1FbPMLnSexdcuIROWDlo3Tjq39XmpHMqTjeshSD7akUfL7uzpRsONSvVD9SAMd6DUvaCallKznwOGMrYAg5-X_EqsrHQWcP70RSaOdKxpsnvkVqD1rIxOysOKiiOjuyiXZ_GzU8WL-SciitlTTxwln1P_dgNK5iaXylrfthqzLOx0ETEMqXJ4N8sM9wwZ_nO5U7QPFxMRYrnYvEVkGJZKPcVyFwJ4qx6EWQkiUFtwHB1AkwNaqA9oNEco",
+      "type": "text"
+    },
+    {
+      "enabled": true,
       "key": "authentication",
       "value": "{{host}}:8010",
       "type": "text"
@@ -46,19 +58,13 @@
     },
     {
       "enabled": true,
-      "key": "environment",
-      "value": "/app_dev.php",
-      "type": "text"
-    },
-    {
-      "enabled": true,
-      "key": "token",
-      "value": "eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0lORElWSURVQUwiLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJtb3JnYW4iLCJpcCI6IjE5Mi4xNjguOTkuMSIsImNsaSI6IjVkOWEzN2M2IiwiaWRlbiI6IkluZGl2aWR1YWwiLCJpZGVuX3V1aWQiOiI5YmUwYWYyOC1lZjQxLTQ5YjctODZkOS03MmEyZDliZWIwNTEiLCJpYXQiOjE0OTYxODY0NzIsImV4cCI6MTQ5NjI3Mjg3Mn0.JQxt0kL_e-LHbUrTNXQBiAXmyWvjQ52tmNjrTJ-aND8OByShe6Fa6-NKqHlEhAvH9suPat4RtR8SOhitmWqGrl1f5ihwqKqk5edCiz6ZayYbqTvyXEHTZK5zqHLip-EQZQ4TQQeX_jv9iMupso4-Dyg68BRGmBE7ip0qU-IcLTNme0r0AX2WnSeDVrkE4opWQseZrj6kuZRwsgt9eFQYAj3KWT3iOFooNRuQ0XgPeDOgB-TjTms2dydWRvzxqEwfaNFcsEEnULGkrcEsaa16qCHj233RwwuwkM5V3qtk9k_I6MtkduN5rJWj95cRwgLr-tTu4nMd_mdU4jxSMkKRgA_P0vPw_btspDrxGqdxRvf_yu1MhJiZ_DGKeJdGHUTLk0WKfekqOfVUIS0nVbsXVxsVMOmmBl7ck-lxT7Xk1lcuH3PqaM1FbPMLnSexdcuIROWDlo3Tjq39XmpHMqTjeshSD7akUfL7uzpRsONSvVD9SAMd6DUvaCallKznwOGMrYAg5-X_EqsrHQWcP70RSaOdKxpsnvkVqD1rIxOysOKiiOjuyiXZ_GzU8WL-SciitlTTxwln1P_dgNK5iaXylrfthqzLOx0ETEMqXJ4N8sM9wwZ_nO5U7QPFxMRYrnYvEVkGJZKPcVyFwJ4qx6EWQkiUFtwHB1AkwNaqA9oNEco",
+      "key": "camunda",
+      "value": "{{host}}:8055/engine-rest",
       "type": "text"
     }
   ],
-  "timestamp": 1496186482678,
+  "timestamp": 1496228843512,
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2017-05-31T02:07:59.894Z",
+  "_postman_exported_at": "2017-05-31T11:57:39.481Z",
   "_postman_exported_using": "Postman/4.10.7"
 }

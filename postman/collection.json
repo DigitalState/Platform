@@ -247,6 +247,51 @@
 			]
 		},
 		{
+			"name": "Camunda",
+			"description": "",
+			"item": [
+				{
+					"name": "GET /process-definition",
+					"request": {
+						"url": "{{camunda}}/process-definition",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET /process-definition/{id}/startForm",
+					"request": {
+						"url": "{{camunda}}/process-definition/invoice:1:97e99b81-45ac-11e7-a7cb-0242ac110002/startForm",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET /process-definition/key/{key}{id}/startForm",
+					"request": {
+						"url": "{{camunda}}/process-definition/key/invoice/startForm",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Cases",
 			"description": "",
 			"item": [
