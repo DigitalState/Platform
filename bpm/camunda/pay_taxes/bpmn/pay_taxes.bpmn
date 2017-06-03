@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.8.1">
+  <bpmn:process id="PayTaxes" name="Pay Taxes" isExecutable="true" camunda:versionTag="v0.1">
+    <bpmn:startEvent id="StartEvent_1" name="Submit Tax Payment">
+      <bpmn:outgoing>SequenceFlow_0wl4fgb</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Task_14y8cpg" name="Placeholder">
+      <bpmn:incoming>SequenceFlow_0wl4fgb</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_139coln</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="SequenceFlow_0wl4fgb" sourceRef="StartEvent_1" targetRef="Task_14y8cpg" />
+    <bpmn:endEvent id="EndEvent_1qffnpd" name="Complete">
+      <bpmn:incoming>SequenceFlow_139coln</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_139coln" sourceRef="Task_14y8cpg" targetRef="EndEvent_1qffnpd" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="PayTaxes">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="276" y="213" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="267" y="249" width="55" height="25" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_14y8cpg_di" bpmnElement="Task_14y8cpg">
+        <dc:Bounds x="371" y="191" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0wl4fgb_di" bpmnElement="SequenceFlow_0wl4fgb">
+        <di:waypoint xsi:type="dc:Point" x="312" y="231" />
+        <di:waypoint xsi:type="dc:Point" x="371" y="231" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="341.5" y="209" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_1qffnpd_di" bpmnElement="EndEvent_1qffnpd">
+        <dc:Bounds x="521" y="213" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="515" y="252" width="48" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_139coln_di" bpmnElement="SequenceFlow_139coln">
+        <di:waypoint xsi:type="dc:Point" x="471" y="231" />
+        <di:waypoint xsi:type="dc:Point" x="521" y="231" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="496" y="209" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
