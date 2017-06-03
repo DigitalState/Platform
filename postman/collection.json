@@ -196,14 +196,12 @@
 								{
 									"key": "username",
 									"value": "user@ds",
-									"type": "text",
-									"enabled": true
+									"type": "text"
 								},
 								{
 									"key": "password",
 									"value": "user",
-									"type": "text",
-									"enabled": true
+									"type": "text"
 								}
 							]
 						},
@@ -229,14 +227,12 @@
 								{
 									"key": "username",
 									"value": "morgan",
-									"type": "text",
-									"enabled": true
+									"type": "text"
 								},
 								{
 									"key": "password",
 									"value": "1",
-									"type": "text",
-									"enabled": true
+									"type": "text"
 								}
 							]
 						},
@@ -251,7 +247,7 @@
 			"description": "",
 			"item": [
 				{
-					"name": "GET /process-definition",
+					"name": "/process-definition",
 					"request": {
 						"url": "{{camunda}}/process-definition",
 						"method": "GET",
@@ -268,7 +264,7 @@
 					"response": []
 				},
 				{
-					"name": "GET /process-definition/{id}/startForm",
+					"name": "/process-definition/{id}/startForm",
 					"request": {
 						"url": "{{camunda}}/process-definition/invoice:1:97e99b81-45ac-11e7-a7cb-0242ac110002/startForm",
 						"method": "GET",
@@ -279,12 +275,37 @@
 					"response": []
 				},
 				{
-					"name": "GET /process-definition/key/{key}{id}/startForm",
+					"name": "/process-definition/key/{key}{id}/startForm",
 					"request": {
 						"url": "{{camunda}}/process-definition/key/invoice/startForm",
 						"method": "GET",
 						"header": [],
 						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/process-definition/{id}/start",
+					"request": {
+						"url": "{{camunda}}/process-definition/invoice:1:97e99b81-45ac-11e7-a7cb-0242ac110002/start",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"variables\": {\r\n\t\t\"invoiceNumber\" : {\"value\" : \"invoice 1\", \"type\": \"String\"},\r\n    \t\"amount\" : {\"value\" : 30, \"type\": \"Integer\"},\r\n    \t\"creditor\" : {\"value\" : \"Creditor 1\", \"type\": \"String\"},\r\n    \t\"invoiceCategory\" : {\"value\" : \"Category 1\", \"type\": \"String\"},\r\n    \t\"approverGroups\" : {\"value\" : true, \"type\": \"Boolean\"}\r\n    }\r\n}\r\n"
+						},
 						"description": ""
 					},
 					"response": []
