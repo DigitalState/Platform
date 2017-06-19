@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "DigitalState",
-		"_postman_id": "7aff3a6d-35c7-78fb-e720-28905d904109",
+		"_postman_id": "4580f95f-9693-27eb-47f8-471ec826c201",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -28,7 +28,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -55,7 +58,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -91,6 +97,66 @@
 					"response": []
 				},
 				{
+					"name": "/assets/{uuid}",
+					"request": {
+						"url": "{{assets}}{{environment}}/assets/2ef4564d-6bf3-4955-b314-135c24b45e3e",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/assets/{uuid}",
+					"request": {
+						"url": "{{assets}}{{environment}}/assets/2ef4564d-6bf3-4955-b314-135c24b45e3e",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/asset-associations",
 					"request": {
 						"url": "{{assets}}{{environment}}/asset-associations",
@@ -112,7 +178,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -146,6 +215,66 @@
 						"description": ""
 					},
 					"response": []
+				},
+				{
+					"name": "/asset-associations/{uuid}",
+					"request": {
+						"url": "{{assets}}{{environment}}/asset-associations/109a59c9-2752-44b7-994e-5eb3d713c882",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/asset-associations/{uuid} copy",
+					"request": {
+						"url": "{{assets}}{{environment}}/asset-associations/109a59c9-2752-44b7-994e-5eb3d713c882",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
 				}
 			]
 		},
@@ -168,11 +297,73 @@
 								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/users",
+					"request": {
+						"url": "{{authentication}}{{environment}}/users",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/users",
+					"request": {
+						"url": "{{authentication}}{{environment}}/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"user\",\n    \"plainPassword\":\"123\",\n    \"email\": \"user@ds\",\n    \"enabled\": true,\n    \"roles\": [\n        \"ROLE_INDIVIDUAL\"\n    ],\n    \"identity\": \"Individual\",\n    \"identityUuid\": \"a32e24fb-4f60-481a-8f74-74088c973c1f\"\n}"
 						},
 						"description": ""
 					},
@@ -187,6 +378,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
 								"description": ""
 							}
 						],
@@ -210,14 +406,19 @@
 					"response": []
 				},
 				{
-					"name": "/login_check",
+					"name": "/security-check",
 					"request": {
-						"url": "{{authentication}}{{environment}}/login_check",
+						"url": "{{authentication}}{{environment}}/security-check",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
 								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
 								"description": ""
 							}
 						],
@@ -239,6 +440,28 @@
 						"description": ""
 					},
 					"response": []
+				},
+				{
+					"name": "/tokens",
+					"request": {
+						"url": "{{authentication}}{{environment}}/tokens",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
 				}
 			]
 		},
@@ -246,6 +469,70 @@
 			"name": "Camunda",
 			"description": "",
 			"item": [
+				{
+					"name": "/deployment/create",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{camunda}}/deployment/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "deployment-name",
+									"value": "My Deployment",
+									"type": "text"
+								},
+								{
+									"key": "enable-duplicate-filtering",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "deploy-changed-only",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "deployment-source",
+									"value": "local",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tenant-id",
+									"value": "My Tenant",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "MyBPMNFileName.bpmn",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"description": "Create a Camunda Deployment.\n\nUpdate the Deployment Name and Key/Value of the .bpmn file in the Body."
+					},
+					"response": []
+				},
 				{
 					"name": "/process-definition",
 					"request": {
@@ -258,7 +545,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -269,15 +559,18 @@
 						"url": "{{camunda}}/process-definition/invoice:1:97e99b81-45ac-11e7-a7cb-0242ac110002/startForm",
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
 				},
 				{
-					"name": "/process-definition/key/{key}{id}/startForm",
+					"name": "/process-definition/key/{key}/startForm",
 					"request": {
-						"url": "{{camunda}}/process-definition/key/invoice/startForm",
+						"url": "{{camunda}}/process-definition/key/PayTaxes/startForm",
 						"method": "GET",
 						"header": [],
 						"body": {},
@@ -286,9 +579,9 @@
 					"response": []
 				},
 				{
-					"name": "/process-definition/{id}/start",
+					"name": "/process-definition/key/{key}/start",
 					"request": {
-						"url": "{{camunda}}/process-definition/invoice:1:97e99b81-45ac-11e7-a7cb-0242ac110002/start",
+						"url": "{{camunda}}/process-definition/key/PayTaxes/start",
 						"method": "POST",
 						"header": [
 							{
@@ -304,7 +597,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"variables\": {\r\n\t\t\"invoiceNumber\" : {\"value\" : \"invoice 1\", \"type\": \"String\"},\r\n    \t\"amount\" : {\"value\" : 30, \"type\": \"Integer\"},\r\n    \t\"creditor\" : {\"value\" : \"Creditor 1\", \"type\": \"String\"},\r\n    \t\"invoiceCategory\" : {\"value\" : \"Category 1\", \"type\": \"String\"},\r\n    \t\"approverGroups\" : {\"value\" : true, \"type\": \"Boolean\"}\r\n    }\r\n}\r\n"
+							"raw": "{\r\n\t\"variables\": {\r\n\t\t\"invoiceNumber\" : {\"value\" : \"invoice 1\", \"type\": \"string\"},\r\n    \t\"amount\" : {\"value\" : 30, \"type\": \"integer\"},\r\n    \t\"creditor\" : {\"value\" : \"Creditor 1\", \"type\": \"string\"},\r\n    \t\"invoiceCategory\" : {\"value\" : \"Category 1\", \"type\": \"string\"},\r\n    \t\"approverGroups\" : {\"value\" : true, \"type\": \"boolean\"}\r\n    }\r\n}\r\n"
 						},
 						"description": ""
 					},
@@ -331,6 +624,11 @@
 								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
 							}
 						],
 						"body": {},
@@ -350,12 +648,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -386,6 +684,11 @@
 								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
 							}
 						],
 						"body": {},
@@ -405,12 +708,39 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/individuals/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/individuals/9be0af28-ef41-49b7-86d9-72a2d9beb051",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
 								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -432,12 +762,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -445,6 +775,66 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Individual 1\" }\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/individuals/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/individuals/9be0af28-ef41-49b7-86d9-72a2d9beb051",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/individuals/{uuid} copy",
+					"request": {
+						"url": "{{identities}}{{environment}}/individuals/9be0af28-ef41-49b7-86d9-72a2d9beb051",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
 						},
 						"description": ""
 					},
@@ -462,12 +852,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -489,12 +879,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -519,12 +909,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -546,12 +936,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -576,12 +966,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -603,12 +993,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -633,12 +1023,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -660,12 +1050,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -690,12 +1080,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -717,12 +1107,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -756,6 +1146,11 @@
 								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
 							}
 						],
 						"body": {},
@@ -775,12 +1170,39 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/records/{uuid}",
+					"request": {
+						"url": "{{records}}{{environment}}/records/f0079232-22a6-4da0-8ded-1bc8996447e6",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
 								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -802,12 +1224,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -815,6 +1237,66 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Record 1\" }\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/records/{uuid}",
+					"request": {
+						"url": "{{records}}{{environment}}/records/f0079232-22a6-4da0-8ded-1bc8996447e6",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/records/{uuid} copy",
+					"request": {
+						"url": "{{records}}{{environment}}/records/f0079232-22a6-4da0-8ded-1bc8996447e6",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
 						},
 						"description": ""
 					},
@@ -832,12 +1314,39 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/record-associations/{uuid}",
+					"request": {
+						"url": "{{records}}{{environment}}/record-associations/1e3ec3a5-7645-462e-a3e5-51f2cdc996a4",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
 								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -859,19 +1368,79 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"record\": \"/app_dev.php/records/9092335b-c0ab-4fa8-8a97-c101e14f8017\",\r\n  \"entity\": \"Case\",\r\n  \"entityUuid\": \"19ee32f9-0b1c-44ec-b497-a9d44fb55248\",\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"109a59c9-2752-44b7-994e-5eb3d713c888\"\r\n}"
+							"raw": "{\r\n  \"record\": \"/app_dev.php/records/f0079232-22a6-4da0-8ded-1bc8996447e6\",\r\n  \"entity\": \"Case\",\r\n  \"entityUuid\": \"19ee32f9-0b1c-44ec-b497-a9d44fb55248\",\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"109a59c9-2752-44b7-994e-5eb3d713c888\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/record-associations/{uuid}",
+					"request": {
+						"url": "{{records}}{{environment}}/record-associations/1e3ec3a5-7645-462e-a3e5-51f2cdc996a4",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/record-associations/{uuid}",
+					"request": {
+						"url": "{{records}}{{environment}}/record-associations/1e3ec3a5-7645-462e-a3e5-51f2cdc996a4",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
 						},
 						"description": ""
 					},
@@ -898,6 +1467,11 @@
 								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
 							}
 						],
 						"body": {},
@@ -917,12 +1491,39 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/services/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/services/3e43a68b-1028-4923-9bc5-50502d239507",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
 								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -944,12 +1545,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -963,6 +1564,66 @@
 					"response": []
 				},
 				{
+					"name": "/services/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/services/3e43a68b-1028-4923-9bc5-50502d239507",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": {\r\n  \t\"fr\": \"Service 1 fr\"\r\n  }\r\n}\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/services/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/services/3e43a68b-1028-4923-9bc5-50502d239507",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/scenarios",
 					"request": {
 						"url": "{{services}}{{environment}}/scenarios",
@@ -974,12 +1635,93 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/scenarios/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/scenarios/ff6ce248-2784-469a-ab84-33d93a2dbcf9",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
 								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/scenarios/{uuid}/form",
+					"request": {
+						"url": "{{services}}{{environment}}/scenarios/b12fef1d-c197-4420-be77-083e2f2b53d6/form",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/scenarios/{uuid}/form/translation",
+					"request": {
+						"url": "{{services}}{{environment}}/scenarios/b12fef1d-c197-4420-be77-083e2f2b53d6/form/translation",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -1001,19 +1743,79 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"0609ccde-e1d2-4c63-ae40-d9c52d14f235\",\r\n  \"service\": \"/app_dev.php/services/b12fef1d-c197-4420-be77-083e2f2b53d6\",\r\n  \"title\": { \"en\":\"Scenario 1\" },\r\n  \"description\": { \"en\": \"Description\" },\r\n  \"presentation\": { \"en\": \"Presentation\" },\r\n  \"enabled\": true\r\n}"
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"0609ccde-e1d2-4c63-ae40-d9c52d14f235\",\r\n  \"service\": \"/app_dev.php/services/3e43a68b-1028-4923-9bc5-50502d239507\",\r\n  \"type\": \"bpm\",\r\n  \"title\": { \"en\":\"Scenario 1\" },\r\n  \"description\": { \"en\": \"Description\" },\r\n  \"presentation\": { \"en\": \"Presentation\" },\r\n  \"enabled\": true\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/scenarios/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/scenarios/ff6ce248-2784-469a-ab84-33d93a2dbcf9",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/scenarios/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/scenarios/ff6ce248-2784-469a-ab84-33d93a2dbcf9",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
 						},
 						"description": ""
 					},
@@ -1031,12 +1833,39 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/submissions/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/submissions/2b20cb91-d0ef-41f1-b2f8-6c1a9ebc6fd1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
 								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -1058,12 +1887,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -1077,6 +1906,33 @@
 					"response": []
 				},
 				{
+					"name": "/submissions/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/submissions/2b20cb91-d0ef-41f1-b2f8-6c1a9ebc6fd1",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/categories",
 					"request": {
 						"url": "{{services}}{{environment}}/categories",
@@ -1088,12 +1944,39 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/categories/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/categories/56f556f6-e9d1-4eec-ba96-b5461eaacf14",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
 								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -1115,12 +1998,12 @@
 								"description": ""
 							},
 							{
-								"key": "Accept",
+								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							},
 							{
-								"key": "Content-Type",
+								"key": "Accept",
 								"value": "application/json",
 								"description": ""
 							}
@@ -1129,6 +2012,63 @@
 							"mode": "raw",
 							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"f7711a36-53e7-4d43-8b2b-9d86b1dc7d49\",\r\n  \"title\": { \"en\":\"Category 1\" },\r\n  \"description\": { \"en\":\"Description\" },\r\n  \"presentation\": { \"en\":\"Presentation\" },\r\n  \"services\": [\r\n  ],\r\n  \"enabled\": true\r\n}"
 						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/categories/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/categories/56f556f6-e9d1-4eec-ba96-b5461eaacf14",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/categories/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/categories/56f556f6-e9d1-4eec-ba96-b5461eaacf14",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
 						"description": ""
 					},
 					"response": []
