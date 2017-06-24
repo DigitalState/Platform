@@ -481,9 +481,9 @@
 			"description": "",
 			"item": [
 				{
-					"name": "/acl/permissions",
+					"name": "/security/permissions",
 					"request": {
-						"url": "{{authentication}}{{environment}}/acl/permissions",
+						"url": "{{authentication}}{{environment}}/security/permissions",
 						"method": "GET",
 						"header": [
 							{
@@ -505,6 +505,207 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions",
+					"request": {
+						"url": "{{authentication}}{{environment}}/permissions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions",
+					"request": {
+						"url": "{{authentication}}{{environment}}/permissions",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"userUuid\": \"36ea6a46-0cb4-43b0-8ac8-f1ea07207f3f\",\r\n  \"businessUnitUuid\": null,\r\n  \"entries\": [\r\n    {\r\n      \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n      \"key\": \"individual\",\r\n      \"attributes\": [\r\n        \"BROWSE\",\r\n        \"READ\"\r\n      ]\r\n    }\r\n  ]\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions/{uuid}",
+					"request": {
+						"url": "{{authentication}}{{environment}}/permissions/ed778870-9915-42e3-ad21-142c8f655ae5",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"25b88f35-eb37-4dae-9d89-668151e11a0d\",\n    \"userUuid\": \"a57ccc4b-6567-4ea5-83b2-5332baf94611\",\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions/{uuid}",
+					"request": {
+						"url": "{{authentication}}{{environment}}/permissions/ed778870-9915-42e3-ad21-142c8f655ae5",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs",
+					"request": {
+						"url": "{{authentication}}{{environment}}/configs",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs/{uuid}",
+					"request": {
+						"url": "{{authentication}}{{environment}}/configs/57b7bbe6-97bd-4d61-b963-d96d02905a39",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs/{uuid}",
+					"request": {
+						"url": "{{authentication}}{{environment}}/configs/57b7bbe6-97bd-4d61-b963-d96d02905a39",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"enabled\": true\n}"
 						},
 						"description": ""
 					},
@@ -604,9 +805,47 @@
 					"response": []
 				},
 				{
-					"name": "/security-check",
+					"name": "/tokens/staff",
 					"request": {
-						"url": "{{authentication}}{{environment}}/security-check",
+						"url": "{{authentication}}{{environment}}/tokens/staff",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/tokens/individual",
+					"request": {
+						"url": "{{authentication}}{{environment}}/tokens/individual",
 						"method": "POST",
 						"header": [
 							{
@@ -640,9 +879,9 @@
 					"response": []
 				},
 				{
-					"name": "/tokens",
+					"name": "/tokens/anonymous",
 					"request": {
-						"url": "{{authentication}}{{environment}}/tokens",
+						"url": "{{authentication}}{{environment}}/tokens/anonymous",
 						"method": "POST",
 						"header": [
 							{
@@ -1110,7 +1349,7 @@
 					},
 					"response": [
 						{
-							"id": "b0a8c741-41e9-4983-ae91-034d0d65a5f8",
+							"id": "8cd40edb-fb02-4042-8f39-0140228b2410",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -1241,7 +1480,7 @@
 			"description": "",
 			"item": [
 				{
-					"name": "/acl/permissions",
+					"name": "/security/permissions",
 					"request": {
 						"url": "{{identities}}{{environment}}/security/permissions",
 						"method": "GET",
@@ -1385,7 +1624,7 @@
 					"response": []
 				},
 				{
-					"name": "/configs copy",
+					"name": "/configs",
 					"request": {
 						"url": "{{identities}}{{environment}}/configs",
 						"method": "GET",
