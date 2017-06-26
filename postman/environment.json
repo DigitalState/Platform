@@ -5,7 +5,7 @@
     {
       "enabled": true,
       "key": "host",
-      "value": "http://192.168.99.100",
+      "value": "http://10.0.75.1",
       "type": "text"
     },
     {
@@ -17,7 +17,7 @@
     {
       "enabled": true,
       "key": "token",
-      "value": "eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0lORElWSURVQUwiLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJtb3JnYW4iLCJpcCI6IjE5Mi4xNjguOTkuMSIsImNsaSI6IjVkOWEzN2M2IiwiaWRlbiI6IkluZGl2aWR1YWwiLCJpZGVuX3V1aWQiOiI5YmUwYWYyOC1lZjQxLTQ5YjctODZkOS03MmEyZDliZWIwNTEiLCJpYXQiOjE0OTY0OTc3ODMsImV4cCI6MTQ5NjU4NDE4M30.aYOM3fwKHZUXSYLofHG7jKyebY1JSmsW1I0bVqVOJk5FHJ5IjxV_nWx8HL6dexy7CLIbJZUjusS_vIt1S43UDG3D5cQUJTd9K9nWY4fOppcvTbzB5v1nGRWm27ocdAtxfAD7IuXOonBfpzonG8GX6a8OJSyO7mAtaZr_o5yyTbqBjndllwUZ3pLOwX7tK8z6CzDcMnCFysDSFF9aEzTF0x407EwVb_vf_BwUg4vjLrs4B4Fqk3kTM1hGF0UC9cOzf_lzzEP-TRbxwryOalkTuGM2BakDOSJ2FIMcnAboa1Bm-3WSzgPR7wOW7O-rHyd1Q74GuGgGPJk8_Hayhc5RWEezo4x1Ukw0UE-gqdwpQlV7Mz74WdytOKyysY5srQ19LcwxGTKKX57shRIqRErdDbi37ub-bXHznKCqzzW1F3O_fewqssxpj0NtX4wERJ5wzqh6IdEBPWBw--58kdZW8rDLsXeWWrkAgM_Z7tGVALtN_VsCsDXxSO2RTF8nk1BdvgSjoIQZ9qP7isVz7VHWGwt3JSjPmUhLIfrr_89AkjrHhSe0M0WEqWGeZa4d1SzYEsxIBYEwBDAJlEEnPhxcBHQ6iFKeeFltx8w0Wp2xU12QPOH0wF7AJAE_O6jqcHH-NCcKieNuiCs6HySrqaoYmyJzwqS1UCaCTkgvjHRsJqw",
+      "value": "eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX0lORElWSURVQUwiLCJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJtb3JnYW4iLCJ1dWlkIjoiMDk2NGY4ODYtYWJlYS00MTY2LWJkMzctZjNmODIyNWIxMmZhIiwiaWRlbnRpdHkiOiJJbmRpdmlkdWFsIiwiaWRlbnRpdHlVdWlkIjoiOWJlMGFmMjgtZWY0MS00OWI3LTg2ZDktNzJhMmQ5YmViMDUxIiwiaWF0IjoxNDk4MzE1MjA4LCJleHAiOjE0OTg5MjAwMDh9.EdPDWZDJBxBp-itipTK1mN2N2fR-HkYA1awMa-Xc3vSlCPIwyYY_hoBeOBmFREczR61lMbcnTcBxueOZGUn6H121K9UyGv8c9H4HFArGsQxqVHzmgmERQH1vAn1tQN0pbzyT-ahvCq1vF0zXSCoplZul7iJXR23ap2qMhHgAoGZLDoDF5FMCkijzbFTONFYbyWdIP9O3tlrP6ARTKTs504QUBwyMCST_BO7BaGkuIH1sB4tj0KClXxv4hNjOn6ACjWEyzJDz5HG4oDsVZr27lcH7s4mQYn_OSUjKpv2AL7ObXEiWAraWidAHZhxKuMQepYR7mVDyFZiyhRjv7XzqdObGb-7sdYOMKwtprngQdPBAii8mZIgASyGun6MopZgXdJp4q2vT1TMfsFMtM2mN9sPM-YY2q5_Uk1uSdJA9Iqib1119Fhvx2yA6aN9Rvi51t694l388g8SVSAZXoPHRgZKHku2jifLgiuKadPIC_lWdyCjTlPyEWV8XF1sAnniXxwW1dBDwlScIlJA_vuy_Cad5K1eStUZjvUKefKR9kyo0f7moxttXlgo4vJyz570FBHDCD2aNUfhsaP347YiCi2tvDu_IgKgwVirvih5Xp_dTbJv6-L5WJSGA2__mz7PsIwjFLndYZMxp2vU4-qGy2JQAhncZZtCD1nD2eJKM2UI",
       "type": "text"
     },
     {
@@ -61,10 +61,16 @@
       "key": "camunda",
       "value": "{{host}}:8055/engine-rest",
       "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "cms",
+      "value": "{{host}}:8056",
+      "type": "text"
     }
   ],
-  "timestamp": 1496497797733,
+  "timestamp": 1498340043434,
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2017-06-03T15:46:02.660Z",
-  "_postman_exported_using": "Postman/4.11.0"
+  "_postman_exported_at": "2017-06-26T00:36:28.853Z",
+  "_postman_exported_using": "Postman/5.0.1"
 }

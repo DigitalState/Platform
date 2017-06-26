@@ -513,7 +513,253 @@
 				{
 					"name": "/permissions",
 					"request": {
-						"url": "{{authentication}}{{environment}}/permissions",
+						"url": {
+							"raw": "{{authentication}}{{environment}}/permissions",
+							"host": [
+								"{{authentication}}{{environment}}"
+							],
+							"path": [
+								"permissions"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions/{uuid}",
+					"request": {
+						"url": {
+							"raw": "{{authentication}}{{environment}}/permissions/4ad33b73-7736-4a6b-b0ba-61a238a345ce",
+							"host": [
+								"{{authentication}}{{environment}}"
+							],
+							"path": [
+								"permissions",
+								"4ad33b73-7736-4a6b-b0ba-61a238a345ce"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -561,7 +807,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"userUuid\": \"36ea6a46-0cb4-43b0-8ac8-f1ea07207f3f\",\r\n  \"businessUnitUuid\": null,\r\n  \"entries\": [\r\n    {\r\n      \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n      \"key\": \"individual\",\r\n      \"attributes\": [\r\n        \"BROWSE\",\r\n        \"READ\"\r\n      ]\r\n    }\r\n  ]\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"userUuid\": \"36ea6a46-0cb4-43b0-8ac8-f1ea07207f3f\",\r\n\t\"businessUnitUuid\": null,\r\n\t\"entries\": [\r\n\t{\r\n\t\t\"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\t\"key\": \"individual\",\r\n\t\t\"attributes\": [\r\n\t\t\t\"BROWSE\",\r\n\t\t\t\"READ\"\r\n\t\t]\r\n\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -630,7 +876,116 @@
 				{
 					"name": "/configs",
 					"request": {
-						"url": "{{authentication}}{{environment}}/configs",
+						"url": {
+							"raw": "{{authentication}}{{environment}}/configs",
+							"host": [
+								"{{authentication}}{{environment}}"
+							],
+							"path": [
+								"configs"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "key",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "enabled",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -705,7 +1060,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"enabled\": true\n}"
+							"raw": "{\n\t\"enabled\": true,\n\t\"version\": 1\n}"
 						},
 						"description": ""
 					},
@@ -714,7 +1069,185 @@
 				{
 					"name": "/users",
 					"request": {
-						"url": "{{authentication}}{{environment}}/users",
+						"url": {
+							"raw": "{{authentication}}{{environment}}/users",
+							"host": [
+								"{{authentication}}{{environment}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "1",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "fca1b603-1c29-4393-85c4-e30611c80abf",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "fca1b603-1c29-4393-85c4-e30611c80abf",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "morgan",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "morgan@site.com",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identity",
+									"value": "Individual",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identity[0]",
+									"value": "Individual",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identityUuid",
+									"value": "9be0af28-ef41-49b7-86d9-72a2d9beb051",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identityUuid[0]",
+									"value": "9be0af28-ef41-49b7-86d9-72a2d9beb051",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "roles",
+									"value": "ROLE_INDIVIDUAL",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "2017-01-01",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "2017-01-01",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "2017-01-01",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "2017-01-01",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "2017-01-01",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "2017-01-01",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "lastLogin[before]",
+									"value": "2017-01-01",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "lastLogin[after]",
+									"value": "2017-01-01",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "enabled",
+									"value": "true",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/users/{uuid}",
+					"request": {
+						"url": "{{authentication}}{{environment}}/users/fca1b603-1c29-4393-85c4-e30611c80abf",
 						"method": "GET",
 						"header": [
 							{
@@ -762,7 +1295,67 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"user\",\n    \"plainPassword\":\"123\",\n    \"email\": \"user@ds\",\n    \"enabled\": true,\n    \"roles\": [\n        \"ROLE_INDIVIDUAL\"\n    ],\n    \"identity\": \"Individual\",\n    \"identityUuid\": \"a32e24fb-4f60-481a-8f74-74088c973c1f\"\n}"
+							"raw": "{\n    \"username\": \"user\",\n    \"plainPassword\":\"123\",\n    \"email\": \"user@ds.ca\",\n    \"enabled\": true,\n    \"roles\": [\n        \"ROLE_INDIVIDUAL\"\n    ],\n    \"identity\": \"Individual\",\n    \"identityUuid\": \"a32e24fb-4f60-481a-8f74-74088c973c1f\",\n    \"version\": 1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/users/{uuid}",
+					"request": {
+						"url": "{{authentication}}{{environment}}/users/fca1b603-1c29-4393-85c4-e30611c80abf",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"enabled\": true,\n    \"version\": 1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/users/{uuid}",
+					"request": {
+						"url": "{{authentication}}{{environment}}/users/fca1b603-1c29-4393-85c4-e30611c80abf",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
 						},
 						"description": ""
 					},
@@ -1349,7 +1942,7 @@
 					},
 					"response": [
 						{
-							"id": "8cd40edb-fb02-4042-8f39-0140228b2410",
+							"id": "5742d496-1efd-4ee1-9f72-66964f2d4488",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -1476,6 +2069,156 @@
 			]
 		},
 		{
+			"name": "Cms",
+			"description": "",
+			"item": [
+				{
+					"name": "/security/permissions",
+					"request": {
+						"url": "{{cms}}{{environment}}/security/permissions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions",
+					"request": {
+						"url": "{{cms}}{{environment}}/permissions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions",
+					"request": {
+						"url": "{{cms}}{{environment}}/permissions",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"userUuid\": \"36ea6a46-0cb4-43b0-8ac8-f1ea07207f3f\",\r\n  \"businessUnitUuid\": null,\r\n  \"entries\": [\r\n    {\r\n      \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n      \"key\": \"case\",\r\n      \"attributes\": [\r\n        \"BROWSE\",\r\n        \"READ\"\r\n      ]\r\n    }\r\n  ]\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions/{uuid}",
+					"request": {
+						"url": "{{cms}}{{environment}}/permissions/4bb55243-7ad4-414d-9470-e792b288a792",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"25b88f35-eb37-4dae-9d89-668151e11a0d\",\n    \"userUuid\": \"a57ccc4b-6567-4ea5-83b2-5332baf94611\",\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"case\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"case_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions/{uuid}",
+					"request": {
+						"url": "{{cms}}{{environment}}/permissions/f0514175-3bfd-4a96-a4b9-461ce6a2c26d",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Identities",
 			"description": "",
 			"item": [
@@ -1509,7 +2252,253 @@
 				{
 					"name": "/permissions",
 					"request": {
-						"url": "{{identities}}{{environment}}/permissions",
+						"url": {
+							"raw": "{{identities}}{{environment}}/permissions",
+							"host": [
+								"{{identities}}{{environment}}"
+							],
+							"path": [
+								"permissions"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions/{uuid}",
+					"request": {
+						"url": {
+							"raw": "{{identities}}{{environment}}/permissions/ed778870-9915-42e3-ad21-142c8f655ae5",
+							"host": [
+								"{{identities}}{{environment}}"
+							],
+							"path": [
+								"permissions",
+								"ed778870-9915-42e3-ad21-142c8f655ae5"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -1626,7 +2615,116 @@
 				{
 					"name": "/configs",
 					"request": {
-						"url": "{{identities}}{{environment}}/configs",
+						"url": {
+							"raw": "{{identities}}{{environment}}/configs",
+							"host": [
+								"{{identities}}{{environment}}"
+							],
+							"path": [
+								"configs"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "key",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "enabled",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -1708,9 +2806,371 @@
 					"response": []
 				},
 				{
+					"name": "/business-units",
+					"request": {
+						"url": {
+							"raw": "{{identities}}{{environment}}/business-units",
+							"host": [
+								"{{identities}}{{environment}}"
+							],
+							"path": [
+								"business-units"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/business-units/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/business-units/25b88f35-eb37-4dae-9d89-668151e11a0d",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/business-units",
+					"request": {
+						"url": "{{identities}}{{environment}}/business-units",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"BusinessUnit 1\" },\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/business-units/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/business-units/25b88f35-eb37-4dae-9d89-668151e11a0d",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": { \"en\": \"BusinessUnit 2\" },\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/business-units/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/business-units/25b88f35-eb37-4dae-9d89-668151e11a0d",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/individuals",
 					"request": {
-						"url": "{{identities}}{{environment}}/individuals",
+						"url": {
+							"raw": "{{identities}}{{environment}}/individuals",
+							"host": [
+								"{{identities}}{{environment}}"
+							],
+							"path": [
+								"individuals"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -1785,7 +3245,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Individual 1\" }\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Individual 1\" },\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -1815,7 +3275,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+							"raw": "{\r\n\t\"owner\": \"Individual\",\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -1854,7 +3314,143 @@
 				{
 					"name": "/individual-personas",
 					"request": {
-						"url": "{{identities}}{{environment}}/individual-personas",
+						"url": {
+							"raw": "{{identities}}{{environment}}/individual-personas",
+							"host": [
+								"{{identities}}{{environment}}"
+							],
+							"path": [
+								"individual-personas"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/individual-personas/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/individual-personas/aacc9815-7231-4f31-bab3-3385493097fa",
 						"method": "GET",
 						"header": [
 							{
@@ -1902,44 +3498,17 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Persona 1\" },\r\n  \"individual\": \"/app_dev.php/individuals/7dd978b9-5187-4bac-880b-c17cdc93329e\"\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Persona 1\" },\r\n\t\"individual\": \"/app_dev.php/individuals/9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"data\": {\r\n\t\t\"test\": \"test\"\r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
 					"response": []
 				},
 				{
-					"name": "/business-units",
+					"name": "/individual-personas/{uuid}",
 					"request": {
-						"url": "{{identities}}{{environment}}/business-units",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/business-units",
-					"request": {
-						"url": "{{identities}}{{environment}}/business-units",
-						"method": "POST",
+						"url": "{{identities}}{{environment}}/individual-personas/aacc9815-7231-4f31-bab3-3385493097fa",
+						"method": "PUT",
 						"header": [
 							{
 								"key": "Authorization",
@@ -1959,7 +3528,37 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"BusinessUnit 1\" }\r\n}"
+							"raw": "{\r\n\t\"title\": { \"en\": \"Persona 2\" },\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/individual-personas/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/individual-personas/aacc9815-7231-4f31-bab3-3385493097fa",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
 						},
 						"description": ""
 					},
@@ -1968,7 +3567,143 @@
 				{
 					"name": "/anonymouses",
 					"request": {
-						"url": "{{identities}}{{environment}}/anonymouses",
+						"url": {
+							"raw": "{{identities}}{{environment}}/anonymouses",
+							"host": [
+								"{{identities}}{{environment}}"
+							],
+							"path": [
+								"anonymouses"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/anonymouses/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/anonymouses/d57d855f-59bf-4af8-a420-4868fbb09e54",
 						"method": "GET",
 						"header": [
 							{
@@ -2016,7 +3751,67 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Anonymous 1\" }\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Anonymous 1\" },\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/anonymouses/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/anonymouses/d57d855f-59bf-4af8-a420-4868fbb09e54",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": { \"en\": \"Anonymous 2\" },\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/anonymouses/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/anonymouses/d57d855f-59bf-4af8-a420-4868fbb09e54",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
 						},
 						"description": ""
 					},
@@ -2025,7 +3820,143 @@
 				{
 					"name": "/anonymous-personas",
 					"request": {
-						"url": "{{identities}}{{environment}}/anonymous-personas",
+						"url": {
+							"raw": "{{identities}}{{environment}}/anonymous-personas",
+							"host": [
+								"{{identities}}{{environment}}"
+							],
+							"path": [
+								"anonymous-personas"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/anonymous-personas/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/anonymous-personas/0f517997-ec65-4dba-bd9c-ee82818a26a0",
 						"method": "GET",
 						"header": [
 							{
@@ -2073,7 +4004,573 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Persona 1\" },\r\n  \"anonymous\": \"/app_dev.php/anonymouses/cf6f9ddf-f307-4911-9ebe-64761d4d6bca\"\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Persona 1\" },\r\n\t\"anonymous\": \"/app_dev.php/anonymouses/d57d855f-59bf-4af8-a420-4868fbb09e54\",\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/anonymous-personas/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/anonymous-personas/0f517997-ec65-4dba-bd9c-ee82818a26a0",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": { \"en\": \"Persona 2\" },\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/anonymous-personas/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/anonymous-personas/0f517997-ec65-4dba-bd9c-ee82818a26a0",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/staff",
+					"request": {
+						"url": {
+							"raw": "{{identities}}{{environment}}/staff",
+							"host": [
+								"{{identities}}{{environment}}"
+							],
+							"path": [
+								"staff"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/staff/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/staff/977663e7-c98d-4a51-bcbf-855ff44bd6d0",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/staff",
+					"request": {
+						"url": "{{identities}}{{environment}}/staff",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Staff 1\" },\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/staff/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/staff/977663e7-c98d-4a51-bcbf-855ff44bd6d0",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"owner\": \"Staff\",\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/staff/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/staff/977663e7-c98d-4a51-bcbf-855ff44bd6d0",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/staff-personas",
+					"request": {
+						"url": {
+							"raw": "{{identities}}{{environment}}/staff-personas",
+							"host": [
+								"{{identities}}{{environment}}"
+							],
+							"path": [
+								"staff-personas"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/staff-personas/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/staff-personas/c75e7a7d-ed08-4266-869f-05a0e2d10dd1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/staff-personas",
+					"request": {
+						"url": "{{identities}}{{environment}}/staff-personas",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Persona 1\" },\r\n\t\"individual\": \"/app_dev.php/individuals/9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/staff-personas/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/individual-personas/aacc9815-7231-4f31-bab3-3385493097fa",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": { \"en\": \"Persona 2\" },\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/staff-personas/{uuid}",
+					"request": {
+						"url": "{{identities}}{{environment}}/individual-personas/aacc9815-7231-4f31-bab3-3385493097fa",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
 						},
 						"description": ""
 					},
@@ -2115,7 +4612,253 @@
 				{
 					"name": "/permissions",
 					"request": {
-						"url": "{{records}}{{environment}}/permissions",
+						"url": {
+							"raw": "{{records}}{{environment}}/permissions",
+							"host": [
+								"{{records}}{{environment}}"
+							],
+							"path": [
+								"permissions"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions/{uuid}",
+					"request": {
+						"url": {
+							"raw": "{{records}}{{environment}}/permissions/4ad33b73-7736-4a6b-b0ba-61a238a345ce",
+							"host": [
+								"{{records}}{{environment}}"
+							],
+							"path": [
+								"permissions",
+								"4ad33b73-7736-4a6b-b0ba-61a238a345ce"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2163,7 +4906,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"userUuid\": \"36ea6a46-0cb4-43b0-8ac8-f1ea07207f3f\",\r\n  \"businessUnitUuid\": null,\r\n  \"entries\": [\r\n    {\r\n      \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n      \"key\": \"record\",\r\n      \"attributes\": [\r\n        \"BROWSE\",\r\n        \"READ\"\r\n      ]\r\n    }\r\n  ]\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"userUuid\": \"36ea6a46-0cb4-43b0-8ac8-f1ea07207f3f\",\r\n\t\"businessUnitUuid\": null,\r\n\t\"entries\": [\r\n\t\t{\r\n\t\t\t\"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\t\t\"key\": \"record\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
 						},
 						"description": ""
 					},
@@ -2232,7 +4975,116 @@
 				{
 					"name": "/configs",
 					"request": {
-						"url": "{{records}}{{environment}}/configs",
+						"url": {
+							"raw": "{{records}}{{environment}}/configs",
+							"host": [
+								"{{records}}{{environment}}"
+							],
+							"path": [
+								"configs"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "key",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "enabled",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2307,7 +5159,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"value\": \"CASE-{date:Y-m-d}-{inc2}\"\n}"
+							"raw": "{\n    \"value\": \"CASE-{date:Y-m-d}-{inc2}\",\n    \"version\": 1\n}"
 						},
 						"description": ""
 					},
@@ -2316,7 +5168,144 @@
 				{
 					"name": "/records",
 					"request": {
-						"url": "{{records}}{{environment}}/records",
+						"url": {
+							"raw": "{{records}}{{environment}}/records",
+							"host": [
+								"{{records}}{{environment}}"
+							],
+							"path": [
+								"records"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identity",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identity[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identityUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identityUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2391,7 +5380,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Record 1\" }\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Record 1\" },\r\n\t\"data\": {\r\n\t\t\"test\": \"test\"\r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -2421,14 +5410,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+							"raw": "{\r\n\t\"owner\": \"Individual\",\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
 					"response": []
 				},
 				{
-					"name": "/records/{uuid} copy",
+					"name": "/records/{uuid}",
 					"request": {
 						"url": "{{records}}{{environment}}/records/f0079232-22a6-4da0-8ded-1bc8996447e6",
 						"method": "DELETE",
@@ -2460,7 +5449,144 @@
 				{
 					"name": "/record-associations",
 					"request": {
-						"url": "{{records}}{{environment}}/record-associations",
+						"url": {
+							"raw": "{{records}}{{environment}}/record-associations",
+							"host": [
+								"{{records}}{{environment}}"
+							],
+							"path": [
+								"record-associations"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "entity",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "entity[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "entityUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "entityUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2535,7 +5661,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"record\": \"/app_dev.php/records/f0079232-22a6-4da0-8ded-1bc8996447e6\",\r\n  \"entity\": \"Case\",\r\n  \"entityUuid\": \"19ee32f9-0b1c-44ec-b497-a9d44fb55248\",\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"109a59c9-2752-44b7-994e-5eb3d713c888\"\r\n}"
+							"raw": "{\r\n\t\"record\": \"/app_dev.php/records/f0079232-22a6-4da0-8ded-1bc8996447e6\",\r\n\t\"entity\": \"Case\",\r\n\t\"entityUuid\": \"19ee32f9-0b1c-44ec-b497-a9d44fb55248\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"109a59c9-2752-44b7-994e-5eb3d713c888\",\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -2565,7 +5691,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+							"raw": "{\r\n\t\"owner\": \"Individual\",\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
