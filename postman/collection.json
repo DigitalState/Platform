@@ -265,6 +265,33 @@
 					"response": []
 				},
 				{
+					"name": "/assets/{uuid}",
+					"request": {
+						"url": "{{assets}}{{environment}}/assets/2ef4564d-6bf3-4955-b314-135c24b45e3e",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/assets",
 					"request": {
 						"url": "{{assets}}{{environment}}/assets",
@@ -288,7 +315,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"title\": { \"en\": \"Asset 1\" }\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Asset 1\" },\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -318,7 +345,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+							"raw": "{\r\n\t\"owner\": \"Individual\",\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -385,6 +412,33 @@
 					"response": []
 				},
 				{
+					"name": "/asset-associations/{uuid}",
+					"request": {
+						"url": "{{assets}}{{environment}}/asset-associations/109a59c9-2752-44b7-994e-5eb3d713c882",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/asset-associations",
 					"request": {
 						"url": "{{assets}}{{environment}}/asset-associations",
@@ -408,7 +462,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"asset\": \"/app_dev.php/assets/16fab887-d04f-4bf1-8b71-23c88c501ebc\",\r\n  \"entity\": \"Case\",\r\n  \"entityUuid\": \"19ee32f9-0b1c-44ec-b497-a9d44fb55248\",\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"109a59c9-2752-44b7-994e-5eb3d713c888\"\r\n}"
+							"raw": "{\r\n\t\"asset\": \"/app_dev.php/assets/16fab887-d04f-4bf1-8b71-23c88c501ebc\",\r\n\t\"entity\": \"Case\",\r\n\t\"entityUuid\": \"19ee32f9-0b1c-44ec-b497-a9d44fb55248\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"109a59c9-2752-44b7-994e-5eb3d713c888\",\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -438,7 +492,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+							"raw": "{\r\n\t\"owner\": \"Individual\",\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -837,7 +891,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"25b88f35-eb37-4dae-9d89-668151e11a0d\",\n    \"userUuid\": \"a57ccc4b-6567-4ea5-83b2-5332baf94611\",\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
+							"raw": "{\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
 						},
 						"description": ""
 					},
@@ -1913,6 +1967,52 @@
 					"response": []
 				},
 				{
+					"name": "/cases/{uuid}",
+					"request": {
+						"url": {
+							"raw": "{{cases}}{{environment}}/cases/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
+							"host": [
+								"{{cases}}{{environment}}"
+							],
+							"path": [
+								"cases",
+								"f5d9013f-71c6-40bb-a7da-e931bf38ebb6"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "fr",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/cases",
 					"request": {
 						"url": "{{cases}}{{environment}}/cases",
@@ -1936,13 +2036,321 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 1\",\r\n\t\t\"fr\": \"Cas 1\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
 					"response": [
 						{
-							"id": "5742d496-1efd-4ee1-9f72-66964f2d4488",
+							"id": "3989e52e-4842-4c93-80f6-e77312161ddd",
+							"name": "Created",
+							"originalRequest": {
+								"url": "{{cases}}{{environment}}/cases",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "Cache-Control",
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "Connection",
+									"key": "Connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "Content-Type",
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "Date",
+									"key": "Date",
+									"value": "Thu, 22 Jun 2017 00:12:01 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "Link",
+									"key": "Link",
+									"value": "<http://10.0.75.1:8050/app_dev.php/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+									"description": "Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988",
+									"isLink": true
+								},
+								{
+									"name": "Server",
+									"key": "Server",
+									"value": "nginx/1.11.13",
+									"description": "A name for the server"
+								},
+								{
+									"name": "Transfer-Encoding",
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "Vary",
+									"key": "Vary",
+									"value": "Accept",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "X-ChromeLogger-Data",
+									"key": "X-ChromeLogger-Data",
+									"value": "eyJ2ZXJzaW9uIjoiNC4wIiwiY29sdW1ucyI6WyJsYWJlbCIsImxvZyIsImJhY2t0cmFjZSIsInR5cGUiXSwicm93cyI6W1sicmVxdWVzdCIseyJtZXNzYWdlIjoiTWF0Y2hlZCByb3V0ZSBcImFwaV9jYXNlc19wb3N0X2NvbGxlY3Rpb25cIi4iLCJjb250ZXh0Ijp7InJvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiIsInJvdXRlX3BhcmFtZXRlcnMiOnsiX2NvbnRyb2xsZXIiOiJhcGlfcGxhdGZvcm0uYWN0aW9uLnBvc3RfY29sbGVjdGlvbiIsIl9mb3JtYXQiOm51bGwsIl9hcGlfcmVzb3VyY2VfY2xhc3MiOiJEc1xcQnVuZGxlXFxDYXNlQnVuZGxlXFxFbnRpdHlcXENhc2VFbnRpdHkiLCJfYXBpX2NvbGxlY3Rpb25fb3BlcmF0aW9uX25hbWUiOiJwb3N0IiwiX3JvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiJ9LCJyZXF1ZXN0X3VyaSI6Imh0dHA6XC9cLzEwLjAuNzUuMTo4MDUwXC9hcHBfZGV2LnBocFwvY2FzZXMiLCJtZXRob2QiOiJQT1NUIn19LCJ1bmtub3duIiwiaW5mbyJdLFsic2VjdXJpdHkiLHsibWVzc2FnZSI6Ikd1YXJkIGF1dGhlbnRpY2F0aW9uIHN1Y2Nlc3NmdWwhIiwiY29udGV4dCI6eyJ0b2tlbiI6e30sImF1dGhlbnRpY2F0b3IiOiJMZXhpa1xcQnVuZGxlXFxKV1RBdXRoZW50aWNhdGlvbkJ1bmRsZVxcU2VjdXJpdHlcXEd1YXJkXFxKV1RUb2tlbkF1dGhlbnRpY2F0b3IifX0sInVua25vd24iLCJpbmZvIl1dLCJyZXF1ZXN0X3VyaSI6IlwvYXBwX2Rldi5waHBcL2Nhc2VzIn0=",
+									"description": "Custom header"
+								},
+								{
+									"name": "X-Content-Type-Options",
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "X-Debug-Token",
+									"key": "X-Debug-Token",
+									"value": "63b6fe",
+									"description": "Custom header"
+								},
+								{
+									"name": "X-Debug-Token-Link",
+									"key": "X-Debug-Token-Link",
+									"value": "http://10.0.75.1:8050/app_dev.php/_profiler/63b6fe",
+									"description": "Custom header"
+								},
+								{
+									"name": "X-Frame-Options",
+									"key": "X-Frame-Options",
+									"value": "deny",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "X-Powered-By",
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.5",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 762,
+							"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
+						}
+					]
+				},
+				{
+					"name": "/cases/{uuid}",
+					"request": {
+						"url": "{{cases}}{{environment}}/cases/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 2\",\r\n\t\t\"fr\": \"Cas 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "05ea68dd-f732-4e4a-963a-0896d8f11df7",
+							"name": "Created",
+							"originalRequest": {
+								"url": "{{cases}}{{environment}}/cases",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "Cache-Control",
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "Connection",
+									"key": "Connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "Content-Type",
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "Date",
+									"key": "Date",
+									"value": "Thu, 22 Jun 2017 00:12:01 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "Link",
+									"key": "Link",
+									"value": "<http://10.0.75.1:8050/app_dev.php/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
+									"description": "Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988",
+									"isLink": true
+								},
+								{
+									"name": "Server",
+									"key": "Server",
+									"value": "nginx/1.11.13",
+									"description": "A name for the server"
+								},
+								{
+									"name": "Transfer-Encoding",
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "Vary",
+									"key": "Vary",
+									"value": "Accept",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "X-ChromeLogger-Data",
+									"key": "X-ChromeLogger-Data",
+									"value": "eyJ2ZXJzaW9uIjoiNC4wIiwiY29sdW1ucyI6WyJsYWJlbCIsImxvZyIsImJhY2t0cmFjZSIsInR5cGUiXSwicm93cyI6W1sicmVxdWVzdCIseyJtZXNzYWdlIjoiTWF0Y2hlZCByb3V0ZSBcImFwaV9jYXNlc19wb3N0X2NvbGxlY3Rpb25cIi4iLCJjb250ZXh0Ijp7InJvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiIsInJvdXRlX3BhcmFtZXRlcnMiOnsiX2NvbnRyb2xsZXIiOiJhcGlfcGxhdGZvcm0uYWN0aW9uLnBvc3RfY29sbGVjdGlvbiIsIl9mb3JtYXQiOm51bGwsIl9hcGlfcmVzb3VyY2VfY2xhc3MiOiJEc1xcQnVuZGxlXFxDYXNlQnVuZGxlXFxFbnRpdHlcXENhc2VFbnRpdHkiLCJfYXBpX2NvbGxlY3Rpb25fb3BlcmF0aW9uX25hbWUiOiJwb3N0IiwiX3JvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiJ9LCJyZXF1ZXN0X3VyaSI6Imh0dHA6XC9cLzEwLjAuNzUuMTo4MDUwXC9hcHBfZGV2LnBocFwvY2FzZXMiLCJtZXRob2QiOiJQT1NUIn19LCJ1bmtub3duIiwiaW5mbyJdLFsic2VjdXJpdHkiLHsibWVzc2FnZSI6Ikd1YXJkIGF1dGhlbnRpY2F0aW9uIHN1Y2Nlc3NmdWwhIiwiY29udGV4dCI6eyJ0b2tlbiI6e30sImF1dGhlbnRpY2F0b3IiOiJMZXhpa1xcQnVuZGxlXFxKV1RBdXRoZW50aWNhdGlvbkJ1bmRsZVxcU2VjdXJpdHlcXEd1YXJkXFxKV1RUb2tlbkF1dGhlbnRpY2F0b3IifX0sInVua25vd24iLCJpbmZvIl1dLCJyZXF1ZXN0X3VyaSI6IlwvYXBwX2Rldi5waHBcL2Nhc2VzIn0=",
+									"description": "Custom header"
+								},
+								{
+									"name": "X-Content-Type-Options",
+									"key": "X-Content-Type-Options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "X-Debug-Token",
+									"key": "X-Debug-Token",
+									"value": "63b6fe",
+									"description": "Custom header"
+								},
+								{
+									"name": "X-Debug-Token-Link",
+									"key": "X-Debug-Token-Link",
+									"value": "http://10.0.75.1:8050/app_dev.php/_profiler/63b6fe",
+									"description": "Custom header"
+								},
+								{
+									"name": "X-Frame-Options",
+									"key": "X-Frame-Options",
+									"value": "deny",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "X-Powered-By",
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.5",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 762,
+							"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
+						}
+					]
+				},
+				{
+					"name": "/cases/{uuid}",
+					"request": {
+						"url": "{{cases}}{{environment}}/cases/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "ace2dc9b-2954-488c-93f3-d3166f99421e",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -2576,7 +2984,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"25b88f35-eb37-4dae-9d89-668151e11a0d\",\n    \"userUuid\": \"a57ccc4b-6567-4ea5-83b2-5332baf94611\",\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
+							"raw": "{\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
 						},
 						"description": ""
 					},
@@ -4936,7 +5344,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"25b88f35-eb37-4dae-9d89-668151e11a0d\",\n    \"userUuid\": \"a57ccc4b-6567-4ea5-83b2-5332baf94611\",\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"record\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"record_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
+							"raw": "{\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"record\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"record_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
 						},
 						"description": ""
 					},
@@ -5761,9 +6169,1099 @@
 					"response": []
 				},
 				{
+					"name": "/permissions",
+					"request": {
+						"url": {
+							"raw": "{{services}}{{environment}}/permissions",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"permissions"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions/{uuid}",
+					"request": {
+						"url": {
+							"raw": "{{services}}{{environment}}/permissions/6e47bde9-3ccf-4a4b-b376-023092ea058d",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"permissions",
+								"6e47bde9-3ccf-4a4b-b376-023092ea058d"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions",
+					"request": {
+						"url": "{{services}}{{environment}}/permissions",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"userUuid\": \"36ea6a46-0cb4-43b0-8ac8-f1ea07207f3f\",\r\n\t\"businessUnitUuid\": null,\r\n\t\"entries\": [\r\n\t\t{\r\n\t\t\t\"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\t\t\"key\": \"service\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/permissions/6e47bde9-3ccf-4a4b-b376-023092ea058d",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"service\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"service_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/permissions/6e47bde9-3ccf-4a4b-b376-023092ea058d",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs",
+					"request": {
+						"url": {
+							"raw": "{{services}}{{environment}}/configs",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"configs"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "key",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "enabled",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/configs/d823bca8-bb87-4537-a4b1-b78239c127f8",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/configs/d823bca8-bb87-4537-a4b1-b78239c127f8",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"value\": \"CASE-{date:Y-m-d}-{inc3}\",\n    \"version\": 1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/categories",
+					"request": {
+						"url": {
+							"raw": "{{services}}{{environment}}/categories",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"categories"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "enabled",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[id]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[createdAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[updatedAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[deletedAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[owner]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[weight]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "presentation",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "services.uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "services.uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/categories/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/categories/56f556f6-e9d1-4eec-ba96-b5461eaacf14",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/categories",
+					"request": {
+						"url": "{{services}}{{environment}}/categories",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"f7711a36-53e7-4d43-8b2b-9d86b1dc7d49\",\r\n\t\"title\": { \"en\":\"Category 1\" },\r\n\t\"description\": { \"en\":\"Description\" },\r\n\t\"presentation\": { \"en\":\"Presentation\" },\r\n\t\"services\": [\r\n\t],\r\n\t\"enabled\": true,\r\n\t\"weight\": 0,\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/categories/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/categories/56f556f6-e9d1-4eec-ba96-b5461eaacf14",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"owner\": \"Individual\",\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/categories/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/categories/56f556f6-e9d1-4eec-ba96-b5461eaacf14",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/services",
 					"request": {
-						"url": "{{services}}{{environment}}/services",
+						"url": {
+							"raw": "{{services}}{{environment}}/services",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"services"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "enabled",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[id]",
+									"value": "",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[createdAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[updatedAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[deletedAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[owner]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[weight]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "presentation",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "categories.uuid",
+									"value": "",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[title]",
+									"value": "",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "locale",
+									"value": "",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -5838,7 +7336,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"3f26e701-daf9-46c0-ae4d-d74f35eef278\",\r\n  \"title\": { \"en\": \"Service 1\" },\r\n  \"description\": { \"en\": \"Description\" },\r\n  \"presentation\": { \"en\": \"Presentation\" },\r\n  \"enabled\": true\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"3f26e701-daf9-46c0-ae4d-d74f35eef278\",\r\n\t\"title\": { \"en\": \"Service 1\" },\r\n\t\"description\": { \"en\": \"Description\" },\r\n\t\"presentation\": { \"en\": \"Presentation\" },\r\n\t\"enabled\": true,\r\n\t\"weight\": 0,\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -5868,7 +7366,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"title\": {\r\n  \t\"fr\": \"Service 1 fr\"\r\n  }\r\n}\r\n"
+							"raw": "{\r\n\t\"title\": {\r\n\t\t\"fr\": \"Service 1 fr\"\r\n\t},\r\n\t\"version\": 1\r\n}\r\n"
 						},
 						"description": ""
 					},
@@ -5907,7 +7405,221 @@
 				{
 					"name": "/scenarios",
 					"request": {
-						"url": "{{services}}{{environment}}/scenarios",
+						"url": {
+							"raw": "{{services}}{{environment}}/scenarios",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"scenarios"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "type[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "enabled",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[id]",
+									"value": "asc",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[createdAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[updatedAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[deletedAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[owner]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[type]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[weight]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "presentation",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "service.uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "service.uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -5934,7 +7646,7 @@
 				{
 					"name": "/scenarios/{uuid}",
 					"request": {
-						"url": "{{services}}{{environment}}/scenarios/b12fef1d-c197-4420-be77-083e2f2b53d6",
+						"url": "{{services}}{{environment}}/scenarios/b030d951-b257-45be-8abb-527efb7e2555",
 						"method": "GET",
 						"header": [
 							{
@@ -5961,7 +7673,7 @@
 				{
 					"name": "/scenarios/{uuid}/form",
 					"request": {
-						"url": "{{services}}{{environment}}/scenarios/b12fef1d-c197-4420-be77-083e2f2b53d6/form",
+						"url": "{{services}}{{environment}}/scenarios/b030d951-b257-45be-8abb-527efb7e2555/form",
 						"method": "GET",
 						"header": [
 							{
@@ -5988,7 +7700,7 @@
 				{
 					"name": "/scenarios/{uuid}/form/translation",
 					"request": {
-						"url": "{{services}}{{environment}}/scenarios/b12fef1d-c197-4420-be77-083e2f2b53d6/form/translation",
+						"url": "{{services}}{{environment}}/scenarios/b030d951-b257-45be-8abb-527efb7e2555/form/translation",
 						"method": "GET",
 						"header": [
 							{
@@ -6036,7 +7748,37 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"0609ccde-e1d2-4c63-ae40-d9c52d14f235\",\r\n  \"service\": \"/app_dev.php/services/3e43a68b-1028-4923-9bc5-50502d239507\",\r\n  \"type\": \"bpm\",\r\n  \"title\": { \"en\":\"Scenario 1\" },\r\n  \"description\": { \"en\": \"Description\" },\r\n  \"presentation\": { \"en\": \"Presentation\" },\r\n  \"enabled\": true\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"0609ccde-e1d2-4c63-ae40-d9c52d14f235\",\r\n\t\"service\": \"/app_dev.php/services/b12fef1d-c197-4420-be77-083e2f2b53d6\",\r\n\t\"type\": \"bpm\",\r\n\t\"title\": { \"en\":\"Scenario 1\" },\r\n\t\"description\": { \"en\": \"Description\" },\r\n\t\"presentation\": { \"en\": \"Presentation\" },\r\n\t\"enabled\": true,\r\n\t\"weight\": 0,\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/scenarios/{uuid}/submissions",
+					"request": {
+						"url": "{{services}}{{environment}}/scenarios/b030d951-b257-45be-8abb-527efb7e2555/submissions",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": {\n\t\t\"test\": \"test\"\n\t}\n}"
 						},
 						"description": ""
 					},
@@ -6066,7 +7808,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
+							"raw": "{\r\n\t\"owner\": \"Individual\",\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -6105,7 +7847,228 @@
 				{
 					"name": "/submissions",
 					"request": {
-						"url": "{{services}}{{environment}}/submissions",
+						"url": {
+							"raw": "{{services}}{{environment}}/submissions",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"submissions"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identity",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identity[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identityUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identityUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "state[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[id]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[createdAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[updatedAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[deletedAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[owner]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[identity]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[state]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[weight]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "scenario.uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "scenario.uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -6180,7 +8143,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"scenario\": \"/app_dev.php/scenarios/b12fef1d-c197-4420-be77-083e2f2b53d6\",\r\n  \"data\": { \"test\": \"test\" }\r\n}"
+							"raw": "{\r\n\t\"scenario\": \"/app_dev.php/scenarios/b030d951-b257-45be-8abb-527efb7e2555\",\r\n\t\"data\": { \r\n\t\t\"test\": \"test\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -6190,147 +8153,6 @@
 					"name": "/submissions/{uuid}",
 					"request": {
 						"url": "{{services}}{{environment}}/submissions/2b20cb91-d0ef-41f1-b2f8-6c1a9ebc6fd1",
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/categories",
-					"request": {
-						"url": "{{services}}{{environment}}/categories",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/categories/{uuid}",
-					"request": {
-						"url": "{{services}}{{environment}}/categories/56f556f6-e9d1-4eec-ba96-b5461eaacf14",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/categories",
-					"request": {
-						"url": "{{services}}{{environment}}/categories",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"f7711a36-53e7-4d43-8b2b-9d86b1dc7d49\",\r\n  \"title\": { \"en\":\"Category 1\" },\r\n  \"description\": { \"en\":\"Description\" },\r\n  \"presentation\": { \"en\":\"Presentation\" },\r\n  \"services\": [\r\n  ],\r\n  \"enabled\": true\r\n}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/categories/{uuid}",
-					"request": {
-						"url": "{{services}}{{environment}}/categories/56f556f6-e9d1-4eec-ba96-b5461eaacf14",
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"Individual\"\r\n}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/categories/{uuid}",
-					"request": {
-						"url": "{{services}}{{environment}}/categories/56f556f6-e9d1-4eec-ba96-b5461eaacf14",
 						"method": "DELETE",
 						"header": [
 							{
