@@ -44,7 +44,6 @@ The following are reserved words for entities.
 ## Identities
 
 - BusinessUnit
-- Persona
 - Anonymous
 - AnonymousPersona
 - AnonymousPersonaTranslation
@@ -58,12 +57,19 @@ The following are reserved words for entities.
 ## Cms
 
 - Data
+- DataTranslation
 - File
+- FileTranslation
 - Text
+- TextTranslation
 - Dashboard
+- DashboardTranslation
 - Widget
+- WidgetTranslation
 - Page
+- PageTranslation
 - Template
+- TemplateTranslation
 
 ## Topics
 
