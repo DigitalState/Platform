@@ -5,8 +5,9 @@ The following are reserved words for entities.
 ## Core
 
 - Config
-- Permission
-- PermissionEntry
+- Access
+- Permissions
+- Definition
 
 ## Authentication
 
@@ -17,6 +18,7 @@ The following are reserved words for entities.
 - Case
 - CaseTranslation
 - CaseStatus
+- CaseStatusTranslation
 - CaseData
 
 ## Services
@@ -53,6 +55,8 @@ The following are reserved words for entities.
 - Staff
 - StaffPersona
 - StaffPersonaTranslation
+- System
+- Admin
 
 ## Cms
 

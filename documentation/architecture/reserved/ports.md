@@ -2,18 +2,18 @@
 
 The following are reserved ports for microservices.
 
-## User Interface
+## Interface
 
 - 8000 Portal
 - 8001 Admin
 
-## System Microservices
+## System
 
 - 8010 Authentication
 - 8011 Api
 - 8012 Discovery
 
-## Business Microservices
+## Business
 
 - 8050 Cases
 - 8051 Services
