@@ -1,4 +1,4 @@
-# Entities
+# Reserved Entities
 
 The following are reserved words for entities.
 
