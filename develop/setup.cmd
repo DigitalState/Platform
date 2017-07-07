@@ -1,6 +1,6 @@
 @echo OFF
 
-for /F "tokens=1,2" %%i in (config.ini) do call :process %%i %%j
+for /F "tokens=1,2" %%i in (config/repositories.ini) do call :process %%i %%j
 
 cd "%~dp0"
 

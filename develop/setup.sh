@@ -1,7 +1,7 @@
 #!/bin/bash
 
 backupDir="/tmp/ms_graveyard"
-file="./config.ini"
+file="./config/repositories.ini"
 
 
 function processConfigFile {
