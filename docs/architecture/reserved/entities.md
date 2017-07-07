@@ -6,7 +6,7 @@ The following are reserved words for entities.
 
 - Config
 - Access
-- Permissions
+- Permission
 - Definition
 
 ## Authentication
