@@ -11,10 +11,12 @@ cd "%~dp0"
     set repository=%2
 
     if "%directory%" NEQ "" (
-        mkdir "%~dp0%directory%"
-        cd "%~dp0%directory%"
+        mkdir "%~dp0/src/%directory%"
+        cd "%~dp0/src/%directory%"
         git clone "%repository%" .
         docker-compose up -d
+        docker-compose exec php php bin/console doctrine:migration:migrate
+        docker-compose exec php php bin/console doctrine:fixtures:load
     )
 
 goto :EOF
