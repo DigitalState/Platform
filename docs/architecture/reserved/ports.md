@@ -6,6 +6,7 @@ The following are reserved ports for microservices.
 
 - 8000 Portal
 - 8001 Admin
+- 8002 Monitor
 
 ## System
 
