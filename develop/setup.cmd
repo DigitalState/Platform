@@ -1,12 +1,19 @@
 @echo OFF
 
-for /F "tokens=1,2" %%i in (config/repositories.ini) do call :process %%i %%j
+for /F "tokens=1,2" %%a in (config/repositories.ini) do (
+    call :setup %%a %%b
+)
 
 cd "%~dp0"
 
 
-:process
-
+::
+:: Clone repository in given directory, run docker-compose and load migrations
+::
+:: @param string %1 The directory
+:: @param string %2 The repository
+::
+:setup
     set directory=%1
     set repository=%2
 
@@ -18,5 +25,5 @@ cd "%~dp0"
         docker-compose exec php php bin/console doctrine:migration:migrate
         docker-compose exec php php bin/console doctrine:fixtures:load
     )
-
 goto :EOF
+::
