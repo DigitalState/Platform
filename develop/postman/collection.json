@@ -565,15 +565,15 @@
 					"response": []
 				},
 				{
-					"name": "/permissions",
+					"name": "/accesses",
 					"request": {
 						"url": {
-							"raw": "{{authentication}}{{environment}}/permissions",
+							"raw": "{{authentication}}{{environment}}/accesses",
 							"host": [
 								"{{authentication}}{{environment}}"
 							],
 							"path": [
-								"permissions"
+								"accesses"
 							],
 							"query": [
 								{
@@ -701,16 +701,16 @@
 					"response": []
 				},
 				{
-					"name": "/permissions/{uuid}",
+					"name": "/accesses/{uuid}",
 					"request": {
 						"url": {
-							"raw": "{{authentication}}{{environment}}/permissions/4ad33b73-7736-4a6b-b0ba-61a238a345ce",
+							"raw": "{{authentication}}{{environment}}/accesses/896c57eb-cdc5-43d7-990b-e98aefc2d75b",
 							"host": [
 								"{{authentication}}{{environment}}"
 							],
 							"path": [
-								"permissions",
-								"4ad33b73-7736-4a6b-b0ba-61a238a345ce"
+								"accesses",
+								"896c57eb-cdc5-43d7-990b-e98aefc2d75b"
 							],
 							"query": [
 								{
@@ -838,9 +838,9 @@
 					"response": []
 				},
 				{
-					"name": "/permissions",
+					"name": "/accesses",
 					"request": {
-						"url": "{{authentication}}{{environment}}/permissions",
+						"url": "{{authentication}}{{environment}}/accesses",
 						"method": "POST",
 						"header": [
 							{
@@ -861,16 +861,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"userUuid\": \"36ea6a46-0cb4-43b0-8ac8-f1ea07207f3f\",\r\n\t\"businessUnitUuid\": null,\r\n\t\"entries\": [\r\n\t{\r\n\t\t\"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\t\"key\": \"individual\",\r\n\t\t\"attributes\": [\r\n\t\t\t\"BROWSE\",\r\n\t\t\t\"READ\"\r\n\t\t]\r\n\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
+							"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\n    \"identity\": \"Staff\",\n    \"identityUuid\": \"47a5a9cb-496f-4db7-8999-489ec404887f\",\n    \"permissions\": [\n        {\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 						},
 						"description": ""
 					},
 					"response": []
 				},
 				{
-					"name": "/permissions/{uuid}",
+					"name": "/accesses/{uuid}",
 					"request": {
-						"url": "{{authentication}}{{environment}}/permissions/ed778870-9915-42e3-ad21-142c8f655ae5",
+						"url": "{{authentication}}{{environment}}/accesses/896c57eb-cdc5-43d7-990b-e98aefc2d75b",
 						"method": "PUT",
 						"header": [
 							{
@@ -891,16 +891,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
+							"raw": "{\n    \"permissions\": [\n        {\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 						},
 						"description": ""
 					},
 					"response": []
 				},
 				{
-					"name": "/permissions/{uuid}",
+					"name": "/accesses/{uuid}",
 					"request": {
-						"url": "{{authentication}}{{environment}}/permissions/ed778870-9915-42e3-ad21-142c8f655ae5",
+						"url": "{{authentication}}{{environment}}/accesses/896c57eb-cdc5-43d7-990b-e98aefc2d75b",
 						"method": "DELETE",
 						"header": [
 							{
@@ -1301,7 +1301,7 @@
 				{
 					"name": "/users/{uuid}",
 					"request": {
-						"url": "{{authentication}}{{environment}}/users/fca1b603-1c29-4393-85c4-e30611c80abf",
+						"url": "{{authentication}}{{environment}}/users/2acf3e47-2ac7-4bdc-a93a-5edd4a11cd61",
 						"method": "GET",
 						"header": [
 							{
@@ -1349,7 +1349,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"user\",\n    \"plainPassword\":\"123\",\n    \"email\": \"user@ds.ca\",\n    \"enabled\": true,\n    \"roles\": [\n        \"ROLE_INDIVIDUAL\"\n    ],\n    \"identity\": \"Individual\",\n    \"identityUuid\": \"a32e24fb-4f60-481a-8f74-74088c973c1f\",\n    \"version\": 1\n}"
+							"raw": "{\n    \"username\": \"user2@site.com\",\n    \"plainPassword\":\"123\",\n    \"email\": \"user@site.com\",\n    \"enabled\": true,\n    \"roles\": [\n        \"ROLE_INDIVIDUAL\"\n    ],\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caaba\",\n    \"identity\": \"Individual\",\n    \"identityUuid\": \"a32e24fb-4f60-481a-8f74-74088c973c1f\",\n    \"version\": 1\n}"
 						},
 						"description": ""
 					},
@@ -1358,7 +1358,7 @@
 				{
 					"name": "/users/{uuid}",
 					"request": {
-						"url": "{{authentication}}{{environment}}/users/fca1b603-1c29-4393-85c4-e30611c80abf",
+						"url": "{{authentication}}{{environment}}/users/2acf3e47-2ac7-4bdc-a93a-5edd4a11cd61",
 						"method": "PUT",
 						"header": [
 							{
@@ -1379,7 +1379,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"enabled\": true,\n    \"version\": 1\n}"
+							"raw": "{\n    \"enabled\": false,\n    \"version\": 3\n}"
 						},
 						"description": ""
 					},
@@ -1388,7 +1388,7 @@
 				{
 					"name": "/users/{uuid}",
 					"request": {
-						"url": "{{authentication}}{{environment}}/users/fca1b603-1c29-4393-85c4-e30611c80abf",
+						"url": "{{authentication}}{{environment}}/users/2acf3e47-2ac7-4bdc-a93a-5edd4a11cd61",
 						"method": "DELETE",
 						"header": [
 							{
@@ -1416,6 +1416,202 @@
 					"response": []
 				},
 				{
+					"name": "/tokens/admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", data.token);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{authentication}}{{environment}}/tokens/admin",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin@digitalstate.ca",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": "Login in as admin.\n\nFor convenience, sending this request will update your environment token."
+					},
+					"response": []
+				},
+				{
+					"name": "/tokens/staff",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", data.token);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{authentication}}{{environment}}/tokens/staff",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "manager@digitalstate.ca",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "agent@digitalstate.ca",
+									"description": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "usernamw",
+									"value": "intern@digitalstate.ca",
+									"description": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": "Login in as staff.\n\nFor convenience, sending this request will update your environment token."
+					},
+					"response": []
+				},
+				{
+					"name": "/tokens/individual",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", data.token);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{authentication}}{{environment}}/tokens/individual",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "morgan@site.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"description": "Login in as individual.\n\nFor convenience, sending this request will update your environment token."
+					},
+					"response": []
+				},
+				{
+					"name": "/tokens/anonymous",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"token\", data.token);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{authentication}}{{environment}}/tokens/anonymous",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Login in as anonymous.\n\nFor convenience, sending this request will update your environment token."
+					},
+					"response": []
+				},
+				{
 					"name": "/registration",
 					"request": {
 						"url": "{{authentication}}{{environment}}/registration",
@@ -1437,7 +1633,7 @@
 							"urlencoded": [
 								{
 									"key": "username",
-									"value": "user@ds",
+									"value": "user@site.com",
 									"type": "text"
 								},
 								{
@@ -1447,102 +1643,6 @@
 								}
 							]
 						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/tokens/staff",
-					"request": {
-						"url": "{{authentication}}{{environment}}/tokens/staff",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "username",
-									"value": "admin",
-									"description": "",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "1",
-									"description": "",
-									"type": "text"
-								}
-							]
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/tokens/individual",
-					"request": {
-						"url": "{{authentication}}{{environment}}/tokens/individual",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "username",
-									"value": "morgan",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "1",
-									"type": "text"
-								}
-							]
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/tokens/anonymous",
-					"request": {
-						"url": "{{authentication}}{{environment}}/tokens/anonymous",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -2042,7 +2142,7 @@
 					},
 					"response": [
 						{
-							"id": "471d7754-5af9-4033-aac1-002675c4c5d4",
+							"id": "8ef15b91-37e8-4567-8f23-826e05eae021",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -2196,7 +2296,7 @@
 					},
 					"response": [
 						{
-							"id": "a9679fed-b526-4011-8fea-4997f8bb99b2",
+							"id": "79a4874f-b8f5-49f6-a418-dce799594a66",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -2350,7 +2450,7 @@
 					},
 					"response": [
 						{
-							"id": "c194a81b-daa7-4f1e-8f8a-f9a7bf4c6605",
+							"id": "ced0fef5-39df-4b2c-abd9-48c0ee1cda68",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -2829,7 +2929,7 @@
 					},
 					"response": [
 						{
-							"id": "0d844f0d-512a-4119-b7a7-9ad30c50da06",
+							"id": "59301368-0cad-4ab9-bfde-49984a345f67",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -2983,7 +3083,7 @@
 					},
 					"response": [
 						{
-							"id": "abb69d18-cb2e-4fa1-a61a-5d9263388452",
+							"id": "d4aedaab-a8b4-4535-afb7-e8d735709950",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3137,7 +3237,7 @@
 					},
 					"response": [
 						{
-							"id": "b9133cb7-360d-4c4c-b287-861e6e7127ec",
+							"id": "322b1745-37a0-435b-8c67-b30268ed7aba",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3382,7 +3482,7 @@
 					},
 					"response": [
 						{
-							"id": "c50a816b-d757-44e8-aa6b-c3b5c66e8077",
+							"id": "1dae16af-1ab4-4bf8-9a6f-f1f3eee1cc45",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3536,7 +3636,7 @@
 					},
 					"response": [
 						{
-							"id": "c1d931df-6455-48df-90b8-a03efb490340",
+							"id": "4789daff-13f6-4155-af3d-5b66b17940e5",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3690,7 +3790,7 @@
 					},
 					"response": [
 						{
-							"id": "c3e59985-3065-4aa5-848e-ee19ef2a5e15",
+							"id": "8d76d7b4-34f2-4a93-b02c-0cfa05aaee3e",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3935,7 +4035,7 @@
 					},
 					"response": [
 						{
-							"id": "c027ef68-600e-4b92-90b4-75c3ddf008a0",
+							"id": "42d63176-3a8f-4c17-928b-22b739370977",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4089,7 +4189,7 @@
 					},
 					"response": [
 						{
-							"id": "a9e57734-aba0-4880-97fa-517f5959ede4",
+							"id": "9abd26ea-6cec-4efc-9b14-b083934431d9",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4243,7 +4343,7 @@
 					},
 					"response": [
 						{
-							"id": "4cd45db8-3ebc-4add-a106-06496779a752",
+							"id": "0c797328-f2ae-4149-9104-691681347e3a",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4488,7 +4588,7 @@
 					},
 					"response": [
 						{
-							"id": "6f14f7ba-338e-417b-8658-249e7a916f0c",
+							"id": "bbbb9ac6-770d-4af3-b2c2-e3700e950e99",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4642,7 +4742,7 @@
 					},
 					"response": [
 						{
-							"id": "ac8ac1f7-1534-4b31-9c85-7c460d55112b",
+							"id": "5424e5e8-acfb-40b7-b9ce-8687bdf0eebd",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4796,7 +4896,7 @@
 					},
 					"response": [
 						{
-							"id": "bcf1421b-d359-4044-a4e5-a56a8b46a866",
+							"id": "de059182-6865-4f36-8a6a-591c8d9ca641",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5041,7 +5141,7 @@
 					},
 					"response": [
 						{
-							"id": "612d436b-cb0d-4313-bfad-98cccb7ae33b",
+							"id": "1986f04f-f16d-488e-b5bd-5d4fba937867",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5195,7 +5295,7 @@
 					},
 					"response": [
 						{
-							"id": "4cfe45fa-7cf6-494d-b146-fe50c4b5fe6e",
+							"id": "6eca13a6-5628-4869-8b3d-12d03844b001",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5349,7 +5449,7 @@
 					},
 					"response": [
 						{
-							"id": "2367e133-65f3-46ed-a753-06929d63e2ab",
+							"id": "e242d7f3-8a12-4a2d-89bd-f1d620680b58",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5594,7 +5694,7 @@
 					},
 					"response": [
 						{
-							"id": "94e9d6c0-74b0-4122-8def-4f68613d775c",
+							"id": "cf6cdcc1-c0da-459e-b76d-ca7ab30608f0",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5748,7 +5848,7 @@
 					},
 					"response": [
 						{
-							"id": "23d97c10-61c1-42f2-8033-ea5373da55ee",
+							"id": "9697e17c-cbf6-4a72-862f-7cdc0fcf557d",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5902,7 +6002,7 @@
 					},
 					"response": [
 						{
-							"id": "05771d22-d9eb-4278-b04e-9c36f782b1b3",
+							"id": "e21939ba-f731-4fd1-9d6e-1aa119e155ac",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6147,7 +6247,7 @@
 					},
 					"response": [
 						{
-							"id": "d576417a-3cba-41aa-9a01-ad507a1571e0",
+							"id": "bf6ba534-d3ef-4336-9118-8142847a08a4",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6301,7 +6401,7 @@
 					},
 					"response": [
 						{
-							"id": "46c02df9-6806-43a3-a75d-795deefd1cfd",
+							"id": "3e65b5ed-50e1-45e7-b3b2-740067a72a71",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6455,7 +6555,7 @@
 					},
 					"response": [
 						{
-							"id": "cb5f1967-acf0-423e-95fe-d8b5616e0ef6",
+							"id": "3e9fe1e1-ab28-418e-88ff-a07cc87e1f08",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6613,15 +6713,15 @@
 					"response": []
 				},
 				{
-					"name": "/permissions",
+					"name": "/accesses",
 					"request": {
 						"url": {
-							"raw": "{{identities}}{{environment}}/permissions",
+							"raw": "{{identities}}{{environment}}/accesses",
 							"host": [
 								"{{identities}}{{environment}}"
 							],
 							"path": [
-								"permissions"
+								"accesses"
 							],
 							"query": [
 								{
@@ -6749,15 +6849,15 @@
 					"response": []
 				},
 				{
-					"name": "/permissions/{uuid}",
+					"name": "/accesses/{uuid}",
 					"request": {
 						"url": {
-							"raw": "{{identities}}{{environment}}/permissions/ed778870-9915-42e3-ad21-142c8f655ae5",
+							"raw": "{{identities}}{{environment}}/accesses/ed778870-9915-42e3-ad21-142c8f655ae5",
 							"host": [
 								"{{identities}}{{environment}}"
 							],
 							"path": [
-								"permissions",
+								"accesses",
 								"ed778870-9915-42e3-ad21-142c8f655ae5"
 							],
 							"query": [
@@ -6886,9 +6986,9 @@
 					"response": []
 				},
 				{
-					"name": "/permissions",
+					"name": "/accesses",
 					"request": {
-						"url": "{{identities}}{{environment}}/permissions",
+						"url": "{{identities}}{{environment}}/accesses",
 						"method": "POST",
 						"header": [
 							{
@@ -6909,16 +7009,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"userUuid\": \"36ea6a46-0cb4-43b0-8ac8-f1ea07207f3f\",\r\n  \"businessUnitUuid\": null,\r\n  \"entries\": [\r\n    {\r\n      \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n      \"key\": \"individual\",\r\n      \"attributes\": [\r\n        \"BROWSE\",\r\n        \"READ\"\r\n      ]\r\n    }\r\n  ]\r\n}"
+							"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\n    \"identity\": \"Staff\",\n    \"identityUuid\": \"47a5a9cb-496f-4db7-8999-489ec404887f\",\n    \"permissions\": [\n        {\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 						},
 						"description": ""
 					},
 					"response": []
 				},
 				{
-					"name": "/permissions/{uuid}",
+					"name": "/accesses/{uuid}",
 					"request": {
-						"url": "{{identities}}{{environment}}/permissions/ed778870-9915-42e3-ad21-142c8f655ae5",
+						"url": "{{identities}}{{environment}}/accesses/ed778870-9915-42e3-ad21-142c8f655ae5",
 						"method": "PUT",
 						"header": [
 							{
@@ -6939,16 +7039,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"individual_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
+							"raw": "{\n    \"permissions\": [\n        {\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 						},
 						"description": ""
 					},
 					"response": []
 				},
 				{
-					"name": "/permissions/{uuid}",
+					"name": "/accesses/{uuid}",
 					"request": {
-						"url": "{{identities}}{{environment}}/permissions/ed778870-9915-42e3-ad21-142c8f655ae5",
+						"url": "{{identities}}{{environment}}/accesses/ed778870-9915-42e3-ad21-142c8f655ae5",
 						"method": "DELETE",
 						"header": [
 							{
@@ -7643,7 +7743,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Individual 1\" },\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -8219,7 +8319,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Anonymous 1\" },\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -8795,7 +8895,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Staff 1\" },\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -10334,15 +10434,15 @@
 					"response": []
 				},
 				{
-					"name": "/permissions",
+					"name": "/accesses",
 					"request": {
 						"url": {
-							"raw": "{{services}}{{environment}}/permissions",
+							"raw": "{{services}}{{environment}}/accesses",
 							"host": [
 								"{{services}}{{environment}}"
 							],
 							"path": [
-								"permissions"
+								"accesses"
 							],
 							"query": [
 								{
@@ -10470,15 +10570,15 @@
 					"response": []
 				},
 				{
-					"name": "/permissions/{uuid}",
+					"name": "/accesses/{uuid}",
 					"request": {
 						"url": {
-							"raw": "{{services}}{{environment}}/permissions/6e47bde9-3ccf-4a4b-b376-023092ea058d",
+							"raw": "{{services}}{{environment}}/accesses/6e47bde9-3ccf-4a4b-b376-023092ea058d",
 							"host": [
 								"{{services}}{{environment}}"
 							],
 							"path": [
-								"permissions",
+								"accesses",
 								"6e47bde9-3ccf-4a4b-b376-023092ea058d"
 							],
 							"query": [
@@ -10607,9 +10707,9 @@
 					"response": []
 				},
 				{
-					"name": "/permissions",
+					"name": "/accesses",
 					"request": {
-						"url": "{{services}}{{environment}}/permissions",
+						"url": "{{services}}{{environment}}/accesses",
 						"method": "POST",
 						"header": [
 							{
@@ -10637,9 +10737,9 @@
 					"response": []
 				},
 				{
-					"name": "/permissions/{uuid}",
+					"name": "/accesses/{uuid}",
 					"request": {
-						"url": "{{services}}{{environment}}/permissions/6e47bde9-3ccf-4a4b-b376-023092ea058d",
+						"url": "{{services}}{{environment}}/accesses/6e47bde9-3ccf-4a4b-b376-023092ea058d",
 						"method": "PUT",
 						"header": [
 							{
@@ -10667,9 +10767,9 @@
 					"response": []
 				},
 				{
-					"name": "/permissions/{uuid}",
+					"name": "/accesses/{uuid}",
 					"request": {
-						"url": "{{services}}{{environment}}/permissions/6e47bde9-3ccf-4a4b-b376-023092ea058d",
+						"url": "{{services}}{{environment}}/accesses/6e47bde9-3ccf-4a4b-b376-023092ea058d",
 						"method": "DELETE",
 						"header": [
 							{
