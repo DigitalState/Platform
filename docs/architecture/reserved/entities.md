@@ -1,6 +1,6 @@
 # Reserved Entities
 
-The following are reserved words for entities.
+The following are reserved names for entities.
 
 ## Core
 
