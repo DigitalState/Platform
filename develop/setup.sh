@@ -1,8 +1,8 @@
 #!/bin/bash
 
+targetDir=${1:-"/var/containers"}
 backupDir="/tmp/ms_graveyard"
 file="./config/repositories.ini"
-
 
 function processConfigFile {
   IFS='='; msConf=($1); unset IFS;
@@ -21,19 +21,21 @@ function setupMicroservice {
   echo "Microservice name: $directory, and repo: $repo"
 
   # Backup the Microservice directory if it exists
-  if [[ -d $directory ]]; then
+  if [[ -d $targetDir/$directory ]]; then
+    echo "Backing up directory $targetDir/$directory"
     rm -fr "$backupDir/$directory"
-    mv $directory $backupDir
+    mv "$targetDir/$directory" $backupDir
   fi
 
-  mkdir $directory
-  cd $directory
+  mkdir -p "$targetDir/$directory"
+  cd "$targetDir/$directory"
+
   git clone --recursive $repo .
   git checkout develop
   git pull
   git submodule update --init --recursive
+  docker-compose down
   docker-compose up -d
-  cd ..
 }
 
 
