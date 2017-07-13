@@ -35,10 +35,10 @@ docker logs -f portal_ng2admin_1
 ```
 
 - Now you should be able to access the UI at:
-    - Admin: http://localhost:3000
+    - Admin: http://localhost:8001
         - Username: admin@digitalstate.ca
         - Password: 1
         
-    - Portal: http://localhost:2999
+    - Portal: http://localhost:8000
         - Username: morgan@site.com
         - Password: 1
