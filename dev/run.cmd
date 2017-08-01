@@ -1,53 +1,73 @@
+::
+:: Commands
+::
+:: run.cmd src dl        Downloads repositories to src folder
+:: run.cmd ms init       Initializes microservices
+::
+
 @echo OFF
 
-set command=%1
+set type=%1
+set action=%2
 
-if "%command%" == "clone" (
-    for /F "usebackq tokens=1,2 delims==" %%a in (config/repositories.ini) do (
-        echo Cloning repository %%a
-        call :clone %%a %%b
+if "%type%" == "src" (
+    if "%action%" == "dl" (
+        for /F "usebackq tokens=1,2 delims==" %%a in (config/repositories.ini) do (
+            echo Downloading src for repository %%a
+            call :src_dl %%a %%b
+        )
     )
-) else if "%command%" == "up" (
-    for /F "usebackq tokens=1" %%a in (config/microservices.ini) do (
-        echo Docker up %%a
-        call :up %%a
+) else if "%type%" == "ms" (
+    if "%action%" == "init" (
+        for /F "usebackq tokens=1,2 delims==" %%a in (config/microservices.ini) do (
+            echo Initializing microservice %%a
+            call :ms_init %%a %%b
+        )
     )
-) else (
-    echo error: You must provide a command.
 )
 
 exit /B
 
 
 ::
-:: Git clone repository in given directory
+:: Download repository source into given directory
 ::
 :: @param string %1 The directory
-:: @param string %2 The repository
+:: @param string %2 The command
 ::
-:clone
+:src_dl
     set directory=%1
-    set repository=%2
+    set command=%2
+    set command=###%command%###
+    set command=%command:"###=%
+    set command=%command:###"=%
+    set command=%command:###=%
 
     cd "%~dp0/src"
     mkdir "%~dp0/src/%directory%"
     cd "%~dp0/src/%directory%"
-    git clone "%repository%" .
+    %command%
     cd "%~dp0"
 goto :EOF
 ::
 
 
 ::
-:: Docker up directory
+:: Initializes a microservice
 ::
 :: @param string %1 The directory
+:: @param string %2 The command
 ::
-:up
+:ms_init
     set directory=%1
+    set command=%2
+    set command=###%command%###
+    set command=%command:"###=%
+    set command=%command:###"=%
+    set command=%command:###=%
 
     cd "%~dp0/src/%directory%"
-    docker-compose up -d
+    %command%
     cd "%~dp0"
 goto :EOF
 ::
