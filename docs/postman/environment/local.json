@@ -17,7 +17,7 @@
     {
       "enabled": true,
       "key": "token",
-      "value": "eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJhZG1pbkBkaWdpdGFsc3RhdGUuY2EiLCJ1dWlkIjoiMmFjZjNlNDctMmFjNy00YmRjLWE5M2EtNWVkZDRhMTFjZDYxIiwiaWRlbnRpdHkiOiJBZG1pbiIsImlkZW50aXR5VXVpZCI6ImJkYTE2MzRlLTYwMjgtNGNjZS1iYzFhLWI3ZTIyMGNkZjYwOSIsImlhdCI6MTUwMTM0MDE2OSwiZXhwIjo0NjU0OTQwMTY5fQ.y8l9JfnGYCXn5p4qWfG2hk1P7iumP0rpHtKetLA2wXsgEoLuxVkC8lPLAWjZqyNESUS8DuIu7jmnaf-CurU1ueFu0HMRrXprdqy1fC5fiVJ9NLfVObx1M8eq1VjLWAjE-8daSnbgaZIL8SM8lhmV26sqTIDlFuBV2Bl1DMLVZvMIt58HXe7XiW2U8NUYsaT-QboZSJBXYWXDdEZSUgqAHbIA8laB7toTNSS9d9-KOOlQAKoApocAqohKta7ybCNza3pacUcFfCY2y-8BCxm8JrTcXlKvFQCtPQKSmx15uVjuyMXdrydgiu3jNMp-id7m4mde8iO9X5R61H-kufdrXMQINGTzmivV59PbQiHfCsJxGsr2OjvIrnFQC35nlpxx7JQLjpsfpSjjm5NnyIk-4pAC8O_danE3SdEb753OsLpW1qxUAXf3IClA3zWZJjd1ghKyogiMUk9dgtR9v8PgaLvOr4e00ophCt7zx9u9jBXyA2RIrlN9zrMcMVzus9M-MtxIoo4OBSnFGO52-oRY5pyBbCheSyhlmjwNq5kAv7cBJRMxeNpij939Eet3vNcLMh4oPy_mwKsSauMkpM7NrXn6ak1UGaimlnI3xp7cof3ZELgyo6i_ZWNx2wdCVMSVlk8BWL2Azm4o9EZNcQr6M9wSFj8OLH-OG3PVF4e8IeI",
+      "value": "eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJhZG1pbkBkaWdpdGFsc3RhdGUuY2EiLCJ1dWlkIjoiMmFjZjNlNDctMmFjNy00YmRjLWE5M2EtNWVkZDRhMTFjZDYxIiwiaWRlbnRpdHkiOiJBZG1pbiIsImlkZW50aXR5VXVpZCI6ImJkYTE2MzRlLTYwMjgtNGNjZS1iYzFhLWI3ZTIyMGNkZjYwOSIsImlhdCI6MTUwMjAzNTI4MSwiZXhwIjo0NjU1NjM1MjgxfQ.e0BWDhQu1pEzMl8WRFUWumJH_OGZvMT7fMNZp7N3AQ6lWfI5W-DofRZAch-BiVmq6ny4XnaiyYJGRh1OymGTD3OyAiJbbuvft6L9BVvKNCtwHbTwujgPwA2SFPUYd0Dkl8z71wVVE8sOQxO6Dgaub1F0OCHPEmgt4GQccE3-ec_7tQLMDJiUtVhxondHhRQMk6O24QIsy2QVYE9_wjnA8khVjhMVwScCKdOvnaAAbL-k-exJ2_N3QCmEV151U1enq1tW_gRQ08z5qLndv66DEp_NwHwbQVpmpcQbh2y_QAB8BAkrx1_9PLUqiZYlXySiIKbOah-VtKTJJ6c8SolQv4mNXaFeMTWVv7SLOOEywMdtZDCflUXDV8OoNwxE0502-KColFNjhgqlKglqSEosbOAPbtlUSzCcmRukcS-KbpLNDp39RjVt5McoVpBc5naPsnAKsp_a9lQSqYh2ViYzsiB9mwfmOUi2BwSJjobFho0Tqa6WfVsi8a_p10xzXbteLNOpmrcQBMvLlcDt9PyNtXcc2OIIbLg8jVp0Lg-6ydF9-VdSmjqMj5tRTBOUCPWNczkSSJk6kpD6GDvxe9JbAwMJ6q0T3GmVxP2lzjk9zHbR7O4SBh2w4uKLRRa28G1TtGc9dsml6tS0U1mb7akRLKSWcTnnlmzkU-6JVoEBjfI",
       "type": "text"
     },
     {
@@ -69,8 +69,8 @@
       "type": "text"
     }
   ],
-  "timestamp": 1501340169605,
+  "timestamp": 1502035281343,
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2017-07-29T15:38:33.700Z",
-  "_postman_exported_using": "Postman/5.0.2"
+  "_postman_exported_at": "2017-08-06T16:21:41.237Z",
+  "_postman_exported_using": "Postman/5.1.3"
 }

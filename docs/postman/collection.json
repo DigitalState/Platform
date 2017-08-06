@@ -39,6 +39,60 @@
 					"response": []
 				},
 				{
+					"name": "/health/ping",
+					"request": {
+						"url": "{{assets}}{{environment}}/health/ping",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/health/database/connection",
+					"request": {
+						"url": "{{assets}}{{environment}}/health/database/connection",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/accesses",
 					"request": {
 						"url": "{{assets}}{{environment}}/accesses",
@@ -524,6 +578,33 @@
 							"mode": "raw",
 							"raw": ""
 						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/health",
+					"request": {
+						"url": "{{assets}}{{environment}}/health",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -2958,13 +3039,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 1\",\r\n\t\t\"fr\": \"Cas 1\" \r\n\t},\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 1\",\r\n\t\t\"fr\": \"Cas 1\" \r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test\" },\r\n\t\t\"fr\": { \"test\": \"test\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
 					"response": [
 						{
-							"id": "e2e4cd17-7df2-4994-938a-2c5e2b91f217",
+							"id": "8fc91ff1-f3cb-4580-8ac3-37720b0cfce5",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3118,7 +3199,7 @@
 					},
 					"response": [
 						{
-							"id": "b2c97953-1f33-429f-adbb-24c52e2ece62",
+							"id": "4d68abb7-3945-499d-95ef-f27ff9a56907",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3272,7 +3353,7 @@
 					},
 					"response": [
 						{
-							"id": "6a3b466a-900d-4765-98c9-2f6a52f34ccc",
+							"id": "13b9d31e-5643-4ea6-a480-579fe97e9d72",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3511,13 +3592,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"case\": \"/app_dev.php/cases/8049d3ed-b18c-449a-90bb-d49d7042636c\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case Status 1\",\r\n\t\t\"fr\": \"Cas Status 1\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description\",\r\n\t\t\"fr\": \"Description\" \r\n\t},\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"case\": \"/app_dev.php/cases/8049d3ed-b18c-449a-90bb-d49d7042636c\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case Status 1\",\r\n\t\t\"fr\": \"Cas Status 1\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description\",\r\n\t\t\"fr\": \"Description\" \r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test\" },\r\n\t\t\"fr\": { \"test\": \"test\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
 					"response": [
 						{
-							"id": "4fbef11d-04fa-49f4-a338-5ee1434c0cef",
+							"id": "bbafb61a-8814-4763-8752-d46b364ccde6",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3671,7 +3752,7 @@
 					},
 					"response": [
 						{
-							"id": "e77f50d9-8c5b-444f-83cb-e4a38f52c702",
+							"id": "afa89cc4-3288-43f3-9233-029ec932b35c",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3825,7 +3906,7 @@
 					},
 					"response": [
 						{
-							"id": "2cc64ed7-8e32-4f72-801b-40c186625cd5",
+							"id": "dc70566c-0fc7-4113-945e-39c7e280feb3",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4715,7 +4796,7 @@
 					},
 					"response": [
 						{
-							"id": "b3746ee6-c0cf-4c8e-827c-944aad4ca4d4",
+							"id": "5965f27a-f953-4b96-88cb-3a6eed873f13",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4869,7 +4950,7 @@
 					},
 					"response": [
 						{
-							"id": "d0ce7517-e763-428c-a462-4b9cd7e9359d",
+							"id": "f50ae32f-45df-4fef-84aa-e0c96aa9b6cd",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5023,7 +5104,7 @@
 					},
 					"response": [
 						{
-							"id": "cc259abe-ae35-4c72-8005-e082643aafe1",
+							"id": "4b45037f-4968-47a1-bbdb-1c7ff2ef33c0",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5268,7 +5349,7 @@
 					},
 					"response": [
 						{
-							"id": "fbf5d9bf-2c6a-46e8-b1aa-f099aad10fc3",
+							"id": "68a70a5a-235e-44de-b720-aa38d03df9d9",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5422,7 +5503,7 @@
 					},
 					"response": [
 						{
-							"id": "f0961c66-9e73-43c0-a71a-bd218de10b52",
+							"id": "edff2f03-9162-46ad-bf5f-e65204a1d154",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5576,7 +5657,7 @@
 					},
 					"response": [
 						{
-							"id": "189e262b-b379-4b3e-827e-6c9e6d40b93b",
+							"id": "112216c8-2ed3-42bc-9033-5c6c56fdf23d",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5821,7 +5902,7 @@
 					},
 					"response": [
 						{
-							"id": "77c5bbb7-42a6-42d4-8922-d7a899366b95",
+							"id": "b1a99e60-12c0-489f-b652-77ed5ede5544",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5975,7 +6056,7 @@
 					},
 					"response": [
 						{
-							"id": "a61848f5-f6be-4781-8441-464a6494b05b",
+							"id": "22e34fac-6705-46a6-a45d-9d6646d43f32",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6129,7 +6210,7 @@
 					},
 					"response": [
 						{
-							"id": "f97769ac-ef1c-4818-8ff6-b35eb11eca0c",
+							"id": "b22254ee-76b5-4d06-9e98-6cc21659f9e3",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6374,7 +6455,7 @@
 					},
 					"response": [
 						{
-							"id": "6b725776-94ab-472a-9213-bba5ebad2be7",
+							"id": "8c33dce2-32b8-406a-8095-ca2ce6bb99b6",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6528,7 +6609,7 @@
 					},
 					"response": [
 						{
-							"id": "cef6c742-8c3b-4807-8c28-ee0fdbbcc070",
+							"id": "08e24e7d-b270-4750-accd-b1e2c01f69c6",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6682,7 +6763,7 @@
 					},
 					"response": [
 						{
-							"id": "afb48754-ba00-47cf-8532-f274f636ffae",
+							"id": "81eae05d-5f1a-4520-90b4-47335a3172d2",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6927,7 +7008,7 @@
 					},
 					"response": [
 						{
-							"id": "716a376e-8d6c-460d-aabf-4e80dd83470c",
+							"id": "3f06e33d-a1db-4b36-9857-04c04376119d",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7081,7 +7162,7 @@
 					},
 					"response": [
 						{
-							"id": "7c8e783d-5a82-4258-a96d-9bac3eabb4e0",
+							"id": "288a410d-39f6-4aa2-8ebd-8747d0cdb198",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7235,7 +7316,7 @@
 					},
 					"response": [
 						{
-							"id": "fd4d7181-e627-4379-8404-36a7544a369c",
+							"id": "e5b63feb-65a6-4efb-8672-d50e6dce2629",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7462,7 +7543,7 @@
 					},
 					"response": [
 						{
-							"id": "aae50d2f-ce93-483d-a0e8-45539c0ed18a",
+							"id": "23ab936d-2a96-4bd0-a186-d290002e4a23",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7616,7 +7697,7 @@
 					},
 					"response": [
 						{
-							"id": "23d6e0c8-03f6-4d4c-bcad-d8d78d2df9de",
+							"id": "5001abd6-6607-44de-9745-00971bbf5dc1",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7770,7 +7851,7 @@
 					},
 					"response": [
 						{
-							"id": "b51fa1c4-29f9-4b17-8edf-78c1bfe885af",
+							"id": "b3fbcdae-d3f4-4596-b257-b0f509af7879",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8015,7 +8096,7 @@
 					},
 					"response": [
 						{
-							"id": "65f7128f-56f1-4670-8e90-f7a6e300528b",
+							"id": "f7361be8-891c-40ec-8f00-f5b81ea16678",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8169,7 +8250,7 @@
 					},
 					"response": [
 						{
-							"id": "48b0dec6-fb65-463b-87a8-9ab26a2abadd",
+							"id": "e4904183-fe9b-4eec-9ca7-b11933984990",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8323,7 +8404,7 @@
 					},
 					"response": [
 						{
-							"id": "aa6f9836-065f-4c27-a221-9429b0b708c4",
+							"id": "8ba00859-eaf7-4612-8f16-ab34f7d2c00e",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8451,7 +8532,7 @@
 					"name": "/content",
 					"request": {
 						"url": {
-							"raw": "{{cms}}{{environment}}/content?texts[]=title&texts[]=description&datas[]=data-1",
+							"raw": "{{cms}}{{environment}}/content?texts[]=portal-title&texts[]=portal-description&datas[]=road-classifications&files[]=portal-logo",
 							"host": [
 								"{{cms}}{{environment}}"
 							],
@@ -8461,19 +8542,25 @@
 							"query": [
 								{
 									"key": "texts[]",
-									"value": "title",
+									"value": "portal-title",
 									"equals": true,
 									"description": ""
 								},
 								{
 									"key": "texts[]",
-									"value": "description",
+									"value": "portal-description",
 									"equals": true,
 									"description": ""
 								},
 								{
 									"key": "datas[]",
-									"value": "data-1",
+									"value": "road-classifications",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "files[]",
+									"value": "portal-logo",
 									"equals": true,
 									"description": ""
 								}
@@ -8506,7 +8593,7 @@
 					},
 					"response": [
 						{
-							"id": "c2aa0559-950b-45ba-bb1e-bf375203e892",
+							"id": "13acf250-b382-4900-9e85-b70b7cf07e01",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -11350,6 +11437,417 @@
 					"response": []
 				},
 				{
+					"name": "/health",
+					"request": {
+						"url": {
+							"raw": "{{records}}{{environment}}/health",
+							"host": [
+								"{{records}}{{environment}}"
+							],
+							"path": [
+								"health"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/health/ping",
+					"request": {
+						"url": {
+							"raw": "{{records}}{{environment}}/health/ping",
+							"host": [
+								"{{records}}{{environment}}"
+							],
+							"path": [
+								"health",
+								"ping"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/health/database/connection",
+					"request": {
+						"url": {
+							"raw": "{{records}}{{environment}}/health/database/connection",
+							"host": [
+								"{{records}}{{environment}}"
+							],
+							"path": [
+								"health",
+								"database",
+								"connection"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/accesses/{uuid}",
 					"request": {
 						"url": {
@@ -14017,7 +14515,7 @@
 				{
 					"name": "/services/{uuid}",
 					"request": {
-						"url": "{{services}}{{environment}}/services/6c1cba97-3ba0-402f-b8f9-d2c6e187a3c8",
+						"url": "{{services}}{{environment}}/services/2033bdf0-9ade-47f0-b728-197d5597831e",
 						"method": "DELETE",
 						"header": [
 							{
