@@ -1,28 +1,21 @@
 ::
 :: Commands
 ::
-:: run.cmd src dl        Downloads repositories to src folder
-:: run.cmd ms init       Initializes microservices
+:: run.cmd src:dl        Downloads repositories to src folder
+:: run.cmd ms:init       Initializes microservices
 ::
 
 @echo OFF
 
-set type=%1
-set action=%2
-
-if "%type%" == "src" (
-    if "%action%" == "dl" (
-        for /F "usebackq tokens=1,2 delims==" %%a in (config/repositories.ini) do (
-            echo Downloading src for repository %%a
-            call :src_dl %%a %%b
-        )
+if %1 == "src:dl" (
+    for /F "usebackq tokens=1,2 delims==" %%a in (config/src/dl.ini) do (
+        echo Downloading src for repository %%a
+        call :src_dl %%a %%b
     )
-) else if "%type%" == "ms" (
-    if "%action%" == "init" (
-        for /F "usebackq tokens=1,2 delims==" %%a in (config/microservices.ini) do (
-            echo Initializing microservice %%a
-            call :ms_init %%a %%b
-        )
+) else if %1 == "ms:init" (
+    for /F "usebackq tokens=1,2 delims==" %%a in (config/ms/init.ini) do (
+        echo Initializing microservice %%a
+        call :ms_init %%a %%b
     )
 )
 
