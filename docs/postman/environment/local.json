@@ -16,12 +16,6 @@
     },
     {
       "enabled": true,
-      "key": "token",
-      "value": "eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJhZG1pbkBkaWdpdGFsc3RhdGUuY2EiLCJ1dWlkIjoiMmFjZjNlNDctMmFjNy00YmRjLWE5M2EtNWVkZDRhMTFjZDYxIiwiaWRlbnRpdHkiOiJBZG1pbiIsImlkZW50aXR5VXVpZCI6ImJkYTE2MzRlLTYwMjgtNGNjZS1iYzFhLWI3ZTIyMGNkZjYwOSIsImlhdCI6MTUwMjAzNTI4MSwiZXhwIjo0NjU1NjM1MjgxfQ.e0BWDhQu1pEzMl8WRFUWumJH_OGZvMT7fMNZp7N3AQ6lWfI5W-DofRZAch-BiVmq6ny4XnaiyYJGRh1OymGTD3OyAiJbbuvft6L9BVvKNCtwHbTwujgPwA2SFPUYd0Dkl8z71wVVE8sOQxO6Dgaub1F0OCHPEmgt4GQccE3-ec_7tQLMDJiUtVhxondHhRQMk6O24QIsy2QVYE9_wjnA8khVjhMVwScCKdOvnaAAbL-k-exJ2_N3QCmEV151U1enq1tW_gRQ08z5qLndv66DEp_NwHwbQVpmpcQbh2y_QAB8BAkrx1_9PLUqiZYlXySiIKbOah-VtKTJJ6c8SolQv4mNXaFeMTWVv7SLOOEywMdtZDCflUXDV8OoNwxE0502-KColFNjhgqlKglqSEosbOAPbtlUSzCcmRukcS-KbpLNDp39RjVt5McoVpBc5naPsnAKsp_a9lQSqYh2ViYzsiB9mwfmOUi2BwSJjobFho0Tqa6WfVsi8a_p10xzXbteLNOpmrcQBMvLlcDt9PyNtXcc2OIIbLg8jVp0Lg-6ydF9-VdSmjqMj5tRTBOUCPWNczkSSJk6kpD6GDvxe9JbAwMJ6q0T3GmVxP2lzjk9zHbR7O4SBh2w4uKLRRa28G1TtGc9dsml6tS0U1mb7akRLKSWcTnnlmzkU-6JVoEBjfI",
-      "type": "text"
-    },
-    {
-      "enabled": true,
       "key": "authentication",
       "value": "{{host}}:8010",
       "type": "text"
@@ -67,10 +61,82 @@
       "key": "cms",
       "value": "{{host}}:8056",
       "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "token",
+      "value": "eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwidXNlcm5hbWUiOiJhZG1pbkBkaWdpdGFsc3RhdGUuY2EiLCJ1dWlkIjoiMmFjZjNlNDctMmFjNy00YmRjLWE5M2EtNWVkZDRhMTFjZDYxIiwiaWRlbnRpdHkiOiJBZG1pbiIsImlkZW50aXR5VXVpZCI6ImJkYTE2MzRlLTYwMjgtNGNjZS1iYzFhLWI3ZTIyMGNkZjYwOSIsImlhdCI6MTUwMjAzNTI4MSwiZXhwIjo0NjU1NjM1MjgxfQ.e0BWDhQu1pEzMl8WRFUWumJH_OGZvMT7fMNZp7N3AQ6lWfI5W-DofRZAch-BiVmq6ny4XnaiyYJGRh1OymGTD3OyAiJbbuvft6L9BVvKNCtwHbTwujgPwA2SFPUYd0Dkl8z71wVVE8sOQxO6Dgaub1F0OCHPEmgt4GQccE3-ec_7tQLMDJiUtVhxondHhRQMk6O24QIsy2QVYE9_wjnA8khVjhMVwScCKdOvnaAAbL-k-exJ2_N3QCmEV151U1enq1tW_gRQ08z5qLndv66DEp_NwHwbQVpmpcQbh2y_QAB8BAkrx1_9PLUqiZYlXySiIKbOah-VtKTJJ6c8SolQv4mNXaFeMTWVv7SLOOEywMdtZDCflUXDV8OoNwxE0502-KColFNjhgqlKglqSEosbOAPbtlUSzCcmRukcS-KbpLNDp39RjVt5McoVpBc5naPsnAKsp_a9lQSqYh2ViYzsiB9mwfmOUi2BwSJjobFho0Tqa6WfVsi8a_p10xzXbteLNOpmrcQBMvLlcDt9PyNtXcc2OIIbLg8jVp0Lg-6ydF9-VdSmjqMj5tRTBOUCPWNczkSSJk6kpD6GDvxe9JbAwMJ6q0T3GmVxP2lzjk9zHbR7O4SBh2w4uKLRRa28G1TtGc9dsml6tS0U1mb7akRLKSWcTnnlmzkU-6JVoEBjfI",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "uuid_admin",
+      "value": "bda1634e-6028-4cce-bc1a-b7e220cdf609",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "uuid_system",
+      "value": "fe1b94ed-783a-48d7-8bf2-2f9cea89f11e",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "uuid_manager",
+      "value": "47a5a9cb-496f-4db7-8999-489ec404887f",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "uuid_agent",
+      "value": "9d10157c-f2ce-48fb-a5ab-83faaae952a7",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "uuid_intern",
+      "value": "71f285ba-f994-444c-b9e5-fa813295a0b7",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "uuid_morgan",
+      "value": "d0daa7e4-07d1-47e6-93f2-0629adaa3b49",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "uuid_administration",
+      "value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "uuid_public_works",
+      "value": "8454c987-cbc5-4a24-ba1a-d420283caabd",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "business_unit",
+      "value": "BusinessUnit",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "staff",
+      "value": "Staff",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "individual",
+      "value": "Individual",
+      "type": "text"
     }
   ],
-  "timestamp": 1502035281343,
+  "timestamp": 1503156410338,
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2017-08-06T16:21:41.237Z",
+  "_postman_exported_at": "2017-08-19T15:26:53.087Z",
   "_postman_exported_using": "Postman/5.1.3"
 }

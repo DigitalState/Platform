@@ -12,9 +12,9 @@
 			"description": "",
 			"item": [
 				{
-					"name": "/accesses",
+					"name": "/health",
 					"request": {
-						"url": "{{assets}}{{environment}}/accesses",
+						"url": "{{assets}}{{environment}}/health",
 						"method": "GET",
 						"header": [
 							{
@@ -69,6 +69,117 @@
 					"name": "/health/database/connection",
 					"request": {
 						"url": "{{assets}}{{environment}}/health/database/connection",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs",
+					"request": {
+						"url": "{{assets}}{{environment}}/configs",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs/{uuid}",
+					"request": {
+						"url": "{{assets}}{{environment}}/configs/2826439b-a757-4666-8955-05919e554f66",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs/{uuid}",
+					"request": {
+						"url": "{{assets}}{{environment}}/configs/2826439b-a757-4666-8955-05919e554f66",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"value\": \"CASE-{date:Y-m-d}-{inc2}\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/accesses",
+					"request": {
+						"url": "{{assets}}{{environment}}/accesses",
 						"method": "GET",
 						"header": [
 							{
@@ -200,90 +311,6 @@
 							}
 						],
 						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/configs",
-					"request": {
-						"url": "{{assets}}{{environment}}/configs",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/configs/{uuid}",
-					"request": {
-						"url": "{{assets}}{{environment}}/configs/2826439b-a757-4666-8955-05919e554f66",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/configs/{uuid}",
-					"request": {
-						"url": "{{assets}}{{environment}}/configs/2826439b-a757-4666-8955-05919e554f66",
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"value\": \"CASE-{date:Y-m-d}-{inc2}\"\n}"
-						},
 						"description": ""
 					},
 					"response": []
@@ -578,33 +605,6 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/health",
-					"request": {
-						"url": "{{assets}}{{environment}}/health",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -1027,6 +1027,199 @@
 					"response": []
 				},
 				{
+					"name": "/configs",
+					"request": {
+						"url": {
+							"raw": "{{authentication}}{{environment}}/configs",
+							"host": [
+								"{{authentication}}{{environment}}"
+							],
+							"path": [
+								"configs"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "key",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "enabled",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs/{uuid}",
+					"request": {
+						"url": "{{authentication}}{{environment}}/configs/57b7bbe6-97bd-4d61-b963-d96d02905a39",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs/{uuid}",
+					"request": {
+						"url": "{{authentication}}{{environment}}/configs/57b7bbe6-97bd-4d61-b963-d96d02905a39",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"enabled\": true,\n\t\"version\": 1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/accesses",
 					"request": {
 						"url": {
@@ -1414,199 +1607,6 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/configs",
-					"request": {
-						"url": {
-							"raw": "{{authentication}}{{environment}}/configs",
-							"host": [
-								"{{authentication}}{{environment}}"
-							],
-							"path": [
-								"configs"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "id[0]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "uuid",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "uuid[0]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "owner",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "owner[0]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "ownerUuid",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "ownerUuid[0]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "key",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "createdAt[before]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "createdAt[after]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "updatedAt[before]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "updatedAt[after]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "enabled",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								}
-							],
-							"variable": []
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/configs/{uuid}",
-					"request": {
-						"url": "{{authentication}}{{environment}}/configs/57b7bbe6-97bd-4d61-b963-d96d02905a39",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/configs/{uuid}",
-					"request": {
-						"url": "{{authentication}}{{environment}}/configs/57b7bbe6-97bd-4d61-b963-d96d02905a39",
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"enabled\": true,\n\t\"version\": 1\n}"
 						},
 						"description": ""
 					},
@@ -2278,6 +2278,23 @@
 						"description": ""
 					},
 					"response": []
+				},
+				{
+					"name": "/task",
+					"request": {
+						"url": "{{camunda}}/task",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
 				}
 			]
 		},
@@ -2747,7 +2764,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n  \"userUuid\": \"36ea6a46-0cb4-43b0-8ac8-f1ea07207f3f\",\r\n  \"businessUnitUuid\": null,\r\n  \"entries\": [\r\n    {\r\n      \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n      \"key\": \"case\",\r\n      \"attributes\": [\r\n        \"BROWSE\",\r\n        \"READ\"\r\n      ]\r\n    }\r\n  ]\r\n}"
+							"raw": "{\r\n\t\"owner\": \"{{business_unit}}\",\r\n\t\"ownerUuid\": \"{{uuid_public_works}}\",\r\n\t\"identity\": \"{{staff}}\",\r\n\t\"identityUuid\": \"{{uuid_agent}}\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"entity\": \"{{business_unit}}\",\r\n\t\t\t\"entityUuid\": \"{{uuid_public_works}}\",\r\n\t\t\t\"key\": \"case\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -2777,7 +2794,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"25b88f35-eb37-4dae-9d89-668151e11a0d\",\n    \"userUuid\": \"a57ccc4b-6567-4ea5-83b2-5332baf94611\",\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"case\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"case_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
+							"raw": "{\n    \"owner\": \"{{business_unit}}\",\n    \"ownerUuid\": \"{{uuid_public_works}}\",\n    \"identity\": \"{{stafF}}\",\n    \"identityUuid\": \"{{uuid_agent}}\",\n    \"permissions\": [\n        {\n            \"entity\": \"{{business_unit}}\",\n            \"entityUuid\": \"{{uuid_public_works}}\",\n            \"key\": \"case\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
 						},
 						"description": ""
 					},
@@ -2937,9 +2954,191 @@
 							],
 							"query": [
 								{
-									"key": "locale",
-									"value": "fr",
+									"key": "id",
+									"value": "",
 									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "customId",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "customId[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identity",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identity[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identityUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identityUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[id]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[createdAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[updatedAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[deletedAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[owner]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[identity]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"type": "text",
 									"description": "",
 									"disabled": true
 								}
@@ -2973,13 +3172,13 @@
 					"name": "/cases/{uuid}",
 					"request": {
 						"url": {
-							"raw": "{{cases}}{{environment}}/cases/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
+							"raw": "{{cases}}{{environment}}/cases/82184661-3aa4-4c68-a130-e07dc2e0d974",
 							"host": [
 								"{{cases}}{{environment}}"
 							],
 							"path": [
 								"cases",
-								"f5d9013f-71c6-40bb-a7da-e931bf38ebb6"
+								"82184661-3aa4-4c68-a130-e07dc2e0d974"
 							],
 							"query": [
 								{
@@ -3039,13 +3238,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 1\",\r\n\t\t\"fr\": \"Cas 1\" \r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test\" },\r\n\t\t\"fr\": { \"test\": \"test\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"owner\": \"{{business_unit}}\",\r\n\t\"ownerUuid\": \"{{uuid_public_works}}\",\r\n\t\"identity\": \"{{individual}}\",\r\n\t\"identityUuid\": \"{{uuid_morgan}}\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 1\",\r\n\t\t\"fr\": \"Cas 1\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \r\n\t\t\t\"test\": \"test\" \r\n\t\t},\r\n\t\t\"fr\": { \r\n\t\t\t\"test\": \"test\" \r\n\t\t}\r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
 					"response": [
 						{
-							"id": "8fc91ff1-f3cb-4580-8ac3-37720b0cfce5",
+							"id": "895f6197-1b1b-4331-983d-0dd8e5403988",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3172,7 +3371,7 @@
 				{
 					"name": "/cases/{uuid}",
 					"request": {
-						"url": "{{cases}}{{environment}}/cases/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
+						"url": "{{cases}}{{environment}}/cases/82184661-3aa4-4c68-a130-e07dc2e0d974",
 						"method": "PUT",
 						"header": [
 							{
@@ -3193,13 +3392,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 2\",\r\n\t\t\"fr\": \"Cas 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 2\",\r\n\t\t\"fr\": \"Cas 2\"\r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
 					"response": [
 						{
-							"id": "4d68abb7-3945-499d-95ef-f27ff9a56907",
+							"id": "fa05c8b5-407e-47cb-a371-a5c58eef1f4a",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3326,7 +3525,7 @@
 				{
 					"name": "/cases/{uuid}",
 					"request": {
-						"url": "{{cases}}{{environment}}/cases/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
+						"url": "{{cases}}{{environment}}/cases/82184661-3aa4-4c68-a130-e07dc2e0d974",
 						"method": "DELETE",
 						"header": [
 							{
@@ -3353,7 +3552,7 @@
 					},
 					"response": [
 						{
-							"id": "13b9d31e-5643-4ea6-a480-579fe97e9d72",
+							"id": "7c229b60-ff5e-4ba5-8f01-b878f6229a97",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3490,9 +3689,198 @@
 							],
 							"query": [
 								{
-									"key": "locale",
-									"value": "fr",
-									"equals": true,
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identity",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identity[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identityUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identityUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "case.uuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "case.customId",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[id]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[createdAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[updatedAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[deletedAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[owner]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[identity]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text",
 									"description": "",
 									"disabled": true
 								}
@@ -3526,13 +3914,13 @@
 					"name": "/case-statuses/{uuid}",
 					"request": {
 						"url": {
-							"raw": "{{cases}}{{environment}}/case-statuses/af723f95-0957-4b72-a799-3f25dee7c315",
+							"raw": "{{cases}}{{environment}}/case-statuses/21b3b72a-bd1b-4d87-9b28-7768aaea8ae6",
 							"host": [
 								"{{cases}}{{environment}}"
 							],
 							"path": [
 								"case-statuses",
-								"af723f95-0957-4b72-a799-3f25dee7c315"
+								"21b3b72a-bd1b-4d87-9b28-7768aaea8ae6"
 							],
 							"query": [
 								{
@@ -3592,13 +3980,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"case\": \"/app_dev.php/cases/8049d3ed-b18c-449a-90bb-d49d7042636c\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case Status 1\",\r\n\t\t\"fr\": \"Cas Status 1\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description\",\r\n\t\t\"fr\": \"Description\" \r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test\" },\r\n\t\t\"fr\": { \"test\": \"test\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"case\": \"/app_dev.php/cases/82184661-3aa4-4c68-a130-e07dc2e0d974\",\r\n\t\"owner\": \"{{business_unit}}\",\r\n\t\"ownerUuid\": \"{{uuid_public_works}}\",\r\n\t\"identity\": \"{{individual}}\",\r\n\t\"identityUuid\": \"{{uuid_morgan}}\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case Status 1\",\r\n\t\t\"fr\": \"Cas Status 1\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description\",\r\n\t\t\"fr\": \"Description\" \r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test\" },\r\n\t\t\"fr\": { \"test\": \"test\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
 					"response": [
 						{
-							"id": "bbafb61a-8814-4763-8752-d46b364ccde6",
+							"id": "6ddf7dfa-addf-407c-8088-af18410f1593",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3725,7 +4113,7 @@
 				{
 					"name": "/case-statuses/{uuid}",
 					"request": {
-						"url": "{{cases}}{{environment}}/case-statuses/af723f95-0957-4b72-a799-3f25dee7c315",
+						"url": "{{cases}}{{environment}}/case-statuses/21b3b72a-bd1b-4d87-9b28-7768aaea8ae6",
 						"method": "PUT",
 						"header": [
 							{
@@ -3746,13 +4134,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 2\",\r\n\t\t\"fr\": \"Cas 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Case Status 2\",\r\n\t\t\"fr\": \"Cas Status 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
 					"response": [
 						{
-							"id": "afa89cc4-3288-43f3-9233-029ec932b35c",
+							"id": "f42a95fd-5989-444f-b12c-13bf50465d94",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3879,7 +4267,7 @@
 				{
 					"name": "/case-statuses/{uuid}",
 					"request": {
-						"url": "{{cases}}{{environment}}/case-statuses/af723f95-0957-4b72-a799-3f25dee7c315",
+						"url": "{{cases}}{{environment}}/case-statuses/21b3b72a-bd1b-4d87-9b28-7768aaea8ae6",
 						"method": "DELETE",
 						"header": [
 							{
@@ -3906,7 +4294,7 @@
 					},
 					"response": [
 						{
-							"id": "dc70566c-0fc7-4113-945e-39c7e280feb3",
+							"id": "ec836f1e-ff9f-4930-8a26-9b04fb8d1f34",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4796,7 +5184,7 @@
 					},
 					"response": [
 						{
-							"id": "5965f27a-f953-4b96-88cb-3a6eed873f13",
+							"id": "a291eb90-844f-429e-b189-0986cd2667cc",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4950,7 +5338,7 @@
 					},
 					"response": [
 						{
-							"id": "f50ae32f-45df-4fef-84aa-e0c96aa9b6cd",
+							"id": "ff2d006b-c0ab-4316-ad0a-bf5bfe05fe77",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5104,7 +5492,7 @@
 					},
 					"response": [
 						{
-							"id": "4b45037f-4968-47a1-bbdb-1c7ff2ef33c0",
+							"id": "aeedf8aa-a12f-40eb-a8c8-6befb3837c9a",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5349,7 +5737,7 @@
 					},
 					"response": [
 						{
-							"id": "68a70a5a-235e-44de-b720-aa38d03df9d9",
+							"id": "50fdc122-6760-4768-90cf-835015cf0510",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5503,7 +5891,7 @@
 					},
 					"response": [
 						{
-							"id": "edff2f03-9162-46ad-bf5f-e65204a1d154",
+							"id": "967068f3-0686-43d4-b991-e9508f54a292",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5657,7 +6045,7 @@
 					},
 					"response": [
 						{
-							"id": "112216c8-2ed3-42bc-9033-5c6c56fdf23d",
+							"id": "8bca8c45-61da-47d9-86e0-d2034064376d",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5902,7 +6290,7 @@
 					},
 					"response": [
 						{
-							"id": "b1a99e60-12c0-489f-b652-77ed5ede5544",
+							"id": "5a95f15d-58af-4bce-a5a1-197036536997",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6056,7 +6444,7 @@
 					},
 					"response": [
 						{
-							"id": "22e34fac-6705-46a6-a45d-9d6646d43f32",
+							"id": "43516521-edb2-4d28-9ad8-cf82e610e018",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6210,7 +6598,7 @@
 					},
 					"response": [
 						{
-							"id": "b22254ee-76b5-4d06-9e98-6cc21659f9e3",
+							"id": "b79f41f7-b28a-4662-ba2e-d3cb65c653b8",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6455,7 +6843,7 @@
 					},
 					"response": [
 						{
-							"id": "8c33dce2-32b8-406a-8095-ca2ce6bb99b6",
+							"id": "7f2b4245-84c8-4abc-a992-32a5866b1e6a",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6609,7 +6997,7 @@
 					},
 					"response": [
 						{
-							"id": "08e24e7d-b270-4750-accd-b1e2c01f69c6",
+							"id": "5003ac57-8c70-4bce-aad8-18b4f4a4d3fb",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6763,7 +7151,7 @@
 					},
 					"response": [
 						{
-							"id": "81eae05d-5f1a-4520-90b4-47335a3172d2",
+							"id": "eec85562-405c-4881-9b21-84285e5eb4de",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7008,7 +7396,7 @@
 					},
 					"response": [
 						{
-							"id": "3f06e33d-a1db-4b36-9857-04c04376119d",
+							"id": "48cc108f-479e-459b-8453-7953d8c1bb06",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7162,7 +7550,7 @@
 					},
 					"response": [
 						{
-							"id": "288a410d-39f6-4aa2-8ebd-8747d0cdb198",
+							"id": "60a650c0-3bd3-41b3-8f1b-e63eb145bed9",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7316,7 +7704,7 @@
 					},
 					"response": [
 						{
-							"id": "e5b63feb-65a6-4efb-8672-d50e6dce2629",
+							"id": "e69ab605-56ea-4646-b66d-c1b199296266",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7543,7 +7931,7 @@
 					},
 					"response": [
 						{
-							"id": "23ab936d-2a96-4bd0-a186-d290002e4a23",
+							"id": "57230828-db7b-4159-a1dd-0a935d7270e4",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7697,7 +8085,7 @@
 					},
 					"response": [
 						{
-							"id": "5001abd6-6607-44de-9745-00971bbf5dc1",
+							"id": "b481a0a3-9fa2-4576-9c9f-033d108a4f44",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7851,7 +8239,7 @@
 					},
 					"response": [
 						{
-							"id": "b3fbcdae-d3f4-4596-b257-b0f509af7879",
+							"id": "d56847af-432e-4fb8-aba9-1946d2efc2b3",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8096,7 +8484,7 @@
 					},
 					"response": [
 						{
-							"id": "f7361be8-891c-40ec-8f00-f5b81ea16678",
+							"id": "b147bd28-3d09-45dc-8baf-beb9efa97602",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8250,7 +8638,7 @@
 					},
 					"response": [
 						{
-							"id": "e4904183-fe9b-4eec-9ca7-b11933984990",
+							"id": "2632dfcf-db4f-4815-a343-56c7e1a43476",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8404,7 +8792,7 @@
 					},
 					"response": [
 						{
-							"id": "8ba00859-eaf7-4612-8f16-ab34f7d2c00e",
+							"id": "3ba7d397-2e8c-4716-a8c0-7ea1884644db",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8593,7 +8981,7 @@
 					},
 					"response": [
 						{
-							"id": "13acf250-b382-4900-9e85-b70b7cf07e01",
+							"id": "93ef786f-b559-4e84-8410-039cb71e59ce",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -12509,7 +12897,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Record 1\" },\r\n\t\"data\": {\r\n\t\t\"test\": \"test\"\r\n\t},\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Record 2\" },\r\n\t\"data\": {\r\n\t\t\"test\": \"test\"\r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -13570,7 +13958,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"userUuid\": \"36ea6a46-0cb4-43b0-8ac8-f1ea07207f3f\",\r\n\t\"businessUnitUuid\": null,\r\n\t\"entries\": [\r\n\t\t{\r\n\t\t\t\"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\t\t\"key\": \"service\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t]\r\n}"
+							"raw": "{\r\n\t\"owner\": \"{{business_unit}}\",\r\n\t\"ownerUuid\": \"{{uuid_public_works}}\",\r\n\t\"identity\": \"{{staff}}\",\r\n\t\"identityUuid\": \"{{uuid_agent}}\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"entity\": \"{{business_unit}}\",\r\n\t\t\t\"entityUuid\": \"{{uuid_public_works}}\",\r\n\t\t\t\"key\": \"service\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -13600,7 +13988,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"entries\": [\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"service\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        },\n        {\n            \"businessUnitUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\n            \"key\": \"service_field\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
+							"raw": "{\n    \"permissions\": [\n\t\t{\n\t\t\t\"entity\": \"{{business_unit}}\",\n\t\t\t\"entityUuid\": \"{{uuid_public_works}}\",\n\t\t\t\"key\": \"service\",\n\t\t\t\"attributes\": [\n\t\t\t\t\"BROWSE\",\n\t\t\t\t\"READ\"\n\t\t\t]\n\t\t}\n    ]\n}"
 						},
 						"description": ""
 					},
@@ -13609,7 +13997,7 @@
 				{
 					"name": "/accesses/{uuid}",
 					"request": {
-						"url": "{{services}}{{environment}}/accesses/6e47bde9-3ccf-4a4b-b376-023092ea058d",
+						"url": "{{services}}{{environment}}/accesses/059741bb-e6d9-459c-9f88-e63be9668fad",
 						"method": "DELETE",
 						"header": [
 							{
@@ -14127,7 +14515,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"f7711a36-53e7-4d43-8b2b-9d86b1dc7d49\",\r\n\t\"title\": { \"en\":\"Category 1\" },\r\n\t\"description\": { \"en\":\"Description\" },\r\n\t\"presentation\": { \"en\":\"Presentation\" },\r\n\t\"services\": [\r\n\t],\r\n\t\"enabled\": true,\r\n\t\"weight\": 0,\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"owner\": \"{{business_unit}}\",\r\n\t\"ownerUuid\": \"{{uuid_public_works}}\",\r\n\t\"title\": { \r\n\t\t\"en\":\"Category 1\",\r\n\t\t\"fr\":\"Category 1\"\r\n\t},\r\n\t\"slug\": \"category-1\",\r\n\t\"description\": { \r\n\t\t\"en\":\"Description ...\",\r\n\t\t\"fr\":\"Description ...\" \r\n\t},\r\n\t\"presentation\": { \r\n\t\t\"en\":\"Presentation ...\",\r\n\t\t\"fr\":\"Presentation ...\" \r\n\t},\r\n\t\"services\": [\r\n\t],\r\n\t\"enabled\": true,\r\n\t\"weight\": 0,\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -14136,7 +14524,7 @@
 				{
 					"name": "/categories/{uuid}",
 					"request": {
-						"url": "{{services}}{{environment}}/categories/2042b73c-eb69-4b47-96f4-380578f5c3fe",
+						"url": "{{services}}{{environment}}/categories/ecc69524-0b12-4eae-a6f4-b6eb0f442e29",
 						"method": "PUT",
 						"header": [
 							{
@@ -14157,7 +14545,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"Individual\",\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"title\": {\r\n        \"en\": \"Infrastructure\",\r\n        \"fr\": \"Infrastructure\"\r\n    },\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -14166,7 +14554,7 @@
 				{
 					"name": "/categories/{uuid}",
 					"request": {
-						"url": "{{services}}{{environment}}/categories/56f556f6-e9d1-4eec-ba96-b5461eaacf14",
+						"url": "{{services}}{{environment}}/categories/ecc69524-0b12-4eae-a6f4-b6eb0f442e29",
 						"method": "DELETE",
 						"header": [
 							{
@@ -14428,7 +14816,7 @@
 				{
 					"name": "/services/{uuid}",
 					"request": {
-						"url": "{{services}}{{environment}}/services/2b58b76b-6401-4602-aa74-cda1be250598",
+						"url": "{{services}}{{environment}}/services/9ed44d24-b2e1-4882-82f9-7e4c2c8bf73d",
 						"method": "GET",
 						"header": [
 							{
@@ -14476,7 +14864,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"3f26e701-daf9-46c0-ae4d-d74f35eef278\",\r\n\t\"slug\": \"service-3\",\r\n\t\"title\": { \"en\": \"Service 1\" },\r\n\t\"description\": { \"en\": \"Description\" },\r\n\t\"presentation\": { \"en\": \"Presentation\" },\r\n\t\"enabled\": true,\r\n\t\"weight\": 0,\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"owner\": \"{{business_unit}}\",\r\n\t\"ownerUuid\": \"{{uuid_public_works}}\",\r\n\t\"slug\": \"service-1\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Service 1\",\r\n\t\t\"fr\": \"Service 1\"\r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description ...\",\r\n\t\t\"fr\": \"Description ...\" \r\n\t},\r\n\t\"presentation\": { \r\n\t\t\"en\": \"Presentation ...\",\r\n\t\t\"fr\": \"Presentation ...\"\r\n\t},\r\n\t\"enabled\": true,\r\n\t\"weight\": 0,\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -14485,7 +14873,7 @@
 				{
 					"name": "/services/{uuid}",
 					"request": {
-						"url": "{{services}}{{environment}}/services/ee49eb4b-aff7-426a-859f-635759e321d1",
+						"url": "{{services}}{{environment}}/services/9ed44d24-b2e1-4882-82f9-7e4c2c8bf73d",
 						"method": "PUT",
 						"header": [
 							{
@@ -14506,7 +14894,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"enabled\": false\r\n}\r\n"
+							"raw": "{\r\n\t\"enabled\": false,\r\n\t\"version\": 2\r\n}\r\n"
 						},
 						"description": ""
 					},
@@ -14515,7 +14903,7 @@
 				{
 					"name": "/services/{uuid}",
 					"request": {
-						"url": "{{services}}{{environment}}/services/2033bdf0-9ade-47f0-b728-197d5597831e",
+						"url": "{{services}}{{environment}}/services/9ed44d24-b2e1-4882-82f9-7e4c2c8bf73d",
 						"method": "DELETE",
 						"header": [
 							{
@@ -14895,7 +15283,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"0609ccde-e1d2-4c63-ae40-d9c52d14f235\",\r\n\t\"service\": \"/app_dev.php/services/2eb0cfc7-0402-4bc6-8733-c00084deb15c\",\r\n\t\"type\": \"bpm\",\r\n\t\"slug\": \"test\",\r\n\t\"title\": { \"en\":\"Scenario xa\" },\r\n\t\"description\": { \"en\": \"Description\" },\r\n\t\"presentation\": { \"en\": \"Presentation\" },\r\n\t\"enabled\": true,\r\n\t\"weight\": 0,\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"owner\": \"{{business_unit}}\",\r\n\t\"ownerUuid\": \"{{uuid_public_works}}\",\r\n\t\"service\": \"/app_dev.php/services/9ed44d24-b2e1-4882-82f9-7e4c2c8bf73d\",\r\n\t\"type\": \"bpm\",\r\n\t\"slug\": \"scenario-1\",\r\n\t\"title\": { \r\n\t\t\"en\":\"Scenario 1\",\r\n\t\t\"fr\":\"Scenario 1\"\r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description ...\",\r\n\t\t\"fr\": \"Description ...\"\r\n\t},\r\n\t\"presentation\": { \r\n\t\t\"en\": \"Presentation ...\",\r\n\t\t\"fr\": \"Presentation ...\"\r\n\t},\r\n\t\"enabled\": true,\r\n\t\"weight\": 0,\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -14934,7 +15322,7 @@
 				{
 					"name": "/scenarios/{uuid}",
 					"request": {
-						"url": "{{services}}{{environment}}/scenarios/ff6ce248-2784-469a-ab84-33d93a2dbcf9",
+						"url": "{{services}}{{environment}}/scenarios/e049f2b4-b249-48c2-850c-64d4c4b39527",
 						"method": "PUT",
 						"header": [
 							{
@@ -14955,7 +15343,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"Individual\",\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"enabled\": false,\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -15324,6 +15712,16 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Tasks",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "Log",
+			"description": "",
+			"item": []
 		}
 	]
 }
