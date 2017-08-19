@@ -7,6 +7,7 @@ The following are reserved ports for microservices.
 - 8000 Portal
 - 8001 Admin
 - 8002 Monitor
+- 8003 Kibana
 
 ## System
 
@@ -14,6 +15,9 @@ The following are reserved ports for microservices.
 - 9010 Authentication database
 - 8011 Api
 - 8012 Discovery
+- 9200 ElasticSearch
+- 9300 ElasticSearch
+- 5000 Logstash
 
 ## Business
 
