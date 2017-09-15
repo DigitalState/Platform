@@ -5,7 +5,7 @@
 :: run.cmd container:up            Up containers
 :: run.cmd container:down          Down containers
 :: run.cmd container:stop          Stop containers
-:: run.cmd fixture:load            Load fixtures
+:: run.cmd data:load               Load demo data
 ::
 
 @echo OFF
@@ -30,10 +30,10 @@ if %1 == "source:download" (
         echo Stopping container %%a
         call :container_stop %%a %%b
     )
-) else if %1 == "fixture:load" (
-    for /F "usebackq tokens=1,2 delims==" %%a in (config/fixture/load.ini) do (
-        echo Loading fixture for %%a
-        call :fixture_load %%a %%b
+) else if %1 == "data:load" (
+    for /F "usebackq tokens=1,2 delims==" %%a in (config/data/load.ini) do (
+        echo Loading demo data for %%a
+        call :data_load %%a %%b
     )
 )
 
@@ -127,12 +127,12 @@ goto :EOF
 
 
 ::
-:: Load fixture
+:: Load data
 ::
 :: @param string %1 The directory
 :: @param string %2 The command
 ::
-:fixture_load
+:data_load
     set directory=%1
     set command=%2
     set command=###%command%###
