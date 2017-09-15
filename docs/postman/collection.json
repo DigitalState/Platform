@@ -12,6 +12,33 @@
 			"description": "",
 			"item": [
 				{
+					"name": "/sandbox",
+					"request": {
+						"url": "{{assets}}{{environment}}/sandbox",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/health",
 					"request": {
 						"url": "{{assets}}{{environment}}/health",
@@ -615,6 +642,33 @@
 			"name": "Authentication",
 			"description": "",
 			"item": [
+				{
+					"name": "/sandbox",
+					"request": {
+						"url": "{{authentication}}{{environment}}/sandbox",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
 				{
 					"name": "/health",
 					"request": {
@@ -1516,7 +1570,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\n    \"identity\": \"Staff\",\n    \"identityUuid\": \"47a5a9cb-496f-4db7-8999-489ec404887f\",\n    \"permissions\": [\n        {\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+							"raw": "{\n    \"owner\": \"{{business_unit}}\",\n    \"ownerUuid\": \"{{uuid_public_works}}\",\n    \"identity\": \"{{staff}}\",\n    \"identityUuid\": \"{{uuid_agent}}\",\n    \"permissions\": [\n        {\n            \"entity\": \"{{business_unit}}\",\n            \"entityUuid\": \"{{uuid_public_works}}\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 						},
 						"description": ""
 					},
@@ -1546,7 +1600,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"permissions\": [\n        {\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+							"raw": "{\n    \"permissions\": [\n        {\n        \t\"entity\": \"{{business_unit}}\",\n            \"entityUuid\": \"{{uuid_public_works}}\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 						},
 						"description": ""
 					},
@@ -1841,7 +1895,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"user2@site.com\",\n    \"plainPassword\":\"123\",\n    \"email\": \"user@site.com\",\n    \"enabled\": true,\n    \"roles\": [\n        \"ROLE_INDIVIDUAL\"\n    ],\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caaba\",\n    \"identity\": \"Individual\",\n    \"identityUuid\": \"a32e24fb-4f60-481a-8f74-74088c973c1f\",\n    \"version\": 1\n}"
+							"raw": "{\n    \"username\": \"user2@site.com\",\n    \"plainPassword\":\"123\",\n    \"email\": \"user@site.com\",\n    \"enabled\": true,\n    \"roles\": [\n        \"ROLE_INDIVIDUAL\"\n    ],\n    \"owner\": \"{{business_unit}}\",\n    \"ownerUuid\": \"{{uuid_public_works}}\",\n    \"identity\": \"{{individual}}\",\n    \"identityUuid\": \"a32e24fb-4f60-481a-8f74-74088c973c1f\",\n    \"version\": 1\n}"
 						},
 						"description": ""
 					},
@@ -1908,7 +1962,7 @@
 					"response": []
 				},
 				{
-					"name": "/tokens/admin",
+					"name": "/tokens/system",
 					"event": [
 						{
 							"listen": "test",
@@ -1922,7 +1976,7 @@
 						}
 					],
 					"request": {
-						"url": "{{authentication}}{{environment}}/tokens/admin",
+						"url": "{{authentication}}{{environment}}/tokens/system",
 						"method": "POST",
 						"header": [
 							{
@@ -1941,7 +1995,7 @@
 							"urlencoded": [
 								{
 									"key": "username",
-									"value": "admin@digitalstate.ca",
+									"value": "system@digitalstate.ca",
 									"description": "",
 									"type": "text"
 								},
@@ -1991,9 +2045,16 @@
 							"urlencoded": [
 								{
 									"key": "username",
-									"value": "manager@digitalstate.ca",
+									"value": "admin@digitalstate.ca",
 									"description": "",
 									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "manager@digitalstate.ca",
+									"description": "",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "username",
@@ -2003,7 +2064,7 @@
 									"disabled": true
 								},
 								{
-									"key": "usernamw",
+									"key": "username",
 									"value": "intern@digitalstate.ca",
 									"description": "",
 									"type": "text",
@@ -2282,7 +2343,53 @@
 				{
 					"name": "/task",
 					"request": {
-						"url": "{{camunda}}/task",
+						"url": {
+							"raw": "{{camunda}}/task",
+							"host": [
+								"{{camunda}}"
+							],
+							"path": [
+								"task"
+							],
+							"query": [
+								{
+									"key": "candidateGroup",
+									"value": "8454c987-cbc5-4a24-ba1a-d420283caabd",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "includeAssignedTasks",
+									"value": "true",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "involvedUser",
+									"value": "true",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "assignee",
+									"value": "Individual",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "assigneeLike",
+									"value": "Individual%25",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2295,6 +2402,176 @@
 						"description": ""
 					},
 					"response": []
+				},
+				{
+					"name": "/task",
+					"request": {
+						"url": "{{camunda}}/task",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"candidateGroup\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/task/{id}",
+					"request": {
+						"url": "{{camunda}}/task/8f9d8732-968d-11e7-b233-0242ac110002",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/hal+json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/task/create",
+					"request": {
+						"url": "{{camunda}}/task/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"2b18bc01-a02b-4b54-9bff-2259cb421d0f\",\r\n  \"name\": \"Review something!\",\r\n  \"description\": \"This have to be done very urgent\",\r\n  \"priority\" : 30,\r\n  \"assignee\" : \"Staff:47a5a9cb-496f-4db7-8999-489ec404887f\",\r\n  \"owner\" : null,\r\n  \"delegationState\" : \"PENDING\",\r\n  \"due\" : \"2014-08-30T10:00:00\",\r\n  \"followUp\" : \"2014-08-25T10:00:00\",\r\n  \"tenantId\" : null\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/task/{id}",
+					"request": {
+						"url": "{{camunda}}/task/8f9d8732-968d-11e7-b233-0242ac110002",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Review Tax Submission\",\n\t\"assignee\": \"Individual:d0daa7e4-07d1-47e6-93f2-0629adaa3b49\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/task/{id}/complete",
+					"request": {
+						"url": "{{camunda}}/task/d7e3213e-9686-11e7-b233-0242ac110002/complete",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/group",
+					"request": {
+						"url": "{{camunda}}/group",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/group/{id}",
+					"request": {
+						"url": "{{camunda}}/group/8454c987-cbc5-4a24-ba1a-d420283caabd",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/group/create",
+					"request": {
+						"url": "{{camunda}}/group/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":\"8454c987-cbc5-4a24-ba1a-d420283caabd\",\r\n\t\"name\":\"Public Works\",\r\n\t\"type\":\"Business Unit\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
 				}
 			]
 		},
@@ -2302,6 +2579,33 @@
 			"name": "Cases",
 			"description": "",
 			"item": [
+				{
+					"name": "/sandbox",
+					"request": {
+						"url": "{{cases}}{{environment}}/sandbox",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
 				{
 					"name": "/health",
 					"request": {
@@ -2714,6 +3018,90 @@
 					"response": []
 				},
 				{
+					"name": "/configs",
+					"request": {
+						"url": "{{cases}}{{environment}}/configs",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs/{uuid}",
+					"request": {
+						"url": "{{cases}}{{environment}}/configs/2826439b-a757-4666-8955-05919e554f66",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs/{uuid}",
+					"request": {
+						"url": "{{cases}}{{environment}}/configs/2826439b-a757-4666-8955-05919e554f66",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"value\": \"CASE-{date:Y-m-d}-{inc2}\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/accesses",
 					"request": {
 						"url": "{{cases}}{{environment}}/accesses",
@@ -2853,90 +3241,6 @@
 							}
 						],
 						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/configs",
-					"request": {
-						"url": "{{cases}}{{environment}}/configs",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/configs/{uuid}",
-					"request": {
-						"url": "{{cases}}{{environment}}/configs/2826439b-a757-4666-8955-05919e554f66",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/configs/{uuid}",
-					"request": {
-						"url": "{{cases}}{{environment}}/configs/2826439b-a757-4666-8955-05919e554f66",
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"value\": \"CASE-{date:Y-m-d}-{inc2}\"\n}"
-						},
 						"description": ""
 					},
 					"response": []
@@ -3244,7 +3548,7 @@
 					},
 					"response": [
 						{
-							"id": "895f6197-1b1b-4331-983d-0dd8e5403988",
+							"id": "894bc638-f6d8-4488-990c-0cb51ff8de6c",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3398,7 +3702,7 @@
 					},
 					"response": [
 						{
-							"id": "fa05c8b5-407e-47cb-a371-a5c58eef1f4a",
+							"id": "01f94894-af3d-4b89-b263-b682dfa21cc3",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3552,7 +3856,7 @@
 					},
 					"response": [
 						{
-							"id": "7c229b60-ff5e-4ba5-8f01-b878f6229a97",
+							"id": "b6539c81-65ef-4047-abb8-897a8887b077",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3830,8 +4134,8 @@
 								},
 								{
 									"key": "order[id]",
-									"value": "",
-									"type": "text",
+									"value": "desc",
+									"equals": true,
 									"description": "",
 									"disabled": true
 								},
@@ -3914,13 +4218,13 @@
 					"name": "/case-statuses/{uuid}",
 					"request": {
 						"url": {
-							"raw": "{{cases}}{{environment}}/case-statuses/21b3b72a-bd1b-4d87-9b28-7768aaea8ae6",
+							"raw": "{{cases}}{{environment}}/case-statuses/064c5ede-c177-4d16-ba15-505c7457310a",
 							"host": [
 								"{{cases}}{{environment}}"
 							],
 							"path": [
 								"case-statuses",
-								"21b3b72a-bd1b-4d87-9b28-7768aaea8ae6"
+								"064c5ede-c177-4d16-ba15-505c7457310a"
 							],
 							"query": [
 								{
@@ -3986,7 +4290,7 @@
 					},
 					"response": [
 						{
-							"id": "6ddf7dfa-addf-407c-8088-af18410f1593",
+							"id": "7cfb6aa0-5c79-4418-96f8-5d8028a9cf7b",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4113,7 +4417,7 @@
 				{
 					"name": "/case-statuses/{uuid}",
 					"request": {
-						"url": "{{cases}}{{environment}}/case-statuses/21b3b72a-bd1b-4d87-9b28-7768aaea8ae6",
+						"url": "{{cases}}{{environment}}/case-statuses/064c5ede-c177-4d16-ba15-505c7457310a",
 						"method": "PUT",
 						"header": [
 							{
@@ -4134,13 +4438,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Case Status 2\",\r\n\t\t\"fr\": \"Cas Status 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test3\" },\r\n\t\t\"fr\": { \"test\": \"test4\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
 					"response": [
 						{
-							"id": "f42a95fd-5989-444f-b12c-13bf50465d94",
+							"id": "b9da8b08-32c3-4705-b947-9eb02db37c5a",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4294,7 +4598,7 @@
 					},
 					"response": [
 						{
-							"id": "ec836f1e-ff9f-4930-8a26-9b04fb8d1f34",
+							"id": "b6576172-0111-4274-86db-55d1881a35e1",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4424,6 +4728,33 @@
 			"name": "Cms",
 			"description": "",
 			"item": [
+				{
+					"name": "/sandbox",
+					"request": {
+						"url": "{{cms}}{{environment}}/sandbox",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
 				{
 					"name": "/health",
 					"request": {
@@ -5076,8 +5407,148 @@
 							],
 							"query": [
 								{
-									"key": "locale",
-									"value": "fr",
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[id]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[createdAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[updatedAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[deletedAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[owner]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "slug",
+									"value": "road-classifications",
 									"equals": true,
 									"description": "",
 									"disabled": true
@@ -5178,13 +5649,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"slug\": \"data-1\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Data 1\",\r\n\t\t\"fr\": \"Data 1\" \r\n\t},\r\n\t\"data\": { \r\n\t\t\"en\": { \"test\": \"test\"},\r\n\t\t\"fr\": { \"test\": \"test\"}\r\n\t},\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"slug\": \"data-1\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Title 1\",\r\n\t\t\"fr\": \"Title 1\" \r\n\t},\r\n\t\"data\": { \r\n\t\t\"en\": { \"test\": \"test\"},\r\n\t\t\"fr\": { \"test\": \"test\"}\r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
 					"response": [
 						{
-							"id": "a291eb90-844f-429e-b189-0986cd2667cc",
+							"id": "b6bad31a-3e48-4a7a-af92-4cf8c1139950",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5311,7 +5782,7 @@
 				{
 					"name": "/datas/{uuid}",
 					"request": {
-						"url": "{{cms}}{{environment}}/datas/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
+						"url": "{{cms}}{{environment}}/datas/c859dbd2-2fc1-4b3b-b00a-00e15b1dbac0",
 						"method": "PUT",
 						"header": [
 							{
@@ -5332,13 +5803,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 2\",\r\n\t\t\"fr\": \"Cas 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Title 2\",\r\n\t\t\"fr\": \"Title 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
 					"response": [
 						{
-							"id": "ff2d006b-c0ab-4316-ad0a-bf5bfe05fe77",
+							"id": "13c31d13-9387-4848-a155-5c405fd6f0b5",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5492,7 +5963,7 @@
 					},
 					"response": [
 						{
-							"id": "aeedf8aa-a12f-40eb-a8c8-6befb3837c9a",
+							"id": "dbc4e89c-2ab1-4245-af97-07b4fd987f43",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5629,9 +6100,149 @@
 							],
 							"query": [
 								{
-									"key": "locale",
-									"value": "fr",
-									"equals": true,
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[id]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[createdAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[updatedAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[deletedAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[owner]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "slug",
+									"value": "",
+									"type": "text",
 									"description": "",
 									"disabled": true
 								}
@@ -5737,7 +6348,7 @@
 					},
 					"response": [
 						{
-							"id": "50fdc122-6760-4768-90cf-835015cf0510",
+							"id": "6326a41d-ff11-42a5-a4f7-6d5a51a71836",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5891,7 +6502,7 @@
 					},
 					"response": [
 						{
-							"id": "967068f3-0686-43d4-b991-e9508f54a292",
+							"id": "e619acc3-1e80-4390-8efe-206bbfd07104",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6045,7 +6656,7 @@
 					},
 					"response": [
 						{
-							"id": "8bca8c45-61da-47d9-86e0-d2034064376d",
+							"id": "9a975741-794b-48f9-ad94-b51fffcc6002",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6182,9 +6793,149 @@
 							],
 							"query": [
 								{
-									"key": "locale",
-									"value": "fr",
+									"key": "id",
+									"value": "",
 									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[id]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[createdAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[updatedAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[deletedAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[owner]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "slug",
+									"value": "road-classifications",
+									"type": "text",
 									"description": "",
 									"disabled": true
 								}
@@ -6218,13 +6969,13 @@
 					"name": "/texts/{uuid}",
 					"request": {
 						"url": {
-							"raw": "{{cms}}{{environment}}/texts/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
+							"raw": "{{cms}}{{environment}}/texts/1f0a37cf-864c-4995-92ae-454e334d02a3",
 							"host": [
 								"{{cms}}{{environment}}"
 							],
 							"path": [
 								"texts",
-								"f5d9013f-71c6-40bb-a7da-e931bf38ebb6"
+								"1f0a37cf-864c-4995-92ae-454e334d02a3"
 							],
 							"query": [
 								{
@@ -6290,7 +7041,7 @@
 					},
 					"response": [
 						{
-							"id": "5a95f15d-58af-4bce-a5a1-197036536997",
+							"id": "d462296a-48ce-4131-ae37-80a364532754",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6444,7 +7195,7 @@
 					},
 					"response": [
 						{
-							"id": "43516521-edb2-4d28-9ad8-cf82e610e018",
+							"id": "c46e8089-7cb3-4476-bdc1-189ed1a7b348",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6598,1113 +7349,7 @@
 					},
 					"response": [
 						{
-							"id": "b79f41f7-b28a-4662-ba2e-d3cb65c653b8",
-							"name": "Created",
-							"originalRequest": {
-								"url": "{{cases}}{{environment}}/cases",
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}",
-										"description": ""
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"description": ""
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
-							"header": [
-								{
-									"name": "Cache-Control",
-									"key": "Cache-Control",
-									"value": "no-cache, private",
-									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-								},
-								{
-									"name": "Connection",
-									"key": "Connection",
-									"value": "keep-alive",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"name": "Content-Type",
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8",
-									"description": "The mime type of this content"
-								},
-								{
-									"name": "Date",
-									"key": "Date",
-									"value": "Thu, 22 Jun 2017 00:12:01 GMT",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"name": "Link",
-									"key": "Link",
-									"value": "<http://10.0.75.1:8050/app_dev.php/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
-									"description": "Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988",
-									"isLink": true
-								},
-								{
-									"name": "Server",
-									"key": "Server",
-									"value": "nginx/1.11.13",
-									"description": "A name for the server"
-								},
-								{
-									"name": "Transfer-Encoding",
-									"key": "Transfer-Encoding",
-									"value": "chunked",
-									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-								},
-								{
-									"name": "Vary",
-									"key": "Vary",
-									"value": "Accept",
-									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-								},
-								{
-									"name": "X-ChromeLogger-Data",
-									"key": "X-ChromeLogger-Data",
-									"value": "eyJ2ZXJzaW9uIjoiNC4wIiwiY29sdW1ucyI6WyJsYWJlbCIsImxvZyIsImJhY2t0cmFjZSIsInR5cGUiXSwicm93cyI6W1sicmVxdWVzdCIseyJtZXNzYWdlIjoiTWF0Y2hlZCByb3V0ZSBcImFwaV9jYXNlc19wb3N0X2NvbGxlY3Rpb25cIi4iLCJjb250ZXh0Ijp7InJvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiIsInJvdXRlX3BhcmFtZXRlcnMiOnsiX2NvbnRyb2xsZXIiOiJhcGlfcGxhdGZvcm0uYWN0aW9uLnBvc3RfY29sbGVjdGlvbiIsIl9mb3JtYXQiOm51bGwsIl9hcGlfcmVzb3VyY2VfY2xhc3MiOiJEc1xcQnVuZGxlXFxDYXNlQnVuZGxlXFxFbnRpdHlcXENhc2VFbnRpdHkiLCJfYXBpX2NvbGxlY3Rpb25fb3BlcmF0aW9uX25hbWUiOiJwb3N0IiwiX3JvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiJ9LCJyZXF1ZXN0X3VyaSI6Imh0dHA6XC9cLzEwLjAuNzUuMTo4MDUwXC9hcHBfZGV2LnBocFwvY2FzZXMiLCJtZXRob2QiOiJQT1NUIn19LCJ1bmtub3duIiwiaW5mbyJdLFsic2VjdXJpdHkiLHsibWVzc2FnZSI6Ikd1YXJkIGF1dGhlbnRpY2F0aW9uIHN1Y2Nlc3NmdWwhIiwiY29udGV4dCI6eyJ0b2tlbiI6e30sImF1dGhlbnRpY2F0b3IiOiJMZXhpa1xcQnVuZGxlXFxKV1RBdXRoZW50aWNhdGlvbkJ1bmRsZVxcU2VjdXJpdHlcXEd1YXJkXFxKV1RUb2tlbkF1dGhlbnRpY2F0b3IifX0sInVua25vd24iLCJpbmZvIl1dLCJyZXF1ZXN0X3VyaSI6IlwvYXBwX2Rldi5waHBcL2Nhc2VzIn0=",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Content-Type-Options",
-									"key": "X-Content-Type-Options",
-									"value": "nosniff",
-									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-								},
-								{
-									"name": "X-Debug-Token",
-									"key": "X-Debug-Token",
-									"value": "63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Debug-Token-Link",
-									"key": "X-Debug-Token-Link",
-									"value": "http://10.0.75.1:8050/app_dev.php/_profiler/63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Frame-Options",
-									"key": "X-Frame-Options",
-									"value": "deny",
-									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-								},
-								{
-									"name": "X-Powered-By",
-									"key": "X-Powered-By",
-									"value": "PHP/7.1.5",
-									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-								}
-							],
-							"cookie": [],
-							"responseTime": 762,
-							"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
-						}
-					]
-				},
-				{
-					"name": "/dashboards",
-					"request": {
-						"url": {
-							"raw": "{{cms}}{{environment}}/dashboards",
-							"host": [
-								"{{cms}}{{environment}}"
-							],
-							"path": [
-								"dashboards"
-							],
-							"query": [
-								{
-									"key": "locale",
-									"value": "fr",
-									"equals": true,
-									"description": "",
-									"disabled": true
-								}
-							],
-							"variable": []
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/dashboards/{uuid}",
-					"request": {
-						"url": {
-							"raw": "{{cms}}{{environment}}/dashboards/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
-							"host": [
-								"{{cms}}{{environment}}"
-							],
-							"path": [
-								"dashboards",
-								"f5d9013f-71c6-40bb-a7da-e931bf38ebb6"
-							],
-							"query": [
-								{
-									"key": "locale",
-									"value": "fr",
-									"equals": true,
-									"description": "",
-									"disabled": true
-								}
-							],
-							"variable": []
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/dashboards",
-					"request": {
-						"url": "{{cms}}{{environment}}/dashboards",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 1\",\r\n\t\t\"fr\": \"Cas 1\" \r\n\t},\r\n\t\"version\": 1\r\n}"
-						},
-						"description": ""
-					},
-					"response": [
-						{
-							"id": "7f2b4245-84c8-4abc-a992-32a5866b1e6a",
-							"name": "Created",
-							"originalRequest": {
-								"url": "{{cases}}{{environment}}/cases",
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}",
-										"description": ""
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"description": ""
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
-							"header": [
-								{
-									"name": "Cache-Control",
-									"key": "Cache-Control",
-									"value": "no-cache, private",
-									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-								},
-								{
-									"name": "Connection",
-									"key": "Connection",
-									"value": "keep-alive",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"name": "Content-Type",
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8",
-									"description": "The mime type of this content"
-								},
-								{
-									"name": "Date",
-									"key": "Date",
-									"value": "Thu, 22 Jun 2017 00:12:01 GMT",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"name": "Link",
-									"key": "Link",
-									"value": "<http://10.0.75.1:8050/app_dev.php/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
-									"description": "Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988",
-									"isLink": true
-								},
-								{
-									"name": "Server",
-									"key": "Server",
-									"value": "nginx/1.11.13",
-									"description": "A name for the server"
-								},
-								{
-									"name": "Transfer-Encoding",
-									"key": "Transfer-Encoding",
-									"value": "chunked",
-									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-								},
-								{
-									"name": "Vary",
-									"key": "Vary",
-									"value": "Accept",
-									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-								},
-								{
-									"name": "X-ChromeLogger-Data",
-									"key": "X-ChromeLogger-Data",
-									"value": "eyJ2ZXJzaW9uIjoiNC4wIiwiY29sdW1ucyI6WyJsYWJlbCIsImxvZyIsImJhY2t0cmFjZSIsInR5cGUiXSwicm93cyI6W1sicmVxdWVzdCIseyJtZXNzYWdlIjoiTWF0Y2hlZCByb3V0ZSBcImFwaV9jYXNlc19wb3N0X2NvbGxlY3Rpb25cIi4iLCJjb250ZXh0Ijp7InJvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiIsInJvdXRlX3BhcmFtZXRlcnMiOnsiX2NvbnRyb2xsZXIiOiJhcGlfcGxhdGZvcm0uYWN0aW9uLnBvc3RfY29sbGVjdGlvbiIsIl9mb3JtYXQiOm51bGwsIl9hcGlfcmVzb3VyY2VfY2xhc3MiOiJEc1xcQnVuZGxlXFxDYXNlQnVuZGxlXFxFbnRpdHlcXENhc2VFbnRpdHkiLCJfYXBpX2NvbGxlY3Rpb25fb3BlcmF0aW9uX25hbWUiOiJwb3N0IiwiX3JvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiJ9LCJyZXF1ZXN0X3VyaSI6Imh0dHA6XC9cLzEwLjAuNzUuMTo4MDUwXC9hcHBfZGV2LnBocFwvY2FzZXMiLCJtZXRob2QiOiJQT1NUIn19LCJ1bmtub3duIiwiaW5mbyJdLFsic2VjdXJpdHkiLHsibWVzc2FnZSI6Ikd1YXJkIGF1dGhlbnRpY2F0aW9uIHN1Y2Nlc3NmdWwhIiwiY29udGV4dCI6eyJ0b2tlbiI6e30sImF1dGhlbnRpY2F0b3IiOiJMZXhpa1xcQnVuZGxlXFxKV1RBdXRoZW50aWNhdGlvbkJ1bmRsZVxcU2VjdXJpdHlcXEd1YXJkXFxKV1RUb2tlbkF1dGhlbnRpY2F0b3IifX0sInVua25vd24iLCJpbmZvIl1dLCJyZXF1ZXN0X3VyaSI6IlwvYXBwX2Rldi5waHBcL2Nhc2VzIn0=",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Content-Type-Options",
-									"key": "X-Content-Type-Options",
-									"value": "nosniff",
-									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-								},
-								{
-									"name": "X-Debug-Token",
-									"key": "X-Debug-Token",
-									"value": "63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Debug-Token-Link",
-									"key": "X-Debug-Token-Link",
-									"value": "http://10.0.75.1:8050/app_dev.php/_profiler/63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Frame-Options",
-									"key": "X-Frame-Options",
-									"value": "deny",
-									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-								},
-								{
-									"name": "X-Powered-By",
-									"key": "X-Powered-By",
-									"value": "PHP/7.1.5",
-									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-								}
-							],
-							"cookie": [],
-							"responseTime": 762,
-							"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
-						}
-					]
-				},
-				{
-					"name": "/dashboards/{uuid}",
-					"request": {
-						"url": "{{cms}}{{environment}}/dashboards/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 2\",\r\n\t\t\"fr\": \"Cas 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
-						},
-						"description": ""
-					},
-					"response": [
-						{
-							"id": "5003ac57-8c70-4bce-aad8-18b4f4a4d3fb",
-							"name": "Created",
-							"originalRequest": {
-								"url": "{{cases}}{{environment}}/cases",
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}",
-										"description": ""
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"description": ""
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
-							"header": [
-								{
-									"name": "Cache-Control",
-									"key": "Cache-Control",
-									"value": "no-cache, private",
-									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-								},
-								{
-									"name": "Connection",
-									"key": "Connection",
-									"value": "keep-alive",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"name": "Content-Type",
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8",
-									"description": "The mime type of this content"
-								},
-								{
-									"name": "Date",
-									"key": "Date",
-									"value": "Thu, 22 Jun 2017 00:12:01 GMT",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"name": "Link",
-									"key": "Link",
-									"value": "<http://10.0.75.1:8050/app_dev.php/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
-									"description": "Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988",
-									"isLink": true
-								},
-								{
-									"name": "Server",
-									"key": "Server",
-									"value": "nginx/1.11.13",
-									"description": "A name for the server"
-								},
-								{
-									"name": "Transfer-Encoding",
-									"key": "Transfer-Encoding",
-									"value": "chunked",
-									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-								},
-								{
-									"name": "Vary",
-									"key": "Vary",
-									"value": "Accept",
-									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-								},
-								{
-									"name": "X-ChromeLogger-Data",
-									"key": "X-ChromeLogger-Data",
-									"value": "eyJ2ZXJzaW9uIjoiNC4wIiwiY29sdW1ucyI6WyJsYWJlbCIsImxvZyIsImJhY2t0cmFjZSIsInR5cGUiXSwicm93cyI6W1sicmVxdWVzdCIseyJtZXNzYWdlIjoiTWF0Y2hlZCByb3V0ZSBcImFwaV9jYXNlc19wb3N0X2NvbGxlY3Rpb25cIi4iLCJjb250ZXh0Ijp7InJvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiIsInJvdXRlX3BhcmFtZXRlcnMiOnsiX2NvbnRyb2xsZXIiOiJhcGlfcGxhdGZvcm0uYWN0aW9uLnBvc3RfY29sbGVjdGlvbiIsIl9mb3JtYXQiOm51bGwsIl9hcGlfcmVzb3VyY2VfY2xhc3MiOiJEc1xcQnVuZGxlXFxDYXNlQnVuZGxlXFxFbnRpdHlcXENhc2VFbnRpdHkiLCJfYXBpX2NvbGxlY3Rpb25fb3BlcmF0aW9uX25hbWUiOiJwb3N0IiwiX3JvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiJ9LCJyZXF1ZXN0X3VyaSI6Imh0dHA6XC9cLzEwLjAuNzUuMTo4MDUwXC9hcHBfZGV2LnBocFwvY2FzZXMiLCJtZXRob2QiOiJQT1NUIn19LCJ1bmtub3duIiwiaW5mbyJdLFsic2VjdXJpdHkiLHsibWVzc2FnZSI6Ikd1YXJkIGF1dGhlbnRpY2F0aW9uIHN1Y2Nlc3NmdWwhIiwiY29udGV4dCI6eyJ0b2tlbiI6e30sImF1dGhlbnRpY2F0b3IiOiJMZXhpa1xcQnVuZGxlXFxKV1RBdXRoZW50aWNhdGlvbkJ1bmRsZVxcU2VjdXJpdHlcXEd1YXJkXFxKV1RUb2tlbkF1dGhlbnRpY2F0b3IifX0sInVua25vd24iLCJpbmZvIl1dLCJyZXF1ZXN0X3VyaSI6IlwvYXBwX2Rldi5waHBcL2Nhc2VzIn0=",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Content-Type-Options",
-									"key": "X-Content-Type-Options",
-									"value": "nosniff",
-									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-								},
-								{
-									"name": "X-Debug-Token",
-									"key": "X-Debug-Token",
-									"value": "63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Debug-Token-Link",
-									"key": "X-Debug-Token-Link",
-									"value": "http://10.0.75.1:8050/app_dev.php/_profiler/63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Frame-Options",
-									"key": "X-Frame-Options",
-									"value": "deny",
-									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-								},
-								{
-									"name": "X-Powered-By",
-									"key": "X-Powered-By",
-									"value": "PHP/7.1.5",
-									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-								}
-							],
-							"cookie": [],
-							"responseTime": 762,
-							"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
-						}
-					]
-				},
-				{
-					"name": "/dashboards/{uuid}",
-					"request": {
-						"url": "{{cms}}{{environment}}/dashboards/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"description": ""
-					},
-					"response": [
-						{
-							"id": "eec85562-405c-4881-9b21-84285e5eb4de",
-							"name": "Created",
-							"originalRequest": {
-								"url": "{{cases}}{{environment}}/cases",
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}",
-										"description": ""
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"description": ""
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
-							"header": [
-								{
-									"name": "Cache-Control",
-									"key": "Cache-Control",
-									"value": "no-cache, private",
-									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-								},
-								{
-									"name": "Connection",
-									"key": "Connection",
-									"value": "keep-alive",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"name": "Content-Type",
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8",
-									"description": "The mime type of this content"
-								},
-								{
-									"name": "Date",
-									"key": "Date",
-									"value": "Thu, 22 Jun 2017 00:12:01 GMT",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"name": "Link",
-									"key": "Link",
-									"value": "<http://10.0.75.1:8050/app_dev.php/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
-									"description": "Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988",
-									"isLink": true
-								},
-								{
-									"name": "Server",
-									"key": "Server",
-									"value": "nginx/1.11.13",
-									"description": "A name for the server"
-								},
-								{
-									"name": "Transfer-Encoding",
-									"key": "Transfer-Encoding",
-									"value": "chunked",
-									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-								},
-								{
-									"name": "Vary",
-									"key": "Vary",
-									"value": "Accept",
-									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-								},
-								{
-									"name": "X-ChromeLogger-Data",
-									"key": "X-ChromeLogger-Data",
-									"value": "eyJ2ZXJzaW9uIjoiNC4wIiwiY29sdW1ucyI6WyJsYWJlbCIsImxvZyIsImJhY2t0cmFjZSIsInR5cGUiXSwicm93cyI6W1sicmVxdWVzdCIseyJtZXNzYWdlIjoiTWF0Y2hlZCByb3V0ZSBcImFwaV9jYXNlc19wb3N0X2NvbGxlY3Rpb25cIi4iLCJjb250ZXh0Ijp7InJvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiIsInJvdXRlX3BhcmFtZXRlcnMiOnsiX2NvbnRyb2xsZXIiOiJhcGlfcGxhdGZvcm0uYWN0aW9uLnBvc3RfY29sbGVjdGlvbiIsIl9mb3JtYXQiOm51bGwsIl9hcGlfcmVzb3VyY2VfY2xhc3MiOiJEc1xcQnVuZGxlXFxDYXNlQnVuZGxlXFxFbnRpdHlcXENhc2VFbnRpdHkiLCJfYXBpX2NvbGxlY3Rpb25fb3BlcmF0aW9uX25hbWUiOiJwb3N0IiwiX3JvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiJ9LCJyZXF1ZXN0X3VyaSI6Imh0dHA6XC9cLzEwLjAuNzUuMTo4MDUwXC9hcHBfZGV2LnBocFwvY2FzZXMiLCJtZXRob2QiOiJQT1NUIn19LCJ1bmtub3duIiwiaW5mbyJdLFsic2VjdXJpdHkiLHsibWVzc2FnZSI6Ikd1YXJkIGF1dGhlbnRpY2F0aW9uIHN1Y2Nlc3NmdWwhIiwiY29udGV4dCI6eyJ0b2tlbiI6e30sImF1dGhlbnRpY2F0b3IiOiJMZXhpa1xcQnVuZGxlXFxKV1RBdXRoZW50aWNhdGlvbkJ1bmRsZVxcU2VjdXJpdHlcXEd1YXJkXFxKV1RUb2tlbkF1dGhlbnRpY2F0b3IifX0sInVua25vd24iLCJpbmZvIl1dLCJyZXF1ZXN0X3VyaSI6IlwvYXBwX2Rldi5waHBcL2Nhc2VzIn0=",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Content-Type-Options",
-									"key": "X-Content-Type-Options",
-									"value": "nosniff",
-									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-								},
-								{
-									"name": "X-Debug-Token",
-									"key": "X-Debug-Token",
-									"value": "63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Debug-Token-Link",
-									"key": "X-Debug-Token-Link",
-									"value": "http://10.0.75.1:8050/app_dev.php/_profiler/63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Frame-Options",
-									"key": "X-Frame-Options",
-									"value": "deny",
-									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-								},
-								{
-									"name": "X-Powered-By",
-									"key": "X-Powered-By",
-									"value": "PHP/7.1.5",
-									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-								}
-							],
-							"cookie": [],
-							"responseTime": 762,
-							"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
-						}
-					]
-				},
-				{
-					"name": "/widgets",
-					"request": {
-						"url": {
-							"raw": "{{cms}}{{environment}}/widgets",
-							"host": [
-								"{{cms}}{{environment}}"
-							],
-							"path": [
-								"widgets"
-							],
-							"query": [
-								{
-									"key": "locale",
-									"value": "fr",
-									"equals": true,
-									"description": "",
-									"disabled": true
-								}
-							],
-							"variable": []
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/widgets/{uuid}",
-					"request": {
-						"url": {
-							"raw": "{{cms}}{{environment}}/widgets/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
-							"host": [
-								"{{cms}}{{environment}}"
-							],
-							"path": [
-								"widgets",
-								"f5d9013f-71c6-40bb-a7da-e931bf38ebb6"
-							],
-							"query": [
-								{
-									"key": "locale",
-									"value": "fr",
-									"equals": true,
-									"description": "",
-									"disabled": true
-								}
-							],
-							"variable": []
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/widgets",
-					"request": {
-						"url": "{{cms}}{{environment}}/widgets",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 1\",\r\n\t\t\"fr\": \"Cas 1\" \r\n\t},\r\n\t\"version\": 1\r\n}"
-						},
-						"description": ""
-					},
-					"response": [
-						{
-							"id": "48cc108f-479e-459b-8453-7953d8c1bb06",
-							"name": "Created",
-							"originalRequest": {
-								"url": "{{cases}}{{environment}}/cases",
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}",
-										"description": ""
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"description": ""
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
-							"header": [
-								{
-									"name": "Cache-Control",
-									"key": "Cache-Control",
-									"value": "no-cache, private",
-									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-								},
-								{
-									"name": "Connection",
-									"key": "Connection",
-									"value": "keep-alive",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"name": "Content-Type",
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8",
-									"description": "The mime type of this content"
-								},
-								{
-									"name": "Date",
-									"key": "Date",
-									"value": "Thu, 22 Jun 2017 00:12:01 GMT",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"name": "Link",
-									"key": "Link",
-									"value": "<http://10.0.75.1:8050/app_dev.php/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
-									"description": "Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988",
-									"isLink": true
-								},
-								{
-									"name": "Server",
-									"key": "Server",
-									"value": "nginx/1.11.13",
-									"description": "A name for the server"
-								},
-								{
-									"name": "Transfer-Encoding",
-									"key": "Transfer-Encoding",
-									"value": "chunked",
-									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-								},
-								{
-									"name": "Vary",
-									"key": "Vary",
-									"value": "Accept",
-									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-								},
-								{
-									"name": "X-ChromeLogger-Data",
-									"key": "X-ChromeLogger-Data",
-									"value": "eyJ2ZXJzaW9uIjoiNC4wIiwiY29sdW1ucyI6WyJsYWJlbCIsImxvZyIsImJhY2t0cmFjZSIsInR5cGUiXSwicm93cyI6W1sicmVxdWVzdCIseyJtZXNzYWdlIjoiTWF0Y2hlZCByb3V0ZSBcImFwaV9jYXNlc19wb3N0X2NvbGxlY3Rpb25cIi4iLCJjb250ZXh0Ijp7InJvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiIsInJvdXRlX3BhcmFtZXRlcnMiOnsiX2NvbnRyb2xsZXIiOiJhcGlfcGxhdGZvcm0uYWN0aW9uLnBvc3RfY29sbGVjdGlvbiIsIl9mb3JtYXQiOm51bGwsIl9hcGlfcmVzb3VyY2VfY2xhc3MiOiJEc1xcQnVuZGxlXFxDYXNlQnVuZGxlXFxFbnRpdHlcXENhc2VFbnRpdHkiLCJfYXBpX2NvbGxlY3Rpb25fb3BlcmF0aW9uX25hbWUiOiJwb3N0IiwiX3JvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiJ9LCJyZXF1ZXN0X3VyaSI6Imh0dHA6XC9cLzEwLjAuNzUuMTo4MDUwXC9hcHBfZGV2LnBocFwvY2FzZXMiLCJtZXRob2QiOiJQT1NUIn19LCJ1bmtub3duIiwiaW5mbyJdLFsic2VjdXJpdHkiLHsibWVzc2FnZSI6Ikd1YXJkIGF1dGhlbnRpY2F0aW9uIHN1Y2Nlc3NmdWwhIiwiY29udGV4dCI6eyJ0b2tlbiI6e30sImF1dGhlbnRpY2F0b3IiOiJMZXhpa1xcQnVuZGxlXFxKV1RBdXRoZW50aWNhdGlvbkJ1bmRsZVxcU2VjdXJpdHlcXEd1YXJkXFxKV1RUb2tlbkF1dGhlbnRpY2F0b3IifX0sInVua25vd24iLCJpbmZvIl1dLCJyZXF1ZXN0X3VyaSI6IlwvYXBwX2Rldi5waHBcL2Nhc2VzIn0=",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Content-Type-Options",
-									"key": "X-Content-Type-Options",
-									"value": "nosniff",
-									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-								},
-								{
-									"name": "X-Debug-Token",
-									"key": "X-Debug-Token",
-									"value": "63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Debug-Token-Link",
-									"key": "X-Debug-Token-Link",
-									"value": "http://10.0.75.1:8050/app_dev.php/_profiler/63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Frame-Options",
-									"key": "X-Frame-Options",
-									"value": "deny",
-									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-								},
-								{
-									"name": "X-Powered-By",
-									"key": "X-Powered-By",
-									"value": "PHP/7.1.5",
-									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-								}
-							],
-							"cookie": [],
-							"responseTime": 762,
-							"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
-						}
-					]
-				},
-				{
-					"name": "/widgets/{uuid}",
-					"request": {
-						"url": "{{cms}}{{environment}}/widgets/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 2\",\r\n\t\t\"fr\": \"Cas 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
-						},
-						"description": ""
-					},
-					"response": [
-						{
-							"id": "60a650c0-3bd3-41b3-8f1b-e63eb145bed9",
-							"name": "Created",
-							"originalRequest": {
-								"url": "{{cases}}{{environment}}/cases",
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}",
-										"description": ""
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"description": ""
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
-							"header": [
-								{
-									"name": "Cache-Control",
-									"key": "Cache-Control",
-									"value": "no-cache, private",
-									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-								},
-								{
-									"name": "Connection",
-									"key": "Connection",
-									"value": "keep-alive",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"name": "Content-Type",
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8",
-									"description": "The mime type of this content"
-								},
-								{
-									"name": "Date",
-									"key": "Date",
-									"value": "Thu, 22 Jun 2017 00:12:01 GMT",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"name": "Link",
-									"key": "Link",
-									"value": "<http://10.0.75.1:8050/app_dev.php/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
-									"description": "Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988",
-									"isLink": true
-								},
-								{
-									"name": "Server",
-									"key": "Server",
-									"value": "nginx/1.11.13",
-									"description": "A name for the server"
-								},
-								{
-									"name": "Transfer-Encoding",
-									"key": "Transfer-Encoding",
-									"value": "chunked",
-									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-								},
-								{
-									"name": "Vary",
-									"key": "Vary",
-									"value": "Accept",
-									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-								},
-								{
-									"name": "X-ChromeLogger-Data",
-									"key": "X-ChromeLogger-Data",
-									"value": "eyJ2ZXJzaW9uIjoiNC4wIiwiY29sdW1ucyI6WyJsYWJlbCIsImxvZyIsImJhY2t0cmFjZSIsInR5cGUiXSwicm93cyI6W1sicmVxdWVzdCIseyJtZXNzYWdlIjoiTWF0Y2hlZCByb3V0ZSBcImFwaV9jYXNlc19wb3N0X2NvbGxlY3Rpb25cIi4iLCJjb250ZXh0Ijp7InJvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiIsInJvdXRlX3BhcmFtZXRlcnMiOnsiX2NvbnRyb2xsZXIiOiJhcGlfcGxhdGZvcm0uYWN0aW9uLnBvc3RfY29sbGVjdGlvbiIsIl9mb3JtYXQiOm51bGwsIl9hcGlfcmVzb3VyY2VfY2xhc3MiOiJEc1xcQnVuZGxlXFxDYXNlQnVuZGxlXFxFbnRpdHlcXENhc2VFbnRpdHkiLCJfYXBpX2NvbGxlY3Rpb25fb3BlcmF0aW9uX25hbWUiOiJwb3N0IiwiX3JvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiJ9LCJyZXF1ZXN0X3VyaSI6Imh0dHA6XC9cLzEwLjAuNzUuMTo4MDUwXC9hcHBfZGV2LnBocFwvY2FzZXMiLCJtZXRob2QiOiJQT1NUIn19LCJ1bmtub3duIiwiaW5mbyJdLFsic2VjdXJpdHkiLHsibWVzc2FnZSI6Ikd1YXJkIGF1dGhlbnRpY2F0aW9uIHN1Y2Nlc3NmdWwhIiwiY29udGV4dCI6eyJ0b2tlbiI6e30sImF1dGhlbnRpY2F0b3IiOiJMZXhpa1xcQnVuZGxlXFxKV1RBdXRoZW50aWNhdGlvbkJ1bmRsZVxcU2VjdXJpdHlcXEd1YXJkXFxKV1RUb2tlbkF1dGhlbnRpY2F0b3IifX0sInVua25vd24iLCJpbmZvIl1dLCJyZXF1ZXN0X3VyaSI6IlwvYXBwX2Rldi5waHBcL2Nhc2VzIn0=",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Content-Type-Options",
-									"key": "X-Content-Type-Options",
-									"value": "nosniff",
-									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-								},
-								{
-									"name": "X-Debug-Token",
-									"key": "X-Debug-Token",
-									"value": "63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Debug-Token-Link",
-									"key": "X-Debug-Token-Link",
-									"value": "http://10.0.75.1:8050/app_dev.php/_profiler/63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Frame-Options",
-									"key": "X-Frame-Options",
-									"value": "deny",
-									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-								},
-								{
-									"name": "X-Powered-By",
-									"key": "X-Powered-By",
-									"value": "PHP/7.1.5",
-									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-								}
-							],
-							"cookie": [],
-							"responseTime": 762,
-							"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
-						}
-					]
-				},
-				{
-					"name": "/widgets/{uuid}",
-					"request": {
-						"url": "{{cms}}{{environment}}/widgets/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"description": ""
-					},
-					"response": [
-						{
-							"id": "e69ab605-56ea-4646-b66d-c1b199296266",
+							"id": "12e3a9a6-2273-437b-b9b2-c49d3502e41e",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7831,7 +7476,165 @@
 				{
 					"name": "/pages",
 					"request": {
-						"url": "{{cms}}{{environment}}/pages",
+						"url": {
+							"raw": "{{cms}}{{environment}}/pages",
+							"host": [
+								"{{cms}}{{environment}}"
+							],
+							"path": [
+								"pages"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[id]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[createdAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[updatedAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[deletedAt]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[owner]",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "slug",
+									"value": "road-classifications",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -7931,7 +7734,7 @@
 					},
 					"response": [
 						{
-							"id": "57230828-db7b-4159-a1dd-0a935d7270e4",
+							"id": "068195d2-8e14-4b37-99c6-db8a275c349d",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8085,7 +7888,7 @@
 					},
 					"response": [
 						{
-							"id": "b481a0a3-9fa2-4576-9c9f-033d108a4f44",
+							"id": "3e56e619-ab20-41d4-8ae5-b7dc48ee1fde",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8239,560 +8042,7 @@
 					},
 					"response": [
 						{
-							"id": "d56847af-432e-4fb8-aba9-1946d2efc2b3",
-							"name": "Created",
-							"originalRequest": {
-								"url": "{{cases}}{{environment}}/cases",
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}",
-										"description": ""
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"description": ""
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
-							"header": [
-								{
-									"name": "Cache-Control",
-									"key": "Cache-Control",
-									"value": "no-cache, private",
-									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-								},
-								{
-									"name": "Connection",
-									"key": "Connection",
-									"value": "keep-alive",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"name": "Content-Type",
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8",
-									"description": "The mime type of this content"
-								},
-								{
-									"name": "Date",
-									"key": "Date",
-									"value": "Thu, 22 Jun 2017 00:12:01 GMT",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"name": "Link",
-									"key": "Link",
-									"value": "<http://10.0.75.1:8050/app_dev.php/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
-									"description": "Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988",
-									"isLink": true
-								},
-								{
-									"name": "Server",
-									"key": "Server",
-									"value": "nginx/1.11.13",
-									"description": "A name for the server"
-								},
-								{
-									"name": "Transfer-Encoding",
-									"key": "Transfer-Encoding",
-									"value": "chunked",
-									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-								},
-								{
-									"name": "Vary",
-									"key": "Vary",
-									"value": "Accept",
-									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-								},
-								{
-									"name": "X-ChromeLogger-Data",
-									"key": "X-ChromeLogger-Data",
-									"value": "eyJ2ZXJzaW9uIjoiNC4wIiwiY29sdW1ucyI6WyJsYWJlbCIsImxvZyIsImJhY2t0cmFjZSIsInR5cGUiXSwicm93cyI6W1sicmVxdWVzdCIseyJtZXNzYWdlIjoiTWF0Y2hlZCByb3V0ZSBcImFwaV9jYXNlc19wb3N0X2NvbGxlY3Rpb25cIi4iLCJjb250ZXh0Ijp7InJvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiIsInJvdXRlX3BhcmFtZXRlcnMiOnsiX2NvbnRyb2xsZXIiOiJhcGlfcGxhdGZvcm0uYWN0aW9uLnBvc3RfY29sbGVjdGlvbiIsIl9mb3JtYXQiOm51bGwsIl9hcGlfcmVzb3VyY2VfY2xhc3MiOiJEc1xcQnVuZGxlXFxDYXNlQnVuZGxlXFxFbnRpdHlcXENhc2VFbnRpdHkiLCJfYXBpX2NvbGxlY3Rpb25fb3BlcmF0aW9uX25hbWUiOiJwb3N0IiwiX3JvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiJ9LCJyZXF1ZXN0X3VyaSI6Imh0dHA6XC9cLzEwLjAuNzUuMTo4MDUwXC9hcHBfZGV2LnBocFwvY2FzZXMiLCJtZXRob2QiOiJQT1NUIn19LCJ1bmtub3duIiwiaW5mbyJdLFsic2VjdXJpdHkiLHsibWVzc2FnZSI6Ikd1YXJkIGF1dGhlbnRpY2F0aW9uIHN1Y2Nlc3NmdWwhIiwiY29udGV4dCI6eyJ0b2tlbiI6e30sImF1dGhlbnRpY2F0b3IiOiJMZXhpa1xcQnVuZGxlXFxKV1RBdXRoZW50aWNhdGlvbkJ1bmRsZVxcU2VjdXJpdHlcXEd1YXJkXFxKV1RUb2tlbkF1dGhlbnRpY2F0b3IifX0sInVua25vd24iLCJpbmZvIl1dLCJyZXF1ZXN0X3VyaSI6IlwvYXBwX2Rldi5waHBcL2Nhc2VzIn0=",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Content-Type-Options",
-									"key": "X-Content-Type-Options",
-									"value": "nosniff",
-									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-								},
-								{
-									"name": "X-Debug-Token",
-									"key": "X-Debug-Token",
-									"value": "63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Debug-Token-Link",
-									"key": "X-Debug-Token-Link",
-									"value": "http://10.0.75.1:8050/app_dev.php/_profiler/63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Frame-Options",
-									"key": "X-Frame-Options",
-									"value": "deny",
-									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-								},
-								{
-									"name": "X-Powered-By",
-									"key": "X-Powered-By",
-									"value": "PHP/7.1.5",
-									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-								}
-							],
-							"cookie": [],
-							"responseTime": 762,
-							"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
-						}
-					]
-				},
-				{
-					"name": "/templates",
-					"request": {
-						"url": {
-							"raw": "{{cms}}{{environment}}/templates",
-							"host": [
-								"{{cms}}{{environment}}"
-							],
-							"path": [
-								"templates"
-							],
-							"query": [
-								{
-									"key": "locale",
-									"value": "fr",
-									"equals": true,
-									"description": "",
-									"disabled": true
-								}
-							],
-							"variable": []
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/templates/{uuid}",
-					"request": {
-						"url": {
-							"raw": "{{cms}}{{environment}}/templates/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
-							"host": [
-								"{{cms}}{{environment}}"
-							],
-							"path": [
-								"templates",
-								"f5d9013f-71c6-40bb-a7da-e931bf38ebb6"
-							],
-							"query": [
-								{
-									"key": "locale",
-									"value": "fr",
-									"equals": true,
-									"description": "",
-									"disabled": true
-								}
-							],
-							"variable": []
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "/templates",
-					"request": {
-						"url": "{{cms}}{{environment}}/templates",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 1\",\r\n\t\t\"fr\": \"Cas 1\" \r\n\t},\r\n\t\"version\": 1\r\n}"
-						},
-						"description": ""
-					},
-					"response": [
-						{
-							"id": "b147bd28-3d09-45dc-8baf-beb9efa97602",
-							"name": "Created",
-							"originalRequest": {
-								"url": "{{cases}}{{environment}}/cases",
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}",
-										"description": ""
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"description": ""
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
-							"header": [
-								{
-									"name": "Cache-Control",
-									"key": "Cache-Control",
-									"value": "no-cache, private",
-									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-								},
-								{
-									"name": "Connection",
-									"key": "Connection",
-									"value": "keep-alive",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"name": "Content-Type",
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8",
-									"description": "The mime type of this content"
-								},
-								{
-									"name": "Date",
-									"key": "Date",
-									"value": "Thu, 22 Jun 2017 00:12:01 GMT",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"name": "Link",
-									"key": "Link",
-									"value": "<http://10.0.75.1:8050/app_dev.php/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
-									"description": "Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988",
-									"isLink": true
-								},
-								{
-									"name": "Server",
-									"key": "Server",
-									"value": "nginx/1.11.13",
-									"description": "A name for the server"
-								},
-								{
-									"name": "Transfer-Encoding",
-									"key": "Transfer-Encoding",
-									"value": "chunked",
-									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-								},
-								{
-									"name": "Vary",
-									"key": "Vary",
-									"value": "Accept",
-									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-								},
-								{
-									"name": "X-ChromeLogger-Data",
-									"key": "X-ChromeLogger-Data",
-									"value": "eyJ2ZXJzaW9uIjoiNC4wIiwiY29sdW1ucyI6WyJsYWJlbCIsImxvZyIsImJhY2t0cmFjZSIsInR5cGUiXSwicm93cyI6W1sicmVxdWVzdCIseyJtZXNzYWdlIjoiTWF0Y2hlZCByb3V0ZSBcImFwaV9jYXNlc19wb3N0X2NvbGxlY3Rpb25cIi4iLCJjb250ZXh0Ijp7InJvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiIsInJvdXRlX3BhcmFtZXRlcnMiOnsiX2NvbnRyb2xsZXIiOiJhcGlfcGxhdGZvcm0uYWN0aW9uLnBvc3RfY29sbGVjdGlvbiIsIl9mb3JtYXQiOm51bGwsIl9hcGlfcmVzb3VyY2VfY2xhc3MiOiJEc1xcQnVuZGxlXFxDYXNlQnVuZGxlXFxFbnRpdHlcXENhc2VFbnRpdHkiLCJfYXBpX2NvbGxlY3Rpb25fb3BlcmF0aW9uX25hbWUiOiJwb3N0IiwiX3JvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiJ9LCJyZXF1ZXN0X3VyaSI6Imh0dHA6XC9cLzEwLjAuNzUuMTo4MDUwXC9hcHBfZGV2LnBocFwvY2FzZXMiLCJtZXRob2QiOiJQT1NUIn19LCJ1bmtub3duIiwiaW5mbyJdLFsic2VjdXJpdHkiLHsibWVzc2FnZSI6Ikd1YXJkIGF1dGhlbnRpY2F0aW9uIHN1Y2Nlc3NmdWwhIiwiY29udGV4dCI6eyJ0b2tlbiI6e30sImF1dGhlbnRpY2F0b3IiOiJMZXhpa1xcQnVuZGxlXFxKV1RBdXRoZW50aWNhdGlvbkJ1bmRsZVxcU2VjdXJpdHlcXEd1YXJkXFxKV1RUb2tlbkF1dGhlbnRpY2F0b3IifX0sInVua25vd24iLCJpbmZvIl1dLCJyZXF1ZXN0X3VyaSI6IlwvYXBwX2Rldi5waHBcL2Nhc2VzIn0=",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Content-Type-Options",
-									"key": "X-Content-Type-Options",
-									"value": "nosniff",
-									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-								},
-								{
-									"name": "X-Debug-Token",
-									"key": "X-Debug-Token",
-									"value": "63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Debug-Token-Link",
-									"key": "X-Debug-Token-Link",
-									"value": "http://10.0.75.1:8050/app_dev.php/_profiler/63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Frame-Options",
-									"key": "X-Frame-Options",
-									"value": "deny",
-									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-								},
-								{
-									"name": "X-Powered-By",
-									"key": "X-Powered-By",
-									"value": "PHP/7.1.5",
-									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-								}
-							],
-							"cookie": [],
-							"responseTime": 762,
-							"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
-						}
-					]
-				},
-				{
-					"name": "/templates/{uuid}",
-					"request": {
-						"url": "{{cms}}{{environment}}/templates/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 2\",\r\n\t\t\"fr\": \"Cas 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
-						},
-						"description": ""
-					},
-					"response": [
-						{
-							"id": "2632dfcf-db4f-4815-a343-56c7e1a43476",
-							"name": "Created",
-							"originalRequest": {
-								"url": "{{cases}}{{environment}}/cases",
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}",
-										"description": ""
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"description": ""
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"_postman_previewtype": "text",
-							"header": [
-								{
-									"name": "Cache-Control",
-									"key": "Cache-Control",
-									"value": "no-cache, private",
-									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-								},
-								{
-									"name": "Connection",
-									"key": "Connection",
-									"value": "keep-alive",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"name": "Content-Type",
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8",
-									"description": "The mime type of this content"
-								},
-								{
-									"name": "Date",
-									"key": "Date",
-									"value": "Thu, 22 Jun 2017 00:12:01 GMT",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"name": "Link",
-									"key": "Link",
-									"value": "<http://10.0.75.1:8050/app_dev.php/docs.jsonld>; rel=\"http://www.w3.org/ns/hydra/core#apiDocumentation\"",
-									"description": "Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988",
-									"isLink": true
-								},
-								{
-									"name": "Server",
-									"key": "Server",
-									"value": "nginx/1.11.13",
-									"description": "A name for the server"
-								},
-								{
-									"name": "Transfer-Encoding",
-									"key": "Transfer-Encoding",
-									"value": "chunked",
-									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
-								},
-								{
-									"name": "Vary",
-									"key": "Vary",
-									"value": "Accept",
-									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
-								},
-								{
-									"name": "X-ChromeLogger-Data",
-									"key": "X-ChromeLogger-Data",
-									"value": "eyJ2ZXJzaW9uIjoiNC4wIiwiY29sdW1ucyI6WyJsYWJlbCIsImxvZyIsImJhY2t0cmFjZSIsInR5cGUiXSwicm93cyI6W1sicmVxdWVzdCIseyJtZXNzYWdlIjoiTWF0Y2hlZCByb3V0ZSBcImFwaV9jYXNlc19wb3N0X2NvbGxlY3Rpb25cIi4iLCJjb250ZXh0Ijp7InJvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiIsInJvdXRlX3BhcmFtZXRlcnMiOnsiX2NvbnRyb2xsZXIiOiJhcGlfcGxhdGZvcm0uYWN0aW9uLnBvc3RfY29sbGVjdGlvbiIsIl9mb3JtYXQiOm51bGwsIl9hcGlfcmVzb3VyY2VfY2xhc3MiOiJEc1xcQnVuZGxlXFxDYXNlQnVuZGxlXFxFbnRpdHlcXENhc2VFbnRpdHkiLCJfYXBpX2NvbGxlY3Rpb25fb3BlcmF0aW9uX25hbWUiOiJwb3N0IiwiX3JvdXRlIjoiYXBpX2Nhc2VzX3Bvc3RfY29sbGVjdGlvbiJ9LCJyZXF1ZXN0X3VyaSI6Imh0dHA6XC9cLzEwLjAuNzUuMTo4MDUwXC9hcHBfZGV2LnBocFwvY2FzZXMiLCJtZXRob2QiOiJQT1NUIn19LCJ1bmtub3duIiwiaW5mbyJdLFsic2VjdXJpdHkiLHsibWVzc2FnZSI6Ikd1YXJkIGF1dGhlbnRpY2F0aW9uIHN1Y2Nlc3NmdWwhIiwiY29udGV4dCI6eyJ0b2tlbiI6e30sImF1dGhlbnRpY2F0b3IiOiJMZXhpa1xcQnVuZGxlXFxKV1RBdXRoZW50aWNhdGlvbkJ1bmRsZVxcU2VjdXJpdHlcXEd1YXJkXFxKV1RUb2tlbkF1dGhlbnRpY2F0b3IifX0sInVua25vd24iLCJpbmZvIl1dLCJyZXF1ZXN0X3VyaSI6IlwvYXBwX2Rldi5waHBcL2Nhc2VzIn0=",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Content-Type-Options",
-									"key": "X-Content-Type-Options",
-									"value": "nosniff",
-									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
-								},
-								{
-									"name": "X-Debug-Token",
-									"key": "X-Debug-Token",
-									"value": "63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Debug-Token-Link",
-									"key": "X-Debug-Token-Link",
-									"value": "http://10.0.75.1:8050/app_dev.php/_profiler/63b6fe",
-									"description": "Custom header"
-								},
-								{
-									"name": "X-Frame-Options",
-									"key": "X-Frame-Options",
-									"value": "deny",
-									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
-								},
-								{
-									"name": "X-Powered-By",
-									"key": "X-Powered-By",
-									"value": "PHP/7.1.5",
-									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
-								}
-							],
-							"cookie": [],
-							"responseTime": 762,
-							"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
-						}
-					]
-				},
-				{
-					"name": "/templates/{uuid}",
-					"request": {
-						"url": "{{cms}}{{environment}}/templates/f5d9013f-71c6-40bb-a7da-e931bf38ebb6",
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"description": ""
-					},
-					"response": [
-						{
-							"id": "3ba7d397-2e8c-4716-a8c0-7ea1884644db",
+							"id": "8ce24d01-f46e-4567-b199-f288e5a43703",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8981,7 +8231,7 @@
 					},
 					"response": [
 						{
-							"id": "93ef786f-b559-4e84-8410-039cb71e59ce",
+							"id": "788859dc-537c-481f-8438-a3ccc2e369bd",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -9111,6 +8361,33 @@
 			"name": "Identities",
 			"description": "",
 			"item": [
+				{
+					"name": "/sandbox",
+					"request": {
+						"url": "{{identities}}{{environment}}/sandbox",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
 				{
 					"name": "/accesses",
 					"request": {
@@ -9408,7 +8685,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\n    \"identity\": \"Staff\",\n    \"identityUuid\": \"47a5a9cb-496f-4db7-8999-489ec404887f\",\n    \"permissions\": [\n        {\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+							"raw": "{\n    \"owner\": \"{{business_unit}}\",\n    \"ownerUuid\": \"{{uuid_public_works}}\",\n    \"identity\": \"{{staff}}\",\n    \"identityUuid\": \"{{uuid_agent}}\",\n    \"permissions\": [\n        {\n            \"entity\": \"{{business_unit}}\",\n            \"entityUuid\": \"{{uuid_public_works}}\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 						},
 						"description": ""
 					},
@@ -9438,7 +8715,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"permissions\": [\n        {\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+							"raw": "{\n    \"permissions\": [\n        {\n        \t\"entity\": \"{{business_unit}}\",\n            \"entityUuid\": \"{{uuid_public_works}}\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 						},
 						"description": ""
 					},
@@ -10382,7 +9659,7 @@
 								},
 								{
 									"key": "individual.uuid",
-									"value": "d0daa7e4-07d1-47e6-93f2-0629adaa3b49",
+									"value": "d0daa7e4-07d1-47e6-93f2-0629adaa3b41",
 									"equals": true,
 									"description": "",
 									"disabled": true
@@ -10464,7 +9741,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\r\n\t\"title\": { \"en\": \"Persona 1\" },\r\n\t\"individual\": \"/app_dev.php/individuals/9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n\t\"data\": {\r\n\t\t\"test\": \"test\"\r\n\t},\r\n\t\"version\": 1\r\n}"
+							"raw": "{\n\t\"owner\": \"BusinessUnit\",\n\t\"ownerUuid\": \"8bca60bb-11ac-420a-bf7b-23c698ab9244\",\n\t\"title\": { \"en\": \"Persona 1\" },\n\t\"individual\": \"/app_dev.php/individuals/9be0af28-ef41-49b7-86d9-72a2d9beb051\",\n\t\"data\": {\n\t\t\"test\": \"test\"\n\t},\n\t\"version\": 1\n}"
 						},
 						"description": ""
 					},
@@ -10494,7 +9771,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"data\": { \"en\": \"Persona 2\" },\r\n\t\"version\": 1\r\n}"
+							"raw": "{\n    \"title\": {\n        \"en\": \"Default-edit\",\n        \"fr\": \"Défaut-edit\"\n    },\n    \"version\": 1\n}"
 						},
 						"description": ""
 					},
@@ -11689,118 +10966,9 @@
 			"description": "",
 			"item": [
 				{
-					"name": "/accesses",
+					"name": "/sandbox",
 					"request": {
-						"url": {
-							"raw": "{{records}}{{environment}}/accesses",
-							"host": [
-								"{{records}}{{environment}}"
-							],
-							"path": [
-								"accesses"
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "id[0]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "uuid",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "uuid[0]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "owner",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "owner[0]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "ownerUuid",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "ownerUuid[0]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "userUuid",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "userUuid[0]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "createdAt[before]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "createdAt[after]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "updatedAt[before]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								},
-								{
-									"key": "updatedAt[after]",
-									"value": "",
-									"equals": false,
-									"description": "",
-									"disabled": true
-								}
-							],
-							"variable": []
-						},
+						"url": "{{records}}{{environment}}/sandbox",
 						"method": "GET",
 						"header": [
 							{
@@ -12109,6 +11277,142 @@
 								"health",
 								"database",
 								"connection"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/accesses",
+					"request": {
+						"url": {
+							"raw": "{{records}}{{environment}}/accesses",
+							"host": [
+								"{{records}}{{environment}}"
+							],
+							"path": [
+								"accesses"
 							],
 							"query": [
 								{
@@ -13250,6 +12554,33 @@
 			"name": "Services",
 			"description": "",
 			"item": [
+				{
+					"name": "/sandbox",
+					"request": {
+						"url": "{{services}}{{environment}}/sandbox",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
 				{
 					"name": "/health",
 					"request": {
@@ -15208,7 +14539,7 @@
 				{
 					"name": "/scenarios/{uuid}/form",
 					"request": {
-						"url": "{{services}}{{environment}}/scenarios/e049f2b4-b249-48c2-850c-64d4c4b39527/form",
+						"url": "{{services}}{{environment}}/scenarios/d4833574-377f-4845-acc1-bc6fcead0ce5/form",
 						"method": "GET",
 						"header": [
 							{
@@ -15283,7 +14614,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"owner\": \"{{business_unit}}\",\r\n\t\"ownerUuid\": \"{{uuid_public_works}}\",\r\n\t\"service\": \"/app_dev.php/services/9ed44d24-b2e1-4882-82f9-7e4c2c8bf73d\",\r\n\t\"type\": \"bpm\",\r\n\t\"slug\": \"scenario-1\",\r\n\t\"title\": { \r\n\t\t\"en\":\"Scenario 1\",\r\n\t\t\"fr\":\"Scenario 1\"\r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description ...\",\r\n\t\t\"fr\": \"Description ...\"\r\n\t},\r\n\t\"presentation\": { \r\n\t\t\"en\": \"Presentation ...\",\r\n\t\t\"fr\": \"Presentation ...\"\r\n\t},\r\n\t\"enabled\": true,\r\n\t\"weight\": 0,\r\n\t\"version\": 1\r\n}"
+							"raw": "{\r\n\t\"owner\": \"{{business_unit}}\",\r\n\t\"ownerUuid\": \"{{uuid_public_works}}\",\r\n\t\"service\": \"/app_dev.php/services/9ed44d24-b2e1-4882-82f9-7e4c2c8bf73d\",\r\n\t\"type\": \"bpm\",\r\n\t\"data\": {\r\n\t\t\"bpm\":\"camunda\",\r\n\t\t\"process_definition_key\": \"test\"\r\n\t},\r\n\t\"slug\": \"scenario-3\",\r\n\t\"title\": { \r\n\t\t\"en\":\"Scenario 1\",\r\n\t\t\"fr\":\"Scenario 1\"\r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description ...\",\r\n\t\t\"fr\": \"Description ...\"\r\n\t},\r\n\t\"presentation\": { \r\n\t\t\"en\": \"Presentation ...\",\r\n\t\t\"fr\": \"Presentation ...\"\r\n\t},\r\n\t\"enabled\": true,\r\n\t\"weight\": 0,\r\n\t\"version\": 1\r\n}"
 						},
 						"description": ""
 					},
@@ -15292,7 +14623,7 @@
 				{
 					"name": "/scenarios/{uuid}/submissions",
 					"request": {
-						"url": "{{services}}{{environment}}/scenarios/e049f2b4-b249-48c2-850c-64d4c4b39527/submissions",
+						"url": "{{services}}{{environment}}/scenarios/d4833574-377f-4845-acc1-bc6fcead0ce5/submissions",
 						"method": "POST",
 						"header": [
 							{
@@ -15313,7 +14644,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"data\": {\n\t\t\"test\": \"test\"\n\t}\n}"
+							"raw": "{\n\t\"data\": {\n\t\t\"profilesector\": \"123\",\n\t\t\"email\": \"morgan@site.com\",\n\t\t\"posSerialnumber\": \"123\",\n\t\t\"amounttobepaid\": 23\n\t}\n}"
 						},
 						"description": ""
 					},
@@ -15716,7 +15047,1418 @@
 		{
 			"name": "Tasks",
 			"description": "",
-			"item": []
+			"item": [
+				{
+					"name": "/sandbox",
+					"request": {
+						"url": "{{services}}{{environment}}/sandbox",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/health",
+					"request": {
+						"url": {
+							"raw": "{{services}}{{environment}}/health",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"health"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/health/ping",
+					"request": {
+						"url": {
+							"raw": "{{services}}{{environment}}/health/ping",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"health",
+								"ping"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/health/database/connection",
+					"request": {
+						"url": {
+							"raw": "{{services}}{{environment}}/health/database/connection",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"health",
+								"database",
+								"connection"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/accesses",
+					"request": {
+						"url": {
+							"raw": "{{services}}{{environment}}/accesses",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"accesses"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/accesses/{uuid}",
+					"request": {
+						"url": {
+							"raw": "{{services}}{{environment}}/accesses/6e47bde9-3ccf-4a4b-b376-023092ea058d",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"accesses",
+								"6e47bde9-3ccf-4a4b-b376-023092ea058d"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "userUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/accesses",
+					"request": {
+						"url": "{{services}}{{environment}}/accesses",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"owner\": \"{{business_unit}}\",\r\n\t\"ownerUuid\": \"{{uuid_public_works}}\",\r\n\t\"identity\": \"{{staff}}\",\r\n\t\"identityUuid\": \"{{uuid_agent}}\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"entity\": \"{{business_unit}}\",\r\n\t\t\t\"entityUuid\": \"{{uuid_public_works}}\",\r\n\t\t\t\"key\": \"service\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/accesses/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/accesses/6e47bde9-3ccf-4a4b-b376-023092ea058d",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"permissions\": [\n\t\t{\n\t\t\t\"entity\": \"{{business_unit}}\",\n\t\t\t\"entityUuid\": \"{{uuid_public_works}}\",\n\t\t\t\"key\": \"service\",\n\t\t\t\"attributes\": [\n\t\t\t\t\"BROWSE\",\n\t\t\t\t\"READ\"\n\t\t\t]\n\t\t}\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/accesses/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/accesses/059741bb-e6d9-459c-9f88-e63be9668fad",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/permissions",
+					"request": {
+						"url": "{{services}}{{environment}}/permissions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs",
+					"request": {
+						"url": {
+							"raw": "{{services}}{{environment}}/configs",
+							"host": [
+								"{{services}}{{environment}}"
+							],
+							"path": [
+								"configs"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "id[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "key",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "enabled",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/configs/d823bca8-bb87-4537-a4b1-b78239c127f8",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/configs/{uuid}",
+					"request": {
+						"url": "{{services}}{{environment}}/configs/d823bca8-bb87-4537-a4b1-b78239c127f8",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"value\": \"CASE-{date:Y-m-d}-{inc3}\",\n    \"version\": 1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/tasks",
+					"request": {
+						"url": {
+							"raw": "{{tasks}}{{environment}}/tasks?ownerUuid=8454c987-cbc5-4a24-ba1a-d420283caabd",
+							"host": [
+								"{{tasks}}{{environment}}"
+							],
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "uuid",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "uuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "owner[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "ownerUuid",
+									"value": "8454c987-cbc5-4a24-ba1a-d420283caabd",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "ownerUuid[0]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identity",
+									"value": "Staff",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "identityUuid",
+									"value": "",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "createdAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "updatedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[before]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "deletedAt[after]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[createdAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[updatedAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[deletedAt]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "order[owner]",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"equals": false,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/tasks/{uuid}",
+					"request": {
+						"url": "{{tasks}}{{environment}}/tasks/8f9d8732-968d-11e7-b233-0242ac110002",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/tasks/{uuid}/form",
+					"request": {
+						"url": "{{tasks}}{{environment}}/tasks/8f9d8732-968d-11e7-b233-0242ac110002/form",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/tasks/{uuid}/form/translation",
+					"request": {
+						"url": "{{tasks}}{{environment}}/tasks/8f9d8732-968d-11e7-b233-0242ac110002/form/translation",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/tasks",
+					"request": {
+						"url": "{{tasks}}{{environment}}/tasks",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/tasks/{uuid}",
+					"request": {
+						"url": "{{tasks}}{{environment}}/tasks/ecc69524-0b12-4eae-a6f4-b6eb0f442e29",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": {\r\n        \"en\": \"Infrastructure\",\r\n        \"fr\": \"Infrastructure\"\r\n    },\r\n\t\"version\": 1\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/tasks/{uuid}/submission",
+					"request": {
+						"url": "{{tasks}}{{environment}}/tasks/5100bdf6-98f2-11e7-b233-0242ac110002/submission",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\": {\r\n        \"firstName\": \"Bob\"\r\n    }\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/tasks/{uuid}",
+					"request": {
+						"url": "{{tasks}}{{environment}}/tasks/ecc69524-0b12-4eae-a6f4-b6eb0f442e29",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Log",
