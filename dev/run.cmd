@@ -10,10 +10,10 @@
 
 @echo OFF
 
-if %1 == "source:download" (
-    for /F "usebackq tokens=1,2 delims==" %%a in (config/source/download.ini) do (
+if %1 == "repository:download" (
+    for /F "usebackq tokens=1,2 delims==" %%a in (config/repository/download.ini) do (
         echo Downloading source for repository %%a
-        call :source_download %%a %%b
+        call :repository_download %%a %%b
     )
 ) else if %1 == "container:up" (
     for /F "usebackq tokens=1,2 delims==" %%a in (config/container/up.ini) do (
@@ -46,7 +46,7 @@ exit /B
 :: @param string %1 The directory
 :: @param string %2 The command
 ::
-:source_download
+:repository_download
     set directory=%1
     set command=%2
     set command=###%command%###
