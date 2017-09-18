@@ -2207,6 +2207,40 @@
 			"description": "",
 			"item": [
 				{
+					"name": "/deployment",
+					"request": {
+						"url": "{{camunda}}/deployment",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/deployment/{id}",
+					"request": {
+						"url": "{{camunda}}/deployment/051e15ae-99b4-11e7-92b2-0242ac110002",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/deployment/create",
 					"event": [
 						{
@@ -2271,6 +2305,57 @@
 					"response": []
 				},
 				{
+					"name": "/process-instance",
+					"request": {
+						"url": "{{camunda}}/process-instance",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/process-instance/{id}",
+					"request": {
+						"url": "{{camunda}}/process-instance/3fde771b-9aed-11e7-92b2-0242ac110002",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/process-instance/{id}/variables",
+					"request": {
+						"url": "{{camunda}}/process-instance/3fde771b-9aed-11e7-92b2-0242ac110002/variables",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/process-definition",
 					"request": {
 						"url": "{{camunda}}/process-definition",
@@ -2291,15 +2376,29 @@
 					"response": []
 				},
 				{
-					"name": "/process-definition/{id}/startForm",
+					"name": "/process-definition/{id}/diagram",
 					"request": {
-						"url": "{{camunda}}/process-definition/invoice:1:97e99b81-45ac-11e7-a7cb-0242ac110002/startForm",
+						"url": "{{camunda}}/process-definition/PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002/diagram",
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/process-definition/{id}/startForm",
+					"request": {
+						"url": "{{camunda}}/process-definition/PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002/startForm",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -2336,6 +2435,51 @@
 							"mode": "raw",
 							"raw": "{\r\n\t\"variables\": {\r\n\t\t\"invoiceNumber\" : {\"value\" : \"invoice 1\", \"type\": \"string\"},\r\n    \t\"amount\" : {\"value\" : 30, \"type\": \"integer\"},\r\n    \t\"creditor\" : {\"value\" : \"Creditor 1\", \"type\": \"string\"},\r\n    \t\"invoiceCategory\" : {\"value\" : \"Category 1\", \"type\": \"string\"},\r\n    \t\"approverGroups\" : {\"value\" : true, \"type\": \"boolean\"}\r\n    }\r\n}\r\n"
 						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/process-definition/key/{key}/xml",
+					"request": {
+						"url": "{{camunda}}/process-definition/key/PayTaxes/xml",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/process-definition/{id}/statistics",
+					"request": {
+						"url": "{{camunda}}/process-definition/PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002/statistics",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/process-definition/{id}/xml",
+					"request": {
+						"url": "{{camunda}}/process-definition/PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002/xml",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
 						"description": ""
 					},
 					"response": []
@@ -2444,6 +2588,48 @@
 								"key": "Accept",
 								"value": "application/hal+json",
 								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/task/{id}/variables",
+					"request": {
+						"url": {
+							"raw": "{{camunda}}/task/3fde9e43-9aed-11e7-92b2-0242ac110002/variables?deserializeValues=false",
+							"host": [
+								"{{camunda}}"
+							],
+							"path": [
+								"task",
+								"3fde9e43-9aed-11e7-92b2-0242ac110002",
+								"variables"
+							],
+							"query": [
+								{
+									"key": "deserializeValues",
+									"value": "false",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/hal+json",
+								"description": "",
+								"disabled": true
 							}
 						],
 						"body": {},
@@ -3548,7 +3734,7 @@
 					},
 					"response": [
 						{
-							"id": "894bc638-f6d8-4488-990c-0cb51ff8de6c",
+							"id": "f695d296-0c92-40eb-997b-6124beb13625",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3702,7 +3888,7 @@
 					},
 					"response": [
 						{
-							"id": "01f94894-af3d-4b89-b263-b682dfa21cc3",
+							"id": "77b03d1e-1b4c-423f-86a2-cef5c75c752d",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -3856,7 +4042,7 @@
 					},
 					"response": [
 						{
-							"id": "b6539c81-65ef-4047-abb8-897a8887b077",
+							"id": "d1ef915c-ee49-4677-8de7-6e2730c4a857",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4290,7 +4476,7 @@
 					},
 					"response": [
 						{
-							"id": "7cfb6aa0-5c79-4418-96f8-5d8028a9cf7b",
+							"id": "cfaadafb-53a0-49ca-a0e8-49b737566c34",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4444,7 +4630,7 @@
 					},
 					"response": [
 						{
-							"id": "b9da8b08-32c3-4705-b947-9eb02db37c5a",
+							"id": "0157c53d-832c-4915-b89f-80a9247218ae",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -4598,7 +4784,7 @@
 					},
 					"response": [
 						{
-							"id": "b6576172-0111-4274-86db-55d1881a35e1",
+							"id": "c36fa267-eb20-4991-a20f-dc6ef6058372",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5655,7 +5841,7 @@
 					},
 					"response": [
 						{
-							"id": "b6bad31a-3e48-4a7a-af92-4cf8c1139950",
+							"id": "c81d8540-743b-4753-b5f3-a2b8823213f9",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5809,7 +5995,7 @@
 					},
 					"response": [
 						{
-							"id": "13c31d13-9387-4848-a155-5c405fd6f0b5",
+							"id": "0cbd58d2-8c64-4580-a705-38b00baf4ea5",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -5963,7 +6149,7 @@
 					},
 					"response": [
 						{
-							"id": "dbc4e89c-2ab1-4245-af97-07b4fd987f43",
+							"id": "7cc7ad08-ac90-4742-8989-ec4f1e231aa9",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6348,7 +6534,7 @@
 					},
 					"response": [
 						{
-							"id": "6326a41d-ff11-42a5-a4f7-6d5a51a71836",
+							"id": "150b4077-8976-465a-a552-5d8dc2676454",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6502,7 +6688,7 @@
 					},
 					"response": [
 						{
-							"id": "e619acc3-1e80-4390-8efe-206bbfd07104",
+							"id": "2237e8ba-da46-4b77-bf2f-5e52993787e1",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -6656,7 +6842,7 @@
 					},
 					"response": [
 						{
-							"id": "9a975741-794b-48f9-ad94-b51fffcc6002",
+							"id": "9fe81d1e-5630-4eae-bbae-18fbb8f48353",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7041,7 +7227,7 @@
 					},
 					"response": [
 						{
-							"id": "d462296a-48ce-4131-ae37-80a364532754",
+							"id": "6c3a55d4-2473-4604-a857-0d0baebb81bd",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7195,7 +7381,7 @@
 					},
 					"response": [
 						{
-							"id": "c46e8089-7cb3-4476-bdc1-189ed1a7b348",
+							"id": "ffb892ea-0f95-4da8-b95e-79f90b45422e",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7349,7 +7535,7 @@
 					},
 					"response": [
 						{
-							"id": "12e3a9a6-2273-437b-b9b2-c49d3502e41e",
+							"id": "6c3538df-ff24-4950-930d-a089c898c89d",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7734,7 +7920,7 @@
 					},
 					"response": [
 						{
-							"id": "068195d2-8e14-4b37-99c6-db8a275c349d",
+							"id": "a3c64318-a7b6-4829-a044-54d4cf64061d",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -7888,7 +8074,7 @@
 					},
 					"response": [
 						{
-							"id": "3e56e619-ab20-41d4-8ae5-b7dc48ee1fde",
+							"id": "49680b36-04ee-4f87-b31d-70ba28c740ca",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8042,7 +8228,7 @@
 					},
 					"response": [
 						{
-							"id": "8ce24d01-f46e-4567-b199-f288e5a43703",
+							"id": "48fd3131-f8ed-43f6-a093-c00aaf71f3f6",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -8231,7 +8417,7 @@
 					},
 					"response": [
 						{
-							"id": "788859dc-537c-481f-8438-a3ccc2e369bd",
+							"id": "8f3460cc-afac-4e90-aae1-6dec66614c4d",
 							"name": "Created",
 							"originalRequest": {
 								"url": "{{cases}}{{environment}}/cases",
@@ -16263,7 +16449,7 @@
 				{
 					"name": "/tasks/{uuid}",
 					"request": {
-						"url": "{{tasks}}{{environment}}/tasks/8f9d8732-968d-11e7-b233-0242ac110002",
+						"url": "{{tasks}}{{environment}}/tasks/8b703257-9aea-11e7-92b2-0242ac110002",
 						"method": "GET",
 						"header": [
 							{
@@ -16288,9 +16474,69 @@
 					"response": []
 				},
 				{
+					"name": "/tasks/{uuid}/claim",
+					"request": {
+						"url": "{{tasks}}{{environment}}/tasks/3fde9e43-9aed-11e7-92b2-0242ac110002/claim",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"identity\": \"Staff\",\n\t\"identityUuid\": \"9d10157c-f2ce-48fb-a5ab-83faaae952a7\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/tasks/{uuid}/claim",
+					"request": {
+						"url": "{{tasks}}{{environment}}/tasks/3fde9e43-9aed-11e7-92b2-0242ac110002/claim",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "/tasks/{uuid}/form",
 					"request": {
-						"url": "{{tasks}}{{environment}}/tasks/8f9d8732-968d-11e7-b233-0242ac110002/form",
+						"url": "{{tasks}}{{environment}}/tasks/3fde9e43-9aed-11e7-92b2-0242ac110002/form",
 						"method": "GET",
 						"header": [
 							{
@@ -16404,7 +16650,7 @@
 				{
 					"name": "/tasks/{uuid}/submission",
 					"request": {
-						"url": "{{tasks}}{{environment}}/tasks/5100bdf6-98f2-11e7-b233-0242ac110002/submission",
+						"url": "{{tasks}}{{environment}}/tasks/a210161b-9ae9-11e7-92b2-0242ac110002/submission",
 						"method": "PUT",
 						"header": [
 							{
@@ -16436,6 +16682,33 @@
 					"request": {
 						"url": "{{tasks}}{{environment}}/tasks/ecc69524-0b12-4eae-a6f4-b6eb0f442e29",
 						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/submissions",
+					"request": {
+						"url": "{{tasks}}{{environment}}/submissions",
+						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
