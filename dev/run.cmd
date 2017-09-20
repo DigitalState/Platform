@@ -18,9 +18,15 @@ if "%1" == "repository:load" (
         call :repository_load %%a %%b
     )
 ) else if "%1" == "key:copy" (
-    for /F "usebackq tokens=1,2 delims==" %%a in (config/key/copy.ini) do (
-        echo // Copying public/private keys into repository %%a
-        call :key_copy %%a %%b
+    if not exist ..\resources\keys\public.pem (
+        echo // Key "public.pem" does not exist
+    ) else if not exist ..\resources\keys\private.pem (
+        echo // Key "private.pem" does not exist
+    ) else (
+        for /F "usebackq tokens=1,2 delims==" %%a in (config/key/copy.ini) do (
+            echo // Copying public/private keys into repository %%a
+            call :key_copy %%a %%b
+        )
     )
 ) else if "%1" == "container:up" (
     for /F "usebackq tokens=1,2 delims==" %%a in (config/container/up.ini) do (
