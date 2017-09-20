@@ -1,50 +1,50 @@
 ::
 :: Commands
 ::
-:: run.cmd repository:download         Downloads repositories to src directories
+:: run.cmd repository:load             Loads repositories to src directories
 :: run.cmd key:copy                    Copies public/private keys to repository directories
-:: run.cmd container:up                Up containers
-:: run.cmd container:down              Down containers
-:: run.cmd container:stop              Stop containers
-:: run.cmd migration:run               Run database migrations
-:: run.cmd data:load                   Load demo data
+:: run.cmd container:up                Ups containers
+:: run.cmd container:down              Downs containers
+:: run.cmd container:stop              Stops containers
+:: run.cmd migration:run               Runs database migrations
+:: run.cmd data:load                   Loads demo data
 ::
 
 @echo OFF
 
-if "%1" == "repository:download" (
-    for /F "usebackq tokens=1,2 delims==" %%a in (config/repository/download.ini) do (
-        echo Downloading source for repository %%a
-        call :repository_download %%a %%b
+if "%1" == "repository:load" (
+    for /F "usebackq tokens=1,2 delims==" %%a in (config/repository/load.ini) do (
+        echo // Loading source for repository %%a
+        call :repository_load %%a %%b
     )
 ) else if "%1" == "key:copy" (
     for /F "usebackq tokens=1,2 delims==" %%a in (config/key/copy.ini) do (
-        echo Copying public/private keys into repository %%a
+        echo // Copying public/private keys into repository %%a
         call :key_copy %%a %%b
     )
 ) else if "%1" == "container:up" (
     for /F "usebackq tokens=1,2 delims==" %%a in (config/container/up.ini) do (
-        echo Upping container %%a
+        echo // Upping container %%a
         call :container_up %%a %%b
     )
 ) else if "%1" == "container:down" (
     for /F "usebackq tokens=1,2 delims==" %%a in (config/container/down.ini) do (
-        echo Downing container %%a
+        echo // Downing container %%a
         call :container_down %%a %%b
     )
 ) else if "%1" == "container:stop" (
     for /F "usebackq tokens=1,2 delims==" %%a in (config/container/stop.ini) do (
-        echo Stopping container %%a
+        echo // Stopping container %%a
         call :container_stop %%a %%b
     )
 ) else if "%1" == "migration:run" (
     for /F "usebackq tokens=1,2 delims==" %%a in (config/migration/run.ini) do (
-        echo Running migration for %%a
+        echo // Running migration for %%a
         call :migration_run %%a %%b
     )
 ) else if "%1" == "data:load" (
     for /F "usebackq tokens=1,2 delims==" %%a in (config/data/load.ini) do (
-        echo Loading demo data for %%a
+        echo // Loading demo data for %%a
         call :data_load %%a %%b
     )
 ) else (
@@ -55,12 +55,12 @@ exit /B
 
 
 ::
-:: Download repository source into given directory
+:: Load repository source into given directory
 ::
 :: @param string %1 The directory
 :: @param string %2 The command
 ::
-:repository_download
+:repository_load
     set directory=%1
     set command=%2
     set command=###%command%###
