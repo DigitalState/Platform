@@ -1,13 +1,14 @@
 ::
 :: Commands
 ::
-:: run.cmd repository:load             Loads repositories to src directories
-:: run.cmd key:copy                    Copies public/private keys to repository directories
-:: run.cmd container:up                Ups containers
-:: run.cmd container:down              Downs containers
-:: run.cmd container:stop              Stops containers
-:: run.cmd migration:run               Runs database migrations
-:: run.cmd data:load                   Loads demo data
+:: console.cmd repository:load             Loads repositories to src directories
+:: console.cmd key:copy                    Copies public/private keys to repository directories
+:: console.cmd container:up                Ups containers
+:: console.cmd container:down              Downs containers
+:: console.cmd container:stop              Stops containers
+:: console.cmd container:ready             Checks if all containers are ready
+:: console.cmd migration:run               Runs database migrations
+:: console.cmd data:load                   Loads demo data
 ::
 
 @echo OFF
