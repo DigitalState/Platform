@@ -1,0 +1,6 @@
+---
+- name: Install git
+  apk:
+    update_cache: yes
+    name: git
+    state: installed

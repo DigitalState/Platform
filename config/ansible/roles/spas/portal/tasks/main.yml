@@ -1,0 +1,11 @@
+---
+- name: Download portal repository
+  git:
+    repo: https://github.com/DigitalState/Portal.git
+    version: '{{ portal_repository_version }}'
+    dest: '{{ portal_repository_directory }}'
+
+- name: Start portal container
+  shell: 'docker-compose -f {{ portal_repository_directory }}/docker-compose.yml up -d'
+  register: output
+  changed_when: output.stderr != 'Starting %s_ng2admin_1 ... \r\nStarting %s_ng2admin_1\n\u001b[1A\u001b[2K\rStarting %s_ng2admin_1 ... \u001b[32mdone\u001b[0m\r\u001b[1B'.replace('%s', portal_repository_directory|basename)

@@ -1,0 +1,8 @@
+---
+- name: Install docker
+  import_tasks: ubuntu.yml
+  when: ansible_distribution == 'Ubuntu'
+
+- name: Install docker
+  import_tasks: alpine.yml
+  when: ansible_distribution == 'Alpine'

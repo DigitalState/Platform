@@ -1,0 +1,11 @@
+---
+- name: Download camunda repository
+  git:
+    repo: https://github.com/DigitalState/Camunda.git
+    version: '{{ camunda_repository_version }}'
+    dest: '{{ camunda_repository_directory }}'
+
+- name: Start camunda container
+  shell: 'docker-compose -f {{ camunda_repository_directory }}/docker-compose.yml up -d'
+  register: output
+  changed_when: output.stderr != '%s_camunda_1 is up-to-date'.replace('%s', camunda_repository_directory|basename)

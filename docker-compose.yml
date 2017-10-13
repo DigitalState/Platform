@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  ansible:
+    build: '.'
+    volumes:
+      - './config/ansible:/etc/ansible'
+      - './src:/srv'
+    entrypoint: /bin/sh
+    stdin_open: true
+    tty: true

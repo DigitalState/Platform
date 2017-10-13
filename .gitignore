@@ -1,0 +1,9 @@
+/config/ansible/**/*.retry
+/config/git/*
+!/config/git/.gitkeep
+/config/jwt/*
+!/config/jwt/.gitkeep
+/config/ssh/*
+!/config/ssh/.gitkeep
+/src/authentication
+/src/identities

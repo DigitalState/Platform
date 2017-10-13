@@ -1,0 +1,3 @@
+---
+docker_compose_version: 1.16.1
+docker_compose_package: Linux-x86_64
