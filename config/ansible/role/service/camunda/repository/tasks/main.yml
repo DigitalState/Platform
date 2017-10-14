@@ -1,0 +1,6 @@
+---
+- name: Download camunda repository
+  git:
+    repo: https://github.com/DigitalState/Camunda.git
+    version: '{{ camunda_version }}'
+    dest: '{{ camunda_directory }}'

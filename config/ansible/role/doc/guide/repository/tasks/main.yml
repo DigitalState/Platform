@@ -1,0 +1,6 @@
+---
+- name: Download guide repository
+  git:
+    repo: https://github.com/DigitalState/Guide.git
+    version: '{{ guide_version }}'
+    dest: '{{ guide_directory }}'

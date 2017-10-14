@@ -1,0 +1,6 @@
+---
+- name: Download records repository
+  git:
+    repo: https://github.com/DigitalState/Records.git
+    version: '{{ records_version }}'
+    dest: '{{ records_directory }}'

@@ -1,6 +1,0 @@
----
-- name: Install docker
-  apk:
-    update_cache: yes
-    name: docker
-    state: present

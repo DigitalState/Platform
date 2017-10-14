@@ -1,0 +1,6 @@
+---
+- name: Download documentation repository
+  git:
+    repo: https://github.com/DigitalState/Documentation.git
+    version: '{{ documentation_version }}'
+    dest: '{{ documentation_directory }}'

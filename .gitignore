@@ -5,5 +5,9 @@
 !/config/jwt/.gitkeep
 /config/ssh/*
 !/config/ssh/.gitkeep
-/src/authentication
-/src/identities
+/doc/*
+!/doc/.gitkeep
+/service/*
+!/service/.gitkeep
+/spa/*
+!/spa/.gitkeep

@@ -1,0 +1,22 @@
+---
+- name: Install docker
+  apk:
+    update_cache: yes
+    name: docker
+    state: present
+
+- name: Install make
+  apk:
+    update_cache: yes
+    name: make
+    state: present
+
+- name: Install python pip
+  apk:
+    update_cache: yes
+    name: py-pip
+    state: present
+
+- name: Install docker compose
+  pip:
+    name: docker-compose

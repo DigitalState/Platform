@@ -1,0 +1,10 @@
+---
+- name: Down containers on lab server
+  hosts: server
+  become: true
+  vars:
+    container_action: down
+  roles:
+    - service/authentication/container
+    - service/identities/container
+    - service/services/container

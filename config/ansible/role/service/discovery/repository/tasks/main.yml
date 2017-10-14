@@ -1,0 +1,6 @@
+---
+- name: Download discovery repository
+  git:
+    repo: https://github.com/DigitalState/Discovery.git
+    version: '{{ discovery_version }}'
+    dest: '{{ discovery_directory }}'

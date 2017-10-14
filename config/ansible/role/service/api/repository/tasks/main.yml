@@ -1,0 +1,6 @@
+---
+- name: Download api repository
+  git:
+    repo: https://github.com/DigitalState/Api.git
+    version: '{{ api_version }}'
+    dest: '{{ api_directory }}'

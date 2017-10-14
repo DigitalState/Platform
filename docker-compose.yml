@@ -1,11 +1,15 @@
 version: '3'
 
 services:
-  ansible:
+  sdk:
     build: '.'
+    privileged: true
     volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
       - './config/ansible:/etc/ansible'
-      - './src:/srv'
+      - './doc:/srv/doc'
+      - './service:/srv/service'
+      - './spa:/srv/spa'
     entrypoint: /bin/sh
     stdin_open: true
     tty: true

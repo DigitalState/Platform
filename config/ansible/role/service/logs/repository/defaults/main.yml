@@ -1,0 +1,3 @@
+---
+logs_directory: /srv/service/logs
+logs_version: master

@@ -1,0 +1,10 @@
+---
+- name: Migrate databases on lab server
+  hosts: server
+  become: true
+  vars:
+    database_action: migrate
+  roles:
+    - service/authentication/database
+    - service/identities/database
+    - service/services/database

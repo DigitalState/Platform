@@ -1,0 +1,14 @@
+---
+- name: Up identities container
+  when: container_action == 'up'
+  shell: 'docker-compose -f {{ identities_directory }}/docker-compose.yml up -d'
+  register: output
+  changed_when: output.stderr != '%s_db_1 is up-to-date\nStarting %s_php_1 ... \r\nStarting %s_php_1\n\u001b[1A\u001b[2K\rStarting %s_php_1 ... \u001b[32mdone\u001b[0m\r\u001b[1B%s_nginx_1 is up-to-date'.replace('%s', identities_directory|basename)
+
+- name: Down identities container
+  when: container_action == 'down'
+  shell: 'docker-compose -f {{ identities_directory }}/docker-compose.yml down'
+
+- name: Stop identities container
+  when: container_action == 'stop'
+  shell: 'docker-compose -f {{ identities_directory }}/docker-compose.yml stop'

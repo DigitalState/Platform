@@ -1,0 +1,6 @@
+---
+- name: Download logs repository
+  git:
+    repo: https://github.com/DigitalState/Logs.git
+    version: '{{ logs_version }}'
+    dest: '{{ logs_directory }}'

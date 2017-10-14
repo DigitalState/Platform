@@ -1,0 +1,10 @@
+---
+- name: Install core packages on lab server
+  hosts: server
+  become: true
+  roles:
+    - package/git
+    - package/docker
+
+- import_playbook: repository/download.yml
+- import_playbook: container/up.yml

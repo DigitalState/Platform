@@ -1,0 +1,6 @@
+---
+- name: Download core repository
+  git:
+    repo: https://github.com/DigitalState/Core.git
+    version: '{{ core_version }}'
+    dest: '{{ core_directory }}'

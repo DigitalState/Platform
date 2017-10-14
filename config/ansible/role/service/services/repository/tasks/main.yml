@@ -1,0 +1,6 @@
+---
+- name: Download services repository
+  git:
+    repo: https://github.com/DigitalState/Services.git
+    version: '{{ services_version }}'
+    dest: '{{ services_directory }}'

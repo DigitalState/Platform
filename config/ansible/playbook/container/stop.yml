@@ -1,0 +1,10 @@
+---
+- name: Stop containers on lab server
+  hosts: server
+  become: true
+  vars:
+    container_action: stop
+  roles:
+    - service/authentication/container
+    - service/identities/container
+    - service/services/container

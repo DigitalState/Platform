@@ -1,0 +1,4 @@
+---
+- name: Migrate authentication database
+  when: database_action == 'migrate'
+  shell: 'docker-compose -f {{ authentication_directory }}/docker-compose.yml exec php bin/console doctrine:migrations:migrate --no-interaction | cat'

@@ -1,0 +1,6 @@
+---
+- name: Download monitor repository
+  git:
+    repo: https://github.com/DigitalState/Monitor.git
+    version: '{{ monitor_version }}'
+    dest: '{{ monitor_directory }}'
