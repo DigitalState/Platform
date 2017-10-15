@@ -5,8 +5,8 @@
 !/config/jwt/.gitkeep
 /config/ssh/*
 !/config/ssh/.gitkeep
-/documentation/*
-!/documentation/.gitkeep
+/resource/*
+!/resource/.gitkeep
 /service/*
 !/service/.gitkeep
 /spa/*

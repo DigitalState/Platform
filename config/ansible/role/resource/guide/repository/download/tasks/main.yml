@@ -3,4 +3,4 @@
   git:
     repo: https://github.com/DigitalState/Guide.git
     version: '{{ guide_version }}'
-    dest: /srv/documentation/guide
+    dest: /srv/resource/guide

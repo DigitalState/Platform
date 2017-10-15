@@ -7,7 +7,7 @@ services:
     volumes:
       - '/var/run/docker.sock:/var/run/docker.sock'
       - './config/ansible:/etc/ansible'
-      - './documentation:/srv/documentation'
+      - './resource:/srv/resource'
       - './service:/srv/service'
       - './spa:/srv/spa'
     entrypoint: /bin/sh

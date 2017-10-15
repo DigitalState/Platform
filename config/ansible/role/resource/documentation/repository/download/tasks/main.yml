@@ -3,4 +3,4 @@
   git:
     repo: https://github.com/DigitalState/Documentation.git
     version: '{{ documentation_version }}'
-    dest: /srv/documentation/documentation
+    dest: /srv/resource/documentation
