@@ -1,0 +1,6 @@
+---
+- name: Download tasks repository
+  git:
+    repo: https://github.com/DigitalState/Tasks.git
+    version: '{{ tasks_version }}'
+    dest: /srv/service/tasks

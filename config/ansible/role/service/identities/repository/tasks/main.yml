@@ -1,6 +1,0 @@
----
-- name: Download identities repository
-  git:
-    repo: https://github.com/DigitalState/Identities.git
-    version: '{{ identities_version }}'
-    dest: '{{ identities_directory }}'

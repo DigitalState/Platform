@@ -1,0 +1,3 @@
+---
+- name: Migrate services database
+  shell: 'docker-compose -f /srv/service/services/docker-compose.yml exec php bin/console doctrine:migrations:migrate --no-interaction | cat'

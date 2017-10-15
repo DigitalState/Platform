@@ -1,10 +1,14 @@
 ---
-- name: Stop containers on lab server
+- name: Stop containers on server
   hosts: server
   become: true
-  vars:
-    container_action: stop
   roles:
-    - service/authentication/container
-    - service/identities/container
-    - service/services/container
+    - service/assets/container/stop
+    - service/authentication/container/stop
+    - service/camunda/container/stop
+    - service/cases/container/stop
+    - service/cms/container/stop
+    - service/identities/container/stop
+    - service/records/container/stop
+    - service/services/container/stop
+#    - service/tasks/container/stop

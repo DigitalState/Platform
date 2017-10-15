@@ -1,0 +1,3 @@
+---
+- name: Stop camunda container
+  shell: 'docker-compose -f /srv/service/camunda/docker-compose.yml stop'

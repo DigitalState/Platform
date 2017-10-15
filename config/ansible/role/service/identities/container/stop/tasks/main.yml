@@ -1,0 +1,3 @@
+---
+- name: Stop identities container
+  shell: 'docker-compose -f /srv/service/identities/docker-compose.yml stop'

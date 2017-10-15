@@ -6,5 +6,7 @@
     - package/git
     - package/docker
 
-- import_playbook: repository/download.yml
-- import_playbook: container/up.yml
+- import_playbook: ../../playbook/repository/download.yml
+- import_playbook: ../../playbook/container/up.yml
+- import_playbook: ../../playbook/database/migrate.yml
+- import_playbook: ../../playbook/database/fixtures.yml

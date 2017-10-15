@@ -1,7 +1,0 @@
----
-- name: Download admin repository
-  git:
-    repo: https://github.com/DigitalState/Admin.git
-    version: '{{ admin_version }}'
-    recursive: yes
-    dest: '{{ admin_directory }}'

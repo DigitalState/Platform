@@ -1,6 +1,0 @@
----
-- name: Download assets repository
-  git:
-    repo: https://github.com/DigitalState/Assets.git
-    version: '{{ assets_version }}'
-    dest: '{{ assets_directory }}'

@@ -1,0 +1,3 @@
+---
+- name: Down tasks container
+  shell: 'docker-compose -f /srv/service/tasks/docker-compose.yml down'

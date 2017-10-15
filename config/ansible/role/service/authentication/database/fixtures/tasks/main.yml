@@ -1,0 +1,3 @@
+---
+- name: Load authentication database fixtures
+  shell: 'docker-compose -f /srv/service/authentication/docker-compose.yml exec php bin/console doctrine:fixtures:load --env={{ fixtures }} --no-interaction | cat'

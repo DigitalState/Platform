@@ -1,6 +1,0 @@
----
-- name: Download cms repository
-  git:
-    repo: https://github.com/DigitalState/Cms.git
-    version: '{{ cms_version }}'
-    dest: '{{ cms_directory }}'

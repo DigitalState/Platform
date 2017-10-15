@@ -1,0 +1,3 @@
+---
+- name: Stop interactions container
+  shell: 'docker-compose -f /srv/service/interactions/docker-compose.yml stop'

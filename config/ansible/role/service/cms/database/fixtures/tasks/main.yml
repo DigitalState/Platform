@@ -1,0 +1,3 @@
+---
+- name: Load cms database fixtures
+  shell: 'docker-compose -f /srv/service/cms/docker-compose.yml exec php bin/console doctrine:fixtures:load --env={{ fixtures }} --no-interaction | cat'

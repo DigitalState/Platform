@@ -1,0 +1,3 @@
+---
+- name: Down api container
+  shell: 'docker-compose -f /srv/service/api/docker-compose.yml down'

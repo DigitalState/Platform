@@ -1,6 +1,0 @@
----
-- name: Download interactions repository
-  git:
-    repo: https://github.com/DigitalState/Interactions.git
-    version: '{{ interactions_version }}'
-    dest: '{{ interactions_directory }}'

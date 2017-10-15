@@ -1,0 +1,3 @@
+---
+- name: Down discovery container
+  shell: 'docker-compose -f /srv/service/discovery/docker-compose.yml down'

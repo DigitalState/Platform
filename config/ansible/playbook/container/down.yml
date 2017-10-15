@@ -1,10 +1,14 @@
 ---
-- name: Down containers on lab server
+- name: Stop containers on server
   hosts: server
   become: true
-  vars:
-    container_action: down
   roles:
-    - service/authentication/container
-    - service/identities/container
-    - service/services/container
+    - service/assets/container/down
+    - service/authentication/container/down
+    - service/camunda/container/down
+    - service/cases/container/down
+    - service/cms/container/down
+    - service/identities/container/down
+    - service/records/container/down
+    - service/services/container/down
+#    - service/tasks/container/down

@@ -1,5 +1,5 @@
 ---
-- name: Load repositories on lab server
+- name: Download repositories on server
   hosts: server
   become: true
   vars:
@@ -25,24 +25,24 @@
     portal_version: develop
     ui_version: develop
   roles:
-    - doc/documentation/repository
-    - doc/guide/repository
-    - service/api/repository
-    - service/assets/repository
-    - service/authentication/repository
-    - service/camunda/repository
-    - service/cases/repository
-    - service/cms/repository
-    - service/core/repository
-    - service/discovery/repository
-    - service/identities/repository
-    - service/interactions/repository
-    - service/logs/repository
-    - service/records/repository
-    - service/services/repository
-#    - service/tasks/repository
-    - service/topics/repository
-    - spa/admin/repository
-    - spa/monitor/repository
-    - spa/portal/repository
-    - spa/ui/repository
+    - documentation/documentation/repository/download
+    - documentation/guide/repository/download
+    - service/api/repository/download
+    - service/assets/repository/download
+    - service/authentication/repository/download
+    - service/camunda/repository/download
+    - service/cases/repository/download
+    - service/cms/repository/download
+    - service/core/repository/download
+    - service/discovery/repository/download
+    - service/identities/repository/download
+    - service/interactions/repository/download
+    - service/logs/repository/download
+    - service/records/repository/download
+    - service/services/repository/download
+#    - service/tasks/repository/download
+    - service/topics/repository/download
+    - spa/admin/repository/download
+    - spa/monitor/repository/download
+    - spa/portal/repository/download
+    - spa/ui/repository/download

@@ -1,6 +1,0 @@
----
-- name: Download topics repository
-  git:
-    repo: https://github.com/DigitalState/Topics.git
-    version: '{{ topics_version }}'
-    dest: '{{ topics_directory }}'

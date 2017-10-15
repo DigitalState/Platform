@@ -1,0 +1,3 @@
+---
+- name: Stop cms container
+  shell: 'docker-compose -f /srv/service/cms/docker-compose.yml stop'

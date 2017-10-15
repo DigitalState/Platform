@@ -1,0 +1,14 @@
+---
+- import_playbook: ../../playbook/setup/ubuntu.yml
+
+- name: Install core packages on staging server
+  hosts: server
+  become: true
+  roles:
+    - package/git
+    - package/docker
+
+- import_playbook: ../../playbook/repository/download.yml
+- import_playbook: ../../playbook/container/up.yml
+- import_playbook: ../../playbook/database/migrate.yml
+- import_playbook: ../../playbook/database/fixtures.yml

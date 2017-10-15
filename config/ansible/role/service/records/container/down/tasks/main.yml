@@ -1,0 +1,3 @@
+---
+- name: Down records container
+  shell: 'docker-compose -f /srv/service/records/docker-compose.yml down'
