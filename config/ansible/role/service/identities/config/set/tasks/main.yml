@@ -1,0 +1,3 @@
+---
+- name: Set identities config
+  shell: 'docker-compose -f /srv/service/identities/docker-compose.yml exec php bin/console ds:config:set {{ key }} {{ value }} | cat'

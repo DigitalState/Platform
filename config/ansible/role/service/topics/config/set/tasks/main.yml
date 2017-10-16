@@ -1,0 +1,3 @@
+---
+- name: Set topics config
+  shell: 'docker-compose -f /srv/service/topics/docker-compose.yml exec php bin/console ds:config:set {{ key }} {{ value }} | cat'
