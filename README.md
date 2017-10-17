@@ -19,7 +19,7 @@ It is the central repository used by developers.
 1. **Install** the requirements (Docker).
 1. **Download** the SDK repository to your local machine.
 1. **Boot** the SDK container and **enter** the console.
-1. **Execute** sdk commands to help with various tasks.
+1. **Execute** pre-built commands to help with various tasks.
 
 ## Installation
 
