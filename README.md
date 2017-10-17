@@ -39,7 +39,7 @@ Boot the container:
 docker-compose up -d
 ```
 
-To confirm the container has been booted successfully, execute the following command:
+Confirm the container has been booted successfully:
 
 ```
 docker ps
