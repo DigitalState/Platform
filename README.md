@@ -68,7 +68,7 @@ docker ps
 Enter the container in console mode:
 
 ```
-docker-compose exec -it sdk_sdk_1 /bin/sh
+docker exec -it sdk_sdk_1 /bin/sh
 ```
 
 > If you have created a public SSH key earlier, you will need to copy it over to your remote server as an authorized key in order to establish a trusted connection:
