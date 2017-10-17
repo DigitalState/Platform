@@ -1,4 +1,6 @@
-<p align="center">![DigitalState Logo](https://avatars3.githubusercontent.com/u/12055994?s=200&v=4)</p>
+<p align="center">
+![DigitalState Logo](https://avatars3.githubusercontent.com/u/12055994?s=200&v=4)
+</p>
 
 # Sdk
 
