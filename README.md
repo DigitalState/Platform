@@ -23,9 +23,7 @@ It is the central repository used by developers.
 
 ## Installation
 
-To begin, you will need to install Docker (for [Windows](https://www.docker.com/docker-windows) / for [Mac](https://docs.docker.com/docker-for-mac)).
-
-The SDK uses Docker to run a local container and execute [Ansible](https://www.ansible.com) commands for its orchestration.
+To begin, you will need to install Docker (for [Windows](https://www.docker.com/docker-windows) / for [Mac](https://docs.docker.com/docker-for-mac)). The SDK uses Docker to run a local container and execute [Ansible](https://www.ansible.com) commands for its orchestration.
 
 Download this repository.
 
