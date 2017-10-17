@@ -35,24 +35,6 @@ To begin, you will need to install [Docker](https://www.docker.com). The SDK mak
 
 - Docker: [Docker for Mac](https://docs.docker.com/docker-for-mac)
 
-> If your intentions are to eventually deploy on a remote server, you will also need to create a public and private SSH key prior to booting the SDK container.
-> 
-> The keys will be used by Ansible to establish SSH connections between the local SDK container and the remote server.
-> 
-> **Windows**
-> 
-> Create a public and private key using [Putty](https://www.ssh.com/ssh/putty/windows/puttygen).
-> 
-> **Mac**
-> 
-> Create a public and private key using the console and follow instructions:
-> 
-> ```
-> ssh-keygen
-> ```
-> 
-> Copy the keys inside the `config/ssh/` directory.
-
 Boot the SDK container:
 
 ```
@@ -70,14 +52,6 @@ Enter the container in console mode:
 ```
 docker exec -it sdk_sdk_1 /bin/sh
 ```
-
-> If you have created a public SSH key earlier, you will need to copy it over to your remote server as an authorized key in order to establish a trusted connection:
->
-> Replace ip with the actual remote server ip.
->
-> ```
-> ssh-copy-id root@ip
-> ```
 
 At this point, we have the SDK container booted and ready to go.
 
