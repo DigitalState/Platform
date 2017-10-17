@@ -1,3 +1,3 @@
 # Lab Orchestration
 
-- [Download repository](repository/download.md)
+- [Download repositories](repository/download.md)
