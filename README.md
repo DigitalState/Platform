@@ -1,6 +1,6 @@
-<p align="center">
-![DigitalState Logo](https://avatars3.githubusercontent.com/u/12055994?s=200&v=4)
-</p>
+<p align="center"><a href="http://digitalstate.ca" target="_blank">
+    <img src="https://avatars3.githubusercontent.com/u/12055994?s=200&v=4">
+</a></p>
 
 # Sdk
 
