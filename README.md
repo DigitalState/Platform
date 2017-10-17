@@ -25,15 +25,23 @@ It is the central repository used by developers.
 
 To begin, you will need to install Docker (for [Windows](https://www.docker.com/docker-windows) / for [Mac](https://docs.docker.com/docker-for-mac)).
 
-The SDK runs a local docker container and uses [Ansible](https://www.ansible.com) for its orchestration.
+The SDK uses Docker to run a local container and execute [Ansible](https://www.ansible.com) commands for its orchestration.
 
-Boot the SDK container:
+Download this repository.
+
+Open a console window and make it point to the root of the repository directory:
+
+```
+cd /home/workspace/sdk
+```
+
+Boot the container:
 
 ```
 docker-compose up -d
 ```
 
-After running the `up` command, you will be able to see the container running in the background by executing the following command:
+To confirm the container has been booted successfully, execute the following command:
 
 ```
 docker ps
@@ -49,7 +57,7 @@ At this point, we have the SDK container running and ready to accept commands.
 
 ## Documentation
 
-The SDK contains various pre-built commands, implemented as Ansible playbooks [here](resource/orchestration/index.md), to help with development and orchestration.
+The SDK contains various pre-built commands, implemented as Ansible playbooks [here](resource/orchestration/index.md), to help with development, testing and deployment.
 
 ## Contributing
 
