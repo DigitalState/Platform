@@ -65,4 +65,4 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Credits
 
-[mario-digitalstate](https://github.com/mario-digitalstate)
+This work has been developed by DigitalState.io
