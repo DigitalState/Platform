@@ -1,8 +1,10 @@
+![DigitalState Logo](https://avatars3.githubusercontent.com/u/12055994?s=200&v=4)
+
 # Sdk
 
-The SDK repository provides a starting point for development.
+The SDK repository provides a starting point for local development.
 
-It also contains a collection of scripts to help manage the various parts of our architecture, both on your local machine and remote servers.
+It also contains a collection of scripts to help orchestrate the various parts of our architecture, both on your local machine and remote servers.
 
 ## Table of Contents
 
@@ -10,7 +12,6 @@ It also contains a collection of scripts to help manage the various parts of our
 - [Installation](#installation)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
-- [History](#history)
 - [Credits](#credits)
 
 ## Synopsis
@@ -34,9 +35,9 @@ To begin, you will need to install [Docker](https://www.docker.com) and a virtua
 - Docker: [Docker for Mac](https://docs.docker.com/docker-for-mac)
 - Virutal machine manager: [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 
-> If your intentions are to eventually deploy on remote servers, you will also need to create a public and private SSH key prior to booting the SDK container.
+> If your intentions are to eventually deploy on a remote server, you will also need to create a public and private SSH key prior to booting the SDK container.
 > 
-> The keys will be used by Ansible to establish SSH connections between the local Docker container and the remote servers.
+> The keys will be used by Ansible to establish SSH connections between the local SDK container and the remote server.
 > 
 > **Windows**
 > 
@@ -44,7 +45,7 @@ To begin, you will need to install [Docker](https://www.docker.com) and a virtua
 > 
 > **Mac**
 > 
-> Create a public and private key using the console and follow instructions.
+> Create a public and private key using the console and follow instructions:
 > 
 > ```
 > ssh-keygen
@@ -76,18 +77,16 @@ docker-compose exec -it sdk_sdk_1 /bin/sh
 > ssh-copy-id root@**ip**
 > ```
 
+At this point, we have the SDK container booted and ready to go.
+
 ## Documentation
 
-Documentation...
+The SDK contains various Ansible playbooks [here](resource/orchestration/index.md).
 
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## History
-
-History..
-
 ## Credits
 
-Credits...
+[mario-digitalstate](https://github.com/mario-digitalstate)
