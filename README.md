@@ -75,8 +75,10 @@ docker-compose exec -it sdk_sdk_1 /bin/sh
 
 > If you have created a public SSH key earlier, you will need to copy it over to your remote server as an authorized key in order to establish a trusted connection:
 >
+> Replace ip with the actual remote server ip.
+>
 > ```
-> ssh-copy-id root@**ip**
+> ssh-copy-id root@ip
 > ```
 
 At this point, we have the SDK container booted and ready to go.
