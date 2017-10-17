@@ -27,13 +27,9 @@ It also contains a collection of scripts to help orchestrate the various parts o
 
 To begin, you will need to install [Docker](https://www.docker.com). The SDK makes use of [Ansible](https://www.ansible.com) for its orchestration (which runs inside a Docker container on your local machine).
 
-**Windows**
- 
-- Docker: [Docker for Windows](https://www.docker.com/docker-windows)
+Windows: [Docker for Windows](https://www.docker.com/docker-windows)
 
-**Mac**
-
-- Docker: [Docker for Mac](https://docs.docker.com/docker-for-mac)
+Mac: Docker: [Docker for Mac](https://docs.docker.com/docker-for-mac)
 
 Boot the SDK container:
 
