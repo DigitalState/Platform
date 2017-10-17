@@ -4,9 +4,9 @@
 
 # Sdk
 
-The SDK repository provides a starting point for local development.
+The SDK is the central repository used by developers.
 
-It also contains a collection of scripts to help orchestrate the various parts of our architecture, both on your local machine and remote servers.
+It provides a set of tools to help manage various parts of our architecture, from setting a local development environment to deploying to remote servers and more.
 
 ## Table of Contents
 
