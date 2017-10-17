@@ -4,9 +4,9 @@
 
 # Sdk
 
-The SDK is the central repository used by developers.
+The SDK provides a set of tools to help manage various parts of our architecture, from setting a local development environment to deploying to remote servers and more.
 
-It provides a set of tools to help manage various parts of our architecture, from setting a local development environment to deploying to remote servers and more.
+It is the central repository used by developers.
 
 ## Table of Contents
 
