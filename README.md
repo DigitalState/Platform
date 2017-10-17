@@ -4,7 +4,7 @@
 
 # Sdk
 
-The SDK provides a set of tools to help manage various parts of our architecture, from setting a local development environment to running test suites and deploying to remote servers.
+The SDK provides a set of tools to help manage various parts of the DigitalState architecture, from setting a local development environment to running test suites and deploying to remote servers.
 
 It is the central repository used by developers.
 
