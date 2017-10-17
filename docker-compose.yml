@@ -13,3 +13,4 @@ services:
     entrypoint: /bin/sh
     stdin_open: true
     tty: true
+    container_name: ds_sdk

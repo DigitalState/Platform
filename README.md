@@ -50,7 +50,7 @@ docker ps
 Enter the container in console mode:
 
 ```
-docker exec -it sdk_sdk_1 /bin/sh
+docker exec -it ds_sdk /bin/sh
 ```
 
 At this point, we have the SDK container booted and ready to go.
