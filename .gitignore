@@ -2,7 +2,11 @@
 /config/git/*
 !/config/git/.gitkeep
 /config/jwt/*
-!/config/jwt/.gitkeep
+!/config/jwt/dev/.gitkeep
+!/config/jwt/lab/.gitkeep
+!/config/jwt/prod/.gitkeep
+!/config/jwt/stag/.gitkeep
+!/config/jwt/test/.gitkeep
 /config/ssh/*
 !/config/ssh/.gitkeep
 /resource/documentation
