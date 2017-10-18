@@ -1,0 +1,9 @@
+---
+- name: Set config on server
+  hosts: server
+  become: true
+  vars:
+    key: ~
+    value: ~
+  roles:
+    - resource/service/assets/config/set
