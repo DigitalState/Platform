@@ -8,7 +8,10 @@
 !/config/jwt/stag/.gitkeep
 !/config/jwt/test/.gitkeep
 /config/ssh/*
-!/config/ssh/.gitkeep
+!/config/ssh/dev/.gitkeep
+!/config/ssh/prod/.gitkeep
+!/config/ssh/stag/.gitkeep
+!/config/ssh/test/.gitkeep
 /resource/documentation
 /resource/guide
 /service/api
