@@ -17,39 +17,39 @@ It is the central repository used by developers.
 ## Synopsis
 
 1. **Install** the requirements (Docker).
-1. **Download** the SDK repository to your local machine.
-1. **Boot** the SDK container and **enter** the console.
-1. **Execute** pre-built commands to help with various tasks.
+2. **Download** the SDK repository to your local machine.
+3. **Boot** the SDK container and **enter** the console.
+4. **Execute** pre-built commands to help with various tasks.
 
 ## Installation
 
-To begin, you will need to install Docker (for [Windows](https://www.docker.com/docker-windows) / for [Mac](https://docs.docker.com/docker-for-mac)). The SDK uses Docker to run a local container and execute [Ansible](https://www.ansible.com) commands for its orchestration.
+1. To begin, you will need to install Docker (for [Windows](https://www.docker.com/docker-windows) / for [Mac](https://docs.docker.com/docker-for-mac)). The SDK uses Docker to run a local container and execute [Ansible](https://www.ansible.com) commands for its orchestration.
 
-Download this repository.
+2. Download this repository.
 
-Open a console window and make it point to the root of the repository directory:
+3. Open a console window and make it point to the root of the repository directory:
 
-```
-cd /home/workspace/sdk
-```
+   ```
+   cd /home/workspace/sdk
+   ```
 
-Boot the container:
+4. Boot the container:
 
-```
-docker-compose up -d
-```
+   ```
+   docker-compose up -d
+   ```
 
-Confirm the container has been booted successfully:
+5. Confirm the container has been booted successfully:
 
-```
-docker ps
-```
+   ```
+   docker ps
+   ```
 
-Enter the container in console mode:
+6. Enter the container in console mode:
 
-```
-docker exec -it ds_sdk /bin/sh
-```
+   ```
+   docker exec -it ds_sdk /bin/sh
+   ```
 
 At this point, we have the SDK container running and ready to accept commands.
 
