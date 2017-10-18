@@ -48,7 +48,7 @@ It is the central repository used by developers.
 6. Enter the container in console mode:
 
    ```
-   docker exec -it ds_sdk /bin/sh
+   docker exec -it sdk /bin/sh
    ```
 
 At this point, we have the SDK container running and ready to accept commands.

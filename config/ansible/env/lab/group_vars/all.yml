@@ -1,4 +1,5 @@
 ---
+edition: community
 documentation_version: master
 guide_version: master
 api_version: develop
