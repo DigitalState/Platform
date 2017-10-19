@@ -1,6 +1,5 @@
 ---
 - name: Download tasks repository
-  when: edition == 'enterprise'
   git:
     repo: https://github.com/DigitalState/Tasks.git
     key_file: /root/.git/key
