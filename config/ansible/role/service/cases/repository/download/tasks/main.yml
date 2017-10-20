@@ -1,6 +1,6 @@
 ---
 - name: Download cases repository
   git:
-    repo: https://github.com/DigitalState/Cases.git
+    repo: '{{ cases_repository }}'
     version: '{{ cases_version }}'
     dest: /srv/service/cases

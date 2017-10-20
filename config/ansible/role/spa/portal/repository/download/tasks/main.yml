@@ -1,7 +1,7 @@
 ---
 - name: Download portal repository
   git:
-    repo: https://github.com/DigitalState/Portal.git
+    repo: '{{ portal_repository }}'
     version: '{{ portal_version }}'
     recursive: yes
     dest: /srv/spa/portal

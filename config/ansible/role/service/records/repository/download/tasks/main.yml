@@ -1,6 +1,6 @@
 ---
 - name: Download records repository
   git:
-    repo: https://github.com/DigitalState/Records.git
+    repo: '{{ records_repository }}'
     version: '{{ records_version }}'
     dest: /srv/service/records

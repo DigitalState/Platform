@@ -1,2 +1,3 @@
 ---
+records_repository: https://github.com/DigitalState/Records.git
 records_version: master

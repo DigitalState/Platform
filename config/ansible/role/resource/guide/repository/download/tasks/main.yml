@@ -1,6 +1,6 @@
 ---
 - name: Download guide repository
   git:
-    repo: https://github.com/DigitalState/Guide.git
+    repo: '{{ guide_repository }}'
     version: '{{ guide_version }}'
     dest: /srv/resource/guide

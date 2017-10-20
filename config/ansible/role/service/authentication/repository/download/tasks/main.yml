@@ -1,6 +1,6 @@
 ---
 - name: Download authentication repository
   git:
-    repo: https://github.com/DigitalState/Authentication.git
+    repo: '{{ authentication_repository }}'
     version: '{{ authentication_version }}'
     dest: /srv/service/authentication

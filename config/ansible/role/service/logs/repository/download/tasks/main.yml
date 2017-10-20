@@ -1,6 +1,6 @@
 ---
 - name: Download logs repository
   git:
-    repo: https://github.com/DigitalState/Logs.git
+    repo: '{{ logs_repository }}'
     version: '{{ logs_version }}'
     dest: /srv/service/logs

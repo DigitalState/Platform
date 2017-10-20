@@ -1,6 +1,6 @@
 ---
 - name: Download camunda repository
   git:
-    repo: https://github.com/DigitalState/Camunda.git
+    repo: '{{ camunda_repository }}'
     version: '{{ camunda_version }}'
     dest: /srv/service/camunda
