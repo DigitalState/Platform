@@ -64,6 +64,8 @@ At this point, you have the SDK container running locally with Ansible pre-insta
 
 The SDK contains various pre-built commands, implemented as Ansible playbooks [here](resource/orchestration/index.md), to help with development, testing and deployment.
 
+Supported OS: Alpine 3, Ubuntu 17.04.
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
