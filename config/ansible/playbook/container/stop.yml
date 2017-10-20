@@ -8,6 +8,7 @@
     - service/camunda/container/stop
     - service/cases/container/stop
     - service/cms/container/stop
+    - service/formio/container/stop
     - service/identities/container/stop
     - service/records/container/stop
     - service/services/container/stop

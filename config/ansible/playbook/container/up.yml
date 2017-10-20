@@ -8,6 +8,7 @@
     - service/camunda/container/up
     - service/cases/container/up
     - service/cms/container/up
+    - service/formio/container/up
     - service/identities/container/up
     - service/records/container/up
     - service/services/container/up

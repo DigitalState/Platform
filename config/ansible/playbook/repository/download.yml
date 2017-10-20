@@ -13,6 +13,7 @@
     - service/cms/repository/download
     - service/core/repository/download
     - service/discovery/repository/download
+    - service/formio/repository/download
     - service/identities/repository/download
     - service/interactions/repository/download
     - service/logs/repository/download
