@@ -1,0 +1,3 @@
+---
+- name: Warmup tasks cache
+  shell: 'docker-compose -f /srv/service/tasks/docker-compose.yml exec php bin/console cache:warmup --env={{ env }} | cat'

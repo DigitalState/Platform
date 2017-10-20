@@ -1,0 +1,13 @@
+---
+- name: Load database fixtures on server
+  hosts: server
+  become: true
+  roles:
+    - service/assets/database/migrate
+    - service/authentication/database/migrate
+    - service/cases/database/migrate
+    - service/cms/database/migrate
+    - service/identities/database/migrate
+    - service/records/database/migrate
+    - service/services/database/migrate
+    - { role: service/tasks/database/migrate, when: edition == 'enterprise' }

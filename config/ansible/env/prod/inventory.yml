@@ -1,0 +1,35 @@
+all:
+  hosts:
+    server:
+      ansible_host: ~
+      ansible_port: 22
+      ansible_ssh_private_key_file: ~/.ssh/prod/key
+
+  vars:
+    edition: community
+    env: prod
+
+    documentation_version: master
+    guide_version: master
+    api_version: master
+    assets_version: master
+    authentication_version: master
+    camunda_version: master
+    cases_version: master
+    cms_version: master
+    core_version: master
+    discovery_version: master
+    identities_version: master
+    interactions_version: master
+    logs_version: master
+    records_version: master
+    services_version: master
+    tasks_version: master
+    topics_version: master
+    admin_version: master
+    monitor_version: master
+    portal_version: master
+    ui_version: master
+
+    jwt_private_key: /root/.jwt/prod/key
+    jwt_public_key: /root/.jwt/prod/key.pub

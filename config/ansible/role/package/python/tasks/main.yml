@@ -1,0 +1,14 @@
+---
+- name: Detect remote OS
+  raw: uname -a
+  register: os
+  changed_when: false
+
+- name: Install python2
+  raw: bash -c 'test -e /usr/bin/python || (apt -qqy update && apt install -qqy python-minimal)'
+  when: os.stdout.find('Ubuntu')
+  register: output
+  changed_when: output.stdout != ''
+
+- name: Gather facts
+  setup:

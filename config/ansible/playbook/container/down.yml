@@ -1,0 +1,14 @@
+---
+- name: Stop containers on server
+  hosts: server
+  become: true
+  roles:
+    - service/assets/container/down
+    - service/authentication/container/down
+    - service/camunda/container/down
+    - service/cases/container/down
+    - service/cms/container/down
+    - service/identities/container/down
+    - service/records/container/down
+    - service/services/container/down
+    - { role: service/tasks/container/down, when: edition == 'enterprise' }

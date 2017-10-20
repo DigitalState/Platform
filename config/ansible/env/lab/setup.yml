@@ -1,12 +1,8 @@
 ---
-- name: Install core packages on lab server
-  hosts: server
-  become: true
-  roles:
-    - package/git
-    - package/docker
-
-- import_playbook: ../../playbook/repository/download.yml
-- import_playbook: ../../playbook/container/up.yml
-- import_playbook: ../../playbook/database/migrate.yml
-- import_playbook: ../../playbook/database/fixtures.yml
+- import_playbook: setup/dependencies.yml
+- import_playbook: setup/packages.yml
+- import_playbook: repository/download.yml
+- import_playbook: jwt/upload.yml
+- import_playbook: container/up.yml
+- import_playbook: database/migrate.yml
+- import_playbook: database/fixtures.yml

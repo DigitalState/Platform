@@ -1,0 +1,2 @@
+---
+- import_playbook: ../../../playbook/setup/packages.yml

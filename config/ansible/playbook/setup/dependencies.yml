@@ -1,0 +1,7 @@
+---
+- name: Install python2 dependency on server
+  hosts: server
+  become: true
+  gather_facts: false
+  roles:
+    - package/python

@@ -1,0 +1,7 @@
+---
+- name: Install core packages on server
+  hosts: server
+  become: true
+  roles:
+    - package/git
+    - package/docker
