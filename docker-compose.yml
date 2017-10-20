@@ -7,6 +7,8 @@ services:
     volumes:
       - '/var/run/docker.sock:/var/run/docker.sock'
       - './config/ansible:/etc/ansible'
+      - './config/git:/root/.git'
+      - './config/jwt:/root/.jwt'
       - './resource:/srv/resource'
       - './service:/srv/service'
       - './spa:/srv/spa'
