@@ -1,0 +1,5 @@
+---
+- name: Up formio container
+  shell: 'docker-compose -f /srv/service/formio/docker-compose.yml up -d'
+  register: output
+  changed_when: output.stderr != ''
