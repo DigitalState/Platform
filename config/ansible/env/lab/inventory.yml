@@ -17,6 +17,7 @@ all:
     cms_version: develop
     core_version: develop
     discovery_version: develop
+    formio_version: develop
     identities_version: develop
     interactions_version: develop
     logs_version: develop

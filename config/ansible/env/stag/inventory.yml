@@ -19,6 +19,7 @@ all:
     cms_version: master
     core_version: master
     discovery_version: master
+    formio_version: develop
     identities_version: master
     interactions_version: master
     logs_version: master
