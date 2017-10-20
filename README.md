@@ -51,7 +51,7 @@ It is the central repository used by developers.
    docker exec -it sdk /bin/sh
    ```
 
-At this point, we have the SDK container running and ready to accept commands.
+At this point, we have the SDK container running and ready to accept commands. Next step would be to deploy a [lab environment](resource/orchestration/lab/index.md).
 
 ## Documentation
 
