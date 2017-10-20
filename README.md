@@ -23,7 +23,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 ## Installation
 
-1. To begin, you will need to install Docker (for [Windows](https://www.docker.com/docker-windows) / for [Mac](https://docs.docker.com/docker-for-mac)) on your local machine. The SDK uses Docker to run a local container and execute [Ansible](https://www.ansible.com) commands for orchestration.
+1. To begin, you will need to install Docker (for [Windows](https://www.docker.com/docker-windows) / for [Mac](https://docs.docker.com/docker-for-mac)) on your local machine. The SDK uses Docker to run a local container with [Ansible](https://www.ansible.com) pre-installed.
 
 2. Download this repository.
 
