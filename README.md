@@ -30,7 +30,7 @@ It is the central repository used by developers.
 3. Open a console window and make it point to the root of the repository directory:
 
    ```
-   cd /home/workspace/sdk
+   cd /home/demo/sdk
    ```
 
 4. Boot the container:
