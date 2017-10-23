@@ -22,6 +22,7 @@
 /service/cms
 /service/core
 /service/discovery
+/service/formio
 /service/identities
 /service/interactions
 /service/logs
