@@ -2,4 +2,4 @@
 - name: Up logs container
   shell: 'docker-compose -f /srv/service/logs/docker-compose.yml up -d'
   register: output
-  changed_when: output.stderr != 'logs_db_1 is up-to-date\nStarting logs_php_1 ... \r\nStarting logs_php_1\n\u001b[1A\u001b[2K\rStarting %s_php_1 ... \u001b[32mdone\u001b[0m\r\u001b[1B%s_nginx_1 is up-to-date'
+  changed_when: output.stderr != 'logs_db_1 is up-to-date\nlogs_php_1 is up-to-date\nlogs_nginx_1 is up-to-date'

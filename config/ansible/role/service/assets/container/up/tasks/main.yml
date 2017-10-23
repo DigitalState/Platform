@@ -2,4 +2,4 @@
 - name: Up assets container
   shell: 'docker-compose -f /srv/service/assets/docker-compose.yml up -d'
   register: output
-  changed_when: output.stderr != 'assets_db_1 is up-to-date\nStarting assets_php_1 ... \r\nStarting assets_php_1\n\u001b[1A\u001b[2K\rStarting %s_php_1 ... \u001b[32mdone\u001b[0m\r\u001b[1B%s_nginx_1 is up-to-date'
+  changed_when: output.stderr != 'assets_db_1 is up-to-date\nassets_php_1 is up-to-date\nassets_nginx_1 is up-to-date'

@@ -2,4 +2,4 @@
 - name: Up identities container
   shell: 'docker-compose -f /srv/service/identities/docker-compose.yml up -d'
   register: output
-  changed_when: output.stderr != 'identities_db_1 is up-to-date\nStarting identities_php_1 ... \r\nStarting identities_php_1\n\u001b[1A\u001b[2K\rStarting %s_php_1 ... \u001b[32mdone\u001b[0m\r\u001b[1B%s_nginx_1 is up-to-date'
+  changed_when: output.stderr != 'identities_db_1 is up-to-date\nidentities_php_1 is up-to-date\nidentities_nginx_1 is up-to-date'

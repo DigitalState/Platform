@@ -2,4 +2,4 @@
 - name: Up tasks container
   shell: 'docker-compose -f /srv/service/tasks/docker-compose.yml up -d'
   register: output
-  changed_when: output.stderr != 'tasks_db_1 is up-to-date\nStarting tasks_php_1 ... \r\nStarting tasks_php_1\n\u001b[1A\u001b[2K\rStarting %s_php_1 ... \u001b[32mdone\u001b[0m\r\u001b[1B%s_nginx_1 is up-to-date'
+  changed_when: output.stderr != 'tasks_db_1 is up-to-date\ntasks_php_1 is up-to-date\ntasks_nginx_1 is up-to-date'
