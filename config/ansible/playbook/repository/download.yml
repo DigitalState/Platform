@@ -1,5 +1,5 @@
 ---
-- name: Download community repositories on server
+- name: Download repositories on server
   hosts: server
   become: true
   roles:
