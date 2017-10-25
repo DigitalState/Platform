@@ -4,10 +4,10 @@
   become: true
   roles:
     - service/assets/jwt/configure
-#    - service/authentication/jwt/configure
-#    - service/cases/jwt/configure
-#    - service/cms/jwt/configure
-#    - service/identities/jwt/configure
-#    - service/records/jwt/configure
-#    - service/services/jwt/configure
-#    - { role: service/tasks/jwt/configure, when: edition == 'enterprise' }
+    - service/authentication/jwt/configure
+    - service/cases/jwt/configure
+    - service/cms/jwt/configure
+    - service/identities/jwt/configure
+    - service/records/jwt/configure
+    - service/services/jwt/configure
+    - { role: service/tasks/jwt/configure, when: edition == 'enterprise' }
