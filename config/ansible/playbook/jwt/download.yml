@@ -1,0 +1,13 @@
+---
+- name: Download jwt public and private key
+  hosts: server
+  become: true
+  roles:
+    - service/assets/jwt/download
+    - service/authentication/jwt/download
+    - service/cases/jwt/download
+    - service/cms/jwt/download
+    - service/identities/jwt/download
+    - service/records/jwt/download
+    - service/services/jwt/download
+    - { role: service/tasks/jwt/download, when: edition == 'enterprise' }
