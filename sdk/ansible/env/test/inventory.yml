@@ -1,0 +1,31 @@
+all:
+  hosts:
+    server:
+      ansible_host: ~
+      ansible_port: 22
+      ansible_ssh_private_key_file: /root/.ssh/test/key
+
+  vars:
+    edition: community
+
+    api_version: develop
+    assets_version: develop
+    authentication_version: develop
+    camunda_version: develop
+    cases_version: develop
+    cms_version: develop
+    discovery_version: develop
+    formio_version: develop
+    identities_version: develop
+    interactions_version: develop
+    logs_version: develop
+    records_version: develop
+    services_version: develop
+    tasks_version: develop
+    topics_version: develop
+    admin_version: develop
+    monitor_version: develop
+    portal_version: develop
+
+    jwt_private_key: /root/resource/security/jwt/test/key
+    jwt_public_key: /root/resource/security/jwt/test/key.pub

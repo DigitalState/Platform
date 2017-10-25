@@ -1,0 +1,5 @@
+---
+- name: Stop cases container
+  shell: 'docker-compose -f /srv/service/cases/docker-compose.yml stop'
+  register: output
+  changed_when: output.stderr != ''

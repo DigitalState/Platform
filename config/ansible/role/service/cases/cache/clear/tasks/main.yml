@@ -1,3 +1,0 @@
----
-- name: Clear cases cache
-  shell: 'docker-compose -f /srv/service/cases/docker-compose.yml exec php bin/console cache:clear --no-warmup --env={{ env }} | cat'

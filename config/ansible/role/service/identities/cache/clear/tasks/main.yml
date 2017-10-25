@@ -1,3 +1,0 @@
----
-- name: Clear identities cache
-  shell: 'docker-compose -f /srv/service/identities/docker-compose.yml exec php bin/console cache:clear --no-warmup --env={{ env }} | cat'

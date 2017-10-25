@@ -1,0 +1,5 @@
+---
+- name: Down interactions container
+  shell: 'docker-compose -f /srv/service/interactions/docker-compose.yml down'
+  register: output
+  changed_when: output.stderr != ''

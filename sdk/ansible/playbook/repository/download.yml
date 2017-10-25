@@ -1,0 +1,23 @@
+---
+- name: Download repositories on server
+  hosts: server
+  become: true
+  roles:
+    - service/api/repository/download
+    - service/assets/repository/download
+    - service/authentication/repository/download
+    - service/camunda/repository/download
+    - service/cases/repository/download
+    - service/cms/repository/download
+    - service/discovery/repository/download
+    - service/formio/repository/download
+    - service/identities/repository/download
+    - service/interactions/repository/download
+    - service/logs/repository/download
+    - service/records/repository/download
+    - service/services/repository/download
+    - { role: service/tasks/repository/download, when: edition == 'enterprise' }
+    - service/topics/repository/download
+    - spa/admin/repository/download
+    - spa/monitor/repository/download
+    - spa/portal/repository/download

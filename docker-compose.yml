@@ -1,18 +1,21 @@
 version: '3'
 
 services:
-  sdk:
-    build: '.'
-    privileged: true
-    volumes:
-      - '/var/run/docker.sock:/var/run/docker.sock'
-      - './config/ansible:/etc/ansible'
-      - './config/git:/root/.git'
-      - './config/jwt:/root/.jwt'
-      - './resource:/srv/resource'
-      - './service:/srv/service'
-      - './spa:/srv/spa'
-    entrypoint: /bin/sh
-    stdin_open: true
-    tty: true
-    container_name: sdk
+    sdk:
+        container_name: sdk
+        build: .
+        privileged: true
+        entrypoint: /bin/sh
+        stdin_open: true
+        tty: true
+        volumes:
+            # This volume enables sibling docker containers when creating docker inside docker.
+            - /var/run/docker.sock:/var/run/docker.sock
+            - ./app/resource:/srv/resource
+            - ./app/service:/srv/service
+            - ./app/spa:/srv/spa
+            - ./resource:/root/resource
+            - ./sdk/ansible:/etc/ansible
+            - ./sdk/security/git:/root/.git
+            # Moved to Dockerfile
+            # - ./sdk/security/ssh:/root/.ssh

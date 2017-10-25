@@ -1,0 +1,5 @@
+---
+- name: Down cms container
+  shell: 'docker-compose -f /srv/service/cms/docker-compose.yml down'
+  register: output
+  changed_when: output.stderr != ''

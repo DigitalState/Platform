@@ -1,0 +1,5 @@
+---
+- name: Stop records container
+  shell: 'docker-compose -f /srv/service/records/docker-compose.yml stop'
+  register: output
+  changed_when: output.stderr != ''

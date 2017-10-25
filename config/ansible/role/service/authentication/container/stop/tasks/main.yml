@@ -1,3 +1,0 @@
----
-- name: Stop authentication container
-  shell: 'docker-compose -f /srv/service/authentication/docker-compose.yml stop'

@@ -1,3 +1,0 @@
----
-jwt_private_key: /root/.jwt/key
-jwt_public_key: /root/.jwt/key.pub

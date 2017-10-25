@@ -1,0 +1,5 @@
+---
+- name: Down camunda container
+  shell: 'docker-compose -f /srv/service/camunda/docker-compose.yml down'
+  register: output
+  changed_when: output.stderr != ''

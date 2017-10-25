@@ -1,0 +1,5 @@
+---
+- name: Stop interactions container
+  shell: 'docker-compose -f /srv/service/interactions/docker-compose.yml stop'
+  register: output
+  changed_when: output.stderr != ''

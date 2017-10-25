@@ -1,3 +1,0 @@
----
-- name: Down authentication container
-  shell: 'docker-compose -f /srv/service/authentication/docker-compose.yml down'

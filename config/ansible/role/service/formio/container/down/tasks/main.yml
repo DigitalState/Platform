@@ -1,3 +1,0 @@
----
-- name: Down formio container
-  shell: 'docker-compose -f /srv/service/formio/docker-compose.yml down'

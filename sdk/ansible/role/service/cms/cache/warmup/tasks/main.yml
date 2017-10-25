@@ -1,0 +1,3 @@
+---
+- name: Warmup cms cache
+  shell: 'docker-compose -f /srv/service/cms/docker-compose.yml exec php bin/console cache:warmup --env=prod | cat'

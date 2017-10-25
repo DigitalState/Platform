@@ -1,3 +1,0 @@
----
-- name: Stop topics container
-  shell: 'docker-compose -f /srv/service/topics/docker-compose.yml stop'

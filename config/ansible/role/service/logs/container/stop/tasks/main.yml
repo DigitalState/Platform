@@ -1,3 +1,0 @@
----
-- name: Stop logs container
-  shell: 'docker-compose -f /srv/service/logs/docker-compose.yml stop'

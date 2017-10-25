@@ -1,0 +1,5 @@
+---
+- name: Stop admin container
+  shell: 'docker-compose -f /srv/spa/admin/docker-compose.yml stop'
+  register: output
+  changed_when: output.stderr != ''

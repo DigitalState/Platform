@@ -1,3 +1,0 @@
----
-- name: Warmup authentication cache
-  shell: 'docker-compose -f /srv/service/authentication/docker-compose.yml exec php bin/console cache:warmup --env={{ env }} | cat'

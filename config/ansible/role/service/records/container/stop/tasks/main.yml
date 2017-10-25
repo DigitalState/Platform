@@ -1,3 +1,0 @@
----
-- name: Stop records container
-  shell: 'docker-compose -f /srv/service/records/docker-compose.yml stop'
