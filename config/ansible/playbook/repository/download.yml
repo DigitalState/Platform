@@ -19,9 +19,9 @@
     - service/logs/repository/download
     - service/records/repository/download
     - service/services/repository/download
+    - { role: service/tasks/repository/download, when: edition == 'enterprise' }
     - service/topics/repository/download
     - spa/admin/repository/download
     - spa/monitor/repository/download
     - spa/portal/repository/download
     - spa/ui/repository/download
-    - { role: service/tasks/repository/download, when: edition == 'enterprise' }
