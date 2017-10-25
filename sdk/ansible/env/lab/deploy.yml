@@ -2,7 +2,7 @@
 - import_playbook: setup/packages.yml
 - import_playbook: repository/download.yml
 - import_playbook: jwt/download.yml
-- import_playbook: jwt/configure.yml
 - import_playbook: container/up.yml
+- import_playbook: jwt/configure.yml
 - import_playbook: database/migrate.yml
 - import_playbook: database/fixtures.yml
