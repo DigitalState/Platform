@@ -29,3 +29,4 @@ all:
 
     jwt_private_key: /root/resource/security/jwt/dev/key
     jwt_public_key: /root/resource/security/jwt/dev/key.pub
+    jwt_key_pass_phrase: ~
