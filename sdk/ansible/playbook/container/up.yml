@@ -3,6 +3,7 @@
   hosts: server
   become: true
   roles:
+    - service/api/container/up
     - service/assets/container/up
     - service/authentication/container/up
     - service/camunda/container/up
