@@ -3,7 +3,7 @@
   hosts: server
   become: true
   vars:
-    key: ~
-    value: ~
+      key: ~
+      value: ~
   roles:
-    - resource/service/assets/config/set
+      - resource/service/assets/config/set

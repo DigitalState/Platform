@@ -3,14 +3,14 @@
   hosts: server
   become: true
   roles:
-    - service/api/container/down
-    - service/assets/container/down
-    - service/authentication/container/down
-    - service/camunda/container/down
-    - service/cases/container/down
-    - service/cms/container/down
-    - service/formio/container/down
-    - service/identities/container/down
-    - service/records/container/down
-    - service/services/container/down
-    - { role: service/tasks/container/down, when: edition == 'enterprise' }
+      - service/api/container/down
+      - service/assets/container/down
+      - service/authentication/container/down
+      - service/camunda/container/down
+      - service/cases/container/down
+      - service/cms/container/down
+      - service/formio/container/down
+      - service/identities/container/down
+      - service/records/container/down
+      - service/services/container/down
+      - { role: service/tasks/container/down, when: edition == 'enterprise' }

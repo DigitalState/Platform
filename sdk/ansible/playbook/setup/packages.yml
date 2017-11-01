@@ -3,5 +3,5 @@
   hosts: server
   become: true
   roles:
-    - package/git
-    - package/docker
+      - package/git
+      - package/docker

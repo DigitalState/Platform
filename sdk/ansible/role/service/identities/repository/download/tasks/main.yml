@@ -1,6 +1,6 @@
 ---
 - name: Download identities repository
   git:
-    repo: '{{ identities_repository }}'
-    version: '{{ identities_version }}'
-    dest: /srv/service/identities
+      repo: '{{ identities_repository }}'
+      version: '{{ identities_version }}'
+      dest: /srv/service/identities

@@ -1,6 +1,6 @@
 ---
 - name: Configure cms jwt key pass phrase
   replace:
-    path: /srv/service/cms/app/config/parameters.yml
-    regexp: 'jwt_key_pass_phrase: '''''
-    replace: 'jwt_key_pass_phrase: ''{{ jwt_key_pass_phrase }}'''
+      path: /srv/service/cms/app/config/parameters.yml
+      regexp: 'jwt_key_pass_phrase: '''''
+      replace: 'jwt_key_pass_phrase: ''{{ jwt_key_pass_phrase }}'''

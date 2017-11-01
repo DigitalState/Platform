@@ -1,6 +1,6 @@
 ---
 - name: Configure services jwt key pass phrase
   replace:
-    path: /srv/service/services/app/config/parameters.yml
-    regexp: 'jwt_key_pass_phrase: '''''
-    replace: 'jwt_key_pass_phrase: ''{{ jwt_key_pass_phrase }}'''
+      path: /srv/service/services/app/config/parameters.yml
+      regexp: 'jwt_key_pass_phrase: '''''
+      replace: 'jwt_key_pass_phrase: ''{{ jwt_key_pass_phrase }}'''

@@ -1,20 +1,20 @@
 ---
 - name: Import docker repository gpg key
   apt_key:
-    url: https://download.docker.com/linux/ubuntu/gpg
-    state: present
-    id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+      id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
 
 - name: Add docker repository
   apt_repository:
-    repo: 'deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable'
-    state: present
+      repo: 'deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable'
+      state: present
 
 - name: Install docker
   apt:
-    name: docker-ce
-    state: present
-    update_cache: yes
+      name: docker-ce
+      state: present
+      update_cache: yes
 
 - name: Check if docker compose is already installed
   stat: path=/usr/local/bin/docker-compose
@@ -23,12 +23,12 @@
 - name: Install docker compose
   when: docker_compose.stat.exists == false
   get_url:
-    url: 'https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-{{ docker_compose_package }}'
-    dest: /usr/local/bin/docker-compose
-    mode: u+x,g+x
+      url: 'https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-{{ docker_compose_package }}'
+      dest: /usr/local/bin/docker-compose
+      mode: u+x,g+x
 
 - name: Enable docker on startup
   service:
-    name: docker
-    state: started
-    enabled: yes
+      name: docker
+      state: started
+      enabled: yes

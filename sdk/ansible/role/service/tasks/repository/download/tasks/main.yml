@@ -1,7 +1,7 @@
 ---
 - name: Download tasks repository
   git:
-    repo: '{{ tasks_repository }}'
-    key_file: /root/.git/key
-    version: '{{ tasks_version }}'
-    dest: /srv/service/tasks
+      repo: '{{ tasks_repository }}'
+      key_file: /root/.git/key
+      version: '{{ tasks_version }}'
+      dest: /srv/service/tasks

@@ -1,32 +1,34 @@
 all:
-  hosts:
-    server:
-      ansible_host: ~
-      ansible_port: 22
-      ansible_ssh_private_key_file: /root/.ssh/stag/key
+    hosts:
+        server:
+            ansible_host: ~
+            ansible_port: 22
+            ansible_ssh_private_key_file: /root/.ssh/stag/key
 
-  vars:
-    edition: community
+    vars:
+        edition: community
 
-    api_version: master
-    assets_version: master
-    authentication_version: master
-    camunda_version: master
-    cases_version: master
-    cms_version: master
-    discovery_version: master
-    formio_version: develop
-    identities_version: master
-    interactions_version: master
-    logs_version: master
-    records_version: master
-    services_version: master
-    tasks_version: master
-    topics_version: master
-    admin_version: master
-    monitor_version: master
-    portal_version: master
+        api_version: master
+        assets_version: master
+        authentication_version: master
+        camunda_version: master
+        cases_version: master
+        cms_version: master
+        discovery_version: master
+        formio_version: develop
+        identities_version: master
+        interactions_version: master
+        logs_version: master
+        records_version: master
+        services_version: master
+        tasks_version: master
+        topics_version: master
+        admin_version: master
+        monitor_version: master
+        portal_version: master
 
-    jwt_private_key: /root/resource/security/jwt/stag/key
-    jwt_public_key: /root/resource/security/jwt/stag/key.pub
-    jwt_key_pass_phrase: ~
+        jwt_private_key: /root/resource/security/jwt/stag/key
+        jwt_public_key: /root/resource/security/jwt/stag/key.pub
+        jwt_key_pass_phrase: ~
+
+        fixtures: dev

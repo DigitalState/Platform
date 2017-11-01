@@ -4,4 +4,4 @@
   become: true
   gather_facts: false
   roles:
-    - package/python
+      - package/python

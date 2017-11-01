@@ -3,11 +3,11 @@
   hosts: server
   become: true
   roles:
-    - service/assets/cache/warmup
-    - service/authentication/cache/warmup
-    - service/cases/cache/warmup
-    - service/cms/cache/warmup
-    - service/identities/cache/warmup
-    - service/records/cache/warmup
-    - service/services/cache/warmup
-    - { role: service/tasks/cache/warmup, when: edition == 'enterprise' }
+      - service/assets/cache/warmup
+      - service/authentication/cache/warmup
+      - service/cases/cache/warmup
+      - service/cms/cache/warmup
+      - service/identities/cache/warmup
+      - service/records/cache/warmup
+      - service/services/cache/warmup
+      - { role: service/tasks/cache/warmup, when: edition == 'enterprise' }

@@ -3,11 +3,11 @@
   hosts: server
   become: true
   roles:
-    - service/assets/cache/clear
-    - service/authentication/cache/clear
-    - service/cases/cache/clear
-    - service/cms/cache/clear
-    - service/identities/cache/clear
-    - service/records/cache/clear
-    - service/services/cache/clear
-    - { role: service/tasks/cache/clear, when: edition == 'enterprise' }
+      - service/assets/cache/clear
+      - service/authentication/cache/clear
+      - service/cases/cache/clear
+      - service/cms/cache/clear
+      - service/identities/cache/clear
+      - service/records/cache/clear
+      - service/services/cache/clear
+      - { role: service/tasks/cache/clear, when: edition == 'enterprise' }

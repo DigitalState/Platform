@@ -1,6 +1,6 @@
 ---
 - name: Download guide repository
   git:
-    repo: '{{ guide_repository }}'
-    version: '{{ guide_version }}'
-    dest: /srv/resource/guide
+      repo: '{{ guide_repository }}'
+      version: '{{ guide_version }}'
+      dest: /srv/resource/guide
