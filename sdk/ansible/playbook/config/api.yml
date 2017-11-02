@@ -1,0 +1,33 @@
+---
+- name: Obtain api container ip
+  hosts: server
+  become: true
+  tasks:
+      - name: Test
+        shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.api_default.IPAddress {{ '}}' }}' api_api_proxy_1
+        register: ip
+
+- name: Set host config to api container ip
+  hosts: server
+  become: true
+  vars:
+      config:
+          ds_api.api.assets.host: 'http://{{ ip.stdout }}'
+          ds_api.api.authentication.host: 'http://{{ ip.stdout }}'
+          ds_api.api.cases.host: 'http://{{ ip.stdout }}'
+          ds_api.api.cms.host: 'http://{{ ip.stdout }}'
+          ds_api.api.identities.host: 'http://{{ ip.stdout }}'
+          ds_api.api.records.host: 'http://{{ ip.stdout }}'
+          ds_api.api.services.host: 'http://{{ ip.stdout }}'
+          ds_api.api.tasks.host: 'http://{{ ip.stdout }}'
+          ds_api.api.camunda.host: 'http://{{ ip.stdout }}/engine-rest'
+          ds_api.api.formio.host: 'http://{{ ip.stdout }}'
+  roles:
+      - service/assets/config/set
+      - service/authentication/config/set
+      - service/cases/config/set
+      - service/cms/config/set
+      - service/identities/config/set
+      - service/records/config/set
+      - service/services/config/set
+      - { role: service/tasks/config/set, when: edition == 'enterprise' }

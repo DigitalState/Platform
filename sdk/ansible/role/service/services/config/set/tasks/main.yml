@@ -1,3 +1,4 @@
 ---
 - name: Set services config
-  shell: 'docker-compose -f /srv/service/services/docker-compose.yml exec services_php bin/console ds:config:set {{ key }} {{ value }} | cat'
+  shell: 'docker-compose -f /srv/service/services/docker-compose.yml exec services_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+  with_dict: '{{ config }}'

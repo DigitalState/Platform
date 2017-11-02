@@ -1,3 +1,4 @@
 ---
 - name: Set tasks config
-  shell: 'docker-compose -f /srv/service/tasks/docker-compose.yml exec tasks_php bin/console ds:config:set {{ key }} {{ value }} | cat'
+  shell: 'docker-compose -f /srv/service/tasks/docker-compose.yml exec tasks_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+  with_dict: '{{ config }}'
