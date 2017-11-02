@@ -1,6 +1,6 @@
 ---
 - name: Download formio repository
   git:
+      version: '{{ formio }}'
       repo: '{{ formio_repository }}'
-      version: '{{ formio_version }}'
       dest: /srv/service/formio

@@ -3,11 +3,11 @@
   hosts: server
   become: true
   roles:
-      - service/assets/cache/warmup
-      - service/authentication/cache/warmup
-      - service/cases/cache/warmup
-      - service/cms/cache/warmup
-      - service/identities/cache/warmup
-      - service/records/cache/warmup
-      - service/services/cache/warmup
-      - { role: service/tasks/cache/warmup, when: edition == 'enterprise' }
+      - { role: service/assets/cache/warmup, when: assets is not none }
+      - { role: service/authentication/cache/warmup, when: authentication is not none }
+      - { role: service/cases/cache/warmup, when: cases is not none }
+      - { role: service/cms/cache/warmup, when: cms is not none }
+      - { role: service/identities/cache/warmup, when: identities is not none }
+      - { role: service/records/cache/warmup, when: records is not none }
+      - { role: service/services/cache/warmup, when: services is not none }
+      - { role: service/tasks/cache/warmup, when: tasks is not none }

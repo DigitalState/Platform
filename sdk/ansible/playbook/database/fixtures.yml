@@ -3,11 +3,11 @@
   hosts: server
   become: true
   roles:
-      - service/assets/database/fixtures
-      - service/authentication/database/fixtures
-      - service/cases/database/fixtures
-      - service/cms/database/fixtures
-      - service/identities/database/fixtures
-      - service/records/database/fixtures
-      - service/services/database/fixtures
-      - { role: service/tasks/database/fixtures, when: edition == 'enterprise' }
+      - { role: service/assets/database/fixtures, when: assets is not none }
+      - { role: service/authentication/database/fixtures, when: authentication is not none }
+      - { role: service/cases/database/fixtures, when: cases is not none }
+      - { role: service/cms/database/fixtures, when: cms is not none }
+      - { role: service/identities/database/fixtures, when: identities is not none }
+      - { role: service/records/database/fixtures, when: records is not none }
+      - { role: service/services/database/fixtures, when: services is not none }
+      - { role: service/tasks/database/fixtures, when: tasks is not none }

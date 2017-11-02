@@ -3,11 +3,11 @@
   hosts: server
   become: true
   roles:
-      - service/assets/database/migrate
-      - service/authentication/database/migrate
-      - service/cases/database/migrate
-      - service/cms/database/migrate
-      - service/identities/database/migrate
-      - service/records/database/migrate
-      - service/services/database/migrate
-      - { role: service/tasks/database/migrate, when: edition == 'enterprise' }
+      - { role: service/assets/database/migrate, when: assets is not none }
+      - { role: service/authentication/database/migrate, when: authentication is not none }
+      - { role: service/cases/database/migrate, when: cases is not none }
+      - { role: service/cms/database/migrate, when: cms is not none }
+      - { role: service/identities/database/migrate, when: identities is not none }
+      - { role: service/records/database/migrate, when: records is not none }
+      - { role: service/services/database/migrate, when: services is not none }
+      - { role: service/tasks/database/migrate, when: tasks is not none }

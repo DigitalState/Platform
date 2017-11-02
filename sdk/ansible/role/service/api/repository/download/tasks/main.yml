@@ -1,6 +1,6 @@
 ---
 - name: Download api repository
   git:
+      version: '{{ api }}'
       repo: '{{ api_repository }}'
-      version: '{{ api_version }}'
       dest: /srv/service/api

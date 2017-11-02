@@ -1,5 +1,5 @@
 ---
-- name: Install python2 dependency on server
+- name: Install python dependency on server
   hosts: server
   become: true
   gather_facts: false

@@ -1,6 +1,6 @@
 ---
 - name: Download discovery repository
   git:
+      version: '{{ discovery }}'
       repo: '{{ discovery_repository }}'
-      version: '{{ discovery_version }}'
       dest: /srv/service/discovery

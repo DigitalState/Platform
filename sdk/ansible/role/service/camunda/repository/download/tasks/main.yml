@@ -1,6 +1,6 @@
 ---
 - name: Download camunda repository
   git:
+      version: '{{ camunda }}'
       repo: '{{ camunda_repository }}'
-      version: '{{ camunda_version }}'
       dest: /srv/service/camunda

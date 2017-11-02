@@ -1,6 +1,6 @@
 ---
 - name: Download documentation repository
   git:
+      version: '{{ documentation }}'
       repo: '{{ documentation_repository }}'
-      version: '{{ documentation_version }}'
       dest: /srv/resource/documentation

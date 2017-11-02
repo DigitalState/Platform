@@ -1,6 +1,6 @@
 ---
 - name: Download assets repository
   git:
+      version: '{{ assets }}'
       repo: '{{ assets_repository }}'
-      version: '{{ assets_version }}'
       dest: /srv/service/assets

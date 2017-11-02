@@ -1,3 +1,3 @@
 ---
+discovery: master
 discovery_repository: https://github.com/DigitalState/Discovery.git
-discovery_version: master

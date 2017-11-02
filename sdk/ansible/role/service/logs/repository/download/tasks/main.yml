@@ -1,6 +1,6 @@
 ---
 - name: Download logs repository
   git:
+      version: '{{ logs }}'
       repo: '{{ logs_repository }}'
-      version: '{{ logs_version }}'
       dest: /srv/service/logs

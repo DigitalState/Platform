@@ -3,11 +3,11 @@
   hosts: server
   become: true
   roles:
-      - service/assets/jwt/configure
-      - service/authentication/jwt/configure
-      - service/cases/jwt/configure
-      - service/cms/jwt/configure
-      - service/identities/jwt/configure
-      - service/records/jwt/configure
-      - service/services/jwt/configure
-      - { role: service/tasks/jwt/configure, when: edition == 'enterprise' }
+      - { role: service/assets/jwt/configure, when: assets is not none }
+      - { role: service/authentication/jwt/configure, when: authentication is not none }
+      - { role: service/cases/jwt/configure, when: cases is not none }
+      - { role: service/cms/jwt/configure, when: cms is not none }
+      - { role: service/identities/jwt/configure, when: identities is not none }
+      - { role: service/records/jwt/configure, when: records is not none }
+      - { role: service/services/jwt/configure, when: services is not none }
+      - { role: service/tasks/jwt/configure, when: tasks is not none }
