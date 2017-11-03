@@ -1,0 +1,13 @@
+---
+- name: Set config
+  hosts: server
+  become: true
+  roles:
+      - { role: service/assets/config/set, when: assets is not none }
+      - { role: service/authentication/config/set, when: authentication is not none }
+      - { role: service/cases/config/set, when: cases is not none }
+      - { role: service/cms/config/set, when: cms is not none }
+      - { role: service/identities/config/set, when: identities is not none }
+      - { role: service/records/config/set, when: records is not none }
+      - { role: service/services/config/set, when: services is not none }
+      - { role: service/tasks/config/set, when: tasks is not none }
