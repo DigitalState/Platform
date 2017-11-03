@@ -20,7 +20,7 @@ all:
         logs: develop
         records: develop
         services: develop
-        tasks: develop
+        tasks: ~
         topics: develop
         admin: develop
         monitor: develop

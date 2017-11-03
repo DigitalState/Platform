@@ -15,15 +15,15 @@ all:
         cases: develop
         cms: develop
         core: ~
-        discovery: develop
+        discovery: ~
         formio: develop
         identities: develop
-        interactions: develop
+        interactions: ~
         logs: develop
         records: develop
         services: develop
-        tasks: develop
-        topics: develop
+        tasks: ~
+        topics: ~
         admin: develop
         monitor: develop
         portal: develop

@@ -15,15 +15,15 @@ all:
         cases: master
         cms: master
         core: ~
-        discovery: master
+        discovery: ~
         formio: master
         identities: master
-        interactions: master
+        interactions: ~
         logs: master
         records: master
         services: master
-        tasks: master
-        topics: master
+        tasks: ~
+        topics: ~
         admin: master
         monitor: master
         portal: master
