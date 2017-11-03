@@ -1,3 +1,33 @@
 ---
+- name: Detect custom records fixtures directory
+  local_action: stat path=/root/resource/data/{{ fixtures }}/records
+  register: directory
+
+- name: Backup records fixtures directory
+  shell: cp -R /srv/service/records/src/AppBundle/Resources/data/{{ fixtures }} /srv/service/records/src/AppBundle/Resources/data/_{{ fixtures }}
+  when: directory.stat.exists == true
+
+- name: Download custom records fixtures directory
+  copy:
+      src: /root/resource/data/{{ fixtures }}/records/
+      dest: /srv/service/records/src/AppBundle/Resources/data/{{ fixtures }}
+  when: directory.stat.exists == true
+
 - name: Load records database fixtures
   shell: 'docker-compose -f /srv/service/records/docker-compose.yml exec records_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+
+# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
+- name: Pause while records fixtures load
+  pause:
+      seconds: 15
+  when: directory.stat.exists == true
+
+- name: Delete custom records fixtures directory
+  file:
+      path: /srv/service/records/src/AppBundle/Resources/data/{{ fixtures }}
+      state: absent
+  when: directory.stat.exists == true
+
+- name: Restore records fixtures directory backup
+  shell: mv /srv/service/records/src/AppBundle/Resources/data/_{{ fixtures }} /srv/service/records/src/AppBundle/Resources/data/{{ fixtures }}
+  when: directory.stat.exists == true

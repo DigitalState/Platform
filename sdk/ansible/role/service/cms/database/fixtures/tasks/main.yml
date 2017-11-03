@@ -1,3 +1,33 @@
 ---
+- name: Detect custom cms fixtures directory
+  local_action: stat path=/root/resource/data/{{ fixtures }}/cms
+  register: directory
+
+- name: Backup cms fixtures directory
+  shell: cp -R /srv/service/cms/src/AppBundle/Resources/data/{{ fixtures }} /srv/service/cms/src/AppBundle/Resources/data/_{{ fixtures }}
+  when: directory.stat.exists == true
+
+- name: Download custom cms fixtures directory
+  copy:
+      src: /root/resource/data/{{ fixtures }}/cms/
+      dest: /srv/service/cms/src/AppBundle/Resources/data/{{ fixtures }}
+  when: directory.stat.exists == true
+
 - name: Load cms database fixtures
   shell: 'docker-compose -f /srv/service/cms/docker-compose.yml exec cms_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+
+# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
+- name: Pause while cms fixtures load
+  pause:
+      seconds: 15
+  when: directory.stat.exists == true
+
+- name: Delete custom cms fixtures directory
+  file:
+      path: /srv/service/cms/src/AppBundle/Resources/data/{{ fixtures }}
+      state: absent
+  when: directory.stat.exists == true
+
+- name: Restore cms fixtures directory backup
+  shell: mv /srv/service/cms/src/AppBundle/Resources/data/_{{ fixtures }} /srv/service/cms/src/AppBundle/Resources/data/{{ fixtures }}
+  when: directory.stat.exists == true

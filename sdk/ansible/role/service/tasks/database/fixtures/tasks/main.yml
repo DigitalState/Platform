@@ -1,3 +1,33 @@
 ---
+- name: Detect custom tasks fixtures directory
+  local_action: stat path=/root/resource/data/{{ fixtures }}/tasks
+  register: directory
+
+- name: Backup tasks fixtures directory
+  shell: cp -R /srv/service/tasks/src/AppBundle/Resources/data/{{ fixtures }} /srv/service/tasks/src/AppBundle/Resources/data/_{{ fixtures }}
+  when: directory.stat.exists == true
+
+- name: Download custom tasks fixtures directory
+  copy:
+      src: /root/resource/data/{{ fixtures }}/tasks/
+      dest: /srv/service/tasks/src/AppBundle/Resources/data/{{ fixtures }}
+  when: directory.stat.exists == true
+
 - name: Load tasks database fixtures
   shell: 'docker-compose -f /srv/service/tasks/docker-compose.yml exec tasks_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+
+# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
+- name: Pause while tasks fixtures load
+  pause:
+      seconds: 15
+  when: directory.stat.exists == true
+
+- name: Delete custom tasks fixtures directory
+  file:
+      path: /srv/service/tasks/src/AppBundle/Resources/data/{{ fixtures }}
+      state: absent
+  when: directory.stat.exists == true
+
+- name: Restore tasks fixtures directory backup
+  shell: mv /srv/service/tasks/src/AppBundle/Resources/data/_{{ fixtures }} /srv/service/tasks/src/AppBundle/Resources/data/{{ fixtures }}
+  when: directory.stat.exists == true

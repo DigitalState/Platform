@@ -1,3 +1,33 @@
 ---
+- name: Detect custom assets fixtures directory
+  local_action: stat path=/root/resource/data/{{ fixtures }}/assets
+  register: directory
+
+- name: Backup assets fixtures directory
+  shell: cp -R /srv/service/assets/src/AppBundle/Resources/data/{{ fixtures }} /srv/service/assets/src/AppBundle/Resources/data/_{{ fixtures }}
+  when: directory.stat.exists == true
+
+- name: Download custom assets fixtures directory
+  copy:
+      src: /root/resource/data/{{ fixtures }}/assets/
+      dest: /srv/service/assets/src/AppBundle/Resources/data/{{ fixtures }}
+  when: directory.stat.exists == true
+
 - name: Load assets database fixtures
   shell: 'docker-compose -f /srv/service/assets/docker-compose.yml exec assets_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+
+# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
+- name: Pause while assets fixtures load
+  pause:
+      seconds: 15
+  when: directory.stat.exists == true
+
+- name: Delete custom assets fixtures directory
+  file:
+      path: /srv/service/assets/src/AppBundle/Resources/data/{{ fixtures }}
+      state: absent
+  when: directory.stat.exists == true
+
+- name: Restore assets fixtures directory backup
+  shell: mv /srv/service/assets/src/AppBundle/Resources/data/_{{ fixtures }} /srv/service/assets/src/AppBundle/Resources/data/{{ fixtures }}
+  when: directory.stat.exists == true

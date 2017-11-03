@@ -1,3 +1,33 @@
 ---
+- name: Detect custom cases fixtures directory
+  local_action: stat path=/root/resource/data/{{ fixtures }}/cases
+  register: directory
+
+- name: Backup cases fixtures directory
+  shell: cp -R /srv/service/cases/src/AppBundle/Resources/data/{{ fixtures }} /srv/service/cases/src/AppBundle/Resources/data/_{{ fixtures }}
+  when: directory.stat.exists == true
+
+- name: Download custom cases fixtures directory
+  copy:
+      src: /root/resource/data/{{ fixtures }}/cases/
+      dest: /srv/service/cases/src/AppBundle/Resources/data/{{ fixtures }}
+  when: directory.stat.exists == true
+
 - name: Load cases database fixtures
   shell: 'docker-compose -f /srv/service/cases/docker-compose.yml exec cases_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+
+# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
+- name: Pause while cases fixtures load
+  pause:
+      seconds: 15
+  when: directory.stat.exists == true
+
+- name: Delete custom cases fixtures directory
+  file:
+      path: /srv/service/cases/src/AppBundle/Resources/data/{{ fixtures }}
+      state: absent
+  when: directory.stat.exists == true
+
+- name: Restore cases fixtures directory backup
+  shell: mv /srv/service/cases/src/AppBundle/Resources/data/_{{ fixtures }} /srv/service/cases/src/AppBundle/Resources/data/{{ fixtures }}
+  when: directory.stat.exists == true
