@@ -31,7 +31,7 @@ all:
         assets_version: develop
         assets_host: api.assets.ds
 
-        authentication: true
+        authentication: enabled
         authentication_version: develop
         authentication_host: api.authentication.ds
 
