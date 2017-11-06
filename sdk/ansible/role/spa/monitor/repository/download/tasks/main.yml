@@ -1,6 +1,6 @@
 ---
 - name: Download monitor repository
   git:
-      version: '{{ monitor }}'
+      version: '{{ monitor_version }}'
       repo: '{{ monitor_repository }}'
       dest: /srv/spa/monitor

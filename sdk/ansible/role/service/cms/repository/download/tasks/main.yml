@@ -1,6 +1,6 @@
 ---
 - name: Download cms repository
   git:
-      version: '{{ cms }}'
+      version: '{{ cms_version }}'
       repo: '{{ cms_repository }}'
       dest: /srv/service/cms

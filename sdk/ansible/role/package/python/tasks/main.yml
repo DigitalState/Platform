@@ -4,7 +4,7 @@
   register: os
   changed_when: false
 
-- name: Install python2
+- name: Install python
   raw: bash -c 'test -e /usr/bin/python || (apt -qqy update && apt install -qqy python-minimal)'
   when: os.stdout.find('Ubuntu')
   register: output

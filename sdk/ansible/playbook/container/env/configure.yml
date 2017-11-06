@@ -3,7 +3,6 @@
   hosts: server
   become: true
   roles:
-      - { role: service/api/container/env/configure, when: api is not none }
       - { role: service/assets/container/env/configure, when: assets is not none }
       - { role: service/authentication/container/env/configure, when: authentication is not none }
       - { role: service/camunda/container/env/configure, when: camunda is not none }

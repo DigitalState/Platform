@@ -1,6 +1,6 @@
 ---
 - name: Download services repository
   git:
-      version: '{{ services }}'
+      version: '{{ services_version }}'
       repo: '{{ services_repository }}'
       dest: /srv/service/services

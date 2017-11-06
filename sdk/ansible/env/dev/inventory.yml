@@ -6,46 +6,98 @@ all:
             ansible_ssh_private_key_file: /root/.ssh/dev/key
 
     vars:
-        documentation: ~
-        guide: ~
-        api: develop
-        assets: develop
-        authentication: develop
-        camunda: develop
-        cases: develop
-        cms: develop
-        core: ~
-        discovery: ~
-        formio: develop
-        identities: develop
-        interactions: ~
-        logs: develop
-        records: develop
-        services: develop
-        tasks: ~
-        topics: ~
-        admin: develop
-        monitor: develop
-        portal: develop
-        ui: ~
-
-        assets_host: http://api.assets.ds
-        authentication_host: http://api.authentication.ds
-        camunda_host: http://api.camunda.ds/engine-rest
-        cases_host: http://api.cases.ds
-        cms_host: http://api.cms.ds
-        discovery_host: http://api.discovery.ds
-        formio_host: http://api.formio.ds
-        identities_host: http://api.identities.ds
-        interactions_host: http://api.interactions.ds
-        logs_host: http://api.logs.ds
-        records_host: http://api.records.ds
-        services_host: http://api.services.ds
-        tasks_host: http://api.tasks.ds
-        topics_host: http://api.topics.ds
+        ### Configuration #####################################################
 
         jwt_private_key: /root/resource/security/jwt/dev/key
         jwt_public_key: /root/resource/security/jwt/dev/key.pub
         jwt_key_pass_phrase: ~
 
         fixtures: dev
+
+        ### Resource ##########################################################
+
+        documentation: ~
+        documentation_version: master
+
+        guide: ~
+        guide_version: master
+
+        ### Service ###########################################################
+
+        api: enabled
+        api_version: develop
+
+        assets: enabled
+        assets_version: develop
+        assets_host: http://api.assets.ds
+
+        authentication: true
+        authentication_version: develop
+        authentication_host: api.authentication.ds
+
+        camunda: enabled
+        camunda_version: develop
+        camunda_host: api.camunda.ds
+
+        cases: enabled
+        cases_version: develop
+        cases_host: api.cases.ds
+
+        cms: enabled
+        cms_version: develop
+        cms_host: api.cms.ds
+
+        discovery: ~
+        discovery_version: develop
+        discovery_host: api.discovery.ds
+
+        formio: enabled
+        formio_version: develop
+        formio_host: api.formio.ds
+
+        identities: enabled
+        identities_version: develop
+        identities_host: api.identities.ds
+
+        interactions: ~
+        interactions_version: develop
+        interactions_host: api.interactions.ds
+
+        logs: enabled
+        logs_version: develop
+        logs_host: api.logs.ds
+
+        records: enabled
+        records_version: develop
+        records_host: api.records.ds
+
+        services: enabled
+        services_version: develop
+        services_host: api.services.ds
+
+        tasks: ~
+        tasks_version: develop
+        tasks_host: api.tasks.ds
+
+        topics: ~
+        topics_version: develop
+        topics_host: api.topics.ds
+
+        core: ~
+        core_version: develop
+
+        ### Spa ###############################################################
+
+        admin: enabled
+        admin_version: develop
+
+        monitor: enabled
+        monitor_version: develop
+
+        portal: enabled
+        portal_version: develop
+
+        ui: ~
+        ui_version: develop
+
+        #######################################################################

@@ -6,46 +6,98 @@ all:
             ansible_ssh_private_key_file: /root/.ssh/stag/key
 
     vars:
-        documentation: ~
-        guide: ~
-        api: master
-        assets: master
-        authentication: master
-        camunda: master
-        cases: master
-        cms: master
-        core: ~
-        discovery: ~
-        formio: master
-        identities: master
-        interactions: ~
-        logs: master
-        records: master
-        services: master
-        tasks: ~
-        topics: ~
-        admin: master
-        monitor: master
-        portal: master
-        ui: ~
-
-        assets_host: http://api.assets.ds
-        authentication_host: http://api.authentication.ds
-        camunda_host: http://api.camunda.ds/engine-rest
-        cases_host: http://api.cases.ds
-        cms_host: http://api.cms.ds
-        discovery_host: http://api.discovery.ds
-        formio_host: http://api.formio.ds
-        identities_host: http://api.identities.ds
-        interactions_host: http://api.interactions.ds
-        logs_host: http://api.logs.ds
-        records_host: http://api.records.ds
-        services_host: http://api.services.ds
-        tasks_host: http://api.tasks.ds
-        topics_host: http://api.topics.ds
+        ### Configuration #####################################################
 
         jwt_private_key: /root/resource/security/jwt/stag/key
         jwt_public_key: /root/resource/security/jwt/stag/key.pub
         jwt_key_pass_phrase: ~
 
         fixtures: dev
+
+        ### Resource ##########################################################
+
+        documentation: ~
+        documentation_version: master
+
+        guide: ~
+        guide_version: master
+
+        ### Service ###########################################################
+
+        api: enabled
+        api_version: master
+
+        assets: enabled
+        assets_version: master
+        assets_host: api.assets.ds
+
+        authentication: true
+        authentication_version: master
+        authentication_host: api.authentication.ds
+
+        camunda: enabled
+        camunda_version: master
+        camunda_host: api.camunda.ds
+
+        cases: enabled
+        cases_version: master
+        cases_host: api.cases.ds
+
+        cms: enabled
+        cms_version: master
+        cms_host: api.cms.ds
+
+        discovery: enabled
+        discovery_version: master
+        discovery_host: api.discovery.ds
+
+        formio: enabled
+        formio_version: master
+        formio_host: api.formio.ds
+
+        identities: enabled
+        identities_version: master
+        identities_host: api.identities.ds
+
+        interactions: enabled
+        interactions_version: master
+        interactions_host: api.interactions.ds
+
+        logs: enabled
+        logs_version: master
+        logs_host: api.logs.ds
+
+        records: enabled
+        records_version: master
+        records_host: api.records.ds
+
+        services: enabled
+        services_version: master
+        services_host: api.services.ds
+
+        tasks: enabled
+        tasks_version: master
+        tasks_host: api.tasks.ds
+
+        topics: enabled
+        topics_version: master
+        topics_host: api.topics.ds
+
+        core: ~
+        core_version: master
+
+        ### Spa ###############################################################
+
+        admin: enabled
+        admin_version: master
+
+        monitor: enabled
+        monitor_version: master
+
+        portal: enabled
+        portal_version: master
+
+        ui: ~
+        ui_version: master
+
+        #######################################################################
