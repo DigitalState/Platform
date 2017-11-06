@@ -29,7 +29,7 @@ all:
 
         assets: enabled
         assets_version: develop
-        assets_host: http://api.assets.ds
+        assets_host: api.assets.ds
 
         authentication: true
         authentication_version: develop
