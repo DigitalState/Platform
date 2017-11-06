@@ -7,7 +7,7 @@
         shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.api_default.IPAddress {{ '}}' }}' api_api_proxy_1
         register: ip
 
-- name: Set host config to api container ip
+- name: Configure host config to api container ip
   hosts: server
   become: true
   vars:

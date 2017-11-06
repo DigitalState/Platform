@@ -29,20 +29,20 @@ all:
         portal: master
         ui: ~
 
-        assets_host: api.assets.ds
-        authentication_host: api.authentication.ds
-        camunda_host: api.camunda.ds
-        cases_host: api.cases.ds
-        cms_host: api.cms.ds
-        discovery_host: api.discovery.ds
-        formio_host: api.formio.ds
-        identities_host: api.identities.ds
-        interactions_host: api.interactions.ds
-        logs_host: api.logs.ds
-        records_host: api.records.ds
-        services_host: api.services.ds
-        tasks_host: api.tasks.ds
-        topics_host: api.topics.ds
+        assets_host: http://api.assets.ds
+        authentication_host: http://api.authentication.ds
+        camunda_host: http://api.camunda.ds/engine-rest
+        cases_host: http://api.cases.ds
+        cms_host: http://api.cms.ds
+        discovery_host: http://api.discovery.ds
+        formio_host: http://api.formio.ds
+        identities_host: http://api.identities.ds
+        interactions_host: http://api.interactions.ds
+        logs_host: http://api.logs.ds
+        records_host: http://api.records.ds
+        services_host: http://api.services.ds
+        tasks_host: http://api.tasks.ds
+        topics_host: http://api.topics.ds
 
         jwt_private_key: /root/resource/security/jwt/prod/key
         jwt_public_key: /root/resource/security/jwt/prod/key.pub
