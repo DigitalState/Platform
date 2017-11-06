@@ -3,8 +3,6 @@
   hosts: server
   become: true
   roles:
-      - { role: spa/portal/container/stop, when: portal is not none }
-      - { role: spa/admin/container/stop, when: admin is not none }
       - { role: service/tasks/container/stop, when: tasks is not none }
       - { role: service/services/container/stop, when: services is not none }
       - { role: service/records/container/stop, when: records is not none }

@@ -29,6 +29,21 @@ all:
         portal: master
         ui: ~
 
+        assets_host: api.assets.ds
+        authentication_host: api.authentication.ds
+        camunda_host: api.camunda.ds
+        cases_host: api.cases.ds
+        cms_host: api.cms.ds
+        discovery_host: api.discovery.ds
+        formio_host: api.formio.ds
+        identities_host: api.identities.ds
+        interactions_host: api.interactions.ds
+        logs_host: api.logs.ds
+        records_host: api.records.ds
+        services_host: api.services.ds
+        tasks_host: api.tasks.ds
+        topics_host: api.topics.ds
+
         jwt_private_key: /root/resource/security/jwt/stag/key
         jwt_public_key: /root/resource/security/jwt/stag/key.pub
         jwt_key_pass_phrase: ~

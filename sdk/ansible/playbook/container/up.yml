@@ -14,5 +14,3 @@
       - { role: service/records/container/up, when: records is not none }
       - { role: service/services/container/up, when: services is not none }
       - { role: service/tasks/container/up, when: tasks is not none }
-      - { role: spa/admin/container/up, when: admin is not none }
-      - { role: spa/portal/container/up, when: portal is not none }

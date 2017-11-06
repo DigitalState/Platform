@@ -1,0 +1,6 @@
+---
+- name: Configure topics host environment variable
+  lineinfile:
+      path: /srv/service/topics/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ topics_host }}'

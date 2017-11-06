@@ -1,0 +1,6 @@
+---
+- name: Configure logs host environment variable
+  lineinfile:
+      path: /srv/service/logs/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ logs_host }}'

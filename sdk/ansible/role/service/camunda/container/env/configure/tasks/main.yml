@@ -1,0 +1,6 @@
+---
+- name: Configure camunda host environment variable
+  lineinfile:
+      path: /srv/service/camunda/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ camunda_host }}'

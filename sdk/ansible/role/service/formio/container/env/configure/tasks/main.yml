@@ -1,0 +1,6 @@
+---
+- name: Configure formio host environment variable
+  lineinfile:
+      path: /srv/service/formio/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ formio_host }}'

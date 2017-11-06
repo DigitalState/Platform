@@ -1,0 +1,6 @@
+---
+- name: Configure authentication host environment variable
+  lineinfile:
+      path: /srv/service/authentication/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ authentication_host }}'

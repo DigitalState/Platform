@@ -1,0 +1,6 @@
+---
+- name: Configure cases host environment variable
+  lineinfile:
+      path: /srv/service/cases/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ cases_host }}'

@@ -1,0 +1,6 @@
+---
+- name: Configure cms host environment variable
+  lineinfile:
+      path: /srv/service/cms/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ cms_host }}'

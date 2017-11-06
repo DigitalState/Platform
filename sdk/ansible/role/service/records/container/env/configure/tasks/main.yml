@@ -1,0 +1,6 @@
+---
+- name: Configure records host environment variable
+  lineinfile:
+      path: /srv/service/records/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ records_host }}'

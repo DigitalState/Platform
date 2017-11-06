@@ -1,0 +1,6 @@
+---
+- name: Configure identities host environment variable
+  lineinfile:
+      path: /srv/service/identities/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ identities_host }}'

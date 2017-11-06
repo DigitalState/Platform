@@ -1,0 +1,6 @@
+---
+- name: Configure discovery host environment variable
+  lineinfile:
+      path: /srv/service/discovery/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ discovery_host }}'

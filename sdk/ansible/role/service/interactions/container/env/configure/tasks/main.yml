@@ -1,0 +1,6 @@
+---
+- name: Configure interactions host environment variable
+  lineinfile:
+      path: /srv/service/interactions/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ interactions_host }}'

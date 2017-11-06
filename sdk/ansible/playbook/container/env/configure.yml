@@ -1,0 +1,16 @@
+---
+- name: Configure containers environment on server
+  hosts: server
+  become: true
+  roles:
+      - { role: service/api/container/env/configure, when: api is not none }
+      - { role: service/assets/container/env/configure, when: assets is not none }
+      - { role: service/authentication/container/env/configure, when: authentication is not none }
+      - { role: service/camunda/container/env/configure, when: camunda is not none }
+      - { role: service/cases/container/env/configure, when: cases is not none }
+      - { role: service/cms/container/env/configure, when: cms is not none }
+      - { role: service/formio/container/env/configure, when: formio is not none }
+      - { role: service/identities/container/env/configure, when: identities is not none }
+      - { role: service/records/container/env/configure, when: records is not none }
+      - { role: service/services/container/env/configure, when: services is not none }
+      - { role: service/tasks/container/env/configure, when: tasks is not none }
