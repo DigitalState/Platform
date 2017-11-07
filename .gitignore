@@ -1,6 +1,6 @@
 /app/resource/documentation
 /app/resource/guide
-/app/service/api
+/app/service/proxy
 /app/service/assets
 /app/service/authentication
 /app/service/camunda
