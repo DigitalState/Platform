@@ -1,7 +1,7 @@
 all:
     hosts:
         server:
-            ansible_host: 45.56.101.246
+            ansible_host: ~
             ansible_port: 22
             ansible_ssh_private_key_file: /root/.ssh/dev/key
 
@@ -10,7 +10,7 @@ all:
 
         jwt_private_key: /root/resource/security/jwt/dev/key
         jwt_public_key: /root/resource/security/jwt/dev/key.pub
-        jwt_key_pass_phrase: 1111
+        jwt_key_pass_phrase: ~
 
         fixtures: dev
 
