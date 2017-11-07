@@ -13,4 +13,3 @@
       - { role: service/camunda/container/stop, when: camunda is not none }
       - { role: service/authentication/container/stop, when: authentication is not none }
       - { role: service/assets/container/stop, when: assets is not none }
-      - { role: service/proxy/container/stop, when: proxy is not none }

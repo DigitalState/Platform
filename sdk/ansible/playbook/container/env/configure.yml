@@ -1,4 +1,16 @@
 ---
+- name: Obtain proxy container ip
+  hosts: server
+  become: true
+  tasks:
+      - name: Obtain proxy container ip
+        shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.proxy_default.IPAddress {{ '}}' }}' proxy_proxy_1
+        register: ip
+
+      - name: Create proxy host variable
+        set_fact:
+            proxy_host: '{{ ip.stdout }}'
+
 - name: Configure containers environment on server
   hosts: server
   become: true

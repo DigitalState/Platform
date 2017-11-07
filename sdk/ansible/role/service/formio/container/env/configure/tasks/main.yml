@@ -1,4 +1,10 @@
 ---
+- name: Configure proxy host environment variable
+  lineinfile:
+      path: /srv/service/formio/.env
+      regexp: '^PROXY_HOST='
+      line: 'PROXY_HOST={{ proxy_host }}'
+
 - name: Configure formio host environment variable
   lineinfile:
       path: /srv/service/formio/.env

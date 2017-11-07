@@ -1,0 +1,6 @@
+---
+- name: Down proxy container on server
+  hosts: server
+  become: true
+  roles:
+      - { role: service/proxy/container/down, when: proxy is not none }

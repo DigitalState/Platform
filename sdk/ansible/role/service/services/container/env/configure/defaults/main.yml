@@ -1,2 +1,3 @@
 ---
+proxy_host: 127.0.0.1
 services_host: api.services.ds

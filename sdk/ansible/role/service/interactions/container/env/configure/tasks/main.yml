@@ -1,4 +1,10 @@
 ---
+- name: Configure proxy host environment variable
+  lineinfile:
+      path: /srv/service/interactions/.env
+      regexp: '^PROXY_HOST='
+      line: 'PROXY_HOST={{ proxy_host }}'
+
 - name: Configure interactions host environment variable
   lineinfile:
       path: /srv/service/interactions/.env

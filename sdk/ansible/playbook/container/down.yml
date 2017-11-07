@@ -13,4 +13,3 @@
       - { role: service/camunda/container/down, when: camunda is not none }
       - { role: service/authentication/container/down, when: authentication is not none }
       - { role: service/assets/container/down, when: assets is not none }
-      - { role: service/proxy/container/down, when: proxy is not none }

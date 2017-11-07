@@ -3,6 +3,7 @@
 - import_playbook: setup/packages.yml
 - import_playbook: repository/download.yml
 - import_playbook: jwt/download.yml
+- import_playbook: proxy/container/up.yml
 - import_playbook: container/env/configure.yml
 - import_playbook: container/up.yml
 - import_playbook: jwt/configure.yml

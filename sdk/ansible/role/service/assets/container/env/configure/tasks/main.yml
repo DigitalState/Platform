@@ -1,5 +1,11 @@
 ---
-- name: Configure assets host environment variable
+- name: Configure proxy host environment variable
+  lineinfile:
+      path: /srv/service/assets/.env
+      regexp: '^PROXY_HOST='
+      line: 'PROXY_HOST={{ proxy_host }}'
+
+- name: Configure virtual host environment variable
   lineinfile:
       path: /srv/service/assets/.env
       regexp: '^VIRTUAL_HOST='
