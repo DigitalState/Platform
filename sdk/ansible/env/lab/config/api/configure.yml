@@ -1,10 +1,10 @@
 ---
-- name: Obtain api container ip
+- name: Obtain proxy container ip
   hosts: server
   become: true
   tasks:
       - name: Test
-        shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.api_default.IPAddress {{ '}}' }}' api_api_proxy_1
+        shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.api_default.IPAddress {{ '}}' }}' proxy_proxy_1
         register: ip
 
 - name: Configure host config to proxy container ip
