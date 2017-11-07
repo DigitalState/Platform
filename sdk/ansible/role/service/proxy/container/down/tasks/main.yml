@@ -1,0 +1,5 @@
+---
+- name: Down proxy container
+  shell: 'docker-compose -f /srv/service/proxy/docker-compose.yml down'
+  register: output
+  changed_when: output.stderr != ''

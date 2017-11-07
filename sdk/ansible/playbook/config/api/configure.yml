@@ -1,5 +1,5 @@
 ---
-- name: Configure host config to api container ip
+- name: Configure host config to proxy container ip
   hosts: server
   become: true
   vars:

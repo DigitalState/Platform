@@ -24,8 +24,8 @@ all:
 
         ### Service ###########################################################
 
-        api: enabled
-        api_version: master
+        proxy: enabled
+        proxy_version: master
 
         assets: enabled
         assets_version: master

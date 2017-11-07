@@ -1,5 +1,0 @@
----
-- name: Stop api container
-  shell: 'docker-compose -f /srv/service/api/docker-compose.yml stop'
-  register: output
-  changed_when: output.stderr != ''

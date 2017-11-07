@@ -1,0 +1,5 @@
+---
+- name: Up proxy container
+  shell: 'docker-compose -f /srv/service/proxy/docker-compose.yml up -d'
+  register: output
+  changed_when: output.stderr != 'proxy_proxy_1 is up-to-date'

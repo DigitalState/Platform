@@ -1,0 +1,5 @@
+---
+- name: Stop proxy container
+  shell: 'docker-compose -f /srv/service/proxy/docker-compose.yml stop'
+  register: output
+  changed_when: output.stderr != ''

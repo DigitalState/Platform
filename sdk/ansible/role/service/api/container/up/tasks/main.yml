@@ -1,5 +1,0 @@
----
-- name: Up api container
-  shell: 'docker-compose -f /srv/service/api/docker-compose.yml up -d'
-  register: output
-  changed_when: output.stderr != 'api_db_1 is up-to-date\napi_php_1 is up-to-date\napi_nginx_1 is up-to-date'

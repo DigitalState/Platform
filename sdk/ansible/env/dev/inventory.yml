@@ -24,8 +24,8 @@ all:
 
         ### Service ###########################################################
 
-        api: enabled
-        api_version: develop
+        proxy: enabled
+        proxy_version: develop
 
         assets: enabled
         assets_version: develop

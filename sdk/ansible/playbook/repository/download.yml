@@ -5,7 +5,7 @@
   roles:
       - { role: resource/documentation/repository/download, when: documentation is not none }
       - { role: resource/guide/repository/download, when: guide is not none }
-      - { role: service/api/repository/download, when: api is not none }
+      - { role: service/proxy/repository/download, when: proxy is not none }
       - { role: service/assets/repository/download, when: assets is not none }
       - { role: service/authentication/repository/download, when: authentication is not none }
       - { role: service/camunda/repository/download, when: camunda is not none }
