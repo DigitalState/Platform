@@ -21,18 +21,18 @@
 /app/spa/portal
 /app/spa/ui
 
-/resource/security/jwt/*
-!/resource/security/jwt/dev/.gitkeep
-!/resource/security/jwt/lab/.gitkeep
-!/resource/security/jwt/prod/.gitkeep
-!/resource/security/jwt/stag/.gitkeep
-!/resource/security/jwt/test/.gitkeep
+/resource/jwt/*
+!/resource/jwt/dev/.gitkeep
+!/resource/jwt/lab/.gitkeep
+!/resource/jwt/prod/.gitkeep
+!/resource/jwt/stag/.gitkeep
+!/resource/jwt/test/.gitkeep
 
 /sdk/ansible/**/*.retry
-/sdk/security/git/*
-!/sdk/security/git/.gitkeep
-/sdk/security/ssh/*
-!/sdk/security/ssh/dev/.gitkeep
-!/sdk/security/ssh/prod/.gitkeep
-!/sdk/security/ssh/stag/.gitkeep
-!/sdk/security/ssh/test/.gitkeep
+/sdk/git/*
+!/sdk/git/.gitkeep
+/sdk/ssh/*
+!/sdk/ssh/dev/.gitkeep
+!/sdk/ssh/prod/.gitkeep
+!/sdk/ssh/stag/.gitkeep
+!/sdk/ssh/test/.gitkeep
