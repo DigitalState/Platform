@@ -1,0 +1,5 @@
+---
+- name: Load services database fixtures
+  shell:
+      cmd: 'docker-compose exec services_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+      chdir: /srv/service/services

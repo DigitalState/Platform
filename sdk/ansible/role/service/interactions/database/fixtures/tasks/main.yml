@@ -1,35 +1,12 @@
 ---
 - name: Detect custom interactions fixtures directory
-  local_action: stat path=/root/resource/data/{{ fixtures }}/interactions
+  local_action: 'stat path=/root/resource/data/{{ fixtures }}/interactions'
   register: directory
 
-- name: Backup interactions fixtures directory
-  shell: cp -R /srv/service/interactions/src/AppBundle/Resources/data/{{ fixtures }} /srv/service/interactions/src/AppBundle/Resources/data/_{{ fixtures }}
-  when: directory.stat.exists == true
+- name: Load default interactions database fixtures
+  when: directory.stat.exists == false
+  import_tasks: default.yml
 
-- name: Download custom interactions fixtures directory
-  copy:
-      src: /root/resource/data/{{ fixtures }}/interactions/
-      dest: /srv/service/interactions/src/AppBundle/Resources/data/{{ fixtures }}
+- name: Load custom interactions database fixtures
   when: directory.stat.exists == true
-
-- name: Load interactions database fixtures
-  shell:
-      cmd: 'docker-compose exec interactions_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
-      chdir: /srv/service/interactions
-
-# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
-- name: Pause while interactions fixtures load
-  pause:
-      seconds: 15
-  when: directory.stat.exists == true
-
-- name: Delete custom interactions fixtures directory
-  file:
-      path: /srv/service/interactions/src/AppBundle/Resources/data/{{ fixtures }}
-      state: absent
-  when: directory.stat.exists == true
-
-- name: Restore interactions fixtures directory backup
-  shell: mv /srv/service/interactions/src/AppBundle/Resources/data/_{{ fixtures }} /srv/service/interactions/src/AppBundle/Resources/data/{{ fixtures }}
-  when: directory.stat.exists == true
+  import_tasks: custom.yml

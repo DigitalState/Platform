@@ -1,5 +1,12 @@
 ---
-- name: Load topics database fixtures
-  shell:
-      cmd: 'docker-compose exec php bin/console doctrine:fixtures:load --env={{ fixtures }} --no-interaction | cat'
-      chdir: /srv/service/topics
+- name: Detect custom topics fixtures directory
+  local_action: 'stat path=/root/resource/data/{{ fixtures }}/topics'
+  register: directory
+
+- name: Load default topics database fixtures
+  when: directory.stat.exists == false
+  import_tasks: default.yml
+
+- name: Load custom topics database fixtures
+  when: directory.stat.exists == true
+  import_tasks: custom.yml
