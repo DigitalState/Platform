@@ -1,5 +1,7 @@
 ---
 - name: Up camunda container
-  shell: 'docker-compose -f /srv/service/camunda/docker-compose.yml up -d'
+  shell:
+      cmd: docker-compose up -d
+      chdir: /srv/service/camunda
   register: output
-  changed_when: output.stderr != 'camunda_camunda_1 is up-to-date'
+  changed_when: output.stderr != 'camunda_camunda_camunda_1 is up-to-date'

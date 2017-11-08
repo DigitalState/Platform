@@ -1,5 +1,7 @@
 ---
 - name: Stop authentication container
-  shell: 'docker-compose -f /srv/service/authentication/docker-compose.yml stop'
+  shell:
+      cmd: docker-compose stop
+      chdir: /srv/service/authentication
   register: output
   changed_when: output.stderr != ''

@@ -1,5 +1,7 @@
 ---
 - name: Up records container
-  shell: 'docker-compose -f /srv/service/records/docker-compose.yml up -d'
+  shell:
+      cmd: docker-compose up -d
+      chdir: /srv/service/records
   register: output
-  changed_when: output.stderr != 'records_db_1 is up-to-date\nrecords_php_1 is up-to-date\nrecords_nginx_1 is up-to-date'
+  changed_when: output.stderr != 'records_records_db_1 is up-to-date\nrecords_records_php_1 is up-to-date\nrecords_records_nginx_1 is up-to-date'

@@ -1,5 +1,7 @@
 ---
 - name: Down records container
-  shell: 'docker-compose -f /srv/service/records/docker-compose.yml down'
+  shell:
+      cmd: docker-compose down
+      chdir: /srv/service/records
   register: output
   changed_when: output.stderr != ''

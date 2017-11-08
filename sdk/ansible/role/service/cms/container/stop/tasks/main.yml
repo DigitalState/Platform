@@ -1,5 +1,7 @@
 ---
 - name: Stop cms container
-  shell: 'docker-compose -f /srv/service/cms/docker-compose.yml stop'
+  shell:
+      cmd: docker-compose stop
+      chdir: /srv/service/cms
   register: output
   changed_when: output.stderr != ''

@@ -1,5 +1,7 @@
 ---
 - name: Stop identities container
-  shell: 'docker-compose -f /srv/service/identities/docker-compose.yml stop'
+  shell:
+      cmd: docker-compose stop
+      chdir: /srv/service/identities
   register: output
   changed_when: output.stderr != ''

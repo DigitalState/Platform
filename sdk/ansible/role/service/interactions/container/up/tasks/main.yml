@@ -1,5 +1,7 @@
 ---
 - name: Up interactions container
-  shell: 'docker-compose -f /srv/service/interactions/docker-compose.yml up -d'
+  shell:
+      cmd: docker-compose up -d
+      chdir: /srv/service/interactions
   register: output
-  changed_when: output.stderr != 'interactions_db_1 is up-to-date\ninteractions_php_1 is up-to-date\ninteractions_nginx_1 is up-to-date'
+  changed_when: output.stderr != 'interactions_interactions_db_1 is up-to-date\ninteractions_interactions_php_1 is up-to-date\ninteractions_interactions_nginx_1 is up-to-date'

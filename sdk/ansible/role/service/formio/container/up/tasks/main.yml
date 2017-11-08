@@ -1,5 +1,7 @@
 ---
 - name: Up formio container
-  shell: 'docker-compose -f /srv/service/formio/docker-compose.yml up -d'
+  shell:
+      cmd: docker-compose up -d
+      chdir: /srv/service/formio
   register: output
-  changed_when: output.stderr != 'formio_mongodb_1 is up-to-date\nformio_formio_1 is up-to-date'
+  changed_when: output.stderr != 'formio_formio_mongodb_1 is up-to-date\nformio_formio_formio_1 is up-to-date'

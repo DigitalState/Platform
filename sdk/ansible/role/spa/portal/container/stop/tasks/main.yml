@@ -1,5 +1,7 @@
 ---
 - name: Stop portal container
-  shell: 'docker-compose -f /srv/spa/portal/docker-compose.yml stop'
+  shell:
+      cmd: docker-compose stop
+      chdir: /srv/spa/portal
   register: output
   changed_when: output.stderr != ''

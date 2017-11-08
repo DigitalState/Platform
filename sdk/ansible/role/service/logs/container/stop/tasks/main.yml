@@ -1,5 +1,7 @@
 ---
 - name: Stop logs container
-  shell: 'docker-compose -f /srv/service/logs/docker-compose.yml stop'
+  shell:
+      cmd: docker-compose stop
+      chdir: /srv/service/logs
   register: output
   changed_when: output.stderr != ''

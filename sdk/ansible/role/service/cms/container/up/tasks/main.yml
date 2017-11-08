@@ -1,5 +1,7 @@
 ---
 - name: Up cms container
-  shell: 'docker-compose -f /srv/service/cms/docker-compose.yml up -d'
+  shell:
+      cmd: docker-compose up -d
+      chdir: /srv/service/cms
   register: output
-  changed_when: output.stderr != 'cms_db_1 is up-to-date\ncms_php_1 is up-to-date\ncms_nginx_1 is up-to-date'
+  changed_when: output.stderr != 'cms_cms_db_1 is up-to-date\ncms_cms_php_1 is up-to-date\ncms_cms_nginx_1 is up-to-date'

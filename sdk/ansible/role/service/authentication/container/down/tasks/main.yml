@@ -1,5 +1,7 @@
 ---
 - name: Down authentication container
-  shell: 'docker-compose -f /srv/service/authentication/docker-compose.yml down'
+  shell:
+      cmd: docker-compose down
+      chdir: /srv/service/authentication
   register: output
   changed_when: output.stderr != ''

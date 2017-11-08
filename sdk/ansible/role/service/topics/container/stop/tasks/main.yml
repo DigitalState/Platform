@@ -1,5 +1,7 @@
 ---
 - name: Stop topics container
-  shell: 'docker-compose -f /srv/service/topics/docker-compose.yml stop'
+  shell:
+      cmd: docker-compose stop
+      chdir: /srv/service/topics
   register: output
   changed_when: output.stderr != ''

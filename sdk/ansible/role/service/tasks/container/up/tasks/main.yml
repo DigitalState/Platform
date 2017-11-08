@@ -1,5 +1,7 @@
 ---
 - name: Up tasks container
-  shell: 'docker-compose -f /srv/service/tasks/docker-compose.yml up -d'
+  shell:
+      cmd: docker-compose up -d
+      chdir: /srv/service/tasks
   register: output
-  changed_when: output.stderr != 'tasks_db_1 is up-to-date\ntasks_php_1 is up-to-date\ntasks_nginx_1 is up-to-date'
+  changed_when: output.stderr != 'tasks_tasks_db_1 is up-to-date\ntasks_tasks_php_1 is up-to-date\ntasks_tasks_nginx_1 is up-to-date'

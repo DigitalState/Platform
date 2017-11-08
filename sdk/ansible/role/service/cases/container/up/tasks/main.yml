@@ -1,5 +1,7 @@
 ---
 - name: Up cases container
-  shell: 'docker-compose -f /srv/service/cases/docker-compose.yml up -d'
+  shell:
+      cmd: docker-compose up -d
+      chdir: /srv/service/cases
   register: output
-  changed_when: output.stderr != 'cases_db_1 is up-to-date\ncases_php_1 is up-to-date\ncases_nginx_1 is up-to-date'
+  changed_when: output.stderr != 'cases_cases_db_1 is up-to-date\ncases_cases_php_1 is up-to-date\ncases_cases_nginx_1 is up-to-date'

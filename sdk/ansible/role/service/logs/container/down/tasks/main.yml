@@ -1,5 +1,7 @@
 ---
 - name: Down logs container
-  shell: 'docker-compose -f /srv/service/logs/docker-compose.yml down'
+  shell:
+      cmd: docker-compose down
+      chdir: /srv/service/logs
   register: output
   changed_when: output.stderr != ''

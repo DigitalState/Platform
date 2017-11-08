@@ -1,5 +1,7 @@
 ---
 - name: Up assets container
-  shell: 'docker-compose -f /srv/service/assets/docker-compose.yml up -d'
+  shell:
+      cmd: docker-compose up -d
+      chdir: /srv/service/assets
   register: output
-  changed_when: output.stderr != 'assets_db_1 is up-to-date\nassets_php_1 is up-to-date\nassets_nginx_1 is up-to-date'
+  changed_when: output.stderr != 'assets_assets_db_1 is up-to-date\nassets_assets_php_1 is up-to-date\nassets_assets_nginx_1 is up-to-date'

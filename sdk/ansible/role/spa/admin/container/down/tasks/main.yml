@@ -1,5 +1,7 @@
 ---
 - name: Down admin container
-  shell: 'docker-compose -f /srv/spa/admin/docker-compose.yml down'
+  shell:
+      cmd: docker-compose down
+      chdir: /srv/spa/admin
   register: output
   changed_when: output.stderr != ''

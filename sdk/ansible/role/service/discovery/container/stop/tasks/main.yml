@@ -1,5 +1,7 @@
 ---
 - name: Stop discovery container
-  shell: 'docker-compose -f /srv/service/discovery/docker-compose.yml stop'
+  shell:
+      cmd: docker-compose stop
+      chdir: /srv/service/discovery
   register: output
   changed_when: output.stderr != ''
