@@ -9,13 +9,7 @@ services:
         stdin_open: true
         tty: true
         volumes:
-            # This volume enables sibling docker containers when creating docker inside docker.
             - /var/run/docker.sock:/var/run/docker.sock
-            - ./app/resource:/srv/resource
-            - ./app/service:/srv/service
-            - ./app/spa:/srv/spa
+            - ./app:/srv
             - ./resource:/root/resource
             - ./sdk/ansible:/etc/ansible
-            - ./sdk/security/git:/root/.git
-            # Moved to Dockerfile
-            # - ./sdk/security/ssh:/root/.ssh
