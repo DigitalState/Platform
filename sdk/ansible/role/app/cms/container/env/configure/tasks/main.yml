@@ -1,0 +1,12 @@
+---
+- name: Configure proxy host environment variable
+  lineinfile:
+      path: /srv/cms/.env
+      regexp: '^PROXY_HOST='
+      line: 'PROXY_HOST={{ proxy_host }}'
+
+- name: Configure cms host environment variable
+  lineinfile:
+      path: /srv/cms/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ cms_host }}'

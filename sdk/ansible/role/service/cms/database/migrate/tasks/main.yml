@@ -1,5 +1,0 @@
----
-- name: Migrate cms database
-  shell:
-      cmd: docker-compose exec cms_php bin/console doctrine:migrations:migrate --no-interaction | cat
-      chdir: /srv/service/cms

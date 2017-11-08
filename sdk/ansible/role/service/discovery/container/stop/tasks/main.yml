@@ -1,7 +1,0 @@
----
-- name: Stop discovery container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/service/discovery
-  register: output
-  changed_when: output.stderr != ''

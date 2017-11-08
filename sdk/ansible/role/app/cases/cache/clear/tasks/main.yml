@@ -1,0 +1,5 @@
+---
+- name: Clear cases cache
+  shell:
+      cmd: docker-compose exec cases_php bin/console cache:clear --no-warmup --env=prod | cat
+      chdir: /srv/cases

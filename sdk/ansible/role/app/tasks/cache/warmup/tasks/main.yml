@@ -1,0 +1,5 @@
+---
+- name: Warmup tasks cache
+  shell:
+      cmd: docker-compose exec tasks_php bin/console cache:warmup --env=prod | cat
+      chdir: /srv/tasks

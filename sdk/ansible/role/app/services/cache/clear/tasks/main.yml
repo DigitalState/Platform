@@ -1,0 +1,5 @@
+---
+- name: Clear services cache
+  shell:
+      cmd: docker-compose exec services_php bin/console cache:clear --no-warmup --env=prod | cat
+      chdir: /srv/services

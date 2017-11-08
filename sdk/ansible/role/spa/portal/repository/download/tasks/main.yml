@@ -1,7 +1,0 @@
----
-- name: Download portal repository
-  git:
-      version: '{{ portal_version }}'
-      repo: '{{ portal_repository }}'
-      recursive: yes
-      dest: /srv/spa/portal

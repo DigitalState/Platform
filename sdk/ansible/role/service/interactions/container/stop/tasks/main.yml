@@ -1,7 +1,0 @@
----
-- name: Stop interactions container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/service/interactions
-  register: output
-  changed_when: output.stderr != ''

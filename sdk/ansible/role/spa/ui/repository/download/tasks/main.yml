@@ -1,6 +1,0 @@
----
-- name: Download ui repository
-  git:
-      version: '{{ ui_version }}'
-      repo: '{{ ui_repository }}'
-      dest: /srv/spa/ui

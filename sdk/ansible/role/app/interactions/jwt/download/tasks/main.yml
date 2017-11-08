@@ -1,0 +1,12 @@
+---
+- name: Download interactions jwt private key
+  copy:
+      src: '{{ jwt_private_key }}'
+      dest: /srv/interactions/var/jwt/key
+      mode: 0600
+
+- name: Download interactions jwt public key
+  copy:
+      src: '{{ jwt_public_key }}'
+      dest: /srv/interactions/var/jwt/key.pub
+      mode: 0600

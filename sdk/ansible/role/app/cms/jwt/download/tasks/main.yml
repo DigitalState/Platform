@@ -1,0 +1,12 @@
+---
+- name: Download cms jwt private key
+  copy:
+      src: '{{ jwt_private_key }}'
+      dest: /srv/cms/var/jwt/key
+      mode: 0600
+
+- name: Download cms jwt public key
+  copy:
+      src: '{{ jwt_public_key }}'
+      dest: /srv/cms/var/jwt/key.pub
+      mode: 0600

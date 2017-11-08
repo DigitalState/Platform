@@ -3,11 +3,11 @@
   hosts: server
   become: true
   roles:
-      - { role: service/assets/jwt/configure, when: assets is not none }
-      - { role: service/authentication/jwt/configure, when: authentication is not none }
-      - { role: service/cases/jwt/configure, when: cases is not none }
-      - { role: service/cms/jwt/configure, when: cms is not none }
-      - { role: service/identities/jwt/configure, when: identities is not none }
-      - { role: service/records/jwt/configure, when: records is not none }
-      - { role: service/services/jwt/configure, when: services is not none }
-      - { role: service/tasks/jwt/configure, when: tasks is not none }
+      - { role: app/assets/jwt/configure, when: assets is not none }
+      - { role: app/authentication/jwt/configure, when: authentication is not none }
+      - { role: app/cases/jwt/configure, when: cases is not none }
+      - { role: app/cms/jwt/configure, when: cms is not none }
+      - { role: app/identities/jwt/configure, when: identities is not none }
+      - { role: app/records/jwt/configure, when: records is not none }
+      - { role: app/services/jwt/configure, when: services is not none }
+      - { role: app/tasks/jwt/configure, when: tasks is not none }

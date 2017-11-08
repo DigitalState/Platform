@@ -1,0 +1,7 @@
+---
+- name: Down cases container
+  shell:
+      cmd: docker-compose down
+      chdir: /srv/cases
+  register: output
+  changed_when: output.stderr != ''

@@ -1,0 +1,7 @@
+---
+- name: Up topics container
+  shell:
+      cmd: docker-compose up -d
+      chdir: /srv/topics
+  register: output
+  changed_when: output.stderr != 'topics_topics_db_1 is up-to-date\ntopics_topics_php_1 is up-to-date\ntopics_topics_nginx_1 is up-to-date'

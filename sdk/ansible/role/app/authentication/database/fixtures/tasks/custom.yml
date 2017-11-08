@@ -1,0 +1,23 @@
+---
+- name: Backup authentication fixtures directory
+  shell: 'cp -R /srv/authentication/src/AppBundle/Resources/data/{{ fixtures }} /srv/authentication/src/AppBundle/Resources/data/_{{ fixtures }}'
+
+- name: Download custom authentication fixtures directory
+  copy:
+      src: '/root/resource/data/{{ fixtures }}/authentication/'
+      dest: '/srv/authentication/src/AppBundle/Resources/data/{{ fixtures }}'
+
+- import_tasks: load.yml
+
+# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
+- name: Pause while authentication fixtures load
+  pause:
+      seconds: 15
+
+- name: Delete custom authentication fixtures directory
+  file:
+      path: '/srv/authentication/src/AppBundle/Resources/data/{{ fixtures }}'
+      state: absent
+
+- name: Restore authentication fixtures directory backup
+  shell: 'mv /srv/authentication/src/AppBundle/Resources/data/_{{ fixtures }} /srv/authentication/src/AppBundle/Resources/data/{{ fixtures }}'

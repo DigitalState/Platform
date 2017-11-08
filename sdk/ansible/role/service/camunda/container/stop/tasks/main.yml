@@ -1,7 +1,0 @@
----
-- name: Stop camunda container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/service/camunda
-  register: output
-  changed_when: output.stderr != ''

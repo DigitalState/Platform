@@ -1,5 +1,0 @@
----
-- name: Clear cms cache
-  shell:
-      cmd: docker-compose exec cms_php bin/console cache:clear --no-warmup --env=prod | cat
-      chdir: /srv/service/cms

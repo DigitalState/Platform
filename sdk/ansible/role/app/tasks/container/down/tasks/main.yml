@@ -1,0 +1,7 @@
+---
+- name: Down tasks container
+  shell:
+      cmd: docker-compose down
+      chdir: /srv/tasks
+  register: output
+  changed_when: output.stderr != ''

@@ -1,5 +1,0 @@
----
-- name: Warmup topics cache
-  shell:
-      cmd: docker-compose exec topics_php bin/console cache:warmup --env=prod | cat
-      chdir: /srv/service/topics

@@ -1,0 +1,7 @@
+---
+- name: Stop assets container
+  shell:
+      cmd: docker-compose stop
+      chdir: /srv/assets
+  register: output
+  changed_when: output.stderr != ''

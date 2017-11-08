@@ -1,0 +1,7 @@
+---
+- name: Stop formio container
+  shell:
+      cmd: docker-compose stop
+      chdir: /srv/formio
+  register: output
+  changed_when: output.stderr != ''

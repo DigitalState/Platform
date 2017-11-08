@@ -1,0 +1,7 @@
+---
+- name: Up authentication container
+  shell:
+      cmd: docker-compose up -d
+      chdir: /srv/authentication
+  register: output
+  changed_when: output.stderr != 'authentication_authentication_db_1 is up-to-date\nauthentication_authentication_php_1 is up-to-date\nauthentication_authentication_nginx_1 is up-to-date'

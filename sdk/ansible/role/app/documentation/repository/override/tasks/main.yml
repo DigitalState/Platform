@@ -1,0 +1,10 @@
+---
+- name: Detect documentation repository override directory
+  local_action: 'stat path={{ documentation_repository_override }}'
+  register: directory
+
+- name: Download documentation repository override directory
+  copy:
+      src: '{{ documentation_repository_override }}/'
+      dest: '/srv/documentation'
+  when: directory.stat.exists == true

@@ -1,0 +1,7 @@
+---
+- name: Stop admin container
+  shell:
+      cmd: docker-compose stop
+      chdir: /srv/admin
+  register: output
+  changed_when: output.stderr != ''

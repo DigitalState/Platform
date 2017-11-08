@@ -1,5 +1,0 @@
----
-- name: Warmup services cache
-  shell:
-      cmd: docker-compose exec services_php bin/console cache:warmup --env=prod | cat
-      chdir: /srv/service/services

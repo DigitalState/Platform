@@ -3,4 +3,4 @@
   hosts: server
   become: true
   roles:
-      - { role: service/proxy/container/stop, when: proxy is not none }
+      - { role: app/proxy/container/stop, when: proxy is not none }

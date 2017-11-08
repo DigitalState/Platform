@@ -1,6 +1,0 @@
----
-- name: Download interactions repository
-  git:
-      version: '{{ interactions_version }}'
-      repo: '{{ interactions_repository }}'
-      dest: /srv/service/interactions

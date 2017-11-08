@@ -1,0 +1,7 @@
+---
+- name: Stop logs container
+  shell:
+      cmd: docker-compose stop
+      chdir: /srv/logs
+  register: output
+  changed_when: output.stderr != ''

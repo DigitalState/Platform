@@ -1,0 +1,23 @@
+---
+- name: Backup identities fixtures directory
+  shell: 'cp -R /srv/identities/src/AppBundle/Resources/data/{{ fixtures }} /srv/identities/src/AppBundle/Resources/data/_{{ fixtures }}'
+
+- name: Download custom identities fixtures directory
+  copy:
+      src: '/root/resource/data/{{ fixtures }}/identities/'
+      dest: '/srv/identities/src/AppBundle/Resources/data/{{ fixtures }}'
+
+- import_tasks: load.yml
+
+# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
+- name: Pause while identities fixtures load
+  pause:
+      seconds: 15
+
+- name: Delete custom identities fixtures directory
+  file:
+      path: '/srv/identities/src/AppBundle/Resources/data/{{ fixtures }}'
+      state: absent
+
+- name: Restore identities fixtures directory backup
+  shell: 'mv /srv/identities/src/AppBundle/Resources/data/_{{ fixtures }} /srv/identities/src/AppBundle/Resources/data/{{ fixtures }}'

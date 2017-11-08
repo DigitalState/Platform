@@ -1,6 +1,0 @@
----
-- name: Download records repository
-  git:
-      version: '{{ records_version }}'
-      repo: '{{ records_repository }}'
-      dest: /srv/service/records

@@ -1,0 +1,6 @@
+---
+- name: Download core repository
+  git:
+      version: '{{ core_version }}'
+      repo: '{{ core_repository }}'
+      dest: /srv/core

@@ -1,6 +1,0 @@
----
-- name: Set authentication config
-  shell:
-      cmd: 'docker-compose exec authentication_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
-      chdir: /srv/service/authentication
-  with_dict: '{{ config }}'

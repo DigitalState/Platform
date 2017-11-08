@@ -1,0 +1,7 @@
+---
+- name: Up services container
+  shell:
+      cmd: docker-compose up -d
+      chdir: /srv/services
+  register: output
+  changed_when: output.stderr != 'services_services_db_1 is up-to-date\nservices_services_php_1 is up-to-date\nservices_services_nginx_1 is up-to-date'

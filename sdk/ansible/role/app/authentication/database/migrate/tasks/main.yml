@@ -1,0 +1,5 @@
+---
+- name: Migrate authentication database
+  shell:
+      cmd: docker-compose exec authentication_php bin/console doctrine:migrations:migrate --no-interaction | cat
+      chdir: /srv/authentication

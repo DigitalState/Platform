@@ -1,7 +1,0 @@
----
-- name: Up identities container
-  shell:
-      cmd: docker-compose up -d
-      chdir: /srv/service/identities
-  register: output
-  changed_when: output.stderr != 'identities_identities_db_1 is up-to-date\nidentities_identities_php_1 is up-to-date\nidentities_identities_nginx_1 is up-to-date'

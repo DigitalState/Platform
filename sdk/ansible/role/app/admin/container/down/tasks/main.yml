@@ -1,0 +1,7 @@
+---
+- name: Down admin container
+  shell:
+      cmd: docker-compose down
+      chdir: /srv/admin
+  register: output
+  changed_when: output.stderr != ''

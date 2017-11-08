@@ -1,0 +1,12 @@
+---
+- name: Download cases jwt private key
+  copy:
+      src: '{{ jwt_private_key }}'
+      dest: /srv/cases/var/jwt/key
+      mode: 0600
+
+- name: Download cases jwt public key
+  copy:
+      src: '{{ jwt_public_key }}'
+      dest: /srv/cases/var/jwt/key.pub
+      mode: 0600

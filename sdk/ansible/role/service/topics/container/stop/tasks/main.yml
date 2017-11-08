@@ -1,7 +1,0 @@
----
-- name: Stop topics container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/service/topics
-  register: output
-  changed_when: output.stderr != ''

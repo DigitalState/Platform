@@ -1,0 +1,7 @@
+---
+- name: Up logs container
+  shell:
+      cmd: docker-compose up -d
+      chdir: /srv/logs
+  register: output
+  changed_when: output.stderr != 'logs_logs_db_1 is up-to-date\nlogs_logs_php_1 is up-to-date\nlogs_logs_nginx_1 is up-to-date'

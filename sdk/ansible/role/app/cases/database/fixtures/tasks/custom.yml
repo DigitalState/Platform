@@ -1,0 +1,23 @@
+---
+- name: Backup cases fixtures directory
+  shell: 'cp -R /srv/cases/src/AppBundle/Resources/data/{{ fixtures }} /srv/cases/src/AppBundle/Resources/data/_{{ fixtures }}'
+
+- name: Download custom cases fixtures directory
+  copy:
+      src: '/root/resource/data/{{ fixtures }}/cases/'
+      dest: '/srv/cases/src/AppBundle/Resources/data/{{ fixtures }}'
+
+- import_tasks: load.yml
+
+# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
+- name: Pause while cases fixtures load
+  pause:
+      seconds: 15
+
+- name: Delete custom cases fixtures directory
+  file:
+      path: '/srv/cases/src/AppBundle/Resources/data/{{ fixtures }}'
+      state: absent
+
+- name: Restore cases fixtures directory backup
+  shell: 'mv /srv/cases/src/AppBundle/Resources/data/_{{ fixtures }} /srv/cases/src/AppBundle/Resources/data/{{ fixtures }}'

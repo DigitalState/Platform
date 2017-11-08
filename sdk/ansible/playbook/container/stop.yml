@@ -3,13 +3,13 @@
   hosts: server
   become: true
   roles:
-      - { role: service/tasks/container/stop, when: tasks is not none }
-      - { role: service/services/container/stop, when: services is not none }
-      - { role: service/records/container/stop, when: records is not none }
-      - { role: service/identities/container/stop, when: identities is not none }
-      - { role: service/formio/container/stop, when: formio is not none }
-      - { role: service/cms/container/stop, when: cms is not none }
-      - { role: service/cases/container/stop, when: cases is not none }
-      - { role: service/camunda/container/stop, when: camunda is not none }
-      - { role: service/authentication/container/stop, when: authentication is not none }
-      - { role: service/assets/container/stop, when: assets is not none }
+      - { role: app/tasks/container/stop, when: tasks is not none }
+      - { role: app/services/container/stop, when: services is not none }
+      - { role: app/records/container/stop, when: records is not none }
+      - { role: app/identities/container/stop, when: identities is not none }
+      - { role: app/formio/container/stop, when: formio is not none }
+      - { role: app/cms/container/stop, when: cms is not none }
+      - { role: app/cases/container/stop, when: cases is not none }
+      - { role: app/camunda/container/stop, when: camunda is not none }
+      - { role: app/authentication/container/stop, when: authentication is not none }
+      - { role: app/assets/container/stop, when: assets is not none }

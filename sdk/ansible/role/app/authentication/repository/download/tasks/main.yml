@@ -1,0 +1,6 @@
+---
+- name: Download authentication repository
+  git:
+      version: '{{ authentication_version }}'
+      repo: '{{ authentication_repository }}'
+      dest: /srv/authentication

@@ -1,0 +1,6 @@
+---
+- name: Download monitor repository
+  git:
+      version: '{{ monitor_version }}'
+      repo: '{{ monitor_repository }}'
+      dest: /srv/monitor

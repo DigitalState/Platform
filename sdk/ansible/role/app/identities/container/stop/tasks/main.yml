@@ -1,0 +1,7 @@
+---
+- name: Stop identities container
+  shell:
+      cmd: docker-compose stop
+      chdir: /srv/identities
+  register: output
+  changed_when: output.stderr != ''

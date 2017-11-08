@@ -1,7 +1,0 @@
----
-- name: Up admin container
-  shell:
-      cmd: docker-compose up -d
-      chdir: /srv/spa/admin
-  register: output
-  changed_when: output.stderr != 'Starting admin_ng2admin_1 ... \r\nStarting admin_ng2admin_1\n\u001b[1A\u001b[2K\rStarting admin_ng2admin_1 ... \u001b[32mdone\u001b[0m\r\u001b[1B'

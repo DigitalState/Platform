@@ -1,6 +1,0 @@
----
-- name: Download proxy repository
-  git:
-      version: '{{ proxy_version }}'
-      repo: '{{ proxy_repository }}'
-      dest: /srv/service/proxy

@@ -1,7 +1,0 @@
----
-- name: Down formio container
-  shell:
-      cmd: docker-compose down
-      chdir: /srv/service/formio
-  register: output
-  changed_when: output.stderr != ''

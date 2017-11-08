@@ -1,5 +1,0 @@
----
-- name: Migrate assets database
-  shell:
-      cmd: docker-compose exec assets_php bin/console doctrine:migrations:migrate --no-interaction | cat
-      chdir: /srv/service/assets

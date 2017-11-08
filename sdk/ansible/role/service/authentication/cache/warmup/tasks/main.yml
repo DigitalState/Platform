@@ -1,5 +1,0 @@
----
-- name: Warmup authentication cache
-  shell:
-      cmd: docker-compose exec authentication_php bin/console cache:warmup --env=prod | cat
-      chdir: /srv/service/authentication

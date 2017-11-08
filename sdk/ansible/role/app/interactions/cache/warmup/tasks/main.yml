@@ -1,0 +1,5 @@
+---
+- name: Warmup interactions cache
+  shell:
+      cmd: docker-compose exec interactions_php bin/console cache:warmup --env=prod | cat
+      chdir: /srv/interactions

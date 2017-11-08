@@ -1,0 +1,5 @@
+---
+- name: Migrate interactions database
+  shell:
+      cmd: docker-compose exec php bin/console doctrine:migrations:migrate --no-interaction | cat
+      chdir: /srv/interactions

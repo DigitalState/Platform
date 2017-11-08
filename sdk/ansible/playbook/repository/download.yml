@@ -3,25 +3,25 @@
   hosts: server
   become: true
   roles:
-      - { role: resource/documentation/repository/download, when: documentation is not none }
-      - { role: resource/guide/repository/download, when: guide is not none }
-      - { role: service/proxy/repository/download, when: proxy is not none }
-      - { role: service/assets/repository/download, when: assets is not none }
-      - { role: service/authentication/repository/download, when: authentication is not none }
-      - { role: service/camunda/repository/download, when: camunda is not none }
-      - { role: service/cases/repository/download, when: cases is not none }
-      - { role: service/cms/repository/download, when: cms is not none }
-      - { role: service/core/repository/download, when: core is not none }
-      - { role: service/discovery/repository/download, when: discovery is not none }
-      - { role: service/formio/repository/download, when: formio is not none }
-      - { role: service/identities/repository/download, when: identities is not none }
-      - { role: service/interactions/repository/download, when: interactions is not none }
-      - { role: service/logs/repository/download, when: logs is not none }
-      - { role: service/records/repository/download, when: records is not none }
-      - { role: service/services/repository/download, when: services is not none }
-      - { role: service/tasks/repository/download, when: tasks is not none }
-      - { role: service/topics/repository/download, when: topics is not none }
-      - { role: spa/admin/repository/download, when: admin is not none }
-      - { role: spa/monitor/repository/download, when: monitor is not none }
-      - { role: spa/portal/repository/download, when: portal is not none }
-      - { role: spa/ui/repository/download, when: ui is not none }
+      - { role: app/documentation/repository/download, when: documentation is not none }
+      - { role: app/guide/repository/download, when: guide is not none }
+      - { role: app/proxy/repository/download, when: proxy is not none }
+      - { role: app/assets/repository/download, when: assets is not none }
+      - { role: app/authentication/repository/download, when: authentication is not none }
+      - { role: app/camunda/repository/download, when: camunda is not none }
+      - { role: app/cases/repository/download, when: cases is not none }
+      - { role: app/cms/repository/download, when: cms is not none }
+      - { role: app/core/repository/download, when: core is not none }
+      - { role: app/discovery/repository/download, when: discovery is not none }
+      - { role: app/formio/repository/download, when: formio is not none }
+      - { role: app/identities/repository/download, when: identities is not none }
+      - { role: app/interactions/repository/download, when: interactions is not none }
+      - { role: app/logs/repository/download, when: logs is not none }
+      - { role: app/records/repository/download, when: records is not none }
+      - { role: app/services/repository/download, when: services is not none }
+      - { role: app/tasks/repository/download, when: tasks is not none }
+      - { role: app/topics/repository/download, when: topics is not none }
+      - { role: app/admin/repository/download, when: admin is not none }
+      - { role: app/monitor/repository/download, when: monitor is not none }
+      - { role: app/portal/repository/download, when: portal is not none }
+      - { role: app/ui/repository/download, when: ui is not none }

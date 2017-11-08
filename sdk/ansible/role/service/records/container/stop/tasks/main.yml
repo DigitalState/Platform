@@ -1,7 +1,0 @@
----
-- name: Stop records container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/service/records
-  register: output
-  changed_when: output.stderr != ''

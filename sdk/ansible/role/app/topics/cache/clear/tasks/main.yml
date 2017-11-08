@@ -1,0 +1,5 @@
+---
+- name: Clear topics cache
+  shell:
+      cmd: docker-compose exec topics_php bin/console cache:clear --no-warmup --env=prod | cat
+      chdir: /srv/topics

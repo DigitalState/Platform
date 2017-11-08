@@ -1,0 +1,6 @@
+---
+- name: Set interactions config
+  shell:
+      cmd: 'docker-compose exec interactions_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+      chdir: /srv/interactions
+  with_dict: '{{ config }}'

@@ -1,0 +1,7 @@
+---
+- name: Down services container
+  shell:
+      cmd: docker-compose down
+      chdir: /srv/services
+  register: output
+  changed_when: output.stderr != ''

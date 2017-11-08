@@ -3,11 +3,11 @@
   hosts: server
   become: true
   roles:
-      - { role: service/assets/cache/clear, when: assets is not none }
-      - { role: service/authentication/cache/clear, when: authentication is not none }
-      - { role: service/cases/cache/clear, when: cases is not none }
-      - { role: service/cms/cache/clear, when: cms is not none }
-      - { role: service/identities/cache/clear, when: identities is not none }
-      - { role: service/records/cache/clear, when: records is not none }
-      - { role: service/services/cache/clear, when: services is not none }
-      - { role: service/tasks/cache/clear, when: tasks is not none }
+      - { role: app/assets/cache/clear, when: assets is not none }
+      - { role: app/authentication/cache/clear, when: authentication is not none }
+      - { role: app/cases/cache/clear, when: cases is not none }
+      - { role: app/cms/cache/clear, when: cms is not none }
+      - { role: app/identities/cache/clear, when: identities is not none }
+      - { role: app/records/cache/clear, when: records is not none }
+      - { role: app/services/cache/clear, when: services is not none }
+      - { role: app/tasks/cache/clear, when: tasks is not none }

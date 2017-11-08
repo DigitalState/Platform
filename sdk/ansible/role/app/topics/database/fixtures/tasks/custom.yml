@@ -1,0 +1,23 @@
+---
+- name: Backup topics fixtures directory
+  shell: 'cp -R /srv/topics/src/AppBundle/Resources/data/{{ fixtures }} /srv/topics/src/AppBundle/Resources/data/_{{ fixtures }}'
+
+- name: Download custom topics fixtures directory
+  copy:
+      src: '/root/resource/data/{{ fixtures }}/topics/'
+      dest: '/srv/topics/src/AppBundle/Resources/data/{{ fixtures }}'
+
+- import_tasks: load.yml
+
+# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
+- name: Pause while topics fixtures load
+  pause:
+      seconds: 15
+
+- name: Delete custom topics fixtures directory
+  file:
+      path: '/srv/topics/src/AppBundle/Resources/data/{{ fixtures }}'
+      state: absent
+
+- name: Restore topics fixtures directory backup
+  shell: 'mv /srv/topics/src/AppBundle/Resources/data/_{{ fixtures }} /srv/topics/src/AppBundle/Resources/data/{{ fixtures }}'

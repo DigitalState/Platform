@@ -1,7 +1,0 @@
----
-- name: Down cms container
-  shell:
-      cmd: docker-compose down
-      chdir: /srv/service/cms
-  register: output
-  changed_when: output.stderr != ''

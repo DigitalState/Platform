@@ -1,7 +1,0 @@
----
-- name: Down identities container
-  shell:
-      cmd: docker-compose down
-      chdir: /srv/service/identities
-  register: output
-  changed_when: output.stderr != ''

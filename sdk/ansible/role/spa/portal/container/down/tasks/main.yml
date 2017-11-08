@@ -1,7 +1,0 @@
----
-- name: Down portal container
-  shell:
-      cmd: docker-compose down
-      chdir: /srv/spa/portal
-  register: output
-  changed_when: output.stderr != ''

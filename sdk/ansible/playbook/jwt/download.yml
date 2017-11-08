@@ -3,11 +3,11 @@
   hosts: server
   become: true
   roles:
-      - { role: service/assets/jwt/download, when: assets is not none }
-      - { role: service/authentication/jwt/download, when: authentication is not none }
-      - { role: service/cases/jwt/download, when: cases is not none }
-      - { role: service/cms/jwt/download, when: cms is not none }
-      - { role: service/identities/jwt/download, when: identities is not none }
-      - { role: service/records/jwt/download, when: records is not none }
-      - { role: service/services/jwt/download, when: services is not none }
-      - { role: service/tasks/jwt/download, when: tasks is not none }
+      - { role: app/assets/jwt/download, when: assets is not none }
+      - { role: app/authentication/jwt/download, when: authentication is not none }
+      - { role: app/cases/jwt/download, when: cases is not none }
+      - { role: app/cms/jwt/download, when: cms is not none }
+      - { role: app/identities/jwt/download, when: identities is not none }
+      - { role: app/records/jwt/download, when: records is not none }
+      - { role: app/services/jwt/download, when: services is not none }
+      - { role: app/tasks/jwt/download, when: tasks is not none }
