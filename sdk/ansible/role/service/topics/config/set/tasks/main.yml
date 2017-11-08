@@ -1,4 +1,6 @@
 ---
 - name: Set topics config
-  shell: 'docker-compose -f /srv/service/topics/docker-compose.yml exec topics_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+  shell:
+      cmd: 'docker-compose exec topics_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+      chdir: /srv/service/topics
   with_dict: '{{ config }}'

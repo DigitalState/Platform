@@ -1,3 +1,5 @@
 ---
 - name: Warmup assets cache
-  shell: 'docker-compose -f /srv/service/assets/docker-compose.yml exec assets_php bin/console cache:warmup --env=prod | cat'
+  shell:
+      cmd: docker-compose exec assets_php bin/console cache:warmup --env=prod | cat
+      chdir: /srv/service/assets

@@ -14,7 +14,9 @@
   when: directory.stat.exists == true
 
 - name: Load records database fixtures
-  shell: 'docker-compose -f /srv/service/records/docker-compose.yml exec records_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+  shell:
+      cmd: 'docker-compose exec records_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+      chdir: /srv/service/records
 
 # The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
 - name: Pause while records fixtures load

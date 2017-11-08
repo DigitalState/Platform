@@ -1,4 +1,6 @@
 ---
 - name: Set assets config
-  shell: 'docker-compose -f /srv/service/assets/docker-compose.yml exec assets_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+  shell:
+      cmd: 'docker-compose exec assets_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+      chdir: /srv/service/assets
   with_dict: '{{ config }}'

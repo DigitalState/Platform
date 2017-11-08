@@ -1,3 +1,5 @@
 ---
 - name: Migrate tasks database
-  shell: 'docker-compose -f /srv/service/tasks/docker-compose.yml exec tasks_php bin/console doctrine:migrations:migrate --no-interaction | cat'
+  shell:
+      cmd: docker-compose exec tasks_php bin/console doctrine:migrations:migrate --no-interaction | cat
+      chdir: /srv/service/tasks

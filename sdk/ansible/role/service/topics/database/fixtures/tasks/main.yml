@@ -1,3 +1,5 @@
 ---
 - name: Load topics database fixtures
-  shell: 'docker-compose -f /srv/service/topics/docker-compose.yml exec php bin/console doctrine:fixtures:load --env={{ fixtures }} --no-interaction | cat'
+  shell:
+      cmd: 'docker-compose exec php bin/console doctrine:fixtures:load --env={{ fixtures }} --no-interaction | cat'
+      chdir: /srv/service/topics

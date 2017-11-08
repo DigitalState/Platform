@@ -1,3 +1,5 @@
 ---
 - name: Warmup interactions cache
-  shell: 'docker-compose -f /srv/service/interactions/docker-compose.yml exec interactions_php bin/console cache:warmup --env=prod | cat'
+  shell:
+      cmd: docker-compose exec interactions_php bin/console cache:warmup --env=prod | cat
+      chdir: /srv/service/interactions

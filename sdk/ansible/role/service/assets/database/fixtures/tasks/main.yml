@@ -14,7 +14,9 @@
   when: directory.stat.exists == true
 
 - name: Load assets database fixtures
-  shell: 'docker-compose -f /srv/service/assets/docker-compose.yml exec assets_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+  shell:
+      cmd: 'docker-compose exec assets_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+      chdir: /srv/service/assets
 
 # The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
 - name: Pause while assets fixtures load

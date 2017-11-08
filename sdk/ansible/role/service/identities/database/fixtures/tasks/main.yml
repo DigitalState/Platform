@@ -14,7 +14,9 @@
   when: directory.stat.exists == true
 
 - name: Load identities database fixtures
-  shell: 'docker-compose -f /srv/service/identities/docker-compose.yml exec identities_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+  shell:
+      cmd: 'docker-compose exec identities_php bin/console doctrine:fixtures:load --env={{ fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+      chdir: /srv/service/identities
 
 # The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
 - name: Pause while identities fixtures load

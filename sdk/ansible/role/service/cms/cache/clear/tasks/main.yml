@@ -1,3 +1,5 @@
 ---
 - name: Clear cms cache
-  shell: 'docker-compose -f /srv/service/cms/docker-compose.yml exec cms_php bin/console cache:clear --no-warmup --env=prod | cat'
+  shell:
+      cmd: docker-compose exec cms_php bin/console cache:clear --no-warmup --env=prod | cat
+      chdir: /srv/service/cms

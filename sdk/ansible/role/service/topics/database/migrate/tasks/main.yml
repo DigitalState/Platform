@@ -1,3 +1,5 @@
 ---
 - name: Migrate topics database
-  shell: 'docker-compose -f /srv/service/topics/docker-compose.yml exec php bin/console doctrine:migrations:migrate --no-interaction | cat'
+  shell:
+      cmd: docker-compose exec php bin/console doctrine:migrations:migrate --no-interaction | cat
+      chdir: /srv/service/topics

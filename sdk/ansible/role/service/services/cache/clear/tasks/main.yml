@@ -1,3 +1,5 @@
 ---
 - name: Clear services cache
-  shell: 'docker-compose -f /srv/service/services/docker-compose.yml exec services_php bin/console cache:clear --no-warmup --env=prod | cat'
+  shell:
+      cmd: docker-compose exec services_php bin/console cache:clear --no-warmup --env=prod | cat
+      chdir: /srv/service/services

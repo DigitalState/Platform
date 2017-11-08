@@ -1,4 +1,6 @@
 ---
 - name: Set cases config
-  shell: 'docker-compose -f /srv/service/cases/docker-compose.yml exec cases_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+  shell:
+      cmd: 'docker-compose exec cases_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+      chdir: /srv/service/cases
   with_dict: '{{ config }}'

@@ -1,4 +1,6 @@
 ---
 - name: Set authentication config
-  shell: 'docker-compose -f /srv/service/authentication/docker-compose.yml exec authentication_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+  shell:
+      cmd: 'docker-compose exec authentication_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+      chdir: /srv/service/authentication
   with_dict: '{{ config }}'

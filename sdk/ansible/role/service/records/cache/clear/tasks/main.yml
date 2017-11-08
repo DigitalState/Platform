@@ -1,3 +1,5 @@
 ---
 - name: Clear records cache
-  shell: 'docker-compose -f /srv/service/records/docker-compose.yml exec records_php bin/console cache:clear --no-warmup --env=prod | cat'
+  shell:
+      cmd: docker-compose exec records_php bin/console cache:clear --no-warmup --env=prod | cat
+      chdir: /srv/service/records

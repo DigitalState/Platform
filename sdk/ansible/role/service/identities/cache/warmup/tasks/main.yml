@@ -1,3 +1,5 @@
 ---
 - name: Warmup identities cache
-  shell: 'docker-compose -f /srv/service/identities/docker-compose.yml exec identities_php bin/console cache:warmup --env=prod | cat'
+  shell:
+      cmd: docker-compose exec identities_php bin/console cache:warmup --env=prod | cat
+      chdir: /srv/service/identities

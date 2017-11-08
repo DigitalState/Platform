@@ -1,4 +1,6 @@
 ---
 - name: Set identities config
-  shell: 'docker-compose -f /srv/service/identities/docker-compose.yml exec identities_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+  shell:
+      cmd: 'docker-compose exec identities_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+      chdir: /srv/service/identities
   with_dict: '{{ config }}'
