@@ -49,7 +49,7 @@ It also provides useful developer shortcuts to help manage multiple containers a
 
 At this point, you have the SDK container running locally as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
-8. **(Optional)** Execute the full deploy command:
+8. **(Optional)** Execute the deploy command to setup a fully working demo:
 
     ```
     ansible-playbook deploy.yml
