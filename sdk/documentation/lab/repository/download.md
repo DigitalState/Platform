@@ -2,5 +2,5 @@
 
 ```
 cd /etc/ansible/env/lab
-ansible-playbook ../../playbook/repository/download
+ansible-playbook repository/download.yml
 ```

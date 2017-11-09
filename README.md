@@ -58,7 +58,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
    docker exec -it sdk /bin/sh
    ```
 
-At this point, you have the SDK container running locally with Ansible pre-installed and ready to accept commands. Next step would be to deploy a local [lab environment](resource/orchestration/lab/index.md).
+At this point, you have the SDK container running locally with Ansible pre-installed and ready to accept commands. Next step would be to deploy a local [lab environment](sdk/documentation/lab/index.md).
 
 ## Documentation
 
