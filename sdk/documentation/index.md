@@ -1,4 +1,4 @@
-# Orchestration
+# Environments
 
 - [Lab](lab/index.md)
 - [Test](test/index.md)
