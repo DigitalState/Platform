@@ -49,6 +49,12 @@ It also provides useful developer shortcuts to help manage multiple containers a
 
 At this point, you have the SDK container running locally as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
+8. **(Optional)** Execute the full deploy command:
+
+    ```
+    ansible-playbook deploy.yml
+    ```
+
 ## Configuration
 
 The lab environment makes use of an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
@@ -104,8 +110,19 @@ Below is the full list of available commands:
         - [Down](proxy/container/down.md)
         - [Stop](proxy/container/stop.md)
 - Container
-    - Env
-        - [Configure](container/env/configure.md)
     - [Up](container/up.md)
     - [Down](container/down.md)
     - [Stop](container/stop.md)
+    - Env
+        - [Configure](container/env/configure.md)
+- Database
+    - [Migrate](database/migrate.md)
+    - Data
+        - [load](database/data/load.md)
+- Cache
+    - [Clear](cache/clear.md)
+    - [Warmup](cache/warmup.md)
+- Config
+    - [Set](config/set.md)
+    - Api
+        - [Configure](config/api/configure.md)
