@@ -53,7 +53,7 @@ At this point, you have the SDK container running locally as a bare Linux Alpine
 
 The lab environment makes use of an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
 
-For the lab environment, the host server is configured to localhost. In other words, when you will run Ansible commands, they will run against itself inside the container.
+For the lab environment, the host server is configured to localhost. In other words, when running Ansible commands, they will run against itself inside the container.
 
 <pre>
 ...
