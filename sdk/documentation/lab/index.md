@@ -79,9 +79,9 @@ Finally, you will find the list of each microservices.
 
 <pre>
 ...
-        authentication: <b>enabled</b> # ~ to disable the microservice
-        authentication_version: <b>develop</b> # The repository branch to download
-        authentication_host: <b>api.authentication.ds</b> # The host name for the microservice
+        authentication: <b>enabled</b>                      # ~ to disable the microservice
+        authentication_version: <b>develop</b>              # The repository branch to download
+        authentication_host: <b>api.authentication.ds</b>   # The host name for the microservice
 ...
 </pre>
 
