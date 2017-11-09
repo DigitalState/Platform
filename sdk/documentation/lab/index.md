@@ -77,7 +77,7 @@ Afterwards, you will find general configurations.
         jwt_public_key: <b>/root/resource/security/jwt/lab/key.pub</b>
         jwt_key_pass_phrase: <b>~</b>
 
-        fixtures: <b>dev</b>
+        data: <b>dev</b>
 ...
 </pre>
 
