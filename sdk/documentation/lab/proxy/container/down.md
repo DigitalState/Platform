@@ -1,4 +1,6 @@
-# Proxy
+# Lab Environment
+
+## Proxy
 
 This command will stop and remove the proxy container.
 

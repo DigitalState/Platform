@@ -1,4 +1,6 @@
-# Container
+# Lab Environment
+
+## Container
 
 This command will configure each containers environment file.
 

@@ -1,4 +1,6 @@
-# Download jwt keys
+# Lab Environment
+
+## Download jwt keys
 
 This command will grab the jwt keys found [here](/resource/jwt) and copy them to the appropriate directories for each services.
 

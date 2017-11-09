@@ -1,4 +1,6 @@
-# Proxy
+# Lab Environment
+
+## Proxy
 
 This command will create and boot the proxy container.
 
