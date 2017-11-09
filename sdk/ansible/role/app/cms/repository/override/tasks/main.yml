@@ -1,0 +1,10 @@
+---
+- name: Detect cms repository override directory
+  local_action: 'stat path={{ cms_repository_override }}'
+  register: directory
+
+- name: Download cms repository override directory
+  copy:
+      src: '{{ cms_repository_override }}/'
+      dest: '/srv/cms'
+  when: directory.stat.exists == true

@@ -1,0 +1,10 @@
+---
+- name: Detect camunda repository override directory
+  local_action: 'stat path={{ camunda_repository_override }}'
+  register: directory
+
+- name: Download camunda repository override directory
+  copy:
+      src: '{{ camunda_repository_override }}/'
+      dest: '/srv/camunda'
+  when: directory.stat.exists == true

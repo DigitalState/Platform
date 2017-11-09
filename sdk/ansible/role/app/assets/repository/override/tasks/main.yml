@@ -1,0 +1,10 @@
+---
+- name: Detect assets repository override directory
+  local_action: 'stat path={{ assets_repository_override }}'
+  register: directory
+
+- name: Download assets repository override directory
+  copy:
+      src: '{{ assets_repository_override }}/'
+      dest: '/srv/assets'
+  when: directory.stat.exists == true

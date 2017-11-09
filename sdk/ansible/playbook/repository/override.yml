@@ -1,0 +1,27 @@
+---
+- name: Override repositories on server
+  hosts: server
+  become: true
+  roles:
+      - { role: app/documentation/repository/override, when: documentation is not none }
+      - { role: app/guide/repository/override, when: guide is not none }
+      - { role: app/proxy/repository/override, when: proxy is not none }
+      - { role: app/assets/repository/override, when: assets is not none }
+      - { role: app/authentication/repository/override, when: authentication is not none }
+      - { role: app/camunda/repository/override, when: camunda is not none }
+      - { role: app/cases/repository/override, when: cases is not none }
+      - { role: app/cms/repository/override, when: cms is not none }
+      - { role: app/core/repository/override, when: core is not none }
+      - { role: app/discovery/repository/override, when: discovery is not none }
+      - { role: app/formio/repository/override, when: formio is not none }
+      - { role: app/identities/repository/override, when: identities is not none }
+      - { role: app/interactions/repository/override, when: interactions is not none }
+      - { role: app/logs/repository/override, when: logs is not none }
+      - { role: app/records/repository/override, when: records is not none }
+      - { role: app/services/repository/override, when: services is not none }
+      - { role: app/tasks/repository/override, when: tasks is not none }
+      - { role: app/topics/repository/override, when: topics is not none }
+      - { role: app/admin/repository/override, when: admin is not none }
+      - { role: app/monitor/repository/override, when: monitor is not none }
+      - { role: app/portal/repository/override, when: portal is not none }
+      - { role: app/ui/repository/override, when: ui is not none }

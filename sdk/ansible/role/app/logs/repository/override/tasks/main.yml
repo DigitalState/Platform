@@ -1,0 +1,10 @@
+---
+- name: Detect logs repository override directory
+  local_action: 'stat path={{ logs_repository_override }}'
+  register: directory
+
+- name: Download logs repository override directory
+  copy:
+      src: '{{ logs_repository_override }}/'
+      dest: '/srv/logs'
+  when: directory.stat.exists == true

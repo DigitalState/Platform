@@ -1,7 +1,8 @@
 ---
-- import_playbook: setup/dependencies.yml
-- import_playbook: setup/packages.yml
+- import_playbook: system/initialize.yml
+- import_playbook: system/setup.yml
 - import_playbook: repository/download.yml
+- import_playbook: repository/override.yml
 - import_playbook: jwt/download.yml
 - import_playbook: proxy/container/up.yml
 - import_playbook: container/env/configure.yml

@@ -1,0 +1,10 @@
+---
+- name: Detect tasks repository override directory
+  local_action: 'stat path={{ tasks_repository_override }}'
+  register: directory
+
+- name: Download tasks repository override directory
+  copy:
+      src: '{{ tasks_repository_override }}/'
+      dest: '/srv/tasks'
+  when: directory.stat.exists == true

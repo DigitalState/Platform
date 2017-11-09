@@ -1,0 +1,10 @@
+---
+- name: Detect proxy repository override directory
+  local_action: 'stat path={{ proxy_repository_override }}'
+  register: directory
+
+- name: Download proxy repository override directory
+  copy:
+      src: '{{ proxy_repository_override }}/'
+      dest: '/srv/proxy'
+  when: directory.stat.exists == true

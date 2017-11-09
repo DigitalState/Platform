@@ -1,0 +1,10 @@
+---
+- name: Detect cases repository override directory
+  local_action: 'stat path={{ cases_repository_override }}'
+  register: directory
+
+- name: Download cases repository override directory
+  copy:
+      src: '{{ cases_repository_override }}/'
+      dest: '/srv/cases'
+  when: directory.stat.exists == true
