@@ -1,6 +1,6 @@
 ---
 - name: Set tasks config
   shell:
-      cmd: 'docker-compose exec tasks_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+      cmd: 'docker-compose exec tasks_php php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
       chdir: /srv/tasks
   with_dict: '{{ config }}'

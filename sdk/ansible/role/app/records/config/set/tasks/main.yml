@@ -1,6 +1,6 @@
 ---
 - name: Set records config
   shell:
-      cmd: 'docker-compose exec records_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+      cmd: 'docker-compose exec records_php php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
       chdir: /srv/records
   with_dict: '{{ config }}'

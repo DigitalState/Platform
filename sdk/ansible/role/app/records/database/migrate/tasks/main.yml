@@ -1,5 +1,5 @@
 ---
 - name: Migrate records database
   shell:
-      cmd: docker-compose exec records_php bin/console doctrine:migrations:migrate --no-interaction | cat
+      cmd: docker-compose exec records_php php bin/console doctrine:migrations:migrate --no-interaction | cat
       chdir: /srv/records

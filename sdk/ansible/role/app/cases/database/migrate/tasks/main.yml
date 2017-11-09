@@ -1,5 +1,5 @@
 ---
 - name: Migrate cases database
   shell:
-      cmd: docker-compose exec cases_php bin/console doctrine:migrations:migrate --no-interaction | cat
+      cmd: docker-compose exec cases_php php bin/console doctrine:migrations:migrate --no-interaction | cat
       chdir: /srv/cases

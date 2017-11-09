@@ -1,6 +1,6 @@
 ---
 - name: Set identities config
   shell:
-      cmd: 'docker-compose exec identities_php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+      cmd: 'docker-compose exec identities_php php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
       chdir: /srv/identities
   with_dict: '{{ config }}'

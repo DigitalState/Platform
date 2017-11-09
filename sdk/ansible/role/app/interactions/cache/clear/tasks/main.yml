@@ -1,5 +1,5 @@
 ---
 - name: Clear interactions cache
   shell:
-      cmd: docker-compose exec interactions_php bin/console cache:clear --no-warmup --env=prod | cat
+      cmd: docker-compose exec interactions_php php bin/console cache:clear --no-warmup --env=prod | cat
       chdir: /srv/interactions

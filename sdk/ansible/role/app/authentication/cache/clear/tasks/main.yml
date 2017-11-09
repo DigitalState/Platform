@@ -1,5 +1,5 @@
 ---
 - name: Clear authentication cache
   shell:
-      cmd: docker-compose exec authentication_php bin/console cache:clear --no-warmup --env=prod | cat
+      cmd: docker-compose exec authentication_php php bin/console cache:clear --no-warmup --env=prod | cat
       chdir: /srv/authentication

@@ -1,5 +1,5 @@
 ---
 - name: Load authentication database fixtures
   shell:
-      cmd: 'docker-compose exec authentication_php bin/console doctrine:fixtures:load --env={{ data }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+      cmd: 'docker-compose exec authentication_php php bin/console doctrine:fixtures:load --env={{ data }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
       chdir: /srv/authentication

@@ -1,5 +1,5 @@
 ---
 - name: Clear tasks cache
   shell:
-      cmd: docker-compose exec tasks_php bin/console cache:clear --no-warmup --env=prod | cat
+      cmd: docker-compose exec tasks_php php bin/console cache:clear --no-warmup --env=prod | cat
       chdir: /srv/tasks
