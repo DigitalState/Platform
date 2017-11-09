@@ -2,6 +2,10 @@
 
 ## Proxy
 
+### Container
+
+#### Up
+
 This command will create and boot the proxy container.
 
 ```

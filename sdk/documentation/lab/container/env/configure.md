@@ -2,6 +2,10 @@
 
 ## Container
 
+### Env
+
+#### Configure
+
 This command will configure each containers environment file.
 
 ```

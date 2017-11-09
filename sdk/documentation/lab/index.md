@@ -49,7 +49,45 @@ It also provides useful shortcuts to help manage multiple containers at once.
 
 At this point, you have the SDK container running locally as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
+## Configuration
+
+The lab environment makes use of an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
+
+The host server is configured to localhost. In other words, when you will run Ansible commands, they will run against itself inside the container.
+
+<pre>
+...
+    hosts:
+        server:
+            ansible_connection: <b>local</b>
+...
+</pre>
+
+Afterwards, you will find general configurations.
+
+<pre>
+...
+        jwt_private_key: <b>/root/resource/security/jwt/lab/key</b>
+        jwt_public_key: <b>/root/resource/security/jwt/lab/key.pub</b>
+        jwt_key_pass_phrase: <b>~</b>
+
+        fixtures: <b>dev</b>
+...
+</pre>
+
+Finally, you will find the list of each microservices.
+
+<pre>
+...
+        authentication: <b>enabled</b> # ~ to disable
+        authentication_version: <b>develop</b> # The branch name
+        authentication_host: <b>api.authentication.ds</b> # The host name
+...
+</pre>
+
 ## Commands
+
+Below is the full list of available commands:
 
 - [Deploy](deploy.md)
 - System

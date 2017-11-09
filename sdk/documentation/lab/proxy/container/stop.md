@@ -2,6 +2,10 @@
 
 ## Proxy
 
+### Container
+
+#### Stop
+
 This command will stop the proxy container.
 
 ```
