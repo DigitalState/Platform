@@ -1,5 +1,9 @@
 # Lab Environment
 
+The lab environment enables the developer to run the full DigitalState architecture on your local machine as a dockerized application.
+
+It also provides useful shortcuts to help manage multiple containers at once.
+
 ## Installation
 
 1. To begin, you will need to install Docker (for [Windows](https://www.docker.com/docker-windows) / for [Mac](https://docs.docker.com/docker-for-mac) / for [Linux](https://docs.docker.com/engine/installation/#server)) on your local machine.
@@ -37,7 +41,7 @@
    docker exec -it sdk /bin/sh
    ```
 
-7. Point to the lab environment commands directory:
+7. Point to the lab environment directory:
 
     ```
     cd /etc/ansible/env/lab
@@ -47,80 +51,23 @@ At this point, you have the SDK container running locally as a bare Linux Alpine
 
 ## Commands
 
-### Deploy
-
-This command essentially executes the full gamut of commands required to deploy on a bare system.
-
-```
-ansible-playbook deploy.yml
-```
-
-### Setup system
-
-This command will setup various core packages (Git, Docker) for Linux Alpine.
-
-```
-ansible-playbook system/setup.yml
-```
-
-### Download repositories
-
-This command will download from Github all repositories that are enabled in the [inventory file](/sdk/ansible/env/lab/inventory.yml) and be placed inside the `/app` directory.
-
-```
-ansible-playbook repository/download.yml
-```
-
-### Override repositories
-
-```
-ansible-playbook repository/override.yml
-```
-
-### Download jwt keys
-
-```
-ansible-playbook jwt/download.yml
-```
-
-### Boot up proxy container
-
-```
-ansible-playbook proxy/container/up.yml
-```
-
-### Configure all container environments
-
-```
-ansible-playbook container/env/configure.yml
-```
-
-### Boot up all other containers
-
-```
-ansible-playbook container/up.yml
-```
-
-### Configure jwt key pass phrases
-
-```
-ansible-playbook jwt/configure.yml
-```
-
-### Migrate database schemas and default data
-
-```
-ansible-playbook database/migrate.yml
-```
-
-### Load database data fixtures
-
-```
-ansible-playbook database/data/load.yml
-```
-
-### Configure api host configs
-
-```
-ansible-playbook config/api/configure.yml
-```
+- [Deploy](deploy.md)
+- System
+    - [Setup](system/setup.md)
+- Repository
+    - [Download](repository/download.md)
+    - [Override](repository/override.md)
+- JWT
+    - [Download](jwt/download.md)
+    - [Configure](jwt/download.md)
+- Proxy
+    - Container
+        - [Up](proxy/container/up.md)
+        - [Down](proxy/container/down.md)
+        - [Stop](proxy/container/stop.md)
+- Container
+    - Env
+        - [Configure](container/env/configure.md)
+    - [Up](container/up.md)
+    - [Down](container/down.md)
+    - [Stop](container/stop.md)
