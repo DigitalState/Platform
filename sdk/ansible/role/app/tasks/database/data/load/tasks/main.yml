@@ -1,6 +1,6 @@
 ---
 - name: Detect custom tasks fixtures directory
-  local_action: 'stat path=/root/resource/data/{{ fixtures }}/tasks'
+  local_action: 'stat path=/root/resource/data/{{ data }}/tasks'
   register: directory
 
 - name: Load default tasks database fixtures

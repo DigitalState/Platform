@@ -1,6 +1,6 @@
 ---
 - name: Detect custom topics fixtures directory
-  local_action: 'stat path=/root/resource/data/{{ fixtures }}/topics'
+  local_action: 'stat path=/root/resource/data/{{ data }}/topics'
   register: directory
 
 - name: Load default topics database fixtures

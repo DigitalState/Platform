@@ -1,6 +1,6 @@
 ---
 - name: Detect custom interactions fixtures directory
-  local_action: 'stat path=/root/resource/data/{{ fixtures }}/interactions'
+  local_action: 'stat path=/root/resource/data/{{ data }}/interactions'
   register: directory
 
 - name: Load default interactions database fixtures

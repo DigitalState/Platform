@@ -1,6 +1,6 @@
 ---
 - name: Detect custom cases fixtures directory
-  local_action: 'stat path=/root/resource/data/{{ fixtures }}/cases'
+  local_action: 'stat path=/root/resource/data/{{ data }}/cases'
   register: directory
 
 - name: Load default cases database fixtures

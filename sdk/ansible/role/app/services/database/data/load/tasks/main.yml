@@ -1,6 +1,6 @@
 ---
 - name: Detect custom services fixtures directory
-  local_action: 'stat path=/root/resource/data/{{ fixtures }}/services'
+  local_action: 'stat path=/root/resource/data/{{ data }}/services'
   register: directory
 
 - name: Load default services database fixtures

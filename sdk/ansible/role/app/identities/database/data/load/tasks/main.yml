@@ -1,6 +1,6 @@
 ---
 - name: Detect custom identities fixtures directory
-  local_action: 'stat path=/root/resource/data/{{ fixtures }}/identities'
+  local_action: 'stat path=/root/resource/data/{{ data }}/identities'
   register: directory
 
 - name: Load default identities database fixtures

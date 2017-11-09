@@ -1,6 +1,6 @@
 ---
 - name: Detect custom assets fixtures directory
-  local_action: 'stat path=/root/resource/data/{{ fixtures }}/assets'
+  local_action: 'stat path=/root/resource/data/{{ data }}/assets'
   register: directory
 
 - name: Load default assets database fixtures

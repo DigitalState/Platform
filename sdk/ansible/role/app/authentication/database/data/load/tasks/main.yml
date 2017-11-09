@@ -1,6 +1,6 @@
 ---
 - name: Detect custom authentication fixtures directory
-  local_action: 'stat path=/root/resource/data/{{ fixtures }}/authentication'
+  local_action: 'stat path=/root/resource/data/{{ data }}/authentication'
   register: directory
 
 - name: Load default authentication database fixtures

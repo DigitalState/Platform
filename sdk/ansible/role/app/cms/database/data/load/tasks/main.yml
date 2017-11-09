@@ -1,6 +1,6 @@
 ---
 - name: Detect custom cms fixtures directory
-  local_action: 'stat path=/root/resource/data/{{ fixtures }}/cms'
+  local_action: 'stat path=/root/resource/data/{{ data }}/cms'
   register: directory
 
 - name: Load default cms database fixtures

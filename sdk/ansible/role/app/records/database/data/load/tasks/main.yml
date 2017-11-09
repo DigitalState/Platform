@@ -1,6 +1,6 @@
 ---
 - name: Detect custom records fixtures directory
-  local_action: 'stat path=/root/resource/data/{{ fixtures }}/records'
+  local_action: 'stat path=/root/resource/data/{{ data }}/records'
   register: directory
 
 - name: Load default records database fixtures
