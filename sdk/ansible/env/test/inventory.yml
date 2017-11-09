@@ -8,8 +8,8 @@ all:
     vars:
         ### General ###########################################################
 
-        jwt_private_key: /root/resource/security/jwt/test/key
-        jwt_public_key: /root/resource/security/jwt/test/key.pub
+        jwt_private_key: /root/resource/jwt/test/key
+        jwt_public_key: /root/resource/jwt/test/key.pub
         jwt_key_pass_phrase: ~
 
         data: test

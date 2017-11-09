@@ -73,8 +73,8 @@ Afterwards, you will find general configurations.
 
 <pre>
 ...
-        jwt_private_key: <b>/root/resource/security/jwt/lab/key</b>
-        jwt_public_key: <b>/root/resource/security/jwt/lab/key.pub</b>
+        jwt_private_key: <b>/root/resource/jwt/lab/key</b>
+        jwt_public_key: <b>/root/resource/jwt/lab/key.pub</b>
         jwt_key_pass_phrase: <b>~</b>
 
         data: <b>dev</b>
