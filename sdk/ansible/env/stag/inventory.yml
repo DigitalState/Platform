@@ -6,7 +6,7 @@ all:
             ansible_ssh_private_key_file: /root/.ssh/stag/key
 
     vars:
-        ### Configuration #####################################################
+        ### General ###########################################################
 
         jwt_private_key: /root/resource/security/jwt/stag/key
         jwt_public_key: /root/resource/security/jwt/stag/key.pub
@@ -14,90 +14,126 @@ all:
 
         fixtures: dev
 
-        ### Resource ##########################################################
+        ### Documentation #####################################################
 
         documentation: ~
         documentation_version: master
 
+        ### Guide #############################################################
+
         guide: ~
         guide_version: master
 
-        ### Service ###########################################################
+        ### Proxy #############################################################
 
         proxy: enabled
-        proxy_version: master
+        proxy_version: develop
+
+        ### Assets ############################################################
 
         assets: enabled
-        assets_version: master
+        assets_version: develop
         assets_host: api.assets.ds
 
+        ### Authentication ####################################################
+
         authentication: enabled
-        authentication_version: master
+        authentication_version: develop
         authentication_host: api.authentication.ds
 
+        ### Camunda ###########################################################
+
         camunda: enabled
-        camunda_version: master
+        camunda_version: develop
         camunda_host: api.camunda.ds
 
+        ### Cases #############################################################
+
         cases: enabled
-        cases_version: master
+        cases_version: develop
         cases_host: api.cases.ds
 
+        ### Cms ###############################################################
+
         cms: enabled
-        cms_version: master
+        cms_version: develop
         cms_host: api.cms.ds
 
-        discovery: enabled
-        discovery_version: master
+        ### Discovery #########################################################
+
+        discovery: ~
+        discovery_version: develop
         discovery_host: api.discovery.ds
 
+        ### Formio ############################################################
+
         formio: enabled
-        formio_version: master
+        formio_version: develop
         formio_host: api.formio.ds
 
+        ### Identities ########################################################
+
         identities: enabled
-        identities_version: master
+        identities_version: develop
         identities_host: api.identities.ds
 
-        interactions: enabled
-        interactions_version: master
+        ### Interactions ######################################################
+
+        interactions: ~
+        interactions_version: develop
         interactions_host: api.interactions.ds
 
-        logs: enabled
-        logs_version: master
+        ### Logs ##############################################################
+
+        logs: ~
+        logs_version: develop
         logs_host: api.logs.ds
 
+        ### Records ###########################################################
+
         records: enabled
-        records_version: master
+        records_version: develop
         records_host: api.records.ds
 
+        ### Services ##########################################################
+
         services: enabled
-        services_version: master
+        services_version: develop
         services_host: api.services.ds
 
-        tasks: enabled
-        tasks_version: master
+        ### Tasks #############################################################
+
+        tasks: ~
+        tasks_version: develop
         tasks_host: api.tasks.ds
 
-        topics: enabled
-        topics_version: master
+        ### Topics ############################################################
+
+        topics: ~
+        topics_version: develop
         topics_host: api.topics.ds
 
-        core: ~
-        core_version: master
+        ### Core ##############################################################
 
-        ### Spa ###############################################################
+        core: ~
+        core_version: develop
+
+        ### Admin #############################################################
 
         admin: enabled
-        admin_version: master
+        admin_version: develop
 
-        monitor: enabled
-        monitor_version: master
+        ### Monitor ###########################################################
+
+        monitor: ~
+        monitor_version: develop
+
+        ### Portal ############################################################
 
         portal: enabled
-        portal_version: master
+        portal_version: develop
+
+        ### Ui ################################################################
 
         ui: ~
-        ui_version: master
-
-        #######################################################################
+        ui_version: develop

@@ -7,5 +7,5 @@
 - import_playbook: container/up.yml
 - import_playbook: jwt/configure.yml
 - import_playbook: database/migrate.yml
-- import_playbook: database/fixtures.yml
+- import_playbook: database/data/load.yml
 - import_playbook: config/api/configure.yml
