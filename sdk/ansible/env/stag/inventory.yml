@@ -10,7 +10,7 @@ all:
 
         env: stag
 
-        directory: ~
+        directory: /srv
 
         jwt_private_key: /root/resource/jwt/stag/key
         jwt_public_key: /root/resource/jwt/stag/key.pub
