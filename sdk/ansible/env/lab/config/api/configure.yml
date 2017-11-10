@@ -1,2 +1,2 @@
 ---
-- import_playbook: ../../../../playbook/container/env/configure.yml
+- import_playbook: ../../../../playbook/config/api/configure.yml
