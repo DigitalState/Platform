@@ -1,3 +1,4 @@
 ---
-proxy_host: 127.0.0.1
-assets_host: api.assets.ds
+assets_proxy_host: 127.0.0.1
+assets_virtual_host: api.assets.ds
+assets_directory: /srv/assets

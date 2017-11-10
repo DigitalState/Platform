@@ -1,3 +1,4 @@
 ---
-proxy_host: 127.0.0.1
-records_host: api.records.ds
+records_proxy_host: 127.0.0.1
+records_virtual_host: api.records.ds
+records_directory: /srv/records

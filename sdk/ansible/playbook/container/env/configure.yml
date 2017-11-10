@@ -7,9 +7,28 @@
         shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.proxy_default.IPAddress {{ '}}' }}' proxy_proxy_1
         register: ip
 
-      - name: Create proxy host variable
+      - name: Create environment variables
         set_fact:
-            proxy_host: '{{ ip.stdout }}'
+            assets_proxy_host: '{{ ip.stdout }}'
+            assets_directory: '{{ directory }}/app/assets'
+            authentication_proxy_host: '{{ ip.stdout }}'
+            authentication_directory: '{{ directory }}/app/authentication'
+            camunda_proxy_host: '{{ ip.stdout }}'
+            camunda_directory: '{{ directory }}/app/camunda'
+            cases_proxy_host: '{{ ip.stdout }}'
+            cases_directory: '{{ directory }}/app/cases'
+            cms_proxy_host: '{{ ip.stdout }}'
+            cms_directory: '{{ directory }}/app/cms'
+            formio_proxy_host: '{{ ip.stdout }}'
+            formio_directory: '{{ directory }}/app/formio'
+            identities_proxy_host: '{{ ip.stdout }}'
+            identities_directory: '{{ directory }}/app/identities'
+            records_proxy_host: '{{ ip.stdout }}'
+            records_directory: '{{ directory }}/app/records'
+            services_proxy_host: '{{ ip.stdout }}'
+            services_directory: '{{ directory }}/app/services'
+            tasks_proxy_host: '{{ ip.stdout }}'
+            tasks_directory: '{{ directory }}/app/tasks'
 
 - name: Configure containers environment on server
   hosts: server

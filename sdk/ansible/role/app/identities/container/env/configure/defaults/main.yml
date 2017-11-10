@@ -1,3 +1,4 @@
 ---
-proxy_host: 127.0.0.1
-identities_host: api.identities.ds
+identities_proxy_host: 127.0.0.1
+identities_virtual_host: api.identities.ds
+identities_directory: /srv/identities

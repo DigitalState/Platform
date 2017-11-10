@@ -1,3 +1,4 @@
 ---
-proxy_host: 127.0.0.1
-interactions_host: api.interactions.ds
+interactions_proxy_host: 127.0.0.1
+interactions_virtual_host: api.interactions.ds
+interactions_directory: /srv/interactions

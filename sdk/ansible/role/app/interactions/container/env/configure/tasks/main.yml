@@ -3,10 +3,16 @@
   lineinfile:
       path: /srv/interactions/.env
       regexp: '^PROXY_HOST='
-      line: 'PROXY_HOST={{ proxy_host }}'
+      line: 'PROXY_HOST={{ interactions_proxy_host }}'
 
-- name: Configure interactions host environment variable
+- name: Configure virtual host environment variable
   lineinfile:
       path: /srv/interactions/.env
       regexp: '^VIRTUAL_HOST='
-      line: 'VIRTUAL_HOST={{ interactions_host }}'
+      line: 'VIRTUAL_HOST={{ interactions_virtual_host }}'
+
+- name: Configure directory environment variable
+  lineinfile:
+      path: /srv/interactions/.env
+      regexp: '^DIRECTORY='
+      line: 'DIRECTORY={{ interactions_directory }}'

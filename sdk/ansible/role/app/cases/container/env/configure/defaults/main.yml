@@ -1,3 +1,4 @@
 ---
-proxy_host: 127.0.0.1
-cases_host: api.cases.ds
+cases_proxy_host: 127.0.0.1
+cases_virtual_host: api.cases.ds
+cases_directory: /srv/cases

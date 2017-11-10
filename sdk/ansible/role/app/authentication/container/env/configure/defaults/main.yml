@@ -1,3 +1,4 @@
 ---
-proxy_host: 127.0.0.1
-authentication_host: api.authentication.ds
+authentication_proxy_host: 127.0.0.1
+authentication_virtual_host: api.authentication.ds
+authentication_directory: /srv/authentication

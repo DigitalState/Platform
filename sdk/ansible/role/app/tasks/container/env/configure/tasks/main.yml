@@ -3,10 +3,16 @@
   lineinfile:
       path: /srv/tasks/.env
       regexp: '^PROXY_HOST='
-      line: 'PROXY_HOST={{ proxy_host }}'
+      line: 'PROXY_HOST={{ tasks_proxy_host }}'
 
-- name: Configure tasks host environment variable
+- name: Configure virtual host environment variable
   lineinfile:
       path: /srv/tasks/.env
       regexp: '^VIRTUAL_HOST='
-      line: 'VIRTUAL_HOST={{ tasks_host }}'
+      line: 'VIRTUAL_HOST={{ tasks_virtual_host }}'
+
+- name: Configure directory environment variable
+  lineinfile:
+      path: /srv/tasks/.env
+      regexp: '^DIRECTORY='
+      line: 'DIRECTORY={{ tasks_directory }}'

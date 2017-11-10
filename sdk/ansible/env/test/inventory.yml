@@ -8,6 +8,10 @@ all:
     vars:
         ### General ###########################################################
 
+        env: test
+
+        directory: ~
+
         jwt_private_key: /root/resource/jwt/test/key
         jwt_public_key: /root/resource/jwt/test/key.pub
         jwt_key_pass_phrase: ~

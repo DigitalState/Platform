@@ -3,10 +3,16 @@
   lineinfile:
       path: /srv/authentication/.env
       regexp: '^PROXY_HOST='
-      line: 'PROXY_HOST={{ proxy_host }}'
+      line: 'PROXY_HOST={{ authentication_proxy_host }}'
 
 - name: Configure virtual host environment variable
   lineinfile:
       path: /srv/authentication/.env
       regexp: '^VIRTUAL_HOST='
-      line: 'VIRTUAL_HOST={{ authentication_host }}'
+      line: 'VIRTUAL_HOST={{ authentication_virtual_host }}'
+
+- name: Configure directory environment variable
+  lineinfile:
+      path: /srv/authentication/.env
+      regexp: '^DIRECTORY='
+      line: 'DIRECTORY={{ authentication_directory }}'

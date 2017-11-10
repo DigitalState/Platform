@@ -1,3 +1,4 @@
 ---
-proxy_host: 127.0.0.1
-services_host: api.services.ds
+services_proxy_host: 127.0.0.1
+services_virtual_host: api.services.ds
+services_directory: /srv/services
