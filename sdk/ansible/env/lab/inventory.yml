@@ -18,12 +18,12 @@ all:
 
         ### Documentation #####################################################
 
-        documentation: enabled
+        documentation: ~
         documentation_version: master
 
         ### Guide #############################################################
 
-        guide: enabled
+        guide: ~
         guide_version: master
 
         ### Proxy #############################################################
@@ -33,7 +33,7 @@ all:
 
         ### Assets ############################################################
 
-        assets: enabled
+        assets: ~
         assets_version: develop
         assets_host: api.assets.ds
 
@@ -45,31 +45,31 @@ all:
 
         ### Camunda ###########################################################
 
-        camunda: enabled
+        camunda: ~
         camunda_version: develop
         camunda_host: api.camunda.ds
 
         ### Cases #############################################################
 
-        cases: enabled
+        cases: ~
         cases_version: develop
         cases_host: api.cases.ds
 
         ### Cms ###############################################################
 
-        cms: enabled
+        cms: ~
         cms_version: develop
         cms_host: api.cms.ds
 
         ### Discovery #########################################################
 
-        discovery: enabled
+        discovery: ~
         discovery_version: develop
         discovery_host: api.discovery.ds
 
         ### Formio ############################################################
 
-        formio: enabled
+        formio: ~
         formio_version: develop
         formio_host: api.formio.ds
 
@@ -81,61 +81,61 @@ all:
 
         ### Interactions ######################################################
 
-        interactions: enabled
+        interactions: ~
         interactions_version: develop
         interactions_host: api.interactions.ds
 
         ### Logs ##############################################################
 
-        logs: enabled
+        logs: ~
         logs_version: develop
         logs_host: api.logs.ds
 
         ### Records ###########################################################
 
-        records: enabled
+        records: ~
         records_version: develop
         records_host: api.records.ds
 
         ### Services ##########################################################
 
-        services: enabled
+        services: ~
         services_version: develop
         services_host: api.services.ds
 
         ### Tasks #############################################################
 
-        tasks: enabled
+        tasks: ~
         tasks_version: develop
         tasks_host: api.tasks.ds
 
         ### Topics ############################################################
 
-        topics: enabled
+        topics: ~
         topics_version: develop
         topics_host: api.topics.ds
 
         ### Core ##############################################################
 
-        core: enabled
+        core: ~
         core_version: develop
 
         ### Admin #############################################################
 
-        admin: enabled
+        admin: ~
         admin_version: develop
 
         ### Monitor ###########################################################
 
-        monitor: enabled
+        monitor: ~
         monitor_version: develop
 
         ### Portal ############################################################
 
-        portal: enabled
+        portal: ~
         portal_version: develop
 
         ### Ui ################################################################
 
-        ui: enabled
+        ui: ~
         ui_version: develop

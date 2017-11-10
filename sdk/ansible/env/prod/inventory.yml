@@ -35,7 +35,7 @@ all:
 
         ### Assets ############################################################
 
-        assets: enabled
+        assets: ~
         assets_version: master
         assets_host: api.assets.ds
 
@@ -47,19 +47,19 @@ all:
 
         ### Camunda ###########################################################
 
-        camunda: enabled
+        camunda: ~
         camunda_version: master
         camunda_host: api.camunda.ds
 
         ### Cases #############################################################
 
-        cases: enabled
+        cases: ~
         cases_version: master
         cases_host: api.cases.ds
 
         ### Cms ###############################################################
 
-        cms: enabled
+        cms: ~
         cms_version: master
         cms_host: api.cms.ds
 
@@ -71,7 +71,7 @@ all:
 
         ### Formio ############################################################
 
-        formio: enabled
+        formio: ~
         formio_version: master
         formio_host: api.formio.ds
 
@@ -95,13 +95,13 @@ all:
 
         ### Records ###########################################################
 
-        records: enabled
+        records: ~
         records_version: master
         records_host: api.records.ds
 
         ### Services ##########################################################
 
-        services: enabled
+        services: ~
         services_version: master
         services_host: api.services.ds
 
@@ -124,7 +124,7 @@ all:
 
         ### Admin #############################################################
 
-        admin: enabled
+        admin: ~
         admin_version: master
 
         ### Monitor ###########################################################
@@ -134,7 +134,7 @@ all:
 
         ### Portal ############################################################
 
-        portal: enabled
+        portal: ~
         portal_version: master
 
         ### Ui ################################################################
