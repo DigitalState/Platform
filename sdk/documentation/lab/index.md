@@ -63,7 +63,8 @@ Prior to executing the deployment Ansible command, a few actions are required by
 
 ### Create Jwt Keys
 
-> The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. The authentication system requires a private and public keys to generate and validate tokens. 
+> The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
+> The authentication system requires a private and public key to generate and validate tokens. 
 > Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
 
 To create jwt keys, follow the instructions [for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), [for Mac](#) or [for Linux](https://www.ssh.com/ssh/putty/linux/puttygen). Once created, copy the key files over to the jwt resource directory.
