@@ -105,7 +105,7 @@ cd /etc/ansible/env/lab
 ansible-playbook deploy.yml
 ```
 
-This command essentially downloads all microservices repositories from Github, configures and transfers jwt keys, ups the Docker containers, migrates databases and loads data fixtures.
+This command essentially downloads repositories, configures settings, boots up containers, migrates databases and loads data fixtures for each sub-systems.
 
 ## References
 
