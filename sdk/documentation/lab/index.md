@@ -15,7 +15,7 @@ It also provides useful shortcuts to help manage multiple containers at once dur
 
 1. **Install** the SDK on your local machine.
 2. **Create** jwt keys required by the authentication system.
-3. **Configure** the Ansible inventory file.
+3. **Edit** the Directory config.
 4. **Deploy** a dockerized application locally.
 
 ## Installation
