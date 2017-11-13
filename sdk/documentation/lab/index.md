@@ -67,7 +67,10 @@ At this point, you have the SDK container running on your local machine as a bar
 
 Prior to running the deployment Ansible command, a few actions are required by the developer:
 
-1. Create Jwt Keys:
+1. Create jwt keys.
+2. Configure Ansible inventory file.
+
+### Create Jwt Keys
 
   The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. The authentication system requires a private and public keys to generate and validate tokens. 
   
@@ -77,11 +80,11 @@ Prior to running the deployment Ansible command, a few actions are required by t
 
   During deployment, the SDK will transfer jwt keys from your local machine to the appropriate containers.
 
-2. Configure Ansible Inventory File:
+### Configure Ansible Inventory File
 
   ...
 
-Run Deployment Ansible Command.
+### Run Deployment Ansible Command
 
   ...
 
