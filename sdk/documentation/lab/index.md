@@ -80,15 +80,28 @@ Follow the instructions [for Windows](https://www.ssh.com/ssh/putty/windows/putt
 
 ### Edit Directory Config
 
-The lab environment uses an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
+The lab environment uses an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
 
 The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L11) config needs to be set to the absolute path of the SDK app directory. 
 
-The value will vary depending on your local machine operating system:
+The value will vary depending on your local machine's operating system:
 
-Windows | Mac | Linux
---- | --- | ---
-1 | 2 | 3
+**Windows**
+
+Under Docker for Windows with Hyper-V, the value should be equal to the Hyper-V mounted directory path.
+
+For example, if you have put the SDK repository at `C:\Users\Demo\Sdk`, then the directory config value should be `/c/Users/Demo/Sdk/app`.
+
+**Mac**
+
+Under Docker for Mac...
+
+**Linux**
+
+Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path.
+
+For example, if you have put the SDK repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
+
 
 ### Run Deployment Ansible Command
 
