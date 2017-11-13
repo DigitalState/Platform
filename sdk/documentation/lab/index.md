@@ -13,7 +13,7 @@ It also provides useful developer shortcuts to help manage multiple containers a
 3. Open a console and make it point to the root of the repository directory:
 
    ```
-   cd /home/demo/sdk
+   cd C:\Users\Demo\Sdk
    ```
 
 4. Boot the SDK container:
@@ -47,13 +47,13 @@ It also provides useful developer shortcuts to help manage multiple containers a
     cd /etc/ansible/env/lab
     ```
 
-At this point, you have the SDK container running locally as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
+At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
 ## Configuration
 
 The lab environment makes use of an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
 
-For the lab environment, the host server is configured to localhost. This means Ansible will run commands against the container itself and setup the application on your local machine.
+For the lab environment, the host server is configured to localhost. This means Ansible will run commands against the container itself and setup the dockerized application on your local machine.
 
 <pre>
 ...
@@ -63,11 +63,11 @@ For the lab environment, the host server is configured to localhost. This means 
 ...
 </pre>
 
-Afterwards, you will find general configurations.
+Afterwards, you will find general configs.
 
 <pre>
 ...
-        env: <b>lab</b>                                            # The current environment (lab/test/dev/stag/prod). This variable is used by Ansible playbooks.
+        env: <b>lab</b>                                            # The current environment. This config is used by Ansible playbooks.
 
         directory: <b>~</b>                                        # The application directory path.
 
@@ -75,11 +75,11 @@ Afterwards, you will find general configurations.
         jwt_public_key: <b>/root/resource/jwt/lab/key.pub</b>      # The jwt public key path.
         jwt_key_pass_phrase: <b>~</b>                              # The jwt key password phrase.
 
-        data: <b>dev</b>                                           # The database data fixtures to load (dev/test).
+        data: <b>dev</b>                                           # The database data fixtures to load.
 ...
 </pre>
 
-**Note:** Ansible runs within the SDK container, meaning all file and folder path configurations are based on the SDK container filesystem and **not the local machine** filesystem. The SDK container mounts the ./resource directory from your local machine to /root/resource inside the container. Therefore, in the example above, the jwt path is **/root/resource/jwt/...** and not **/home/demo/sdk/resource/jwt/...**
+**Note:** Ansible runs within the SDK container, meaning all file and folder path configs are based on the SDK container filesystem and **not** the local machine filesystem. The SDK container mounts the **C:\Users\Demo\Sdk\resource** directory to **/root/resource**. Therefore, in the example above, the jwt private key path is set to **/root/resource/jwt/lab/key** and not **C:\Users\Demo\Sdk\resource\jwt\lab\key**
 
 Finally, you will find the list of each microservices.
 

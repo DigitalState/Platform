@@ -30,7 +30,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 3. Open a console and make it point to the root of the repository directory:
 
    ```
-   cd /home/demo/sdk
+   cd C:\Users\Demo\Sdk
    ```
 
 4. Boot the SDK container:
@@ -58,7 +58,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
    docker exec -it sdk /bin/sh
    ```
 
-At this point, you have the SDK container running locally as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
+At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
 The next step would be to deploy a local [lab environment](sdk/documentation/lab/index.md).
 
