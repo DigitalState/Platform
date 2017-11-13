@@ -59,10 +59,7 @@ At this point, you have the SDK container running on your local machine as a bar
 
 ## Deployment
 
-Prior to running the deployment Ansible command, a few actions are required by the developer:
-
-1. [Create jwt keys.](#create-jwt-keys)
-2. [Edit directory config.](#edit-directory-config)
+Prior to running the deployment Ansible command, a few actions are required by the developer.
 
 ### Create Jwt Keys
 
