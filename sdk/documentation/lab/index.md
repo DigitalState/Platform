@@ -49,17 +49,11 @@ It also provides useful developer shortcuts to help manage multiple containers a
 
 At this point, you have the SDK container running locally as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
-8. **(Optional)** Execute the deploy command to setup a fully working demo:
-
-    ```
-    ansible-playbook deploy.yml
-    ```
-
 ## Configuration
 
 The lab environment makes use of an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
 
-For the lab environment, the host server is configured to localhost. In other words, when running Ansible commands, they will run against itself inside the container.
+For the lab environment, the host server is configured to localhost. This means Ansible will run commands against the container itself and setup the application on your local machine.
 
 <pre>
 ...
@@ -85,7 +79,7 @@ Afterwards, you will find general configurations.
 ...
 </pre>
 
-**Note:** All file and folder paths are based on the SDK container filesystem and not the local machine.
+**Note:** Ansible runs within the SDK container, meaning all file and folder path configurations are based on the SDK container filesystem and **not the local machine** filesystem. The SDK container mounts the ./resource directory from your local machine to /root/resource inside the container.
 
 Finally, you will find the list of each microservices.
 
