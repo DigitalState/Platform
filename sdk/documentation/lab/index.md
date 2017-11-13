@@ -63,7 +63,7 @@ It also provides useful shortcuts to help manage multiple containers at once dur
 
 At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
-# Deployment
+## Deployment
 
 Prior to running the deployment Ansible command, a few actions are required by the developer.
 
@@ -83,7 +83,7 @@ Prior to running the deployment Ansible command, a few actions are required by t
 
   ...
 
-#References
+## References
 
 - [Full list of available commands.](commands.md)
 - [Inventory configuration file explained.](configurations.md)
