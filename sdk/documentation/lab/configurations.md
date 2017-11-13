@@ -1,4 +1,6 @@
-# Configurations
+# Lab Environment
+
+## Configurations
 
 The lab environment uses an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
 

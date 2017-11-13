@@ -1,4 +1,6 @@
-# Commands
+# Lab Environment
+
+## Commands
 
 Below is the full list of available commands:
 
