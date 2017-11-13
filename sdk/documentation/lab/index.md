@@ -61,14 +61,13 @@ At this point, you have the SDK container running on your local machine as a bar
 
 Prior to running the deployment Ansible command, a few actions are required by the developer:
 
-1. Create jwt keys.
-2. Edit `directory` config.
+1. [Create jwt keys.](#create-jwt-keys)
+2. [Edit directory config.](#edit-directory-config)
 
 ### Create Jwt Keys
 
 > The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. The authentication system requires a private and public keys to generate and validate tokens. 
-
-Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
+> Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
 
 Follow the instructions [for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), [for Mac](#), [for Linux](https://www.ssh.com/ssh/putty/linux/puttygen) to create such keys. Once the keys are created, copy the files over to the resource directory under `C:\Users\Demo\Sdk\resource\jwt\lab\key` and `C:\Users\Demo\Sdk\resource\jwt\lab\key.pub`. 
 
@@ -99,17 +98,14 @@ For example, if you have put the SDK repository at `/home/demo/sdk`, then the di
 
 ### Run Deployment Ansible Command
 
-1. Point to the lab environment directory:
+From the SDK console, point to the lab environment directory and execute the deploy Ansible command:
 
-    ```
-    cd /etc/ansible/env/lab
-    ```
+```
+cd /etc/ansible/env/lab
+ansible-playbook deploy.yml
+```
 
-2. The following command will deploy fully the dockerized application. It essentially downloads all microservices repositories from Github, configures and transfers jwt keys, ups the Docker containers, migrates databases and loads data fixtures.
-
-    ```
-    ansible-playbook deploy.yml
-    ```
+This command essentially downloads all microservices repositories from Github, configures and transfers jwt keys, ups the Docker containers, migrates databases and loads data fixtures.
 
 ## References
 
