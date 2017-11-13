@@ -66,7 +66,7 @@ The next step would be to deploy a local [lab environment](sdk/documentation/lab
 
 The SDK contains various pre-built commands, implemented as Ansible playbooks [here](sdk/documentation/index.md), to help with development, testing and deployment.
 
-Supported OS: **Alpine 3**, **Ubuntu 17.04**.
+Supported server OS: **Alpine 3**, **Ubuntu 17.04**.
 
 ## Contributing
 
