@@ -77,9 +77,7 @@ The public key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key.pub`.
 
 > The lab environment uses an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
 
-The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L11) config needs to be set to the absolute path of the SDK app directory. 
-
-The value will vary depending on your local machine's operating system:
+The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L11) config needs to be set to the absolute path of the SDK app directory. The value will vary depending on your local machine's operating system:
 
 **Windows**
 
