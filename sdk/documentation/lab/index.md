@@ -68,25 +68,34 @@ At this point, you have the SDK container running on your local machine as a bar
 Prior to running the deployment Ansible command, a few actions are required by the developer:
 
 1. Create jwt keys.
-2. Configure Ansible inventory file.
+2. Edit `directory` config.
 
 ### Create Jwt Keys
 
-  The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. The authentication system requires a private and public keys to generate and validate tokens. 
-  
-  Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
-  
-  Follow the instructions [for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), [for Mac](#), [for Linux](https://www.ssh.com/ssh/putty/linux/puttygen) to create such keys. Once the keys are created, copy the files over to the resource directory under `C:\Users\Demo\Sdk\resource\jwt\lab\key` and `C:\Users\Demo\Sdk\resource\jwt\lab\key.pub`. 
+The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. The authentication system requires a private and public keys to generate and validate tokens. 
 
-  During deployment, the SDK will transfer jwt keys from your local machine to the appropriate containers.
+Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
 
-### Configure Ansible Inventory File
+Follow the instructions [for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), [for Mac](#), [for Linux](https://www.ssh.com/ssh/putty/linux/puttygen) to create such keys. Once the keys are created, copy the files over to the resource directory under `C:\Users\Demo\Sdk\resource\jwt\lab\key` and `C:\Users\Demo\Sdk\resource\jwt\lab\key.pub`. 
 
-  ...
+### Edit Directory Config
+
+The lab environment uses an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
+
+The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L11) config needs to be set to the absolute path of the SDK app directory. 
+
+The value will vary depending on your local machine operating system:
+
+| Windows | Mac | Linux |
+| 1 | 2 | 3 |
 
 ### Run Deployment Ansible Command
 
-  ...
+The following command will deploy fully the dockerized application. It essentially downloads all microservices repositories from Github, configures and transfers jwt keys, ups contains, migrations databases and loads data fixtures.
+
+```
+ansible-playbook deploy.yml
+```
 
 ## References
 
