@@ -69,7 +69,7 @@ Afterwards, you will find general configurations.
 ...
         env: <b>lab</b>                                            # The current environment. This configuration is used by Ansible playbooks.
 
-        directory: <b>~</b>                                        # The application directory path.
+        directory: <b>~</b>                                        # The application directory path. This configuration needs to be set prior to deploying. More info below...
 
         jwt_private_key: <b>/root/resource/jwt/lab/key</b>         # The jwt private key path.
         jwt_public_key: <b>/root/resource/jwt/lab/key.pub</b>      # The jwt public key path.
@@ -79,7 +79,11 @@ Afterwards, you will find general configurations.
 ...
 </pre>
 
-**Note:** Ansible runs within the SDK container, meaning all file and folder path configurations are based on the SDK container filesystem and **not** the local machine filesystem. The SDK container mounts the **C:\Users\Demo\Sdk\resource** directory to **/root/resource**. Therefore, in the example above, the jwt private key path is set to **/root/resource/jwt/lab/key** and not **C:\Users\Demo\Sdk\resource\jwt\lab\key**
+**Note:** 
+
+Ansible runs within the SDK container, meaning all file and folder path configurations are based on the SDK container filesystem and **not** the local machine filesystem. 
+
+The SDK container mounts the **C:\Users\Demo\Sdk\resource** directory to **/root/resource**. Therefore, in the example above, the jwt private key path is set to **/root/resource/jwt/lab/key** and not **C:\Users\Demo\Sdk\resource\jwt\lab\key**
 
 Finally, you will find the list of each microservices.
 
