@@ -66,7 +66,7 @@ Prior to running the deployment Ansible command, a few actions are required by t
 
 ### Create Jwt Keys
 
-The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. The authentication system requires a private and public keys to generate and validate tokens. 
+> The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. The authentication system requires a private and public keys to generate and validate tokens. 
 
 Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
 
@@ -74,7 +74,7 @@ Follow the instructions [for Windows](https://www.ssh.com/ssh/putty/windows/putt
 
 ### Edit Directory Config
 
-The lab environment uses an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
+> The lab environment uses an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
 
 The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L11) config needs to be set to the absolute path of the SDK app directory. 
 
