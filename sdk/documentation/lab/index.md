@@ -73,26 +73,28 @@ Afterwards, you will find general configurations.
 
 <pre>
 ...
-        env: <b>lab</b>
+        env: <b>lab</b>                                            # The current environment. This variable is used by Ansible playbooks.
 
-        directory: <b>~</b>
+        directory: <b>~</b>                                        # The application directory path.
 
-        jwt_private_key: <b>/root/resource/jwt/lab/key</b>
-        jwt_public_key: <b>/root/resource/jwt/lab/key.pub</b>
-        jwt_key_pass_phrase: <b>~</b>
+        jwt_private_key: <b>/root/resource/jwt/lab/key</b>         # The jwt private key path.
+        jwt_public_key: <b>/root/resource/jwt/lab/key.pub</b>      # The jwt public key path.
+        jwt_key_pass_phrase: <b>~</b>                              # The jwt key password phrase.
 
-        data: <b>dev</b>
+        data: <b>dev</b>                                           # The database data fixtures to load.
 ...
 </pre>
+
+**Note:** All file and folder paths are based on the SDK container filesystem and not the local machine.
 
 Finally, you will find the list of each microservices.
 
 <pre>
 ...
-        authentication: <b>enabled</b>                         # Whether the microservice is enabled or not
-                                                        # To disable, place a ~
-        authentication_version: <b>develop</b>                 # The repository branch to download
-        authentication_host: <b>api.authentication.ds</b>      # The host name for the microservice
+        authentication: <b>enabled</b>                             # Whether the microservice is enabled or not.
+        <b></b>                                                    # To disable, place a ~.
+        authentication_version: <b>develop</b>                     # The repository branch to download.
+        authentication_host: <b>api.authentication.ds</b>          # The host name for the microservice.
 ...
 </pre>
 
