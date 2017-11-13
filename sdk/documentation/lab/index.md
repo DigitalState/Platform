@@ -69,19 +69,19 @@ Prior to running the deployment Ansible command, a few actions are required by t
 
 - Create Jwt Keys.
 
-The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
+  The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
 
-The authentication system uses a private key to generate new tokens and a public key to validate them. To create such keys, follow these [instructions for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), these [instructions for Linux](https://www.ssh.com/ssh/putty/linux/puttygen).
+  The authentication system uses a private key to generate new tokens and a public key to validate them. To create such keys, follow these [instructions for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), these [instructions for Linux](https://www.ssh.com/ssh/putty/linux/puttygen).
 
-During deployment, the SDK will transfer jwt keys from your local machine to the appropriate containers.
+  During deployment, the SDK will transfer jwt keys from your local machine to the appropriate containers.
 
 - Configure Ansible Inventory File.
 
-...
+  ...
 
 - Run Deployment Ansible Command.
 
-...
+  ...
 
 #References
 
