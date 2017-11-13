@@ -86,8 +86,9 @@ The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/
 
 The value will vary depending on your local machine operating system:
 
-| Windows | Mac | Linux |
-| 1 | 2 | 3 |
+Windows | Mac | Linux
+--- | --- | ---
+1 | 2 | 3
 
 ### Run Deployment Ansible Command
 
