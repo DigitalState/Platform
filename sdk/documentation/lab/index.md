@@ -55,12 +55,6 @@ It also provides useful shortcuts to help manage multiple containers at once dur
    docker exec -it sdk /bin/sh
    ```
 
-7. Point to the lab environment directory:
-
-    ```
-    cd /etc/ansible/env/lab
-    ```
-
 At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
 ## Deployment
@@ -105,11 +99,17 @@ For example, if you have put the SDK repository at `/home/demo/sdk`, then the di
 
 ### Run Deployment Ansible Command
 
-The following command will deploy fully the dockerized application. It essentially downloads all microservices repositories from Github, configures and transfers jwt keys, ups the Docker containers, migrates databases and loads data fixtures.
+1. Point to the lab environment directory:
 
-```
-ansible-playbook deploy.yml
-```
+    ```
+    cd /etc/ansible/env/lab
+    ```
+
+2. The following command will deploy fully the dockerized application. It essentially downloads all microservices repositories from Github, configures and transfers jwt keys, ups the Docker containers, migrates databases and loads data fixtures.
+
+    ```
+    ansible-playbook deploy.yml
+    ```
 
 ## References
 
