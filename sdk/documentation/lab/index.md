@@ -9,7 +9,7 @@ It also provides useful shortcuts to help manage multiple containers at once dur
 - [Synopsis](#synopsis)
 - [Installation](#installation)
 - [Deployment](#deployment)
-- [Development](#development)
+- [References](#references)
 
 ## Synopsis
 
@@ -65,95 +65,25 @@ At this point, you have the SDK container running on your local machine as a bar
 
 # Deployment
 
-Prior to deploying the application, jwt keys needs to be created and the Ansible inventory file needs to be properly configured.
+Prior to running the deployment Ansible command, a few actions are required by the developer.
 
-## Jwt Keys
+## Create Jwt Keys
 
-The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for its authentication system. 
+The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
 
-It uses a private and public key to generate and validate jwt tokens. To create such keys, follow these [instructions for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), these [instructions for Linux](https://www.ssh.com/ssh/putty/linux/puttygen).
+The authentication system uses a private key to generate new tokens and a public key to validate them. To create such keys, follow these [instructions for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), these [instructions for Linux](https://www.ssh.com/ssh/putty/linux/puttygen).
 
 During deployment, the SDK will transfer jwt keys from your local machine to the appropriate containers.
 
-## Inventory File
+## Configure Ansible Inventory File
 
-The lab environment uses an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
-
-For this environment, the host server is configured to localhost. This means Ansible will run commands against the container itself and deploy the dockerized application on your local machine.
-
-<pre>
 ...
-    hosts:
-        server:
-            ansible_connection: <b>local</b>
+
+## Run Deployment Ansible Command
+
 ...
-</pre>
 
-Afterwards, you will find general configurations.
+#References
 
-**Note:** 
-
-Ansible runs within the SDK container, meaning all file and folder path configurations are based on the SDK container filesystem and **not** the local machine filesystem. 
-
-The SDK container mounts the **C:\Users\Demo\Sdk\resource** directory to **/root/resource**. Therefore, in the example above, the jwt private key path is set to **/root/resource/jwt/lab/key** and not **C:\Users\Demo\Sdk\resource\jwt\lab\key**
-
-<pre>
-...
-        env: <b>lab</b>                                            # The current environment.
-
-        directory: <b>~</b>                                        # The application directory path.
-
-        jwt_private_key: <b>/root/resource/jwt/lab/key</b>         # The jwt private key path.
-        jwt_public_key: <b>/root/resource/jwt/lab/key.pub</b>      # The jwt public key path.
-        jwt_key_pass_phrase: <b>~</b>                              # The jwt key password phrase.
-
-        data: <b>dev</b>                                           # The database data fixtures to load.
-...
-</pre>
-
-Finally, you will find the list of each microservices.
-
-<pre>
-...
-        authentication: <b>enabled</b>                             # Whether the microservice is enabled or not.
-        <b></b>                                                    # To disable, place a ~.
-        authentication_version: <b>develop</b>                     # The repository branch to download.
-        authentication_host: <b>api.authentication.ds</b>          # The host name for the microservice.
-...
-</pre>
-
-## Commands
-
-Below is the full list of available commands:
-
-- [Deploy](deploy.md)
-- System
-    - [Setup](system/setup.md)
-- Repository
-    - [Download](repository/download.md)
-    - [Override](repository/override.md)
-- JWT
-    - [Download](jwt/download.md)
-    - [Configure](jwt/download.md)
-- Proxy
-    - Container
-        - [Up](proxy/container/up.md)
-        - [Down](proxy/container/down.md)
-        - [Stop](proxy/container/stop.md)
-- Container
-    - [Up](container/up.md)
-    - [Down](container/down.md)
-    - [Stop](container/stop.md)
-    - Env
-        - [Configure](container/env/configure.md)
-- Database
-    - [Migrate](database/migrate.md)
-    - Data
-        - [load](database/data/load.md)
-- Cache
-    - [Clear](cache/clear.md)
-    - [Warmup](cache/warmup.md)
-- Config
-    - [Set](config/set.md)
-    - Api
-        - [Configure](config/api/configure.md)
+- [Full list of available commands.](commands.md)
+- [Inventory configuration file explained.](configurations.md)
