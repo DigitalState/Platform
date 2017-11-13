@@ -2,7 +2,21 @@
 
 The lab environment enables the developer to run the full DigitalState architecture on a local machine as a dockerized application.
 
-It also provides useful developer shortcuts to help manage multiple containers at once.
+It also provides useful shortcuts to help manage multiple containers at once during development.
+
+## Table of Contents
+
+- [Synopsis](#synopsis)
+- [Installation](#installation)
+- [Deployment](#deployment)
+- [Development](#development)
+
+## Synopsis
+
+1. **Install** the SDK on your local machine.
+2. **Create** jwt keys required by the authentication system.
+3. **Configure** the Ansible inventory file.
+4. **Deploy** a dockerized application locally.
 
 ## Installation
 
@@ -49,19 +63,21 @@ It also provides useful developer shortcuts to help manage multiple containers a
 
 At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
-## Deployment
+# Deployment
 
-Once the SDK container is ready, the steps to deploy the dockerized application are as follows:
+Prior to deploying the application, jwt keys needs to be created and the Ansible inventory file needs to be properly configured.
 
-1. [Configure the environment](#Configure).
+## Jwt Keys
 
-2. [Create the jwt keys](#Create).
+The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for its authentication system. 
 
-3. [Deploy using Ansible](#Deploy).
+It uses a private and public key to generate and validate jwt tokens. To create such keys, follow these [instructions for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), these [instructions for Linux](https://www.ssh.com/ssh/putty/linux/puttygen).
 
-### Configure
+During deployment, the SDK will transfer jwt keys from your local machine to the appropriate containers.
 
-The lab environment makes use of an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
+## Inventory File
+
+The lab environment uses an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
 
 For this environment, the host server is configured to localhost. This means Ansible will run commands against the container itself and deploy the dockerized application on your local machine.
 
@@ -105,10 +121,6 @@ Finally, you will find the list of each microservices.
         authentication_host: <b>api.authentication.ds</b>          # The host name for the microservice.
 ...
 </pre>
-
-### Create
-
-### Deploy
 
 ## Commands
 
