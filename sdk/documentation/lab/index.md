@@ -105,7 +105,7 @@ For example, if you have put the SDK repository at `/home/demo/sdk`, then the di
 
 ### Run Deployment Ansible Command
 
-The following command will deploy fully the dockerized application. It essentially downloads all microservices repositories from Github, configures and transfers jwt keys, ups contains, migrations databases and loads data fixtures.
+The following command will deploy fully the dockerized application. It essentially downloads all microservices repositories from Github, configures and transfers jwt keys, ups the Docker containers, migrates databases and loads data fixtures.
 
 ```
 ansible-playbook deploy.yml
