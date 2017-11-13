@@ -56,7 +56,7 @@ The lab environment makes use of an Ansible inventory file found [here](/sdk/ans
 For the lab environment, the host server is configured to localhost. This means Ansible will run commands against the container itself and deploy the dockerized application on your local machine.
 
 <pre>
-...yaml
+...
     hosts:
         server:
             ansible_connection: <b>local</b>
@@ -66,7 +66,7 @@ For the lab environment, the host server is configured to localhost. This means 
 Afterwards, you will find general configurations.
 
 <pre>
-...yaml
+...
         env: <b>lab</b>                                            # The current environment. This configuration is used by Ansible playbooks.
 
         directory: <b>~</b>                                        # The application directory path. This configuration needs to be set prior to deploying. More info below...
@@ -88,7 +88,7 @@ The SDK container mounts the **C:\Users\Demo\Sdk\resource** directory to **/root
 Finally, you will find the list of each microservices.
 
 <pre>
-...yaml
+...
         authentication: <b>enabled</b>                             # Whether the microservice is enabled or not.
         <b></b>                                                    # To disable, place a ~.
         authentication_version: <b>develop</b>                     # The repository branch to download.
