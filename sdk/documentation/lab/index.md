@@ -59,7 +59,7 @@ At this point, you have the SDK container running on your local machine as a bar
 
 ## Deployment
 
-Prior to running the deployment Ansible command, a few actions are required by the developer.
+Prior to executing the deployment Ansible command, a few actions are required by the developer.
 
 ### Create Jwt Keys
 
@@ -97,7 +97,7 @@ Under operating systems that supports Docker natively, the value should simply b
 For example, if you have put the SDK repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
 
 
-### Run Deployment Ansible Command
+### Execute Deployment Ansible Command
 
 From the SDK console, point to the lab environment directory and execute the deploy Ansible command:
 
