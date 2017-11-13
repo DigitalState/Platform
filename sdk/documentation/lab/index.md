@@ -73,6 +73,10 @@ Afterwards, you will find general configurations.
 
 <pre>
 ...
+        env: <b>lab</b>
+
+        directory: <b>~</b>
+
         jwt_private_key: <b>/root/resource/jwt/lab/key</b>
         jwt_public_key: <b>/root/resource/jwt/lab/key.pub</b>
         jwt_key_pass_phrase: <b>~</b>
@@ -85,9 +89,10 @@ Finally, you will find the list of each microservices.
 
 <pre>
 ...
-        authentication: <b>enabled</b>                      # ~ to disable the microservice
-        authentication_version: <b>develop</b>              # The repository branch to download
-        authentication_host: <b>api.authentication.ds</b>   # The host name for the microservice
+        authentication: <b>enabled</b>                         # Whether the microservice is enabled or not
+                                                               # To disable, place a ~
+        authentication_version: <b>develop</b>                 # The repository branch to download
+        authentication_host: <b>api.authentication.ds</b>      # The host name for the microservice
 ...
 </pre>
 
