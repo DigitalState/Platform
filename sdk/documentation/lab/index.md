@@ -67,7 +67,7 @@ Afterwards, you will find general configurations.
 
 <pre>
 ...
-        env: <b>lab</b>                                            # The current environment. This variable is used by Ansible playbooks.
+        env: <b>lab</b>                                            # The current environment (lab/test/dev/stag/prod). This variable is used by Ansible playbooks.
 
         directory: <b>~</b>                                        # The application directory path.
 
@@ -75,11 +75,11 @@ Afterwards, you will find general configurations.
         jwt_public_key: <b>/root/resource/jwt/lab/key.pub</b>      # The jwt public key path.
         jwt_key_pass_phrase: <b>~</b>                              # The jwt key password phrase.
 
-        data: <b>dev</b>                                           # The database data fixtures to load.
+        data: <b>dev</b>                                           # The database data fixtures to load (dev/test).
 ...
 </pre>
 
-**Note:** Ansible runs within the SDK container, meaning all file and folder path configurations are based on the SDK container filesystem and **not the local machine** filesystem. The SDK container mounts the ./resource directory from your local machine to /root/resource inside the container.
+**Note:** Ansible runs within the SDK container, meaning all file and folder path configurations are based on the SDK container filesystem and **not the local machine** filesystem. The SDK container mounts the ./resource directory from your local machine to /root/resource inside the container. Therefore, in the example above, the jwt path is **/root/resource/jwt/...** and not **/home/demo/sdk/resource/jwt/...**
 
 Finally, you will find the list of each microservices.
 
