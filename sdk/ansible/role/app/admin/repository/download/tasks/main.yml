@@ -5,3 +5,4 @@
       repo: '{{ admin_repository }}'
       recursive: yes
       dest: /srv/admin
+      force: yes

@@ -4,3 +4,4 @@
       version: '{{ topics_version }}'
       repo: '{{ topics_repository }}'
       dest: /srv/topics
+      force: yes

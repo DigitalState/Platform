@@ -4,3 +4,4 @@
       version: '{{ records_version }}'
       repo: '{{ records_repository }}'
       dest: /srv/records
+      force: yes

@@ -4,3 +4,4 @@
       version: '{{ proxy_version }}'
       repo: '{{ proxy_repository }}'
       dest: /srv/proxy
+      force: yes

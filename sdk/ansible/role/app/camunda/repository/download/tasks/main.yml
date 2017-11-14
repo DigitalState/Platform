@@ -4,3 +4,4 @@
       version: '{{ camunda_version }}'
       repo: '{{ camunda_repository }}'
       dest: /srv/camunda
+      force: yes

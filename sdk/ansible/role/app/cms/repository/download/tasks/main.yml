@@ -4,3 +4,4 @@
       version: '{{ cms_version }}'
       repo: '{{ cms_repository }}'
       dest: /srv/cms
+      force: yes

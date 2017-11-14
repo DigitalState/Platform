@@ -4,3 +4,4 @@
       version: '{{ authentication_version }}'
       repo: '{{ authentication_repository }}'
       dest: /srv/authentication
+      force: yes

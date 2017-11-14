@@ -4,3 +4,4 @@
       version: '{{ services_version }}'
       repo: '{{ services_repository }}'
       dest: /srv/services
+      force: yes

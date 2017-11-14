@@ -4,3 +4,4 @@
       version: '{{ logs_version }}'
       repo: '{{ logs_repository }}'
       dest: /srv/logs
+      force: yes

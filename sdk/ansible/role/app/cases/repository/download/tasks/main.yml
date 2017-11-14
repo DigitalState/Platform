@@ -4,3 +4,4 @@
       version: '{{ cases_version }}'
       repo: '{{ cases_repository }}'
       dest: /srv/cases
+      force: yes

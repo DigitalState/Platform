@@ -4,3 +4,4 @@
       version: '{{ documentation_version }}'
       repo: '{{ documentation_repository }}'
       dest: /srv/documentation
+      force: yes

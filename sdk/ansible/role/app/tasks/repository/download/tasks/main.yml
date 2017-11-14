@@ -5,3 +5,4 @@
       repo: '{{ tasks_repository }}'
       key_file: /root/.git/key
       dest: /srv/tasks
+      force: yes

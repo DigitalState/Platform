@@ -4,3 +4,4 @@
       version: '{{ interactions_version }}'
       repo: '{{ interactions_repository }}'
       dest: /srv/interactions
+      force: yes

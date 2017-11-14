@@ -4,3 +4,4 @@
       version: '{{ core_version }}'
       repo: '{{ core_repository }}'
       dest: /srv/core
+      force: yes

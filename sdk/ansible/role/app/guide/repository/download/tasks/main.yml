@@ -4,3 +4,4 @@
       version: '{{ guide_version }}'
       repo: '{{ guide_repository }}'
       dest: /srv/guide
+      force: yes

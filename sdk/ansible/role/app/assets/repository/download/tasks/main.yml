@@ -4,3 +4,4 @@
       version: '{{ assets_version }}'
       repo: '{{ assets_repository }}'
       dest: /srv/assets
+      force: yes

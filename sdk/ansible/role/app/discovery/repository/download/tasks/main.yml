@@ -4,3 +4,4 @@
       version: '{{ discovery_version }}'
       repo: '{{ discovery_repository }}'
       dest: /srv/discovery
+      force: yes

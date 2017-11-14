@@ -5,3 +5,4 @@
       repo: '{{ portal_repository }}'
       recursive: yes
       dest: /srv/portal
+      force: yes
