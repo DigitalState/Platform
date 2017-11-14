@@ -1,2 +1,3 @@
 ---
+services_config_file: /srv/services/app/config/parameters.yml
 jwt_key_pass_phrase: ~

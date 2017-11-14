@@ -1,6 +1,10 @@
 ---
+- name: Waiting for tasks config file to be created.
+  wait_for:
+      path: '{{ tasks_config_file }}'
+
 - name: Configure tasks jwt key pass phrase
   lineinfile:
-      path: /srv/tasks/app/config/parameters.yml
+      path: '{{ tasks_config_file }}'
       regexp: '^\s{4}jwt_key_pass_phrase:'
       line: '    jwt_key_pass_phrase: ''{{ jwt_key_pass_phrase }}'''
