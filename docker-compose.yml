@@ -13,3 +13,4 @@ services:
             - ./app:/srv
             - ./resource:/root/resource
             - ./sdk/ansible:/etc/ansible
+            - ./sdk/git:/root/.git

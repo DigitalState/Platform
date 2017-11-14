@@ -1,4 +1,19 @@
 ---
+- name: Configure git credentials
+  hosts: server
+  become: true
+  tasks:
+      - name: Detect git credential file
+        local_action: 'stat path=/root/.git/credential'
+        register: git_credential
+        changed_when: false
+
+      - name: Create git credential variables
+        set_fact:
+            tasks_credential: '{{ lookup("file", "/root/.git/credential") }}'
+        when: git_credential.stat.exists == true
+        changed_when: false
+
 - name: Download repositories on server
   hosts: server
   become: true
