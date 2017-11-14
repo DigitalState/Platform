@@ -6,6 +6,7 @@
       - name: Obtain proxy container ip
         shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.proxy_default.IPAddress {{ '}}' }}' proxy_proxy_1
         register: ip
+        changed_when: false
 
       - name: Create environment variables
         set_fact:
@@ -29,6 +30,7 @@
             services_directory: '{{ directory }}/services'
             tasks_proxy_host: '{{ ip.stdout }}'
             tasks_directory: '{{ directory }}/tasks'
+        changed_when: false
 
 - name: Configure containers environment on server
   hosts: server
