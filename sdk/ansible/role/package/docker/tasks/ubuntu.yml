@@ -34,6 +34,6 @@
       enabled: yes
 
 - name: Install pip docker-compose package
-  command: pip install docker-compose==1.17.1
-  register: output
-  changed_when: output.stdout != ''
+  pip:
+      name: docker-compose
+      version: '{{ docker_compose_version }}'
