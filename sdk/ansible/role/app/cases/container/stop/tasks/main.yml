@@ -1,7 +1,6 @@
 ---
 - name: Stop cases container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/cases
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/cases
+      state: present
+      stopped: yes

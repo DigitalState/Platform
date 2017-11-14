@@ -1,7 +1,6 @@
 ---
 - name: Stop tasks container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/tasks
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/tasks
+      state: present
+      stopped: yes

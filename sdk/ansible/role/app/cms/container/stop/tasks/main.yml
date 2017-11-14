@@ -1,7 +1,6 @@
 ---
 - name: Stop cms container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/cms
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/cms
+      state: present
+      stopped: yes

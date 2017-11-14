@@ -1,7 +1,6 @@
 ---
 - name: Stop authentication container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/authentication
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/authentication
+      state: present
+      stopped: yes

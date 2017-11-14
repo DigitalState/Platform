@@ -1,7 +1,5 @@
 ---
 - name: Down camunda container
-  shell:
-      cmd: docker-compose down
-      chdir: /srv/camunda
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/camunda
+      state: absent

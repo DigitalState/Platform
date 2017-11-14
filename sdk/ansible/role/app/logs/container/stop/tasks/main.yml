@@ -1,7 +1,6 @@
 ---
 - name: Stop logs container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/logs
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/logs
+      state: present
+      stopped: yes

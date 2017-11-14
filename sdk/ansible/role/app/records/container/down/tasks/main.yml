@@ -1,7 +1,5 @@
 ---
 - name: Down records container
-  shell:
-      cmd: docker-compose down
-      chdir: /srv/records
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/records
+      state: absent

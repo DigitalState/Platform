@@ -5,10 +5,8 @@
   changed_when: false
 
 - name: Install python
-  raw: bash -c 'test -e /usr/bin/python || (apt -qqy update && apt install -qqy python-minimal)'
   when: os.stdout.find('Ubuntu')
-  register: output
-  changed_when: output.stdout != ''
+  import_tasks: ubuntu.yml
 
 - name: Gather facts
   setup:

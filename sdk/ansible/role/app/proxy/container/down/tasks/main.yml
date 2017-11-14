@@ -1,7 +1,5 @@
 ---
 - name: Down proxy container
-  shell:
-      cmd: docker-compose down
-      chdir: /srv/proxy
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/proxy
+      state: absent

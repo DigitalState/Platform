@@ -1,7 +1,5 @@
 ---
 - name: Down portal container
-  shell:
-      cmd: docker-compose down
-      chdir: /srv/portal
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/portal
+      state: absent

@@ -1,7 +1,5 @@
 ---
 - name: Up formio container
-  shell:
-      cmd: docker-compose up -d
-      chdir: /srv/formio
-  register: output
-  changed_when: output.stderr != 'formio_formio_mongodb_1 is up-to-date\nformio_formio_formio_1 is up-to-date'
+  docker_service:
+      project_src: /srv/formio
+      state: present

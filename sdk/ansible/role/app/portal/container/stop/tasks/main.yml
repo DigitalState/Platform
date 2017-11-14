@@ -1,7 +1,6 @@
 ---
 - name: Stop portal container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/portal
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/portal
+      state: present
+      stopped: yes

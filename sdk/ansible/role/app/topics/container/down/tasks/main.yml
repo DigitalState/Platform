@@ -1,7 +1,5 @@
 ---
 - name: Down topics container
-  shell:
-      cmd: docker-compose down
-      chdir: /srv/topics
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/topics
+      state: absent

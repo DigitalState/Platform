@@ -1,7 +1,6 @@
 ---
 - name: Stop topics container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/topics
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/topics
+      state: present
+      stopped: yes

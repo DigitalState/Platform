@@ -1,7 +1,6 @@
 ---
 - name: Stop services container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/services
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/services
+      state: present
+      stopped: yes

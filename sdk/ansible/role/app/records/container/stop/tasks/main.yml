@@ -1,7 +1,6 @@
 ---
 - name: Stop records container
-  shell:
-      cmd: docker-compose stop
-      chdir: /srv/records
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/records
+      state: present
+      stopped: yes

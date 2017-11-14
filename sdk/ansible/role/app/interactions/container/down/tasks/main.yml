@@ -1,7 +1,5 @@
 ---
 - name: Down interactions container
-  shell:
-      cmd: docker-compose down
-      chdir: /srv/interactions
-  register: output
-  changed_when: output.stderr != ''
+  docker_service:
+      project_src: /srv/interactions
+      state: absent

@@ -1,7 +1,5 @@
 ---
 - name: Up discovery container
-  shell:
-      cmd: docker-compose up -d
-      chdir: /srv/discovery
-  register: output
-  changed_when: output.stderr != 'discovery_discovery_db_1 is up-to-date\ndiscovery_discovery_php_1 is up-to-date\ndiscovery_discovery_nginx_1 is up-to-date'
+  docker_service:
+      project_src: /srv/discovery
+      state: present
