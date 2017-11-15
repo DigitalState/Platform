@@ -16,6 +16,7 @@
             authentication_directory: '{{ directory }}/authentication'
             camunda_proxy_host: '{{ ip.stdout }}'
             camunda_directory: '{{ directory }}/camunda'
+            camunda_timezone: '{{ timezone }}'
             cases_proxy_host: '{{ ip.stdout }}'
             cases_directory: '{{ directory }}/cases'
             cms_proxy_host: '{{ ip.stdout }}'

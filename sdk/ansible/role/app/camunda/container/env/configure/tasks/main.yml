@@ -1,4 +1,10 @@
 ---
+- name: Configure timezone environment variable
+  lineinfile:
+      path: /srv/camunda/.env
+      regexp: '^JAVA_OPTS='
+      line: 'JAVA_OPTS=Djava.security.egd=file:/dev/./urandom -Duser.timezone={{ camunda_timezone }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/camunda/.env
