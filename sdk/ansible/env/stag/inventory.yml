@@ -12,6 +12,8 @@ all:
 
         directory: /srv
 
+        timezone: ~
+
         jwt_private_key: /root/resource/jwt/stag/key
         jwt_public_key: /root/resource/jwt/stag/key.pub
         jwt_key_pass_phrase: ~
