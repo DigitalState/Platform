@@ -12,7 +12,7 @@ all:
 
         directory: /srv
 
-        timezone: ~
+        timezone: UTC
 
         jwt_private_key: /root/resource/jwt/prod/key
         jwt_public_key: /root/resource/jwt/prod/key.pub
