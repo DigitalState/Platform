@@ -4,7 +4,7 @@
       project_src: /srv/assets
       state: present
 
-- name: Confirm assets container bootstrap is complete
+- name: Waiting for assets container to finalize installation
   shell:
       cmd: docker-compose exec -T assets_php pidof php-fpm | cat
       chdir: /srv/assets

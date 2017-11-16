@@ -4,7 +4,7 @@
       project_src: /srv/identities
       state: present
 
-- name: Confirm identities container bootstrap is complete
+- name: Waiting for identities container to finalize installation
   shell:
       cmd: docker-compose exec -T identities_php pidof php-fpm | cat
       chdir: /srv/identities

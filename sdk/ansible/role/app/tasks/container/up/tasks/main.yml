@@ -4,7 +4,7 @@
       project_src: /srv/tasks
       state: present
 
-- name: Confirm tasks container bootstrap is complete
+- name: Waiting for tasks container to finalize installation
   shell:
       cmd: docker-compose exec -T tasks_php pidof php-fpm | cat
       chdir: /srv/tasks

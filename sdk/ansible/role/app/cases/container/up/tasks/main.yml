@@ -4,7 +4,7 @@
       project_src: /srv/cases
       state: present
 
-- name: Confirm cases container bootstrap is complete
+- name: Waiting for cases container to finalize installation
   shell:
       cmd: docker-compose exec -T cases_php pidof php-fpm | cat
       chdir: /srv/cases

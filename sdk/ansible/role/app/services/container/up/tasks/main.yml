@@ -4,7 +4,7 @@
       project_src: /srv/services
       state: present
 
-- name: Confirm services container bootstrap is complete
+- name: Waiting for services container to finalize installation
   shell:
       cmd: docker-compose exec -T services_php pidof php-fpm | cat
       chdir: /srv/services

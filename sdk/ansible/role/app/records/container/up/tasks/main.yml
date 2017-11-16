@@ -4,7 +4,7 @@
       project_src: /srv/records
       state: present
 
-- name: Confirm records container bootstrap is complete
+- name: Waiting for records container to finalize installation
   shell:
       cmd: docker-compose exec -T records_php pidof php-fpm | cat
       chdir: /srv/records

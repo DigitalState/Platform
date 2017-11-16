@@ -4,7 +4,7 @@
       project_src: /srv/cms
       state: present
 
-- name: Confirm cms container bootstrap is complete
+- name: Waiting for cms container to finalize installation
   shell:
       cmd: docker-compose exec -T cms_php pidof php-fpm | cat
       chdir: /srv/cms

@@ -4,7 +4,7 @@
       project_src: /srv/authentication
       state: present
 
-- name: Confirm authentication container bootstrap is complete
+- name: Waiting for authentication container to finalize installation
   shell:
       cmd: docker-compose exec -T authentication_php pidof php-fpm | cat
       chdir: /srv/authentication
