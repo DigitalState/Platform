@@ -3,3 +3,12 @@
   docker_service:
       project_src: /srv/tasks
       state: present
+
+- name: Confirm tasks container bootstrap is complete
+  shell:
+      cmd: docker-compose exec -T tasks_php pidof php-fpm | cat
+      chdir: /srv/tasks
+  register: output
+  until: output.stdout|match('^[0-9]+(\s[0-9]+)*$')
+  retries: 60
+  delay: 10

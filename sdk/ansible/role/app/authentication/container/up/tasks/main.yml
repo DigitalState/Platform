@@ -3,3 +3,12 @@
   docker_service:
       project_src: /srv/authentication
       state: present
+
+- name: Confirm authentication container bootstrap is complete
+  shell:
+      cmd: docker-compose exec -T authentication_php pidof php-fpm | cat
+      chdir: /srv/authentication
+  register: output
+  until: output.stdout|match('^[0-9]+(\s[0-9]+)*$')
+  retries: 60
+  delay: 10

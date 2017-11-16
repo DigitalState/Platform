@@ -3,3 +3,12 @@
   docker_service:
       project_src: /srv/cms
       state: present
+
+- name: Confirm cms container bootstrap is complete
+  shell:
+      cmd: docker-compose exec -T cms_php pidof php-fpm | cat
+      chdir: /srv/cms
+  register: output
+  until: output.stdout|match('^[0-9]+(\s[0-9]+)*$')
+  retries: 60
+  delay: 10
