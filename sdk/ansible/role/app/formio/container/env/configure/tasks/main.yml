@@ -16,3 +16,15 @@
       path: /srv/formio/.env
       regexp: '^DIRECTORY='
       line: 'DIRECTORY={{ formio_directory }}'
+
+- name: Configure client host config
+  replace:
+      path: /srv/formio/formio/client/dist/config.js
+      regexp: api\.formio\.ds
+      replace: '{{ formio_virtual_host }}'
+
+- name: Configure app host config
+  replace:
+      path: /srv/formio/formio/config/default.json
+      regexp: api\.formio\.ds
+      replace: '{{ formio_virtual_host }}'
