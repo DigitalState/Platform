@@ -85,7 +85,7 @@ Prior to deploying the application, a few actions are required by the developer:
 
     For example, if you have put the SDK repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
 
-2. Create jwt keys.
+2. Generate keys for the system.
 
     > The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
     > The authentication system requires a private and public key to generate and validate tokens. 
@@ -96,6 +96,25 @@ Prior to deploying the application, a few actions are required by the developer:
     The private key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key`.
 
     The public key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key.pub`. 
+
+3. Add entries to your host file.
+
+    > The lab environment uses an internal DNS.
+    
+    Locate your host file on your local machine and add the following entries:
+    
+    ```
+    127.0.0.1 api.assets.ds
+    127.0.0.1 api.authentication.ds
+    127.0.0.1 api.camunda.ds
+    127.0.0.1 api.cases.ds
+    127.0.0.1 api.cms.ds
+    127.0.0.1 api.formio.ds
+    127.0.0.1 api.identities.ds
+    127.0.0.1 api.services.ds
+    127.0.0.1 api.records.ds
+    127.0.0.1 api.tasks.ds
+    ```
 
 ## Deployment
 
