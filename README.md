@@ -17,8 +17,11 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 ## Synopsis
 
 **Install** Docker on your local machine.
+
 **Download** the SDK repository.
+
 **Boot** the SDK container and **enter** the console.
+
 **Execute** pre-built commands to help with various orchestration tasks.
 
 ## Installation
