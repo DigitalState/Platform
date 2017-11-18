@@ -62,7 +62,7 @@ At this point, you have the SDK container running on your local machine as a bar
 
 The next step would be to deploy a local [lab environment](sdk/documentation/lab/index.md).
 
-Supported server OS: **Alpine 3**, **Ubuntu 17.04**.
+Supported server operating systems: **Alpine 3**, **Ubuntu 17.04**.
 
 ## Contributing
 
