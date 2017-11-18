@@ -16,12 +16,6 @@ For this environment, the host server is configured to localhost. This means Ans
 
 Afterwards, you will find general configurations.
 
-**Note:** 
-
-Ansible runs within the SDK container, meaning all file and folder path configurations are based on the SDK container filesystem and **not** the local machine filesystem. 
-
-The SDK container mounts the **C:\Users\Demo\Sdk\resource** directory to **/root/resource**. Therefore, in the example below, the jwt private key path is set to **/root/resource/jwt/lab/key** and not **C:\Users\Demo\Sdk\resource\jwt\lab\key**
-
 <pre>
 ...
         env: <b>lab</b>                                            # The current environment.
@@ -35,6 +29,12 @@ The SDK container mounts the **C:\Users\Demo\Sdk\resource** directory to **/root
         data: <b>dev</b>                                           # The database data fixtures to load.
 ...
 </pre>
+
+**Note:** 
+
+Ansible runs within the SDK container, meaning all file and folder path configurations are based on the SDK container filesystem and **not** the local machine filesystem. 
+
+The SDK container mounts the **C:\Users\Demo\Sdk\resource** directory to **/root/resource**. Therefore, in the example above, the jwt private key path is set to **/root/resource/jwt/lab/key** and not **C:\Users\Demo\Sdk\resource\jwt\lab\key**
 
 Finally, you will find the list of each microservices.
 
