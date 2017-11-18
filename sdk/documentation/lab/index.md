@@ -69,33 +69,33 @@ Prior to deploying the application, a few actions are required by the developer:
 
     The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L11) config needs to be set to the absolute path of the SDK app directory. The value will vary depending on your local machine's operating system:
 
-**Windows**
+    **Windows**
 
-Under Docker for Windows with Hyper-V, the value should be equal to the Hyper-V mounted directory path.
+    Under Docker for Windows with Hyper-V, the value should be equal to the Hyper-V mounted directory path.
 
-For example, if you have put the SDK repository at `C:\Users\Demo\Sdk`, then the directory config value should be `/c/Users/Demo/Sdk/app`.
+    For example, if you have put the SDK repository at `C:\Users\Demo\Sdk`, then the directory config value should be `/c/Users/Demo/Sdk/app`.
 
-**Mac**
+    **Mac**
 
-Under Docker for Mac...
+    Under Docker for Mac...
 
-**Linux**
+    **Linux**
 
-Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path.
+    Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path.
 
-For example, if you have put the SDK repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
+    For example, if you have put the SDK repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
 
 2. Create jwt keys.
 
-> The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
-> The authentication system requires a private and public key to generate and validate tokens. 
-> Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
+    > The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
+    > The authentication system requires a private and public key to generate and validate tokens. 
+    > Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
 
-To create jwt keys, follow the instructions [for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), [for Mac](#) or [for Linux](https://www.ssh.com/ssh/putty/linux/puttygen). Once created, copy the key files over to the jwt resource directory.
+    To create jwt keys, follow the instructions [for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), [for Mac](#) or [for Linux](https://www.ssh.com/ssh/putty/linux/puttygen). Once created, copy the key files over to the jwt resource directory.
  
-The private key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key`.
+    The private key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key`.
 
-The public key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key.pub`. 
+    The public key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key.pub`. 
 
 ## Deployment
 
