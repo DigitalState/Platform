@@ -19,7 +19,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 1. **Install** Docker on your local machine.
 2. **Download** the SDK repository.
 3. **Boot** the SDK container and **enter** the console.
-4. **Execute** pre-built commands to help with various orchestration tasks.
+4. **Execute** pre-built Ansible commands to help with various orchestration tasks.
 
 ## Installation
 
@@ -61,8 +61,6 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
 The next step would be to deploy a local [lab environment](sdk/documentation/lab/index.md).
-
-Supported server operating systems: **Alpine 3**, **Ubuntu 17.04**.
 
 ## Contributing
 
