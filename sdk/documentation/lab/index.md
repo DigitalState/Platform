@@ -101,7 +101,7 @@ Prior to deploying the application, a few actions are required by the developer:
 
     > The lab environment uses an internal DNS.
     
-    Locate your host file on your local machine and add the following entries:
+    Locate the host file on your local machine and add the following entries:
     
     ```
     127.0.0.1 api.assets.ds
