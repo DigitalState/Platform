@@ -17,8 +17,8 @@ It also provides useful commands to help manage multiple containers at once duri
 1. **Install** the SDK on your local machine.
 2. **Configure** the lab environment.
 3. **Generate** keys for the system.
-4. **Deploy** the dockerized application locally.
-5. **Add** entries to your host file.
+4. **Add** entries to your host file.
+5. **Deploy** the dockerized application locally.
 
 ## Installation
 
