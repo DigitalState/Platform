@@ -39,84 +39,98 @@ all:
 
         assets: ~
         assets_version: develop
+        assets_image: download
         assets_host: api.assets.ds
 
         ### Authentication ####################################################
 
         authentication: enabled
         authentication_version: develop
+        authentication_image: download
         authentication_host: api.authentication.ds
 
         ### Camunda ###########################################################
 
         camunda: ~
         camunda_version: develop
+        camunda_image: download
         camunda_host: api.camunda.ds
 
         ### Cases #############################################################
 
         cases: ~
         cases_version: develop
+        cases_image: download
         cases_host: api.cases.ds
 
         ### Cms ###############################################################
 
         cms: ~
         cms_version: develop
+        cms_image: download
         cms_host: api.cms.ds
 
         ### Discovery #########################################################
 
         discovery: ~
         discovery_version: develop
+        discovery_image: download
         discovery_host: api.discovery.ds
 
         ### Formio ############################################################
 
         formio: ~
         formio_version: develop
+        formio_image: download
         formio_host: api.formio.ds
 
         ### Identities ########################################################
 
         identities: enabled
         identities_version: develop
+        identities_image: download
         identities_host: api.identities.ds
 
         ### Interactions ######################################################
 
         interactions: ~
         interactions_version: develop
+        interactions_image: download
         interactions_host: api.interactions.ds
 
         ### Logs ##############################################################
 
         logs: ~
         logs_version: develop
+        logs_image: download
         logs_host: api.logs.ds
 
         ### Records ###########################################################
 
         records: ~
         records_version: develop
+        records_image: download
         records_host: api.records.ds
 
         ### Services ##########################################################
 
         services: ~
         services_version: develop
+        services_image: download
         services_host: api.services.ds
 
         ### Tasks #############################################################
 
         tasks: ~
         tasks_version: develop
+        tasks_image: download
         tasks_host: api.tasks.ds
 
         ### Topics ############################################################
 
         topics: ~
         topics_version: develop
+        topics_image: download
         topics_host: api.topics.ds
 
         ### Core ##############################################################
@@ -128,16 +142,19 @@ all:
 
         admin: ~
         admin_version: develop
+        admin_vimage: download
 
         ### Monitor ###########################################################
 
         monitor: ~
         monitor_version: develop
+        monitor_image: download
 
         ### Portal ############################################################
 
         portal: ~
         portal_version: develop
+        portal_image: download
 
         ### Ui ################################################################
 

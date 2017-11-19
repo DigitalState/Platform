@@ -32,89 +32,104 @@ all:
 
         proxy: enabled
         proxy_version: develop
+        proxy_image: build
 
         ### Assets ############################################################
 
         assets: ~
         assets_version: develop
+        assets_image: build
         assets_host: api.assets.ds
 
         ### Authentication ####################################################
 
         authentication: enabled
         authentication_version: develop
+        authentication_image: build
         authentication_host: api.authentication.ds
 
         ### Camunda ###########################################################
 
         camunda: ~
         camunda_version: develop
+        camunda_image: build
         camunda_host: api.camunda.ds
 
         ### Cases #############################################################
 
         cases: ~
         cases_version: develop
+        cases_image: build
         cases_host: api.cases.ds
 
         ### Cms ###############################################################
 
         cms: ~
         cms_version: develop
+        cms_image: build
         cms_host: api.cms.ds
 
         ### Discovery #########################################################
 
         discovery: ~
         discovery_version: develop
+        discovery_image: build
         discovery_host: api.discovery.ds
 
         ### Formio ############################################################
 
         formio: ~
         formio_version: develop
+        formio_image: build
         formio_host: api.formio.ds
 
         ### Identities ########################################################
 
         identities: enabled
         identities_version: develop
+        identities_image: build
         identities_host: api.identities.ds
 
         ### Interactions ######################################################
 
         interactions: ~
         interactions_version: develop
+        interactions_image: build
         interactions_host: api.interactions.ds
 
         ### Logs ##############################################################
 
         logs: ~
         logs_version: develop
+        logs_image: build
         logs_host: api.logs.ds
 
         ### Records ###########################################################
 
         records: ~
         records_version: develop
+        records_image: build
         records_host: api.records.ds
 
         ### Services ##########################################################
 
         services: ~
         services_version: develop
+        services_image: build
         services_host: api.services.ds
 
         ### Tasks #############################################################
 
         tasks: ~
         tasks_version: develop
+        tasks_image: build
         tasks_host: api.tasks.ds
 
         ### Topics ############################################################
 
         topics: ~
         topics_version: develop
+        topics_image: build
         topics_host: api.topics.ds
 
         ### Core ##############################################################
@@ -126,16 +141,19 @@ all:
 
         admin: ~
         admin_version: develop
+        admin_image: build
 
         ### Monitor ###########################################################
 
         monitor: ~
         monitor_version: develop
+        monitor_image: build
 
         ### Portal ############################################################
 
         portal: ~
         portal_version: develop
+        portal_image: build
 
         ### Ui ################################################################
 
