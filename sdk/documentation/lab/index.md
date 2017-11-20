@@ -143,7 +143,7 @@ As a first test, we will login as a Staff user and consult the list of users in 
 
 > The application comes with data fixtures that are loaded on first deploy as demo data. These data fixtures includes a few Business Units, Staff and Individual users, among other things.
 
-Under the "DigitalSTate" collection, navigate to `Authentication -> Login -> /tokens/staff`. Also, select the "DigitalState Lab" environment. Click the "Send" button. This action simulates a login action by sending pre-configured user credentials to the authentication microservice and return a jwt token on success:
+Under the "DigitalState" collection, navigate to `Authentication -> Login -> /tokens/staff`. Also, select the "DigitalState Lab" environment. Click the "Send" button. This action simulates a login action by sending pre-configured user credentials to the authentication microservice and return a jwt token on success:
 
 ```
 {
