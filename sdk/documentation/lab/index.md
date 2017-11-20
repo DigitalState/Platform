@@ -139,11 +139,11 @@ In order to test, we suggest using an api gui tool, such as [Postman](https://ww
 
 After importing the files, a new collection titled "DigitalState" will appear on the left and a new environment titled "DigitalState Lab" will appear in the dropdown top right.
 
-As a first test, we will login as a Staff user and consult the list of users in the system.
+As a first test, we will **login** as a Staff user and **query** the list of users in the system.
 
 > The application comes with data fixtures that are loaded on first deploy as demo data. These data fixtures includes a few Business Units, Staff and Individual users, among other things.
 
-Under the "DigitalState" collection, navigate to `Authentication -> Login -> /tokens/staff`. Also, select the "DigitalState Lab" environment. Click the "Send" button. This action simulates a login action by sending pre-configured user credentials to the authentication microservice and return a jwt token on success:
+Under the "DigitalState" collection, navigate to `Authentication -> Login -> /tokens/staff`. Also, select the "DigitalState Lab" environment. Click the "Send" button. This action simulates a login by sending pre-configured user credentials to the authentication microservice and return a jwt token on success:
 
 ```
 {
@@ -151,9 +151,9 @@ Under the "DigitalState" collection, navigate to `Authentication -> Login -> /to
 }
 ```
 
-Once a token is obtained, it can be used to access any other protected api endpoints that requires user authentication. Typically, you would need to copy this token to your clipboard and paste it in the next api query you wish to make in Postman. However, our Postman collection has been programmed to keep track of the last logged in user and use the current token on subsequent api requests.
+Once a token is obtained, it can be used to access any other protected api endpoints that requires user authentication. Typically, you would need to copy this token to your clipboard and paste it in the next api query you wish to make in Postman. However, our Postman collection has been programmed to keep track of the last logged in user and use the current token on subsequent api requests automatically.
 
-Next, nagivate to `Authentication -> User -> /users`. Click the "Send" button. This action will send a GET request to /users and return a list of users:
+Next, nagivate to `Authentication -> User -> /users`. Click the "Send" button. This action will send a GET request to users api endpoint and return a list of users:
 
 ```
 [
@@ -168,7 +168,6 @@ Next, nagivate to `Authentication -> User -> /users`. Click the "Send" button. T
     ...
 ]
 ```
-
 
 ## References
 
