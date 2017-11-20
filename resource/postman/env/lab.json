@@ -1,11 +1,83 @@
 {
-  "id": "485c5ccd-3ebb-4deb-576b-d58922dc8148",
+  "id": "d8bbaaf8-9d69-a179-714c-c6c1a7107b92",
   "name": "DigitalState Lab",
   "values": [
     {
       "enabled": true,
+      "key": "env",
+      "value": "lab",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "schema",
+      "value": "http",
+      "type": "text"
+    },
+    {
+      "enabled": true,
       "key": "host",
-      "value": "http://127.0.0.1",
+      "value": "127.0.0.1",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "assets",
+      "value": "{{schema}}://{{host}}",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "authentication",
+      "value": "{{schema}}://{{host}}",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "camunda",
+      "value": "{{schema}}://{{host}}/engine-rest",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "cases",
+      "value": "{{schema}}://{{host}}",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "cms",
+      "value": "{{schema}}://{{host}}",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "formio",
+      "value": "{{schema}}://{{host}}",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "identities",
+      "value": "{{schema}}://{{host}}",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "records",
+      "value": "{{schema}}://{{host}}",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "services",
+      "value": "{{schema}}://{{host}}",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "tasks",
+      "value": "{{schema}}://{{host}}",
       "type": "text"
     },
     {
@@ -16,73 +88,13 @@
     },
     {
       "enabled": true,
-      "key": "authentication",
-      "value": "{{host}}",
-      "type": "text"
-    },
-    {
-      "enabled": true,
-      "key": "cases",
-      "value": "{{host}}",
-      "type": "text"
-    },
-    {
-      "enabled": true,
-      "key": "services",
-      "value": "{{host}}",
-      "type": "text"
-    },
-    {
-      "enabled": true,
-      "key": "records",
-      "value": "{{host}}",
-      "type": "text"
-    },
-    {
-      "enabled": true,
-      "key": "assets",
-      "value": "{{host}}",
-      "type": "text"
-    },
-    {
-      "enabled": true,
-      "key": "identities",
-      "value": "{{host}}",
-      "type": "text"
-    },
-    {
-      "enabled": true,
-      "key": "camunda",
-      "value": "{{host}}/engine-rest",
-      "type": "text"
-    },
-    {
-      "enabled": true,
-      "key": "formio",
-      "value": "{{host}}",
-      "type": "text"
-    },
-    {
-      "enabled": true,
-      "key": "cms",
-      "value": "{{host}}",
-      "type": "text"
-    },
-    {
-      "enabled": true,
-      "key": "tasks",
-      "value": "{{host}}",
-      "type": "text"
-    },
-    {
-      "enabled": true,
       "key": "token",
-      "value": "eyJhbGciOiJSUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1NZU1RFTSIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6InN5c3RlbUBkcyIsInV1aWQiOiI0YjAyMzdkMS0wOTE3LTRkOGItYWY2ZC0yYWE4OWJlMzM2ZGUiLCJpZGVudGl0eSI6IlN5c3RlbSIsImlkZW50aXR5VXVpZCI6ImZlMWI5NGVkLTc4M2EtNDhkNy04YmYyLTJmOWNlYTg5ZjExZSIsImlhdCI6MTUwOTU2NzQwNSwiZXhwIjoxNTA5NjUzODA1fQ.btZ2_WmELN5c_q89YMTBXYjGuPUZOEWdgWNRxYSgruc_I5OdPv9hSD4-we5EB-5swX5OFFJYOGtPgyqF-2FDzZ7nQyaH7uVB8kTd_eqaK44Aick1TiSkSuf0f5xqXn6030A2aAuSO5s6M4AlsO4ElwcslvGvw6FGLuypNkRDMSNTmNQjQrGVcuX6yVkDFrCVOmKIWI--zCYyXto6A_gG3oKU8eZ0EZmPJhpuCQVBkwXrF9m2v0ck5i-hc2Qt_pqk4uCSGYe9DdCpUvB9MIZmDnY0n8Iz1A1OQoyqzV1CR6C40rUyhflU_NdH4ofdOfmVcL54zFirmeINKFSNpdXxMzbTulZSIsKIxDtkmWJm4HQKV0xjM9BpHyeXPJUHmGSoAxEiYG6B8ZoOof3-B34rn7RUUs8Njs0ojDrNpnL7uWCHrgkI-ZIvfarsVbWwJmTZ8AUGN4wGfuVWHWxJc7N_97LwSqjSpEucQZzUosKaRFixuXTCdsmEnVEXawn8x1yZUl2r0K65zi6_ErNypP4zMIosGE9RJ0DI-aPzdKHIuhAgi6LhdL6jzMqOPJ2JPGgKhUc8PHWj7IQUEnVG9d16swQsN24uExATM_3ak3SP36CK2B76LEEtDm8rf45bx4X8381ci8XtL4px9okHYXTczIwaaZ7HvSf2obOdmfv9FUM",
+      "value": "",
       "type": "text"
     }
   ],
-  "timestamp": 1509567405739,
+  "timestamp": 1511191102305,
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2017-11-01T20:25:12.724Z",
+  "_postman_exported_at": "2017-11-20T15:25:38.675Z",
   "_postman_exported_using": "Postman/5.3.2"
 }
