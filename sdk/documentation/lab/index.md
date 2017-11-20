@@ -129,6 +129,10 @@ ansible-playbook deploy.yml
 
 This command essentially downloads repositories, configures settings, builds images, boots up containers, migrates databases and loads data fixtures for each sub-systems.
 
+<p align="center">
+    ![Overview](overview.png)
+</p>
+
 ## Test
 
 Now that the dockerized application is up and running, it is time to test it!
