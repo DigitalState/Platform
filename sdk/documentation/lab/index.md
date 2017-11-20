@@ -106,6 +106,8 @@ Prior to deploying the application, a few actions are required by the developer:
     Locate the host file on your local machine and add the following entries:
     
     ```
+    127.0.0.1 admin.ds
+    127.0.0.1 portal.ds
     127.0.0.1 api.assets.ds
     127.0.0.1 api.authentication.ds
     127.0.0.1 api.camunda.ds
