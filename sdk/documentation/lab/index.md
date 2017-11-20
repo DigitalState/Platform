@@ -127,7 +127,7 @@ cd /etc/ansible/env/lab
 ansible-playbook deploy.yml
 ```
 
-This command essentially downloads repositories, configures settings, builds images, boots up containers, migrates databases and loads data fixtures for each sub-systems.
+This command essentially downloads repositories, configures settings, builds images, boots up containers, migrates databases and loads data fixtures for each microservices.
 
 ![Overview](overview.png)
 
