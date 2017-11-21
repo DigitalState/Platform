@@ -21,4 +21,4 @@
   lineinfile:
       path: /srv/portal/.env
       regexp: '^DISCOVERY='
-      line: 'DISCOVERY={{ portal_discovery }}'
+      line: 'DISCOVERY={{ portal_discovery|to_json }}'

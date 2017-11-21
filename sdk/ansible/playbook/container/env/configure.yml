@@ -34,9 +34,6 @@
             - monitor
             - portal
 
-      - debug:
-          var: discovery
-
       - name: Define environment variables for roles
         set_fact:
             assets_proxy_host: '{{ ip.stdout }}'
@@ -73,11 +70,11 @@
             admin_proxy_host: '{{ ip.stdout }}'
             admin_virtual_host: '{{ admin_host }}'
             admin_directory: '{{ directory }}/admin'
-            admin_discovery: '{{ discovery|to_json }}'
+            admin_discovery: '{{ discovery }}'
             portal_proxy_host: '{{ ip.stdout }}'
             portal_virtual_host: '{{ portal_host }}'
             portal_directory: '{{ directory }}/portal'
-            portal_discovery: '{{ discovery|to_json }}'
+            portal_discovery: '{{ discovery }}'
         changed_when: false
 
 - name: Configure containers environment on server

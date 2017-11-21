@@ -2,4 +2,4 @@
 portal_proxy_host: 127.0.0.1
 portal_virtual_host: portal.ds
 portal_directory: /srv/portal
-portal_discovery: '{"hosts":[]}'
+portal_discovery: {}

@@ -21,4 +21,4 @@
   lineinfile:
       path: /srv/admin/.env
       regexp: '^DISCOVERY='
-      line: 'DISCOVERY={{ admin_discovery }}'
+      line: 'DISCOVERY={{ admin_discovery|to_json }}'
