@@ -1,5 +1,5 @@
 ---
-- name: Obtain proxy container ip
+- name: Define environment variables
   hosts: server
   become: true
   tasks:
@@ -8,7 +8,36 @@
         register: ip
         changed_when: false
 
-      - name: Create environment variables
+      - name: Define discovery environment variable
+        set_fact:
+            discovery: {}
+
+      - name: Append each enabled services to the discovery environment variable
+        set_fact:
+            discovery: '{{ discovery|combine({item: {"host": vars[item + "_host"]}}) }}'
+        with_items:
+            - assets
+            - authentication
+            - camunda
+            - cases
+            - cms
+            - discovery
+            - formio
+            - identities
+            - interactions
+            - logs
+            - records
+            - services
+            - tasks
+            - topics
+            - admin
+            - monitor
+            - portal
+
+      - debug:
+          var: discovery
+
+      - name: Define environment variables for roles
         set_fact:
             assets_proxy_host: '{{ ip.stdout }}'
             assets_virtual_host: '{{ assets_host }}'
@@ -41,6 +70,14 @@
             tasks_proxy_host: '{{ ip.stdout }}'
             tasks_virtual_host: '{{ tasks_host }}'
             tasks_directory: '{{ directory }}/tasks'
+            admin_proxy_host: '{{ ip.stdout }}'
+            admin_virtual_host: '{{ admin_host }}'
+            admin_directory: '{{ directory }}/admin'
+            admin_discovery: '{{ discovery|to_json }}'
+            portal_proxy_host: '{{ ip.stdout }}'
+            portal_virtual_host: '{{ portal_host }}'
+            portal_directory: '{{ directory }}/portal'
+            portal_discovery: '{{ discovery|to_json }}'
         changed_when: false
 
 - name: Configure containers environment on server
@@ -57,3 +94,5 @@
       - { role: app/records/container/env/configure, when: records is not none }
       - { role: app/services/container/env/configure, when: services is not none }
       - { role: app/tasks/container/env/configure, when: tasks is not none }
+      - { role: app/admin/container/env/configure, when: admin is not none }
+      - { role: app/portal/container/env/configure, when: portal is not none }

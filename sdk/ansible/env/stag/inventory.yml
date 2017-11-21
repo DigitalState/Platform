@@ -142,19 +142,22 @@ all:
 
         admin: ~
         admin_version: develop
-        admin_vimage: download
+        admin_image: download
+        admin_host: admin.ds
 
         ### Monitor ###########################################################
 
         monitor: ~
         monitor_version: develop
         monitor_image: download
+        monitor_host: monitor.ds
 
         ### Portal ############################################################
 
         portal: ~
         portal_version: develop
         portal_image: download
+        portal_host: portal.ds
 
         ### Ui ################################################################
 

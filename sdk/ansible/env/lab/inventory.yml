@@ -142,18 +142,21 @@ all:
         admin: ~
         admin_version: develop
         admin_image: build
+        admin_host: admin.ds
 
         ### Monitor ###########################################################
 
         monitor: ~
         monitor_version: develop
         monitor_image: build
+        monitor_host: monitor.ds
 
         ### Portal ############################################################
 
         portal: ~
         portal_version: develop
         portal_image: build
+        portal_host: portal.ds
 
         ### Ui ################################################################
 

@@ -144,18 +144,21 @@ all:
         admin: ~
         admin_version: master
         admin_image: download
+        admin_host: admin.ds
 
         ### Monitor ###########################################################
 
         monitor: ~
         monitor_version: master
         monitor_image: download
+        monitor_host: monitor.ds
 
         ### Portal ############################################################
 
         portal: ~
         portal_version: master
         portal_image: download
+        portal_host: portal.ds
 
         ### Ui ################################################################
 

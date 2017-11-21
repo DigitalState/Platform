@@ -1,0 +1,24 @@
+---
+- name: Configure proxy host environment variable
+  lineinfile:
+      path: /srv/admin/.env
+      regexp: '^PROXY_HOST='
+      line: 'PROXY_HOST={{ admin_proxy_host }}'
+
+- name: Configure virtual host environment variable
+  lineinfile:
+      path: /srv/admin/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ admin_virtual_host }}'
+
+- name: Configure directory environment variable
+  lineinfile:
+      path: /srv/admin/.env
+      regexp: '^DIRECTORY='
+      line: 'DIRECTORY={{ admin_directory }}'
+
+- name: Configure discovery environment variable
+  lineinfile:
+      path: /srv/admin/.env
+      regexp: '^DISCOVERY='
+      line: 'DISCOVERY={{ admin_discovery }}'

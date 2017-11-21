@@ -1,0 +1,5 @@
+---
+admin_proxy_host: 127.0.0.1
+admin_virtual_host: admin.ds
+admin_directory: /srv/admin
+admin_discovery: '{"hosts":[]}'
