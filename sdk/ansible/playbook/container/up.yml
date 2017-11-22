@@ -13,3 +13,6 @@
       - { role: app/records/container/up, when: records is not none }
       - { role: app/services/container/up, when: services is not none }
       - { role: app/tasks/container/up, when: tasks is not none }
+      - { role: app/admin/container/up, when: admin is not none }
+      - { role: app/monitor/container/up, when: monitor is not none }
+      - { role: app/portal/container/up, when: portal is not none }

@@ -3,6 +3,9 @@
   hosts: server
   become: true
   roles:
+      - { role: app/portal/container/down, when: portal is not none }
+      - { role: app/monitor/container/down, when: monitor is not none }
+      - { role: app/admin/container/down, when: admin is not none }
       - { role: app/tasks/container/down, when: tasks is not none }
       - { role: app/services/container/down, when: services is not none }
       - { role: app/records/container/down, when: records is not none }
