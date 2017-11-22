@@ -1,0 +1,6 @@
+---
+- name: Stop monitor container
+  docker_service:
+      project_src: /srv/monitor
+      state: present
+      stopped: yes

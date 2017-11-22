@@ -1,0 +1,18 @@
+---
+- name: Configure proxy host environment variable
+  lineinfile:
+      path: /srv/monitor/.env
+      regexp: '^PROXY_HOST='
+      line: 'PROXY_HOST={{ monitor_proxy_host }}'
+
+- name: Configure virtual host environment variable
+  lineinfile:
+      path: /srv/monitor/.env
+      regexp: '^VIRTUAL_HOST='
+      line: 'VIRTUAL_HOST={{ monitor_virtual_host }}'
+
+- name: Configure directory environment variable
+  lineinfile:
+      path: /srv/monitor/.env
+      regexp: '^DIRECTORY='
+      line: 'DIRECTORY={{ monitor_directory }}'
