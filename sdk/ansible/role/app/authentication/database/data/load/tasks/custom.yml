@@ -1,11 +1,11 @@
 ---
 - name: Backup authentication fixtures directory
-  shell: 'cp -R /srv/authentication/src/AppBundle/Resources/data/{{ fixtures }} /srv/authentication/src/AppBundle/Resources/data/_{{ fixtures }}'
+  shell: 'cp -R /srv/authentication/src/AppBundle/Resources/data/{{ data }} /srv/authentication/src/AppBundle/Resources/data/_{{ data }}'
 
 - name: Download custom authentication fixtures directory
   copy:
-      src: '/root/resource/data/{{ fixtures }}/authentication/'
-      dest: '/srv/authentication/src/AppBundle/Resources/data/{{ fixtures }}'
+      src: '/root/resource/data/{{ data }}/authentication/'
+      dest: '/srv/authentication/src/AppBundle/Resources/data/{{ data }}'
 
 - import_tasks: load.yml
 
@@ -16,8 +16,8 @@
 
 - name: Delete custom authentication fixtures directory
   file:
-      path: '/srv/authentication/src/AppBundle/Resources/data/{{ fixtures }}'
+      path: '/srv/authentication/src/AppBundle/Resources/data/{{ data }}'
       state: absent
 
 - name: Restore authentication fixtures directory backup
-  shell: 'mv /srv/authentication/src/AppBundle/Resources/data/_{{ fixtures }} /srv/authentication/src/AppBundle/Resources/data/{{ fixtures }}'
+  shell: 'mv /srv/authentication/src/AppBundle/Resources/data/_{{ data }} /srv/authentication/src/AppBundle/Resources/data/{{ data }}'

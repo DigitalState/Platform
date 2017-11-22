@@ -1,11 +1,11 @@
 ---
 - name: Backup services fixtures directory
-  shell: 'cp -R /srv/services/src/AppBundle/Resources/data/{{ fixtures }} /srv/services/src/AppBundle/Resources/data/_{{ fixtures }}'
+  shell: 'cp -R /srv/services/src/AppBundle/Resources/data/{{ data }} /srv/services/src/AppBundle/Resources/data/_{{ data }}'
 
 - name: Download custom services fixtures directory
   copy:
-      src: '/root/resource/data/{{ fixtures }}/services/'
-      dest: '/srv/services/src/AppBundle/Resources/data/{{ fixtures }}'
+      src: '/root/resource/data/{{ data }}/services/'
+      dest: '/srv/services/src/AppBundle/Resources/data/{{ data }}'
 
 - import_tasks: load.yml
 
@@ -16,8 +16,8 @@
 
 - name: Delete custom services fixtures directory
   file:
-      path: '/srv/services/src/AppBundle/Resources/data/{{ fixtures }}'
+      path: '/srv/services/src/AppBundle/Resources/data/{{ data }}'
       state: absent
 
 - name: Restore services fixtures directory backup
-  shell: 'mv /srv/services/src/AppBundle/Resources/data/_{{ fixtures }} /srv/services/src/AppBundle/Resources/data/{{ fixtures }}'
+  shell: 'mv /srv/services/src/AppBundle/Resources/data/_{{ data }} /srv/services/src/AppBundle/Resources/data/{{ data }}'
