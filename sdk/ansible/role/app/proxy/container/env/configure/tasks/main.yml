@@ -1,0 +1,6 @@
+---
+- name: Configure proxy port environment variable
+  lineinfile:
+      path: /srv/proxy/.env
+      regexp: '^PROXY_PORT='
+      line: 'PROXY_PORT={{ proxy_port }}'

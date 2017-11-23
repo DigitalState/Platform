@@ -34,6 +34,8 @@ all:
 
         proxy: enabled
         proxy_version: develop
+        proxy_image: download
+        proxy_port: 443
 
         ### Assets ############################################################
 

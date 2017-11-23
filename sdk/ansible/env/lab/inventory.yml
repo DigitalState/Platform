@@ -33,6 +33,7 @@ all:
         proxy: enabled
         proxy_version: develop
         proxy_image: build
+        proxy_port: 80
 
         ### Assets ############################################################
 
@@ -85,7 +86,7 @@ all:
 
         ### Identities ########################################################
 
-        identities: enabled
+        identities: ~
         identities_version: develop
         identities_image: build
         identities_host: api.identities.ds

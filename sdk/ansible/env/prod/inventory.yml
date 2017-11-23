@@ -35,6 +35,7 @@ all:
         proxy: enabled
         proxy_version: master
         proxy_image: download
+        proxy_port: 443
 
         ### Assets ############################################################
 

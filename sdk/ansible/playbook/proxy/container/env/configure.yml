@@ -1,0 +1,6 @@
+---
+- name: Configure proxy container environment on server
+  hosts: server
+  become: true
+  roles:
+      - { role: app/proxy/container/env/configure, when: proxy is not none }
