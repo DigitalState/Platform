@@ -12,4 +12,6 @@
   hosts: server
   become: true
   roles:
-      - { role: app/proxy/container/env/configure, when: proxy is not none }
+      - role: app/proxy/container/env/configure
+        when: proxy is not none
+        tags: [proxy]

@@ -105,15 +105,50 @@
   hosts: server
   become: true
   roles:
-      - { role: app/assets/container/env/configure, when: assets is not none }
-      - { role: app/authentication/container/env/configure, when: authentication is not none }
-      - { role: app/camunda/container/env/configure, when: camunda is not none }
-      - { role: app/cases/container/env/configure, when: cases is not none }
-      - { role: app/cms/container/env/configure, when: cms is not none }
-      - { role: app/formio/container/env/configure, when: formio is not none }
-      - { role: app/identities/container/env/configure, when: identities is not none }
-      - { role: app/records/container/env/configure, when: records is not none }
-      - { role: app/services/container/env/configure, when: services is not none }
-      - { role: app/tasks/container/env/configure, when: tasks is not none }
-      - { role: app/admin/container/env/configure, when: admin is not none }
-      - { role: app/portal/container/env/configure, when: portal is not none }
+      - role: app/assets/container/env/configure
+        when: assets is not none
+        tags: [assets]
+
+      - role: app/authentication/container/env/configure
+        when: authentication is not none
+        tags: [authentication]
+
+      - role: app/camunda/container/env/configure
+        when: camunda is not none
+        tags: [camunda]
+
+      - role: app/cases/container/env/configure
+        when: cases is not none
+        tags: [cases]
+
+      - role: app/cms/container/env/configure
+        when: cms is not none
+        tags: [cms]
+
+      - role: app/formio/container/env/configure
+        when: formio is not none
+        tags: [formio]
+
+      - role: app/identities/container/env/configure
+        when: identities is not none
+        tags: [identities]
+
+      - role: app/records/container/env/configure
+        when: records is not none
+        tags: [records]
+
+      - role: app/services/container/env/configure
+        when: services is not none
+        tags: [services]
+
+      - role: app/tasks/container/env/configure
+        when: tasks is not none
+        tags: [tasks]
+
+      - role: app/admin/container/env/configure
+        when: admin is not none
+        tags: [admin]
+
+      - role: app/portal/container/env/configure
+        when: portal is not none
+        tags: [portal]

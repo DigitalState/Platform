@@ -3,16 +3,54 @@
   hosts: server
   become: true
   roles:
-      - { role: app/portal/container/stop, when: portal is not none }
-      - { role: app/monitor/container/stop, when: monitor is not none }
-      - { role: app/admin/container/stop, when: admin is not none }
-      - { role: app/tasks/container/stop, when: tasks is not none }
-      - { role: app/services/container/stop, when: services is not none }
-      - { role: app/records/container/stop, when: records is not none }
-      - { role: app/identities/container/stop, when: identities is not none }
-      - { role: app/formio/container/stop, when: formio is not none }
-      - { role: app/cms/container/stop, when: cms is not none }
-      - { role: app/cases/container/stop, when: cases is not none }
-      - { role: app/camunda/container/stop, when: camunda is not none }
-      - { role: app/authentication/container/stop, when: authentication is not none }
-      - { role: app/assets/container/stop, when: assets is not none }
+      - role: app/portal/container/stop
+        when: portal is not none
+        tags: [portal]
+
+      - role: app/monitor/container/stop
+        when: monitor is not none
+        tags: [monitor]
+
+      - role: app/admin/container/stop
+        when: admin is not none
+        tags: [admin]
+
+      - role: app/tasks/container/stop
+        when: tasks is not none
+        tags: [tasks]
+
+      - role: app/services/container/stop
+        when: services is not none
+        tags: [services]
+
+      - role: app/records/container/stop
+        when: records is not none
+        tags: [records]
+
+      - role: app/identities/container/stop
+        when: identities is not none
+        tags: [identities]
+
+      - role: app/formio/container/stop
+        when: formio is not none
+        tags: [formio]
+
+      - role: app/cms/container/stop
+        when: cms is not none
+        tags: [cms]
+
+      - role: app/cases/container/stop
+        when: cases is not none
+        tags: [cases]
+
+      - role: app/camunda/container/stop
+        when: camunda is not none
+        tags: [camunda]
+
+      - role: app/authentication/container/stop
+        when: authentication is not none
+        tags: [authentication]
+
+      - role: app/assets/container/stop
+        when: assets is not none
+        tags: [assets]
