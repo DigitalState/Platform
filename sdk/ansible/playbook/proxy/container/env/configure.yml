@@ -1,4 +1,13 @@
 ---
+- name: Define environment variables
+  hosts: server
+  become: true
+  tasks:
+      - name: Define environment variables for roles
+        set_fact:
+            proxy_namespace: '{{ project }}'
+        changed_when: false
+
 - name: Configure proxy container environment on server
   hosts: server
   become: true

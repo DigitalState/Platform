@@ -1,4 +1,16 @@
 ---
+- name: Configure logs namespace environment variable
+  lineinfile:
+      path: /srv/logs/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ logs_namespace }}'
+
+- name: Configure logs network environment variable
+  lineinfile:
+      path: /srv/logs/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ logs_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/logs/.env

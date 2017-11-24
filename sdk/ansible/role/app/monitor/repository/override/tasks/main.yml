@@ -6,5 +6,5 @@
 - name: Download monitor repository override directory
   copy:
       src: '{{ monitor_repository_override }}/'
-      dest: '/srv/monitor'
+      dest: /srv/monitor
   when: repository_override.stat.exists == true

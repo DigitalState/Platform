@@ -6,5 +6,5 @@
 - name: Download portal repository override directory
   copy:
       src: '{{ portal_repository_override }}/'
-      dest: '/srv/portal'
+      dest: /srv/portal
   when: repository_override.stat.exists == true

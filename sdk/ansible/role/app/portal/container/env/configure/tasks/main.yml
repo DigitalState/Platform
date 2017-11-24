@@ -1,4 +1,16 @@
 ---
+- name: Configure portal namespace environment variable
+  lineinfile:
+      path: /srv/portal/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ portal_namespace }}'
+
+- name: Configure portal network environment variable
+  lineinfile:
+      path: /srv/portal/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ portal_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/portal/.env

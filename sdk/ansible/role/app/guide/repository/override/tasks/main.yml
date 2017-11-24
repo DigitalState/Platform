@@ -6,5 +6,5 @@
 - name: Download guide repository override directory
   copy:
       src: '{{ guide_repository_override }}/'
-      dest: '/srv/guide'
+      dest: /srv/guide
   when: repository_override.stat.exists == true

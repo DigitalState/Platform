@@ -6,5 +6,5 @@
 - name: Download authentication repository override directory
   copy:
       src: '{{ authentication_repository_override }}/'
-      dest: '/srv/authentication'
+      dest: /srv/authentication
   when: repository_override.stat.exists == true

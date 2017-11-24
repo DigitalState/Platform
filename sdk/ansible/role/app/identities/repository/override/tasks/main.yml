@@ -6,5 +6,5 @@
 - name: Download identities repository override directory
   copy:
       src: '{{ identities_repository_override }}/'
-      dest: '/srv/identities'
+      dest: /srv/identities
   when: repository_override.stat.exists == true

@@ -1,4 +1,16 @@
 ---
+- name: Configure cases namespace environment variable
+  lineinfile:
+      path: /srv/cases/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ cases_namespace }}'
+
+- name: Configure cases network environment variable
+  lineinfile:
+      path: /srv/cases/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ cases_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/cases/.env

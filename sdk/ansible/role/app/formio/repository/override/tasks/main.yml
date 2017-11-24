@@ -6,5 +6,5 @@
 - name: Download formio repository override directory
   copy:
       src: '{{ formio_repository_override }}/'
-      dest: '/srv/formio'
+      dest: /srv/formio
   when: repository_override.stat.exists == true

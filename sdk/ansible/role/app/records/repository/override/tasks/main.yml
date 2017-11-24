@@ -6,5 +6,5 @@
 - name: Download records repository override directory
   copy:
       src: '{{ records_repository_override }}/'
-      dest: '/srv/records'
+      dest: /srv/records
   when: repository_override.stat.exists == true

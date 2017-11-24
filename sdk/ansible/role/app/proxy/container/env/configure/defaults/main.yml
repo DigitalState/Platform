@@ -1,2 +1,3 @@
 ---
+proxy_namespace: ds
 proxy_port: 443

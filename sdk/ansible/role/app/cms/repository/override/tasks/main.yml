@@ -6,5 +6,5 @@
 - name: Download cms repository override directory
   copy:
       src: '{{ cms_repository_override }}/'
-      dest: '/srv/cms'
+      dest: /srv/cms
   when: repository_override.stat.exists == true

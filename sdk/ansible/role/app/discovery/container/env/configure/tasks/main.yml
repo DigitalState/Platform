@@ -1,4 +1,16 @@
 ---
+- name: Configure discovery namespace environment variable
+  lineinfile:
+      path: /srv/discovery/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ discovery_namespace }}'
+
+- name: Configure discovery network environment variable
+  lineinfile:
+      path: /srv/discovery/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ discovery_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/discovery/.env

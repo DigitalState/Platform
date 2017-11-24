@@ -1,4 +1,6 @@
 ---
+formio_namespace: ds_formio
+formio_network: ds_default
 formio_proxy_host: 127.0.0.1
 formio_virtual_host: api.formio.ds
 formio_directory: /srv/formio

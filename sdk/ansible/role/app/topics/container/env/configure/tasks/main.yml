@@ -1,4 +1,16 @@
 ---
+- name: Configure topics namespace environment variable
+  lineinfile:
+      path: /srv/topics/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ topics_namespace }}'
+
+- name: Configure topics network environment variable
+  lineinfile:
+      path: /srv/topics/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ topics_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/topics/.env

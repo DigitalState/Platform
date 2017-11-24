@@ -6,5 +6,5 @@
 - name: Download cases repository override directory
   copy:
       src: '{{ cases_repository_override }}/'
-      dest: '/srv/cases'
+      dest: /srv/cases
   when: repository_override.stat.exists == true

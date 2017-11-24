@@ -1,4 +1,16 @@
 ---
+- name: Configure identities namespace environment variable
+  lineinfile:
+      path: /srv/identities/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ identities_namespace }}'
+
+- name: Configure identities network environment variable
+  lineinfile:
+      path: /srv/identities/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ identities_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/identities/.env

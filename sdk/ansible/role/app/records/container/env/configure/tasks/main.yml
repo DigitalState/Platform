@@ -1,4 +1,16 @@
 ---
+- name: Configure records namespace environment variable
+  lineinfile:
+      path: /srv/records/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ records_namespace }}'
+
+- name: Configure records network environment variable
+  lineinfile:
+      path: /srv/records/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ records_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/records/.env

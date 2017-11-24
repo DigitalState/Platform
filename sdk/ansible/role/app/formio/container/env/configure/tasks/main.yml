@@ -1,4 +1,16 @@
 ---
+- name: Configure formio namespace environment variable
+  lineinfile:
+      path: /srv/formio/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ formio_namespace }}'
+
+- name: Configure formio network environment variable
+  lineinfile:
+      path: /srv/formio/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ formio_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/formio/.env

@@ -1,6 +1,12 @@
 ---
+- name: Configure proxy namespace environment variable
+  lineinfile:
+      path: /srv/proxy/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ proxy_namespace }}'
+
 - name: Configure proxy port environment variable
   lineinfile:
       path: /srv/proxy/.env
-      regexp: '^PROXY_PORT='
-      line: 'PROXY_PORT={{ proxy_port }}'
+      regexp: '^PORT='
+      line: 'PORT={{ proxy_port }}'

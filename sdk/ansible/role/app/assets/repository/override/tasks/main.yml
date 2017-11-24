@@ -6,5 +6,5 @@
 - name: Download assets repository override directory
   copy:
       src: '{{ assets_repository_override }}/'
-      dest: '/srv/assets'
+      dest: /srv/assets
   when: repository_override.stat.exists == true

@@ -6,6 +6,8 @@ all:
     vars:
         ### General ###########################################################
 
+        project: ds
+
         env: lab
 
         directory: ~
@@ -86,7 +88,7 @@ all:
 
         ### Identities ########################################################
 
-        identities: ~
+        identities: enabled
         identities_version: develop
         identities_image: build
         identities_host: api.identities.ds

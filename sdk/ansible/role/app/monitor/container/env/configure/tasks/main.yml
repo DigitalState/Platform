@@ -1,4 +1,16 @@
 ---
+- name: Configure monitor namespace environment variable
+  lineinfile:
+      path: /srv/monitor/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ monitor_namespace }}'
+
+- name: Configure monitor network environment variable
+  lineinfile:
+      path: /srv/monitor/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ monitor_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/monitor/.env

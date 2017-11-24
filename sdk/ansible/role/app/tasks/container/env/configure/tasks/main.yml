@@ -1,4 +1,16 @@
 ---
+- name: Configure tasks namespace environment variable
+  lineinfile:
+      path: /srv/tasks/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ tasks_namespace }}'
+
+- name: Configure tasks network environment variable
+  lineinfile:
+      path: /srv/tasks/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ tasks_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/tasks/.env

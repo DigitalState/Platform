@@ -6,5 +6,5 @@
 - name: Download admin repository override directory
   copy:
       src: '{{ admin_repository_override }}/'
-      dest: '/srv/admin'
+      dest: /srv/admin
   when: repository_override.stat.exists == true

@@ -1,4 +1,16 @@
 ---
+- name: Configure authentication namespace environment variable
+  lineinfile:
+      path: /srv/authentication/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ authentication_namespace }}'
+
+- name: Configure authentication network environment variable
+  lineinfile:
+      path: /srv/authentication/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ authentication_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/authentication/.env

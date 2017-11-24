@@ -1,4 +1,6 @@
 ---
+services_namespace: ds_services
+services_network: ds_default
 services_proxy_host: 127.0.0.1
 services_virtual_host: api.services.ds
 services_directory: /srv/services

@@ -1,4 +1,16 @@
 ---
+- name: Configure interactions namespace environment variable
+  lineinfile:
+      path: /srv/interactions/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ interactions_namespace }}'
+
+- name: Configure interactions network environment variable
+  lineinfile:
+      path: /srv/interactions/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ interactions_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/interactions/.env

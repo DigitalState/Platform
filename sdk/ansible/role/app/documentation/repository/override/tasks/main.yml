@@ -6,5 +6,5 @@
 - name: Download documentation repository override directory
   copy:
       src: '{{ documentation_repository_override }}/'
-      dest: '/srv/documentation'
+      dest: /srv/documentation
   when: repository_override.stat.exists == true

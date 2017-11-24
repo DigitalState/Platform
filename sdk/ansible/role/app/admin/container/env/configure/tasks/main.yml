@@ -1,4 +1,16 @@
 ---
+- name: Configure admin namespace environment variable
+  lineinfile:
+      path: /srv/admin/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ admin_namespace }}'
+
+- name: Configure admin network environment variable
+  lineinfile:
+      path: /srv/admin/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ admin_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/admin/.env

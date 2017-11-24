@@ -1,4 +1,16 @@
 ---
+- name: Configure camunda namespace environment variable
+  lineinfile:
+      path: /srv/camunda/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ camunda_namespace }}'
+
+- name: Configure camunda network environment variable
+  lineinfile:
+      path: /srv/camunda/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ camunda_network }}'
+
 - name: Configure timezone environment variable
   lineinfile:
       path: /srv/camunda/.env

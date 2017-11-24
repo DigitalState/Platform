@@ -6,5 +6,5 @@
 - name: Download core repository override directory
   copy:
       src: '{{ core_repository_override }}/'
-      dest: '/srv/core'
+      dest: /srv/core
   when: repository_override.stat.exists == true

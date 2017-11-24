@@ -6,7 +6,7 @@
 
 - name: Waiting for assets container to finalize installation
   shell:
-      cmd: docker-compose exec -T assets_php pidof php-fpm | cat
+      cmd: docker-compose exec -T php pidof php-fpm | cat
       chdir: /srv/assets
   register: output
   until: output.stdout|match('^[0-9]+(\s[0-9]+)*$')

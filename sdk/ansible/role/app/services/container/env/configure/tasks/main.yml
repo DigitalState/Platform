@@ -1,4 +1,16 @@
 ---
+- name: Configure services namespace environment variable
+  lineinfile:
+      path: /srv/services/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ services_namespace }}'
+
+- name: Configure services network environment variable
+  lineinfile:
+      path: /srv/services/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ services_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/services/.env

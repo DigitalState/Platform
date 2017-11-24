@@ -8,6 +8,8 @@ all:
     vars:
         ### General ###########################################################
 
+        project: ds
+
         env: dev
 
         directory: /srv

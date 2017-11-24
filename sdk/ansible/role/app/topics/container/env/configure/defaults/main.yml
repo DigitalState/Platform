@@ -1,4 +1,6 @@
 ---
+topics_namespace: ds_topics
+topics_network: ds_default
 topics_proxy_host: 127.0.0.1
 topics_virtual_host: api.topics.ds
 topics_directory: /srv/topics

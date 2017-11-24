@@ -1,5 +1,5 @@
 ---
 - name: Migrate services database
   shell:
-      cmd: docker-compose exec services_php php bin/console doctrine:migrations:migrate --no-interaction | cat
+      cmd: docker-compose exec php php bin/console doctrine:migrations:migrate --no-interaction | cat
       chdir: /srv/services

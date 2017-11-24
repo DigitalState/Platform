@@ -1,4 +1,6 @@
 ---
+cases_namespace: ds_cases
+cases_network: ds_default
 cases_proxy_host: 127.0.0.1
 cases_virtual_host: api.cases.ds
 cases_directory: /srv/cases

@@ -6,5 +6,5 @@
 - name: Download discovery repository override directory
   copy:
       src: '{{ discovery_repository_override }}/'
-      dest: '/srv/discovery'
+      dest: /srv/discovery
   when: repository_override.stat.exists == true

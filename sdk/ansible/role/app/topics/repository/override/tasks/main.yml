@@ -6,5 +6,5 @@
 - name: Download topics repository override directory
   copy:
       src: '{{ topics_repository_override }}/'
-      dest: '/srv/topics'
+      dest: /srv/topics
   when: repository_override.stat.exists == true

@@ -1,4 +1,6 @@
 ---
+records_namespace: ds_records
+records_network: ds_default
 records_proxy_host: 127.0.0.1
 records_virtual_host: api.records.ds
 records_directory: /srv/records

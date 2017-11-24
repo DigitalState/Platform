@@ -6,5 +6,5 @@
 - name: Download ui repository override directory
   copy:
       src: '{{ ui_repository_override }}/'
-      dest: '/srv/ui'
+      dest: /srv/ui
   when: repository_override.stat.exists == true

@@ -1,4 +1,16 @@
 ---
+- name: Configure assets namespace environment variable
+  lineinfile:
+      path: /srv/assets/.env
+      regexp: '^COMPOSE_PROJECT_NAME='
+      line: 'COMPOSE_PROJECT_NAME={{ assets_namespace }}'
+
+- name: Configure assets network environment variable
+  lineinfile:
+      path: /srv/assets/.env
+      regexp: '^NETWORK='
+      line: 'NETWORK={{ assets_network }}'
+
 - name: Configure proxy host environment variable
   lineinfile:
       path: /srv/assets/.env
