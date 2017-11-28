@@ -106,18 +106,18 @@ Prior to deploying the application, a few actions are required by the developer:
     Locate the host file on your local machine and add the following entries:
     
     ```
-    127.0.0.1 admin.ds
-    127.0.0.1 portal.ds
-    127.0.0.1 api.assets.ds
-    127.0.0.1 api.authentication.ds
-    127.0.0.1 api.camunda.ds
-    127.0.0.1 api.cases.ds
-    127.0.0.1 api.cms.ds
-    127.0.0.1 api.formio.ds
-    127.0.0.1 api.identities.ds
-    127.0.0.1 api.services.ds
-    127.0.0.1 api.records.ds
-    127.0.0.1 api.tasks.ds
+    127.0.0.1 admin.lab.ds
+    127.0.0.1 portal.lab.ds
+    127.0.0.1 api.assets.lab.ds
+    127.0.0.1 api.authentication.lab.ds
+    127.0.0.1 api.camunda.lab.ds
+    127.0.0.1 api.cases.lab.ds
+    127.0.0.1 api.cms.lab.ds
+    127.0.0.1 api.formio.lab.ds
+    127.0.0.1 api.identities.lab.ds
+    127.0.0.1 api.services.lab.ds
+    127.0.0.1 api.records.lab.ds
+    127.0.0.1 api.tasks.lab.ds
     ```
 
 ## Deployment

@@ -46,98 +46,98 @@ all:
         assets: ~
         assets_version: develop
         assets_image: download
-        assets_host: api.assets.ds
+        assets_host: api.assets.test.ds
 
         ### Authentication ####################################################
 
         authentication: enabled
         authentication_version: develop
         authentication_image: download
-        authentication_host: api.authentication.ds
+        authentication_host: api.authentication.test.ds
 
         ### Camunda ###########################################################
 
         camunda: ~
         camunda_version: develop
         camunda_image: download
-        camunda_host: api.camunda.ds
+        camunda_host: api.camunda.test.ds
 
         ### Cases #############################################################
 
         cases: ~
         cases_version: develop
         cases_image: download
-        cases_host: api.cases.ds
+        cases_host: api.cases.test.ds
 
         ### Cms ###############################################################
 
         cms: ~
         cms_version: develop
         cms_image: download
-        cms_host: api.cms.ds
+        cms_host: api.cms.test.ds
 
         ### Discovery #########################################################
 
         discovery: ~
         discovery_version: develop
         discovery_image: download
-        discovery_host: api.discovery.ds
+        discovery_host: api.discovery.test.ds
 
         ### Formio ############################################################
 
         formio: ~
         formio_version: develop
         formio_image: download
-        formio_host: api.formio.ds
+        formio_host: api.formio.test.ds
 
         ### Identities ########################################################
 
         identities: enabled
         identities_version: develop
         identities_image: download
-        identities_host: api.identities.ds
+        identities_host: api.identities.test.ds
 
         ### Interactions ######################################################
 
         interactions: ~
         interactions_version: develop
         interactions_image: download
-        interactions_host: api.interactions.ds
+        interactions_host: api.interactions.test.ds
 
         ### Logs ##############################################################
 
         logs: ~
         logs_version: develop
         logs_image: download
-        logs_host: api.logs.ds
+        logs_host: api.logs.test.ds
 
         ### Records ###########################################################
 
         records: ~
         records_version: develop
         records_image: download
-        records_host: api.records.ds
+        records_host: api.records.test.ds
 
         ### Services ##########################################################
 
         services: ~
         services_version: develop
         services_image: download
-        services_host: api.services.ds
+        services_host: api.services.test.ds
 
         ### Tasks #############################################################
 
         tasks: ~
         tasks_version: develop
         tasks_image: download
-        tasks_host: api.tasks.ds
+        tasks_host: api.tasks.test.ds
 
         ### Topics ############################################################
 
         topics: ~
         topics_version: develop
         topics_image: download
-        topics_host: api.topics.ds
+        topics_host: api.topics.test.ds
 
         ### Core ##############################################################
 
@@ -149,21 +149,21 @@ all:
         admin: ~
         admin_version: develop
         admin_image: download
-        admin_host: admin.ds
+        admin_host: admin.test.ds
 
         ### Monitor ###########################################################
 
         monitor: ~
         monitor_version: develop
         monitor_image: download
-        monitor_host: monitor.ds
+        monitor_host: monitor.test.ds
 
         ### Portal ############################################################
 
         portal: ~
         portal_version: develop
         portal_image: download
-        portal_host: portal.ds
+        portal_host: portal.test.ds
 
         ### Ui ################################################################
 

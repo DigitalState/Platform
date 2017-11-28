@@ -46,98 +46,98 @@ all:
         assets: ~
         assets_version: master
         assets_image: download
-        assets_host: api.assets.ds
+        assets_host: api.assets.prod.ds
 
         ### Authentication ####################################################
 
         authentication: enabled
         authentication_version: master
         authentication_image: download
-        authentication_host: api.authentication.ds
+        authentication_host: api.authentication.prod.ds
 
         ### Camunda ###########################################################
 
         camunda: ~
         camunda_version: master
         camunda_image: download
-        camunda_host: api.camunda.ds
+        camunda_host: api.camunda.prod.ds
 
         ### Cases #############################################################
 
         cases: ~
         cases_version: master
         cases_image: download
-        cases_host: api.cases.ds
+        cases_host: api.cases.prod.ds
 
         ### Cms ###############################################################
 
         cms: ~
         cms_version: master
         cms_image: download
-        cms_host: api.cms.ds
+        cms_host: api.cms.prod.ds
 
         ### Discovery #########################################################
 
         discovery: ~
         discovery_version: master
         discovery_image: download
-        discovery_host: api.discovery.ds
+        discovery_host: api.discovery.prod.ds
 
         ### Formio ############################################################
 
         formio: ~
         formio_version: master
         formio_image: download
-        formio_host: api.formio.ds
+        formio_host: api.formio.prod.ds
 
         ### Identities ########################################################
 
         identities: enabled
         identities_version: master
         identities_image: download
-        identities_host: api.identities.ds
+        identities_host: api.identities.prod.ds
 
         ### Interactions ######################################################
 
         interactions: ~
         interactions_version: master
         interactions_image: download
-        interactions_host: api.interactions.ds
+        interactions_host: api.interactions.prod.ds
 
         ### Logs ##############################################################
 
         logs: ~
         logs_version: master
         logs_image: download
-        logs_host: api.logs.ds
+        logs_host: api.logs.prod.ds
 
         ### Records ###########################################################
 
         records: ~
         records_version: master
         records_image: download
-        records_host: api.records.ds
+        records_host: api.records.prod.ds
 
         ### Services ##########################################################
 
         services: ~
         services_version: master
         services_image: download
-        services_host: api.services.ds
+        services_host: api.services.prod.ds
 
         ### Tasks #############################################################
 
         tasks: ~
         tasks_version: master
         tasks_image: download
-        tasks_host: api.tasks.ds
+        tasks_host: api.tasks.prod.ds
 
         ### Topics ############################################################
 
         topics: ~
         topics_version: master
         topics_image: download
-        topics_host: api.topics.ds
+        topics_host: api.topics.prod.ds
 
         ### Core ##############################################################
 
@@ -149,21 +149,21 @@ all:
         admin: ~
         admin_version: master
         admin_image: download
-        admin_host: admin.ds
+        admin_host: admin.prod.ds
 
         ### Monitor ###########################################################
 
         monitor: ~
         monitor_version: master
         monitor_image: download
-        monitor_host: monitor.ds
+        monitor_host: monitor.prod.ds
 
         ### Portal ############################################################
 
         portal: ~
         portal_version: master
         portal_image: download
-        portal_host: portal.ds
+        portal_host: portal.prod.ds
 
         ### Ui ################################################################
 

@@ -44,98 +44,98 @@ all:
         assets: ~
         assets_version: develop
         assets_image: build
-        assets_host: api.assets.ds
+        assets_host: api.assets.lab.ds
 
         ### Authentication ####################################################
 
         authentication: enabled
         authentication_version: develop
         authentication_image: build
-        authentication_host: api.authentication.ds
+        authentication_host: api.authentication.lab.ds
 
         ### Camunda ###########################################################
 
         camunda: ~
         camunda_version: develop
         camunda_image: build
-        camunda_host: api.camunda.ds
+        camunda_host: api.camunda.lab.ds
 
         ### Cases #############################################################
 
         cases: ~
         cases_version: develop
         cases_image: build
-        cases_host: api.cases.ds
+        cases_host: api.cases.lab.ds
 
         ### Cms ###############################################################
 
         cms: ~
         cms_version: develop
         cms_image: build
-        cms_host: api.cms.ds
+        cms_host: api.cms.lab.ds
 
         ### Discovery #########################################################
 
         discovery: ~
         discovery_version: develop
         discovery_image: build
-        discovery_host: api.discovery.ds
+        discovery_host: api.discovery.lab.ds
 
         ### Formio ############################################################
 
         formio: ~
         formio_version: develop
         formio_image: build
-        formio_host: api.formio.ds
+        formio_host: api.formio.lab.ds
 
         ### Identities ########################################################
 
         identities: enabled
         identities_version: develop
         identities_image: build
-        identities_host: api.identities.ds
+        identities_host: api.identities.lab.ds
 
         ### Interactions ######################################################
 
         interactions: ~
         interactions_version: develop
         interactions_image: build
-        interactions_host: api.interactions.ds
+        interactions_host: api.interactions.lab.ds
 
         ### Logs ##############################################################
 
         logs: ~
         logs_version: develop
         logs_image: build
-        logs_host: api.logs.ds
+        logs_host: api.logs.lab.ds
 
         ### Records ###########################################################
 
         records: ~
         records_version: develop
         records_image: build
-        records_host: api.records.ds
+        records_host: api.records.lab.ds
 
         ### Services ##########################################################
 
         services: ~
         services_version: develop
         services_image: build
-        services_host: api.services.ds
+        services_host: api.services.lab.ds
 
         ### Tasks #############################################################
 
         tasks: ~
         tasks_version: develop
         tasks_image: build
-        tasks_host: api.tasks.ds
+        tasks_host: api.tasks.lab.ds
 
         ### Topics ############################################################
 
         topics: ~
         topics_version: develop
         topics_image: build
-        topics_host: api.topics.ds
+        topics_host: api.topics.lab.ds
 
         ### Core ##############################################################
 
@@ -147,21 +147,21 @@ all:
         admin: ~
         admin_version: develop
         admin_image: build
-        admin_host: admin.ds
+        admin_host: admin.lab.ds
 
         ### Monitor ###########################################################
 
         monitor: ~
         monitor_version: develop
         monitor_image: build
-        monitor_host: monitor.ds
+        monitor_host: monitor.lab.ds
 
         ### Portal ############################################################
 
         portal: ~
         portal_version: develop
         portal_image: build
-        portal_host: portal.ds
+        portal_host: portal.lab.ds
 
         ### Ui ################################################################
 
