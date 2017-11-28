@@ -1,0 +1,6 @@
+---
+- name: Download adminer
+  copy:
+      src: '{{ records_util_adminer }}'
+      dest: /srv/records/web/adminer.php
+      mode: 0600

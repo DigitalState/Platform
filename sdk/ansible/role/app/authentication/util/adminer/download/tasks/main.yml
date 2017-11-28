@@ -1,0 +1,6 @@
+---
+- name: Download adminer
+  copy:
+      src: '{{ authentication_util_adminer }}'
+      dest: /srv/authentication/web/adminer.php
+      mode: 0600

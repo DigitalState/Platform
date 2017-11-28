@@ -1,0 +1,6 @@
+---
+- name: Download adminer
+  copy:
+      src: '{{ topics_util_adminer }}'
+      dest: /srv/topics/web/adminer.php
+      mode: 0600

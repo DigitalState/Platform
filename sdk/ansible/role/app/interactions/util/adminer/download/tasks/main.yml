@@ -1,0 +1,6 @@
+---
+- name: Download adminer
+  copy:
+      src: '{{ interactions_util_adminer }}'
+      dest: /srv/interactions/web/adminer.php
+      mode: 0600

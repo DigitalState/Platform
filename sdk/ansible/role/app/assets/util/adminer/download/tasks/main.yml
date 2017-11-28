@@ -1,0 +1,6 @@
+---
+- name: Download adminer
+  copy:
+      src: '{{ assets_util_adminer }}'
+      dest: /srv/assets/web/adminer.php
+      mode: 0600

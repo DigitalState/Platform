@@ -1,0 +1,6 @@
+---
+- name: Download adminer
+  copy:
+      src: '{{ cases_util_adminer }}'
+      dest: /srv/cases/web/adminer.php
+      mode: 0600
