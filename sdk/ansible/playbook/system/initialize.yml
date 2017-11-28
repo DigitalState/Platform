@@ -4,5 +4,5 @@
   become: true
   gather_facts: false
   roles:
-      - roles: package/python
+      - role: package/python
         tags: [system]

@@ -3,8 +3,8 @@
   hosts: server
   become: true
   roles:
-      - roles: package/git
+      - role: package/git
         tags: [system]
 
-      - roles: package/docker
+      - role: package/docker
         tags: [system]
