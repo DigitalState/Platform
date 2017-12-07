@@ -1,8 +1,8 @@
 # Lab Environment
 
-The lab environment enables the developer to run the full DigitalState architecture on a local machine as a dockerized application.
+The lab environment enables the developer to run the DigitalState platform on a local machine as a dockerized application.
 
-It also provides useful commands to help manage multiple containers at once during development.
+It also provides useful bulk commands to help during development.
 
 ## Table of Contents
 
