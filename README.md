@@ -48,8 +48,8 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
    You should see the following output:
    
    ```
-   CONTAINER ID   IMAGE     COMMAND     CREATED         STATUS         PORTS   NAMES
-   4ceab8511b85   sdk_sdk   "/bin/sh"   3 seconds ago   Up 2 seconds           sdk
+   CONTAINER ID     IMAGE       COMMAND       CREATED           STATUS           PORTS     NAMES
+   4ceab8511b85     sdk_sdk     "/bin/sh"     3 seconds ago     Up 2 seconds               sdk
    ```
 
 4. Enter the container console:
