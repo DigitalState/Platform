@@ -26,7 +26,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 ## Requirements
 
-If you are running Windows on your local machine, Windows 10 with HyperV is required.
+If you are running Windows on your local machine, HyperV is required.
 
 ## Installation
 
