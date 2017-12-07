@@ -26,22 +26,22 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 2. Download this repository.
 
-3. Open a console and make it point to the root of the repository directory:
+3. Open a command prompt and make it point to the root of the repository:
 
    ```
-   cd C:\Users\Demo\Sdk
+   > cd C:\Users\user1\Sdk
    ```
 
 4. Boot the SDK container:
 
    ```
-   docker-compose up -d
+   > docker-compose up -d
    ```
 
 5. Confirm the container has been booted successfully:
 
    ```
-   docker ps
+   > docker ps
    ```
    
    You should see the following output:
@@ -51,10 +51,10 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
    4ceab8511b85        sdk_sdk             "/bin/sh"           3 seconds ago       Up 2 seconds                            sdk
    ```
 
-6. Enter the container in console mode:
+6. Enter the container in bash mode:
 
    ```
-   docker exec -it sdk /bin/sh
+   > docker exec -it sdk /bin/sh
    ```
 
 At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
