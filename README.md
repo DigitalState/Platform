@@ -68,12 +68,16 @@ The SDK documentation is grouped by deployment environments:
 
 - [Lab Environment](sdk/documentation/lab/index.md)
   The lab environment deploys to your local machine and is used by developers to further develop the platform.
+
 - [Test Environment](sdk/documentation/test/index.md)
   The test environment deploys to a remote server and is used for continuous integration.
+
 - [Development Environment](sdk/documentation/dev/index.md)
   The development environment deploys to a remote server and is used as sandbox.
+
 - [Staging Environment](sdk/documentation/stag/index.md)
   The staging environment deploys to a remote server and is used as a pre-production mirror.
+
 - [Production Environment](sdk/documentation/prod/index.md)
   The production environment deploys to a remote server and is used to serve the latest release.
 
