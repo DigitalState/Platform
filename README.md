@@ -6,7 +6,7 @@ The SDK provides a **set of tools** to help manage the DigitalState platform, fr
 
 It uses **Docker** and **Ansible** to help with orchestration and is the central repository used by developers.
 
-[![works badge](https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg)](https://github.com/nikku/works-on-my-machine)
+[![works badge](https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg)](sdk/documentation/tested.md)
 
 ## Table of Contents
 
