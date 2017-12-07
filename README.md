@@ -9,7 +9,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 ## Table of Contents
 
 - [Synopsis](#synopsis)
-- [Requirements](requirements)
+- [Requirements](#requirements)
 - [Installation](#installation)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
