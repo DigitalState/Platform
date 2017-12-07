@@ -1,10 +1,12 @@
 # Lab Environment
 
-## Proxy
+## Commands
 
-### Container
+### Proxy
 
-#### Stop
+#### Container
+
+##### Stop
 
 This command will stop the proxy container.
 

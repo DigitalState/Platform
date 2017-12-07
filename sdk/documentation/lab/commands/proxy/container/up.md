@@ -1,10 +1,12 @@
 # Lab Environment
 
-## Proxy
+## Commands
 
-### Container
+### Proxy
 
-#### Up
+#### Container
+
+##### Up
 
 This command will create and boot the proxy container.
 

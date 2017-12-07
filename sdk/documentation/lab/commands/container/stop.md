@@ -1,8 +1,10 @@
 # Lab Environment
 
-## Container
+## Commands
 
-### Stop
+### Container
+
+#### Stop
 
 This command will stop all containers, except the proxy container.
 

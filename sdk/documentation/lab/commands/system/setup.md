@@ -1,8 +1,10 @@
 # Lab Environment
 
-## System
+## Commands
 
-### Setup
+### System
+
+#### Setup
 
 This command will setup various core packages (Git, Docker, etc.) for the Linux Alpine container.
 

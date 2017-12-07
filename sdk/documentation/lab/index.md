@@ -131,7 +131,7 @@ ansible-playbook deploy.yml
 
 This command essentially downloads repositories, configures settings, builds images, boots up containers, migrates databases and loads data fixtures for each microservices.
 
-![Overview](overview.png)
+![Overview](images/overview.png)
 
 ## Test
 
@@ -175,5 +175,6 @@ Next, nagivate to `Authentication -> User -> /users`. Click the "Send" button. T
 
 ## References
 
-- [List of available Ansible commands.](commands.md)
-- [Inventory configuration file explained.](configurations.md)
+- [Cookbook](cookbook/index.md)
+- [List of available Ansible commands.](commands/index.md)
+- [Inventory configuration file explained.](configurations/index.md)

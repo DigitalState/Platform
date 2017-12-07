@@ -1,10 +1,12 @@
 # Lab Environment
 
-## Container
+## Commands
 
-### Env
+### Container
 
-#### Configure
+#### Env
+
+##### Configure
 
 This command will configure each containers environment file.
 

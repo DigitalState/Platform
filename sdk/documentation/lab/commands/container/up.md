@@ -1,8 +1,10 @@
 # Lab Environment
 
-## Container
+## Commands
 
-### Up
+### Container
+
+#### Up
 
 This command will create and boot all containers, except the proxy container.
 
