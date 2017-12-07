@@ -15,30 +15,30 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 ## Synopsis
 
-1. **Install** Docker on your local machine.
-2. **Download** the SDK repository.
+1. **Install** Git and Docker on your local machine.
+2. **Clone** the SDK repository.
 3. **Boot** the SDK container and **enter** the console.
 4. **Execute** pre-built Ansible commands to help with various orchestration tasks.
 
 ## Installation
 
-1. To begin, you will need to install Docker (for [Windows](https://www.docker.com/docker-windows), for [Mac](https://docs.docker.com/docker-for-mac), for [Linux](https://docs.docker.com/engine/installation/#server)) on your local machine.
+1. To begin, you will need to install Git (for [Windows](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_windows), for [Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_mac), for [Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_linux)) and Docker (for [Windows](https://www.docker.com/docker-windows), for [Mac](https://docs.docker.com/docker-for-mac), for [Linux](https://docs.docker.com/engine/installation/#server)) on your local machine.
 
-2. Download this repository.
-
-3. Open a command prompt and make it point to the root of the repository:
+2. Open a command prompt and clone the repository:
 
    ```
-   > cd C:\Users\user1\Sdk
+   > cd C:\Users\Demo
+   > git clone https://github.com/DigitalState/Sdk.git
+   > cd Sdk
    ```
 
-4. Boot the SDK container:
+3. Boot the SDK container:
 
    ```
    > docker-compose up -d
    ```
 
-5. Confirm the container has been booted successfully:
+   Confirm the container has been booted successfully:
 
    ```
    > docker ps
@@ -51,7 +51,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
    4ceab8511b85        sdk_sdk             "/bin/sh"           3 seconds ago       Up 2 seconds                            sdk
    ```
 
-6. Enter the container in bash mode:
+   Enter the container console:
 
    ```
    > docker exec -it sdk /bin/sh
