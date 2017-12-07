@@ -1,4 +1,15 @@
 # Tested
 
-- [x] Windows 10 Pro, HyperV v10, Docker v17
-- [x] MacOS Sierra 10, VirtualBox v5, Docker v17
+| OS | Compatible |
+| --- | --- |
+| Windows 10 | x |
+| MacOS Sierra 10 | x |
+
+| Docker | Compatible |
+| --- | --- |
+| v17 | x |
+
+| Virtualization | Compatible |
+| --- | --- |
+| HyperV v10 | x |
+| VirtualBox v5 | x |
