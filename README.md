@@ -9,6 +9,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 ## Table of Contents
 
 - [Synopsis](#synopsis)
+- [Requirements](requirements)
 - [Installation](#installation)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
@@ -21,9 +22,15 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 3. **Boot** the SDK container and **enter** the console.
 4. **Execute** pre-built Ansible commands to help with various orchestration tasks.
 
+## Requirements
+
+If you are running Windows on your local machine, Windows 10 with HyperV is required.
+
 ## Installation
 
 1. To begin, you will need to install Git (for [Windows](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_windows), for [Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_mac), for [Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_linux)) and Docker (for [Windows](https://www.docker.com/docker-windows), for [Mac](https://docs.docker.com/docker-for-mac), for [Linux](https://docs.docker.com/engine/installation/#server)) on your local machine.
+
+> Note: Docker Toolbox for Windows and Mac is not compatible.
 
 2. Open a command prompt and clone the repository:
 
