@@ -10,6 +10,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 - [Synopsis](#synopsis)
 - [Installation](#installation)
+- [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Credits](#credits)
 
@@ -60,6 +61,16 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
 The next step would be to deploy a local [lab environment](sdk/documentation/lab/index.md).
+
+## Documentation
+
+The SDK documentation is grouped by environments:
+
+- [Lab Environment](sdk/documentation/lab.index)
+- [Test Environment](sdk/documentation/test.index)
+- [Development Environment](sdk/documentation/dev.index)
+- [Staging Environment](sdk/documentation/stag.index)
+- [Production Environment](sdk/documentation/prod.index)
 
 ## Contributing
 
