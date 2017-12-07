@@ -51,7 +51,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
    4ceab8511b85        sdk_sdk             "/bin/sh"           3 seconds ago       Up 2 seconds                            sdk
    ```
 
-   Enter the container console:
+4. Enter the container console:
 
    ```
    > docker exec -it sdk /bin/sh
