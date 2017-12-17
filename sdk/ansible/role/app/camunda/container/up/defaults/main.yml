@@ -1,0 +1,7 @@
+---
+camunda_compose_project_name: ds_camunda
+camunda_network: ds_default
+camunda_timezone: UTC
+camunda_proxy_host: 127.0.0.1
+camunda_virtual_host: api.camunda.ds
+camunda_directory: /srv/camunda

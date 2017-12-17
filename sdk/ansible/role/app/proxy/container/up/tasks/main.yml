@@ -3,3 +3,6 @@
   docker_service:
       project_src: /srv/proxy
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ proxy_compose_project_name }}'
+      PORT: '{{ proxy_port }}'

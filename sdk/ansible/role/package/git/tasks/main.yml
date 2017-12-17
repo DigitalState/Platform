@@ -1,8 +1,6 @@
 ---
-- name: Install git
+- import_tasks: ubuntu.yml
   when: ansible_distribution == 'Ubuntu'
-  import_tasks: ubuntu.yml
 
-- name: Install git
+- import_tasks: alpine.yml
   when: ansible_distribution == 'Alpine'
-  import_tasks: alpine.yml

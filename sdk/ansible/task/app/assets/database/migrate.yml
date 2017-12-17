@@ -1,0 +1,6 @@
+---
+- name: Migrate assets database
+  include_role:
+      name: app/assets/database/migrate
+  when: assets.enabled
+  tags: [assets]

@@ -1,0 +1,6 @@
+---
+- name: Configure identities jwt key pass phrase
+  include_role:
+      name: app/identities/jwt/configure
+  when: identities.enabled
+  tags: [identities]

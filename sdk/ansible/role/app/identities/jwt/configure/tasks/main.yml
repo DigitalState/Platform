@@ -1,8 +1,4 @@
 ---
-- name: Waiting for identities config file to be created.
-  wait_for:
-      path: '{{ identities_config_file }}'
-
 - name: Configure identities jwt key pass phrase
   lineinfile:
       path: '{{ identities_config_file }}'

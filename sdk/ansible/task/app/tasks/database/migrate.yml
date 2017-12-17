@@ -1,0 +1,6 @@
+---
+- name: Migrate tasks database
+  include_role:
+      name: app/tasks/database/migrate
+  when: tasks.enabled
+  tags: [tasks]

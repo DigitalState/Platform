@@ -1,0 +1,6 @@
+---
+- name: Warmup authentication cache
+  include_role:
+      name: app/authentication/cache/warmup
+  when: authentication.enabled
+  tags: [authentication]

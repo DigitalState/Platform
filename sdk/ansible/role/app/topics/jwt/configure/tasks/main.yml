@@ -1,8 +1,4 @@
 ---
-- name: Waiting for topics config file to be created.
-  wait_for:
-      path: '{{ topics_config_file }}'
-
 - name: Configure topics jwt key pass phrase
   lineinfile:
       path: '{{ topics_config_file }}'

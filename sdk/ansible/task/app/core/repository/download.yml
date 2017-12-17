@@ -1,0 +1,11 @@
+---
+- block:
+      - name: Define core repository variables
+        set_fact:
+            core_repository: '{{ core.repository }}'
+            core_version: '{{ core.version }}'
+      - name: Download core repository
+        include_role:
+            name: app/core/repository/download
+  when: core.enabled
+  tags: [core]

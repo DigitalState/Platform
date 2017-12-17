@@ -1,0 +1,6 @@
+---
+- name: Migrate topics database
+  include_role:
+      name: app/topics/database/migrate
+  when: topics.enabled
+  tags: [topics]

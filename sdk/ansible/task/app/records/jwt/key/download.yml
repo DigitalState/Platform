@@ -1,0 +1,6 @@
+---
+- name: Download records jwt keys
+  include_role:
+      name: app/records/jwt/key/download
+  when: records.enabled
+  tags: [records]

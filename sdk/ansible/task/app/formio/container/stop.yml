@@ -1,0 +1,5 @@
+---
+- include_role:
+      name: app/formio/container/stop
+  when: formio is not none
+  tags: [formio]

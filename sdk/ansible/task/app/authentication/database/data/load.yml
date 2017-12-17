@@ -1,0 +1,12 @@
+---
+- block:
+      - name: Define authentication database variables
+        set_fact:
+            authentication_data: '{{ data }}'
+      - name: Load authentication database fixtures
+        include_role:
+            name: app/authentication/database/data/load
+  when:
+      - authentication.enabled
+      - data is not none
+  tags: [authentication]

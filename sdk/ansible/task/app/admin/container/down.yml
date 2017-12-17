@@ -1,0 +1,6 @@
+---
+- name: Down admin container
+  include_role:
+      name: app/admin/container/down
+  when: admin.enabled
+  tags: [admin]

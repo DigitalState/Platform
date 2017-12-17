@@ -1,7 +1,0 @@
----
-monitor_namespace: ds_monitor
-monitor_network: ds_default
-monitor_proxy_host: 127.0.0.1
-monitor_virtual_host: monitor.ds
-monitor_directory: /srv/monitor
-monitor_discovery: {}

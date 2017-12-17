@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Define services config variables
+      set_fact:
+          services_config: '{{ config }}'
+    - name: Set services configs
+      include_role:
+          name: app/services/config/set
+  when: services.enabled
+  tags: [services]

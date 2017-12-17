@@ -1,0 +1,6 @@
+---
+- name: Configure records jwt key pass phrase
+  include_role:
+      name: app/records/jwt/configure
+  when: records.enabled
+  tags: [records]

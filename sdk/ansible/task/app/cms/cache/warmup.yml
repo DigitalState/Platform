@@ -1,0 +1,6 @@
+---
+- name: Warmup cms cache
+  include_role:
+      name: app/cms/cache/warmup
+  when: cms.enabled
+  tags: [cms]

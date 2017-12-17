@@ -1,107 +1,17 @@
 ---
-- name: Configure git credentials
+- name: Compile repository list
+  hosts: sdk
+  become: true
+  tasks:
+      - name: ...
+        include_tasks: /etc/ansible/task/compiler/repository/download.yml
+
+- name: Download repositories
   hosts: server
   become: true
   tasks:
-      - name: Detect git credential file
-        local_action: 'stat path=/root/.git/credential'
-        register: git_credential
-        changed_when: false
-
-      - name: Create git credential variables
-        set_fact:
-            tasks_credential: '{{ lookup("file", "/root/.git/credential") }}'
-        when: git_credential.stat.exists == true
-        changed_when: false
-
-- name: Download repositories on server
-  hosts: server
-  become: true
-  roles:
-      - role: app/documentation/repository/download
-        when: documentation is not none
-        tags: [documentation]
-
-      - role: app/guide/repository/download
-        when: guide is not none
-        tags: [guide]
-
-      - role: app/proxy/repository/download
-        when: proxy is not none
-        tags: [proxy]
-
-      - role: app/assets/repository/download
-        when: assets is not none
-        tags: [assets]
-
-      - role: app/authentication/repository/download
-        when: authentication is not none
-        tags: [authentication]
-
-      - role: app/camunda/repository/download
-        when: camunda is not none
-        tags: [camunda]
-
-      - role: app/cases/repository/download
-        when: cases is not none
-        tags: [cases]
-
-      - role: app/cms/repository/download
-        when: cms is not none
-        tags: [cms]
-
-      - role: app/core/repository/download
-        when: core is not none
-        tags: [core]
-
-      - role: app/discovery/repository/download
-        when: discovery is not none
-        tags: [discovery]
-
-      - role: app/formio/repository/download
-        when: formio is not none
-        tags: [formio]
-
-      - role: app/identities/repository/download
-        when: identities is not none
-        tags: [identities]
-
-      - role: app/interactions/repository/download
-        when: interactions is not none
-        tags: [interactions]
-
-      - role: app/logs/repository/download
-        when: logs is not none
-        tags: [logs]
-
-      - role: app/records/repository/download
-        when: records is not none
-        tags: [records]
-
-      - role: app/services/repository/download
-        when: services is not none
-        tags: [services]
-
-      - role: app/tasks/repository/download
-        when: tasks is not none
-        tags: [tasks]
-
-      - role: app/topics/repository/download
-        when: topics is not none
-        tags: [topics]
-
-      - role: app/admin/repository/download
-        when: admin is not none
-        tags: [admin]
-
-      - role: app/monitor/repository/download
-        when: monitor is not none
-        tags: [monitor]
-
-      - role: app/portal/repository/download
-        when: portal is not none
-        tags: [portal]
-
-      - role: app/ui/repository/download
-        when: ui is not none
-        tags: [ui]
+      - name: Include compiled task list
+        include_tasks: '{{ file }}'
+        with_items: '{{ hostvars["sdk"]["files"] }}'
+        loop_control:
+            loop_var: file

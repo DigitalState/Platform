@@ -1,0 +1,18 @@
+---
+- block:
+      - name: Gather information for identities container
+        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define identities container variables
+        set_fact:
+            identities_compose_project_name: '{{ project }}_identities'
+            identities_network: '{{ project }}_default'
+            identities_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+            identities_virtual_host: '{{ identities.host }}'
+            identities_directory: '{{ directory }}/identities'
+            identities_jwt_private_key: '{{ directory }}/identities/var/jwt/key'
+            identities_jwt_public_key: '{{ directory }}/identities/var/jwt/key.pub'
+      - name: Up identities container
+        include_role:
+            name: app/identities/container/up
+  when: identities.enabled
+  tags: [identities]

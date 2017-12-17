@@ -1,5 +1,31 @@
 ---
+- name: Configure client host config
+  replace:
+      path: /srv/formio/formio/client/dist/config.js
+      regexp: api\.formio\.ds
+      replace: '{{ formio_virtual_host }}'
+
+- name: Configure app host config
+  replace:
+      path: /srv/formio/formio/config/default.json
+      regexp: api\.formio\.ds
+      replace: '{{ formio_virtual_host }}'
+
+- name: Ansible docker_service bug work-around
+  set_fact:
+      _formio: '{{ formio }}'
+
 - name: Up formio container
   docker_service:
       project_src: /srv/formio
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ formio_compose_project_name }}'
+      NETWORK: '{{ formio_network }}'
+      PROXY_HOST: '{{ formio_proxy_host }}'
+      VIRTUAL_HOST: '{{ formio_virtual_host }}'
+      DIRECTORY: '{{ formio_directory }}'
+
+- name: Ansible docker_service bug work-around
+  set_fact:
+      formio: '{{ _formio }}'

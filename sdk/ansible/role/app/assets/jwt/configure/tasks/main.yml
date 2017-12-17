@@ -1,8 +1,4 @@
 ---
-- name: Waiting for assets config file to be created.
-  wait_for:
-      path: '{{ assets_config_file }}'
-
 - name: Configure assets jwt key pass phrase
   lineinfile:
       path: '{{ assets_config_file }}'

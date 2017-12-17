@@ -1,0 +1,18 @@
+---
+- block:
+      - name: Gather information for cms container
+        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define cms container variables
+        set_fact:
+            cms_compose_project_name: '{{ project }}_cms'
+            cms_network: '{{ project }}_default'
+            cms_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+            cms_virtual_host: '{{ cms.host }}'
+            cms_directory: '{{ directory }}/cms'
+            cms_jwt_private_key: '{{ directory }}/cms/var/jwt/key'
+            cms_jwt_public_key: '{{ directory }}/cms/var/jwt/key.pub'
+      - name: Up cms container
+        include_role:
+            name: app/cms/container/up
+  when: cms.enabled
+  tags: [cms]

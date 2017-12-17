@@ -1,0 +1,6 @@
+---
+- name: Migrate identities database
+  include_role:
+      name: app/identities/database/migrate
+  when: identities.enabled
+  tags: [identities]

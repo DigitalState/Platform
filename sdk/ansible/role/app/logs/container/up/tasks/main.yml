@@ -3,3 +3,9 @@
   docker_service:
       project_src: /srv/logs
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ logs_compose_project_name }}'
+      NETWORK: '{{ logs_network }}'
+      PROXY_HOST: '{{ logs_proxy_host }}'
+      VIRTUAL_HOST: '{{ logs_virtual_host }}'
+      DIRECTORY: '{{ logs_directory }}'

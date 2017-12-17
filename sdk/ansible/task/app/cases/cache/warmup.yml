@@ -1,0 +1,6 @@
+---
+- name: Warmup cases cache
+  include_role:
+      name: app/cases/cache/warmup
+  when: cases.enabled
+  tags: [cases]

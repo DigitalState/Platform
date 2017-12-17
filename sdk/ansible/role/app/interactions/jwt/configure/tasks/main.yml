@@ -1,8 +1,4 @@
 ---
-- name: Waiting for interactions config file to be created.
-  wait_for:
-      path: '{{ interactions_config_file }}'
-
 - name: Configure interactions jwt key pass phrase
   lineinfile:
       path: '{{ interactions_config_file }}'

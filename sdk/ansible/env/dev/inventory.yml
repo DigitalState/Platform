@@ -1,171 +1,126 @@
 all:
     hosts:
+        sdk:
+            ansible_connection: local
         server:
             ansible_host: ~
             ansible_port: 22
             ansible_ssh_private_key_file: /root/.ssh/dev/key
-
     vars:
-        ### General ###########################################################
-
         project: ds
-
-        env: dev
-
         directory: /srv
-
+        env: dev
         timezone: UTC
-
-        jwt_private_key: /root/resource/jwt/dev/key
-        jwt_public_key: /root/resource/jwt/dev/key.pub
-        jwt_key_pass_phrase: ~
-
         data: dev
-
-        util_adminer: /root/resource/util/adminer.php
-
-        ### Documentation #####################################################
-
-        documentation: ~
-        documentation_version: master
-
-        ### Guide #############################################################
-
-        guide: ~
-        guide_version: master
-
-        ### Proxy #############################################################
-
-        proxy: enabled
-        proxy_version: develop
-        proxy_image: download
-        proxy_port: 80
-
-        ### Assets ############################################################
-
-        assets: ~
-        assets_version: develop
-        assets_image: download
-        assets_host: api.assets.dev.ds
-
-        ### Authentication ####################################################
-
-        authentication: enabled
-        authentication_version: develop
-        authentication_image: download
-        authentication_host: api.authentication.dev.ds
-
-        ### Camunda ###########################################################
-
-        camunda: ~
-        camunda_version: develop
-        camunda_image: download
-        camunda_host: api.camunda.dev.ds
-
-        ### Cases #############################################################
-
-        cases: ~
-        cases_version: develop
-        cases_image: download
-        cases_host: api.cases.dev.ds
-
-        ### Cms ###############################################################
-
-        cms: ~
-        cms_version: develop
-        cms_image: download
-        cms_host: api.cms.dev.ds
-
-        ### Discovery #########################################################
-
-        discovery: ~
-        discovery_version: develop
-        discovery_image: download
-        discovery_host: api.discovery.dev.ds
-
-        ### Formio ############################################################
-
-        formio: ~
-        formio_version: develop
-        formio_image: download
-        formio_host: api.formio.dev.ds
-
-        ### Identities ########################################################
-
-        identities: enabled
-        identities_version: develop
-        identities_image: download
-        identities_host: api.identities.dev.ds
-
-        ### Interactions ######################################################
-
-        interactions: ~
-        interactions_version: develop
-        interactions_image: download
-        interactions_host: api.interactions.dev.ds
-
-        ### Logs ##############################################################
-
-        logs: ~
-        logs_version: develop
-        logs_image: download
-        logs_host: api.logs.dev.ds
-
-        ### Records ###########################################################
-
-        records: ~
-        records_version: develop
-        records_image: download
-        records_host: api.records.dev.ds
-
-        ### Services ##########################################################
-
-        services: ~
-        services_version: develop
-        services_image: download
-        services_host: api.services.dev.ds
-
-        ### Tasks #############################################################
-
-        tasks: ~
-        tasks_version: develop
-        tasks_image: download
-        tasks_host: api.tasks.dev.ds
-
-        ### Topics ############################################################
-
-        topics: ~
-        topics_version: develop
-        topics_image: download
-        topics_host: api.topics.dev.ds
-
-        ### Core ##############################################################
-
-        core: ~
-        core_version: develop
-
-        ### Admin #############################################################
-
-        admin: ~
-        admin_version: develop
-        admin_image: download
-        admin_host: admin.dev.ds
-
-        ### Monitor ###########################################################
-
-        monitor: ~
-        monitor_version: develop
-        monitor_image: download
-        monitor_host: monitor.dev.ds
-
-        ### Portal ############################################################
-
-        portal: ~
-        portal_version: develop
-        portal_image: download
-        portal_host: portal.dev.ds
-
-        ### Ui ################################################################
-
-        ui: ~
-        ui_version: develop
+        jwt:
+            private_key: /root/resource/jwt/dev/key
+            public_key: /root/resource/jwt/dev/key.pub
+            key_pass_phase: ~
+        util:
+            adminer: /root/resource/util/adminer.php
+        admin:
+            enabled: true
+            repository: https://github.com/DigitalState/Admin.git
+            version: develop
+            host: admin.dev.ds
+        assets:
+            enabled: true
+            repository: https://github.com/DigitalState/Assets.git
+            version: develop
+            host: api.assets.dev.ds
+        authentication:
+            enabled: true
+            repository: https://github.com/DigitalState/Authentication.git
+            version: develop
+            host: api.authentication.dev.ds
+        camunda:
+            enabled: true
+            repository: https://github.com/DigitalState/Camunda.git
+            version: develop
+            host: api.camunda.dev.ds
+        cases:
+            enabled: true
+            repository: https://github.com/DigitalState/Cases.git
+            version: develop
+            host: api.cases.dev.ds
+        cms:
+            enabled: true
+            repository: https://github.com/DigitalState/Cms.git
+            version: develop
+            host: api.cms.dev.ds
+        core:
+            enabled: true
+            repository: https://github.com/DigitalState/Core.git
+            version: develop
+        discovery:
+            enabled: false
+            repository: https://github.com/DigitalState/Discovery.git
+            version: develop
+            host: api.discovery.dev.ds
+        documentation:
+            enabled: true
+            repository: https://github.com/DigitalState/Documentation.git
+            version: master
+        formio:
+            enabled: true
+            repository: https://github.com/DigitalState/Formio.git
+            version: develop
+            host: api.formio.dev.ds
+        guide:
+            enabled: true
+            repository: https://github.com/DigitalState/Guide.git
+            version: master
+        identities:
+            enabled: true
+            repository: https://github.com/DigitalState/Identities.git
+            version: develop
+            host: api.identities.dev.ds
+        interactions:
+            enabled: false
+            repository: https://github.com/DigitalState/Interactions.git
+            version: develop
+            host: api.interactions.dev.ds
+        logs:
+            enabled: false
+            repository: https://github.com/DigitalState/Logs.git
+            version: develop
+            host: api.logs.dev.ds
+        monitor:
+            enabled: false
+            repository: https://github.com/DigitalState/Monitor.git
+            version: develop
+            host: monitor.dev.ds
+        portal:
+            enabled: true
+            version: develop
+            repository: https://github.com/DigitalState/Portal.git
+            host: portal.dev.ds
+        proxy:
+            enabled: true
+            repository: https://github.com/DigitalState/Proxy.git
+            version: develop
+            port: 80
+        records:
+            enabled: true
+            version: develop
+            repository: https://github.com/DigitalState/Records.git
+            host: api.records.dev.ds
+        services:
+            enabled: true
+            repository: https://github.com/DigitalState/Services.git
+            version: develop
+            host: api.services.dev.ds
+        tasks:
+            enabled: true
+            repository: https://github.com/DigitalState/Tasks.git
+            version: develop
+            host: api.tasks.dev.ds
+        topics:
+            enabled: false
+            repository: https://github.com/DigitalState/Topics.git
+            version: develop
+            host: api.topics.dev.ds
+        ui:
+            enabled: true
+            repository: https://github.com/DigitalState/Ui.git
+            version: develop

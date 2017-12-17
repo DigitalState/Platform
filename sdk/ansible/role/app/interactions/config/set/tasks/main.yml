@@ -3,4 +3,4 @@
   shell:
       cmd: 'docker-compose exec php php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
       chdir: /srv/interactions
-  with_dict: '{{ config }}'
+  with_dict: '{{ interactions_config }}'

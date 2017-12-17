@@ -1,7 +1,8 @@
 ---
 - name: Download monitor repository
   git:
-      version: '{{ monitor_version }}'
       repo: '{{ monitor_repository }}'
+      version: '{{ monitor_version }}'
+      recursive: yes
       dest: /srv/monitor
       force: yes

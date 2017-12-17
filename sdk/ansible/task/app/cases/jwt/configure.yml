@@ -1,0 +1,6 @@
+---
+- name: Configure cases jwt key pass phrase
+  include_role:
+      name: app/cases/jwt/configure
+  when: cases.enabled
+  tags: [cases]

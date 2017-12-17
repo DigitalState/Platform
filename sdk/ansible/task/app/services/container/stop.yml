@@ -1,0 +1,6 @@
+---
+- name: Stop services container
+  include_role:
+      name: app/services/container/stop
+  when: services.enabled
+  tags: [services]

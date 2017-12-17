@@ -1,171 +1,126 @@
 all:
     hosts:
+        sdk:
+            ansible_connection: local
         server:
             ansible_host: ~
             ansible_port: 22
             ansible_ssh_private_key_file: /root/.ssh/test/key
-
     vars:
-        ### General ###########################################################
-
         project: ds
-
-        env: test
-
         directory: /srv
-
+        env: test
         timezone: UTC
-
-        jwt_private_key: /root/resource/jwt/test/key
-        jwt_public_key: /root/resource/jwt/test/key.pub
-        jwt_key_pass_phrase: ~
-
         data: test
-
-        util_adminer: ~
-
-        ### Documentation #####################################################
-
-        documentation: ~
-        documentation_version: master
-
-        ### Guide #############################################################
-
-        guide: ~
-        guide_version: master
-
-        ### Proxy #############################################################
-
-        proxy: enabled
-        proxy_version: develop
-        proxy_image: download
-        proxy_port: 443
-
-        ### Assets ############################################################
-
-        assets: ~
-        assets_version: develop
-        assets_image: download
-        assets_host: api.assets.test.ds
-
-        ### Authentication ####################################################
-
-        authentication: enabled
-        authentication_version: develop
-        authentication_image: download
-        authentication_host: api.authentication.test.ds
-
-        ### Camunda ###########################################################
-
-        camunda: ~
-        camunda_version: develop
-        camunda_image: download
-        camunda_host: api.camunda.test.ds
-
-        ### Cases #############################################################
-
-        cases: ~
-        cases_version: develop
-        cases_image: download
-        cases_host: api.cases.test.ds
-
-        ### Cms ###############################################################
-
-        cms: ~
-        cms_version: develop
-        cms_image: download
-        cms_host: api.cms.test.ds
-
-        ### Discovery #########################################################
-
-        discovery: ~
-        discovery_version: develop
-        discovery_image: download
-        discovery_host: api.discovery.test.ds
-
-        ### Formio ############################################################
-
-        formio: ~
-        formio_version: develop
-        formio_image: download
-        formio_host: api.formio.test.ds
-
-        ### Identities ########################################################
-
-        identities: enabled
-        identities_version: develop
-        identities_image: download
-        identities_host: api.identities.test.ds
-
-        ### Interactions ######################################################
-
-        interactions: ~
-        interactions_version: develop
-        interactions_image: download
-        interactions_host: api.interactions.test.ds
-
-        ### Logs ##############################################################
-
-        logs: ~
-        logs_version: develop
-        logs_image: download
-        logs_host: api.logs.test.ds
-
-        ### Records ###########################################################
-
-        records: ~
-        records_version: develop
-        records_image: download
-        records_host: api.records.test.ds
-
-        ### Services ##########################################################
-
-        services: ~
-        services_version: develop
-        services_image: download
-        services_host: api.services.test.ds
-
-        ### Tasks #############################################################
-
-        tasks: ~
-        tasks_version: develop
-        tasks_image: download
-        tasks_host: api.tasks.test.ds
-
-        ### Topics ############################################################
-
-        topics: ~
-        topics_version: develop
-        topics_image: download
-        topics_host: api.topics.test.ds
-
-        ### Core ##############################################################
-
-        core: ~
-        core_version: develop
-
-        ### Admin #############################################################
-
-        admin: ~
-        admin_version: develop
-        admin_image: download
-        admin_host: admin.test.ds
-
-        ### Monitor ###########################################################
-
-        monitor: ~
-        monitor_version: develop
-        monitor_image: download
-        monitor_host: monitor.test.ds
-
-        ### Portal ############################################################
-
-        portal: ~
-        portal_version: develop
-        portal_image: download
-        portal_host: portal.test.ds
-
-        ### Ui ################################################################
-
-        ui: ~
-        ui_version: develop
+        jwt:
+            private_key: /root/resource/jwt/test/key
+            public_key: /root/resource/jwt/test/key.pub
+            key_pass_phase: ~
+        util:
+            adminer: /root/resource/util/adminer.php
+        admin:
+            enabled: true
+            repository: https://github.com/DigitalState/Admin.git
+            version: develop
+            host: admin.test.ds
+        assets:
+            enabled: true
+            repository: https://github.com/DigitalState/Assets.git
+            version: develop
+            host: api.assets.test.ds
+        authentication:
+            enabled: true
+            repository: https://github.com/DigitalState/Authentication.git
+            version: develop
+            host: api.authentication.test.ds
+        camunda:
+            enabled: true
+            repository: https://github.com/DigitalState/Camunda.git
+            version: develop
+            host: api.camunda.test.ds
+        cases:
+            enabled: true
+            repository: https://github.com/DigitalState/Cases.git
+            version: develop
+            host: api.cases.test.ds
+        cms:
+            enabled: true
+            repository: https://github.com/DigitalState/Cms.git
+            version: develop
+            host: api.cms.test.ds
+        core:
+            enabled: true
+            repository: https://github.com/DigitalState/Core.git
+            version: develop
+        discovery:
+            enabled: false
+            repository: https://github.com/DigitalState/Discovery.git
+            version: develop
+            host: api.discovery.test.ds
+        documentation:
+            enabled: true
+            repository: https://github.com/DigitalState/Documentation.git
+            version: master
+        formio:
+            enabled: true
+            repository: https://github.com/DigitalState/Formio.git
+            version: develop
+            host: api.formio.test.ds
+        guide:
+            enabled: true
+            repository: https://github.com/DigitalState/Guide.git
+            version: master
+        identities:
+            enabled: true
+            repository: https://github.com/DigitalState/Identities.git
+            version: develop
+            host: api.identities.test.ds
+        interactions:
+            enabled: false
+            repository: https://github.com/DigitalState/Interactions.git
+            version: develop
+            host: api.interactions.test.ds
+        logs:
+            enabled: false
+            repository: https://github.com/DigitalState/Logs.git
+            version: develop
+            host: api.logs.test.ds
+        monitor:
+            enabled: false
+            repository: https://github.com/DigitalState/Monitor.git
+            version: develop
+            host: monitor.test.ds
+        portal:
+            enabled: true
+            version: develop
+            repository: https://github.com/DigitalState/Portal.git
+            host: portal.test.ds
+        proxy:
+            enabled: true
+            repository: https://github.com/DigitalState/Proxy.git
+            version: develop
+            port: 443
+        records:
+            enabled: true
+            version: develop
+            repository: https://github.com/DigitalState/Records.git
+            host: api.records.test.ds
+        services:
+            enabled: true
+            repository: https://github.com/DigitalState/Services.git
+            version: develop
+            host: api.services.test.ds
+        tasks:
+            enabled: true
+            repository: https://github.com/DigitalState/Tasks.git
+            version: develop
+            host: api.tasks.test.ds
+        topics:
+            enabled: false
+            repository: https://github.com/DigitalState/Topics.git
+            version: develop
+            host: api.topics.test.ds
+        ui:
+            enabled: true
+            repository: https://github.com/DigitalState/Ui.git
+            version: develop

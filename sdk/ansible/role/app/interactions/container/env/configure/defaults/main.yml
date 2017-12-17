@@ -1,6 +1,0 @@
----
-interactions_namespace: ds_interactions
-interactions_network: ds_default
-interactions_proxy_host: 127.0.0.1
-interactions_virtual_host: api.interactions.ds
-interactions_directory: /srv/interactions

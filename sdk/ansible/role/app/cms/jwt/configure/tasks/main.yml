@@ -1,8 +1,4 @@
 ---
-- name: Waiting for cms config file to be created.
-  wait_for:
-      path: '{{ cms_config_file }}'
-
 - name: Configure cms jwt key pass phrase
   lineinfile:
       path: '{{ cms_config_file }}'

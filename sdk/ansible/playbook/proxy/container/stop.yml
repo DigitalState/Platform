@@ -1,8 +1,7 @@
 ---
-- name: Stop proxy container on server
+- name: Stop proxy container
   hosts: server
   become: true
-  roles:
-      - role: app/proxy/container/stop
-        when: proxy is not none
-        tags: [proxy]
+  tasks:
+      - name: Include task
+        include_tasks: /etc/ansible/task/app/proxy/container/stop.yml

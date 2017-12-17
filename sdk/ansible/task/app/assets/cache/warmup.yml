@@ -1,0 +1,6 @@
+---
+- name: Warmup assets cache
+  include_role:
+      name: app/assets/cache/warmup
+  when: assets.enabled
+  tags: [assets]

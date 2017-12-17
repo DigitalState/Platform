@@ -1,0 +1,6 @@
+---
+- name: Configure interactions jwt key pass phrase
+  include_role:
+      name: app/interactions/jwt/configure
+  when: interactions.enabled
+  tags: [interactions]

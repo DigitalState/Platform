@@ -1,0 +1,12 @@
+---
+- block:
+      - name: Define interactions util adminer variables
+        set_fact:
+            interactions_util_adminer: '{{ util.adminer }}'
+      - name: Download adminer for interactions
+        include_role:
+          name: app/interactions/util/adminer/download
+  when:
+      - interactions.enabled
+      - util.adminer is not none
+  tags: [interactions]

@@ -1,0 +1,6 @@
+---
+- name: Download logs repository override directory
+  include_role:
+      name: app/logs/repository/override
+  when: logs.enabled
+  tags: [logs]

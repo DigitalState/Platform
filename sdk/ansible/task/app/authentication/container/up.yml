@@ -1,0 +1,18 @@
+---
+- block:
+      - name: Gather information for authentication container
+        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define authentication container variables
+        set_fact:
+            authentication_compose_project_name: '{{ project }}_authentication'
+            authentication_network: '{{ project }}_default'
+            authentication_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+            authentication_virtual_host: '{{ authentication.host }}'
+            authentication_directory: '{{ directory }}/authentication'
+            authentication_jwt_private_key: '{{ directory }}/authentication/var/jwt/key'
+            authentication_jwt_public_key: '{{ directory }}/authentication/var/jwt/key.pub'
+      - name: Up authentication container
+        include_role:
+            name: app/authentication/container/up
+  when: authentication.enabled
+  tags: [authentication]

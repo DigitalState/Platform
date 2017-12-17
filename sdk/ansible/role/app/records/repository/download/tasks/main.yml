@@ -1,7 +1,7 @@
 ---
 - name: Download records repository
   git:
-      version: '{{ records_version }}'
       repo: '{{ records_repository }}'
+      version: '{{ records_version }}'
       dest: /srv/records
       force: yes

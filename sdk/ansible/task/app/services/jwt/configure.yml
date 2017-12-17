@@ -1,0 +1,6 @@
+---
+- name: Configure services jwt key pass phrase
+  include_role:
+      name: app/services/jwt/configure
+  when: services.enabled
+  tags: [services]

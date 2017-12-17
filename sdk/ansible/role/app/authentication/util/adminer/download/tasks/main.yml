@@ -1,5 +1,5 @@
 ---
-- name: Download adminer
+- name: Download adminer for authentication
   copy:
       src: '{{ authentication_util_adminer }}'
       dest: /srv/authentication/web/adminer.php

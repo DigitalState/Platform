@@ -1,0 +1,11 @@
+---
+- block:
+      - name: Define authentication repository variables
+        set_fact:
+            authentication_repository: '{{ authentication.repository }}'
+            authentication_version: '{{ authentication.version }}'
+      - name: Download authentication repository
+        include_role:
+          name: app/authentication/repository/download
+  when: authentication.enabled
+  tags: [authentication]

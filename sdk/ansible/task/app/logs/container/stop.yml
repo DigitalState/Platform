@@ -1,0 +1,6 @@
+---
+- name: Stop logs container
+  include_role:
+      name: app/logs/container/stop
+  when: logs.enabled
+  tags: [logs]

@@ -4,9 +4,8 @@
   register: os
   changed_when: false
 
-- name: Install python
+- import_tasks: ubuntu.yml
   when: os.stdout.find('Ubuntu')
-  import_tasks: ubuntu.yml
 
 - name: Gather facts
   setup:

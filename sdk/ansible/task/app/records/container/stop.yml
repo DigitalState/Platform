@@ -1,0 +1,6 @@
+---
+- name: Stop records container
+  include_role:
+      name: app/records/container/stop
+  when: records.enabled
+  tags: [records]

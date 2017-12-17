@@ -1,0 +1,6 @@
+---
+- name: Download tasks jwt keys
+  include_role:
+      name: app/tasks/jwt/key/download
+  when: tasks.enabled
+  tags: [tasks]

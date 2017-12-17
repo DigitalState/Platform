@@ -1,0 +1,18 @@
+---
+- block:
+      - name: Gather information for records container
+        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define records container variables
+        set_fact:
+            records_compose_project_name: '{{ project }}_records'
+            records_network: '{{ project }}_default'
+            records_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+            records_virtual_host: '{{ records.host }}'
+            records_directory: '{{ directory }}/records'
+            records_jwt_private_key: '{{ directory }}/records/var/jwt/key'
+            records_jwt_public_key: '{{ directory }}/records/var/jwt/key.pub'
+      - name: Up records container
+        include_role:
+            name: app/records/container/up
+  when: records.enabled
+  tags: [records]

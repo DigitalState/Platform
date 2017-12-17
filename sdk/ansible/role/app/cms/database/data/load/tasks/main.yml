@@ -1,12 +1,12 @@
 ---
 - name: Detect custom cms fixtures directory
-  local_action: 'stat path=/root/resource/data/{{ data }}/cms'
+  local_action: 'stat path=/root/resource/data/{{ cms_data }}/cms'
   register: directory
 
 - name: Load default cms database fixtures
-  when: directory.stat.exists == false
   import_tasks: default.yml
+  when: directory.stat.exists == false
 
 - name: Load custom cms database fixtures
-  when: directory.stat.exists == true
   import_tasks: custom.yml
+  when: directory.stat.exists == true

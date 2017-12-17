@@ -1,0 +1,6 @@
+---
+- name: Down topics container
+  include_role:
+      name: app/topics/container/down
+  when: topics.enabled
+  tags: [topics]

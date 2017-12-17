@@ -1,0 +1,6 @@
+---
+- name: Configure assets jwt key pass phrase
+  include_role:
+      name: app/assets/jwt/configure
+  when: assets.enabled
+  tags: [assets]

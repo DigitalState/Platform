@@ -3,3 +3,20 @@
   docker_service:
       project_src: /srv/interactions
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ interactions_compose_project_name }}'
+      NETWORK: '{{ interactions_network }}'
+      PROXY_HOST: '{{ interactions_proxy_host }}'
+      VIRTUAL_HOST: '{{ interactions_virtual_host }}'
+      DIRECTORY: '{{ interactions_directory }}'
+      JWT_PRIVATE_KEY: '{{ interactions_jwt_private_key }}'
+      JWT_PUBLIC_KEY: '{{ interactions_jwt_public_key }}'
+
+- name: Waiting for interactions container to finalize installation
+  shell:
+      cmd: docker-compose exec -T php pidof php-fpm | cat
+      chdir: /srv/interactions
+  register: output
+  until: output.stdout|match('^[0-9]+(\s[0-9]+)*$')
+  retries: 60
+  delay: 10

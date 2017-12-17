@@ -1,8 +1,4 @@
 ---
-- name: Waiting for tasks config file to be created.
-  wait_for:
-      path: '{{ tasks_config_file }}'
-
 - name: Configure tasks jwt key pass phrase
   lineinfile:
       path: '{{ tasks_config_file }}'

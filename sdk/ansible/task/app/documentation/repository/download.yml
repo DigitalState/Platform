@@ -1,0 +1,12 @@
+---
+- name: Define documentation repository variables
+  set_fact:
+      documentation_repository: '{{ documentation.repository }}'
+      documentation_version: '{{ documentation.version }}'
+  tags: [documentation]
+
+- name: Download documentation repository
+  include_role:
+      name: app/documentation/repository/download
+  when: documentation.enabled
+  tags: [documentation]

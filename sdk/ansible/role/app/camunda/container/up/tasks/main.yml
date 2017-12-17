@@ -1,5 +1,21 @@
 ---
+- name: Ansible docker_service bug work-around
+  set_fact:
+      _camunda: '{{ camunda }}'
+
 - name: Up camunda container
   docker_service:
       project_src: /srv/camunda
       state: present
+      debug: no
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ camunda_compose_project_name }}'
+      NETWORK: '{{ camunda_network }}'
+      JAVA_OPTS: '-Djava.security.egd=file:/dev/./urandom -Duser.timezone={{ camunda_timezone }}'
+      PROXY_HOST: '{{ camunda_proxy_host }}'
+      VIRTUAL_HOST: '{{ camunda_virtual_host }}'
+      DIRECTORY: '{{ camunda_directory }}'
+
+- name: Ansible docker_service bug work-around
+  set_fact:
+      camunda: '{{ _camunda }}'

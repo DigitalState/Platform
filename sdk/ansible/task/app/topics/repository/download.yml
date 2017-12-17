@@ -1,0 +1,11 @@
+---
+- block:
+      - name: Define topics repository variables
+        set_fact:
+            topics_repository: '{{ topics.repository }}'
+            topics_version: '{{ topics.version }}'
+      - name: Download topics repository
+        include_role:
+          name: app/topics/repository/download
+  when: topics.enabled
+  tags: [topics]

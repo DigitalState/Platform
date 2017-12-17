@@ -1,8 +1,8 @@
 ---
 - name: Download admin repository
   git:
-      version: '{{ admin_version }}'
       repo: '{{ admin_repository }}'
+      version: '{{ admin_version }}'
       recursive: yes
       dest: /srv/admin
       force: yes

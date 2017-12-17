@@ -3,3 +3,9 @@
   docker_service:
       project_src: /srv/discovery
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ discovery_compose_project_name }}'
+      NETWORK: '{{ discovery_network }}'
+      PROXY_HOST: '{{ discovery_proxy_host }}'
+      VIRTUAL_HOST: '{{ discovery_virtual_host }}'
+      DIRECTORY: '{{ discovery_directory }}'

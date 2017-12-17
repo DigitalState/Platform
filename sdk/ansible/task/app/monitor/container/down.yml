@@ -1,0 +1,6 @@
+---
+- name: Down monitor container
+  include_role:
+      name: app/monitor/container/down
+  when: monitor.enabled
+  tags: [monitor]

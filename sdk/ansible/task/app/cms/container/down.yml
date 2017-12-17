@@ -1,0 +1,6 @@
+---
+- name: Down cms container
+  include_role:
+      name: app/cms/container/down
+  when: cms.enabled
+  tags: [cms]

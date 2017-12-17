@@ -1,5 +1,5 @@
 ---
-- name: Download adminer
+- name: Download adminer for cases
   copy:
       src: '{{ cases_util_adminer }}'
       dest: /srv/cases/web/adminer.php

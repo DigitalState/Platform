@@ -1,0 +1,6 @@
+---
+- name: Download topics repository override directory
+  include_role:
+      name: app/topics/repository/override
+  when: topics.enabled
+  tags: [topics]

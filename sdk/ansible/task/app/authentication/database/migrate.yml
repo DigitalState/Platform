@@ -1,0 +1,6 @@
+---
+- name: Migrate authentication database
+  include_role:
+      name: app/authentication/database/migrate
+  when: authentication.enabled
+  tags: [authentication]

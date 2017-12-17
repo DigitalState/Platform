@@ -1,8 +1,4 @@
 ---
-- name: Waiting for authentication config file to be created.
-  wait_for:
-      path: '{{ authentication_config_file }}'
-
 - name: Configure authentication jwt key pass phrase
   lineinfile:
       path: '{{ authentication_config_file }}'

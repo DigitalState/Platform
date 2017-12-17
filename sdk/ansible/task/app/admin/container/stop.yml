@@ -1,0 +1,6 @@
+---
+- name: Stop admin container
+  include_role:
+      name: app/admin/container/stop
+  when: admin.enabled
+  tags: [admin]

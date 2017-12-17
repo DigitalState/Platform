@@ -1,7 +1,7 @@
 ---
 - name: Download cases repository
   git:
-      version: '{{ cases_version }}'
       repo: '{{ cases_repository }}'
+      version: '{{ cases_version }}'
       dest: /srv/cases
       force: yes

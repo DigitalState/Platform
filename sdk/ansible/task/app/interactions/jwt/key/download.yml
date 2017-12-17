@@ -1,0 +1,6 @@
+---
+- name: Download interactions jwt keys
+  include_role:
+      name: app/interactions/jwt/key/download
+  when: interactions.enabled
+  tags: [interactions]

@@ -1,0 +1,6 @@
+---
+- name: Warmup services cache
+  include_role:
+      name: app/services/cache/warmup
+  when: services.enabled
+  tags: [services]

@@ -1,0 +1,5 @@
+---
+- include_role:
+      name: app/camunda/container/stop
+  when: camunda is not none
+  tags: [camunda]

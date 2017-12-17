@@ -1,36 +1,21 @@
 ---
-- name: Configure jwt key pass phrase
+- name: Compile jwt list
+  hosts: sdk
+  become: true
+  tasks:
+      - name: ...
+        include_tasks: /etc/ansible/task/compiler/jwt/configure.yml
+
+- name: Configure jwt key pass phrases
   hosts: server
   become: true
-  roles:
-      - role: app/assets/jwt/configure
-        when: assets is not none
-        tags: [assets]
+  tasks:
+      - name: Define jwt variables
+        set_fact:
+            jwt_key_pass_phrase: '{{ jwt.key_pass_phase }}'
 
-      - role: app/authentication/jwt/configure
-        when: authentication is not none
-        tags: [authentication]
-
-      - role: app/cases/jwt/configure
-        when: cases is not none
-        tags: [cases]
-
-      - role: app/cms/jwt/configure
-        when: cms is not none
-        tags: [cms]
-
-      - role: app/identities/jwt/configure
-        when: identities is not none
-        tags: [identities]
-
-      - role: app/records/jwt/configure
-        when: records is not none
-        tags: [records]
-
-      - role: app/services/jwt/configure
-        when: services is not none
-        tags: [services]
-
-      - role: app/tasks/jwt/configure
-        when: tasks is not none
-        tags: [tasks]
+      - name: Include compiled list
+        include_tasks: '{{ file }}'
+        with_items: '{{ hostvars["sdk"]["files"] }}'
+        loop_control:
+            loop_var: file

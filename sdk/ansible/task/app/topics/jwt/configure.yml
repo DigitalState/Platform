@@ -1,0 +1,6 @@
+---
+- name: Configure topics jwt key pass phrase
+  include_role:
+      name: app/topics/jwt/configure
+  when: topics.enabled
+  tags: [topics]

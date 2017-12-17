@@ -1,11 +1,11 @@
 ---
 - name: Backup topics fixtures directory
-  shell: 'cp -R /srv/topics/src/AppBundle/Resources/data/{{ data }} /srv/topics/src/AppBundle/Resources/data/_{{ data }}'
+  shell: 'cp -R /srv/topics/src/AppBundle/Resources/data/{{ topics_data }} /srv/topics/src/AppBundle/Resources/data/_{{ topics_data }}'
 
 - name: Download custom topics fixtures directory
   copy:
-      src: '/root/resource/data/{{ data }}/topics/'
-      dest: '/srv/topics/src/AppBundle/Resources/data/{{ data }}'
+      src: '/root/resource/data/{{ topics_data }}/topics/'
+      dest: '/srv/topics/src/AppBundle/Resources/data/{{ topics_data }}'
 
 - import_tasks: load.yml
 
@@ -16,8 +16,8 @@
 
 - name: Delete custom topics fixtures directory
   file:
-      path: '/srv/topics/src/AppBundle/Resources/data/{{ data }}'
+      path: '/srv/topics/src/AppBundle/Resources/data/{{ topics_data }}'
       state: absent
 
 - name: Restore topics fixtures directory backup
-  shell: 'mv /srv/topics/src/AppBundle/Resources/data/_{{ data }} /srv/topics/src/AppBundle/Resources/data/{{ data }}'
+  shell: 'mv /srv/topics/src/AppBundle/Resources/data/_{{ topics_data }} /srv/topics/src/AppBundle/Resources/data/{{ topics_data }}'

@@ -1,0 +1,40 @@
+---
+- block:
+      - name: Gather information for portal container
+        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define portal container variables
+        set_fact:
+            portal_discovery: {}
+      - name: Append each enabled services to the discovery variable
+        set_fact:
+            portal_discovery: '{{ portal_discovery|combine({item: {"host": vars[item].host}}) }}'
+        with_items:
+            - admin
+            - assets
+            - authentication
+            - camunda
+            - cases
+            - cms
+            - discovery
+            - formio
+            - identities
+            - interactions
+            - logs
+            - monitor
+            - portal
+            - records
+            - services
+            - tasks
+            - topics
+      - name: Define portal container variables
+        set_fact:
+            portal_namespace: '{{ project }}_portal'
+            portal_network: '{{ project }}_default'
+            portal_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+            portal_virtual_host: '{{ portal.host }}'
+            portal_directory: '{{ directory }}/portal'
+      - name: Up portal container
+        include_role:
+            name: app/portal/container/up
+  when: portal.enabled
+  tags: [portal]

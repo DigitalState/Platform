@@ -1,11 +1,11 @@
 ---
 - name: Backup identities fixtures directory
-  shell: 'cp -R /srv/identities/src/AppBundle/Resources/data/{{ data }} /srv/identities/src/AppBundle/Resources/data/_{{ data }}'
+  shell: 'cp -R /srv/identities/src/AppBundle/Resources/data/{{ identities_data }} /srv/identities/src/AppBundle/Resources/data/_{{ identities_data }}'
 
 - name: Download custom identities fixtures directory
   copy:
-      src: '/root/resource/data/{{ data }}/identities/'
-      dest: '/srv/identities/src/AppBundle/Resources/data/{{ data }}'
+      src: '/root/resource/data/{{ identities_data }}/identities/'
+      dest: '/srv/identities/src/AppBundle/Resources/data/{{ identities_data }}'
 
 - import_tasks: load.yml
 
@@ -16,8 +16,8 @@
 
 - name: Delete custom identities fixtures directory
   file:
-      path: '/srv/identities/src/AppBundle/Resources/data/{{ data }}'
+      path: '/srv/identities/src/AppBundle/Resources/data/{{ identities_data }}'
       state: absent
 
 - name: Restore identities fixtures directory backup
-  shell: 'mv /srv/identities/src/AppBundle/Resources/data/_{{ data }} /srv/identities/src/AppBundle/Resources/data/{{ data }}'
+  shell: 'mv /srv/identities/src/AppBundle/Resources/data/_{{ identities_data }} /srv/identities/src/AppBundle/Resources/data/{{ identities_data }}'

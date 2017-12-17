@@ -3,6 +3,14 @@
   docker_service:
       project_src: /srv/assets
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ assets_compose_project_name }}'
+      NETWORK: '{{ assets_network }}'
+      PROXY_HOST: '{{ assets_proxy_host }}'
+      VIRTUAL_HOST: '{{ assets_virtual_host }}'
+      DIRECTORY: '{{ assets_directory }}'
+      JWT_PRIVATE_KEY: '{{ assets_jwt_private_key }}'
+      JWT_PUBLIC_KEY: '{{ assets_jwt_public_key }}'
 
 - name: Waiting for assets container to finalize installation
   shell:

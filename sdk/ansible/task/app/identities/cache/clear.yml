@@ -1,0 +1,6 @@
+---
+- name: Clear identities cache
+  include_role:
+      name: app/identities/cache/clear
+  when: identities.enabled
+  tags: [identities]

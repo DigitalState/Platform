@@ -1,11 +1,11 @@
 ---
 - name: Backup cms fixtures directory
-  shell: 'cp -R /srv/cms/src/AppBundle/Resources/data/{{ data }} /srv/cms/src/AppBundle/Resources/data/_{{ data }}'
+  shell: 'cp -R /srv/cms/src/AppBundle/Resources/data/{{ cms_data }} /srv/cms/src/AppBundle/Resources/data/_{{ cms_data }}'
 
 - name: Download custom cms fixtures directory
   copy:
-      src: '/root/resource/data/{{ data }}/cms/'
-      dest: '/srv/cms/src/AppBundle/Resources/data/{{ data }}'
+      src: '/root/resource/data/{{ cms_data }}/cms/'
+      dest: '/srv/cms/src/AppBundle/Resources/data/{{ cms_data }}'
 
 - import_tasks: load.yml
 
@@ -16,8 +16,8 @@
 
 - name: Delete custom cms fixtures directory
   file:
-      path: '/srv/cms/src/AppBundle/Resources/data/{{ data }}'
+      path: '/srv/cms/src/AppBundle/Resources/data/{{ cms_data }}'
       state: absent
 
 - name: Restore cms fixtures directory backup
-  shell: 'mv /srv/cms/src/AppBundle/Resources/data/_{{ data }} /srv/cms/src/AppBundle/Resources/data/{{ data }}'
+  shell: 'mv /srv/cms/src/AppBundle/Resources/data/_{{ cms_data }} /srv/cms/src/AppBundle/Resources/data/{{ cms_data }}'

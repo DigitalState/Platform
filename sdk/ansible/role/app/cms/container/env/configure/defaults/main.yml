@@ -1,6 +1,0 @@
----
-cms_namespace: ds_cms
-cms_network: ds_default
-cms_proxy_host: 127.0.0.1
-cms_virtual_host: api.cms.ds
-cms_directory: /srv/cms

@@ -1,0 +1,6 @@
+---
+- name: Migrate services database
+  include_role:
+      name: app/services/database/migrate
+  when: services.enabled
+  tags: [services]

@@ -1,0 +1,8 @@
+---
+cms_compose_project_name: ds_cms
+cms_network: ds_default
+cms_proxy_host: 127.0.0.1
+cms_virtual_host: api.cms.ds
+cms_directory: /srv/cms
+cms_jwt_private_key: ./var/jwt/key
+cms_jwt_public_key: ./var/jwt/key.pub

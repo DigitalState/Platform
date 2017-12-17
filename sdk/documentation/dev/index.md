@@ -8,6 +8,11 @@
 
 2. Copy SSH key pair (key and key.pub) to `config/ssh/dev` folder.
 
+
+docker-compose exec sdk /bin/sh -c "cp -R /run/secrets/ssh /root/.ssh"
+docker-compose exec sdk /bin/sh -c "chmod -R 0440 /root/.ssh"
+
+
 3. Establish trusted SSH connection between the SDK container and the remote development server:
 
    ```

@@ -1,0 +1,8 @@
+---
+authentication_compose_project_name: ds_authentication
+authentication_network: ds_default
+authentication_proxy_host: 127.0.0.1
+authentication_virtual_host: api.authentication.ds
+authentication_directory: /srv/authentication
+authentication_jwt_private_key: ./var/jwt/key
+authentication_jwt_public_key: ./var/jwt/key.pub

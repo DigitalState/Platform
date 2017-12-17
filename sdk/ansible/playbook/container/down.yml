@@ -1,57 +1,17 @@
 ---
-- name: Stop containers on server
+- name: Compile container list
+  hosts: sdk
+  become: true
+  tasks:
+      - name: ...
+        include_tasks: /etc/ansible/task/compiler/container/down.yml
+
+- name: Down containers
   hosts: server
   become: true
-  roles:
-      - role: app/portal/container/down
-        when: portal is not none
-        tags: [portal]
-
-      - role: app/monitor/container/down
-        when: monitor is not none
-        tags: [monitor]
-
-      - role: app/admin/container/down
-        when: admin is not none
-        tags: [admin]
-
-      - role: app/tasks/container/down
-        when: tasks is not none
-        tags: [tasks]
-
-      - role: app/services/container/down
-        when: services is not none
-        tags: [services]
-
-      - role: app/records/container/down
-        when: records is not none
-        tags: [records]
-
-      - role: app/identities/container/down
-        when: identities is not none
-        tags: [identities]
-
-      - role: app/formio/container/down
-        when: formio is not none
-        tags: [formio]
-
-      - role: app/cms/container/down
-        when: cms is not none
-        tags: [cms]
-
-      - role: app/cases/container/down
-        when: cases is not none
-        tags: [cases]
-
-      - role: app/camunda/container/down
-        when: camunda is not none
-        tags: [camunda]
-
-      - role: app/authentication/container/down
-        when: authentication is not none
-        tags: [authentication]
-
-      - role: app/assets/container/down
-        when: assets is not none
-        tags: [assets]
-
+  tasks:
+      - name: Include compiled task list
+        include_tasks: '{{ file }}'
+        with_items: '{{ hostvars["sdk"]["files"] }}'
+        loop_control:
+            loop_var: file

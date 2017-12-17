@@ -1,0 +1,6 @@
+---
+- name: Configure cms jwt key pass phrase
+  include_role:
+      name: app/cms/jwt/configure
+  when: cms.enabled
+  tags: [cms]

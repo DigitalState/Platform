@@ -1,0 +1,12 @@
+---
+- block:
+      - name: Define cases util adminer variables
+        set_fact:
+            cases_util_adminer: '{{ util.adminer }}'
+      - name: Download adminer for cases
+        include_role:
+          name: app/cases/util/adminer/download
+  when:
+      - cases.enabled
+      - util.adminer is not none
+  tags: [cases]

@@ -1,0 +1,6 @@
+---
+- name: Download ui repository override directory
+  include_role:
+      name: app/ui/repository/override
+  when: ui.enabled
+  tags: [ui]

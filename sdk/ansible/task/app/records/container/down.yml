@@ -1,0 +1,6 @@
+---
+- name: Down records container
+  include_role:
+      name: app/records/container/down
+  when: records.enabled
+  tags: [records]

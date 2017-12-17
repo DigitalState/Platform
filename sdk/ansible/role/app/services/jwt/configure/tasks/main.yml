@@ -1,8 +1,4 @@
 ---
-- name: Waiting for services config file to be created.
-  wait_for:
-      path: '{{ services_config_file }}'
-
 - name: Configure services jwt key pass phrase
   lineinfile:
       path: '{{ services_config_file }}'

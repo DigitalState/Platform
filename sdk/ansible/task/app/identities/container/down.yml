@@ -1,0 +1,6 @@
+---
+- name: Down identities container
+  include_role:
+      name: app/identities/container/down
+  when: identities.enabled
+  tags: [identities]

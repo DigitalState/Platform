@@ -1,52 +1,17 @@
 ---
-- name: Define adminer variables
-  hosts: server
+- name: Compile util list
+  hosts: sdk
   become: true
   tasks:
-      - name: Define adminer variables for roles
-        set_fact:
-            assets_util_adminer: '{{ util_adminer }}'
-            authentication_util_adminer: '{{ util_adminer }}'
-            cases_util_adminer: '{{ util_adminer }}'
-            cms_util_adminer: '{{ util_adminer }}'
-            identities_util_adminer: '{{ util_adminer }}'
-            records_util_adminer: '{{ util_adminer }}'
-            services_util_adminer: '{{ util_adminer }}'
-            tasks_util_adminer: '{{ util_adminer }}'
-        changed_when: false
+      - name: ...
+        include_tasks: /etc/ansible/task/compiler/util/adminer/download.yml
 
 - name: Download adminer
   hosts: server
   become: true
-  roles:
-      - role: app/assets/util/adminer/download
-        when: [assets is not none, util_adminer is not none]
-        tags: [assets]
-
-      - role: app/authentication/util/adminer/download
-        when: [authentication is not none, util_adminer is not none]
-        tags: [authentication]
-
-      - role: app/cases/util/adminer/download
-        when: [cases is not none, util_adminer is not none]
-        tags: [cases]
-
-      - role: app/cms/util/adminer/download
-        when: [cms is not none, util_adminer is not none]
-        tags: [cms]
-
-      - role: app/identities/util/adminer/download
-        when: [identities is not none, util_adminer is not none]
-        tags: [identities]
-
-      - role: app/records/util/adminer/download
-        when: [records is not none, util_adminer is not none]
-        tags: [records]
-
-      - role: app/services/util/adminer/download
-        when: [services is not none, util_adminer is not none]
-        tags: [services]
-
-      - role: app/tasks/util/adminer/download
-        when: [tasks is not none, util_adminer is not none]
-        tags: [tasks]
+  tasks:
+      - name: Include compiled task list
+        include_tasks: '{{ file }}'
+        with_items: '{{ hostvars["sdk"]["files"] }}'
+        loop_control:
+            loop_var: file

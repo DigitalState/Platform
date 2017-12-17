@@ -1,0 +1,6 @@
+---
+- name: Down proxy container
+  include_role:
+      name: app/proxy/container/down
+  when: proxy.enabled
+  tags: [proxy]

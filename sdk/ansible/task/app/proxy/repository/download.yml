@@ -1,0 +1,11 @@
+---
+- block:
+      - name: Define proxy repository variables
+        set_fact:
+            proxy_repository: '{{ proxy.repository }}'
+            proxy_version: '{{ proxy.version }}'
+      - name: Download proxy repository
+        include_role:
+            name: app/proxy/repository/download
+  when: proxy.enabled
+  tags: [proxy]

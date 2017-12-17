@@ -1,5 +1,5 @@
 ---
-- name: Download adminer
+- name: Download adminer for services
   copy:
       src: '{{ services_util_adminer }}'
       dest: /srv/services/web/adminer.php

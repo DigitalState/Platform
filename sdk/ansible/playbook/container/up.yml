@@ -1,56 +1,17 @@
 ---
-- name: Up containers on server
+- name: Compile container list
+  hosts: sdk
+  become: true
+  tasks:
+      - name: ...
+        include_tasks: /etc/ansible/task/compiler/container/up.yml
+
+- name: Up containers
   hosts: server
   become: true
-  roles:
-      - role: app/assets/container/up
-        when: assets is not none
-        tags: [assets]
-
-      - role: app/authentication/container/up
-        when: authentication is not none
-        tags: [authentication]
-
-      - role: app/camunda/container/up
-        when: camunda is not none
-        tags: [camunda]
-
-      - role: app/cases/container/up
-        when: cases is not none
-        tags: [cases]
-
-      - role: app/cms/container/up
-        when: cms is not none
-        tags: [cms]
-
-      - role: app/formio/container/up
-        when: formio is not none
-        tags: [formio]
-
-      - role: app/identities/container/up
-        when: identities is not none
-        tags: [identities]
-
-      - role: app/records/container/up
-        when: records is not none
-        tags: [records]
-
-      - role: app/services/container/up
-        when: services is not none
-        tags: [services]
-
-      - role: app/tasks/container/up
-        when: tasks is not none
-        tags: [tasks]
-
-      - role: app/admin/container/up
-        when: admin is not none
-        tags: [admin]
-
-      - role: app/monitor/container/up
-        when: monitor is not none
-        tags: [monitor]
-
-      - role: app/portal/container/up
-        when: portal is not none
-        tags: [portal]
+  tasks:
+      - name: Include compiled task list
+        include_tasks: '{{ file }}'
+        with_items: '{{ hostvars["sdk"]["files"] }}'
+        loop_control:
+            loop_var: file

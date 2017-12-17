@@ -1,8 +1,4 @@
 ---
-- name: Waiting for records config file to be created.
-  wait_for:
-      path: '{{ records_config_file }}'
-
 - name: Configure records jwt key pass phrase
   lineinfile:
       path: '{{ records_config_file }}'

@@ -1,2 +1,2 @@
 ---
-- import_playbook: ../../../../playbook/util/adminer/download.yml
+- import_playbook: /etc/ansible/playbook/util/adminer/download.yml

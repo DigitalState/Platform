@@ -1,0 +1,6 @@
+---
+- name: Warmup tasks cache
+  include_role:
+      name: app/tasks/cache/warmup
+  when: tasks.enabled
+  tags: [tasks]

@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Define cases config variables
+      set_fact:
+          cases_config: '{{ config }}'
+    - name: Set cases configs
+      include_role:
+          name: app/cases/config/set
+  when: cases.enabled
+  tags: [cases]

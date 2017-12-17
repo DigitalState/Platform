@@ -1,0 +1,6 @@
+---
+- name: Clear tasks cache
+  include_role:
+      name: app/tasks/cache/clear
+  when: tasks.enabled
+  tags: [tasks]

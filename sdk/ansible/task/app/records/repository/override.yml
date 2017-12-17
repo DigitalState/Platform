@@ -1,0 +1,6 @@
+---
+- name: Download records repository override directory
+  include_role:
+      name: app/records/repository/override
+  when: records.enabled
+  tags: [records]

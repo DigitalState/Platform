@@ -1,0 +1,6 @@
+---
+- name: Down tasks container
+  include_role:
+      name: app/tasks/container/down
+  when: tasks.enabled
+  tags: [tasks]

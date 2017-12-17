@@ -1,8 +1,7 @@
 ---
-- name: Down proxy container on server
+- name: Down proxy container
   hosts: server
   become: true
-  roles:
-      - role: app/proxy/container/down
-        when: proxy is not none
-        tags: [proxy]
+  tasks:
+      - name: Include task
+        include_tasks: /etc/ansible/task/app/proxy/container/down.yml

@@ -3,3 +3,10 @@
   docker_service:
       project_src: /srv/portal
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ portal_composer_project_name }}'
+      NETWORK: '{{ portal_network }}'
+      PROXY_HOST: '{{ portal_proxy_host }}'
+      VIRTUAL_HOST: '{{ portal_virtual_host }}'
+      DIRECTORY: '{{ portal_directory }}'
+      DISCOVERY: '{{ portal_discovery|to_json }}'

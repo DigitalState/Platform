@@ -1,7 +1,7 @@
 ---
 - name: Download assets repository
   git:
-      version: '{{ assets_version }}'
       repo: '{{ assets_repository }}'
+      version: '{{ assets_version }}'
       dest: /srv/assets
       force: yes

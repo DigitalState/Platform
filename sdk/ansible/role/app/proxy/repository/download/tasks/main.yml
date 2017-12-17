@@ -1,7 +1,7 @@
 ---
 - name: Download proxy repository
   git:
-      version: '{{ proxy_version }}'
       repo: '{{ proxy_repository }}'
+      version: '{{ proxy_version }}'
       dest: /srv/proxy
       force: yes

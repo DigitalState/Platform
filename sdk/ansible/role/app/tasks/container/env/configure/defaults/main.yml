@@ -1,6 +1,0 @@
----
-tasks_namespace: ds_tasks
-tasks_network: ds_default
-tasks_proxy_host: 127.0.0.1
-tasks_virtual_host: api.tasks.ds
-tasks_directory: /srv/tasks

@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Define identities config variables
+      set_fact:
+          identities_config: '{{ config }}'
+    - name: Set identities configs
+      include_role:
+          name: app/identities/config/set
+  when: identities.enabled
+  tags: [identities]

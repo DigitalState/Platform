@@ -1,12 +1,12 @@
 ---
 - name: Detect custom assets fixtures directory
-  local_action: 'stat path=/root/resource/data/{{ data }}/assets'
+  local_action: 'stat path=/root/resource/data/{{ assets_data }}/assets'
   register: directory
 
 - name: Load default assets database fixtures
-  when: directory.stat.exists == false
   import_tasks: default.yml
+  when: directory.stat.exists == false
 
 - name: Load custom assets database fixtures
-  when: directory.stat.exists == true
   import_tasks: custom.yml
+  when: directory.stat.exists == true

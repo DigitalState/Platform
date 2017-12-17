@@ -3,6 +3,14 @@
   docker_service:
       project_src: /srv/cases
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ cases_compose_project_name }}'
+      NETWORK: '{{ cases_network }}'
+      PROXY_HOST: '{{ cases_proxy_host }}'
+      VIRTUAL_HOST: '{{ cases_virtual_host }}'
+      DIRECTORY: '{{ cases_directory }}'
+      JWT_PRIVATE_KEY: '{{ cases_jwt_private_key }}'
+      JWT_PUBLIC_KEY: '{{ cases_jwt_public_key }}'
 
 - name: Waiting for cases container to finalize installation
   shell:

@@ -1,0 +1,18 @@
+---
+- block:
+      - name: Gather information for interactions container
+        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define interactions container variables
+        set_fact:
+            interactions_compose_project_name: '{{ project }}_interactions'
+            interactions_network: '{{ project }}_default'
+            interactions_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+            interactions_virtual_host: '{{ interactions.host }}'
+            interactions_directory: '{{ directory }}/interactions'
+            interactions_jwt_private_key: '{{ directory }}/interactions/var/jwt/key'
+            interactions_jwt_public_key: '{{ directory }}/interactions/var/jwt/key.pub'
+      - name: Up interactions container
+        include_role:
+            name: app/interactions/container/up
+  when: interactions.enabled
+  tags: [interactions]

@@ -1,0 +1,6 @@
+---
+- name: Down proxy container
+  include_role:
+      name: app/portal/container/down
+  when: portal.enabled
+  tags: [portal]

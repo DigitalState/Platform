@@ -1,0 +1,6 @@
+---
+- name: Down cases container
+  include_role:
+      name: app/cases/container/down
+  when: cases.enabled
+  tags: [cases]

@@ -1,0 +1,2 @@
+---
+- import_playbook: /etc/ansible/playbook/jwt/key/download.yml

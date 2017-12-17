@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Define interactions config variables
+      set_fact:
+          interactions_config: '{{ config }}'
+    - name: Set interactions configs
+      include_role:
+          name: app/interactions/config/set
+  when: interactions.enabled
+  tags: [interactions]

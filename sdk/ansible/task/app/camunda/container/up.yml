@@ -1,0 +1,17 @@
+---
+- block:
+      - name: Gather information for camunda container
+        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define camunda container variables
+        set_fact:
+            camunda_compose_project_name: '{{ project }}_camunda'
+            camunda_network: '{{ project }}_default'
+            camunda_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+            camunda_virtual_host: '{{ camunda.host }}'
+            camunda_directory: '{{ directory }}/camunda'
+            camunda_timezone: '{{ timezone }}'
+      - name: Up camunda container
+        include_role:
+            name: app/camunda/container/up
+  when: camunda.enabled
+  tags: [camunda]

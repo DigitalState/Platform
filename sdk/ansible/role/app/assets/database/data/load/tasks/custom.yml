@@ -1,11 +1,11 @@
 ---
 - name: Backup assets fixtures directory
-  shell: 'cp -R /srv/assets/src/AppBundle/Resources/data/{{ data }} /srv/assets/src/AppBundle/Resources/data/_{{ data }}'
+  shell: 'cp -R /srv/assets/src/AppBundle/Resources/data/{{ assets_data }} /srv/assets/src/AppBundle/Resources/data/_{{ assets_data }}'
 
 - name: Download custom assets fixtures directory
   copy:
-      src: '/root/resource/data/{{ data }}/assets/'
-      dest: '/srv/assets/src/AppBundle/Resources/data/{{ data }}'
+      src: '/root/resource/data/{{ assets_data }}/assets/'
+      dest: '/srv/assets/src/AppBundle/Resources/data/{{ assets_data }}'
 
 - import_tasks: load.yml
 
@@ -16,8 +16,8 @@
 
 - name: Delete custom assets fixtures directory
   file:
-      path: '/srv/assets/src/AppBundle/Resources/data/{{ data }}'
+      path: '/srv/assets/src/AppBundle/Resources/data/{{ assets_data }}'
       state: absent
 
 - name: Restore assets fixtures directory backup
-  shell: 'mv /srv/assets/src/AppBundle/Resources/data/_{{ data }} /srv/assets/src/AppBundle/Resources/data/{{ data }}'
+  shell: 'mv /srv/assets/src/AppBundle/Resources/data/_{{ assets_data }} /srv/assets/src/AppBundle/Resources/data/{{ assets_data }}'

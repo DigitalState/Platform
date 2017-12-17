@@ -1,0 +1,6 @@
+---
+- name: Download authentication jwt keys
+  include_role:
+      name: app/authentication/jwt/key/download
+  when: authentication.enabled
+  tags: [authentication]

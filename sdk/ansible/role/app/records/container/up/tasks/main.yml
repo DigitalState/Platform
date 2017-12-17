@@ -3,6 +3,14 @@
   docker_service:
       project_src: /srv/records
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ records_compose_project_name }}'
+      NETWORK: '{{ records_network }}'
+      PROXY_HOST: '{{ records_proxy_host }}'
+      VIRTUAL_HOST: '{{ records_virtual_host }}'
+      DIRECTORY: '{{ records_directory }}'
+      JWT_PRIVATE_KEY: '{{ records_jwt_private_key }}'
+      JWT_PUBLIC_KEY: '{{ records_jwt_public_key }}'
 
 - name: Waiting for records container to finalize installation
   shell:

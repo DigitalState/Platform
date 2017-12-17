@@ -3,6 +3,14 @@
   docker_service:
       project_src: /srv/identities
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ identities_compose_project_name }}'
+      NETWORK: '{{ identities_network }}'
+      PROXY_HOST: '{{ identities_proxy_host }}'
+      VIRTUAL_HOST: '{{ identities_virtual_host }}'
+      DIRECTORY: '{{ identities_directory }}'
+      JWT_PRIVATE_KEY: '{{ identities_jwt_private_key }}'
+      JWT_PUBLIC_KEY: '{{ identities_jwt_public_key }}'
 
 - name: Waiting for identities container to finalize installation
   shell:

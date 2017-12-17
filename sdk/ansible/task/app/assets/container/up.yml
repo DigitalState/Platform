@@ -1,0 +1,18 @@
+---
+- block:
+      - name: Gather information for assets container
+        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define assets container variables
+        set_fact:
+            assets_compose_project_name: '{{ project }}_assets'
+            assets_network: '{{ project }}_default'
+            assets_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+            assets_virtual_host: '{{ assets.host }}'
+            assets_directory: '{{ directory }}/assets'
+            assets_jwt_private_key: '{{ directory }}/assets/var/jwt/key'
+            assets_jwt_public_key: '{{ directory }}/assets/var/jwt/key.pub'
+      - name: Up assets container
+        include_role:
+            name: app/assets/container/up
+  when: assets.enabled
+  tags: [assets]

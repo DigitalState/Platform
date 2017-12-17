@@ -1,0 +1,16 @@
+---
+- block:
+      - name: Gather information for formio container
+        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define formio container variables
+        set_fact:
+            formio_compose_project_name: '{{ project }}_formio'
+            formio_network: '{{ project }}_default'
+            formio_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+            formio_virtual_host: '{{ formio.host }}'
+            formio_directory: '{{ directory }}/formio'
+      - name: Up formio container
+        include_role:
+            name: app/formio/container/up
+  when: formio.enabled
+  tags: [formio]

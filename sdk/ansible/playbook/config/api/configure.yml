@@ -1,49 +1,29 @@
 ---
-- name: Configure host config to proxy container ip
+- name: Compile config list
+  hosts: sdk
+  become: true
+  tasks:
+      - name: ...
+        include_tasks: /etc/ansible/task/compiler/config/api/configure.yml
+
+- name: Configure api host configs
   hosts: server
   become: true
-  vars:
-      config:
-          ds_api.api.assets.host: 'http://{{ assets_host }}'
-          ds_api.api.authentication.host: 'http://{{ authentication_host }}'
-          ds_api.api.cases.host: 'http://{{ cases_host }}'
-          ds_api.api.cms.host: 'http://{{ cms_host }}'
-          ds_api.api.identities.host: 'http://{{ identities_host }}'
-          ds_api.api.records.host: 'http://{{ records_host }}'
-          ds_api.api.services.host: 'http://{{ services_host }}'
-          ds_api.api.tasks.host: 'http://{{ tasks_host }}'
-          ds_api.api.camunda.host: 'http://{{ camunda_host }}/engine-rest'
-          ds_api.api.formio.host: 'http://{{ formio_host }}'
-  roles:
-      - role: app/assets/config/set
-        when: assets is not none
-        tags: [assets]
-
-      - role: app/authentication/config/set
-        when: authentication is not none
-        tags: [authentication]
-
-      - role: app/cases/config/set
-        when: cases is not none
-        tags: [cases]
-
-      - role: app/cms/config/set
-        when: cms is not none
-        tags: [cms]
-
-      - role: app/identities/config/set
-        when: identities is not none
-        tags: [identities]
-
-      - role: app/records/config/set
-        when: records is not none
-        tags: [records]
-
-      - role: app/services/config/set
-        when: services is not none
-        tags: [services]
-
-      - role: app/tasks/config/set
-        when: tasks is not none
-        tags: [tasks]
-
+  tasks:
+      - name: Include compiled task list
+        include_tasks: '{{ file }}'
+        vars:
+            config:
+                ds_api.api.assets.host: 'http://{{ assets.host }}'
+                ds_api.api.authentication.host: 'http://{{ authentication.host }}'
+                ds_api.api.camunda.host: 'http://{{ camunda.host }}/engine-rest'
+                ds_api.api.cases.host: 'http://{{ cases.host }}'
+                ds_api.api.cms.host: 'http://{{ cms.host }}'
+                ds_api.api.formio.host: 'http://{{ formio.host }}'
+                ds_api.api.identities.host: 'http://{{ identities.host }}'
+                ds_api.api.records.host: 'http://{{ records.host }}'
+                ds_api.api.services.host: 'http://{{ services.host }}'
+                ds_api.api.tasks.host: 'http://{{ tasks.host }}'
+        with_items: '{{ hostvars["sdk"]["files"] }}'
+        loop_control:
+            loop_var: file

@@ -1,5 +1,5 @@
 ---
-- name: Download adminer
+- name: Download adminer for cms
   copy:
       src: '{{ cms_util_adminer }}'
       dest: /srv/cms/web/adminer.php

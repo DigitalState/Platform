@@ -1,8 +1,4 @@
 ---
-- name: Waiting for cases config file to be created.
-  wait_for:
-      path: '{{ cases_config_file }}'
-
 - name: Configure cases jwt key pass phrase
   lineinfile:
       path: '{{ cases_config_file }}'

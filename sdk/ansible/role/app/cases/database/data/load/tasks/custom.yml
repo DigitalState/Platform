@@ -1,11 +1,11 @@
 ---
 - name: Backup cases fixtures directory
-  shell: 'cp -R /srv/cases/src/AppBundle/Resources/data/{{ data }} /srv/cases/src/AppBundle/Resources/data/_{{ data }}'
+  shell: 'cp -R /srv/cases/src/AppBundle/Resources/data/{{ cases_data }} /srv/cases/src/AppBundle/Resources/data/_{{ cases_data }}'
 
 - name: Download custom cases fixtures directory
   copy:
-      src: '/root/resource/data/{{ data }}/cases/'
-      dest: '/srv/cases/src/AppBundle/Resources/data/{{ data }}'
+      src: '/root/resource/data/{{ cases_data }}/cases/'
+      dest: '/srv/cases/src/AppBundle/Resources/data/{{ cases_data }}'
 
 - import_tasks: load.yml
 
@@ -16,8 +16,8 @@
 
 - name: Delete custom cases fixtures directory
   file:
-      path: '/srv/cases/src/AppBundle/Resources/data/{{ data }}'
+      path: '/srv/cases/src/AppBundle/Resources/data/{{ cases_data }}'
       state: absent
 
 - name: Restore cases fixtures directory backup
-  shell: 'mv /srv/cases/src/AppBundle/Resources/data/_{{ data }} /srv/cases/src/AppBundle/Resources/data/{{ data }}'
+  shell: 'mv /srv/cases/src/AppBundle/Resources/data/_{{ cases_data }} /srv/cases/src/AppBundle/Resources/data/{{ cases_data }}'

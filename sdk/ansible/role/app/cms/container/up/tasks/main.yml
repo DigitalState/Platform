@@ -3,6 +3,14 @@
   docker_service:
       project_src: /srv/cms
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ cms_compose_project_name }}'
+      NETWORK: '{{ cms_network }}'
+      PROXY_HOST: '{{ cms_proxy_host }}'
+      VIRTUAL_HOST: '{{ cms_virtual_host }}'
+      DIRECTORY: '{{ cms_directory }}'
+      JWT_PRIVATE_KEY: '{{ cms_jwt_private_key }}'
+      JWT_PUBLIC_KEY: '{{ cms_jwt_public_key }}'
 
 - name: Waiting for cms container to finalize installation
   shell:

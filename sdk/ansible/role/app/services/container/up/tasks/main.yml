@@ -3,6 +3,14 @@
   docker_service:
       project_src: /srv/services
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ services_compose_project_name }}'
+      NETWORK: '{{ services_network }}'
+      PROXY_HOST: '{{ services_proxy_host }}'
+      VIRTUAL_HOST: '{{ services_virtual_host }}'
+      DIRECTORY: '{{ services_directory }}'
+      JWT_PRIVATE_KEY: '{{ services_jwt_private_key }}'
+      JWT_PUBLIC_KEY: '{{ services_jwt_public_key }}'
 
 - name: Waiting for services container to finalize installation
   shell:

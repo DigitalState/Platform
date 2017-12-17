@@ -1,0 +1,6 @@
+---
+- name: Stop identities container
+  include_role:
+      name: app/identities/container/stop
+  when: identities.enabled
+  tags: [identities]

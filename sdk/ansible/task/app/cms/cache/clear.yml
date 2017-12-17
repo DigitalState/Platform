@@ -1,0 +1,6 @@
+---
+- name: Clear cms cache
+  include_role:
+      name: app/cms/cache/clear
+  when: cms.enabled
+  tags: [cms]

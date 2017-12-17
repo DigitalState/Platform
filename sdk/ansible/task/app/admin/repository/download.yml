@@ -1,0 +1,11 @@
+---
+- block:
+      - name: Define admin repository variables
+        set_fact:
+            admin_repository: '{{ admin.repository }}'
+            admin_version: '{{ admin.version }}'
+      - name: Download admin repository
+        include_role:
+            name: app/admin/repository/download
+  when: admin.enabled
+  tags: [admin]

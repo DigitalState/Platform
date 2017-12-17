@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Define discovery repository variables
+      set_fact:
+          discovery_repository: '{{ discovery.repository }}'
+          discovery_version: '{{ discovery.version }}'
+    - name: Download discovery repository
+      include_role:
+          name: app/discovery/repository/download
+  when: discovery.enabled
+  tags: [discovery]

@@ -1,0 +1,6 @@
+---
+- name: Migrate interactions database
+  include_role:
+      name: app/interactions/database/migrate
+  when: interactions.enabled
+  tags: [interactions]

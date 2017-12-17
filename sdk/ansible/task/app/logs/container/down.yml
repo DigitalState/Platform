@@ -1,0 +1,6 @@
+---
+- name: Down logs container
+  include_role:
+      name: app/logs/container/down
+  when: logs.enabled
+  tags: [logs]

@@ -1,0 +1,6 @@
+---
+- name: Down services container
+  include_role:
+      name: app/services/container/down
+  when: services.enabled
+  tags: [services]

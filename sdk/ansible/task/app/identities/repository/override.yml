@@ -1,0 +1,6 @@
+---
+- name: Download identities repository override directory
+  include_role:
+      name: app/identities/repository/override
+  when: identities.enabled
+  tags: [identities]

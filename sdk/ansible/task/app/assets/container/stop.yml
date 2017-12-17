@@ -1,0 +1,6 @@
+---
+- name: Stop assets container
+  include_role:
+      name: app/assets/container/stop
+  when: assets.enabled
+  tags: [assets]

@@ -1,0 +1,6 @@
+---
+- name: Warmup topics cache
+  include_role:
+      name: app/topics/cache/warmup
+  when: topics.enabled
+  tags: [topics]

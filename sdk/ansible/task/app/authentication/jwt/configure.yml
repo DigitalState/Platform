@@ -1,0 +1,6 @@
+---
+- name: Configure authentication jwt key pass phrase
+  include_role:
+      name: app/authentication/jwt/configure
+  when: authentication.enabled
+  tags: [authentication]

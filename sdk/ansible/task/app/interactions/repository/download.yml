@@ -1,0 +1,11 @@
+---
+- block:
+      - name: Define interactions repository variables
+        set_fact:
+            interactions_repository: '{{ interactions.repository }}'
+            interactions_version: '{{ interactions.version }}'
+      - name: Download interactions repository
+        include_role:
+          name: app/interactions/repository/download
+  when: interactions.enabled
+  tags: [interactions]

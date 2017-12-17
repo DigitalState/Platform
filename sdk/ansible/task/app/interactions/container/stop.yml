@@ -1,0 +1,6 @@
+---
+- name: Stop interactions container
+  include_role:
+      name: app/interactions/container/stop
+  when: interactions.enabled
+  tags: [interactions]

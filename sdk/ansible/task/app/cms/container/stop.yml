@@ -1,0 +1,6 @@
+---
+- name: Stop cms container
+  include_role:
+      name: app/cms/container/stop
+  when: cms.enabled
+  tags: [cms]

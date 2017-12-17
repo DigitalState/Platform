@@ -3,3 +3,10 @@
   docker_service:
       project_src: /srv/monitor
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ monitor_composer_project_name }}'
+      NETWORK: '{{ monitor_network }}'
+      PROXY_HOST: '{{ monitor_proxy_host }}'
+      VIRTUAL_HOST: '{{ monitor_virtual_host }}'
+      DIRECTORY: '{{ monitor_directory }}'
+      DISCOVERY: '{{ monitor_discovery|to_json }}'

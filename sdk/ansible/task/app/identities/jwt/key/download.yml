@@ -1,0 +1,6 @@
+---
+- name: Download identities jwt keys
+  include_role:
+      name: app/identities/jwt/key/download
+  when: identities.enabled
+  tags: [identities]

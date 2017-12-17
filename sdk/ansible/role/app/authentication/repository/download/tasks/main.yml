@@ -1,7 +1,7 @@
 ---
 - name: Download authentication repository
   git:
-      version: '{{ authentication_version }}'
       repo: '{{ authentication_repository }}'
+      version: '{{ authentication_version }}'
       dest: /srv/authentication
       force: yes

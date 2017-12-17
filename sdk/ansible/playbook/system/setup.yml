@@ -1,10 +1,12 @@
 ---
-- name: Install core packages on server
+- name: Install core packages
   hosts: server
   become: true
-  roles:
-      - role: package/git
-        tags: [system]
-
-      - role: package/docker
-        tags: [system]
+  tasks:
+      - name: Install git packages
+        include_role:
+            name: package/git
+      - name: Install docker packages
+        include_role:
+            name: package/docker
+  tags: [system]

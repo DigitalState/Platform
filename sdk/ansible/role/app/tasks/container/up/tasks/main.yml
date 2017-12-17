@@ -3,6 +3,14 @@
   docker_service:
       project_src: /srv/tasks
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ tasks_compose_project_name }}'
+      NETWORK: '{{ tasks_network }}'
+      PROXY_HOST: '{{ tasks_proxy_host }}'
+      VIRTUAL_HOST: '{{ tasks_virtual_host }}'
+      DIRECTORY: '{{ tasks_directory }}'
+      JWT_PRIVATE_KEY: '{{ tasks_jwt_private_key }}'
+      JWT_PUBLIC_KEY: '{{ tasks_jwt_public_key }}'
 
 - name: Waiting for tasks container to finalize installation
   shell:

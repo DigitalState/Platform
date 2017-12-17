@@ -1,0 +1,6 @@
+---
+- name: Download cases jwt keys
+  include_role:
+      name: app/cases/jwt/key/download
+  when: cases.enabled
+  tags: [cases]

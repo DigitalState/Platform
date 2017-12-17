@@ -1,0 +1,6 @@
+---
+- name: Stop tasks container
+  include_role:
+      name: app/tasks/container/stop
+  when: tasks.enabled
+  tags: [tasks]

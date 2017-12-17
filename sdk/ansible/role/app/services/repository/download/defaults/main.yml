@@ -1,3 +1,3 @@
 ---
-services_version: master
 services_repository: https://github.com/DigitalState/Services.git
+services_version: master

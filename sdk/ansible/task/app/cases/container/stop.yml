@@ -1,0 +1,6 @@
+---
+- name: Stop cases container
+  include_role:
+      name: app/cases/container/stop
+  when: cases.enabled
+  tags: [cases]

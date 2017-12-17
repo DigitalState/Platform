@@ -1,8 +1,10 @@
 ---
-- name: Install python dependency on server
+- name: Install ansible requirements
   hosts: server
   become: true
   gather_facts: false
-  roles:
-      - role: package/python
-        tags: [system]
+  tasks:
+      - name: Install python packages
+        include_role:
+            name: package/python
+  tags: [system]

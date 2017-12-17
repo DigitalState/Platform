@@ -1,0 +1,18 @@
+---
+- block:
+      - name: Gather information for cases container
+        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define cases container variables
+        set_fact:
+            cases_compose_project_name: '{{ project }}_cases'
+            cases_network: '{{ project }}_default'
+            cases_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+            cases_virtual_host: '{{ cases.host }}'
+            cases_directory: '{{ directory }}/cases'
+            cases_jwt_private_key: '{{ directory }}/cases/var/jwt/key'
+            cases_jwt_public_key: '{{ directory }}/cases/var/jwt/key.pub'
+      - name: Up cases container
+        include_role:
+            name: app/cases/container/up
+  when: cases.enabled
+  tags: [cases]

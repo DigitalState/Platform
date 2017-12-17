@@ -1,0 +1,11 @@
+---
+- block:
+      - name: Define monitor repository variables
+        set_fact:
+            monitor_repository: '{{ monitor.repository }}'
+            monitor_version: '{{ monitor.version }}'
+      - name: Download monitor repository
+        include_role:
+            name: app/monitor/repository/download
+  when: monitor.enabled
+  tags: [monitor]

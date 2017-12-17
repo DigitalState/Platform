@@ -1,0 +1,6 @@
+---
+- name: Download authentication repository override directory
+  include_role:
+      name: app/authentication/repository/override
+  when: authentication.enabled
+  tags: [authentication]

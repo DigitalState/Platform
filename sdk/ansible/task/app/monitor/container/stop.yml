@@ -1,0 +1,6 @@
+---
+- name: Stop monitor container
+  include_role:
+      name: app/monitor/container/stop
+  when: monitor.enabled
+  tags: [monitor]

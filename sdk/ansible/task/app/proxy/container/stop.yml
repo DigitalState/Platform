@@ -1,0 +1,6 @@
+---
+- name: Stop proxy container
+  include_role:
+      name: app/proxy/container/stop
+  when: proxy.enabled
+  tags: [proxy]

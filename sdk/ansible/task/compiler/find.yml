@@ -1,0 +1,18 @@
+---
+- name: ...
+  find:
+      paths: /etc/ansible/task
+      patterns: '.{{ tag }}'
+      hidden: yes
+      recurse: yes
+  register: result
+
+- name: ...
+  set_fact:
+      items: []
+
+- name: ...
+  set_fact:
+      items: '{{ items }} + [ "{{ item.path|dirname }}" ]'
+  with_items: '{{ result.files }}'
+  no_log: true

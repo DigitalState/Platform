@@ -1,0 +1,6 @@
+---
+- name: Clear assets cache
+  include_role:
+      name: app/assets/cache/clear
+  when: assets.enabled
+  tags: [assets]

@@ -1,0 +1,6 @@
+---
+- name: Download discovery repository override directory
+  include_role:
+      name: app/discovery/repository/override
+  when: discovery.enabled
+  tags: [discovery]

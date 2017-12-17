@@ -1,0 +1,6 @@
+---
+- name: Download formio repository override directory
+  include_role:
+      name: app/formio/repository/override
+  when: formio is not none
+  tags: [formio]

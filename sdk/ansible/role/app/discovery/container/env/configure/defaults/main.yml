@@ -1,6 +1,0 @@
----
-discovery_namespace: ds_discovery
-discovery_network: ds_default
-discovery_proxy_host: 127.0.0.1
-discovery_virtual_host: api.discovery.ds
-discovery_directory: /srv/discovery

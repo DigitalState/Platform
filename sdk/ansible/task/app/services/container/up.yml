@@ -1,0 +1,18 @@
+---
+- block:
+      - name: Gather information for services container
+        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define services container variables
+        set_fact:
+            services_compose_project_name: '{{ project }}_services'
+            services_network: '{{ project }}_default'
+            services_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+            services_virtual_host: '{{ services.host }}'
+            services_directory: '{{ directory }}/services'
+            services_jwt_private_key: '{{ directory }}/services/var/jwt/key'
+            services_jwt_public_key: '{{ directory }}/services/var/jwt/key.pub'
+      - name: Up services container
+        include_role:
+            name: app/services/container/up
+  when: services.enabled
+  tags: [services]

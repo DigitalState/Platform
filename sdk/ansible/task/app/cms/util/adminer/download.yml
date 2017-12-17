@@ -1,0 +1,12 @@
+---
+- block:
+      - name: Define cms util adminer variables
+        set_fact:
+            cms_util_adminer: '{{ util.adminer }}'
+      - name: Download adminer for cms
+        include_role:
+          name: app/cms/util/adminer/download
+  when:
+      - cms.enabled
+      - util.adminer is not none
+  tags: [cms]

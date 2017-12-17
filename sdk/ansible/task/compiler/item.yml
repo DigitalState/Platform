@@ -1,0 +1,9 @@
+- name: ...
+  stat:
+      path: '{{ item }}/{{ tag }}/{{ task }}.yml'
+  register: result
+
+- name: ...
+  set_fact:
+      files: '{{ files }} + [ "{{ result.stat.path }}" ]'
+  when: result.stat.exists == true

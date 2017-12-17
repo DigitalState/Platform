@@ -1,0 +1,6 @@
+---
+- name: Configure tasks jwt key pass phrase
+  include_role:
+      name: app/tasks/jwt/configure
+  when: tasks.enabled
+  tags: [tasks]

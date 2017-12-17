@@ -3,6 +3,14 @@
   docker_service:
       project_src: /srv/authentication
       state: present
+  environment:
+      COMPOSE_PROJECT_NAME: '{{ authentication_compose_project_name }}'
+      NETWORK: '{{ authentication_network }}'
+      PROXY_HOST: '{{ authentication_proxy_host }}'
+      VIRTUAL_HOST: '{{ authentication_virtual_host }}'
+      DIRECTORY: '{{ authentication_directory }}'
+      JWT_PRIVATE_KEY: '{{ authentication_jwt_private_key }}'
+      JWT_PUBLIC_KEY: '{{ authentication_jwt_public_key }}'
 
 - name: Waiting for authentication container to finalize installation
   shell:

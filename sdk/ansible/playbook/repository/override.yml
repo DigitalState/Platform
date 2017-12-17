@@ -1,92 +1,17 @@
 ---
-- name: Override repositories on server
+- name: Compile repository list
+  hosts: sdk
+  become: true
+  tasks:
+      - name: ...
+        include_tasks: /etc/ansible/task/compiler/repository/override.yml
+
+- name: Override repositories
   hosts: server
   become: true
-  roles:
-      - role: app/documentation/repository/override
-        when: documentation is not none
-        tags: [documentation]
-
-      - role: app/guide/repository/override
-        when: guide is not none
-        tags: [guide]
-
-      - role: app/proxy/repository/override
-        when: proxy is not none
-        tags: [proxy]
-
-      - role: app/assets/repository/override
-        when: assets is not none
-        tags: [assets]
-
-      - role: app/authentication/repository/override
-        when: authentication is not none
-        tags: [authentication]
-
-      - role: app/camunda/repository/override
-        when: camunda is not none
-        tags: [camunda]
-
-      - role: app/cases/repository/override
-        when: cases is not none
-        tags: [cases]
-
-      - role: app/cms/repository/override
-        when: cms is not none
-        tags: [cms]
-
-      - role: app/core/repository/override
-        when: core is not none
-        tags: [core]
-
-      - role: app/discovery/repository/override
-        when: discovery is not none
-        tags: [discovery]
-
-      - role: app/formio/repository/override
-        when: formio is not none
-        tags: [formio]
-
-      - role: app/identities/repository/override
-        when: identities is not none
-        tags: [identities]
-
-      - role: app/interactions/repository/override
-        when: interactions is not none
-        tags: [interactions]
-
-      - role: app/logs/repository/override
-        when: logs is not none
-        tags: [logs]
-
-      - role: app/records/repository/override
-        when: records is not none
-        tags: [records]
-
-      - role: app/services/repository/override
-        when: services is not none
-        tags: [services]
-
-      - role: app/tasks/repository/override
-        when: tasks is not none
-        tags: [tasks]
-
-      - role: app/topics/repository/override
-        when: topics is not none
-        tags: [topics]
-
-      - role: app/admin/repository/override
-        when: admin is not none
-        tags: [admin]
-
-      - role: app/monitor/repository/override
-        when: monitor is not none
-        tags: [monitor]
-
-      - role: app/portal/repository/override
-        when: portal is not none
-        tags: [portal]
-
-      - role: app/ui/repository/override
-        when: ui is not none
-        tags: [ui]
+  tasks:
+      - name: Include compiled task list
+        include_tasks: '{{ file }}'
+        with_items: '{{ hostvars["sdk"]["files"] }}'
+        loop_control:
+            loop_var: file

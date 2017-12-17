@@ -1,0 +1,6 @@
+---
+- name: Stop authentication container
+  include_role:
+      name: app/authentication/container/stop
+  when: authentication.enabled
+  tags: [authentication]

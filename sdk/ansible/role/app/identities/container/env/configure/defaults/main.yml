@@ -1,6 +1,0 @@
----
-identities_namespace: ds_identities
-identities_network: ds_default
-identities_proxy_host: 127.0.0.1
-identities_virtual_host: api.identities.ds
-identities_directory: /srv/identities

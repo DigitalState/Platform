@@ -1,0 +1,6 @@
+---
+- name: Warmup interactions cache
+  include_role:
+      name: app/interactions/cache/warmup
+  when: interactions.enabled
+  tags: [interactions]

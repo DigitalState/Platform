@@ -1,11 +1,11 @@
 ---
 - name: Backup tasks fixtures directory
-  shell: 'cp -R /srv/tasks/src/AppBundle/Resources/data/{{ data }} /srv/tasks/src/AppBundle/Resources/data/_{{ data }}'
+  shell: 'cp -R /srv/tasks/src/AppBundle/Resources/data/{{ tasks_data }} /srv/tasks/src/AppBundle/Resources/data/_{{ tasks_data }}'
 
 - name: Download custom tasks fixtures directory
   copy:
-      src: '/root/resource/data/{{ data }}/tasks/'
-      dest: '/srv/tasks/src/AppBundle/Resources/data/{{ data }}'
+      src: '/root/resource/data/{{ tasks_data }}/tasks/'
+      dest: '/srv/tasks/src/AppBundle/Resources/data/{{ tasks_data }}'
 
 - import_tasks: load.yml
 
@@ -16,8 +16,8 @@
 
 - name: Delete custom tasks fixtures directory
   file:
-      path: '/srv/tasks/src/AppBundle/Resources/data/{{ data }}'
+      path: '/srv/tasks/src/AppBundle/Resources/data/{{ tasks_data }}'
       state: absent
 
 - name: Restore tasks fixtures directory backup
-  shell: 'mv /srv/tasks/src/AppBundle/Resources/data/_{{ data }} /srv/tasks/src/AppBundle/Resources/data/{{ data }}'
+  shell: 'mv /srv/tasks/src/AppBundle/Resources/data/_{{ tasks_data }} /srv/tasks/src/AppBundle/Resources/data/{{ tasks_data }}'

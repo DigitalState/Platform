@@ -1,171 +1,126 @@
 all:
     hosts:
+        sdk:
+            ansible_connection: local
         server:
             ansible_host: ~
             ansible_port: 22
             ansible_ssh_private_key_file: /root/.ssh/prod/key
-
     vars:
-        ### General ###########################################################
-
         project: ds
-
-        env: prod
-
         directory: /srv
-
+        env: prod
         timezone: UTC
-
-        jwt_private_key: /root/resource/jwt/prod/key
-        jwt_public_key: /root/resource/jwt/prod/key.pub
-        jwt_key_pass_phrase: ~
-
-        data: dev
-
-        util_adminer: ~
-
-        ### Documentation #####################################################
-
-        documentation: ~
-        documentation_version: master
-
-        ### Guide #############################################################
-
-        guide: ~
-        guide_version: master
-
-        ### Proxy #############################################################
-
-        proxy: enabled
-        proxy_version: master
-        proxy_image: download
-        proxy_port: 443
-
-        ### Assets ############################################################
-
-        assets: ~
-        assets_version: master
-        assets_image: download
-        assets_host: api.assets.prod.ds
-
-        ### Authentication ####################################################
-
-        authentication: enabled
-        authentication_version: master
-        authentication_image: download
-        authentication_host: api.authentication.prod.ds
-
-        ### Camunda ###########################################################
-
-        camunda: ~
-        camunda_version: master
-        camunda_image: download
-        camunda_host: api.camunda.prod.ds
-
-        ### Cases #############################################################
-
-        cases: ~
-        cases_version: master
-        cases_image: download
-        cases_host: api.cases.prod.ds
-
-        ### Cms ###############################################################
-
-        cms: ~
-        cms_version: master
-        cms_image: download
-        cms_host: api.cms.prod.ds
-
-        ### Discovery #########################################################
-
-        discovery: ~
-        discovery_version: master
-        discovery_image: download
-        discovery_host: api.discovery.prod.ds
-
-        ### Formio ############################################################
-
-        formio: ~
-        formio_version: master
-        formio_image: download
-        formio_host: api.formio.prod.ds
-
-        ### Identities ########################################################
-
-        identities: enabled
-        identities_version: master
-        identities_image: download
-        identities_host: api.identities.prod.ds
-
-        ### Interactions ######################################################
-
-        interactions: ~
-        interactions_version: master
-        interactions_image: download
-        interactions_host: api.interactions.prod.ds
-
-        ### Logs ##############################################################
-
-        logs: ~
-        logs_version: master
-        logs_image: download
-        logs_host: api.logs.prod.ds
-
-        ### Records ###########################################################
-
-        records: ~
-        records_version: master
-        records_image: download
-        records_host: api.records.prod.ds
-
-        ### Services ##########################################################
-
-        services: ~
-        services_version: master
-        services_image: download
-        services_host: api.services.prod.ds
-
-        ### Tasks #############################################################
-
-        tasks: ~
-        tasks_version: master
-        tasks_image: download
-        tasks_host: api.tasks.prod.ds
-
-        ### Topics ############################################################
-
-        topics: ~
-        topics_version: master
-        topics_image: download
-        topics_host: api.topics.prod.ds
-
-        ### Core ##############################################################
-
-        core: ~
-        core_version: master
-
-        ### Admin #############################################################
-
-        admin: ~
-        admin_version: master
-        admin_image: download
-        admin_host: admin.prod.ds
-
-        ### Monitor ###########################################################
-
-        monitor: ~
-        monitor_version: master
-        monitor_image: download
-        monitor_host: monitor.prod.ds
-
-        ### Portal ############################################################
-
-        portal: ~
-        portal_version: master
-        portal_image: download
-        portal_host: portal.prod.ds
-
-        ### Ui ################################################################
-
-        ui: ~
-        ui_version: master
+        data: ~
+        jwt:
+            private_key: /root/resource/jwt/prod/key
+            public_key: /root/resource/jwt/prod/key.pub
+            key_pass_phase: ~
+        util:
+            adminer: /root/resource/util/adminer.php
+        admin:
+            enabled: true
+            repository: https://github.com/DigitalState/Admin.git
+            version: master
+            host: admin.prod.ds
+        assets:
+            enabled: true
+            repository: https://github.com/DigitalState/Assets.git
+            version: master
+            host: api.assets.prod.ds
+        authentication:
+            enabled: true
+            repository: https://github.com/DigitalState/Authentication.git
+            version: master
+            host: api.authentication.prod.ds
+        camunda:
+            enabled: true
+            repository: https://github.com/DigitalState/Camunda.git
+            version: master
+            host: api.camunda.prod.ds
+        cases:
+            enabled: true
+            repository: https://github.com/DigitalState/Cases.git
+            version: master
+            host: api.cases.prod.ds
+        cms:
+            enabled: true
+            repository: https://github.com/DigitalState/Cms.git
+            version: master
+            host: api.cms.prod.ds
+        core:
+            enabled: true
+            repository: https://github.com/DigitalState/Core.git
+            version: master
+        discovery:
+            enabled: false
+            repository: https://github.com/DigitalState/Discovery.git
+            version: master
+            host: api.discovery.prod.ds
+        documentation:
+            enabled: true
+            repository: https://github.com/DigitalState/Documentation.git
+            version: master
+        formio:
+            enabled: true
+            repository: https://github.com/DigitalState/Formio.git
+            version: master
+            host: api.formio.prod.ds
+        guide:
+            enabled: true
+            repository: https://github.com/DigitalState/Guide.git
+            version: master
+        identities:
+            enabled: true
+            repository: https://github.com/DigitalState/Identities.git
+            version: master
+            host: api.identities.prod.ds
+        interactions:
+            enabled: false
+            repository: https://github.com/DigitalState/Interactions.git
+            version: master
+            host: api.interactions.prod.ds
+        logs:
+            enabled: false
+            repository: https://github.com/DigitalState/Logs.git
+            version: master
+            host: api.logs.prod.ds
+        monitor:
+            enabled: false
+            repository: https://github.com/DigitalState/Monitor.git
+            version: master
+            host: monitor.prod.ds
+        portal:
+            enabled: true
+            version: master
+            repository: https://github.com/DigitalState/Portal.git
+            host: portal.prod.ds
+        proxy:
+            enabled: true
+            repository: https://github.com/DigitalState/Proxy.git
+            version: master
+            port: 443
+        records:
+            enabled: true
+            version: master
+            repository: https://github.com/DigitalState/Records.git
+            host: api.records.prod.ds
+        services:
+            enabled: true
+            repository: https://github.com/DigitalState/Services.git
+            version: master
+            host: api.services.prod.ds
+        tasks:
+            enabled: true
+            repository: https://github.com/DigitalState/Tasks.git
+            version: master
+            host: api.tasks.prod.ds
+        topics:
+            enabled: false
+            repository: https://github.com/DigitalState/Topics.git
+            version: master
+            host: api.topics.prod.ds
+        ui:
+            enabled: true
+            repository: https://github.com/DigitalState/Ui.git
+            version: master

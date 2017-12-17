@@ -1,5 +1,5 @@
 ---
-- name: Download adminer
+- name: Download adminer for interactions
   copy:
       src: '{{ interactions_util_adminer }}'
       dest: /srv/interactions/web/adminer.php

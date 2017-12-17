@@ -1,0 +1,21 @@
+---
+- name: ...
+  include_tasks: /etc/ansible/task/compiler/find.yml
+  vars:
+      tag: jwt
+
+- name: ...
+  set_fact:
+      files: []
+
+- name: ...
+  include_tasks: /etc/ansible/task/compiler/item.yml
+  vars:
+      tag: jwt
+      task: configure
+  with_items: '{{ items }}'
+  when: vars[item|basename].enabled
+
+- name: Completed
+  debug:
+      msg: Jwt list has been compiled.

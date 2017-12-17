@@ -1,0 +1,12 @@
+---
+- block:
+      - name: Define identities database variables
+        set_fact:
+            identities_data: '{{ data }}'
+      - name: Load identities database fixtures
+        include_role:
+            name: app/identities/database/data/load
+  when:
+      - identities.enabled
+      - data is not none
+  tags: [identities]
