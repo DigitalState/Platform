@@ -5,6 +5,7 @@
   tasks:
       - name: ...
         include_tasks: /etc/ansible/task/compiler/jwt/key/download.yml
+  tags: [always]
 
 - name: Download jwt private and public key
   hosts: server

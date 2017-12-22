@@ -5,6 +5,7 @@
   tasks:
       - name: ...
         include_tasks: /etc/ansible/task/compiler/util/adminer/download.yml
+  tags: [always]
 
 - name: Download adminer
   hosts: server

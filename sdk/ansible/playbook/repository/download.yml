@@ -5,6 +5,7 @@
   tasks:
       - name: ...
         include_tasks: /etc/ansible/task/compiler/repository/download.yml
+  tags: [always]
 
 - name: Download repositories
   hosts: server

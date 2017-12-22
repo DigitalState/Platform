@@ -5,6 +5,7 @@
   tasks:
       - name: ...
         include_tasks: /etc/ansible/task/compiler/container/down.yml
+  tags: [always]
 
 - name: Down containers
   hosts: server

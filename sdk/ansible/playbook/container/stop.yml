@@ -5,6 +5,7 @@
   tasks:
       - name: ...
         include_tasks: /etc/ansible/task/compiler/container/stop.yml
+  tags: [always]
 
 - name: Stop containers
   hosts: server

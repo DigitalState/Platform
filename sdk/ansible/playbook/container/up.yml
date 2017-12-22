@@ -5,6 +5,7 @@
   tasks:
       - name: ...
         include_tasks: /etc/ansible/task/compiler/container/up.yml
+  tags: [always]
 
 - name: Up containers
   hosts: server

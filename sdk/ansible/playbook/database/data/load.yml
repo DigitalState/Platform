@@ -5,6 +5,7 @@
   tasks:
       - name: ...
         include_tasks: /etc/ansible/task/compiler/database/data/load.yml
+  tags: [always]
 
 - name: Load database data
   hosts: server

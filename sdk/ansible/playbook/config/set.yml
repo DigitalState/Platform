@@ -5,6 +5,7 @@
   tasks:
       - name: ...
         include_tasks: /etc/ansible/task/compiler/config/set.yml
+  tags: [always]
 
 - name: Set configs
   hosts: server
