@@ -1,0 +1,30 @@
+---
+- name: Configure authentication mail transport setting
+  lineinfile:
+      path: '{{ authentication_mail_config_file }}'
+      regexp: '^\s{4}mailer_transport:'
+      line: '    mailer_transport: {{ authentication_mail_transport }}'
+
+- name: Configure authentication mail host setting
+  lineinfile:
+      path: '{{ authentication_mail_config_file }}'
+      regexp: '^\s{4}mailer_host:'
+      line: '    mailer_host: {{ authentication_mail_host }}'
+
+- name: Configure authentication mail port setting
+  lineinfile:
+      path: '{{ authentication_mail_config_file }}'
+      regexp: '^\s{4}mailer_port:'
+      line: '    mailer_port: {{ authentication_mail_port }}'
+
+- name: Configure authentication mail username setting
+  lineinfile:
+      path: '{{ authentication_mail_config_file }}'
+      regexp: '^\s{4}mailer_user:'
+      line: '    mailer_user: {{ authentication_mail_username }}'
+
+- name: Configure authentication mail password setting
+  lineinfile:
+      path: '{{ authentication_mail_config_file }}'
+      regexp: '^\s{4}mailer_password:'
+      line: '    mailer_password: ''{{ authentication_mail_password }}'''

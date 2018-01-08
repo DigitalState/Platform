@@ -1,0 +1,14 @@
+---
+- name: Define authentication mail variables
+  set_fact:
+      authentication_mail_transport: '{{ mail.transport }}'
+      authentication_mail_host: '{{ mail.host }}'
+      authentication_mail_port: '{{ mail.port }}'
+      authentication_mail_username: '{{ mail.username }}'
+      authentication_mail_password: '{{ mail.password }}'
+
+- name: Configure authentication mail settings
+  include_role:
+      name: app/authentication/mail/configure
+  when: authentication.enabled
+  tags: [authentication]

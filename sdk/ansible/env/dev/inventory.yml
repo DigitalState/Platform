@@ -16,85 +16,91 @@ all:
             private_key: /root/resource/jwt/dev/key
             public_key: /root/resource/jwt/dev/key.pub
             key_pass_phase: ~
+        mail:
+            transport: smtp
+            host: 127.0.0.1
+            port: ~
+            username: admin@localhost
+            password: ~
         util:
             adminer: /root/resource/util/adminer.php
         admin:
             enabled: true
             repository: https://github.com/DigitalState/Admin.git
             version: develop
-            host: admin.dev.ds
+            host: admin.demo.digitalstate.io
         assets:
             enabled: true
             repository: https://github.com/DigitalState/Assets.git
             version: develop
-            host: api.assets.dev.ds
+            host: api.assets.demo.digitalstate.io
         authentication:
             enabled: true
             repository: https://github.com/DigitalState/Authentication.git
             version: develop
-            host: api.authentication.dev.ds
+            host: api.authentication.demo.digitalstate.io
         camunda:
             enabled: true
             repository: https://github.com/DigitalState/Camunda.git
             version: develop
-            host: api.camunda.dev.ds
+            host: api.camunda.demo.digitalstate.io
         cases:
             enabled: true
             repository: https://github.com/DigitalState/Cases.git
             version: develop
-            host: api.cases.dev.ds
+            host: api.cases.demo.digitalstate.io
         cms:
             enabled: true
             repository: https://github.com/DigitalState/Cms.git
             version: develop
-            host: api.cms.dev.ds
+            host: api.cms.demo.digitalstate.io
         core:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Core.git
             version: develop
         discovery:
             enabled: false
             repository: https://github.com/DigitalState/Discovery.git
             version: develop
-            host: api.discovery.dev.ds
+            host: api.discovery.demo.digitalstate.io
         documentation:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Documentation.git
             version: master
         formio:
             enabled: true
             repository: https://github.com/DigitalState/Formio.git
             version: develop
-            host: api.formio.dev.ds
+            host: api.formio.demo.digitalstate.io
         guide:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Guide.git
             version: master
         identities:
             enabled: true
             repository: https://github.com/DigitalState/Identities.git
             version: develop
-            host: api.identities.dev.ds
+            host: api.identities.demo.digitalstate.io
         interactions:
             enabled: false
             repository: https://github.com/DigitalState/Interactions.git
             version: develop
-            host: api.interactions.dev.ds
+            host: api.interactions.demo.digitalstate.io
         logs:
             enabled: false
             repository: https://github.com/DigitalState/Logs.git
             version: develop
-            host: api.logs.dev.ds
+            host: api.logs.demo.digitalstate.io
         monitor:
             enabled: false
             repository: https://github.com/DigitalState/Monitor.git
             version: develop
-            host: monitor.dev.ds
+            host: monitor.demo.digitalstate.io
         portal:
             enabled: true
             version: develop
             repository: https://github.com/DigitalState/Portal.git
-            host: portal.dev.ds
+            host: portal.demo.digitalstate.io
         proxy:
             enabled: true
             repository: https://github.com/DigitalState/Proxy.git
@@ -104,23 +110,23 @@ all:
             enabled: true
             version: develop
             repository: https://github.com/DigitalState/Records.git
-            host: api.records.dev.ds
+            host: api.records.demo.digitalstate.io
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
             version: develop
-            host: api.services.dev.ds
+            host: api.services.demo.digitalstate.io
         tasks:
             enabled: true
             repository: https://github.com/DigitalState/Tasks.git
             version: develop
-            host: api.tasks.dev.ds
+            host: api.tasks.demo.digitalstate.io
         topics:
             enabled: false
             repository: https://github.com/DigitalState/Topics.git
             version: develop
-            host: api.topics.dev.ds
+            host: api.topics.demo.digitalstate.io
         ui:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Ui.git
             version: develop

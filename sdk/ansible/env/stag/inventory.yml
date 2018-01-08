@@ -16,6 +16,12 @@ all:
             private_key: /root/resource/jwt/stag/key
             public_key: /root/resource/jwt/stag/key.pub
             key_pass_phase: ~
+        mail:
+            transport: smtp
+            host: 127.0.0.1
+            port: ~
+            username: admin@localhost
+            password: ~
         util:
             adminer: /root/resource/util/adminer.php
         admin:
@@ -49,7 +55,7 @@ all:
             version: master
             host: api.cms.stag.ds
         core:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Core.git
             version: master
         discovery:
@@ -58,7 +64,7 @@ all:
             version: master
             host: api.discovery.stag.ds
         documentation:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Documentation.git
             version: master
         formio:
@@ -67,7 +73,7 @@ all:
             version: master
             host: api.formio.stag.ds
         guide:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Guide.git
             version: master
         identities:
@@ -121,6 +127,6 @@ all:
             version: master
             host: api.topics.stag.ds
         ui:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Ui.git
             version: master

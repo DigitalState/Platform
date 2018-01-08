@@ -1,0 +1,7 @@
+---
+authentication_mail_config_file: /srv/authentication/app/config/parameters.yml
+authentication_mail_transport: smtp
+authentication_mail_host: 127.0.0.1
+authentication_mail_port: ~
+authentication_mail_username: admin@localhost
+authentication_mail_password: ~

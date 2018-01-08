@@ -6,7 +6,7 @@ all:
             ansible_connection: local
     vars:
         project: ds
-        directory: /c/Users/Demo/Sdk/app
+        directory: /c/Users/mario/Workspace/DigitalState/Sdk/app
         env: lab
         timezone: UTC
         data: dev
@@ -14,6 +14,12 @@ all:
             private_key: /root/resource/jwt/lab/key
             public_key: /root/resource/jwt/lab/key.pub
             key_pass_phase: ~
+        mail:
+            transport: smtp
+            host: 127.0.0.1
+            port: ~
+            username: admin@localhost
+            password: ~
         util:
             adminer: /root/resource/util/adminer.php
         admin:
@@ -51,7 +57,7 @@ all:
             repository: https://github.com/DigitalState/Core.git
             version: develop
         discovery:
-            enabled: false
+            enabled: true
             repository: https://github.com/DigitalState/Discovery.git
             version: develop
             host: api.discovery.lab.ds
@@ -74,17 +80,17 @@ all:
             version: develop
             host: api.identities.lab.ds
         interactions:
-            enabled: false
+            enabled: true
             repository: https://github.com/DigitalState/Interactions.git
             version: develop
             host: api.interactions.lab.ds
         logs:
-            enabled: false
+            enabled: true
             repository: https://github.com/DigitalState/Logs.git
             version: develop
             host: api.logs.lab.ds
         monitor:
-            enabled: false
+            enabled: true
             repository: https://github.com/DigitalState/Monitor.git
             version: develop
             host: monitor.lab.ds
@@ -114,7 +120,7 @@ all:
             version: develop
             host: api.tasks.lab.ds
         topics:
-            enabled: false
+            enabled: true
             repository: https://github.com/DigitalState/Topics.git
             version: develop
             host: api.topics.lab.ds

@@ -16,6 +16,12 @@ all:
             private_key: /root/resource/jwt/test/key
             public_key: /root/resource/jwt/test/key.pub
             key_pass_phase: ~
+        mail:
+            transport: smtp
+            host: 127.0.0.1
+            port: ~
+            username: admin@localhost
+            password: ~
         util:
             adminer: /root/resource/util/adminer.php
         admin:
@@ -49,7 +55,7 @@ all:
             version: develop
             host: api.cms.test.ds
         core:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Core.git
             version: develop
         discovery:
@@ -58,7 +64,7 @@ all:
             version: develop
             host: api.discovery.test.ds
         documentation:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Documentation.git
             version: master
         formio:
@@ -67,7 +73,7 @@ all:
             version: develop
             host: api.formio.test.ds
         guide:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Guide.git
             version: master
         identities:
@@ -121,6 +127,6 @@ all:
             version: develop
             host: api.topics.test.ds
         ui:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Ui.git
             version: develop
