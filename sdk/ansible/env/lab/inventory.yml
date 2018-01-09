@@ -6,7 +6,7 @@ all:
             ansible_connection: local
     vars:
         project: ds
-        directory: /c/Users/mario/Workspace/DigitalState/Sdk/app
+        directory: ~
         env: lab
         timezone: UTC
         data: dev
