@@ -21,8 +21,9 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 1. **Install** Git and Docker on your local machine.
 2. **Clone** the SDK repository.
-3. **Boot** the SDK container and **enter** the console.
-4. **Execute** pre-built Ansible commands to help with various orchestration tasks.
+3. **Boot** the SDK container.
+4. **Enter** the SDK container console
+5. **Execute** pre-built Ansible playbook commands.
 
 ## Requirements
 
@@ -67,7 +68,7 @@ If you are running Windows on your local machine, HyperV is required.
    > docker exec -it sdk /bin/sh
    ```
 
-   At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
+5. At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
    The next step would be to deploy a local [lab environment](sdk/documentation/lab/index.md).
 
