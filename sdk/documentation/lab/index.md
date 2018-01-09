@@ -18,8 +18,8 @@ It also provides useful bulk commands to help during development.
 1. **Install** Git and Docker on your local machine.
 2. **Clone** the SDK repository.
 3. **Boot** the SDK container.
-4. **Configure** the Ansible lab environment.
-5. **Generate** jwt keys for the system.
+4. **Generate** jwt keys for the system.
+5. **Configure** the Ansible lab environment.
 6. **Add** dns entries to your host file.
 7. **Deploy** the dockerized application locally.
 8. **Test** the application.
@@ -63,7 +63,19 @@ It also provides useful bulk commands to help during development.
 
 Prior to deploying the dockerized application, a few actions are required by the developer:
 
-4. Configure the Ansible lab environment.
+4. Generate jwt keys for the system.
+
+    > The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
+    > The authentication system requires a private and public key to generate and validate tokens. 
+    > Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
+
+    Follow these instructions to create jwt keys ([for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), [for Mac](#) or [for Linux](https://www.ssh.com/ssh/putty/linux/puttygen)). Once created, copy the key files over to the jwt resource directory.
+ 
+    The private key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key`.
+
+    The public key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key.pub`. 
+
+5. Configure the Ansible lab environment.
 
     > The lab environment uses the Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
 
@@ -87,17 +99,8 @@ Prior to deploying the dockerized application, a few actions are required by the
 
     For example, if you have put the SDK repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
 
-5. Generate jwt keys for the system.
+    The [jwt.key_pass_phrase](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L16) config needs to be set to the jwt key pass phrase defined at step #4.
 
-    > The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
-    > The authentication system requires a private and public key to generate and validate tokens. 
-    > Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
-
-    Follow these instructions to create jwt keys ([for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), [for Mac](#) or [for Linux](https://www.ssh.com/ssh/putty/linux/puttygen)). Once created, copy the key files over to the jwt resource directory.
- 
-    The private key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key`.
-
-    The public key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key.pub`. 
 
 6. Add dns entries to your host file.
 
