@@ -15,59 +15,56 @@ It also provides useful bulk commands to help during development.
 
 ## Synopsis
 
-1. **Install** the SDK on your local machine.
-2. **Configure** the Ansible lab environment.
-3. **Generate** keys for the system.
-4. **Add** entries to your host file.
-5. **Deploy** the dockerized application locally.
-6. **Test** the application.
+1. **Install** Git and Docker on your local machine.
+2. **Clone** the SDK repository.
+4. **Configure** the Ansible lab environment.
+5. **Generate** jwt keys for the system.
+6. **Add** dns entries to your host file.
+7. **Deploy** the dockerized application locally.
+8. **Test** the application.
 
 ## Installation
 
-1. To begin, you will need to install Docker (for [Windows](https://www.docker.com/docker-windows), for [Mac](https://docs.docker.com/docker-for-mac), for [Linux](https://docs.docker.com/engine/installation/#server)) on your local machine.
+1. To begin, you will need to install Git (for [Windows](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_windows), for [Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_mac), for [Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_linux)) and Docker (for [Windows](https://www.docker.com/docker-windows), for [Mac](https://docs.docker.com/docker-for-mac), for [Linux](https://docs.docker.com/engine/installation/#server)) on your local machine.
 
-2. Download this repository.
+   > Note: Docker Toolbox for Windows and Mac is not compatible.
 
-3. Open a console and make it point to the root of the repository directory:
-
-   ```
-      cd C:\Users\Demo\Sdk
-   ```
-
-4. Boot the SDK container:
+2. Open a command prompt and clone the repository:
 
    ```
-   docker-compose up -d
+   > cd C:\Users\Demo
+   > git clone https://github.com/DigitalState/Sdk.git
+   > cd Sdk
    ```
 
-5. Confirm the container has been booted successfully:
+3. Boot the SDK container:
 
    ```
-   docker ps
+   > docker-compose up -d
+   ```
+
+   Confirm the container has been booted successfully:
+
+   ```
+   > docker ps
    ```
    
    You should see the following output:
    
    ```
-   CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-   4ceab8511b85        sdk_sdk             "/bin/sh"           3 seconds ago       Up 2 seconds                            sdk
+   CONTAINER ID     IMAGE       COMMAND       CREATED           STATUS           PORTS     NAMES
+   4ceab8511b85     sdk_sdk     "/bin/sh"     3 seconds ago     Up 2 seconds               sdk
    ```
 
-6. Enter the container in console mode:
-
-   ```
-   docker exec -it sdk /bin/sh
-   ```
-
-At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
+   At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
 ## Configuration
 
 Prior to deploying the application, a few actions are required by the developer:
 
-1. Configure the Ansible lab environment.
+4. Configure the Ansible lab environment.
 
-    > The lab environment uses an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
+    > The lab environment uses the Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
 
     The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L11) config needs to be set to the absolute path of the SDK app directory. The value will vary depending on your local machine's operating system:
 
@@ -87,7 +84,7 @@ Prior to deploying the application, a few actions are required by the developer:
 
     For example, if you have put the SDK repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
 
-2. Generate keys for the system.
+5. Generate jwt keys for the system.
 
     > The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
     > The authentication system requires a private and public key to generate and validate tokens. 
@@ -99,7 +96,7 @@ Prior to deploying the application, a few actions are required by the developer:
 
     The public key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key.pub`. 
 
-3. Add entries to your host file.
+6. Add dns entries to your host file.
 
     > The lab environment uses an internal DNS.
     
