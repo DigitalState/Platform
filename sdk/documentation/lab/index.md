@@ -79,6 +79,8 @@ Prior to deploying the dockerized application, a few actions are required by the
 
     > The lab environment uses the Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
 
+    The [jwt.key_pass_phrase](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L16) config needs to be set to the jwt key pass phrase defined at step #4.
+
     The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L9) config needs to be set to the absolute path of the SDK app directory. The value will vary depending on your local machine's operating system:
 
     **Windows**
@@ -98,9 +100,6 @@ Prior to deploying the dockerized application, a few actions are required by the
     Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path.
 
     For example, if you have put the SDK repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
-
-    The [jwt.key_pass_phrase](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L16) config needs to be set to the jwt key pass phrase defined at step #4.
-
 
 6. Add dns entries to your host file.
 
