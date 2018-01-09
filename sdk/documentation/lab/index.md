@@ -107,15 +107,15 @@ Prior to deploying the dockerized application, a few actions are required by the
     
     ### Windows
     
-    Under Windows, the file is located at `C:\Windows\System32\drivers\etc\host`
+    Under Windows, the file is located at `C:\Windows\System32\drivers\etc\host`.
     
     ### Mac
     
-    Under Mac, the file is located at `/etc/hosts`
+    Under Mac, the file is located at `/etc/hosts`.
     
     ### Linux
     
-    Under Linux, the file is located at `/etc/hosts`
+    Under Linux, the file is located at `/etc/hosts`.
     
     Add the following entries:
     
