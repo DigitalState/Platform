@@ -77,7 +77,9 @@ Prior to deploying the dockerized application, a few actions are required by the
 
     **Mac**
 
-    Under Docker for Mac...
+    Under Docker for Mac, the value should simply be equal to the normal directory path, as long as you have shared the local `/Users` directory with the virtual machine.
+
+    For example, if you have put the SDK repository at `/Users/demo/sdk`, then the directory config value should be `/Users/demo/sdk/app`.
 
     **Linux**
 
