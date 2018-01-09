@@ -154,9 +154,9 @@ Prior to deploying the dockerized application, a few actions are required by the
     ansible-playbook deploy.yml
     ```
 
-This command essentially downloads repositories, configures settings, builds Docker images, boots up containers, migrates databases and loads data fixtures for each microservices.
+    This command essentially downloads repositories, configures settings, builds Docker images, boots up containers, migrates databases and loads data fixtures for each microservices.
 
-![Overview](images/overview.png)
+    ![Overview](images/overview.png)
 
 ## Test
 
