@@ -117,7 +117,7 @@ all:
             version: develop
             host: api.services.dev.ds
         tasks:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Tasks.git
             version: develop
             host: api.tasks.dev.ds
