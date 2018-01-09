@@ -17,6 +17,7 @@ It also provides useful bulk commands to help during development.
 
 1. **Install** Git and Docker on your local machine.
 2. **Clone** the SDK repository.
+3. **Boot** the SDK container.
 4. **Configure** the Ansible lab environment.
 5. **Generate** jwt keys for the system.
 6. **Add** dns entries to your host file.
@@ -60,13 +61,13 @@ It also provides useful bulk commands to help during development.
 
 ## Configuration
 
-Prior to deploying the application, a few actions are required by the developer:
+Prior to deploying the dockerized application, a few actions are required by the developer:
 
 4. Configure the Ansible lab environment.
 
     > The lab environment uses the Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
 
-    The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L11) config needs to be set to the absolute path of the SDK app directory. The value will vary depending on your local machine's operating system:
+    The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L9) config needs to be set to the absolute path of the SDK app directory. The value will vary depending on your local machine's operating system:
 
     **Windows**
 
@@ -90,7 +91,7 @@ Prior to deploying the application, a few actions are required by the developer:
     > The authentication system requires a private and public key to generate and validate tokens. 
     > Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
 
-    To create jwt keys, follow the instructions [for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), [for Mac](#) or [for Linux](https://www.ssh.com/ssh/putty/linux/puttygen). Once created, copy the key files over to the jwt resource directory.
+    Follow these instructions to create jwt keys ([for Windows](https://www.ssh.com/ssh/putty/windows/puttygen), [for Mac](#) or [for Linux](https://www.ssh.com/ssh/putty/linux/puttygen)). Once created, copy the key files over to the jwt resource directory.
  
     The private key should be copied to `C:\Users\Demo\Sdk\resource\jwt\lab\key`.
 
@@ -98,9 +99,23 @@ Prior to deploying the application, a few actions are required by the developer:
 
 6. Add dns entries to your host file.
 
-    > The lab environment uses an internal DNS.
+    > The lab environment uses a local DNS under *.lab.ds.
     
-    Locate the host file on your local machine and add the following entries:
+    Locate the host file on your local machine.
+    
+    ### Windows
+    
+    Under Windows, the file is located at `C:\Windows\System32\drivers\etc\host`
+    
+    ### Mac
+    
+    Under Mac, the file is located at `/etc/hosts`
+    
+    ### Linux
+    
+    Under Linux, the file is located at `/etc/hosts`
+    
+    Add the following entries:
     
     ```
     127.0.0.1 admin.lab.ds
