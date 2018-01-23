@@ -1,0 +1,10 @@
+---
+- name: Define cms database migration variables
+  set_fact:
+      cms_database_migration_data: '{{ database_migration_data }}'
+
+- name: Load cms database migration
+  include_role:
+      name: app/cms/database/migration/load
+  when: cms.enabled
+  tags: [cms]

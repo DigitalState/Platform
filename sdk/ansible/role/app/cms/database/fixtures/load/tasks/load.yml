@@ -1,0 +1,5 @@
+---
+- name: Load cms database fixtures
+  shell:
+      cmd: 'docker-compose exec php php bin/console doctrine:fixtures:load --env={{ cms_fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures/ORM --no-interaction | cat'
+      chdir: /srv/cms

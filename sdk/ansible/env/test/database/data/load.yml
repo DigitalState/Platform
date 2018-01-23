@@ -1,2 +1,0 @@
----
-- import_playbook: /etc/ansible/playbook/database/data/load.yml

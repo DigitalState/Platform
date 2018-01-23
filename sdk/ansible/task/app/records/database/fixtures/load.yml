@@ -1,0 +1,12 @@
+---
+- block:
+      - name: Define records database variables
+        set_fact:
+            records_fixtures: '{{ fixtures }}'
+      - name: Load records database fixtures
+        include_role:
+            name: app/records/database/fixtures/load
+  when:
+      - records.enabled
+      - fixtures is not none
+  tags: [records]

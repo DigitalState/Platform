@@ -1,0 +1,10 @@
+---
+- name: Define interactions database migration variables
+  set_fact:
+      interactions_database_migration_data: '{{ database_migration_data }}'
+
+- name: Load interactions database migration
+  include_role:
+      name: app/interactions/database/migration/load
+  when: interactions.enabled
+  tags: [interactions]

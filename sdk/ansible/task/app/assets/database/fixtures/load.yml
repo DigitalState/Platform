@@ -1,0 +1,12 @@
+---
+- block:
+      - name: Define assets database variables
+        set_fact:
+            assets_fixtures: '{{ fixtures }}'
+      - name: Load assets database fixtures
+        include_role:
+            name: app/assets/database/fixtures/load
+  when:
+      - assets.enabled
+      - fixtures is not none
+  tags: [assets]

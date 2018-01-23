@@ -7,7 +7,7 @@
 - import_playbook: container/up.yml
 - import_playbook: jwt/configure.yml
 - import_playbook: mail/configure.yml
-- import_playbook: database/migrate.yml
-- import_playbook: database/data/load.yml
+- import_playbook: database/migration/load.yml
+- import_playbook: database/fixtures/load.yml
 - import_playbook: config/api/configure.yml
 - import_playbook: util/adminer/download.yml

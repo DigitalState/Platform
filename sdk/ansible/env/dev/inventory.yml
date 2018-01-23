@@ -11,7 +11,6 @@ all:
         directory: /srv
         env: dev
         timezone: UTC
-        data: dev
         jwt:
             private_key: /root/resource/jwt/dev/key
             public_key: /root/resource/jwt/dev/key.pub
@@ -22,6 +21,14 @@ all:
             port: ~
             username: admin@localhost
             password: ~
+        fixtures: dev
+        user:
+            system:
+                password: ~
+            anonymous:
+                password: ~
+            admin:
+                password: ~
         util:
             adminer: /root/resource/util/adminer.php
         admin:

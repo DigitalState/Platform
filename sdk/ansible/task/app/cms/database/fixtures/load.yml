@@ -1,0 +1,12 @@
+---
+- block:
+      - name: Define cms database variables
+        set_fact:
+            cms_fixtures: '{{ fixtures }}'
+      - name: Load cms database fixtures
+        include_role:
+            name: app/cms/database/fixtures/load
+  when:
+      - cms.enabled
+      - fixtures is not none
+  tags: [cms]

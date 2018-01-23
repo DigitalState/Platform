@@ -1,0 +1,12 @@
+---
+- block:
+      - name: Define interactions database variables
+        set_fact:
+            interactions_fixtures: '{{ fixtures }}'
+      - name: Load interactions database fixtures
+        include_role:
+            name: app/interactions/database/fixtures/load
+  when:
+      - interactions.enabled
+      - fixtures is not none
+  tags: [interactions]

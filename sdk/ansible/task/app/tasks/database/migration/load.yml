@@ -1,0 +1,10 @@
+---
+- name: Define tasks database migration variables
+  set_fact:
+      tasks_database_migration_data: '{{ database_migration_data }}'
+
+- name: Load tasks database migration
+  include_role:
+      name: app/tasks/database/migration/load
+  when: tasks.enabled
+  tags: [tasks]

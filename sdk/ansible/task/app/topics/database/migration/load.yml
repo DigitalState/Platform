@@ -1,0 +1,10 @@
+---
+- name: Define topics database migration variables
+  set_fact:
+      topics_database_migration_data: '{{ database_migration_data }}'
+
+- name: Load topics database migration
+  include_role:
+      name: app/topics/database/migration/load
+  when: topics.enabled
+  tags: [topics]

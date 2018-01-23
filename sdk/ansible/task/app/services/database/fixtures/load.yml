@@ -1,0 +1,12 @@
+---
+- block:
+      - name: Define services database variables
+        set_fact:
+            services_fixtures: '{{ fixtures }}'
+      - name: Load services database fixtures
+        include_role:
+            name: app/services/database/fixtures/load
+  when:
+      - services.enabled
+      - fixtures is not none
+  tags: [services]

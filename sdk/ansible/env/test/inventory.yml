@@ -11,7 +11,6 @@ all:
         directory: /srv
         env: test
         timezone: UTC
-        data: test
         jwt:
             private_key: /root/resource/jwt/test/key
             public_key: /root/resource/jwt/test/key.pub
@@ -22,8 +21,16 @@ all:
             port: ~
             username: admin@localhost
             password: ~
+        fixtures: test
+        user:
+            system:
+                password: 1
+            anonymous:
+                password: 1
+            admin:
+                password: 1
         util:
-            adminer: /root/resource/util/adminer.php
+            adminer: ~
         admin:
             enabled: true
             repository: https://github.com/DigitalState/Admin.git

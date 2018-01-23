@@ -1,0 +1,10 @@
+---
+- name: Define authentication database migration variables
+  set_fact:
+      authentication_database_migration_data: '{{ database_migration_data }}'
+
+- name: Load authentication database migration
+  include_role:
+      name: app/authentication/database/migration/load
+  when: authentication.enabled
+  tags: [authentication]

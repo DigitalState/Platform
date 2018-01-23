@@ -1,0 +1,12 @@
+---
+- block:
+      - name: Define tasks database variables
+        set_fact:
+            tasks_fixtures: '{{ fixtures }}'
+      - name: Load tasks database fixtures
+        include_role:
+            name: app/tasks/database/fixtures/load
+  when:
+      - tasks.enabled
+      - fixtures is not none
+  tags: [tasks]

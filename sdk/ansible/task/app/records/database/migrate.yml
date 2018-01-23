@@ -1,6 +1,0 @@
----
-- name: Migrate records database
-  include_role:
-      name: app/records/database/migrate
-  when: records.enabled
-  tags: [records]

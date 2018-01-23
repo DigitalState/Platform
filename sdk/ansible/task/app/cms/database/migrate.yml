@@ -1,6 +1,0 @@
----
-- name: Migrate cms database
-  include_role:
-      name: app/cms/database/migrate
-  when: cms.enabled
-  tags: [cms]

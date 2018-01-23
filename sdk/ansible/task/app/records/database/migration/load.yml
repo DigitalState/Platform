@@ -1,0 +1,10 @@
+---
+- name: Define records database migration variables
+  set_fact:
+      records_database_migration_data: '{{ database_migration_data }}'
+
+- name: Load records database migration
+  include_role:
+      name: app/records/database/migration/load
+  when: records.enabled
+  tags: [records]

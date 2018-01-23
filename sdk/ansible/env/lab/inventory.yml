@@ -9,7 +9,6 @@ all:
         directory: ~
         env: lab
         timezone: UTC
-        data: dev
         jwt:
             private_key: /root/resource/jwt/lab/key
             public_key: /root/resource/jwt/lab/key.pub
@@ -20,6 +19,14 @@ all:
             port: ~
             username: admin@localhost
             password: ~
+        fixtures: dev
+        user:
+            system:
+                password: 1
+            anonymous:
+                password: 1
+            admin:
+                password: 1
         util:
             adminer: /root/resource/util/adminer.php
         admin:
@@ -57,7 +64,7 @@ all:
             repository: https://github.com/DigitalState/Core.git
             version: develop
         discovery:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Discovery.git
             version: develop
             host: api.discovery.lab.ds
@@ -80,17 +87,17 @@ all:
             version: develop
             host: api.identities.lab.ds
         interactions:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Interactions.git
             version: develop
             host: api.interactions.lab.ds
         logs:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Logs.git
             version: develop
             host: api.logs.lab.ds
         monitor:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Monitor.git
             version: develop
             host: monitor.lab.ds
@@ -120,7 +127,7 @@ all:
             version: develop
             host: api.tasks.lab.ds
         topics:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Topics.git
             version: develop
             host: api.topics.lab.ds

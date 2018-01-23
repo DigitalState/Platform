@@ -1,0 +1,23 @@
+---
+- name: Backup records fixtures directory
+  shell: 'cp -R /srv/records/src/AppBundle/Resources/fixtures/{{ records_fixtures }} /srv/records/src/AppBundle/Resources/fixtures/_{{ records_fixtures }}'
+
+- name: Download custom records fixtures directory
+  copy:
+      src: '/root/resource/fixtures/{{ records_fixtures }}/records/'
+      dest: '/srv/records/src/AppBundle/Resources/fixtures/{{ records_fixtures }}'
+
+- import_tasks: load.yml
+
+# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
+- name: Pause while records fixtures load
+  pause:
+      seconds: 15
+
+- name: Delete custom records fixtures directory
+  file:
+      path: '/srv/records/src/AppBundle/Resources/fixtures/{{ records_fixtures }}'
+      state: absent
+
+- name: Restore records fixtures directory backup
+  shell: 'mv /srv/records/src/AppBundle/Resources/fixtures/_{{ records_fixtures }} /srv/records/src/AppBundle/Resources/fixtures/{{ records_fixtures }}'

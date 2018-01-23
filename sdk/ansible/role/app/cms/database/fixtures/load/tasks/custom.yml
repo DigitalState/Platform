@@ -1,0 +1,23 @@
+---
+- name: Backup cms fixtures directory
+  shell: 'cp -R /srv/cms/src/AppBundle/Resources/fixtures/{{ cms_fixtures }} /srv/cms/src/AppBundle/Resources/fixtures/_{{ cms_fixtures }}'
+
+- name: Download custom cms fixtures directory
+  copy:
+      src: '/root/resource/fixtures/{{ cms_fixtures }}/cms/'
+      dest: '/srv/cms/src/AppBundle/Resources/fixtures/{{ cms_fixtures }}'
+
+- import_tasks: load.yml
+
+# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
+- name: Pause while cms fixtures load
+  pause:
+      seconds: 15
+
+- name: Delete custom cms fixtures directory
+  file:
+      path: '/srv/cms/src/AppBundle/Resources/fixtures/{{ cms_fixtures }}'
+      state: absent
+
+- name: Restore cms fixtures directory backup
+  shell: 'mv /srv/cms/src/AppBundle/Resources/fixtures/_{{ cms_fixtures }} /srv/cms/src/AppBundle/Resources/fixtures/{{ cms_fixtures }}'

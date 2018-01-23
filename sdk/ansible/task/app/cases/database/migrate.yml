@@ -1,6 +1,0 @@
----
-- name: Migrate cases database
-  include_role:
-      name: app/cases/database/migrate
-  when: cases.enabled
-  tags: [cases]

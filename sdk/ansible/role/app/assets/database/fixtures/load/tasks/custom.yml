@@ -1,0 +1,23 @@
+---
+- name: Backup assets fixtures directory
+  shell: 'cp -R /srv/assets/src/AppBundle/Resources/fixtures/{{ assets_fixtures }} /srv/assets/src/AppBundle/Resources/fixtures/_{{ assets_fixtures }}'
+
+- name: Download custom assets fixtures directory
+  copy:
+      src: '/root/resource/fixtures/{{ assets_fixtures }}/assets/'
+      dest: '/srv/assets/src/AppBundle/Resources/fixtures/{{ assets_fixtures }}'
+
+- import_tasks: load.yml
+
+# The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
+- name: Pause while assets fixtures load
+  pause:
+      seconds: 15
+
+- name: Delete custom assets fixtures directory
+  file:
+      path: '/srv/assets/src/AppBundle/Resources/fixtures/{{ assets_fixtures }}'
+      state: absent
+
+- name: Restore assets fixtures directory backup
+  shell: 'mv /srv/assets/src/AppBundle/Resources/fixtures/_{{ assets_fixtures }} /srv/assets/src/AppBundle/Resources/fixtures/{{ assets_fixtures }}'

@@ -11,7 +11,6 @@ all:
         directory: /srv
         env: stag
         timezone: UTC
-        data: ~
         jwt:
             private_key: /root/resource/jwt/stag/key
             public_key: /root/resource/jwt/stag/key.pub
@@ -22,8 +21,16 @@ all:
             port: ~
             username: admin@localhost
             password: ~
+        fixtures: ~
+        user:
+            system:
+                password: ~
+            anonymous:
+                password: ~
+            admin:
+                password: ~
         util:
-            adminer: /root/resource/util/adminer.php
+            adminer: ~
         admin:
             enabled: true
             repository: https://github.com/DigitalState/Admin.git

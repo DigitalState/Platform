@@ -1,0 +1,12 @@
+---
+- block:
+      - name: Define topics database variables
+        set_fact:
+            topics_fixtures: '{{ fixtures }}'
+      - name: Load topics database fixtures
+        include_role:
+            name: app/topics/database/fixtures/load
+  when:
+      - topics.enabled
+      - fixtures is not none
+  tags: [topics]
