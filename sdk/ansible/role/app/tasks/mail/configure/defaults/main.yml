@@ -1,0 +1,7 @@
+---
+tasks_mail_config_file: /srv/tasks/app/config/parameters.yml
+tasks_mail_transport: smtp
+tasks_mail_host: 127.0.0.1
+tasks_mail_port: ~
+tasks_mail_username: admin@localhost
+tasks_mail_password: ~

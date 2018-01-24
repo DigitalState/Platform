@@ -1,0 +1,30 @@
+---
+- name: Configure records mail transport setting
+  lineinfile:
+      path: '{{ records_mail_config_file }}'
+      regexp: '^\s{4}mailer_transport:'
+      line: '    mailer_transport: {{ records_mail_transport }}'
+
+- name: Configure records mail host setting
+  lineinfile:
+      path: '{{ records_mail_config_file }}'
+      regexp: '^\s{4}mailer_host:'
+      line: '    mailer_host: {{ records_mail_host }}'
+
+- name: Configure records mail port setting
+  lineinfile:
+      path: '{{ records_mail_config_file }}'
+      regexp: '^\s{4}mailer_port:'
+      line: '    mailer_port: {{ records_mail_port }}'
+
+- name: Configure records mail username setting
+  lineinfile:
+      path: '{{ records_mail_config_file }}'
+      regexp: '^\s{4}mailer_user:'
+      line: '    mailer_user: {{ records_mail_username }}'
+
+- name: Configure records mail password setting
+  lineinfile:
+      path: '{{ records_mail_config_file }}'
+      regexp: '^\s{4}mailer_password:'
+      line: '    mailer_password: ''{{ records_mail_password }}'''

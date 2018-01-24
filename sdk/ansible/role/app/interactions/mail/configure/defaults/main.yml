@@ -1,0 +1,7 @@
+---
+interactions_mail_config_file: /srv/interactions/app/config/parameters.yml
+interactions_mail_transport: smtp
+interactions_mail_host: 127.0.0.1
+interactions_mail_port: ~
+interactions_mail_username: admin@localhost
+interactions_mail_password: ~

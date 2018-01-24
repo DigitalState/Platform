@@ -1,0 +1,7 @@
+---
+services_mail_config_file: /srv/services/app/config/parameters.yml
+services_mail_transport: smtp
+services_mail_host: 127.0.0.1
+services_mail_port: ~
+services_mail_username: admin@localhost
+services_mail_password: ~

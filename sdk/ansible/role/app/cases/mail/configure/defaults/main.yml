@@ -1,0 +1,7 @@
+---
+cases_mail_config_file: /srv/cases/app/config/parameters.yml
+cases_mail_transport: smtp
+cases_mail_host: 127.0.0.1
+cases_mail_port: ~
+cases_mail_username: admin@localhost
+cases_mail_password: ~

@@ -1,0 +1,14 @@
+---
+- name: Define tasks mail variables
+  set_fact:
+      tasks_mail_transport: '{{ mail.transport }}'
+      tasks_mail_host: '{{ mail.host }}'
+      tasks_mail_port: '{{ mail.port }}'
+      tasks_mail_username: '{{ mail.username }}'
+      tasks_mail_password: '{{ mail.password }}'
+
+- name: Configure tasks mail settings
+  include_role:
+      name: app/tasks/mail/configure
+  when: tasks.enabled
+  tags: [tasks]

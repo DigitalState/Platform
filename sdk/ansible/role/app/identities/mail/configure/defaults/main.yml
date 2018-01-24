@@ -1,0 +1,7 @@
+---
+identities_mail_config_file: /srv/identities/app/config/parameters.yml
+identities_mail_transport: smtp
+identities_mail_host: 127.0.0.1
+identities_mail_port: ~
+identities_mail_username: admin@localhost
+identities_mail_password: ~

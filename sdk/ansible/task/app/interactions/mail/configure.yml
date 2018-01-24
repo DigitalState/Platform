@@ -1,0 +1,14 @@
+---
+- name: Define interactions mail variables
+  set_fact:
+      interactions_mail_transport: '{{ mail.transport }}'
+      interactions_mail_host: '{{ mail.host }}'
+      interactions_mail_port: '{{ mail.port }}'
+      interactions_mail_username: '{{ mail.username }}'
+      interactions_mail_password: '{{ mail.password }}'
+
+- name: Configure interactions mail settings
+  include_role:
+      name: app/interactions/mail/configure
+  when: interactions.enabled
+  tags: [interactions]

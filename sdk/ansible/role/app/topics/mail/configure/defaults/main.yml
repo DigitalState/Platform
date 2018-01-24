@@ -1,0 +1,7 @@
+---
+topics_mail_config_file: /srv/topics/app/config/parameters.yml
+topics_mail_transport: smtp
+topics_mail_host: 127.0.0.1
+topics_mail_port: ~
+topics_mail_username: admin@localhost
+topics_mail_password: ~

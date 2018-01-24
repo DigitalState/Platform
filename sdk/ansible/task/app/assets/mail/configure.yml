@@ -1,0 +1,14 @@
+---
+- name: Define assets mail variables
+  set_fact:
+      assets_mail_transport: '{{ mail.transport }}'
+      assets_mail_host: '{{ mail.host }}'
+      assets_mail_port: '{{ mail.port }}'
+      assets_mail_username: '{{ mail.username }}'
+      assets_mail_password: '{{ mail.password }}'
+
+- name: Configure assets mail settings
+  include_role:
+      name: app/assets/mail/configure
+  when: assets.enabled
+  tags: [assets]

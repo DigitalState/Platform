@@ -1,0 +1,14 @@
+---
+- name: Define records mail variables
+  set_fact:
+      records_mail_transport: '{{ mail.transport }}'
+      records_mail_host: '{{ mail.host }}'
+      records_mail_port: '{{ mail.port }}'
+      records_mail_username: '{{ mail.username }}'
+      records_mail_password: '{{ mail.password }}'
+
+- name: Configure records mail settings
+  include_role:
+      name: app/records/mail/configure
+  when: records.enabled
+  tags: [records]

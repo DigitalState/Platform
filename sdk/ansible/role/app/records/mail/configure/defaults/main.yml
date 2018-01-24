@@ -1,0 +1,7 @@
+---
+records_mail_config_file: /srv/records/app/config/parameters.yml
+records_mail_transport: smtp
+records_mail_host: 127.0.0.1
+records_mail_port: ~
+records_mail_username: admin@localhost
+records_mail_password: ~

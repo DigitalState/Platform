@@ -1,0 +1,30 @@
+---
+- name: Configure identities mail transport setting
+  lineinfile:
+      path: '{{ identities_mail_config_file }}'
+      regexp: '^\s{4}mailer_transport:'
+      line: '    mailer_transport: {{ identities_mail_transport }}'
+
+- name: Configure identities mail host setting
+  lineinfile:
+      path: '{{ identities_mail_config_file }}'
+      regexp: '^\s{4}mailer_host:'
+      line: '    mailer_host: {{ identities_mail_host }}'
+
+- name: Configure identities mail port setting
+  lineinfile:
+      path: '{{ identities_mail_config_file }}'
+      regexp: '^\s{4}mailer_port:'
+      line: '    mailer_port: {{ identities_mail_port }}'
+
+- name: Configure identities mail username setting
+  lineinfile:
+      path: '{{ identities_mail_config_file }}'
+      regexp: '^\s{4}mailer_user:'
+      line: '    mailer_user: {{ identities_mail_username }}'
+
+- name: Configure identities mail password setting
+  lineinfile:
+      path: '{{ identities_mail_config_file }}'
+      regexp: '^\s{4}mailer_password:'
+      line: '    mailer_password: ''{{ identities_mail_password }}'''

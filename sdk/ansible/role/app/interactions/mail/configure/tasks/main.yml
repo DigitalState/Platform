@@ -1,0 +1,30 @@
+---
+- name: Configure interactions mail transport setting
+  lineinfile:
+      path: '{{ interactions_mail_config_file }}'
+      regexp: '^\s{4}mailer_transport:'
+      line: '    mailer_transport: {{ interactions_mail_transport }}'
+
+- name: Configure interactions mail host setting
+  lineinfile:
+      path: '{{ interactions_mail_config_file }}'
+      regexp: '^\s{4}mailer_host:'
+      line: '    mailer_host: {{ interactions_mail_host }}'
+
+- name: Configure interactions mail port setting
+  lineinfile:
+      path: '{{ interactions_mail_config_file }}'
+      regexp: '^\s{4}mailer_port:'
+      line: '    mailer_port: {{ interactions_mail_port }}'
+
+- name: Configure interactions mail username setting
+  lineinfile:
+      path: '{{ interactions_mail_config_file }}'
+      regexp: '^\s{4}mailer_user:'
+      line: '    mailer_user: {{ interactions_mail_username }}'
+
+- name: Configure interactions mail password setting
+  lineinfile:
+      path: '{{ interactions_mail_config_file }}'
+      regexp: '^\s{4}mailer_password:'
+      line: '    mailer_password: ''{{ interactions_mail_password }}'''

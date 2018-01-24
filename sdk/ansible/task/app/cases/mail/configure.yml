@@ -1,0 +1,14 @@
+---
+- name: Define cases mail variables
+  set_fact:
+      cases_mail_transport: '{{ mail.transport }}'
+      cases_mail_host: '{{ mail.host }}'
+      cases_mail_port: '{{ mail.port }}'
+      cases_mail_username: '{{ mail.username }}'
+      cases_mail_password: '{{ mail.password }}'
+
+- name: Configure cases mail settings
+  include_role:
+      name: app/cases/mail/configure
+  when: cases.enabled
+  tags: [cases]

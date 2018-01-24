@@ -1,0 +1,30 @@
+---
+- name: Configure cases mail transport setting
+  lineinfile:
+      path: '{{ cases_mail_config_file }}'
+      regexp: '^\s{4}mailer_transport:'
+      line: '    mailer_transport: {{ cases_mail_transport }}'
+
+- name: Configure cases mail host setting
+  lineinfile:
+      path: '{{ cases_mail_config_file }}'
+      regexp: '^\s{4}mailer_host:'
+      line: '    mailer_host: {{ cases_mail_host }}'
+
+- name: Configure cases mail port setting
+  lineinfile:
+      path: '{{ cases_mail_config_file }}'
+      regexp: '^\s{4}mailer_port:'
+      line: '    mailer_port: {{ cases_mail_port }}'
+
+- name: Configure cases mail username setting
+  lineinfile:
+      path: '{{ cases_mail_config_file }}'
+      regexp: '^\s{4}mailer_user:'
+      line: '    mailer_user: {{ cases_mail_username }}'
+
+- name: Configure cases mail password setting
+  lineinfile:
+      path: '{{ cases_mail_config_file }}'
+      regexp: '^\s{4}mailer_password:'
+      line: '    mailer_password: ''{{ cases_mail_password }}'''

@@ -1,0 +1,14 @@
+---
+- name: Define identities mail variables
+  set_fact:
+      identities_mail_transport: '{{ mail.transport }}'
+      identities_mail_host: '{{ mail.host }}'
+      identities_mail_port: '{{ mail.port }}'
+      identities_mail_username: '{{ mail.username }}'
+      identities_mail_password: '{{ mail.password }}'
+
+- name: Configure identities mail settings
+  include_role:
+      name: app/identities/mail/configure
+  when: identities.enabled
+  tags: [identities]

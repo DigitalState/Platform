@@ -1,0 +1,7 @@
+---
+assets_mail_config_file: /srv/assets/app/config/parameters.yml
+assets_mail_transport: smtp
+assets_mail_host: 127.0.0.1
+assets_mail_port: ~
+assets_mail_username: admin@localhost
+assets_mail_password: ~

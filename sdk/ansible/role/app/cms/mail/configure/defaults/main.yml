@@ -1,0 +1,7 @@
+---
+cms_mail_config_file: /srv/cms/app/config/parameters.yml
+cms_mail_transport: smtp
+cms_mail_host: 127.0.0.1
+cms_mail_port: ~
+cms_mail_username: admin@localhost
+cms_mail_password: ~

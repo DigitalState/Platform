@@ -1,0 +1,30 @@
+---
+- name: Configure cms mail transport setting
+  lineinfile:
+      path: '{{ cms_mail_config_file }}'
+      regexp: '^\s{4}mailer_transport:'
+      line: '    mailer_transport: {{ cms_mail_transport }}'
+
+- name: Configure cms mail host setting
+  lineinfile:
+      path: '{{ cms_mail_config_file }}'
+      regexp: '^\s{4}mailer_host:'
+      line: '    mailer_host: {{ cms_mail_host }}'
+
+- name: Configure cms mail port setting
+  lineinfile:
+      path: '{{ cms_mail_config_file }}'
+      regexp: '^\s{4}mailer_port:'
+      line: '    mailer_port: {{ cms_mail_port }}'
+
+- name: Configure cms mail username setting
+  lineinfile:
+      path: '{{ cms_mail_config_file }}'
+      regexp: '^\s{4}mailer_user:'
+      line: '    mailer_user: {{ cms_mail_username }}'
+
+- name: Configure cms mail password setting
+  lineinfile:
+      path: '{{ cms_mail_config_file }}'
+      regexp: '^\s{4}mailer_password:'
+      line: '    mailer_password: ''{{ cms_mail_password }}'''

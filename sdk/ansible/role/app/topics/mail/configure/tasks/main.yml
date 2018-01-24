@@ -1,0 +1,30 @@
+---
+- name: Configure topics mail transport setting
+  lineinfile:
+      path: '{{ topics_mail_config_file }}'
+      regexp: '^\s{4}mailer_transport:'
+      line: '    mailer_transport: {{ topics_mail_transport }}'
+
+- name: Configure topics mail host setting
+  lineinfile:
+      path: '{{ topics_mail_config_file }}'
+      regexp: '^\s{4}mailer_host:'
+      line: '    mailer_host: {{ topics_mail_host }}'
+
+- name: Configure topics mail port setting
+  lineinfile:
+      path: '{{ topics_mail_config_file }}'
+      regexp: '^\s{4}mailer_port:'
+      line: '    mailer_port: {{ topics_mail_port }}'
+
+- name: Configure topics mail username setting
+  lineinfile:
+      path: '{{ topics_mail_config_file }}'
+      regexp: '^\s{4}mailer_user:'
+      line: '    mailer_user: {{ topics_mail_username }}'
+
+- name: Configure topics mail password setting
+  lineinfile:
+      path: '{{ topics_mail_config_file }}'
+      regexp: '^\s{4}mailer_password:'
+      line: '    mailer_password: ''{{ topics_mail_password }}'''

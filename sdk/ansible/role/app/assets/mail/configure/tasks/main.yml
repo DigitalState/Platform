@@ -1,0 +1,30 @@
+---
+- name: Configure assets mail transport setting
+  lineinfile:
+      path: '{{ assets_mail_config_file }}'
+      regexp: '^\s{4}mailer_transport:'
+      line: '    mailer_transport: {{ assets_mail_transport }}'
+
+- name: Configure assets mail host setting
+  lineinfile:
+      path: '{{ assets_mail_config_file }}'
+      regexp: '^\s{4}mailer_host:'
+      line: '    mailer_host: {{ assets_mail_host }}'
+
+- name: Configure assets mail port setting
+  lineinfile:
+      path: '{{ assets_mail_config_file }}'
+      regexp: '^\s{4}mailer_port:'
+      line: '    mailer_port: {{ assets_mail_port }}'
+
+- name: Configure assets mail username setting
+  lineinfile:
+      path: '{{ assets_mail_config_file }}'
+      regexp: '^\s{4}mailer_user:'
+      line: '    mailer_user: {{ assets_mail_username }}'
+
+- name: Configure assets mail password setting
+  lineinfile:
+      path: '{{ assets_mail_config_file }}'
+      regexp: '^\s{4}mailer_password:'
+      line: '    mailer_password: ''{{ assets_mail_password }}'''

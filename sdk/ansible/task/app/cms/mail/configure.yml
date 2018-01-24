@@ -1,0 +1,14 @@
+---
+- name: Define cms mail variables
+  set_fact:
+      cms_mail_transport: '{{ mail.transport }}'
+      cms_mail_host: '{{ mail.host }}'
+      cms_mail_port: '{{ mail.port }}'
+      cms_mail_username: '{{ mail.username }}'
+      cms_mail_password: '{{ mail.password }}'
+
+- name: Configure cms mail settings
+  include_role:
+      name: app/cms/mail/configure
+  when: cms.enabled
+  tags: [cms]
