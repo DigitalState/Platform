@@ -4,6 +4,10 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define interactions container variables
         set_fact:
+            interactions_env_file: .env.lab
+        when: env == 'lab'
+      - name: Define interactions container variables
+        set_fact:
             interactions_compose_project_name: '{{ project }}_interactions'
             interactions_network: '{{ project }}_default'
             interactions_proxy_host: '{{ proxy_container_info_ip.stdout }}'

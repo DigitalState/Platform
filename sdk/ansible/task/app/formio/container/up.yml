@@ -2,6 +2,10 @@
 - block:
       - name: Gather information for formio container
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define authentication container variables
+        set_fact:
+            formio_env_file: .env.lab
+        when: env == 'lab'
       - name: Define formio container variables
         set_fact:
             formio_compose_project_name: '{{ project }}_formio'

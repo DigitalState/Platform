@@ -1,7 +1,12 @@
 ---
+
 - block:
       - name: Gather information for logs container
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define logs container variables
+        set_fact:
+            logs_env_file: .env.lab
+        when: env == 'lab'
       - name: Define logs container variables
         set_fact:
             logs_compose_project_name: '{{ project }}_logs'

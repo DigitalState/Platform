@@ -4,6 +4,10 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define cms container variables
         set_fact:
+            cms_env_file: .env.lab
+        when: env == 'lab'
+      - name: Define cms container variables
+        set_fact:
             cms_compose_project_name: '{{ project }}_cms'
             cms_network: '{{ project }}_default'
             cms_proxy_host: '{{ proxy_container_info_ip.stdout }}'

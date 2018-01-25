@@ -1,4 +1,5 @@
 ---
+cases_env_file: ~
 cases_compose_project_name: ds_cases
 cases_network: ds_default
 cases_proxy_host: 127.0.0.1

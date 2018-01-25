@@ -4,6 +4,10 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define identities container variables
         set_fact:
+            identities_env_file: .env.lab
+        when: env == 'lab'
+      - name: Define identities container variables
+        set_fact:
             identities_compose_project_name: '{{ project }}_identities'
             identities_network: '{{ project }}_default'
             identities_proxy_host: '{{ proxy_container_info_ip.stdout }}'

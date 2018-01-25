@@ -4,6 +4,10 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define services container variables
         set_fact:
+            services_env_file: .env.lab
+        when: env == 'lab'
+      - name: Define services container variables
+        set_fact:
             services_compose_project_name: '{{ project }}_services'
             services_network: '{{ project }}_default'
             services_proxy_host: '{{ proxy_container_info_ip.stdout }}'

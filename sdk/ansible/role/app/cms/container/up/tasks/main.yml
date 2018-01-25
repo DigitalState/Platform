@@ -1,4 +1,49 @@
 ---
+- block:
+      - name: Configure cms namespace environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cms/{{ cms_env_file }}'
+            regexp: '^COMPOSE_PROJECT_NAME='
+            line: 'COMPOSE_PROJECT_NAME={{ cms_compose_project_name }}'
+      - name: Configure cms network environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cms/{{ cms_env_file }}'
+            regexp: '^NETWORK='
+            line: 'NETWORK={{ cms_network }}'
+      - name: Configure proxy host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cms/{{ cms_env_file }}'
+            regexp: '^PROXY_HOST='
+            line: 'PROXY_HOST={{ cms_proxy_host }}'
+      - name: Configure virtual host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cms/{{ cms_env_file }}'
+            regexp: '^VIRTUAL_HOST='
+            line: 'VIRTUAL_HOST={{ cms_virtual_host }}'
+      - name: Configure directory environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cms/{{ cms_env_file }}'
+            regexp: '^DIRECTORY='
+            line: 'DIRECTORY={{ cms_directory }}'
+      - name: Configure jwt private key environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cms/{{ cms_env_file }}'
+            regexp: '^JWT_PRIVATE_KEY='
+            line: 'JWT_PRIVATE_KEY={{ cms_jwt_private_key }}'
+      - name: Configure jwt public key environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cms/{{ cms_env_file }}'
+            regexp: '^JWT_PUBLIC_KEY='
+            line: 'JWT_PUBLIC_KEY={{ cms_jwt_public_key }}'
+  when: cms_env_file is not none
+
 - name: Up cms container
   docker_service:
       project_src: /srv/cms

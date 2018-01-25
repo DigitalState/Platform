@@ -1,4 +1,5 @@
 ---
+assets_env_file: ~
 assets_compose_project_name: ds_assets
 assets_network: ds_default
 assets_proxy_host: 127.0.0.1

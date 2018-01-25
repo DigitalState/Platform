@@ -4,6 +4,10 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define portal container variables
         set_fact:
+            portal_env_file: .env.lab
+        when: env == 'lab'
+      - name: Define portal container variables
+        set_fact:
             portal_discovery: {}
       - name: Append each enabled services to the discovery variable
         set_fact:

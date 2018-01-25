@@ -2,6 +2,10 @@
 - block:
       - name: Define proxy container variables
         set_fact:
+            proxy_env_file: .env.lab
+        when: env == 'lab'
+      - name: Define proxy container variables
+        set_fact:
             proxy_compose_project_name: '{{ project }}'
             proxy_port: '{{ proxy.port }}'
       - name: Up proxy container

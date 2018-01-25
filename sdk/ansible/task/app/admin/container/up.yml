@@ -4,6 +4,10 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define admin container variables
         set_fact:
+            admin_env_file: .env.lab
+        when: env == 'lab'
+      - name: Define admin container variables
+        set_fact:
             admin_discovery: {}
       - name: Append each enabled services to the discovery environment variable
         set_fact:

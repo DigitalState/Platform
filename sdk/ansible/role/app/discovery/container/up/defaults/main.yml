@@ -1,4 +1,5 @@
 ---
+discovery_env_file: ~
 discovery_compose_project_name: ds_discovery
 discovery_network: ds_default
 discovery_proxy_host: 127.0.0.1

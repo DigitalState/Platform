@@ -1,4 +1,5 @@
 ---
+tasks_env_file: ~
 tasks_compose_project_name: ds_tasks
 tasks_network: ds_default
 tasks_proxy_host: 127.0.0.1

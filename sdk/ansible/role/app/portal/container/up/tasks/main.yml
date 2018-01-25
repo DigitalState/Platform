@@ -1,4 +1,55 @@
 ---
+- block:
+      - name: Configure portal namespace environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/portal/{{ portal_env_file }}'
+            regexp: '^COMPOSE_PROJECT_NAME='
+            line: 'COMPOSE_PROJECT_NAME={{ portal_compose_project_name }}'
+      - name: Configure portal network environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/portal/{{ portal_env_file }}'
+            regexp: '^NETWORK='
+            line: 'NETWORK={{ portal_network }}'
+      - name: Configure proxy host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/portal/{{ portal_env_file }}'
+            regexp: '^PROXY_HOST='
+            line: 'PROXY_HOST={{ portal_proxy_host }}'
+      - name: Configure virtual host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/portal/{{ portal_env_file }}'
+            regexp: '^VIRTUAL_HOST='
+            line: 'VIRTUAL_HOST={{ portal_virtual_host }}'
+      - name: Configure directory environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/portal/{{ portal_env_file }}'
+            regexp: '^DIRECTORY='
+            line: 'DIRECTORY={{ portal_directory }}'
+      - name: Configure jwt private key environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/portal/{{ portal_env_file }}'
+            regexp: '^JWT_PRIVATE_KEY='
+            line: 'JWT_PRIVATE_KEY={{ portal_jwt_private_key }}'
+      - name: Configure jwt public key environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/portal/{{ portal_env_file }}'
+            regexp: '^JWT_PUBLIC_KEY='
+            line: 'JWT_PUBLIC_KEY={{ portal_jwt_public_key }}'
+      - name: Configure discovery environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/portal/{{ portal_env_file }}'
+            regexp: '^DISCOVERY='
+            line: 'DISCOVERY={{ portal_discovery|to_json }}'
+  when: portal_env_file is not none
+
 - name: Up portal container
   docker_service:
       project_src: /srv/portal

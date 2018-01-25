@@ -1,4 +1,5 @@
 ---
+portal_env_file: ~
 portal_composer_project_name: ds_portal
 portal_network: ds_default
 portal_proxy_host: 127.0.0.1

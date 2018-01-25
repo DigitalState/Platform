@@ -11,6 +11,39 @@
       regexp: api\.formio\.ds
       replace: '{{ formio_virtual_host }}'
 
+- block:
+      - name: Configure formio namespace environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/formio/{{ formio_env_file }}'
+            regexp: '^COMPOSE_PROJECT_NAME='
+            line: 'COMPOSE_PROJECT_NAME={{ formio_compose_project_name }}'
+      - name: Configure formio network environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/formio/{{ formio_env_file }}'
+            regexp: '^NETWORK='
+            line: 'NETWORK={{ formio_network }}'
+      - name: Configure proxy host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/formio/{{ formio_env_file }}'
+            regexp: '^PROXY_HOST='
+            line: 'PROXY_HOST={{ formio_proxy_host }}'
+      - name: Configure virtual host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/formio/{{ formio_env_file }}'
+            regexp: '^VIRTUAL_HOST='
+            line: 'VIRTUAL_HOST={{ formio_virtual_host }}'
+      - name: Configure directory environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/formio/{{ formio_env_file }}'
+            regexp: '^DIRECTORY='
+            line: 'DIRECTORY={{ formio_directory }}'
+  when: formio_env_file is not none
+
 - name: Ansible docker_service bug work-around
   set_fact:
       _formio: '{{ formio }}'

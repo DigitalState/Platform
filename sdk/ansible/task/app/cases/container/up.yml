@@ -4,6 +4,10 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define cases container variables
         set_fact:
+            cases_env_file: .env.lab
+        when: env == 'lab'
+      - name: Define cases container variables
+        set_fact:
             cases_compose_project_name: '{{ project }}_cases'
             cases_network: '{{ project }}_default'
             cases_proxy_host: '{{ proxy_container_info_ip.stdout }}'

@@ -1,4 +1,5 @@
 ---
+services_env_file: ~
 services_compose_project_name: ds_services
 services_network: ds_default
 services_proxy_host: 127.0.0.1

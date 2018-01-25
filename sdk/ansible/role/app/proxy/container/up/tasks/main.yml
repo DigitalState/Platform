@@ -1,4 +1,19 @@
 ---
+- block:
+      - name: Configure proxy namespace environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/proxy/{{ proxy_env_file }}'
+            regexp: '^COMPOSE_PROJECT_NAME='
+            line: 'COMPOSE_PROJECT_NAME={{ proxy_compose_project_name }}'
+      - name: Configure proxy port environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/proxy/{{ proxy_env_file }}'
+            regexp: '^PORT='
+            line: 'PORT={{ proxy_port }}'
+  when: proxy_env_file is not none
+
 - name: Up proxy container
   docker_service:
       project_src: /srv/proxy

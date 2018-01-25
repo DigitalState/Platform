@@ -2,6 +2,10 @@
 - block:
     - name: Gather information for discovery container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+      - name: Define discovery container variables
+        set_fact:
+            discovery_env_file: .env.lab
+        when: env == 'lab'
     - name: Define discovery container environment variables
       set_fact:
           discovery_namespace: '{{ project }}_discovery'

@@ -1,4 +1,43 @@
 ---
+- block:
+      - name: Configure admin namespace environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/admin/{{ admin_env_file }}'
+            regexp: '^COMPOSE_PROJECT_NAME='
+            line: 'COMPOSE_PROJECT_NAME={{ admin_compose_project_name }}'
+      - name: Configure admin network environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/admin/{{ admin_env_file }}'
+            regexp: '^NETWORK='
+            line: 'NETWORK={{ admin_network }}'
+      - name: Configure proxy host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/admin/{{ admin_env_file }}'
+            regexp: '^PROXY_HOST='
+            line: 'PROXY_HOST={{ admin_proxy_host }}'
+      - name: Configure virtual host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/admin/{{ admin_env_file }}'
+            regexp: '^VIRTUAL_HOST='
+            line: 'VIRTUAL_HOST={{ admin_virtual_host }}'
+      - name: Configure directory environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/admin/{{ admin_env_file }}'
+            regexp: '^DIRECTORY='
+            line: 'DIRECTORY={{ admin_directory }}'
+      - name: Configure discovery environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/admin/{{ admin_env_file }}'
+            regexp: '^DISCOVERY='
+            line: 'DISCOVERY={{ admin_discovery|to_json }}'
+  when: admin_env_file is not none
+
 - name: Up admin container
   docker_service:
       project_src: /srv/admin
