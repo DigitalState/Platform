@@ -22,11 +22,11 @@ all:
         fixtures: dev
         user:
             system:
-                password: 1
+                password: system
             anonymous:
-                password: 1
+                password: anonymous
             admin:
-                password: 1
+                password: admin
         util:
             adminer: /root/resource/util/adminer.php
         admin:
