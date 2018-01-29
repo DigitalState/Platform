@@ -63,6 +63,8 @@ all:
             repository: https://github.com/DigitalState/Camunda.git
             version: develop
             host: api.camunda.test.ds
+            username: admin
+            password: ~
         cases:
             enabled: true
             repository: https://github.com/DigitalState/Cases.git
@@ -103,6 +105,8 @@ all:
             repository: https://github.com/DigitalState/Formio.git
             version: develop
             host: api.formio.test.ds
+            username: admin
+            password: ~
         guide:
             enabled: false
             repository: https://github.com/DigitalState/Guide.git

@@ -14,6 +14,8 @@
             camunda_virtual_host: '{{ camunda.host }}'
             camunda_directory: '{{ directory }}/camunda'
             camunda_timezone: '{{ timezone }}'
+            camunda_username: '{{ camunda.username }}'
+            camunda_password: '{{ camunda.password }}'
       - name: Up camunda container
         include_role:
             name: app/camunda/container/up

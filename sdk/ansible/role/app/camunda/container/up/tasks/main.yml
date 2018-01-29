@@ -36,6 +36,18 @@
             path: '/srv/camunda/{{ camunda_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ camunda_directory }}'
+      - name: Configure username environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/camunda/{{ camunda_env_file }}'
+            regexp: '^USERNAME='
+            line: 'USERNAME={{ camunda_username }}'
+      - name: Configure password environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/camunda/{{ camunda_env_file }}'
+            regexp: '^PASSWORD='
+            line: 'PASSWORD={{ camunda_password }}'
   when: camunda_env_file is not none
 
 - name: Ansible docker_service bug work-around
@@ -54,6 +66,8 @@
       PROXY_HOST: '{{ camunda_proxy_host }}'
       VIRTUAL_HOST: '{{ camunda_virtual_host }}'
       DIRECTORY: '{{ camunda_directory }}'
+      USERNAME: '{{ camunda_username }}'
+      PASSWORD: '{{ camunda_password }}'
 
 - name: Ansible docker_service bug work-around
   set_fact:

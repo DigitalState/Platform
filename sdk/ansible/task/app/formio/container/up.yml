@@ -13,6 +13,8 @@
             formio_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             formio_virtual_host: '{{ formio.host }}'
             formio_directory: '{{ directory }}/formio'
+            formio_username: '{{ formio.username }}'
+            formio_password: '{{ formio.password }}'
       - name: Up formio container
         include_role:
             name: app/formio/container/up

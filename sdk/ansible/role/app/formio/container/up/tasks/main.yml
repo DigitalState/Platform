@@ -42,6 +42,18 @@
             path: '/srv/formio/{{ formio_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ formio_directory }}'
+      - name: Configure username environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/formio/{{ formio_env_file }}'
+            regexp: '^USERNAME='
+            line: 'USERNAME={{ formio_username }}'
+      - name: Configure password environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/formio/{{ formio_env_file }}'
+            regexp: '^PASSWORD='
+            line: 'PASSWORD={{ formio_password }}'
   when: formio_env_file is not none
 
 - name: Ansible docker_service bug work-around
@@ -58,6 +70,8 @@
       PROXY_HOST: '{{ formio_proxy_host }}'
       VIRTUAL_HOST: '{{ formio_virtual_host }}'
       DIRECTORY: '{{ formio_directory }}'
+      USERNAME: '{{ formio_username }}'
+      PASSWORD: '{{ formio_password }}'
 
 - name: Ansible docker_service bug work-around
   set_fact:

@@ -6,3 +6,5 @@ camunda_timezone: UTC
 camunda_proxy_host: 127.0.0.1
 camunda_virtual_host: api.camunda.ds
 camunda_directory: /srv/camunda
+camunda_username: admin
+camunda_password: admin
