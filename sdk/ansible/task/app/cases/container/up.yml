@@ -4,7 +4,7 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define cases container variables
         set_fact:
-            cases_env_file: .env.lab
+            cases_env_file: .env.sdk
         when: env == 'lab'
       - name: Define cases container variables
         set_fact:
@@ -15,6 +15,11 @@
             cases_directory: '{{ directory }}/cases'
             cases_jwt_private_key: '{{ directory }}/cases/var/jwt/key'
             cases_jwt_public_key: '{{ directory }}/cases/var/jwt/key.pub'
+            cases_database_host: '{{ cases.database.host }}'
+            cases_database_port: '{{ cases.database.port }}'
+            cases_database_name: '{{ cases.database.name }}'
+            cases_database_username: '{{ cases.database.username }}'
+            cases_database_password: '{{ cases.database.password }}'
       - name: Up cases container
         include_role:
             name: app/cases/container/up

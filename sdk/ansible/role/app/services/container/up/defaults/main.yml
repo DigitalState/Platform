@@ -7,3 +7,8 @@ services_virtual_host: api.services.ds
 services_directory: /srv/services
 services_jwt_private_key: ./var/jwt/key
 services_jwt_public_key: ./var/jwt/key.pub
+services_database_host: services_db
+services_database_port: 3306
+services_database_name: services
+services_database_username: services
+services_database_password: services

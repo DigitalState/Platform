@@ -42,6 +42,36 @@
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^JWT_PUBLIC_KEY='
             line: 'JWT_PUBLIC_KEY={{ authentication_jwt_public_key }}'
+      - name: Configure database host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/authentication/{{ authentication_env_file }}'
+            regexp: '^DATABASE_HOST='
+            line: 'DATABASE_HOST={{ authentication_database_host }}'
+      - name: Configure database port environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/authentication/{{ authentication_env_file }}'
+            regexp: '^DATABASE_PORT='
+            line: 'DATABASE_PORT={{ authentication_database_port }}'
+      - name: Configure database name environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/authentication/{{ authentication_env_file }}'
+            regexp: '^DATABASE_NAME='
+            line: 'DATABASE_NAME={{ authentication_database_name }}'
+      - name: Configure database username environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/authentication/{{ authentication_env_file }}'
+            regexp: '^DATABASE_USERNAME='
+            line: 'DATABASE_USERNAME={{ authentication_database_username }}'
+      - name: Configure database password environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/authentication/{{ authentication_env_file }}'
+            regexp: '^DATABASE_PASSWORD='
+            line: 'DATABASE_PASSWORD={{ authentication_database_password }}'
   when: authentication_env_file is not none
 
 - name: Up authentication container
@@ -56,6 +86,11 @@
       DIRECTORY: '{{ authentication_directory }}'
       JWT_PRIVATE_KEY: '{{ authentication_jwt_private_key }}'
       JWT_PUBLIC_KEY: '{{ authentication_jwt_public_key }}'
+      DATABASE_HOST: '{{ authentication_database_host }}'
+      DATABASE_PORT: '{{ authentication_database_port }}'
+      DATABASE_NAME: '{{ authentication_database_name }}'
+      DATABASE_USERNAME: '{{ authentication_database_username }}'
+      DATABASE_PASSWORD: '{{ authentication_database_password }}'
 
 - name: Waiting for authentication container to finalize installation
   shell:

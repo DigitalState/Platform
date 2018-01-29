@@ -41,11 +41,23 @@ all:
             repository: https://github.com/DigitalState/Assets.git
             version: master
             host: api.assets.stag.ds
+            database:
+                host: assets_db
+                port: 3306
+                name: assets
+                username: assets
+                password: assets
         authentication:
             enabled: true
             repository: https://github.com/DigitalState/Authentication.git
             version: master
             host: api.authentication.stag.ds
+            database:
+                host: authentication_db
+                port: 3306
+                name: authentication
+                username: authentication
+                password: authentication
         camunda:
             enabled: true
             repository: https://github.com/DigitalState/Camunda.git
@@ -56,11 +68,23 @@ all:
             repository: https://github.com/DigitalState/Cases.git
             version: master
             host: api.cases.stag.ds
+            database:
+                host: cases_db
+                port: 3306
+                name: cases
+                username: cases
+                password: cases
         cms:
             enabled: true
             repository: https://github.com/DigitalState/Cms.git
             version: master
             host: api.cms.stag.ds
+            database:
+                host: cms_db
+                port: 3306
+                name: cms
+                username: cms
+                password: cms
         core:
             enabled: false
             repository: https://github.com/DigitalState/Core.git
@@ -88,11 +112,23 @@ all:
             repository: https://github.com/DigitalState/Identities.git
             version: master
             host: api.identities.stag.ds
+            database:
+                host: identities_db
+                port: 3306
+                name: identities
+                username: identities
+                password: identities
         interactions:
             enabled: false
             repository: https://github.com/DigitalState/Interactions.git
             version: master
             host: api.interactions.stag.ds
+            database:
+                host: interactions_db
+                port: 3306
+                name: interactions
+                username: interactions
+                password: interactions
         logs:
             enabled: false
             repository: https://github.com/DigitalState/Logs.git
@@ -118,21 +154,45 @@ all:
             version: master
             repository: https://github.com/DigitalState/Records.git
             host: api.records.stag.ds
+            database:
+                host: records_db
+                port: 3306
+                name: records
+                username: records
+                password: records
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
             version: master
             host: api.services.stag.ds
+            database:
+                host: services_db
+                port: 3306
+                name: services
+                username: services
+                password: services
         tasks:
             enabled: false
             repository: https://github.com/DigitalState/Tasks.git
             version: master
             host: api.tasks.stag.ds
+            database:
+                host: tasks_db
+                port: 3306
+                name: tasks
+                username: tasks
+                password: tasks
         topics:
             enabled: false
             repository: https://github.com/DigitalState/Topics.git
             version: master
             host: api.topics.stag.ds
+            database:
+                host: topics_db
+                port: 3306
+                name: topics
+                username: topics
+                password: topics
         ui:
             enabled: false
             repository: https://github.com/DigitalState/Ui.git

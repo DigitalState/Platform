@@ -7,3 +7,8 @@ tasks_virtual_host: api.tasks.ds
 tasks_directory: /srv/tasks
 tasks_jwt_private_key: ./var/jwt/key
 tasks_jwt_public_key: ./var/jwt/key.pub
+tasks_database_host: tasks_db
+tasks_database_port: 3306
+tasks_database_name: tasks
+tasks_database_username: tasks
+tasks_database_password: tasks

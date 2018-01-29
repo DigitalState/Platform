@@ -4,7 +4,7 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define interactions container variables
         set_fact:
-            interactions_env_file: .env.lab
+            interactions_env_file: .env.sdk
         when: env == 'lab'
       - name: Define interactions container variables
         set_fact:
@@ -15,6 +15,11 @@
             interactions_directory: '{{ directory }}/interactions'
             interactions_jwt_private_key: '{{ directory }}/interactions/var/jwt/key'
             interactions_jwt_public_key: '{{ directory }}/interactions/var/jwt/key.pub'
+            interactions_database_host: '{{ interactions.database.host }}'
+            interactions_database_port: '{{ interactions.database.port }}'
+            interactions_database_name: '{{ interactions.database.name }}'
+            interactions_database_username: '{{ interactions.database.username }}'
+            interactions_database_password: '{{ interactions.database.password }}'
       - name: Up interactions container
         include_role:
             name: app/interactions/container/up

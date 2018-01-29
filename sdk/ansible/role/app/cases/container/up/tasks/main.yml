@@ -42,6 +42,36 @@
             path: '/srv/cases/{{ cases_env_file }}'
             regexp: '^JWT_PUBLIC_KEY='
             line: 'JWT_PUBLIC_KEY={{ cases_jwt_public_key }}'
+      - name: Configure database host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cases/{{ cases_env_file }}'
+            regexp: '^DATABASE_HOST='
+            line: 'DATABASE_HOST={{ cases_database_host }}'
+      - name: Configure database port environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cases/{{ cases_env_file }}'
+            regexp: '^DATABASE_PORT='
+            line: 'DATABASE_PORT={{ cases_database_port }}'
+      - name: Configure database name environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cases/{{ cases_env_file }}'
+            regexp: '^DATABASE_NAME='
+            line: 'DATABASE_NAME={{ cases_database_name }}'
+      - name: Configure database username environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cases/{{ cases_env_file }}'
+            regexp: '^DATABASE_USERNAME='
+            line: 'DATABASE_USERNAME={{ cases_database_username }}'
+      - name: Configure database password environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cases/{{ cases_env_file }}'
+            regexp: '^DATABASE_PASSWORD='
+            line: 'DATABASE_PASSWORD={{ cases_database_password }}'
   when: cases_env_file is not none
 
 - name: Up cases container
@@ -56,6 +86,11 @@
       DIRECTORY: '{{ cases_directory }}'
       JWT_PRIVATE_KEY: '{{ cases_jwt_private_key }}'
       JWT_PUBLIC_KEY: '{{ cases_jwt_public_key }}'
+      DATABASE_HOST: '{{ cases_database_host }}'
+      DATABASE_PORT: '{{ cases_database_port }}'
+      DATABASE_NAME: '{{ cases_database_name }}'
+      DATABASE_USERNAME: '{{ cases_database_username }}'
+      DATABASE_PASSWORD: '{{ cases_database_password }}'
 
 - name: Waiting for cases container to finalize installation
   shell:

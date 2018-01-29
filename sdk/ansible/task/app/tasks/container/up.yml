@@ -4,7 +4,7 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define tasks container variables
         set_fact:
-            tasks_env_file: .env.lab
+            tasks_env_file: .env.sdk
         when: env == 'lab'
       - name: Define tasks container variables
         set_fact:
@@ -15,6 +15,11 @@
             tasks_directory: '{{ directory }}/tasks'
             tasks_jwt_private_key: '{{ directory }}/tasks/var/jwt/key'
             tasks_jwt_public_key: '{{ directory }}/tasks/var/jwt/key.pub'
+            tasks_database_host: '{{ tasks.database.host }}'
+            tasks_database_port: '{{ tasks.database.port }}'
+            tasks_database_name: '{{ tasks.database.name }}'
+            tasks_database_username: '{{ tasks.database.username }}'
+            tasks_database_password: '{{ tasks.database.password }}'
       - name: Up tasks container
         include_role:
             name: app/tasks/container/up

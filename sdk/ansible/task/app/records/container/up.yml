@@ -4,7 +4,7 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define records container variables
         set_fact:
-            records_env_file: .env.lab
+            records_env_file: .env.sdk
         when: env == 'lab'
       - name: Define records container variables
         set_fact:
@@ -15,6 +15,11 @@
             records_directory: '{{ directory }}/records'
             records_jwt_private_key: '{{ directory }}/records/var/jwt/key'
             records_jwt_public_key: '{{ directory }}/records/var/jwt/key.pub'
+            records_database_host: '{{ records.database.host }}'
+            records_database_port: '{{ records.database.port }}'
+            records_database_name: '{{ records.database.name }}'
+            records_database_username: '{{ records.database.username }}'
+            records_database_password: '{{ records.database.password }}'
       - name: Up records container
         include_role:
             name: app/records/container/up

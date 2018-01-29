@@ -4,6 +4,10 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define topics container variables
         set_fact:
+            topics_env_file: .env.sdk
+        when: env == 'lab'
+      - name: Define topics container variables
+        set_fact:
             topics_compose_project_name: '{{ project }}_topics'
             topics_network: '{{ project }}_default'
             topics_proxy_host: '{{ proxy_container_info_ip.stdout }}'
@@ -11,6 +15,11 @@
             topics_directory: '{{ directory }}/topics'
             topics_jwt_private_key: '{{ directory }}/topics/var/jwt/key'
             topics_jwt_public_key: '{{ directory }}/topics/var/jwt/key.pub'
+            topics_database_host: '{{ topics.database.host }}'
+            topics_database_port: '{{ topics.database.port }}'
+            topics_database_name: '{{ topics.database.name }}'
+            topics_database_username: '{{ topics.database.username }}'
+            topics_database_password: '{{ topics.database.password }}'
       - name: Up topics container
         include_role:
             name: app/topics/container/up

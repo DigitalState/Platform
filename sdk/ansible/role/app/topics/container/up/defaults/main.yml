@@ -7,3 +7,8 @@ topics_virtual_host: api.topics.ds
 topics_directory: /srv/topics
 topics_jwt_private_key: ./var/jwt/key
 topics_jwt_public_key: ./var/jwt/key.pub
+topics_database_host: topics_db
+topics_database_port: 3306
+topics_database_name: topics
+topics_database_username: topics
+topics_database_password: topics

@@ -4,7 +4,7 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define identities container variables
         set_fact:
-            identities_env_file: .env.lab
+            identities_env_file: .env.sdk
         when: env == 'lab'
       - name: Define identities container variables
         set_fact:
@@ -15,6 +15,11 @@
             identities_directory: '{{ directory }}/identities'
             identities_jwt_private_key: '{{ directory }}/identities/var/jwt/key'
             identities_jwt_public_key: '{{ directory }}/identities/var/jwt/key.pub'
+            identities_database_host: '{{ identities.database.host }}'
+            identities_database_port: '{{ identities.database.port }}'
+            identities_database_name: '{{ identities.database.name }}'
+            identities_database_username: '{{ identities.database.username }}'
+            identities_database_password: '{{ identities.database.password }}'
       - name: Up identities container
         include_role:
             name: app/identities/container/up

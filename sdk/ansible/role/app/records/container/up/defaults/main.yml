@@ -7,3 +7,8 @@ records_virtual_host: api.records.ds
 records_directory: /srv/records
 records_jwt_private_key: ./var/jwt/key
 records_jwt_public_key: ./var/jwt/key.pub
+records_database_host: records_db
+records_database_port: 3306
+records_database_name: records
+records_database_username: records
+records_database_password: records

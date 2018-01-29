@@ -42,6 +42,36 @@
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^JWT_PUBLIC_KEY='
             line: 'JWT_PUBLIC_KEY={{ interactions_jwt_public_key }}'
+      - name: Configure database host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/interactions/{{ interactions_env_file }}'
+            regexp: '^DATABASE_HOST='
+            line: 'DATABASE_HOST={{ interactions_database_host }}'
+      - name: Configure database port environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/interactions/{{ interactions_env_file }}'
+            regexp: '^DATABASE_PORT='
+            line: 'DATABASE_PORT={{ interactions_database_port }}'
+      - name: Configure database name environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/interactions/{{ interactions_env_file }}'
+            regexp: '^DATABASE_NAME='
+            line: 'DATABASE_NAME={{ interactions_database_name }}'
+      - name: Configure database username environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/interactions/{{ interactions_env_file }}'
+            regexp: '^DATABASE_USERNAME='
+            line: 'DATABASE_USERNAME={{ interactions_database_username }}'
+      - name: Configure database password environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/interactions/{{ interactions_env_file }}'
+            regexp: '^DATABASE_PASSWORD='
+            line: 'DATABASE_PASSWORD={{ interactions_database_password }}'
   when: interactions_env_file is not none
 
 - name: Up interactions container
@@ -56,6 +86,11 @@
       DIRECTORY: '{{ interactions_directory }}'
       JWT_PRIVATE_KEY: '{{ interactions_jwt_private_key }}'
       JWT_PUBLIC_KEY: '{{ interactions_jwt_public_key }}'
+      DATABASE_HOST: '{{ interactions_database_host }}'
+      DATABASE_PORT: '{{ interactions_database_port }}'
+      DATABASE_NAME: '{{ interactions_database_name }}'
+      DATABASE_USERNAME: '{{ interactions_database_username }}'
+      DATABASE_PASSWORD: '{{ interactions_database_password }}'
 
 - name: Waiting for interactions container to finalize installation
   shell:
