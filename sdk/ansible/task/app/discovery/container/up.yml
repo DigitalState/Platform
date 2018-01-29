@@ -4,7 +4,7 @@
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define discovery container variables
         set_fact:
-            discovery_env_file: .env.lab
+            discovery_env_file: .env.sdk
         when: env == 'lab'
     - name: Define discovery container environment variables
       set_fact:

@@ -4,7 +4,7 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define admin container variables
         set_fact:
-            admin_env_file: .env.lab
+            admin_env_file: .env.sdk
         when: env == 'lab'
       - name: Define admin container variables
         set_fact:

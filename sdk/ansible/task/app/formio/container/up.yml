@@ -4,7 +4,7 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define authentication container variables
         set_fact:
-            formio_env_file: .env.lab
+            formio_env_file: .env.sdk
         when: env == 'lab'
       - name: Define formio container variables
         set_fact:

@@ -5,7 +5,7 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define logs container variables
         set_fact:
-            logs_env_file: .env.lab
+            logs_env_file: .env.sdk
         when: env == 'lab'
       - name: Define logs container variables
         set_fact:

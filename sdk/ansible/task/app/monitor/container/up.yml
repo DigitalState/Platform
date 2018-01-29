@@ -4,7 +4,7 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define monitor container variables
         set_fact:
-            monitor_env_file: .env.lab
+            monitor_env_file: .env.sdk
         when: env == 'lab'
       - name: Define monitor container variables
         set_fact:
