@@ -52,7 +52,7 @@ all:
             host: api.authentication.lab.ds
             database:
                 host: authentication_db
-                port: 3306
+                port: 5432
                 name: authentication
                 username: authentication
                 password: authentication

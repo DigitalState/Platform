@@ -8,7 +8,7 @@ authentication_directory: /srv/authentication
 authentication_jwt_private_key: ./var/jwt/key
 authentication_jwt_public_key: ./var/jwt/key.pub
 authentication_database_host: authentication_db
-authentication_database_port: 3306
+authentication_database_port: 5432
 authentication_database_name: authentication
 authentication_database_username: authentication
 authentication_database_password: authentication
