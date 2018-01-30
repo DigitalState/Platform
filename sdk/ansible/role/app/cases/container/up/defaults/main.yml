@@ -8,7 +8,7 @@ cases_directory: /srv/cases
 cases_jwt_private_key: ./var/jwt/key
 cases_jwt_public_key: ./var/jwt/key.pub
 cases_database_host: cases_db
-cases_database_port: 3306
+cases_database_port: 5432
 cases_database_name: cases
 cases_database_username: cases
 cases_database_password: cases

@@ -8,7 +8,7 @@ interactions_directory: /srv/interactions
 interactions_jwt_private_key: ./var/jwt/key
 interactions_jwt_public_key: ./var/jwt/key.pub
 interactions_database_host: interactions_db
-interactions_database_port: 3306
+interactions_database_port: 5432
 interactions_database_name: interactions
 interactions_database_username: interactions
 interactions_database_password: interactions

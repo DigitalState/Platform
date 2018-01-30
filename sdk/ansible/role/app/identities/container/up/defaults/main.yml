@@ -8,7 +8,7 @@ identities_directory: /srv/identities
 identities_jwt_private_key: ./var/jwt/key
 identities_jwt_public_key: ./var/jwt/key.pub
 identities_database_host: identities_db
-identities_database_port: 3306
+identities_database_port: 5432
 identities_database_name: identities
 identities_database_username: identities
 identities_database_password: identities

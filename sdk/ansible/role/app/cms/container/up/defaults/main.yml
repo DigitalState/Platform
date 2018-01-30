@@ -8,7 +8,7 @@ cms_directory: /srv/cms
 cms_jwt_private_key: ./var/jwt/key
 cms_jwt_public_key: ./var/jwt/key.pub
 cms_database_host: cms_db
-cms_database_port: 3306
+cms_database_port: 5432
 cms_database_name: cms
 cms_database_username: cms
 cms_database_password: cms

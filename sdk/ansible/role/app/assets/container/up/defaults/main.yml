@@ -8,7 +8,7 @@ assets_directory: /srv/assets
 assets_jwt_private_key: ./var/jwt/key
 assets_jwt_public_key: ./var/jwt/key.pub
 assets_database_host: assets_db
-assets_database_port: 3306
+assets_database_port: 5432
 assets_database_name: assets
 assets_database_username: assets
 assets_database_password: assets

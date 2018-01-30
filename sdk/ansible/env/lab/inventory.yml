@@ -41,7 +41,7 @@ all:
             host: api.assets.lab.ds
             database:
                 host: assets_db
-                port: 3306
+                port: 5432
                 name: assets
                 username: assets
                 password: assets
@@ -70,7 +70,7 @@ all:
             host: api.cases.lab.ds
             database:
                 host: cases_db
-                port: 3306
+                port: 5432
                 name: cases
                 username: cases
                 password: cases
@@ -81,7 +81,7 @@ all:
             host: api.cms.lab.ds
             database:
                 host: cms_db
-                port: 3306
+                port: 5432
                 name: cms
                 username: cms
                 password: cms
@@ -116,7 +116,7 @@ all:
             host: api.identities.lab.ds
             database:
                 host: identities_db
-                port: 3306
+                port: 5432
                 name: identities
                 username: identities
                 password: identities
@@ -127,7 +127,7 @@ all:
             host: api.interactions.lab.ds
             database:
                 host: interactions_db
-                port: 3306
+                port: 5432
                 name: interactions
                 username: interactions
                 password: interactions
@@ -158,7 +158,7 @@ all:
             host: api.records.lab.ds
             database:
                 host: records_db
-                port: 3306
+                port: 5432
                 name: records
                 username: records
                 password: records
@@ -169,7 +169,7 @@ all:
             host: api.services.lab.ds
             database:
                 host: services_db
-                port: 3306
+                port: 5432
                 name: services
                 username: services
                 password: services
@@ -180,7 +180,7 @@ all:
             host: api.tasks.lab.ds
             database:
                 host: tasks_db
-                port: 3306
+                port: 5432
                 name: tasks
                 username: tasks
                 password: tasks
@@ -191,7 +191,7 @@ all:
             host: api.topics.lab.ds
             database:
                 host: topics_db
-                port: 3306
+                port: 5432
                 name: topics
                 username: topics
                 password: topics
