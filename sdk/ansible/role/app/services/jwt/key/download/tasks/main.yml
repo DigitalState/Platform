@@ -1,9 +1,9 @@
 ---
-- name: Download services jwt private key
-  copy:
-      src: '{{ jwt_private_key }}'
-      dest: /srv/services/var/jwt/key
-      mode: 0600
+#- name: Download services jwt private key
+#  copy:
+#      src: '{{ jwt_private_key }}'
+#      dest: /srv/services/var/jwt/key
+#      mode: 0600
 
 - name: Download services jwt public key
   copy:
