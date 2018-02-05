@@ -164,7 +164,7 @@ Prior to deploying the dockerized application, a few actions are required by the
 
 8. Now that the dockerized application is up and running, it is time to test it!
 
-    > The DigitalState architecture is essentially a collection of microservices, all exposing various api endpoints to create, edit, delete certain data or achieve certain goals. 
+    > The DigitalState architecture is essentially a collection of microservices, all exposing various api endpoints to read, create, edit and delete certain data or achieve certain goals. 
 
     In order to test, we suggest using an api gui tool, such as [Postman](https://www.getpostman.com/). The SDK provides a pre-made Postman [collection file](../../../resource/postman/collection.json) mapping all microservices api endpoints and an [environment file](../../../resource/postman/env/lab.json) ready to be imported. Here are the instructions on how to import [collections](https://www.getpostman.com/docs/postman/collections/creating_collections) and [environments](https://www.getpostman.com/docs/postman/environments_and_globals/manage_environments) in Postman.
     
