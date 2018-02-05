@@ -2,7 +2,7 @@
     <img src="https://avatars3.githubusercontent.com/u/12055994?s=200&v=4">
 </a></p>
 
-The SDK provides a **set of tools** to help manage the DigitalState platform, from setting up a local environment to deploying to remote servers.
+The SDK provides a **set of tools** to help manage the DigitalState platform, from setting up a local environment for development to deploying to remote servers from sandbox to production.
 
 It uses **Docker** and **Ansible** to help with orchestration and is the central repository used by developers.
 
