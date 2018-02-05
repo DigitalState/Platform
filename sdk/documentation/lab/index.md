@@ -16,7 +16,7 @@ It also provides useful bulk commands to help during development.
 ## Synopsis
 
 1. **Install** Git and Docker on your local machine.
-2. **Clone** the SDK repository.
+2. **Download** the SDK repository.
 3. **Boot** the SDK container.
 4. **Generate** jwt keys for the system.
 5. **Configure** the Ansible lab environment.
@@ -30,7 +30,7 @@ It also provides useful bulk commands to help during development.
 
    > Note: Docker Toolbox for Windows and Mac is not compatible.
 
-2. Open a command prompt and clone the repository:
+2. Open a command prompt and download the repository:
 
    ```
    > cd C:\Users\Demo
