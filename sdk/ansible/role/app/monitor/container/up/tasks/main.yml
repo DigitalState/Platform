@@ -49,7 +49,7 @@
       project_src: /srv/monitor
       state: present
   environment:
-      COMPOSE_PROJECT_NAME: '{{ monitor_composer_project_name }}'
+      COMPOSE_PROJECT_NAME: '{{ monitor_compose_project_name }}'
       NETWORK: '{{ monitor_network }}'
       PROXY_HOST: '{{ monitor_proxy_host }}'
       VIRTUAL_HOST: '{{ monitor_virtual_host }}'

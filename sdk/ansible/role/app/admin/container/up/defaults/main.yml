@@ -1,6 +1,6 @@
 ---
 admin_env_file: ~
-admin_composer_project_name: ds_admin
+admin_compose_project_name: ds_admin
 admin_network: ds_default
 admin_proxy_host: 127.0.0.1
 admin_virtual_host: admin.ds

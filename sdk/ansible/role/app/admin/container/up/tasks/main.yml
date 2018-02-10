@@ -43,7 +43,7 @@
       project_src: /srv/admin
       state: present
   environment:
-      COMPOSE_PROJECT_NAME: '{{ admin_composer_project_name }}'
+      COMPOSE_PROJECT_NAME: '{{ admin_compose_project_name }}'
       NETWORK: '{{ admin_network }}'
       PROXY_HOST: '{{ admin_proxy_host }}'
       VIRTUAL_HOST: '{{ admin_virtual_host }}'

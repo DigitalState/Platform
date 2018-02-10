@@ -32,7 +32,7 @@
             - topics
       - name: Define portal container variables
         set_fact:
-            portal_namespace: '{{ project }}_portal'
+            portal_compose_project_name: '{{ project }}_portal'
             portal_network: '{{ project }}_default'
             portal_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             portal_virtual_host: '{{ portal.host }}'
