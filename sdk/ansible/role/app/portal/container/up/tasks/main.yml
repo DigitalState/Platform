@@ -30,18 +30,6 @@
             path: '/srv/portal/{{ portal_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ portal_directory }}'
-      - name: Configure jwt private key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/portal/{{ portal_env_file }}'
-            regexp: '^JWT_PRIVATE_KEY='
-            line: 'JWT_PRIVATE_KEY={{ portal_jwt_private_key }}'
-      - name: Configure jwt public key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/portal/{{ portal_env_file }}'
-            regexp: '^JWT_PUBLIC_KEY='
-            line: 'JWT_PUBLIC_KEY={{ portal_jwt_public_key }}'
       - name: Configure discovery environment variable
         lineinfile:
             create: yes
