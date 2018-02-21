@@ -18,7 +18,7 @@
 
 - name: Load cases database migration
   shell:
-      cmd: 'docker-compose exec php php bin/console doctrine:migrations:migrate {{ "" if cases_database_migration_version is none else cases_database_migration_version|replace(".", "_") }} --no-interaction | cat'
+      cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:migrate {{ "" if cases_database_migration_version is none else cases_database_migration_version|replace(".", "_") }} --no-interaction | cat'
       chdir: /srv/cases
 
 # The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.

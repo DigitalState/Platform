@@ -1,5 +1,5 @@
 ---
 - name: Clear identities cache
   shell:
-      cmd: docker-compose exec php php bin/console cache:clear --no-warmup --env=prod | cat
+      cmd: docker-compose exec -T php php bin/console cache:clear --no-warmup --env=prod | cat
       chdir: /srv/identities
