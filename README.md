@@ -41,7 +41,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 - Git
 - DockerForMac
 
-> Note: Docker toolkit is not compatible
+> Note: Docker toolkit is not compatible.
 
 ## Documentation
 
