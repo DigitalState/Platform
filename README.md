@@ -25,7 +25,20 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 ## Requirements
 
-If you are running Windows on your local machine, HyperV is required.
+- Git
+
+### Linux
+
+- Docker
+
+### Windows
+
+- Windows Pro
+- DockerForWindows with HyperV
+
+### Mac
+
+- DockerForMac
 
 ## Documentation
 
