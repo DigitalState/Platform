@@ -12,7 +12,6 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 - [Synopsis](#synopsis)
 - [Requirements](#requirements)
-- [Installation](#installation)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Credits](#credits)
@@ -27,49 +26,6 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 ## Requirements
 
 If you are running Windows on your local machine, HyperV is required.
-
-## Installation
-
-1. To begin, you will need to install Git (for [Windows](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_windows), for [Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_mac), for [Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_linux)) and Docker (for [Windows](https://www.docker.com/docker-windows), for [Mac](https://docs.docker.com/docker-for-mac), for [Linux](https://docs.docker.com/engine/installation/#server)) on your local machine.
-
-   > Note: Docker Toolbox for Windows and Mac is not compatible.
-
-2. Open a command prompt and download the repository:
-
-   ```
-   > cd C:\Users\Demo
-   > git clone https://github.com/DigitalState/Sdk.git
-   > cd Sdk
-   ```
-
-3. Boot the SDK container:
-
-   ```
-   > docker-compose up -d
-   ```
-
-   Confirm the container has been booted successfully:
-
-   ```
-   > docker ps
-   ```
-   
-   You should see the following output:
-   
-   ```
-   CONTAINER ID     IMAGE       COMMAND       CREATED           STATUS           PORTS     NAMES
-   4ceab8511b85     sdk_sdk     "/bin/sh"     3 seconds ago     Up 2 seconds               sdk
-   ```
-
-4. Enter the container console:
-
-   ```
-   > docker exec -it sdk /bin/sh
-   ```
-
-   At this point, you have the SDK container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
-
-The next step would be to deploy a local [lab environment](sdk/documentation/lab/index.md).
 
 ## Documentation
 
