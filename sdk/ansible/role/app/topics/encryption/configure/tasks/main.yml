@@ -1,0 +1,6 @@
+---
+- name: Configure topics encryption secret setting
+  lineinfile:
+      path: '{{ topics_encryption_config_file }}'
+      regexp: '^\s{4}secret:'
+      line: '    secret: {{ topics_encryption_secret }}'

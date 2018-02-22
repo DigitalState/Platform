@@ -1,0 +1,10 @@
+---
+- name: Define interactions encryption variables
+  set_fact:
+      interactions_encryption_secret: '{{ encryption.secret }}'
+
+- name: Configure interactions encryption settings
+  include_role:
+      name: app/interactions/encryption/configure
+  when: interactions.enabled
+  tags: [interactions]

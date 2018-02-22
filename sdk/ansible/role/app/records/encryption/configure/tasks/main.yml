@@ -1,0 +1,6 @@
+---
+- name: Configure records encryption secret setting
+  lineinfile:
+      path: '{{ records_encryption_config_file }}'
+      regexp: '^\s{4}secret:'
+      line: '    secret: {{ records_encryption_secret }}'

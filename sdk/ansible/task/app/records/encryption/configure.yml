@@ -1,0 +1,10 @@
+---
+- name: Define records encryption variables
+  set_fact:
+      records_encryption_secret: '{{ encryption.secret }}'
+
+- name: Configure records encryption settings
+  include_role:
+      name: app/records/encryption/configure
+  when: records.enabled
+  tags: [records]

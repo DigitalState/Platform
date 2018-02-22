@@ -1,0 +1,10 @@
+---
+- name: Define cases encryption variables
+  set_fact:
+      cases_encryption_secret: '{{ encryption.secret }}'
+
+- name: Configure cases encryption settings
+  include_role:
+      name: app/cases/encryption/configure
+  when: cases.enabled
+  tags: [cases]

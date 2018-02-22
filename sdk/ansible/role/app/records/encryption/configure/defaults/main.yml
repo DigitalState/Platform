@@ -1,0 +1,3 @@
+---
+records_encryption_config_file: /srv/records/app/config/parameters.yml
+records_encryption_secret: ~

@@ -1,0 +1,6 @@
+---
+- name: Configure cms encryption secret setting
+  lineinfile:
+      path: '{{ cms_encryption_config_file }}'
+      regexp: '^\s{4}secret:'
+      line: '    secret: {{ cms_encryption_secret }}'

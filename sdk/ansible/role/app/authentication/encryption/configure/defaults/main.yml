@@ -1,0 +1,3 @@
+---
+authentication_encryption_config_file: /srv/authentication/app/config/parameters.yml
+authentication_encryption_secret: ~

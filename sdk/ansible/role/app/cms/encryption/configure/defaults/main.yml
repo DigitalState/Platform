@@ -1,0 +1,3 @@
+---
+cms_encryption_config_file: /srv/cms/app/config/parameters.yml
+cms_encryption_secret: ~

@@ -11,6 +11,8 @@ all:
         directory: /srv
         env: dev
         timezone: UTC
+        encryption:
+            secret: ~
         jwt:
             private_key: /root/resource/jwt/dev/key
             public_key: /root/resource/jwt/dev/key.pub

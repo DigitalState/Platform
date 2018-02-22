@@ -1,0 +1,6 @@
+---
+- name: Configure identities encryption secret setting
+  lineinfile:
+      path: '{{ identities_encryption_config_file }}'
+      regexp: '^\s{4}secret:'
+      line: '    secret: {{ identities_encryption_secret }}'

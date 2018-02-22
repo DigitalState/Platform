@@ -1,0 +1,3 @@
+---
+identities_encryption_config_file: /srv/identities/app/config/parameters.yml
+identities_encryption_secret: ~

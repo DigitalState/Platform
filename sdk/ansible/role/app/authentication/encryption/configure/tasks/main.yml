@@ -1,0 +1,6 @@
+---
+- name: Configure authentication encryption secret setting
+  lineinfile:
+      path: '{{ authentication_encryption_config_file }}'
+      regexp: '^\s{4}secret:'
+      line: '    secret: {{ authentication_encryption_secret }}'

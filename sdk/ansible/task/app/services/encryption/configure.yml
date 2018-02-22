@@ -1,0 +1,10 @@
+---
+- name: Define services encryption variables
+  set_fact:
+      services_encryption_secret: '{{ encryption.secret }}'
+
+- name: Configure services encryption settings
+  include_role:
+      name: app/services/encryption/configure
+  when: services.enabled
+  tags: [services]

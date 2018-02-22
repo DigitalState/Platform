@@ -1,0 +1,3 @@
+---
+cases_encryption_config_file: /srv/cases/app/config/parameters.yml
+cases_encryption_secret: ~

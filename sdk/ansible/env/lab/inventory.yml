@@ -9,6 +9,8 @@ all:
         directory: ~
         env: lab
         timezone: UTC
+        encryption:
+            secret: ~
         jwt:
             private_key: /root/resource/jwt/lab/key
             public_key: /root/resource/jwt/lab/key.pub

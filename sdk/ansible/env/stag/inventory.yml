@@ -11,6 +11,8 @@ all:
         directory: /srv
         env: stag
         timezone: UTC
+        encryption:
+            secret: ~
         jwt:
             private_key: /root/resource/jwt/stag/key
             public_key: /root/resource/jwt/stag/key.pub

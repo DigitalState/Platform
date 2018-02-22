@@ -1,0 +1,6 @@
+---
+- name: Configure services encryption secret setting
+  lineinfile:
+      path: '{{ services_encryption_config_file }}'
+      regexp: '^\s{4}secret:'
+      line: '    secret: {{ services_encryption_secret }}'

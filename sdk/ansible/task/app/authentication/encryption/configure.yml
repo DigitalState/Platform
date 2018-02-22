@@ -1,0 +1,10 @@
+---
+- name: Define authentication encryption variables
+  set_fact:
+      authentication_encryption_secret: '{{ encryption.secret }}'
+
+- name: Configure authentication encryption settings
+  include_role:
+      name: app/authentication/encryption/configure
+  when: authentication.enabled
+  tags: [authentication]

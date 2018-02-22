@@ -5,6 +5,7 @@
 - import_playbook: jwt/key/download.yml
 - import_playbook: proxy/container/up.yml
 - import_playbook: container/up.yml
+- import_playbook: encryption/configure.yml
 - import_playbook: jwt/configure.yml
 - import_playbook: mail/configure.yml
 - import_playbook: database/migration/load.yml

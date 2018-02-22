@@ -1,0 +1,10 @@
+---
+- name: Define cms encryption variables
+  set_fact:
+      cms_encryption_secret: '{{ encryption.secret }}'
+
+- name: Configure cms encryption settings
+  include_role:
+      name: app/cms/encryption/configure
+  when: cms.enabled
+  tags: [cms]

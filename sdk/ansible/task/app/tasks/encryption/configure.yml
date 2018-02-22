@@ -1,0 +1,10 @@
+---
+- name: Define tasks encryption variables
+  set_fact:
+      tasks_encryption_secret: '{{ encryption.secret }}'
+
+- name: Configure tasks encryption settings
+  include_role:
+      name: app/tasks/encryption/configure
+  when: tasks.enabled
+  tags: [tasks]

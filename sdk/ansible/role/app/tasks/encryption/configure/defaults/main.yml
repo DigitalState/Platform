@@ -1,0 +1,3 @@
+---
+tasks_encryption_config_file: /srv/tasks/app/config/parameters.yml
+tasks_encryption_secret: ~

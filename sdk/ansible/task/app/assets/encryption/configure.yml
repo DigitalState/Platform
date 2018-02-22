@@ -1,0 +1,10 @@
+---
+- name: Define assets encryption variables
+  set_fact:
+      assets_encryption_secret: '{{ encryption.secret }}'
+
+- name: Configure assets encryption settings
+  include_role:
+      name: app/assets/encryption/configure
+  when: assets.enabled
+  tags: [assets]
