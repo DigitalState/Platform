@@ -33,13 +33,15 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 #### Windows
 
 - Git
-- Windows Pro
-- DockerForWindows with HyperV
+- Windows Pro with HyperV
+- DockerForWindows
 
 #### Mac
 
 - Git
 - DockerForMac
+
+> Note: Docker toolkit is not compatible
 
 ## Documentation
 
