@@ -25,19 +25,20 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 ## Requirements
 
+#### Linux
+
 - Git
-
-### Linux
-
 - Docker
 
-### Windows
+#### Windows
 
+- Git
 - Windows Pro
 - DockerForWindows with HyperV
 
-### Mac
+#### Mac
 
+- Git
 - DockerForMac
 
 ## Documentation
