@@ -79,7 +79,9 @@ Prior to deploying the dockerized application, a few actions are required by the
 
     > The lab environment uses the Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
 
-    The [jwt.key_pass_phrase](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L16) config needs to be set to the jwt key pass phrase defined at step #4.
+    The [encryption.secret](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L13) config needs to be set to a random, unique and secret 32 character string.
+
+    The [jwt.key_pass_phrase](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L17) config needs to be set to the jwt key pass phrase defined at step #4.
 
     The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L9) config needs to be set to the absolute path of the SDK app directory. The value will vary depending on your local machine's operating system:
 
