@@ -109,15 +109,15 @@ Prior to deploying the dockerized application, a few actions are required by the
     
     Locate the host file on your local machine.
     
-    ### Windows
+    **Windows**
     
     Under Windows, the file is located at `C:\Windows\System32\drivers\etc\host`.
     
-    ### Mac
+    **Mac**
     
     Under Mac, the file is located at `/etc/hosts`.
     
-    ### Linux
+    **Linux**
     
     Under Linux, the file is located at `/etc/hosts`.
     
