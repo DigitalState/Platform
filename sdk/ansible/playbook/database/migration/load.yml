@@ -61,26 +61,6 @@
                             value: 'http://{{ admin.host }}'
                         app.spa.portal:
                             value: 'http://{{ portal.host }}'
-                        ds_api.api.assets.host:
-                            value: 'http://{{ assets.host }}'
-                        ds_api.api.authentication.host:
-                            value: 'http://{{ authentication.host }}'
-                        ds_api.api.camunda.host:
-                            value: 'http://{{ camunda.host }}/engine-rest'
-                        ds_api.api.cases.host:
-                            value: 'http://{{ cases.host }}'
-                        ds_api.api.cms.host:
-                            value: 'http://{{ cms.host }}'
-                        ds_api.api.formio.host:
-                            value: 'http://{{ formio.host }}'
-                        ds_api.api.identities.host:
-                            value: 'http://{{ identities.host }}'
-                        ds_api.api.records.host:
-                            value: 'http://{{ records.host }}'
-                        ds_api.api.services.host:
-                            value: 'http://{{ services.host }}'
-                        ds_api.api.tasks.host:
-                            value: 'http://{{ tasks.host }}'
 
 - name: Load database migrations
   hosts: server

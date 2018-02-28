@@ -1,0 +1,24 @@
+---
+- block:
+    - name: Define discovery map variable
+      set_fact:
+          discovery_map:
+              assets: '{{ assets.host }}'
+              authentication: '{{ authentication.host }}'
+              camunda: '{{ camunda.host }}/engine-rest'
+              cases: '{{ cases.host }}'
+              cms: '{{ cms.host }}'
+              discovery: '{{ discovery.host }}'
+              formio: '{{ formio.host }}'
+              identities: '{{ identities.host }}'
+              interactions: '{{ interactions.host }}'
+              logs: '{{ logs.host }}'
+              records: '{{ records.host }}'
+              services: '{{ services.host }}'
+              tasks: '{{ tasks.host }}'
+              topics: '{{ topics.host }}'
+    - name: Set discovery map
+      include_role:
+          name: app/discovery/map/configure
+  when: discovery.enabled
+  tags: [discovery]

@@ -8,35 +8,12 @@
         when: env == 'lab'
       - name: Define portal container variables
         set_fact:
-            portal_discovery: {}
-      - name: Append each enabled services to the discovery variable
-        set_fact:
-            portal_discovery: '{{ portal_discovery|combine({item: {"host": vars[item].host}}) }}'
-        with_items:
-            - admin
-            - assets
-            - authentication
-            - camunda
-            - cases
-            - cms
-            - discovery
-            - formio
-            - identities
-            - interactions
-            - logs
-            - monitor
-            - portal
-            - records
-            - services
-            - tasks
-            - topics
-      - name: Define portal container variables
-        set_fact:
             portal_compose_project_name: '{{ project }}_portal'
             portal_network: '{{ project }}_default'
             portal_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             portal_virtual_host: '{{ portal.host }}'
             portal_directory: '{{ directory }}/portal'
+            portal_discovery: '{{ discovery.host }}'
       - name: Up portal container
         include_role:
             name: app/portal/container/up

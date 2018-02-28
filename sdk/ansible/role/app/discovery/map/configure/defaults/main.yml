@@ -1,0 +1,3 @@
+---
+discovery_map_config_file: /srv/discovery/web/index.json
+discovery_map: {}

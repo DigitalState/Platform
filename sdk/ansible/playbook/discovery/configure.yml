@@ -1,0 +1,7 @@
+---
+- name: Configure discovery settings
+  hosts: server
+  become: true
+  tasks:
+      - name: Configure discovery domain mapping
+        include_tasks: /etc/ansible/task/app/discovery/map/configure.yml

@@ -8,35 +8,12 @@
         when: env == 'lab'
       - name: Define admin container variables
         set_fact:
-            admin_discovery: {}
-      - name: Append each enabled services to the discovery environment variable
-        set_fact:
-            admin_discovery: '{{ admin_discovery|combine({item: {"host": vars[item].host}}) }}'
-        with_items:
-            - admin
-            - assets
-            - authentication
-            - camunda
-            - cases
-            - cms
-            - discovery
-            - formio
-            - identities
-            - interactions
-            - logs
-            - monitor
-            - portal
-            - records
-            - services
-            - tasks
-            - topics
-      - name: Define admin container variables
-        set_fact:
             admin_compose_project_name: '{{ project }}_admin'
             admin_network: '{{ project }}_default'
             admin_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             admin_virtual_host: '{{ admin.host }}'
             admin_directory: '{{ directory }}/admin'
+            admin_discovery: '{{ discovery.host }}'
       - name: Up admin container
         include_role:
             name: app/admin/container/up

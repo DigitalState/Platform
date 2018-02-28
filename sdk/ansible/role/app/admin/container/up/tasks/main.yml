@@ -35,7 +35,7 @@
             create: yes
             path: '/srv/admin/{{ admin_env_file }}'
             regexp: '^DISCOVERY='
-            line: 'DISCOVERY={{ admin_discovery|to_json }}'
+            line: 'DISCOVERY={{ admin_discovery }}'
   when: admin_env_file is not none
 
 - name: Up admin container

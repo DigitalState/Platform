@@ -1,0 +1,5 @@
+---
+- name: Configure discovery map
+  copy:
+      content: '{{ discovery_map|to_json }}'
+      dest: '{{ discovery_map_config_file }}'
