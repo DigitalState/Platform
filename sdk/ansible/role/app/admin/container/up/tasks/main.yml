@@ -34,8 +34,8 @@
         lineinfile:
             create: yes
             path: '/srv/admin/{{ admin_env_file }}'
-            regexp: '^DISCOVERY='
-            line: 'DISCOVERY={{ admin_discovery }}'
+            regexp: '^DISCOVERY_HOST='
+            line: 'DISCOVERY={{ admin_discovery_host }}'
   when: admin_env_file is not none
 
 - name: Up admin container

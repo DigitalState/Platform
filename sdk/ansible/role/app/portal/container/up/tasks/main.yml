@@ -35,7 +35,7 @@
             create: yes
             path: '/srv/portal/{{ portal_env_file }}'
             regexp: '^DISCOVERY='
-            line: 'DISCOVERY={{ portal_discovery }}'
+            line: 'DISCOVERY_HOST={{ portal_discovery_host }}'
   when: portal_env_file is not none
 
 - name: Up portal container

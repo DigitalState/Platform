@@ -13,7 +13,7 @@
             admin_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             admin_virtual_host: '{{ admin.host }}'
             admin_directory: '{{ directory }}/admin'
-            admin_discovery: '{{ discovery.host }}'
+            admin_discovery_host: '{{ discovery.host }}'
       - name: Up admin container
         include_role:
             name: app/admin/container/up
