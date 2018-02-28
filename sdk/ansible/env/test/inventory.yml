@@ -94,7 +94,7 @@ all:
             repository: https://github.com/DigitalState/Core.git
             version: develop
         discovery:
-            enabled: false
+            enabled: true
             repository: https://github.com/DigitalState/Discovery.git
             version: develop
             host: api.discovery.test.ds

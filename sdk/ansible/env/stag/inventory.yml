@@ -94,7 +94,7 @@ all:
             repository: https://github.com/DigitalState/Core.git
             version: master
         discovery:
-            enabled: false
+            enabled: true
             repository: https://github.com/DigitalState/Discovery.git
             version: master
             host: api.discovery.stag.ds
