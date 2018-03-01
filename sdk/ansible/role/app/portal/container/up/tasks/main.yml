@@ -48,4 +48,4 @@
       PROXY_HOST: '{{ portal_proxy_host }}'
       VIRTUAL_HOST: '{{ portal_virtual_host }}'
       DIRECTORY: '{{ portal_directory }}'
-      DISCOVERY: '{{ portal_discovery|to_json }}'
+      DISCOVERY: '{{ portal_discovery_host }}'

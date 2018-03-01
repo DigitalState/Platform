@@ -48,4 +48,4 @@
       PROXY_HOST: '{{ admin_proxy_host }}'
       VIRTUAL_HOST: '{{ admin_virtual_host }}'
       DIRECTORY: '{{ admin_directory }}'
-      DISCOVERY: '{{ admin_discovery|to_json }}'
+      DISCOVERY: '{{ admin_discovery_host }}'
