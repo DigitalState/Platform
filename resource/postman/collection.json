@@ -8,9 +8,11 @@
 	"item": [
 		{
 			"name": "Assets",
+			"description": null,
 			"item": [
 				{
 					"name": "Debug",
+					"description": null,
 					"item": [
 						{
 							"name": "/sandbox",
@@ -42,7 +44,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -51,6 +54,7 @@
 				},
 				{
 					"name": "Health",
+					"description": null,
 					"item": [
 						{
 							"name": "/health",
@@ -82,7 +86,8 @@
 									"path": [
 										"health"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -117,7 +122,8 @@
 										"health",
 										"ping"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -126,6 +132,7 @@
 				},
 				{
 					"name": "Config",
+					"description": null,
 					"item": [
 						{
 							"name": "/configs",
@@ -157,7 +164,8 @@
 									"path": [
 										"configs"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -192,7 +200,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -227,7 +236,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -236,6 +246,7 @@
 				},
 				{
 					"name": "Access",
+					"description": null,
 					"item": [
 						{
 							"name": "/accesses",
@@ -267,7 +278,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -301,7 +313,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -336,7 +349,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -371,7 +385,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -405,7 +420,8 @@
 									"path": [
 										"permissions"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -414,6 +430,7 @@
 				},
 				{
 					"name": "Asset",
+					"description": null,
 					"item": [
 						{
 							"name": "/assets",
@@ -445,7 +462,8 @@
 									"path": [
 										"assets"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -480,7 +498,8 @@
 										"assets",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -514,7 +533,8 @@
 									"path": [
 										"assets"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -549,7 +569,8 @@
 										"assets",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -584,7 +605,8 @@
 										"assets",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -593,6 +615,7 @@
 				},
 				{
 					"name": "Asset Association",
+					"description": null,
 					"item": [
 						{
 							"name": "/asset-associations",
@@ -624,7 +647,8 @@
 									"path": [
 										"asset-associations"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -659,7 +683,8 @@
 										"asset-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -693,7 +718,8 @@
 									"path": [
 										"asset-associations"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -728,7 +754,8 @@
 										"asset-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -763,7 +790,8 @@
 										"asset-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -774,9 +802,11 @@
 		},
 		{
 			"name": "Authentication",
+			"description": null,
 			"item": [
 				{
 					"name": "Debug",
+					"description": null,
 					"item": [
 						{
 							"name": "/sandbox",
@@ -808,7 +838,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -817,6 +848,7 @@
 				},
 				{
 					"name": "Health",
+					"description": null,
 					"item": [
 						{
 							"name": "/health",
@@ -934,7 +966,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -1055,7 +1088,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -1064,6 +1098,7 @@
 				},
 				{
 					"name": "Config",
+					"description": null,
 					"item": [
 						{
 							"name": "/configs",
@@ -1088,7 +1123,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/configs?",
+									"raw": "{{authentication}}{{environment}}/configs",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
@@ -1181,7 +1216,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -1216,7 +1252,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -1251,7 +1288,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -1260,6 +1298,7 @@
 				},
 				{
 					"name": "Access",
+					"description": null,
 					"item": [
 						{
 							"name": "/accesses",
@@ -1377,7 +1416,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -1498,7 +1538,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -1532,7 +1573,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -1567,7 +1609,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -1602,7 +1645,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -1636,7 +1680,8 @@
 									"path": [
 										"permissions"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -1645,6 +1690,7 @@
 				},
 				{
 					"name": "User",
+					"description": null,
 					"item": [
 						{
 							"name": "/users",
@@ -1669,7 +1715,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/users?",
+									"raw": "{{authentication}}{{environment}}/users",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
@@ -1798,7 +1844,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -1833,7 +1880,8 @@
 										"users",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -1867,7 +1915,8 @@
 									"path": [
 										"users"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -1902,7 +1951,8 @@
 										"users",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -1937,7 +1987,8 @@
 										"users",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -1946,6 +1997,7 @@
 				},
 				{
 					"name": "Registration",
+					"description": null,
 					"item": [
 						{
 							"name": "/registrations",
@@ -2099,7 +2151,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2134,7 +2187,8 @@
 										"registrations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2158,7 +2212,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"identity\": \"Organization\",\n\t\"username\": \"org1@site.com\",\n\t\"password\": \"1\",\n\t\"data\": {\n\t\t\"test\": \"test\"\n\t},\n\t\"version\": 1\n}"
+									"raw": "{\n\t\"identity\": \"Individual\",\n\t\"username\": \"ind1@site.com\",\n\t\"password\": \"1\",\n\t\"data\": {\n\t\t\"test\": \"test\"\n\t},\n\t\"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{authentication}}{{environment}}/registrations",
@@ -2168,7 +2222,8 @@
 									"path": [
 										"registrations"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2203,7 +2258,8 @@
 										"registrations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2238,7 +2294,8 @@
 										"registrations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -2246,7 +2303,8 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Login",
+					"name": "Token",
+					"description": null,
 					"item": [
 						{
 							"name": "/tokens/system",
@@ -2254,10 +2312,10 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "216617fe-adb1-40aa-89e7-5af25377777d",
 										"type": "text/javascript",
 										"exec": [
-											"var data = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"token\", data.token);"
+											"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
 										]
 									}
 								}
@@ -2284,8 +2342,22 @@
 										},
 										{
 											"key": "password",
-											"value": "1",
+											"value": "system",
 											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "bpm@ds",
+											"description": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "bpmn",
+											"description": "",
+											"type": "text",
+											"disabled": true
 										}
 									]
 								},
@@ -2309,10 +2381,10 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "12dd1630-efa6-48ee-a771-11237f8670c0",
 										"type": "text/javascript",
 										"exec": [
-											"var data = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"token\", data.token);"
+											"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
 										]
 									}
 								}
@@ -2335,7 +2407,14 @@
 										{
 											"key": "username",
 											"value": "admin@gov",
-											"type": "text"
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text",
+											"disabled": true
 										},
 										{
 											"key": "username",
@@ -2344,20 +2423,22 @@
 											"disabled": true
 										},
 										{
-											"key": "username",
-											"value": "agent@gov",
+											"key": "password",
+											"value": "manager",
+											"description": "",
 											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "username",
-											"value": "intern@gov",
-											"type": "text",
-											"disabled": true
+											"value": "agent@gov",
+											"description": "",
+											"type": "text"
 										},
 										{
 											"key": "password",
-											"value": "1",
+											"value": "agent",
+											"description": "",
 											"type": "text"
 										}
 									]
@@ -2382,10 +2463,10 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "5e99aa18-e8b1-4653-9571-ffdabffec533",
 										"type": "text/javascript",
 										"exec": [
-											"var data = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"token\", data.token);"
+											"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
 										]
 									}
 								}
@@ -2412,7 +2493,7 @@
 										},
 										{
 											"key": "password",
-											"value": "1",
+											"value": "acme",
 											"type": "text"
 										}
 									]
@@ -2437,10 +2518,10 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "3f2a87d5-6fac-4338-b1ee-2c628c8f2f02",
 										"type": "text/javascript",
 										"exec": [
-											"var data = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"token\", data.token);"
+											"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
 										]
 									}
 								}
@@ -2467,8 +2548,22 @@
 										},
 										{
 											"key": "password",
-											"value": "1",
+											"value": "morgan",
 											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "taylor@individual",
+											"description": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "taylor",
+											"description": "",
+											"type": "text",
+											"disabled": true
 										}
 									]
 								},
@@ -2492,10 +2587,10 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "7617081e-fc41-440b-af72-80e32117f8fc",
 										"type": "text/javascript",
 										"exec": [
-											"var data = JSON.parse(responseBody);",
-											"postman.setEnvironmentVariable(\"token\", data.token);"
+											"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
 										]
 									}
 								}
@@ -2532,14 +2627,124 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Password",
+					"description": "",
+					"item": [
+						{
+							"name": "/password/requests",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7e546ba5-e8c3-4bf0-9b13-7ed9ffbc23d1",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "morgan@individual",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{authentication}}{{environment}}/password/requests",
+									"host": [
+										"{{authentication}}{{environment}}"
+									],
+									"path": [
+										"password",
+										"requests"
+									]
+								},
+								"description": "Login in as admin.\n\nFor convenience, sending this request will update your environment token."
+							},
+							"response": []
+						},
+						{
+							"name": "/password/reset/{token}",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7e546ba5-e8c3-4bf0-9b13-7ed9ffbc23d1",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{authentication}}{{environment}}/password/reset/11111111111111111111111111111111",
+									"host": [
+										"{{authentication}}{{environment}}"
+									],
+									"path": [
+										"password",
+										"reset",
+										"11111111111111111111111111111111"
+									]
+								},
+								"description": "Login in as admin.\n\nFor convenience, sending this request will update your environment token."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		},
 		{
 			"name": "Camunda",
+			"description": null,
 			"item": [
 				{
 					"name": "Deployment",
+					"description": null,
 					"item": [
 						{
 							"name": "/deployment",
@@ -2567,7 +2772,8 @@
 									"path": [
 										"deployment"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2598,7 +2804,8 @@
 										"deployment",
 										"051e15ae-99b4-11e7-92b2-0242ac110002"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2679,6 +2886,7 @@
 				},
 				{
 					"name": "Process Instance",
+					"description": null,
 					"item": [
 						{
 							"name": "/process-instance",
@@ -2702,7 +2910,8 @@
 									"path": [
 										"process-instance"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2729,7 +2938,8 @@
 										"process-instance",
 										"3fde771b-9aed-11e7-92b2-0242ac110002"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2757,7 +2967,8 @@
 										"3fde771b-9aed-11e7-92b2-0242ac110002",
 										"variables"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -2766,6 +2977,7 @@
 				},
 				{
 					"name": "Process Definition",
+					"description": null,
 					"item": [
 						{
 							"name": "/process-definition",
@@ -2789,7 +3001,8 @@
 									"path": [
 										"process-definition"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2817,7 +3030,8 @@
 										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
 										"diagram"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2845,7 +3059,8 @@
 										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
 										"startForm"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2874,7 +3089,8 @@
 										"PayTaxes",
 										"startForm"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2907,7 +3123,8 @@
 										"function_test_1",
 										"start"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2931,7 +3148,8 @@
 										"PayTaxes",
 										"xml"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2959,7 +3177,8 @@
 										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
 										"statistics"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -2987,7 +3206,8 @@
 										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
 										"xml"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3014,7 +3234,8 @@
 										"process-definition",
 										"PayTaxes:1:608cd76b-9e4e-11e7-b8b7-0242ac110002"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -3023,6 +3244,7 @@
 				},
 				{
 					"name": "Task",
+					"description": null,
 					"item": [
 						{
 							"name": "/task",
@@ -3078,7 +3300,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3108,7 +3331,8 @@
 									"path": [
 										"task"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3140,7 +3364,8 @@
 										"task",
 										"8f9d8732-968d-11e7-b233-0242ac110002"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3180,7 +3405,8 @@
 											"equals": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3200,7 +3426,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"id\": \"2b18bc01-a02b-4b54-9bff-2259cb421d0f\",\r\n  \"name\": \"Review something!\",\r\n  \"description\": \"This have to be done very urgent\",\r\n  \"priority\" : 30,\r\n  \"assignee\" : \"Staff:47a5a9cb-496f-4db7-8999-489ec404887f\",\r\n  \"owner\" : null,\r\n  \"delegationState\" : \"PENDING\",\r\n  \"due\" : \"2014-08-30T10:00:00\",\r\n  \"followUp\" : \"2014-08-25T10:00:00\",\r\n  \"tenantId\" : null\r\n}"
+									"raw": "{\r\n  \"id\": \"2b18bc01-a02b-4b54-9bff-2259cb421d0b\",\r\n  \"name\": \"Review something!\",\r\n  \"description\": \"This have to be done very urgent\",\r\n  \"priority\" : 30,\r\n  \"assignee\" : \"Staff:e32f09b7-e1cf-4a91-a0e1-6822bf47a662\",\r\n  \"owner\" : null,\r\n  \"delegationState\" : \"PENDING\",\r\n  \"due\" : \"2014-08-30T10:00:00\",\r\n  \"followUp\" : \"2014-08-25T10:00:00\",\r\n  \"candidateGroup\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\r\n  \"tenantId\" : null\r\n}"
 								},
 								"url": {
 									"raw": "{{camunda}}/task/create",
@@ -3211,7 +3437,8 @@
 										"task",
 										"create"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3242,7 +3469,8 @@
 										"task",
 										"8f9d8732-968d-11e7-b233-0242ac110002"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3265,16 +3493,17 @@
 									"raw": "{}"
 								},
 								"url": {
-									"raw": "{{camunda}}/task/821da45c-bdaa-11e7-be73-0242ac13000c/complete",
+									"raw": "{{camunda}}/task/11111111-1111-1111-1111-111111111111/complete",
 									"host": [
 										"{{camunda}}"
 									],
 									"path": [
 										"task",
-										"821da45c-bdaa-11e7-be73-0242ac13000c",
+										"11111111-1111-1111-1111-111111111111",
 										"complete"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -3283,6 +3512,7 @@
 				},
 				{
 					"name": "Group",
+					"description": null,
 					"item": [
 						{
 							"name": "/group",
@@ -3301,7 +3531,8 @@
 									"path": [
 										"group"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3323,7 +3554,8 @@
 										"group",
 										"8454c987-cbc5-4a24-ba1a-d420283caabd"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3354,7 +3586,8 @@
 										"group",
 										"create"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -3365,9 +3598,11 @@
 		},
 		{
 			"name": "Formio",
+			"description": null,
 			"item": [
 				{
 					"name": "Form",
+					"description": null,
 					"item": [
 						{
 							"name": "/form",
@@ -3395,7 +3630,78 @@
 									"path": [
 										"form"
 									]
-								}
+								},
+								"description": null
+							},
+							"response": []
+						},
+						{
+							"name": "/form",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "x-jwt-token",
+										"value": "{{token_formio}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Registration\",\r\n    \"display\": \"form\",\r\n    \"type\": \"form\",\r\n    \"name\": \"register\",\r\n    \"path\": \"register\",\r\n    \"tags\": [\"register\"],\r\n    \"access\": [\r\n        {\r\n\t\t    \"type\": \"read_all\",\r\n\t\t    \"roles\": [\r\n\t\t        \"57d0a03776f943a4007e1516\",\r\n\t\t        \"57d0a03776f943a4007e1515\",\r\n\t\t        \"57d0a03776f943a4007e1514\"\r\n\t\t    ]\r\n\t\t}\r\n\t]\r\n}"
+								},
+								"url": {
+									"raw": "{{formio}}/form",
+									"host": [
+										"{{formio}}"
+									],
+									"path": [
+										"form"
+									]
+								},
+								"description": null
+							},
+							"response": []
+						},
+						{
+							"name": "/{path}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "x-jwt-token",
+										"value": "{{token_formio}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{formio}}/register",
+									"host": [
+										"{{formio}}"
+									],
+									"path": [
+										"register"
+									]
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3426,7 +3732,144 @@
 										"review-taxes",
 										"submission"
 									]
+								},
+								"description": null
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Authentication",
+					"description": "",
+					"item": [
+						{
+							"name": "/user/login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "bfc64bc6-229a-4425-9401-e3d19bc2613a",
+										"type": "text/javascript",
+										"exec": [
+											"postman.setEnvironmentVariable(\"token_formio\", pm.response.headers.get(\"x-jwt-token\"));"
+										]
+									}
 								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"email\": \"webmaster@digitalstate.ca\",\n        \"password\": \"changeme\"\n    }\n}\n"
+								},
+								"url": {
+									"raw": "{{formio}}/user/login",
+									"host": [
+										"{{formio}}"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								},
+								"description": null
+							},
+							"response": []
+						},
+						{
+							"name": "/logout",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1ff5c20b-de0a-4fec-b044-ac3cc652769a",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"email\": \"webmaster@digitalstate.ca\",\n        \"password\": \"changeme\"\n    }\n}\n"
+								},
+								"url": {
+									"raw": "{{formio}}/logout",
+									"host": [
+										"{{formio}}"
+									],
+									"path": [
+										"logout"
+									]
+								},
+								"description": null
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Access",
+					"description": "",
+					"item": [
+						{
+							"name": "/access",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "x-jwt-token",
+										"value": "{{token_formio}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Registration\",\r\n    \"display\": \"form\",\r\n    \"type\": \"form\",\r\n    \"name\": \"register\",\r\n    \"path\": \"register\",\r\n    \"tags\": [\"register\"],\r\n    \"access\": [\r\n        {\r\n\t\t    \"type\": \"read_all\",\r\n\t\t    \"roles\": [\r\n\t\t        \"57d0a03776f943a4007e1516\",\r\n\t\t        \"57d0a03776f943a4007e1515\",\r\n\t\t        \"57d0a03776f943a4007e1514\"\r\n\t\t    ]\r\n\t\t}\r\n\t]\r\n}"
+								},
+								"url": {
+									"raw": "{{formio}}/access",
+									"host": [
+										"{{formio}}"
+									],
+									"path": [
+										"access"
+									]
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -3437,9 +3880,11 @@
 		},
 		{
 			"name": "Cases",
+			"description": null,
 			"item": [
 				{
 					"name": "Debug",
+					"description": null,
 					"item": [
 						{
 							"name": "/sandbox",
@@ -3471,7 +3916,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -3480,6 +3926,7 @@
 				},
 				{
 					"name": "Health",
+					"description": null,
 					"item": [
 						{
 							"name": "/health",
@@ -3597,7 +4044,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3718,7 +4166,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -3727,6 +4176,7 @@
 				},
 				{
 					"name": "Config",
+					"description": null,
 					"item": [
 						{
 							"name": "/configs",
@@ -3758,7 +4208,8 @@
 									"path": [
 										"configs"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3793,7 +4244,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3828,7 +4280,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -3837,6 +4290,7 @@
 				},
 				{
 					"name": "Access",
+					"description": null,
 					"item": [
 						{
 							"name": "/accesses",
@@ -3868,7 +4322,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3902,7 +4357,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3937,7 +4393,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -3972,7 +4429,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -4006,7 +4464,8 @@
 									"path": [
 										"permissions"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -4015,6 +4474,7 @@
 				},
 				{
 					"name": "Statistic",
+					"description": null,
 					"item": [
 						{
 							"name": "/statistics",
@@ -4132,7 +4592,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -4254,7 +4715,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -4378,7 +4840,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -4502,7 +4965,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -4511,6 +4975,7 @@
 				},
 				{
 					"name": "Case",
+					"description": null,
 					"item": [
 						{
 							"name": "/cases",
@@ -4706,7 +5171,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -4749,7 +5215,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -4783,11 +5250,12 @@
 									"path": [
 										"cases"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "b0ee9dc2-4ab7-4b16-b518-7f949c22dc10",
+									"id": "6d6b65a5-0982-4cda-bad9-ad04a6923e45",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -4807,7 +5275,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 1\",\r\n\t\t\"fr\": \"Cas 1\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \r\n\t\t\t\"test\": \"test\" \r\n\t\t},\r\n\t\t\"fr\": { \r\n\t\t\t\"test\": \"test\" \r\n\t\t}\r\n\t},\r\n\t\"version\": 1\r\n}"
 										},
 										"url": {
 											"raw": "{{cases}}{{environment}}/cases",
@@ -4817,12 +5285,12 @@
 											"path": [
 												"cases"
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -4911,7 +5379,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -4947,14 +5414,15 @@
 										"cases",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "403decac-457d-44e6-adc8-3cedc992f7b8",
+									"id": "af022347-aaaa-42b1-aa2d-a3b711a48861",
 									"name": "Created",
 									"originalRequest": {
-										"method": "POST",
+										"method": "PUT",
 										"header": [
 											{
 												"key": "Authorization",
@@ -4971,22 +5439,23 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\r\n\t\"data\": { \r\n\t\t\"en\": {\r\n\t\t\t\"test\": \"test1\"\r\n\t\t},\r\n\t\t\"fr\": {\r\n\t\t\t\"test\": \"test1\"\r\n\t\t}\r\n\t},\r\n\t\"version\": 1\r\n}"
 										},
 										"url": {
-											"raw": "{{cases}}{{environment}}/cases",
+											"raw": "{{cases}}{{environment}}/cases/11111111-1111-1111-1111-111111111111",
 											"host": [
 												"{{cases}}{{environment}}"
 											],
 											"path": [
-												"cases"
+												"cases",
+												"11111111-1111-1111-1111-111111111111"
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -5075,7 +5544,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -5111,11 +5579,12 @@
 										"cases",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "c2be234f-a9b1-498e-97c4-12d157d50866",
+									"id": "a125ca94-76b9-4533-90d4-d7c625f13128",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5150,7 +5619,6 @@
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -5239,7 +5707,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -5249,6 +5716,7 @@
 				},
 				{
 					"name": "Case Status",
+					"description": null,
 					"item": [
 						{
 							"name": "/case-statuses",
@@ -5450,7 +5918,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -5493,7 +5962,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -5527,11 +5997,12 @@
 									"path": [
 										"case-statuses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "6657a75e-b44c-4627-95f4-ed6a38ee3c49",
+									"id": "ef94da22-58f8-4f73-b89e-7930e4aabe5f",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5551,22 +6022,22 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\r\n\t\"case\": \"{{environment}}/cases/11111111-1111-1111-1111-111111111111\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case Status 1\",\r\n\t\t\"fr\": \"Cas Status 1\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description\",\r\n\t\t\"fr\": \"Description\" \r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test\" },\r\n\t\t\"fr\": { \"test\": \"test\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
 										},
 										"url": {
-											"raw": "{{cases}}{{environment}}/cases",
+											"raw": "{{cases}}{{environment}}/case-statuses",
 											"host": [
 												"{{cases}}{{environment}}"
 											],
 											"path": [
-												"cases"
+												"case-statuses"
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -5655,7 +6126,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -5691,14 +6161,15 @@
 										"case-statuses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "a25cdc30-a1e1-40b9-8918-fe0f69537b7e",
+									"id": "22858345-829c-4ef4-bc71-dc0a7d085890",
 									"name": "Created",
 									"originalRequest": {
-										"method": "POST",
+										"method": "PUT",
 										"header": [
 											{
 												"key": "Authorization",
@@ -5715,22 +6186,23 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test3\" },\r\n\t\t\"fr\": { \"test\": \"test4\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
 										},
 										"url": {
-											"raw": "{{cases}}{{environment}}/cases",
+											"raw": "{{cases}}{{environment}}/case-statuses/11111111-1111-1111-1111-111111111111",
 											"host": [
 												"{{cases}}{{environment}}"
 											],
 											"path": [
-												"cases"
+												"case-statuses",
+												"11111111-1111-1111-1111-111111111111"
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -5819,7 +6291,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -5855,11 +6326,12 @@
 										"case-statuses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "068ee61a-5285-46d5-b480-6b78f8896291",
+									"id": "baea7c75-7f92-445e-980a-59d1911d2ec4",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5894,7 +6366,6 @@
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -5983,7 +6454,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -5995,9 +6465,11 @@
 		},
 		{
 			"name": "Cms",
+			"description": null,
 			"item": [
 				{
 					"name": "Debug",
+					"description": null,
 					"item": [
 						{
 							"name": "/sandbox",
@@ -6029,7 +6501,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -6038,6 +6511,7 @@
 				},
 				{
 					"name": "Health",
+					"description": null,
 					"item": [
 						{
 							"name": "/health",
@@ -6155,7 +6629,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -6276,7 +6751,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -6285,6 +6761,7 @@
 				},
 				{
 					"name": "Config",
+					"description": null,
 					"item": [
 						{
 							"name": "/configs",
@@ -6316,7 +6793,8 @@
 									"path": [
 										"configs"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -6351,7 +6829,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -6386,7 +6865,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -6395,6 +6875,7 @@
 				},
 				{
 					"name": "Access",
+					"description": null,
 					"item": [
 						{
 							"name": "/accesses",
@@ -6426,7 +6907,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -6460,7 +6942,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -6495,7 +6978,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -6530,7 +7014,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -6564,7 +7049,8 @@
 									"path": [
 										"permissions"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -6573,6 +7059,7 @@
 				},
 				{
 					"name": "Data",
+					"description": null,
 					"item": [
 						{
 							"name": "/datas",
@@ -6732,7 +7219,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -6775,7 +7263,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -6809,11 +7298,12 @@
 									"path": [
 										"datas"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "4d61ab67-defa-4fb4-9fdb-75733c82f43d",
+									"id": "02ee43c7-0a44-489d-ae2f-2bc6a10adf51",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -6833,22 +7323,22 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"slug\": \"data-1\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Title 1\",\r\n\t\t\"fr\": \"Title 1\" \r\n\t},\r\n\t\"data\": { \r\n\t\t\"en\": { \"test\": \"test\" },\r\n\t\t\"fr\": { \"test\": \"test\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
 										},
 										"url": {
-											"raw": "{{cases}}{{environment}}/cases",
+											"raw": "{{cms}}{{environment}}/datas",
 											"host": [
-												"{{cases}}{{environment}}"
+												"{{cms}}{{environment}}"
 											],
 											"path": [
-												"cases"
+												"datas"
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -6937,7 +7427,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -6973,14 +7462,15 @@
 										"datas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "7974b3aa-b987-43fc-a412-15b1e3a81b0e",
+									"id": "5b0ef7e1-4c65-4301-813b-151fe26d6c91",
 									"name": "Created",
 									"originalRequest": {
-										"method": "POST",
+										"method": "PUT",
 										"header": [
 											{
 												"key": "Authorization",
@@ -6997,22 +7487,23 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Title 2\",\r\n\t\t\"fr\": \"Title 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 										},
 										"url": {
-											"raw": "{{cases}}{{environment}}/cases",
+											"raw": "{{cms}}{{environment}}/datas/11111111-1111-1111-1111-111111111111",
 											"host": [
-												"{{cases}}{{environment}}"
+												"{{cms}}{{environment}}"
 											],
 											"path": [
-												"cases"
+												"datas",
+												"11111111-1111-1111-1111-111111111111"
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -7101,7 +7592,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -7137,11 +7627,12 @@
 										"datas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "3403fb7c-4bc0-47f9-b83f-dba60df7cbc3",
+									"id": "0647a267-4943-4c5a-9435-47d5a9c92633",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7176,7 +7667,6 @@
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -7265,7 +7755,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -7275,6 +7764,7 @@
 				},
 				{
 					"name": "Files",
+					"description": null,
 					"item": [
 						{
 							"name": "/files",
@@ -7434,7 +7924,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -7477,7 +7968,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -7521,7 +8013,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -7555,11 +8048,12 @@
 									"path": [
 										"files"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "8abe3819-e46d-44fb-a6eb-6290ebedc928",
+									"id": "e8f0abb7-75ef-4701-9be2-762101b5a876",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7579,22 +8073,22 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Logo\",\r\n\t\t\"fr\": \"Logo\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description\",\r\n\t\t\"fr\": \"Description\" \r\n\t},\r\n\t\"presentation\": {\r\n\t\t\"en\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAcO0lEQVR4nOydCVQTV9/wZyZga61VFJWtVRBQqVYFsmBd6oJdFLBPn/oWsHZRArVgtevX9jxd3u/Utp/d3Euwq4LdFIG2iiLuQtgsakVllSoguOBSrZDM/f4Toa/yJJfMksD7nP/vnBwxmbskmd/8739y5w7HIAhiExQEQSigIAhCAQVBEAooCIJQQEEQhAIKgiAUUBAEoYCCIAgFFARBKKAgCEIBBUEQCigIglBAQRCEAgqCIBRQEAShgIIgCAUUBEEooCAIQgEFQRAKKAiCUEBBEIQCCoIgFFAQBKGAgiAIBRQEQSigIAhCAQVBEAooCIJQQEEQhAIKgiAUUBAEoYCCIAgFFARBKKAgCEIBBUEQCigIglBAQRCEAgqCIBRQEAShgIIgCAUUBEEooCAIQgEFQRAKKAiCUEBBEIQCCoIgFFAQBKGAgiAIBRQEQSigIAhCAQVBEAooCIJQQEEQhAIKgiAUUBAEoYCCIAgFFARBKKAgCEIBBUEQCigIglBAQRCEAgqCIBRQEASh4GLtSb9gTU+/EM0dzu5Md+fyX1euGdd9fVXJOpPGjg0I877nWa231ySGZQYzxHLQOtXS2npgTelvXy4vLipVsj1nM3l+Yj8Vx46EP319x4y5e6h6vDvLcr3h/z0YluUZwl9vMZmbd3+5ugmeOwmPisrC/KPVBwv/6tqe34C19mR4/MK34fGOk/vS7WnlTR+9GTr8FSXq0nh4uH6q1rzn4eW9mGVZqwcqhhBi5vmvYn/OXFhQX/+nEu06min6JG+/IUMeDpgeOZnlmPthFxssuhJCTIRhjph5Zl9uyvLtlUXG3OqSgisO6G6nWP9iEIei8fS8PTUyapOK5R6mbgjmqFSqZzdERo2Kzsx8sKC+7oKTuigKGHG4TdEnzglUh8VAp7Vw2LV64LUbOGBABWNcVMyY6QkvJIIx13jCbMlJXr6uojD/55qDhSaFut4pmIM4GbWX1+1pkbPSO5XjJmBIot4QEbVd6+np5si+iWWaPnHE+4XlaxPWpp4O1IxbDh3VyZbDKmxPjmX/AbKkP7c27aQ+ed3rviCl8u38OyiIE1F7eNwG0SAdvuyHxJZlOTZkQ+QskMSryyWZon/O74OC8tTw+EVHVCp2nrADO6ttCKpe/uqwJQkpadXxyevf8gtR93JkeyiIk2iTYzPHiJfjb1g2JC0yahtEkr4Kds1u/ILVPfWG9UseTHjxKOfCxrBs1+0/0HafoWrduwmGtOPzk9c94ah2UBAnADs0yDErneNU0uVoA46goWk3IolTJZm/au398Slph/xDda/DKOo2Z7ZNhWW9IffZ8H7RiUy/EM0gpatHQRyMIEdahCCH/TlHZ1gkseQkjpfEe5SG1cNQJkA3aRe06+/o9qSi4riIeEPqoXmrv56uZL0oiAPRengJcmyC/EExOdqBOgVJtmm8HCcJJMK9k75Oy/SHoYzNU9HdCOjjwEDt+F9B6NeUqhMFcRAWOSKjBDkecVQbULd6Q0TkNo2nVx+l6/YL0XrGp6Tu5VhmptJ1OxLITVQg9Af/nV9u8BurUcmtDwVxABoYVqVGRmx0pBzttJ0CVlQSkOOeBMP6PRzLjlaqTmdzew82Lt7wbZpvsFpW5ENBFAaGPD1g6LMREvIZzmoTRNRsiBQk8ZQtCSS6njCWz2W6cb5hL6zKZXZCyrp1Q0JCJO/nKIiCWOSAYRUk5E6Tox0Yf2s2RMzK1sqIJL4hmt4gx1YYpgxVsm9dCaROT8xZtnaZ1PLdPvH634LGwwMiR+RGjmGdLkc7EEm0IGh2TObmB4319RfFlPUZO5aLT17/PYh2nyP6RgiphX8O8zypqSrc21RTWnoNnmOnPDa7t6qfhwfDCRGL3AftK/5D6F139E6ExP24IX7OSrFlFRME3viaHMPSxUrV52jC57/836wL96oSdQlypArDKpbr8oQWdjBtatSs7NjMjOnGurpL9pab8dxLbyt5KpowpIXcmD+VzvPm7blrV9dZ2y7HsOLvv4cEqVn/CbqRvmPVD/mrw/4L3kuIUv3xD9V+Mjf5q4Pfxj+zX0w5xQRhGWLOMRiuK1Wfowmf97JZiXrUnp49UmdGblSpVLLl4Hl+O0/4BheVy5Ny6oEopk2NiARJMiGSdC7Jk8lfTfQL0b0pp812ICo0VxYbVx4t2r9in2FNo5iyNUcLCTwOw5/CY+lUfeLY6fEL4SDGPS6cnZLVMZZ1vVc9PhVyrNFVxQV2R1fMQWQgyAHJ8Y/KyGHeHpu5OSomM+Npk9m0Tm59EM10ENWyIXG/i7adMJdpZOj4r2XvgISYLl69/FmyPnaIQT/nX2LlsMYOw8qDr4UERm9fvWwU4ckOufWxDDv42VXrPhVTBgWRiBqGVYIcsCNGyq2LEB7kyIgyNjRcKzpzhrdIYjKtl1svx7G6tMhZWzWeXjYlmf/+p8KPgL5y2oGocWxr8jL1e+PHLhZzdLaXnC9WlL0WGjCtoiDvaRi6ybouxLWH6pn573002d7tURAJqC0JuVJykJyYNjnan7NIkpXxlLm1Rb4kLBsGiTtI4tm742tTnl0wzKX/oIVy6idm/rvkuNjQXMPK3+TUYw+GhCe/yV61VA2fWZnUOoS5+AEPRS0bEmzfj4goiEi0np6u30dF/QDDKiUiB8ixOdJYX3+t42vtkcTc0pIqtx1bkkx/btESYWwutd6KIuMnnyVEx1SVFDjtasfcLwzHYBg3gedJvtQ6IGKOCtcnzbVnWxREBL0uX3JNi4j8kWFVUXLrIjy/AwSwKkc7hU1NZkskMZsVkIQbB0PCrVovL4skU/VJY1iOfVRqfZVF+R8Z9LEv1RcXE7l9EwsM486BJOEQSQql1hGg1v1ryNjOf2VHQeyENZsZ7b7cOJaTLwdvJjuiMzMjaHK0I0gSK0jCm9PktsuCJGkzo7ZoPb16T9UnvgJHUklX/5lI63oY6ihyilwqwjXqMLSbATlJhaQKIO8Kfyrp8c42Q0HsQJBDl/MzM+h0reyVXnhCciEqRBQ01HUqRzsFDQ1mSOLn8mZeviQce/+6Wf/Ivt1k6nTnsAYctQ+nxM3V15SWOj1ydASGdk3bV3/2OEMYSSug+I8f12n+hYJ0giVygBzeJytl12WRI3OzKDnaESSJydg0l5haN8jthwvhw8Zv2eTq0tIiqhwhzPXsz5c/UV1SKLr/jiJn7arfKory/o+UsizH6Kbpk0bStkFBKLTL4aOEHDwDckDkqK+XvK5WQWOjOToz40mQ5Du5/XE/U8+AJIxLq/2SVBXlf5ybsuKo3LaVZtvq5SshspVIKesXoomlvY6C2IDlQY4dvygnRxZEjvo62YvOtUkyB5J8BSSpY8b/aqckhDRsNyx/T26bjqCmtNC8PXm5pGlOQ9Vh/6S9joJYwSJHDshRIy3/uxkYVu2MyUpXRI52BEkgj5lDCP+93LpuSJLeqSTCKd2q4gJFV5VUkhzDij3wWe8RW46FVGSqPjHQ1usoSAeUlYPfBTnHTDnDKlsY6+vNMGSLbeVNCkhymrkfJFHZlIRcyUle/rncdhwN9HGplHIsy0219Vq3nO7u5efv09d90OPu7h7CbE43hjAXz51rOHjx3PmfTlWWVTuqXeXlyJhBk6OXmxsH7/EfgwOCouG/ofDoB4e0i/B+S0421f1wvrz8u8vNZ22uInhDksw5aRFRrKtKNVtOfweAJOO3pDP7Hn6UMbv2uOU1s9n8U1VJwWU59Qv06efes2//AVH3DB0xieXYu+Gp1mZzy/HmqootteVlu+XWX1Vo3ELiSQPLsh5iyk2LSxwHcq2x9lq3EuQuN/c7RoVqP1S59oxnWeZ/fuGFOOg+wDMaHu/fExj41e/G/S9dPH/W7qnc9qCoHDzZFZuZObOgwbYcffz8A0ePGLMB3lpwh5fuhPfrPWSgd8TgAV6v15T9HlNbfczmAtbFDQ0mGG7Fbpj5KOPiwsqTpMG6JLkpq36SU6/AfZrxT/Yd4LEU3u8tS/O4udzGuAXe+9qQgKDCmvIj+try45KnrFQdLDAzZgLjRfY5MeVo0+q7zRALji79RodN2uvSo2fiLXLcisqVc51/n25SHmyv3BpIhDCa3F8VkYMQQY6MmcaGOpvTLzz8h40cPWL0ASty3AJ8cUG+QSP3BoRqdLTtLJLAcMtkIj9K7Xc7giT3b93McKa/A1dLZbFxp5w6R+smLnUb4PFtRzluBt6r2jdg5IGR2gmyrknZ/sWKbRKKBfgFa6yu9dU9BOnbl4UP8XuOZak7TDuwXdBo7cRNd93VX/aqFQLDDxqZu6vKZddDeH63kHPQ5BCGGYGBI9NZhu1vZ7W9PQfevRHKUZf3KWqsEySJMfO87KP9wPpTzKj8thEPIb/JSc5HaSck9O0/8GW7NmbZnv3dB/7oM3j4cKntmc38AbFlhCWN/EK0Vleh7xaC3Os78glIlKaJKcNy3Lh7hgfNk9t27wvnmKBiyfPe/obwZDcMdWYYO7lNweCAEYliF2AT1qOFPKXTqR03JNkcbebNsiXxP1rK9D5/ljEzzCGpdfTpN6C/m/ugD8WVYnv5BQUtl9rmzrWrGglD6kUXZJl7rD3dLQTp5zkoSUo5ONokym07sLSI4Qgvqw6QY489cgjA0VSS1JDcPnPHHXd0Oneq8MZwK5o3mTdKaacdoSG/ssNMWfH+Kql1DA4IfArqoV6wZbVtjgu/e6j0KMIQRkqfB1h7sssF8fAP7C1cIiqpMMuO8vEfJuqMxS1A7uEtM+8Qzr1HZ21+xFhve1jVzt1DRwyAaDBMSjvCmZkBXvcE2LOtIAn06QneZJIlycC6WqauqPiM1PJ9+3uESy3LcayoEUUHpPTZ6mowXS5ID1bly8hYJZxjOD+pZXteucT0aJF+GT0h/B4Y0jxi792fWI7xktyYpQLW7vKFZ86AJBlP8ITfJLW5XpcvCpFEzrUekr8biCAylh4iUvrcPZN0lsi+4Yrk8q4iJ+vdAmHMnxUWxou5NRpLiNz77omyWZDEWFdXLLUxlofRvPBOpSP5u5FzZwUi7FWi27NOlwtiIuYaGOlITgIIy9RILdt6m4xV/FlGtUitydJ6ennbW6T5XBO8V2mSCJ+R6To5LqZMakTkq2HePpLnT12903JtleQb1MBeWiO1bG3lUcllWYaI7jOxcfDpckFOV564CN2TNBNTWCzgj/Ky01LbvtarN3P9ttulFhfyAv+0yFm77JXk4oVz1+GLyJHWGsk7XXvsvL1bp0VEvgJyiDyDdCtNXj7MgKB7B0otDwcEySuRQOySsYoJK6XPVn947nJBBM42Nq6SUu7CuabVshpmWeaUr115L60KkCRqp72SnCw/uhTEFt1OTePp/2fvtmmRka/ovH3s3t5mm8NGMqMnTJGcR9SWH/0K3qvofADk2FNbfuyI1HbhS5HS5yZrT3YLQU6dKP2WJ2SfmDLC/P/a8iOyJ9CVjw5lzJy8jwEiScCGKIsknSbRteVle1r/ump13o8teN70XW1RfqY926ZFRL2s85Ivxx9+gcz5QV7CWlKjpNZx8fzZxuZzjW+JKSMMQauPH5a80sq0eYn9IJ+we9h7E39Ye7JbCHLp0iX+UP7ufxLC27ecCyGVpfm7Z108f75VbttX+rgxhzUT5FYDWCTZZY8kvx/MX2jiW+26fNbMk6xDxn3P2LNtqkUOL0kzWm/mSu+7mJIJbWdZWSZ4SLBG8jj0kHHvJ3/xpmR7toXA2tJ87sycPypO2Jx71ikqdpzYItCu2dzUUGPttW4hiAAcbc6U5u8JM5lN38IAxFbSTsxm/off8nfrYHurxkuh4r4Q5thotQI1sQFtwy2qJJcuXDDt35IRe6HpzDz4ck5Z2waOpGfON51ZWGzcGQXvtdPEHhLyl8IEOaStw/A31+64k9n7yD+Z1rbcTLgfoX+odpKcOo1bNic0n218Hv60vagcIWU15b9PhoOBrN9uJsU9J+EWbKRyZ/qPVj/jbjWbF3aEi/u3bn7qbv8RS9z693+ib/9Bf093v3C+qeTi2aYfaivLpI9NKRzRThBOwzLDDhXJqgeGW4GQIO+MycqcbKyvs7pgczuHCvZ+eaeb2zf93D0mwo4Y4unn16++qlLYiUrONzXuutx8zq4ICXK8GObl/ZEScuyOeJz5s8+t076mxS94LMewIltO3aXGPav79HNP7Ts04L8Gu3tOgr5aprvzZnL8j6qyLWfPNvzy54ULsqY0DBk9muvB9RC9lBFhWJsnibqVIO38UVF2/I8K5l1nt3tYN9Hyr2xJOC5QiCQxWRkPGOvqqPOCrly4YIaHMFt2JyTwottqk+Nj+XL0ssghDDk7wjKus32DNYuqS+RdUSgcAOFhOMkwBjn12MJfO3EafAw+YsuV7suxueJ7txlidRcESY7fJ3/V/fZIAsMtTwW6ZRWQY7Fycsy2KoeAcE/ycH3SfFmNOIHw+IX2zRruQOOR33NtvYaCWOGwbpJCknDDLDmJl/KSpM20yPGJInLMtB45bmaoWveKb7C2+9wfvQPT4pI0cFASPfcLcr2aHZSVWlAQGxzWKhZJhm2YGaVoJIHItFjnraAcfft1ui28D5/p8UmvyGrQQQg33glPWPiZlLKXr12mnhRAQWwBO59FklEK3OSIA0kio3JBEukzj9uAyLFIp2TksEOOdvxCtW9MeCap292/cPoLC+NA4DApZfPXfUk93Y6C0BAkgZzkxCi7LnTsrK7hbTmJZElSBTm8vT+VKwdh2PrdMx43i5FDAHbCnjMTF37nF6LpIasDCjIxLmG4f2jYJ1LKCj825ySvpE5zQkE6A3bGQ5CTKCEJy3HD0yRGEkjIXwjz8ZEtB9hRF5OR/sDlPm7pUoqDJKHz13wp+Yo/JfEN1vSdkfDSTwwrbUJlhTFvRWfboCD20CbJSf/hki8e+p+q2BFpUSCJl/2SWOTw9pE0xr4Z4VLU6KzNU4z1dSe2GaStISXg4nJ7fHzyelFTSJRG+HU/wZCaAZ/nvVLKQ/Q4teOLlZ3OZkBB7AUkOfDA9HV5p09JCue3VMWAJBGWSNLpyiypEVELFZGDkPqYjIzJxro6y5T5HYYVBYQnv0itb6ha9y5I8rbcfklBuJ/7cynrf2E5dqLUOqoKjUuqigs6vSAIBRFJbFbmS3l1p0XdCNIalkgSOYsqSepMQQ5vyTfBb4cwTH1MVobwy/4t15NsMyx7HaKK5Lv9giTvvFtcZvALUTvt9O+Ux2YPTkhO3cWy3BSpdcDB4nh28mdr7dkWBZFAbGbGi/WnT8k+qkNQChJyEo0VSdbPjEwK81FADogchgwYVtXV/dvFVjsMKw9fv87YNZHQFj1Z17gEQ9qBSc88b3N9W6WYv+abRx98870SiByyEsLyvXmLaw4W2TWNBwWRCESSxfWnTysgCRv0XeStw620iMikcT4+shNhQpgGQ2bGlA/r647Z2ubrxNg3YEvJF51ZYNngGYmLSvWG9e/6Bqt7yqrLClPm6Qd/UFSeHqi9fxMMT8WdeuuAifDfrV00d4u926MgEqlhBEkyFjfUnZJ9lIcdTIgkOyBxHwgJeaLOW74csNM3GCAhp8khINy2+URe3jwi5Squm2HZ2/1DdW8lpGyojkte96pfsFb0cj8dmTJ/gf//zTtmeGjBqyc4jp0ltz7hJEWKfo6oJaa65WTF/y3UwCMmM3MRHPEZD2+fF+TUJZyNgcS9hGVkrnwiQEhD8o3IYdf1NWufn5v9/rZ9n6jcPV6S2zQMGwcFqMM+9Ffr3iI8m55jWLbpGmPK3W9YY9f906fpnx/sc1/YwyPCtLPhsxBm/Sp0ECfmsgP751YXF5wVU8rqSfXw+IVvw+MdUc0Txsyw0hO+LkAF4VrU0qWtvOmjN0OH/9t0iyGM5TLXZR5ePrLuOa4MbXLU2SdHO75jQl3i16Zt5zjuAcV7JOwbjOXe5kfMZ89U5278XthJr1oWQmJJ7/C4BR7wVfiDDGPgOxE9G9ceKovyXk/WP/mB2HKKRRA4csDOJm6H+0+hhrFEkhdgeMR4enedJMJFVgYRkeNmqn8rMhn0cx6LT0k9IHVxO1u07RvCvQBHugzwYKYnyAq2orlubvk6e8m/RMshgDmIQtQwlsT9hUstLZ3+OusI4Ch9Jr2yXJIc7VSVFJxP1sc+BKIpdrVmV0MIn/VFwtP6mpoaSeVREAWpgUdMVsbCS60tK53ZLiSfIMeJKS/n5Mi+wSYk7TUgydT/BEl4nvn18/mxs2uKCySvXYCCKMzRpiYYbmUkQSRxiiSWyFFRrogc7YAk5cn6OROFH9SUqtPZmFtN33+uj360+mChrNUsURAHYJEkCyRpbZG03pe9QORohMgxVUk52qkqNtYkx8WOE24lp3TdDgU+lMqi/CXLF8RG15QUylhb9gYoiINoiySJl1scJAkBOW5Ejt8dUj/TlpPMiwk3n234WPbvJE4AethcUXTgcYh+b9YXFyvSXxTEgQiSRGdlJP7155/yVoDsCGEas44dnepIOdoRzm69Pn38y+X5eQ/DHijvF3cHwvP87uwlb4wxxM+VtWxQR1AQB/O3JFevKCQJadx6+LepL+ze7ZDlj2wh/Jj4edycINNV8yoIJjbvvOtsoC/nKgsPxC+Lj56cu/GHk0rXj4I4gdLmZhKdmZl47c8/RS052hEYQjRtLS2duuDAAafK0U5VifHSG+OHJW77/LNg2DF/7oo+tAPtXzPB0O9zfWxAcvxcg1JDqo6gIE5CkAQS9+evXb0iSRLIPZuyIXIsyOsaOW5mR8qqw6+FBERsW7NMYybmHxknRhQQ4wIk4R9mr1469A0Y+lUXF1xwZHs4F8uJWCTJzHw+LSKS7dnrzgR7y8FO0ZR9qFSQ47Aj+yeWnJQVhfCYPemZ572H6XRPDw3VxQizk5Vup21It6t8X9663G9W/lhVUnBN6TZsgYI4GUGSuTnbF7wYqrkc5uX1SmfXmMPOcfLjosJHVhcXKX4qVyl2f7XqNDyEG/W8NzUucYRviO7hALV2MsOw4+DtSZqeDsPJKkL4fTtSVuSYTde35n5hsHp7Akdj9dvxC9H2FR7O7kx3h7/GX8xdt1KxkP5NROSD4728l7DW7g9PmKum1paUJ7f88o6xvr5ZqTadyYCgIGb0+KlD4E9hHpYfRBof1x4qd9jphFtX9RDGjbAH/gUHgebKEmNjdVFBLTxfwTCmQzmGNXbfLMiRyL0/IKIAC0NChcmBavg2BjKE/QvsqMivO71fzP0PEQRBnA6exUIQCigIglBAQRCEAgqCIBRQEAShgIIgCAUUBEEooCAIQgEFQRAKKAiCUEBBEIQCCoIgFFAQBKGAgiAIBRQEQSigIAhCAQVBEAooCIJQQEEQhAIKgiAUUBAEoYCCIAgFFARBKKAgCEIBBUEQCigIglBAQRCEAgqCIBRQEAShgIIgCAUUBEEooCAIQgEFQRAKKAiCUEBBEIQCCoIgFFAQBKGAgiAIBRQEQSigIAhCAQVBEAooCIJQQEEQhAIKgiAUUBAEoYCCIAgFFARBKKAgCEIBBUEQCigIglBAQRCEAgqCIBRQEAShgIIgCAUUBEEooCAIQgEFQRAKKAiCUEBBEIQCCoIgFFAQBKGAgiAIhf8fAAD//70Zt9n0BwO9AAAAAElFTkSuQmCC\",\r\n\t\t\"fr\": \"data:image/png;base64,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\"\r\n\t},\r\n\t\"version\": 1\r\n}"
 										},
 										"url": {
-											"raw": "{{cases}}{{environment}}/cases",
+											"raw": "{{cms}}{{environment}}/files",
 											"host": [
-												"{{cases}}{{environment}}"
+												"{{cms}}{{environment}}"
 											],
 											"path": [
-												"cases"
+												"files"
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -7683,7 +8177,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -7719,14 +8212,15 @@
 										"files",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "535d2c16-dc8f-4a48-818f-d9ed427fb9b0",
+									"id": "dfb8c666-8d16-424a-b200-af6d27e0bbca",
 									"name": "Created",
 									"originalRequest": {
-										"method": "POST",
+										"method": "PUT",
 										"header": [
 											{
 												"key": "Authorization",
@@ -7743,22 +8237,23 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Logo 2\",\r\n\t\t\"fr\": \"Logo 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 										},
 										"url": {
-											"raw": "{{cases}}{{environment}}/cases",
+											"raw": "{{cms}}{{environment}}/files/11111111-1111-1111-1111-111111111111",
 											"host": [
-												"{{cases}}{{environment}}"
+												"{{cms}}{{environment}}"
 											],
 											"path": [
-												"cases"
+												"files",
+												"11111111-1111-1111-1111-111111111111"
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -7847,7 +8342,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -7883,11 +8377,12 @@
 										"files",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "c6a8a418-923d-442c-9a05-eefe8fa4b58f",
+									"id": "6249f718-80ef-480d-ad69-fe68d46541c8",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7922,7 +8417,6 @@
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -8011,7 +8505,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -8021,6 +8514,7 @@
 				},
 				{
 					"name": "Text",
+					"description": null,
 					"item": [
 						{
 							"name": "/texts",
@@ -8180,7 +8674,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -8223,7 +8718,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -8257,11 +8753,12 @@
 									"path": [
 										"texts"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "7418ccbc-c8a8-41a1-a304-26f91e05ac98",
+									"id": "976c7f59-6190-4b20-90eb-d5177656ed24",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8281,22 +8778,22 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"slug\": \"description\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Description\",\r\n\t\t\"fr\": \"Description\" \r\n\t},\r\n\t\"value\": {\r\n\t\t\"en\": \"Platform\",\r\n\t\t\"fr\": \"Platform\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 										},
 										"url": {
-											"raw": "{{cases}}{{environment}}/cases",
+											"raw": "{{cms}}{{environment}}/texts",
 											"host": [
-												"{{cases}}{{environment}}"
+												"{{cms}}{{environment}}"
 											],
 											"path": [
-												"cases"
+												"texts"
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -8385,7 +8882,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -8421,14 +8917,15 @@
 										"texts",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "0c2cd856-f8b4-40f1-8a0b-2010b8d783dd",
+									"id": "b279d3dc-7748-4169-8b9a-20a8262f996c",
 									"name": "Created",
 									"originalRequest": {
-										"method": "POST",
+										"method": "PUT",
 										"header": [
 											{
 												"key": "Authorization",
@@ -8445,22 +8942,23 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 2\",\r\n\t\t\"fr\": \"Cas 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 										},
 										"url": {
-											"raw": "{{cases}}{{environment}}/cases",
+											"raw": "{{cms}}{{environment}}/texts/11111111-1111-1111-1111-111111111111",
 											"host": [
-												"{{cases}}{{environment}}"
+												"{{cms}}{{environment}}"
 											],
 											"path": [
-												"cases"
+												"texts",
+												"11111111-1111-1111-1111-111111111111"
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -8549,7 +9047,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -8585,11 +9082,12 @@
 										"texts",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "0cc0ecfe-456e-46de-9c80-0abef74576cd",
+									"id": "f07703b5-2e0b-45f9-b5ca-de55cd9adabe",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8624,7 +9122,6 @@
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -8713,7 +9210,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -8723,6 +9219,7 @@
 				},
 				{
 					"name": "Page",
+					"description": null,
 					"item": [
 						{
 							"name": "/pages",
@@ -8882,7 +9379,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -8925,7 +9423,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -8959,11 +9458,12 @@
 									"path": [
 										"pages"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "66a837a0-4447-49df-8181-1696d295f3b8",
+									"id": "f25183fa-8bd0-4073-9919-896d3797d90d",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8983,22 +9483,22 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"slug\": \"test\",\r\n\t\"title\": { \r\n\t\t\"en\": \"title en\",\r\n\t\t\"fr\": \"title fr\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"description en\",\r\n\t\t\"fr\": \"description fr\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 										},
 										"url": {
-											"raw": "{{cases}}{{environment}}/cases",
+											"raw": "{{cms}}{{environment}}/pages",
 											"host": [
-												"{{cases}}{{environment}}"
+												"{{cms}}{{environment}}"
 											],
 											"path": [
-												"cases"
+												"pages"
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -9087,7 +9587,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -9123,14 +9622,15 @@
 										"pages",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "c854ef1e-b986-460f-9ec8-adc8d2512783",
+									"id": "6906d11e-4aee-429d-87f7-c116cf430920",
 									"name": "Created",
 									"originalRequest": {
-										"method": "POST",
+										"method": "PUT",
 										"header": [
 											{
 												"key": "Authorization",
@@ -9147,22 +9647,23 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\n\t\"ownerUuid\":\"11111111-1111-1111-1111-111111111111\",\n\t\"title\": { \n\t\t\"es\": \"title es\"\n\t},\n\t\"description\": { \n\t\t\"es\": \"description es\" \n\t},\n    \"version\": 1\n}"
 										},
 										"url": {
-											"raw": "{{cases}}{{environment}}/cases",
+											"raw": "{{cms}}{{environment}}/pages/11111111-1111-1111-1111-111111111111",
 											"host": [
-												"{{cases}}{{environment}}"
+												"{{cms}}{{environment}}"
 											],
 											"path": [
-												"cases"
+												"pages",
+												"11111111-1111-1111-1111-111111111111"
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -9251,7 +9752,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -9287,11 +9787,12 @@
 										"pages",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "eb1d8422-e85e-42e7-b479-b570c4a9d4ca",
+									"id": "cd8d3899-305b-4c65-9de9-524d66e288c0",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9326,7 +9827,6 @@
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -9415,7 +9915,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -9425,6 +9924,7 @@
 				},
 				{
 					"name": "Content",
+					"description": null,
 					"item": [
 						{
 							"name": "/content",
@@ -9449,7 +9949,7 @@
 									"raw": "{\n\t\"ownerUuid\":\"e5d92f23-81f8-4e67-bfea-a11feb3df2ed\",\n    \"title\": {\n        \"en\": \"Page 5f\",\n        \"fr\": \"Page 5d\",\n        \"es\": \"tester\"\n    },\n    \"version\": 14\n}"
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/content?texts[]=portal-title&texts[]=portal-description&datas[]=road-classifications&files[]=portal-logo",
+									"raw": "{{cms}}{{environment}}/content?texts[]=portal-title&texts[]=portal-description&files[]=portal-logo&files[]=admin-logo-login",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
@@ -9468,24 +9968,25 @@
 											"equals": true
 										},
 										{
-											"key": "datas[]",
-											"value": "road-classifications",
+											"key": "files[]",
+											"value": "portal-logo",
 											"equals": true
 										},
 										{
 											"key": "files[]",
-											"value": "portal-logo",
+											"value": "admin-logo-login",
 											"equals": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": [
 								{
-									"id": "d24bafae-cbc2-4341-8e7d-1a854a90bb39",
+									"id": "a4e6c787-b544-4ff1-91d0-3d1e015e356f",
 									"name": "Created",
 									"originalRequest": {
-										"method": "POST",
+										"method": "GET",
 										"header": [
 											{
 												"key": "Authorization",
@@ -9502,22 +10003,44 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\r\n  \"identity\": \"Individual\",\r\n  \"identityUuid\": \"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\r\n  \"title\": { \r\n  \t\"en\": \"Case 1\",\r\n  \t\"fr\": \"Cas 1\" \r\n  }\r\n}"
+											"raw": "{\n\t\"ownerUuid\":\"e5d92f23-81f8-4e67-bfea-a11feb3df2ed\",\n    \"title\": {\n        \"en\": \"Page 5f\",\n        \"fr\": \"Page 5d\",\n        \"es\": \"tester\"\n    },\n    \"version\": 14\n}"
 										},
 										"url": {
-											"raw": "{{cases}}{{environment}}/cases",
+											"raw": "{{cms}}{{environment}}/content?texts[]=portal-title&texts[]=portal-description&files[]=portal-logo&files[]=admin-logo-login",
 											"host": [
-												"{{cases}}{{environment}}"
+												"{{cms}}{{environment}}"
 											],
 											"path": [
-												"cases"
+												"content"
+											],
+											"query": [
+												{
+													"key": "texts[]",
+													"value": "portal-title",
+													"equals": true
+												},
+												{
+													"key": "texts[]",
+													"value": "portal-description",
+													"equals": true
+												},
+												{
+													"key": "files[]",
+													"value": "portal-logo",
+													"equals": true
+												},
+												{
+													"key": "files[]",
+													"value": "admin-logo-login",
+													"equals": true
+												}
 											]
-										}
+										},
+										"description": null
 									},
 									"status": "Created",
 									"code": 201,
 									"_postman_previewlanguage": "json",
-									"_postman_previewtype": "text",
 									"header": [
 										{
 											"name": "Cache-Control",
@@ -9606,7 +10129,6 @@
 										}
 									],
 									"cookie": [],
-									"responseTime": 762,
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
@@ -9618,9 +10140,11 @@
 		},
 		{
 			"name": "Identities",
+			"description": null,
 			"item": [
 				{
 					"name": "Debug",
+					"description": null,
 					"item": [
 						{
 							"name": "/sandbox",
@@ -9652,7 +10176,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -9661,6 +10186,7 @@
 				},
 				{
 					"name": "Health",
+					"description": null,
 					"item": [
 						{
 							"name": "/health",
@@ -9778,7 +10304,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -9899,7 +10426,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -9908,6 +10436,7 @@
 				},
 				{
 					"name": "Config",
+					"description": null,
 					"item": [
 						{
 							"name": "/configs",
@@ -10025,7 +10554,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -10060,7 +10590,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -10095,404 +10626,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
-							},
-							"response": []
-						}
-					],
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Access",
-					"item": [
-						{
-							"name": "/accesses",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
 								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/accesses",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"accesses"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "identity",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "identity[0]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "identityUuid",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "identityUuid[0]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/accesses/{uuid}",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/accesses/ed778870-9915-42e3-ad21-142c8f655ae5?",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"accesses",
-										"ed778870-9915-42e3-ad21-142c8f655ae5"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/accesses",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\n    \"identity\": \"Staff\",\n    \"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\n    \"permissions\": [\n        {\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\n            \"key\": \"business_unit\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
-								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/accesses",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"accesses"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/accesses/{uuid}",
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"permissions\": [\n        {\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\n            \"key\": \"business_unit\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
-								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"accesses",
-										"11111111-1111-1111-1111-111111111111"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/accesses/{uuid}",
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"accesses",
-										"11111111-1111-1111-1111-111111111111"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/permissions",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/permissions",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"permissions"
-									]
-								}
+								"description": null
 							},
 							"response": []
 						}
@@ -10501,6 +10636,7 @@
 				},
 				{
 					"name": "Business Unit",
+					"description": null,
 					"item": [
 						{
 							"name": "/business-units",
@@ -10618,7 +10754,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -10653,7 +10790,8 @@
 										"business-units",
 										"25b88f35-eb37-4dae-9d89-668151e11a0d"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -10687,7 +10825,8 @@
 									"path": [
 										"business-units"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -10722,7 +10861,8 @@
 										"business-units",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -10757,7 +10897,8 @@
 										"business-units",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -10766,6 +10907,7 @@
 				},
 				{
 					"name": "Individual",
+					"description": null,
 					"item": [
 						{
 							"name": "/individuals",
@@ -10790,7 +10932,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/individuals?",
+									"raw": "{{identities}}{{environment}}/individuals",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -10913,7 +11055,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -10948,7 +11091,8 @@
 										"individuals",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -10982,7 +11126,8 @@
 									"path": [
 										"individuals"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11006,18 +11151,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/individuals/11111111-1111-1111-1111-111111111111",
+									"raw": "{{identities}}{{environment}}/individuals/d0daa7e4-07d1-47e6-93f2-0629adaa3b49",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
 									"path": [
 										"individuals",
-										"11111111-1111-1111-1111-111111111111"
+										"d0daa7e4-07d1-47e6-93f2-0629adaa3b49"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11052,7 +11198,8 @@
 										"individuals",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -11061,6 +11208,7 @@
 				},
 				{
 					"name": "Individual Persona",
+					"description": null,
 					"item": [
 						{
 							"name": "/individual-personas",
@@ -11085,7 +11233,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/individual-personas?",
+									"raw": "{{identities}}{{environment}}/individual-personas",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -11214,7 +11362,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11249,7 +11398,8 @@
 										"individual-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11273,7 +11423,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"owner\": \"BusinessUnit\",\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\n\t\"identity\": \"BusinessUnit\",\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\n\t\"title\": {\n\t\t\"en\": \"Persona 1\"\n\t},\n\t\"individual\": \"{{environment}}/individuals/11111111-1111-1111-1111-111111111111\",\n\t\"data\": {\n\t\t\"test\": \"test\"\n\t},\n\t\"version\": 1\n}"
+									"raw": "{\n\t\"owner\": \"BusinessUnit\",\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\n\t\"title\": {\n\t\t\"en\": \"Persona 1\"\n\t},\n\t\"individual\": \"{{environment}}/individuals/11111111-1111-1111-1111-111111111111\",\n\t\"data\": {\n\t\t\"test\": \"test\"\n\t},\n\t\"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{identities}}{{environment}}/individual-personas",
@@ -11283,7 +11433,8 @@
 									"path": [
 										"individual-personas"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11318,7 +11469,8 @@
 										"individual-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11353,7 +11505,8 @@
 										"individual-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -11362,6 +11515,7 @@
 				},
 				{
 					"name": "Organization",
+					"description": null,
 					"item": [
 						{
 							"name": "/organizations",
@@ -11386,7 +11540,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/organizations?",
+									"raw": "{{identities}}{{environment}}/organizations",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -11509,7 +11663,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11544,7 +11699,8 @@
 										"organizations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11578,7 +11734,8 @@
 									"path": [
 										"organizations"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11613,7 +11770,8 @@
 										"organizations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11648,7 +11806,8 @@
 										"organizations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -11657,6 +11816,7 @@
 				},
 				{
 					"name": "Organization Persona",
+					"description": null,
 					"item": [
 						{
 							"name": "/organization-personas",
@@ -11681,7 +11841,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/organization-personas?",
+									"raw": "{{identities}}{{environment}}/organization-personas",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -11810,7 +11970,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11845,7 +12006,8 @@
 										"organization-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11879,7 +12041,8 @@
 									"path": [
 										"organization-personas"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11914,7 +12077,8 @@
 										"organization-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -11949,7 +12113,8 @@
 										"organization-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -11958,6 +12123,7 @@
 				},
 				{
 					"name": "Anonymous",
+					"description": null,
 					"item": [
 						{
 							"name": "/anonymouses",
@@ -11982,7 +12148,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/anonymouses?",
+									"raw": "{{identities}}{{environment}}/anonymouses",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -12036,6 +12202,30 @@
 											"key": "ownerUuid[0]",
 											"value": "",
 											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "possessor",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "possessor[0]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "possessorUuid",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "possessorUuid[0]",
+											"value": "",
+											"equals": false,
 											"disabled": true
 										},
 										{
@@ -12105,7 +12295,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -12140,7 +12331,8 @@
 										"anonymouses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -12164,7 +12356,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"possessor\": \"Anonymous\",\r\n\t\"possessorUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{identities}}{{environment}}/anonymouses",
@@ -12174,7 +12366,8 @@
 									"path": [
 										"anonymouses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -12209,7 +12402,8 @@
 										"anonymouses",
 										"d57d855f-59bf-4af8-a420-4868fbb09e54"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -12244,7 +12438,8 @@
 										"anonymouses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -12253,6 +12448,7 @@
 				},
 				{
 					"name": "Anonymous Persona",
+					"description": null,
 					"item": [
 						{
 							"name": "/anonymous-personas",
@@ -12277,7 +12473,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/anonymous-personas?",
+									"raw": "{{identities}}{{environment}}/anonymous-personas",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -12331,6 +12527,30 @@
 											"key": "ownerUuid[0]",
 											"value": "",
 											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "possessor",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "possessor[0]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "possessorUuid",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "possessorUuid[0]",
+											"value": "",
+											"equals": false,
 											"disabled": true
 										},
 										{
@@ -12400,7 +12620,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -12435,7 +12656,8 @@
 										"anonymous-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -12459,7 +12681,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Persona 1\" \r\n\t},\r\n\t\"anonymous\": \"{{environment}}/anonymouses/11111111-1111-1111-1111-111111111111\",\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"possessor\": \"BusinessUnit\",\r\n\t\"possessorUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Persona 1\" \r\n\t},\r\n\t\"anonymous\": \"{{environment}}/anonymouses/11111111-1111-1111-1111-111111111111\",\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{identities}}{{environment}}/anonymous-personas",
@@ -12469,7 +12691,8 @@
 									"path": [
 										"anonymous-personas"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -12504,7 +12727,8 @@
 										"anonymous-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -12539,7 +12763,8 @@
 										"anonymous-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -12548,6 +12773,7 @@
 				},
 				{
 					"name": "Staff",
+					"description": null,
 					"item": [
 						{
 							"name": "/staffs",
@@ -12572,7 +12798,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/staffs?",
+									"raw": "{{identities}}{{environment}}/staffs",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -12695,7 +12921,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -12730,7 +12957,8 @@
 										"staffs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -12764,7 +12992,8 @@
 									"path": [
 										"staffs"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -12799,7 +13028,8 @@
 										"staffs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -12834,7 +13064,8 @@
 										"staffs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -12843,6 +13074,7 @@
 				},
 				{
 					"name": "Staff Persona",
+					"description": null,
 					"item": [
 						{
 							"name": "/staff-personas",
@@ -12867,7 +13099,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/staff-personas?",
+									"raw": "{{identities}}{{environment}}/staff-personas",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -12990,7 +13222,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13025,7 +13258,8 @@
 										"staff-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13059,7 +13293,8 @@
 									"path": [
 										"staff-personas"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13094,7 +13329,8 @@
 										"individual-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13129,7 +13365,561 @@
 										"individual-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Access",
+					"description": "",
+					"item": [
+						{
+							"name": "/accesses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/accesses",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"accesses"
+									]
+								},
+								"description": null
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Staff\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"entity\": \"BusinessUnit\",\r\n\t\t\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\t\t\"key\": \"data\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"accesses",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": null
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"6ea06713-ac93-43ed-b764-a8f04b520ffd\",\r\n\t\"assignee\": \"Staff\",\r\n\t\"assigneeUuid\": \"57f18605-10eb-4514-bb97-7fb4cde740c0\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"scope\": \"generic\",\r\n\t\t\t\"entity\": null,\r\n\t\t\t\"entityUuid\": null,\r\n\t\t\t\"key\": \"individual\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/accesses",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"accesses"
+									]
+								},
+								"description": null
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Staff\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"entity\": \"BusinessUnit\",\r\n\t\t\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\t\t\"key\": \"data\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"accesses",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": null
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"accesses",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": null
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Permission",
+					"description": "",
+					"item": [
+						{
+							"name": "/permissions/list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/permissions/list",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"permissions",
+										"list"
+									]
+								},
+								"description": null
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Role",
+					"description": null,
+					"item": [
+						{
+							"name": "/roles",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/roles",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"roles"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "assignee",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "assignee[0]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid[0]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "deletedAt[before]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "deletedAt[after]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "order[id]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "order[createdAt]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "order[updatedAt]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "order[deletedAt]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "order[owner]",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										}
+									]
+								},
+								"description": null
+							},
+							"response": []
+						},
+						{
+							"name": "/roles/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/roles/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"roles",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": null
+							},
+							"response": []
+						},
+						{
+							"name": "/roles",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\r\n\t\"title\": {\r\n\t\t\"en\": \"Role 1\",\r\n\t\t\"fr\": \"Role 1\"\r\n\t},\r\n\t\"permissions\": {\r\n\t\t\"identities\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"individual\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"individual_id\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n\t\"version\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/roles",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"roles"
+									]
+								},
+								"description": null
+							},
+							"response": []
+						},
+						{
+							"name": "/roles/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"version\": 1\r\n}"
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/roles/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"roles",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": null
+							},
+							"response": []
+						},
+						{
+							"name": "/roles/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/roles/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"roles",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -13140,9 +13930,11 @@
 		},
 		{
 			"name": "Records",
+			"description": null,
 			"item": [
 				{
 					"name": "Debug",
+					"description": null,
 					"item": [
 						{
 							"name": "/sandbox",
@@ -13174,7 +13966,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -13183,6 +13976,7 @@
 				},
 				{
 					"name": "Health",
+					"description": null,
 					"item": [
 						{
 							"name": "/health",
@@ -13214,7 +14008,8 @@
 									"path": [
 										"health"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13249,7 +14044,8 @@
 										"health",
 										"ping"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -13258,6 +14054,7 @@
 				},
 				{
 					"name": "Config",
+					"description": null,
 					"item": [
 						{
 							"name": "/configs",
@@ -13289,7 +14086,8 @@
 									"path": [
 										"configs"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13324,7 +14122,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13359,7 +14158,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -13368,6 +14168,7 @@
 				},
 				{
 					"name": "Access",
+					"description": null,
 					"item": [
 						{
 							"name": "/accesses",
@@ -13399,7 +14200,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13433,7 +14235,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13468,7 +14271,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13503,7 +14307,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13537,7 +14342,8 @@
 									"path": [
 										"permissions"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -13546,6 +14352,7 @@
 				},
 				{
 					"name": "Record",
+					"description": null,
 					"item": [
 						{
 							"name": "/records",
@@ -13577,7 +14384,8 @@
 									"path": [
 										"assets"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13612,7 +14420,8 @@
 										"assets",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13646,7 +14455,8 @@
 									"path": [
 										"assets"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13681,7 +14491,8 @@
 										"records",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13716,7 +14527,8 @@
 										"records",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -13725,6 +14537,7 @@
 				},
 				{
 					"name": "RecordAssociation",
+					"description": null,
 					"item": [
 						{
 							"name": "/record-associations",
@@ -13756,7 +14569,8 @@
 									"path": [
 										"record-associations"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13791,7 +14605,8 @@
 										"record-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13815,7 +14630,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"asset\": \"{{environment}}/assets/11111111-1111-1111-1111-111111111111\",\r\n\t\"entity\": \"Case\",\r\n\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n  \"record\": \"{{environment}}/records/11111111-1111-1111-1111-111111111111\",\r\n  \"entity\": \"Case\",\r\n  \"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n  \"owner\": \"BusinessUnit\",\r\n  \"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n  \"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{records}}{{environment}}/record-associations",
@@ -13825,7 +14640,8 @@
 									"path": [
 										"record-associations"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13860,7 +14676,8 @@
 										"record-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -13895,7 +14712,8 @@
 										"record-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -13906,9 +14724,11 @@
 		},
 		{
 			"name": "Services",
+			"description": null,
 			"item": [
 				{
 					"name": "Debug",
+					"description": null,
 					"item": [
 						{
 							"name": "/sandbox",
@@ -13940,7 +14760,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -13949,6 +14770,7 @@
 				},
 				{
 					"name": "Health",
+					"description": null,
 					"item": [
 						{
 							"name": "/health",
@@ -14066,7 +14888,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -14187,7 +15010,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -14196,6 +15020,7 @@
 				},
 				{
 					"name": "Config",
+					"description": null,
 					"item": [
 						{
 							"name": "/configs",
@@ -14313,7 +15138,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -14348,7 +15174,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -14383,7 +15210,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -14392,6 +15220,7 @@
 				},
 				{
 					"name": "Access",
+					"description": null,
 					"item": [
 						{
 							"name": "/accesses",
@@ -14509,7 +15338,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -14630,7 +15460,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -14664,7 +15495,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -14699,7 +15531,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -14734,7 +15567,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -14768,7 +15602,8 @@
 									"path": [
 										"permissions"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -14777,6 +15612,7 @@
 				},
 				{
 					"name": "Statistic",
+					"description": null,
 					"item": [
 						{
 							"name": "/statistics",
@@ -14894,7 +15730,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -15016,7 +15853,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -15138,7 +15976,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -15260,7 +16099,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -15382,7 +16222,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -15391,6 +16232,7 @@
 				},
 				{
 					"name": "Category",
+					"description": null,
 					"item": [
 						{
 							"name": "/categories",
@@ -15580,7 +16422,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -15615,7 +16458,8 @@
 										"categories",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -15649,7 +16493,8 @@
 									"path": [
 										"categories"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -15684,7 +16529,8 @@
 										"categories",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -15719,7 +16565,8 @@
 										"categories",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -15728,6 +16575,7 @@
 				},
 				{
 					"name": "Service",
+					"description": null,
 					"item": [
 						{
 							"name": "/services",
@@ -15929,7 +16777,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -15964,7 +16813,8 @@
 										"services",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -15998,7 +16848,8 @@
 									"path": [
 										"services"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16033,7 +16884,8 @@
 										"services",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16068,7 +16920,8 @@
 										"services",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -16077,6 +16930,7 @@
 				},
 				{
 					"name": "Scenario",
+					"description": null,
 					"item": [
 						{
 							"name": "/scenarios",
@@ -16290,7 +17144,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16325,7 +17180,8 @@
 										"scenarios",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16361,7 +17217,8 @@
 										"11111111-1111-1111-1111-111111111111",
 										"form"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16398,7 +17255,8 @@
 										"form",
 										"translation"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16432,7 +17290,8 @@
 									"path": [
 										"scenarios"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16456,7 +17315,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"data\": {\n\t\t\"firstName\": \"Morgan\",\n\t\t\"description\": \"Big pothole at street 1 and 2\"\n\t}\n}"
+									"raw": "{\n  \"data\": {\n    \"description\": \"Description ...\"\n  }\n}\n"
 								},
 								"url": {
 									"raw": "{{services}}{{environment}}/scenarios/11111111-1111-1111-1111-111111111111/submissions",
@@ -16468,7 +17327,8 @@
 										"11111111-1111-1111-1111-111111111111",
 										"submissions"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16503,7 +17363,8 @@
 										"scenarios",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16538,7 +17399,8 @@
 										"scenarios",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -16547,6 +17409,7 @@
 				},
 				{
 					"name": "Submission",
+					"description": null,
 					"item": [
 						{
 							"name": "/submissions",
@@ -16760,7 +17623,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16795,7 +17659,8 @@
 										"submissions",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16829,7 +17694,8 @@
 									"path": [
 										"submissions"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16864,7 +17730,8 @@
 										"submissions",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -16899,7 +17766,8 @@
 										"submissions",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -16933,13 +17801,13 @@
 									"raw": "{\n\t\"test\": 123\n}"
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/functions/test?test=123",
+									"raw": "{{services}}{{environment}}/functions/function_test_1?test=123",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
 										"functions",
-										"test"
+										"function_test_1"
 									],
 									"query": [
 										{
@@ -16960,9 +17828,11 @@
 		},
 		{
 			"name": "Tasks",
+			"description": null,
 			"item": [
 				{
 					"name": "Debug",
+					"description": null,
 					"item": [
 						{
 							"name": "/sandbox",
@@ -16994,7 +17864,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -17003,6 +17874,7 @@
 				},
 				{
 					"name": "Health",
+					"description": null,
 					"item": [
 						{
 							"name": "/health",
@@ -17120,7 +17992,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -17241,7 +18114,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -17250,6 +18124,7 @@
 				},
 				{
 					"name": "Config",
+					"description": null,
 					"item": [
 						{
 							"name": "/configs",
@@ -17367,7 +18242,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -17402,7 +18278,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -17437,7 +18314,8 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -17446,6 +18324,7 @@
 				},
 				{
 					"name": "Access",
+					"description": null,
 					"item": [
 						{
 							"name": "/accesses",
@@ -17563,7 +18442,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -17684,7 +18564,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -17718,7 +18599,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -17753,7 +18635,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -17788,7 +18671,8 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -17822,7 +18706,8 @@
 									"path": [
 										"permissions"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -17831,6 +18716,7 @@
 				},
 				{
 					"name": "Task",
+					"description": null,
 					"item": [
 						{
 							"name": "/tasks",
@@ -17855,7 +18741,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/tasks?",
+									"raw": "{{tasks}}{{environment}}/tasks",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
@@ -17889,7 +18775,7 @@
 										},
 										{
 											"key": "ownerUuid",
-											"value": "8454c987-cbc5-4a24-ba1a-d420283caabd",
+											"value": "",
 											"equals": true,
 											"disabled": true
 										},
@@ -17901,7 +18787,7 @@
 										},
 										{
 											"key": "identity",
-											"value": "Staff",
+											"value": "",
 											"equals": true,
 											"disabled": true
 										},
@@ -17996,7 +18882,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -18031,7 +18918,8 @@
 										"tasks",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -18067,7 +18955,8 @@
 										"11111111-1111-1111-1111-111111111111",
 										"claim"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -18103,7 +18992,8 @@
 										"11111111-1111-1111-1111-111111111111",
 										"claim"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -18139,7 +19029,8 @@
 										"11111111-1111-1111-1111-111111111111",
 										"form"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -18176,7 +19067,8 @@
 										"form",
 										"translation"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -18210,7 +19102,8 @@
 									"path": [
 										"tasks"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -18245,7 +19138,8 @@
 										"tasks",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -18281,7 +19175,8 @@
 										"11111111-1111-1111-1111-111111111111",
 										"submission"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -18316,7 +19211,8 @@
 										"tasks",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -18325,6 +19221,7 @@
 				},
 				{
 					"name": "Submission",
+					"description": null,
 					"item": [
 						{
 							"name": "/submissions",
@@ -18356,7 +19253,8 @@
 									"path": [
 										"submissions"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -18391,7 +19289,8 @@
 										"submissions",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						},
@@ -18415,7 +19314,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"task\": \"{{environment}}/tasks/11111111-1111-1111-1111-111111111111\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"data\": {\r\n\t},\r\n\t\"state\": 1,\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"task\": \"{{environment}}/tasks/2b18bc01-a02b-4b54-9bff-2259cb421d0e\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\r\n\t\"data\": {\r\n\t\t\"test\": \"test\"\r\n\t},\r\n\t\"state\": 1,\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{tasks}}{{environment}}/submissions",
@@ -18425,7 +19324,8 @@
 									"path": [
 										"submissions"
 									]
-								}
+								},
+								"description": null
 							},
 							"response": []
 						}
@@ -18435,8 +19335,41 @@
 			]
 		},
 		{
-			"name": "Logs",
+			"name": "Security",
+			"description": "",
 			"item": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "91566c11-b3aa-4c75-b71b-2b569671e067",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "01579bd5-45c0-492c-9f5c-d040f0f8e36e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }

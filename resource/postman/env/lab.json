@@ -3,98 +3,103 @@
   "name": "DigitalState Lab",
   "values": [
     {
-      "enabled": true,
       "key": "env",
       "value": "lab",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "schema",
       "value": "http",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "host",
       "value": "lab.ds",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "assets",
       "value": "{{schema}}://api.assets.{{host}}",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "authentication",
       "value": "{{schema}}://api.authentication.{{host}}",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "camunda",
       "value": "{{schema}}://api.camunda.{{host}}/engine-rest",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "cases",
       "value": "{{schema}}://api.cases.{{host}}",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "cms",
       "value": "{{schema}}://api.cms.{{host}}",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "formio",
       "value": "{{schema}}://api.formio.{{host}}",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "identities",
       "value": "{{schema}}://api.identities.{{host}}",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "records",
       "value": "{{schema}}://api.records.{{host}}",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "services",
       "value": "{{schema}}://api.services.{{host}}",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "tasks",
       "value": "{{schema}}://api.tasks.{{host}}",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "environment",
       "value": "/app_dev.php",
+      "enabled": true,
       "type": "text"
     },
     {
-      "enabled": true,
       "key": "token",
       "value": "",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "token_formio",
+      "value": "",
+      "enabled": true,
       "type": "text"
     }
   ],
-  "timestamp": 1511905562083,
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2017-11-28T21:46:51.538Z",
-  "_postman_exported_using": "Postman/5.3.2"
+  "_postman_exported_at": "2018-03-02T22:11:52.740Z",
+  "_postman_exported_using": "Postman/6.0.8"
 }
