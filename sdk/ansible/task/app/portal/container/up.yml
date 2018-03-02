@@ -12,8 +12,8 @@
             portal_network: '{{ project }}_default'
             portal_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             portal_virtual_host: '{{ portal.host }}'
-            portal_directory: '{{ directory }}/portal'
             portal_discovery_host: '{{ discovery.host }}'
+            portal_directory: '{{ directory }}/portal'
       - name: Up portal container
         include_role:
             name: app/portal/container/up

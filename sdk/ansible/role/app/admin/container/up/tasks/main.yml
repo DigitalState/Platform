@@ -24,18 +24,18 @@
             path: '/srv/admin/{{ admin_env_file }}'
             regexp: '^VIRTUAL_HOST='
             line: 'VIRTUAL_HOST={{ admin_virtual_host }}'
+      - name: Configure discovery host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/admin/{{ admin_env_file }}'
+            regexp: '^DISCOVERY_HOST='
+            line: 'DISCOVERY_HOST={{ admin_discovery_host }}'
       - name: Configure directory environment variable
         lineinfile:
             create: yes
             path: '/srv/admin/{{ admin_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ admin_directory }}'
-      - name: Configure discovery environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/admin/{{ admin_env_file }}'
-            regexp: '^DISCOVERY_HOST='
-            line: 'DISCOVERY={{ admin_discovery_host }}'
   when: admin_env_file is not none
 
 - name: Up admin container
@@ -47,5 +47,5 @@
       NETWORK: '{{ admin_network }}'
       PROXY_HOST: '{{ admin_proxy_host }}'
       VIRTUAL_HOST: '{{ admin_virtual_host }}'
+      DISCOVERY_HOST: '{{ admin_discovery_host }}'
       DIRECTORY: '{{ admin_directory }}'
-      DISCOVERY: '{{ admin_discovery_host }}'

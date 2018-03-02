@@ -24,18 +24,18 @@
             path: '/srv/portal/{{ portal_env_file }}'
             regexp: '^VIRTUAL_HOST='
             line: 'VIRTUAL_HOST={{ portal_virtual_host }}'
+      - name: Configure discovery host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/portal/{{ portal_env_file }}'
+            regexp: '^DISCOVERY_HOST='
+            line: 'DISCOVERY_HOST={{ portal_discovery_host }}'
       - name: Configure directory environment variable
         lineinfile:
             create: yes
             path: '/srv/portal/{{ portal_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ portal_directory }}'
-      - name: Configure discovery environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/portal/{{ portal_env_file }}'
-            regexp: '^DISCOVERY='
-            line: 'DISCOVERY_HOST={{ portal_discovery_host }}'
   when: portal_env_file is not none
 
 - name: Up portal container
@@ -47,5 +47,5 @@
       NETWORK: '{{ portal_network }}'
       PROXY_HOST: '{{ portal_proxy_host }}'
       VIRTUAL_HOST: '{{ portal_virtual_host }}'
+      DISCOVERY_HOST: '{{ portal_discovery_host }}'
       DIRECTORY: '{{ portal_directory }}'
-      DISCOVERY: '{{ portal_discovery_host }}'
