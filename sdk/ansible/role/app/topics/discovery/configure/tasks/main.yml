@@ -1,0 +1,6 @@
+---
+- name: Configure topics discovery host setting
+  lineinfile:
+      path: '{{ topics_discovery_config_file }}'
+      regexp: '^\s{4}discovery_host:'
+      line: '    discovery_host: {{ topics_discovery_host }}'

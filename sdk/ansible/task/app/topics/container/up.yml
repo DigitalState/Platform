@@ -12,6 +12,7 @@
             topics_network: '{{ project }}_default'
             topics_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             topics_virtual_host: '{{ topics.host }}'
+            topics_discovery_host: '{{ discovery.host }}'
             topics_directory: '{{ directory }}/topics'
             topics_jwt_private_key: '{{ directory }}/topics/var/jwt/key'
             topics_jwt_public_key: '{{ directory }}/topics/var/jwt/key.pub'

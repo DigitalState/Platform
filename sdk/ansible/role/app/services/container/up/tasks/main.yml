@@ -24,6 +24,12 @@
             path: '/srv/services/{{ services_env_file }}'
             regexp: '^VIRTUAL_HOST='
             line: 'VIRTUAL_HOST={{ services_virtual_host }}'
+      - name: Configure discovery host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/services/{{ services_env_file }}'
+            regexp: '^DISCOVERY_HOST='
+            line: 'DISCOVERY_HOST={{ services_discovery_host }}'
       - name: Configure directory environment variable
         lineinfile:
             create: yes

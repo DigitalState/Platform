@@ -1,0 +1,10 @@
+---
+- name: Define records discovery variables
+  set_fact:
+      records_discovery_host: '{{ discovery.host }}'
+
+- name: Configure records discovery settings
+  include_role:
+      name: app/records/discovery/configure
+  when: records.enabled
+  tags: [records]

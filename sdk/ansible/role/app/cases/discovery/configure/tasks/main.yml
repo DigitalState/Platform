@@ -1,0 +1,6 @@
+---
+- name: Configure cases discovery host setting
+  lineinfile:
+      path: '{{ cases_discovery_config_file }}'
+      regexp: '^\s{4}discovery_host:'
+      line: '    discovery_host: {{ cases_discovery_host }}'

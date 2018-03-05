@@ -1,0 +1,3 @@
+---
+services_discovery_config_file: /srv/services/app/config/parameters.yml
+services_discovery_host: api.discovery.ds

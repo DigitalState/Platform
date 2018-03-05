@@ -4,6 +4,7 @@ identities_compose_project_name: ds_identities
 identities_network: ds_default
 identities_proxy_host: 127.0.0.1
 identities_virtual_host: api.identities.ds
+identities_discovery_host: api.discovery.ds
 identities_directory: /srv/identities
 identities_jwt_private_key: ./var/jwt/key
 identities_jwt_public_key: ./var/jwt/key.pub

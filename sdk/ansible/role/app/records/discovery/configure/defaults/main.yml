@@ -1,0 +1,3 @@
+---
+records_discovery_config_file: /srv/records/app/config/parameters.yml
+records_discovery_host: api.discovery.ds

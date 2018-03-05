@@ -24,6 +24,12 @@
             path: '/srv/cms/{{ cms_env_file }}'
             regexp: '^VIRTUAL_HOST='
             line: 'VIRTUAL_HOST={{ cms_virtual_host }}'
+      - name: Configure discovery host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cms/{{ cms_env_file }}'
+            regexp: '^DISCOVERY_HOST='
+            line: 'DISCOVERY_HOST={{ cms_discovery_host }}'
       - name: Configure directory environment variable
         lineinfile:
             create: yes

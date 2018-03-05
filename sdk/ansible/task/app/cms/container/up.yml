@@ -12,6 +12,7 @@
             cms_network: '{{ project }}_default'
             cms_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             cms_virtual_host: '{{ cms.host }}'
+            cms_discovery_host: '{{ discovery.host }}'
             cms_directory: '{{ directory }}/cms'
             cms_jwt_private_key: '{{ directory }}/cms/var/jwt/key'
             cms_jwt_public_key: '{{ directory }}/cms/var/jwt/key.pub'

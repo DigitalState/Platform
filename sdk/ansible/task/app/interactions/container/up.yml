@@ -12,6 +12,7 @@
             interactions_network: '{{ project }}_default'
             interactions_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             interactions_virtual_host: '{{ interactions.host }}'
+            interactions_discovery_host: '{{ discovery.host }}'
             interactions_directory: '{{ directory }}/interactions'
             interactions_jwt_private_key: '{{ directory }}/interactions/var/jwt/key'
             interactions_jwt_public_key: '{{ directory }}/interactions/var/jwt/key.pub'

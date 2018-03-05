@@ -12,6 +12,7 @@
             assets_network: '{{ project }}_default'
             assets_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             assets_virtual_host: '{{ assets.host }}'
+            assets_discovery_host: '{{ discovery.host }}'
             assets_directory: '{{ directory }}/assets'
             assets_jwt_private_key: '{{ directory }}/assets/var/jwt/key'
             assets_jwt_public_key: '{{ directory }}/assets/var/jwt/key.pub'

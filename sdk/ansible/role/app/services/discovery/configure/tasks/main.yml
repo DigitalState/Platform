@@ -1,0 +1,6 @@
+---
+- name: Configure services discovery host setting
+  lineinfile:
+      path: '{{ services_discovery_config_file }}'
+      regexp: '^\s{4}discovery_host:'
+      line: '    discovery_host: {{ services_discovery_host }}'

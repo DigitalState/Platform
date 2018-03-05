@@ -12,6 +12,7 @@
             formio_network: '{{ project }}_default'
             formio_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             formio_virtual_host: '{{ formio.host }}'
+            formio_discovery_host: '{{ discovery.host }}'
             formio_directory: '{{ directory }}/formio'
             formio_username: '{{ formio.username }}'
             formio_password: '{{ formio.password }}'

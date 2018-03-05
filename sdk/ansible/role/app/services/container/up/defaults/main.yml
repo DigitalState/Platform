@@ -4,6 +4,7 @@ services_compose_project_name: ds_services
 services_network: ds_default
 services_proxy_host: 127.0.0.1
 services_virtual_host: api.services.ds
+services_discovery_host: api.discovery.ds
 services_directory: /srv/services
 services_jwt_private_key: ./var/jwt/key
 services_jwt_public_key: ./var/jwt/key.pub

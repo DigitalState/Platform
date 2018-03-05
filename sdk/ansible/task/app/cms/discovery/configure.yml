@@ -1,0 +1,10 @@
+---
+- name: Define cms discovery variables
+  set_fact:
+      cms_discovery_host: '{{ discovery.host }}'
+
+- name: Configure cms discovery settings
+  include_role:
+      name: app/cms/discovery/configure
+  when: cms.enabled
+  tags: [cms]

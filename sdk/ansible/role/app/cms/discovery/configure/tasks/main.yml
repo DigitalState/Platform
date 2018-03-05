@@ -1,0 +1,6 @@
+---
+- name: Configure cms discovery host setting
+  lineinfile:
+      path: '{{ cms_discovery_config_file }}'
+      regexp: '^\s{4}discovery_host:'
+      line: '    discovery_host: {{ cms_discovery_host }}'

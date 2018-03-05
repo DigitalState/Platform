@@ -1,0 +1,10 @@
+---
+- name: Define services discovery variables
+  set_fact:
+      services_discovery_host: '{{ discovery.host }}'
+
+- name: Configure services discovery settings
+  include_role:
+      name: app/services/discovery/configure
+  when: services.enabled
+  tags: [services]

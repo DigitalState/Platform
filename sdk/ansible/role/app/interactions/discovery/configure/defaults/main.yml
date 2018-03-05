@@ -1,0 +1,3 @@
+---
+interactions_discovery_config_file: /srv/interactions/app/config/parameters.yml
+interactions_discovery_host: api.discovery.ds

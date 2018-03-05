@@ -1,0 +1,3 @@
+---
+assets_discovery_config_file: /srv/assets/app/config/parameters.yml
+assets_discovery_host: api.discovery.ds

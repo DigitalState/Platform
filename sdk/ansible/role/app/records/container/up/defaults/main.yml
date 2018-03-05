@@ -4,6 +4,7 @@ records_compose_project_name: ds_records
 records_network: ds_default
 records_proxy_host: 127.0.0.1
 records_virtual_host: api.records.ds
+records_discovery_host: api.discovery.ds
 records_directory: /srv/records
 records_jwt_private_key: ./var/jwt/key
 records_jwt_public_key: ./var/jwt/key.pub

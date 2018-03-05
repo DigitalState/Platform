@@ -12,6 +12,7 @@
             identities_network: '{{ project }}_default'
             identities_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             identities_virtual_host: '{{ identities.host }}'
+            identities_discovery_host: '{{ discovery.host }}'
             identities_directory: '{{ directory }}/identities'
             identities_jwt_private_key: '{{ directory }}/identities/var/jwt/key'
             identities_jwt_public_key: '{{ directory }}/identities/var/jwt/key.pub'

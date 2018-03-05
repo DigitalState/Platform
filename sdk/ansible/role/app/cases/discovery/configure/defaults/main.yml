@@ -1,0 +1,3 @@
+---
+cases_discovery_config_file: /srv/cases/app/config/parameters.yml
+cases_discovery_host: api.discovery.ds

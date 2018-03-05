@@ -1,0 +1,10 @@
+---
+- name: Define topics discovery variables
+  set_fact:
+      topics_discovery_host: '{{ discovery.host }}'
+
+- name: Configure topics discovery settings
+  include_role:
+      name: app/topics/discovery/configure
+  when: topics.enabled
+  tags: [topics]

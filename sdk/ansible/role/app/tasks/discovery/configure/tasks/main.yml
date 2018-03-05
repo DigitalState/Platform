@@ -1,0 +1,6 @@
+---
+- name: Configure tasks discovery host setting
+  lineinfile:
+      path: '{{ tasks_discovery_config_file }}'
+      regexp: '^\s{4}discovery_host:'
+      line: '    discovery_host: {{ tasks_discovery_host }}'

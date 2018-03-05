@@ -30,6 +30,12 @@
             path: '/srv/camunda/{{ camunda_env_file }}'
             regexp: '^VIRTUAL_HOST='
             line: 'VIRTUAL_HOST={{ camunda_virtual_host }}'
+      - name: Configure discovery host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/camunda/{{ camunda_env_file }}'
+            regexp: '^DISCOVERY_HOST='
+            line: 'DISCOVERY_HOST={{ camunda_discovery_host }}'
       - name: Configure directory environment variable
         lineinfile:
             create: yes

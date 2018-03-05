@@ -1,0 +1,6 @@
+---
+- name: Configure assets discovery host setting
+  lineinfile:
+      path: '{{ assets_discovery_config_file }}'
+      regexp: '^\s{4}discovery_host:'
+      line: '    discovery_host: {{ assets_discovery_host }}'

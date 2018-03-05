@@ -12,6 +12,7 @@
             tasks_network: '{{ project }}_default'
             tasks_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             tasks_virtual_host: '{{ tasks.host }}'
+            tasks_discovery_host: '{{ discovery.host }}'
             tasks_directory: '{{ directory }}/tasks'
             tasks_jwt_private_key: '{{ directory }}/tasks/var/jwt/key'
             tasks_jwt_public_key: '{{ directory }}/tasks/var/jwt/key.pub'

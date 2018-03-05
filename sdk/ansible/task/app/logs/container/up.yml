@@ -13,6 +13,7 @@
             logs_network: '{{ project }}_default'
             logs_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             logs_virtual_host: '{{ logs.host }}'
+            logs_discovery_host: '{{ discovery.host }}'
             logs_directory: '{{ directory }}/logs'
       - name: Up logs container
         include_role:

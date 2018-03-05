@@ -12,6 +12,7 @@
             services_network: '{{ project }}_default'
             services_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             services_virtual_host: '{{ services.host }}'
+            services_discovery_host: '{{ discovery.host }}'
             services_directory: '{{ directory }}/services'
             services_jwt_private_key: '{{ directory }}/services/var/jwt/key'
             services_jwt_public_key: '{{ directory }}/services/var/jwt/key.pub'

@@ -1,0 +1,10 @@
+---
+- name: Define cases discovery variables
+  set_fact:
+      cases_discovery_host: '{{ discovery.host }}'
+
+- name: Configure cases discovery settings
+  include_role:
+      name: app/cases/discovery/configure
+  when: cases.enabled
+  tags: [cases]

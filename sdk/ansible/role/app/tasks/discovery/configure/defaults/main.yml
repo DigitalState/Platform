@@ -1,0 +1,3 @@
+---
+tasks_discovery_config_file: /srv/tasks/app/config/parameters.yml
+tasks_discovery_host: api.discovery.ds

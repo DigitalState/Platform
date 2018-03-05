@@ -1,0 +1,6 @@
+---
+- name: Configure authentication discovery host setting
+  lineinfile:
+      path: '{{ authentication_discovery_config_file }}'
+      regexp: '^\s{4}discovery_host:'
+      line: '    discovery_host: {{ authentication_discovery_host }}'
