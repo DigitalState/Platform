@@ -19,7 +19,7 @@ all:
             transport: smtp
             host: 127.0.0.1
             port: ~
-            username: admin@localhost
+            username: mail@localhost
             password: ~
         fixtures: dev
         user:
@@ -34,12 +34,12 @@ all:
         admin:
             enabled: true
             repository: https://github.com/DigitalState/Admin.git
-            version: develop
+            version: 57125be3445744041b71900130996ce56702fb28
             host: admin.lab.ds
         assets:
             enabled: true
             repository: https://github.com/DigitalState/Assets.git
-            version: develop
+            version: abcf3e32525877bd543ff2330c237a0526e5407f
             host: api.assets.lab.ds
             database:
                 host: assets_db
@@ -50,7 +50,7 @@ all:
         authentication:
             enabled: true
             repository: https://github.com/DigitalState/Authentication.git
-            version: develop
+            version: ffb88b2a9aa627bd0764c4ec6c64e873ef23c25e
             host: api.authentication.lab.ds
             database:
                 host: authentication_db
@@ -61,14 +61,14 @@ all:
         camunda:
             enabled: true
             repository: https://github.com/DigitalState/Camunda.git
-            version: develop
+            version: 4c2b06e300fbcbc4d4f6d9795916dcc99b13e38a
             host: api.camunda.lab.ds
             username: admin
             password: admin
         cases:
             enabled: true
             repository: https://github.com/DigitalState/Cases.git
-            version: develop
+            version: b7551419a0076714778006ad50e08f42bcffc694
             host: api.cases.lab.ds
             database:
                 host: cases_db
@@ -79,7 +79,7 @@ all:
         cms:
             enabled: true
             repository: https://github.com/DigitalState/Cms.git
-            version: develop
+            version: 8df14094d1f3b31eb6637d337535a41d8dfeaed9
             host: api.cms.lab.ds
             database:
                 host: cms_db
@@ -90,31 +90,31 @@ all:
         core:
             enabled: true
             repository: https://github.com/DigitalState/Core.git
-            version: develop
+            version: 2bab29ee62f6c3d8e4d4b26c395ecc8ecb07bb80
         discovery:
             enabled: true
             repository: https://github.com/DigitalState/Discovery.git
-            version: develop
+            version: 3ef8f3c22851691c30d53e25baf548b7d104d74a
             host: api.discovery.lab.ds
         documentation:
             enabled: true
             repository: https://github.com/DigitalState/Documentation.git
-            version: master
+            version: 090d57226595f927ebe986caab7539ab14e543c6
         formio:
             enabled: true
             repository: https://github.com/DigitalState/Formio.git
-            version: develop
+            version: ea268d53eb9643605f4e1971ee7d3d55861346b6
             host: api.formio.lab.ds
             username: admin
             password: admin
         guide:
             enabled: true
             repository: https://github.com/DigitalState/Guide.git
-            version: master
+            version: fcc2940c9c754b1b2a0f87f0a949d63655324696
         identities:
             enabled: true
             repository: https://github.com/DigitalState/Identities.git
-            version: develop
+            version: c3026b272f4025764f8f12ad02b4fe0a51e1c3bf
             host: api.identities.lab.ds
             database:
                 host: identities_db
@@ -125,7 +125,7 @@ all:
         interactions:
             enabled: false
             repository: https://github.com/DigitalState/Interactions.git
-            version: develop
+            version: cee54088ef8da64688e3095fd61b090f8f8da366
             host: api.interactions.lab.ds
             database:
                 host: interactions_db
@@ -136,27 +136,27 @@ all:
         logs:
             enabled: false
             repository: https://github.com/DigitalState/Logs.git
-            version: develop
+            version: 460bbfa8b04edd3f7805277a63ac3ffd106905cf
             host: api.logs.lab.ds
         monitor:
             enabled: false
             repository: https://github.com/DigitalState/Monitor.git
-            version: develop
+            version: c4196fbfed9366ac10c4034295c29d779de7120b
             host: monitor.lab.ds
         portal:
             enabled: true
-            version: develop
+            version: a7a16ad5d50d7ad16a0c142027cad606da9c2949
             repository: https://github.com/DigitalState/Portal.git
             host: portal.lab.ds
         proxy:
             enabled: true
             repository: https://github.com/DigitalState/Proxy.git
-            version: develop
+            version: 99edf6f81ca5e3eea26b70d7cb7873cf0848c897
             port: 80
         records:
             enabled: true
-            version: develop
             repository: https://github.com/DigitalState/Records.git
+            version: f4e9d11eae9b55c2bf90ebf1736ade2a28a8fffc
             host: api.records.lab.ds
             database:
                 host: records_db
@@ -167,7 +167,7 @@ all:
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
-            version: develop
+            version: c418ef1e3a3e2c3146700dfcf445ef9c112e2d85
             host: api.services.lab.ds
             database:
                 host: services_db
@@ -178,7 +178,7 @@ all:
         tasks:
             enabled: false
             repository: https://github.com/DigitalState/Tasks.git
-            version: develop
+            version: f3266af2fe3453ec8afb6e0520d17c74613d7057
             host: api.tasks.lab.ds
             database:
                 host: tasks_db
@@ -189,7 +189,7 @@ all:
         topics:
             enabled: false
             repository: https://github.com/DigitalState/Topics.git
-            version: develop
+            version: 0e0b9ff2f1139d729bb941b3f33f7fc62a712ba0
             host: api.topics.lab.ds
             database:
                 host: topics_db
@@ -200,4 +200,4 @@ all:
         ui:
             enabled: true
             repository: https://github.com/DigitalState/Ui.git
-            version: develop
+            version: c934ca2030dae92093e99db8e92d8f12741ea8fe

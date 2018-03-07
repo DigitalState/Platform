@@ -21,7 +21,7 @@ all:
             transport: smtp
             host: 127.0.0.1
             port: ~
-            username: admin@localhost
+            username: mail@localhost
             password: ~
         fixtures: ~
         user:
@@ -36,170 +36,170 @@ all:
         admin:
             enabled: true
             repository: https://github.com/DigitalState/Admin.git
-            version: master
+            version: 57125be3445744041b71900130996ce56702fb28
             host: admin.prod.ds
         assets:
             enabled: true
             repository: https://github.com/DigitalState/Assets.git
-            version: master
+            version: abcf3e32525877bd543ff2330c237a0526e5407f
             host: api.assets.prod.ds
             database:
                 host: assets_db
                 port: 5432
                 name: assets
                 username: assets
-                password: assets
+                password: ~
         authentication:
             enabled: true
             repository: https://github.com/DigitalState/Authentication.git
-            version: master
+            version: ffb88b2a9aa627bd0764c4ec6c64e873ef23c25e
             host: api.authentication.prod.ds
             database:
                 host: authentication_db
                 port: 5432
                 name: authentication
                 username: authentication
-                password: authentication
+                password: ~
         camunda:
             enabled: true
             repository: https://github.com/DigitalState/Camunda.git
-            version: master
+            version: 4c2b06e300fbcbc4d4f6d9795916dcc99b13e38a
             host: api.camunda.prod.ds
-            username: admin
+            username: admin@staff.ds
             password: ~
         cases:
             enabled: true
             repository: https://github.com/DigitalState/Cases.git
-            version: master
+            version: b7551419a0076714778006ad50e08f42bcffc694
             host: api.cases.prod.ds
             database:
                 host: cases_db
                 port: 5432
                 name: cases
                 username: cases
-                password: cases
+                password: ~
         cms:
             enabled: true
             repository: https://github.com/DigitalState/Cms.git
-            version: master
+            version: 8df14094d1f3b31eb6637d337535a41d8dfeaed9
             host: api.cms.prod.ds
             database:
                 host: cms_db
                 port: 5432
                 name: cms
                 username: cms
-                password: cms
+                password: ~
         core:
             enabled: false
             repository: https://github.com/DigitalState/Core.git
-            version: master
+            version: 2bab29ee62f6c3d8e4d4b26c395ecc8ecb07bb80
         discovery:
             enabled: true
             repository: https://github.com/DigitalState/Discovery.git
-            version: master
+            version: 3ef8f3c22851691c30d53e25baf548b7d104d74a
             host: api.discovery.prod.ds
         documentation:
             enabled: false
             repository: https://github.com/DigitalState/Documentation.git
-            version: master
+            version: 090d57226595f927ebe986caab7539ab14e543c6
         formio:
             enabled: true
             repository: https://github.com/DigitalState/Formio.git
-            version: master
+            version: ea268d53eb9643605f4e1971ee7d3d55861346b6
             host: api.formio.prod.ds
-            username: admin
+            username: admin@staff.ds
             password: ~
         guide:
             enabled: false
             repository: https://github.com/DigitalState/Guide.git
-            version: master
+            version: fcc2940c9c754b1b2a0f87f0a949d63655324696
         identities:
             enabled: true
             repository: https://github.com/DigitalState/Identities.git
-            version: master
+            version: c3026b272f4025764f8f12ad02b4fe0a51e1c3bf
             host: api.identities.prod.ds
             database:
                 host: identities_db
                 port: 5432
                 name: identities
                 username: identities
-                password: identities
+                password: ~
         interactions:
             enabled: false
             repository: https://github.com/DigitalState/Interactions.git
-            version: master
+            version: cee54088ef8da64688e3095fd61b090f8f8da366
             host: api.interactions.prod.ds
             database:
                 host: interactions_db
                 port: 5432
                 name: interactions
                 username: interactions
-                password: interactions
+                password: ~
         logs:
             enabled: false
             repository: https://github.com/DigitalState/Logs.git
-            version: master
+            version: 460bbfa8b04edd3f7805277a63ac3ffd106905cf
             host: api.logs.prod.ds
         monitor:
             enabled: false
             repository: https://github.com/DigitalState/Monitor.git
-            version: master
+            version: c4196fbfed9366ac10c4034295c29d779de7120b
             host: monitor.prod.ds
         portal:
             enabled: true
-            version: master
             repository: https://github.com/DigitalState/Portal.git
+            version: a7a16ad5d50d7ad16a0c142027cad606da9c2949
             host: portal.prod.ds
         proxy:
             enabled: true
             repository: https://github.com/DigitalState/Proxy.git
-            version: master
-            port: 443
+            version: 99edf6f81ca5e3eea26b70d7cb7873cf0848c897
+            port: 80
         records:
             enabled: true
-            version: master
             repository: https://github.com/DigitalState/Records.git
+            version: f4e9d11eae9b55c2bf90ebf1736ade2a28a8fffc
             host: api.records.prod.ds
             database:
                 host: records_db
                 port: 5432
                 name: records
                 username: records
-                password: records
+                password: ~
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
-            version: master
+            version: c418ef1e3a3e2c3146700dfcf445ef9c112e2d85
             host: api.services.prod.ds
             database:
                 host: services_db
                 port: 5432
                 name: services
                 username: services
-                password: services
+                password: ~
         tasks:
             enabled: false
             repository: https://github.com/DigitalState/Tasks.git
-            version: master
+            version: f3266af2fe3453ec8afb6e0520d17c74613d7057
             host: api.tasks.prod.ds
             database:
                 host: tasks_db
                 port: 5432
                 name: tasks
                 username: tasks
-                password: tasks
+                password: ~
         topics:
             enabled: false
             repository: https://github.com/DigitalState/Topics.git
-            version: master
+            version: 0e0b9ff2f1139d729bb941b3f33f7fc62a712ba0
             host: api.topics.prod.ds
             database:
                 host: topics_db
                 port: 5432
                 name: topics
                 username: topics
-                password: topics
+                password: ~
         ui:
             enabled: false
             repository: https://github.com/DigitalState/Ui.git
-            version: master
+            version: c934ca2030dae92093e99db8e92d8f12741ea8fe
