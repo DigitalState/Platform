@@ -80,6 +80,12 @@
             line: 'DATABASE_PASSWORD={{ tasks_database_password }}'
   when: tasks_env_file is not none
 
+- name: Log into docker
+  docker_login:
+      email: '{{ tasks_credential.split(":")[0] }}'
+      username: '{{ tasks_credential.split(":")[1] }}'
+      password: '{{ tasks_credential.split(":")[2] }}'
+
 - name: Up tasks container
   docker_service:
       project_src: /srv/tasks

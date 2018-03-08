@@ -14,6 +14,8 @@ services:
             - ./resource:/root/resource
             - ./sdk/ansible:/etc/ansible
         secrets:
+            - source: docker_credential
+              target: docker/credential
             - source: git_credential
               target: git/credential
             - source: ssh_test_key_private
@@ -34,6 +36,8 @@ services:
               target: ssh/prod/key.pub
 
 secrets:
+    docker_credential:
+        file: ./sdk/docker/credential
     git_credential:
         file: ./sdk/git/credential
     ssh_test_key_private:

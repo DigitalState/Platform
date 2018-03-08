@@ -29,6 +29,8 @@
 !/resource/jwt/test/.gitkeep
 
 /sdk/ansible/**/*.retry
+/sdk/docker/*
+!/sdk/docker/.gitkeep
 /sdk/git/*
 !/sdk/git/.gitkeep
 /sdk/ssh/*
