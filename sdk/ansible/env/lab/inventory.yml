@@ -103,7 +103,7 @@ all:
         formio:
             enabled: true
             repository: https://github.com/DigitalState/Formio.git
-            version: 0.1.0
+            version: 0.1.1
             host: api.formio.lab.ds
             username: admin@staff.ds
             password: admin
