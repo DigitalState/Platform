@@ -8,7 +8,7 @@ It also provides useful bulk commands to help during development.
 
 - [Synopsis](#synopsis)
 - [Deployment](#deployment)
-- [Post-Deploy Quickstart](#post-deploy-quickstart)
+- [Explore and test microservices](#explore-and-test-microservices)
 
 ## Synopsis
 
@@ -171,7 +171,7 @@ This command downloads repositories, configures settings, builds Docker images, 
 
 ![Overview](images/overview.png)
 
-## Explore and test APIs and UIs
+## Explore and test microservices
 
 Now that the dockerized application is up and running, it is time to test it!
 
