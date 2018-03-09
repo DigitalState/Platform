@@ -14,7 +14,7 @@ all:
         jwt:
             private_key: /root/resource/jwt/lab/key
             public_key: /root/resource/jwt/lab/key.pub
-            key_pass_phase: ~
+            key_pass_phrase: ~
         mail:
             transport: smtp
             host: 127.0.0.1

@@ -1,3 +1,3 @@
 ---
 assets_config_file: /srv/assets/app/config/parameters.yml
-jwt_key_pass_phrase: ~
+assets_jwt_key_pass_phrase: ~

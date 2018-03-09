@@ -1,4 +1,8 @@
 ---
+- name: Define topics jwt variables
+  set_fact:
+      topics_jwt_key_pass_phrase: '{{ jwt.key_pass_phrase }}'
+
 - name: Configure topics jwt key pass phrase
   include_role:
       name: app/topics/jwt/configure

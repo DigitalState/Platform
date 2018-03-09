@@ -1,3 +1,3 @@
 ---
 cases_config_file: /srv/cases/app/config/parameters.yml
-jwt_key_pass_phrase: ~
+cases_jwt_key_pass_phrase: ~

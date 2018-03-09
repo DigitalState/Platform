@@ -11,10 +11,6 @@
   hosts: server
   become: true
   tasks:
-      - name: Define jwt variables
-        set_fact:
-            jwt_key_pass_phrase: '{{ jwt.key_pass_phase }}'
-
       - name: Include compiled list
         include_tasks: '{{ file }}'
         with_items: '{{ hostvars["sdk"]["files"] }}'
