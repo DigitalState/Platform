@@ -10,165 +10,179 @@ It also provides useful bulk commands to help during development.
 - [Installation](#installation)
 - [Quickstart](#quickstart)
 
-## Synopsis
+## Install Synopsis
 
-1. **Install** Git and Docker on your local machine.
-2. **Download** the sdk repository.
-3. **Boot** the sdk container.
-4. **Enter** the sdk container console.
-5. **Generate** jwt keys for the authentication system.
-6. **Configure** the Ansible environment.
-7. **Add** dns entries to your host file.
-8. **Deploy** the dockerized application locally.
+1. **[Install Git and Docker](#1-install-git-and-docker)** on your local machine.
+2. **[Download](#2-download)** the sdk repository.
+3. **[Boot](#3-boot)** the sdk container.
+4. **[Enter the sdk](#4-enter-the-sdk)** container console.
+5. **[Generate JWT keys](#5-generate-jwt-keys)** for the authentication system.
+6. **[Configure](#6-configure)** the Ansible environment.
+7. **[Add DNS entries](#7-add-dns-entries)** to your host file.
+8. **[Deploy](#8-deploy)** the dockerized application locally.
 
-## Installation
+### 1. Install Git and Docker
 
-1. To begin, you will need to install Git (for [Windows](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_windows), for [Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_mac), for [Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_linux)) and Docker (for [Windows](https://www.docker.com/docker-windows), for [Mac](https://docs.docker.com/docker-for-mac), for [Linux](https://docs.docker.com/engine/installation/#server)) on your local machine.
+To begin, you will need to install Git (for [Windows](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_windows), for [Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_mac), for [Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_linux)) and Docker (for [Windows](https://www.docker.com/docker-windows), for [Mac](https://docs.docker.com/docker-for-mac), for [Linux](https://docs.docker.com/engine/installation/#server)) on your local machine.
 
-   > Note: Docker Toolbox for Windows and Mac is not compatible.
+> Note: Docker Toolbox for Windows and Mac is not compatible.
 
-2. Open a command prompt and download the repository:
+### 2. Download
 
-   ```
-   > cd C:\Users\Demo
-   > git clone https://github.com/DigitalState/Sdk.git
-   > cd Sdk
-   ```
+Open a command prompt and download the repository:
 
-3. Boot the sdk container:
+```
+> cd C:\Users\Demo
+> git clone https://github.com/DigitalState/Sdk.git
+> cd Sdk
+```
 
-   ```
-   > docker-compose up -d
-   ```
-   
-   > Note: Docker may prompt you to share your drive (for Docker volumes).
+### 3. Boot
 
-   Confirm the container has been booted successfully:
+Boot the sdk container:
 
-   ```
-   > docker ps
-   ```
-   
-   You should see the following output:
-   
-   ```
-   CONTAINER ID     IMAGE       COMMAND       CREATED           STATUS           PORTS     NAMES
-   4ceab8511b85     sdk_sdk     "/bin/sh"     3 seconds ago     Up 2 seconds               sdk
-   ```
+```
+> docker-compose up -d
+```
 
-4. Enter the sdk container console:
+> Note: Docker may prompt you to share your drive (for Docker volumes).
 
-    ```
-    > docker exec -it sdk /bin/sh
-    ```
+Confirm the container has been booted successfully:
 
-    Point to the lab environment directory:
+```
+> docker ps
+```
 
-    ```
-    $ cd /etc/ansible/env/lab
-    ```
+You should see the following output:
 
-   At this point, you have the sdk container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
+```
+CONTAINER ID     IMAGE       COMMAND       CREATED           STATUS           PORTS     NAMES
+4ceab8511b85     sdk_sdk     "/bin/sh"     3 seconds ago     Up 2 seconds               sdk
+```
 
-5. Generate jwt keys for the authentication system:
+### 4. Enter the sdk
 
-    > The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
-    > The authentication system requires a private and public key to generate and validate tokens. 
-    > Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
+Enter the sdk container console:
 
-    ```
-    $ openssl genrsa -out /root/resource/jwt/lab/key -aes256 4096
-    ```
-    
-    > Note: The command above will prompt you for a key pass phrase, take note of it for later.
-    
-    ```
-    $ openssl rsa -pubout -in /root/resource/jwt/lab/key -out /root/resource/jwt/lab/key.pub
-    ```
+```
+> docker exec -it sdk /bin/sh
+```
 
-6. Configure the Ansible lab environment:
+Point to the lab environment directory:
 
-    > The lab environment uses the Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
+```
+$ cd /etc/ansible/env/lab
+```
 
-    The [encryption.secret](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L13) config needs to be set to a random, unique and secret 32 characters string.
+At this point, you have the sdk container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
-    The [jwt.key_pass_phrase](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L17) config needs to be set to the jwt key pass phrase defined at step #5.
+### 5. Generate JWT keys
 
-    The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L9) config needs to be set to the absolute path of the sdk `app` directory. The value will vary depending on your local machine's operating system:
+Generate jwt keys for the authentication system:
 
-    **Windows**
+> The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
+> The authentication system requires a private and public key to generate and validate tokens. 
+> Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
 
-    Under Docker for Windows with Hyper-V, the value should be equal to the Hyper-V mounted directory path. For example, if you have put the sdk repository at `C:\Users\Demo\Sdk`, then the directory config value should be `/c/Users/Demo/Sdk/app`.
+```
+$ openssl genrsa -out /root/resource/jwt/lab/key -aes256 4096
+```
 
-    **Mac**
+> Note: The command above will prompt you for a key pass phrase, take note of it for later.
 
-    Under Docker for Mac, the value should simply be equal to the normal directory path, as long as you have shared the local `/Users` directory with the virtual machine. For example, if you have put the sdk repository at `/Users/demo/sdk`, then the directory config value should be `/Users/demo/sdk/app`.
+```
+$ openssl rsa -pubout -in /root/resource/jwt/lab/key -out /root/resource/jwt/lab/key.pub
+```
 
-    **Linux**
+### 6. Configure
 
-    Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path. For example, if you have put the sdk repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
+Configure the Ansible lab environment:
 
-7. Add dns entries to your host file:
+> The lab environment uses the Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
 
-    > The lab environment uses a local dns under *.lab.ds.
-    
-    Locate the host file on your local machine.
-    
-    **Windows**
-    
-    Under Windows, the file is located at `C:\Windows\System32\drivers\etc\host`.
-    
-    **Mac**
-    
-    Under Mac, the file is located at `/etc/hosts`.
-    
-    **Linux**
-    
-    Under Linux, the file is located at `/etc/hosts`.
-    
-    Add the following entries:
-    
-    ```
-    127.0.0.1 admin.lab.ds
-    127.0.0.1 portal.lab.ds
-    127.0.0.1 api.assets.lab.ds
-    127.0.0.1 api.authentication.lab.ds
-    127.0.0.1 api.camunda.lab.ds
-    127.0.0.1 api.cases.lab.ds
-    127.0.0.1 api.cms.lab.ds
-    127.0.0.1 api.discovery.lab.ds
-    127.0.0.1 api.formio.lab.ds
-    127.0.0.1 api.identities.lab.ds
-    127.0.0.1 api.services.lab.ds
-    127.0.0.1 api.records.lab.ds
-    ```
+The [encryption.secret](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L13) config needs to be set to a random, unique and secret 32 characters string.
 
-8. Deploy the dockerized application locally:
-    
-    ```
-    ansible-playbook ./deploy.yml
-    ```
+The [jwt.key_pass_phrase](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L17) config needs to be set to the jwt key pass phrase defined at step #5.
 
-    This command essentially downloads repositories, configures settings, builds Docker images, boots up containers, migrates databases and loads data fixtures for each microservices.
-    
-    > Note: Depending on the power of your machine and internet speed, this command may take a while to finish.
+The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L9) config needs to be set to the absolute path of the sdk `app` directory. The value will vary depending on your local machine's operating system:
 
-    ![Overview](images/overview.png)
+**Windows**
 
-## Quickstart
+Under Docker for Windows with Hyper-V, the value should be equal to the Hyper-V mounted directory path. For example, if you have put the sdk repository at `C:\Users\Demo\Sdk`, then the directory config value should be `/c/Users/Demo/Sdk/app`.
+
+**Mac**
+
+Under Docker for Mac, the value should simply be equal to the normal directory path, as long as you have shared the local `/Users` directory with the virtual machine. For example, if you have put the sdk repository at `/Users/demo/sdk`, then the directory config value should be `/Users/demo/sdk/app`.
+
+**Linux**
+
+Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path. For example, if you have put the sdk repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
+
+### 7. Add DNS Entries
+
+Add DNS entries to your host file:
+
+> The lab environment uses a local dns under *.lab.ds.
+
+Locate the host file on your local machine.
+
+**Windows**
+
+Under Windows, the file is located at `C:\Windows\System32\drivers\etc\host`.
+
+**Mac**
+
+Under Mac, the file is located at `/etc/hosts`.
+
+**Linux**
+
+Under Linux, the file is located at `/etc/hosts`.
+
+Add the following entries:
+
+```
+127.0.0.1 admin.lab.ds
+127.0.0.1 portal.lab.ds
+127.0.0.1 api.assets.lab.ds
+127.0.0.1 api.authentication.lab.ds
+127.0.0.1 api.camunda.lab.ds
+127.0.0.1 api.cases.lab.ds
+127.0.0.1 api.cms.lab.ds
+127.0.0.1 api.discovery.lab.ds
+127.0.0.1 api.formio.lab.ds
+127.0.0.1 api.identities.lab.ds
+127.0.0.1 api.services.lab.ds
+127.0.0.1 api.records.lab.ds
+```
+
+### 8. Deploy
+
+Deploy the dockerized application locally:
+
+```
+ansible-playbook ./deploy.yml
+```
+
+This command downloads repositories, configures settings, builds Docker images, boots up containers, migrates databases and loads data fixtures for each microservice.
+
+> Note: Depending on the power of your machine and internet speed, this command may take a while to finish.
+
+![Overview](images/overview.png)
+
+## Post-Deploy Quickstart
 
 Now that the dockerized application is up and running, it is time to test it!
 
-- Portal UI: http://portal.lab.ds/ (admin@staff.ds / admin)
-- Admin UI: http://admin.lab.ds/ (morgan@individual.ds / morgan)
+- Portal UI: http://portal.lab.ds/ (Username: morgan@individual.ds / Password: morgan)
+- Admin UI: http://admin.lab.ds/ (admin@staff.ds / admin)
 - Formio: http://api.formio.lab.ds/ (admin@staff.ds / admin)
 - Camunda: http://api.camunda.lab.ds/camunda
 - Postman: [collection](/resource/postman/collection.json) / [environment](/resource/postman/env/lab.json)
 
 
-> The DigitalState architecture is essentially a collection of microservices, all exposing various api endpoints to read, create, edit and delete certain data or achieve certain goals. 
+> The DigitalState architecture is essentially a collection of business-focused microservices, all exposing various APIs to create, read, update, and delete data or achieve certain goals.
 
-In order to test, we suggest using an api gui tool, such as [Postman](https://www.getpostman.com/). The sdk provides a pre-made Postman [collection file](../../../resource/postman/collection.json) mapping all microservices api endpoints and an [environment file](../../../resource/postman/env/lab.json) ready to be imported. Here are the instructions on how to import [collections](https://www.getpostman.com/docs/postman/collections/creating_collections) and [environments](https://www.getpostman.com/docs/postman/environments_and_globals/manage_environments) in Postman.
+In order to interact with the API, we suggest using an API gui tool, such as [Postman](https://www.getpostman.com/) (use the desktop version, and **not** the Chrome version). The sdk provides a pre-made Postman [collection file](../../../resource/postman/collection.json) mapping all microservices API endpoints and an [environment file](../../../resource/postman/env/lab.json) ready to be imported. Here are the instructions on how to import [collections](https://www.getpostman.com/docs/postman/collections/creating_collections) and [environments](https://www.getpostman.com/docs/postman/environments_and_globals/manage_environments) in Postman.
 
 After importing the files, a new collection titled "DigitalState" will appear on the left and a new environment titled "DigitalState Lab" will appear in the dropdown top right.
 
@@ -184,9 +198,9 @@ Under the "DigitalState" collection, navigate to `Authentication -> Login -> /to
 }
 ```
 
-Once a token is obtained, it can be used to access any other protected api endpoints that requires user authentication. Typically, you would need to copy this token to your clipboard and paste it in the next api query you wish to make in Postman. However, our Postman collection has been programmed to keep track of the last logged in user and use the current token on subsequent api requests automatically.
+Once a token is obtained, it can be used to access any other protected API endpoints that requires user authentication. Typically, you would need to copy this token to your clipboard and paste it in the next API query you wish to make in Postman. However, our Postman collection has been programmed to keep track of the last logged in user and use the current token on subsequent API requests automatically.
 
-Next, nagivate to `Authentication -> User -> /users`. Click the "Send" button. This action will send a GET request to users api endpoint and return a list of users:
+Next, nagivate to `Authentication -> User -> /users`. Click the "Send" button. This action will send a GET request to users API endpoint and return a list of users:
 
 ```
 [
