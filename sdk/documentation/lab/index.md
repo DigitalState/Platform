@@ -7,6 +7,7 @@ It also provides useful bulk commands to help during development.
 ## Table of Contents
 
 - [Synopsis](#synopsis)
+- [Deployment](#deployment)
 - [Post-Deploy Quickstart](#post-deploy-quickstart)
 
 ## Synopsis
@@ -18,7 +19,9 @@ It also provides useful bulk commands to help during development.
 5. **[Generate JWT keys](#5-generate-jwt-keys)** for the authentication system.
 6. **[Configure](#6-configure)** the Ansible environment.
 7. **[Add DNS entries](#7-add-dns-entries)** to your host file.
-8. **[Deploy](#8-deploy)** the dockerized application locally.
+8. **[Deploy](#8-execute-deploy-command)** the dockerized application locally.
+
+## Deployment
 
 ### 1. Install Git and Docker
 
@@ -154,9 +157,9 @@ Add the following entries:
 127.0.0.1 api.records.lab.ds
 ```
 
-### 8. Deploy
+### 8. Execute Deploy Command
 
-Deploy the dockerized application locally:
+Deploy the dockerized application locally with the Ansible deploy command:
 
 ```
 ansible-playbook ./deploy.yml
