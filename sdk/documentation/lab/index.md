@@ -20,7 +20,6 @@ It also provides useful bulk commands to help during development.
 6. **Configure** the Ansible environment.
 7. **Add** dns entries to your host file.
 8. **Deploy** the dockerized application locally.
-9. **Test** the application.
 
 ## Installation
 
@@ -137,11 +136,11 @@ It also provides useful bulk commands to help during development.
     127.0.0.1 api.camunda.lab.ds
     127.0.0.1 api.cases.lab.ds
     127.0.0.1 api.cms.lab.ds
+    127.0.0.1 api.discovery.lab.ds
     127.0.0.1 api.formio.lab.ds
     127.0.0.1 api.identities.lab.ds
     127.0.0.1 api.services.lab.ds
     127.0.0.1 api.records.lab.ds
-    127.0.0.1 api.tasks.lab.ds
     ```
 
 8. Deploy the dockerized application locally:
@@ -156,7 +155,15 @@ It also provides useful bulk commands to help during development.
 
     ![Overview](images/overview.png)
 
-9. Now that the dockerized application is up and running, it is time to test it!
+## Quickstart
+
+- Portal UI: http://portal.lab.ds/ (admin@staff.ds / admin)
+- Admin UI: http://admin.lab.ds/ (morgan@individual.ds / morgan)
+- Formio: http://api.formio.lab.ds/ (admin@staff.ds / admin)
+- Camunda: http://api.camunda.lab.ds/camunda
+- Postman: [collection](/resource/postman/collection.json) / [environment](/resource/postman/env/lab.json)
+
+    Now that the dockerized application is up and running, it is time to test it!
 
     > The DigitalState architecture is essentially a collection of microservices, all exposing various api endpoints to read, create, edit and delete certain data or achieve certain goals. 
 
@@ -193,11 +200,3 @@ It also provides useful bulk commands to help during development.
         ...
     ]
     ```
-
-## Quickstart
-
-- Portal UI: http://portal.lab.ds/ (admin@staff.ds / admin)
-- Admin UI: http://admin.lab.ds/ (morgan@individual.ds / morgan)
-- Formio: http://api.formio.lab.ds/ (admin@staff.ds / admin)
-- Camunda: http://api.camunda.lab.ds/camunda
-- Postman: [collection](/resource/postman/collection.json) / [environment](/resource/postman/env/lab.json)
