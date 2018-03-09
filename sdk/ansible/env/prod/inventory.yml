@@ -169,7 +169,7 @@ all:
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
-            version: 0.1.1
+            version: 0.1.2
             host: api.services.prod.ds
             database:
                 host: services_db
