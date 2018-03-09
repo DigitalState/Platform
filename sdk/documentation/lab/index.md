@@ -171,7 +171,7 @@ This command downloads repositories, configures settings, builds Docker images, 
 
 ![Overview](images/overview.png)
 
-## Post-Deploy Quickstart
+## Explore and test APIs and UIs
 
 Now that the dockerized application is up and running, it is time to test it!
 
