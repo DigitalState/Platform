@@ -79,7 +79,6 @@ It also provides useful bulk commands to help during development.
 5. Generate jwt keys for the authentication system.
 
     > The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
-    > The authentication system requires a private and public key to generate and validate tokens. 
     > Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
 
     ```
