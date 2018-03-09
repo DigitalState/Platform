@@ -8,9 +8,6 @@ It also provides useful bulk commands to help during development.
 
 - [Synopsis](#synopsis)
 - [Installation](#installation)
-- [Configuration](#configuration)
-- [Deployment](#deployment)
-- [Test](#test)
 - [Quickstart](#quickstart)
 
 ## Synopsis
@@ -74,18 +71,17 @@ It also provides useful bulk commands to help during development.
 
    At this point, you have the sdk container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
-## Configuration
-
 5. Generate jwt keys for the authentication system.
 
     > The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
+    > The authentication system requires a private and public key to generate and validate tokens. 
     > Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
 
     ```
     $ openssl genrsa -out /root/resource/jwt/lab/key -aes256 4096
     ```
     
-    > Note: This command will prompt you for a key pass phrase, take note of it for later.
+    > Note: The command above will prompt you for a key pass phrase, take note of it for later.
     
     ```
     $ openssl rsa -pubout -in /root/resource/jwt/lab/key -out /root/resource/jwt/lab/key.pub
@@ -154,8 +150,6 @@ It also provides useful bulk commands to help during development.
     127.0.0.1 api.tasks.lab.ds
     ```
 
-## Deployment
-
 8. Deploy the dockerized application locally:
     
     ```
@@ -167,8 +161,6 @@ It also provides useful bulk commands to help during development.
     > Note: Depending on the power of your machine and internet speed, this command may take a while to finish.
 
     ![Overview](images/overview.png)
-
-## Test
 
 9. Now that the dockerized application is up and running, it is time to test it!
 
