@@ -176,7 +176,7 @@ all:
                 username: services
                 password: services
         tasks:
-            enabled: true
+            enabled: false
             repository: https://github.com/DigitalState/Tasks.git
             version: 0.1.0
             host: api.tasks.lab.ds
