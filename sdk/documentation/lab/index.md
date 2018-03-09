@@ -19,7 +19,7 @@ It also provides useful bulk commands to help during development.
 5. **[Generate JWT keys](#5-generate-jwt-keys)** for the authentication system.
 6. **[Configure](#6-configure)** the Ansible environment.
 7. **[Add DNS entries](#7-add-dns-entries)** to your host file.
-8. **[Execute Deploy Command](#8-execute-deploy-command)** with Ansible.
+8. **[Execute deploy command](#8-execute-deploy-command)** with Ansible.
 
 ## Deployment
 
@@ -157,7 +157,7 @@ Add the following entries:
 127.0.0.1 api.records.lab.ds
 ```
 
-### 8. Execute Deploy Command
+### 8. Execute deploy command
 
 Deploy the dockerized application locally with the Ansible deploy command:
 
