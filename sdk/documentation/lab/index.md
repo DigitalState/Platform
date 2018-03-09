@@ -71,7 +71,7 @@ It also provides useful bulk commands to help during development.
 
    At this point, you have the sdk container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
-5. Generate jwt keys for the authentication system.
+5. Generate jwt keys for the authentication system:
 
     > The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
     > The authentication system requires a private and public key to generate and validate tokens. 
@@ -87,7 +87,7 @@ It also provides useful bulk commands to help during development.
     $ openssl rsa -pubout -in /root/resource/jwt/lab/key -out /root/resource/jwt/lab/key.pub
     ```
 
-6. Configure the Ansible lab environment.
+6. Configure the Ansible lab environment:
 
     > The lab environment uses the Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
 
@@ -115,7 +115,7 @@ It also provides useful bulk commands to help during development.
 
     For example, if you have put the sdk repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
 
-7. Add dns entries to your host file.
+7. Add dns entries to your host file:
 
     > The lab environment uses a local dns under *.lab.ds.
     
