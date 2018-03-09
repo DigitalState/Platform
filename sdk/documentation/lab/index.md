@@ -99,21 +99,15 @@ It also provides useful bulk commands to help during development.
 
     **Windows**
 
-    Under Docker for Windows with Hyper-V, the value should be equal to the Hyper-V mounted directory path.
-
-    For example, if you have put the sdk repository at `C:\Users\Demo\Sdk`, then the directory config value should be `/c/Users/Demo/Sdk/app`.
+    Under Docker for Windows with Hyper-V, the value should be equal to the Hyper-V mounted directory path. For example, if you have put the sdk repository at `C:\Users\Demo\Sdk`, then the directory config value should be `/c/Users/Demo/Sdk/app`.
 
     **Mac**
 
-    Under Docker for Mac, the value should simply be equal to the normal directory path, as long as you have shared the local `/Users` directory with the virtual machine.
-
-    For example, if you have put the sdk repository at `/Users/demo/sdk`, then the directory config value should be `/Users/demo/sdk/app`.
+    Under Docker for Mac, the value should simply be equal to the normal directory path, as long as you have shared the local `/Users` directory with the virtual machine. For example, if you have put the sdk repository at `/Users/demo/sdk`, then the directory config value should be `/Users/demo/sdk/app`.
 
     **Linux**
 
-    Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path.
-
-    For example, if you have put the sdk repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
+    Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path. For example, if you have put the sdk repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
 
 7. Add dns entries to your host file:
 
