@@ -6,10 +6,10 @@ It also provides useful bulk commands to help during development.
 
 ## Table of Contents
 
-- [Install Synopsis](#install-synopsis)
+- [Synopsis](#synopsis)
 - [Post-Deploy Quickstart](#post-deploy-quickstart)
 
-## Install Synopsis
+## Synopsis
 
 1. **[Install Git and Docker](#1-install-git-and-docker)** on your local machine.
 2. **[Download](#2-download)** the sdk repository.
