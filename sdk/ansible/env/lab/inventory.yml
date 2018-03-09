@@ -167,7 +167,7 @@ all:
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
-            version: 0.1.0
+            version: 0.1.1
             host: api.services.lab.ds
             database:
                 host: services_db
