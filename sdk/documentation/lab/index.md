@@ -205,7 +205,7 @@ Prior to deploying the dockerized application, a few actions are required by the
 ## Quickstart
 
 - Portal UI: http://portal.lab.ds/ + admin@staff.ds/admin
-- Admin UI: http://portal.lab.ds/ + morgan@individual.ds/morgan
+- Admin UI: http://admin.lab.ds/ + morgan@individual.ds/morgan
 - Formio: http://api.formio.lab.ds/ + admin@staff.ds/admin
 - Camunda: http://api.camunda.lab.ds/camunda
 - Postman collection: https://github.com/DigitalState/Sdk/tree/0.1.2/resource/postman
