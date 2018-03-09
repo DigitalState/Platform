@@ -6,9 +6,8 @@ It also provides useful bulk commands to help during development.
 
 ## Table of Contents
 
-- [Synopsis](#synopsis)
-- [Installation](#installation)
-- [Quickstart](#quickstart)
+- [Install Synopsis](#install-synopsis)
+- [Post-Deploy Quickstart](#post-deploy-quickstart)
 
 ## Install Synopsis
 
