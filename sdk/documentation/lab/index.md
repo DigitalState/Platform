@@ -19,7 +19,7 @@ It also provides useful bulk commands to help during development.
 5. **[Generate JWT keys](#5-generate-jwt-keys)** for the authentication system.
 6. **[Configure](#6-configure)** the Ansible environment.
 7. **[Add DNS entries](#7-add-dns-entries)** to your host file.
-8. **[Deploy](#8-execute-deploy-command)** the dockerized application locally.
+8. **[Execute Deploy Command](#8-execute-deploy-command)** with Ansible.
 
 ## Deployment
 
