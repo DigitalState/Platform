@@ -11,7 +11,7 @@ It also provides useful bulk commands to help during development.
 - [Configuration](#configuration)
 - [Deployment](#deployment)
 - [Test](#test)
-- [Sitemap](#sitemap)
+- [Quickstart](#quickstart)
 
 ## Synopsis
 
@@ -202,71 +202,10 @@ Prior to deploying the dockerized application, a few actions are required by the
     ]
     ```
 
-## Sitemap
+## Quickstart
 
-### Admin
-
-- [Ui](http://admin.lab.ds/)
-
-### Assets
-
-- [Api documentation](http://api.assets.lab.ds/app_dev.php/)
-- [Api (prod)](http://api.assets.lab.ds/)
-- [Api (dev)](http://api.assets.lab.ds/app_dev.php/)
-- [Database](http://api.assets.lab.ds/adminer.php) ([connection string](https://github.com/DigitalState/Sdk/blob/0.1.2/sdk/ansible/env/lab/inventory.yml#L44))
-
-### Authentication
-
-- [Api documentation](http://api.authentication.lab.ds/app_dev.php/)
-- [Api (prod)](http://api.authentication.lab.ds/)
-- [Api (dev)](http://api.authentication.lab.ds/app_dev.php/)
-- [Database](http://api.authentication.lab.ds/adminer.php) ([connection string](https://github.com/DigitalState/Sdk/blob/0.1.2/sdk/ansible/env/lab/inventory.yml#L55))
-
-### Camunda
-
-- [Ui](http://api.camunda.lab.ds/camunda)
-- [Api](http://api.camunda.lab.ds/engine-rest)
-
-### Cases
-
-- [Api documentation](http://api.cases.lab.ds/app_dev.php/)
-- [Api (prod)](http://api.cases.lab.ds/)
-- [Api (dev)](http://api.cases.lab.ds/app_dev.php/)
-- [Database](http://api.cases.lab.ds/adminer.php) ([connection string](https://github.com/DigitalState/Sdk/blob/0.1.2/sdk/ansible/env/lab/inventory.yml#L73))
-
-### Cms
-
-- [Api documentation](http://api.cms.lab.ds/app_dev.php/)
-- [Api (prod)](http://api.cms.lab.ds/)
-- [Api (dev)](http://api.cms.lab.ds/app_dev.php/)
-- [Database](http://api.cms.lab.ds/adminer.php) ([connection string](https://github.com/DigitalState/Sdk/blob/0.1.2/sdk/ansible/env/lab/inventory.yml#L84))
-
-### Discovery
-
-- [Api](http://api.discovery.lab.ds/)
-
-### Formio
-
-- [Ui](http://api.formio.lab.ds/#/) ([Username](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L108) / [Password](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L109))
-- [Api](http://api.formio.lab.ds)
-
-### Identities
-
-- [Api documentation](http://api.identities.lab.ds/app_dev.php/)
-- [Api (prod)](http://api.identities.lab.ds/)
-- [Api (dev)](http://api.identities.lab.ds/app_dev.php/)
-- [Database](http://api.identities.lab.ds/adminer.php) ([connection string](https://github.com/DigitalState/Sdk/blob/0.1.2/sdk/ansible/env/lab/inventory.yml#L119))
-
-### Records
-
-- [Api documentation](http://api.records.lab.ds/app_dev.php/)
-- [Api (prod)](http://api.records.lab.ds/)
-- [Api (dev)](http://api.records.lab.ds/app_dev.php/)
-- [Database](http://api.records.lab.ds/adminer.php) ([connection string](https://github.com/DigitalState/Sdk/blob/0.1.2/sdk/ansible/env/lab/inventory.yml#L161))
-
-### Services
-
-- [Api documentation](http://api.services.lab.ds/app_dev.php/)
-- [Api (prod)](http://api.services.lab.ds/)
-- [Api (dev)](http://api.services.lab.ds/app_dev.php/)
-- [Database](http://api.services.lab.ds/adminer.php) ([connection string](https://github.com/DigitalState/Sdk/blob/0.1.2/sdk/ansible/env/lab/inventory.yml#L172))
+- Portal UI: http://portal.lab.ds/ + admin@staff.ds/admin
+- Admin UI: http://portal.lab.ds/ + morgan@individual.ds/morgan
+- Formio: http://api.formio.lab.ds/ + admin@staff.ds/admin
+- Camunda: http://api.camunda.lab.ds/camunda
+- Postman collection: https://github.com/DigitalState/Sdk/tree/0.1.2/resource/postman
