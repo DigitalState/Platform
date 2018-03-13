@@ -36,7 +36,7 @@ all:
         admin:
             enabled: true
             repository: https://github.com/DigitalState/Admin.git
-            version: 0.1.0
+            version: 0.1.2
             host: admin.dev.ds
         assets:
             enabled: true
@@ -148,7 +148,7 @@ all:
         portal:
             enabled: true
             repository: https://github.com/DigitalState/Portal.git
-            version: 0.1.0
+            version: 0.1.2
             host: portal.dev.ds
         proxy:
             enabled: true
