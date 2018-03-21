@@ -148,12 +148,12 @@ all:
         portal:
             enabled: true
             repository: https://github.com/DigitalState/Portal.git
-            version: 0.1.2
+            version: 0.1.4
             host: portal.dev.ds
         proxy:
             enabled: true
             repository: https://github.com/DigitalState/Proxy.git
-            version: 0.1.4
+            version: 0.1.0
             port: 80
         records:
             enabled: true
