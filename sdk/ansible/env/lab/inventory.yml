@@ -34,7 +34,7 @@ all:
         admin:
             enabled: true
             repository: https://github.com/DigitalState/Admin.git
-            version: 0.1.2
+            version: 0.1.4
             host: admin.lab.ds
         assets:
             enabled: true
@@ -145,7 +145,7 @@ all:
             host: monitor.lab.ds
         portal:
             enabled: true
-            version: 0.1.2
+            version: 0.1.4
             repository: https://github.com/DigitalState/Portal.git
             host: portal.lab.ds
         proxy:
@@ -167,7 +167,7 @@ all:
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
-            version: 0.1.3
+            version: 0.1.5
             host: api.services.lab.ds
             database:
                 host: services_db
@@ -178,7 +178,7 @@ all:
         tasks:
             enabled: false
             repository: https://github.com/DigitalState/Tasks.git
-            version: 0.1.0
+            version: 0.1.2
             host: api.tasks.lab.ds
             database:
                 host: tasks_db
