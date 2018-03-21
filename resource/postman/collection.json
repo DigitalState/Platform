@@ -1,8 +1,7 @@
 {
 	"info": {
-		"name": "DigitalState",
 		"_postman_id": "d243aa76-ef89-68c3-9b46-53c5e2900dad",
-		"description": "",
+		"name": "DigitalState",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -44,8 +43,7 @@
 									"path": [
 										"sandbox"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -86,8 +84,7 @@
 									"path": [
 										"health"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -122,8 +119,7 @@
 										"health",
 										"ping"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -164,8 +160,7 @@
 									"path": [
 										"configs"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -200,8 +195,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -236,8 +230,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -278,8 +271,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -313,8 +305,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -349,8 +340,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -385,8 +375,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -420,8 +409,7 @@
 									"path": [
 										"permissions"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -462,8 +450,7 @@
 									"path": [
 										"assets"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -498,8 +485,7 @@
 										"assets",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -533,8 +519,7 @@
 									"path": [
 										"assets"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -569,8 +554,7 @@
 										"assets",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -605,8 +589,7 @@
 										"assets",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -647,8 +630,7 @@
 									"path": [
 										"asset-associations"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -683,8 +665,7 @@
 										"asset-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -718,8 +699,7 @@
 									"path": [
 										"asset-associations"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -754,8 +734,7 @@
 										"asset-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -790,8 +769,7 @@
 										"asset-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -838,8 +816,7 @@
 									"path": [
 										"sandbox"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -883,91 +860,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -1005,91 +967,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -1123,7 +1070,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/configs",
+									"raw": "{{authentication}}{{environment}}/configs?",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
@@ -1133,91 +1080,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "key",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "enabled",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -1252,8 +1184,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -1288,8 +1219,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -1333,91 +1263,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -1455,91 +1370,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -1573,8 +1473,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -1609,8 +1508,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -1645,8 +1543,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -1680,8 +1577,7 @@
 									"path": [
 										"permissions"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -1715,7 +1611,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/users",
+									"raw": "{{authentication}}{{environment}}/users?",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
@@ -1726,126 +1622,105 @@
 										{
 											"key": "id",
 											"value": "1",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
 											"value": "1",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
 											"value": "fca1b603-1c29-4393-85c4-e30611c80abf",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
 											"value": "fca1b603-1c29-4393-85c4-e30611c80abf",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "username",
 											"value": "morgan",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "email",
 											"value": "morgan@site.com",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "identity",
 											"value": "Individual",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "identity[0]",
 											"value": "Individual",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "identityUuid",
 											"value": "9be0af28-ef41-49b7-86d9-72a2d9beb051",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "identityUuid[0]",
 											"value": "9be0af28-ef41-49b7-86d9-72a2d9beb051",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "roles",
 											"value": "ROLE_INDIVIDUAL",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[before]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[after]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "lastLogin[before]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "lastLogin[after]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "enabled",
 											"value": "true",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -1880,8 +1755,7 @@
 										"users",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -1915,8 +1789,7 @@
 									"path": [
 										"users"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -1951,8 +1824,7 @@
 										"users",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -1987,8 +1859,7 @@
 										"users",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -2033,126 +1904,105 @@
 										{
 											"key": "id",
 											"value": "1",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
 											"value": "1",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
 											"value": "fca1b603-1c29-4393-85c4-e30611c80abf",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
 											"value": "fca1b603-1c29-4393-85c4-e30611c80abf",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "username",
 											"value": "morgan",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "email",
 											"value": "morgan@site.com",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "identity",
 											"value": "Individual",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "identity[0]",
 											"value": "Individual",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "identityUuid",
 											"value": "9be0af28-ef41-49b7-86d9-72a2d9beb051",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "identityUuid[0]",
 											"value": "9be0af28-ef41-49b7-86d9-72a2d9beb051",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "roles",
 											"value": "ROLE_INDIVIDUAL",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[before]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[after]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "lastLogin[before]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "lastLogin[after]",
 											"value": "2017-01-01",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "enabled",
 											"value": "true",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -2187,8 +2037,7 @@
 										"registrations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -2222,8 +2071,7 @@
 									"path": [
 										"registrations"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -2258,8 +2106,7 @@
 										"registrations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -2294,8 +2141,7 @@
 										"registrations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -2772,8 +2618,7 @@
 									"path": [
 										"deployment"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -2804,8 +2649,7 @@
 										"deployment",
 										"051e15ae-99b4-11e7-92b2-0242ac110002"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -2910,8 +2754,7 @@
 									"path": [
 										"process-instance"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -2938,8 +2781,7 @@
 										"process-instance",
 										"3fde771b-9aed-11e7-92b2-0242ac110002"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -2967,8 +2809,7 @@
 										"3fde771b-9aed-11e7-92b2-0242ac110002",
 										"variables"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -3001,8 +2842,7 @@
 									"path": [
 										"process-definition"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3030,8 +2870,7 @@
 										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
 										"diagram"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3059,8 +2898,7 @@
 										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
 										"startForm"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3089,8 +2927,7 @@
 										"PayTaxes",
 										"startForm"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3123,8 +2960,7 @@
 										"function_test_1",
 										"start"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3148,8 +2984,7 @@
 										"PayTaxes",
 										"xml"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3177,8 +3012,7 @@
 										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
 										"statistics"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3206,8 +3040,7 @@
 										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
 										"xml"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3234,8 +3067,7 @@
 										"process-definition",
 										"PayTaxes:1:608cd76b-9e4e-11e7-b8b7-0242ac110002"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -3261,7 +3093,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{camunda}}/task?",
+									"raw": "{{camunda}}/task?sortBy=created&sortOrder=desc",
 									"host": [
 										"{{camunda}}"
 									],
@@ -3272,36 +3104,38 @@
 										{
 											"key": "candidateGroup",
 											"value": "8454c987-cbc5-4a24-ba1a-d420283caabd",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "includeAssignedTasks",
 											"value": "true",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "involvedUser",
 											"value": "true",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "assignee",
 											"value": "Individual",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "assigneeLike",
 											"value": "Individual%25",
-											"equals": true,
 											"disabled": true
+										},
+										{
+											"key": "sortBy",
+											"value": "created"
+										},
+										{
+											"key": "sortOrder",
+											"value": "desc"
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3331,8 +3165,7 @@
 									"path": [
 										"task"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3364,8 +3197,7 @@
 										"task",
 										"8f9d8732-968d-11e7-b233-0242ac110002"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3401,12 +3233,10 @@
 									"query": [
 										{
 											"key": "deserializeValues",
-											"value": "false",
-											"equals": true
+											"value": "false"
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3437,8 +3267,7 @@
 										"task",
 										"create"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3469,8 +3298,7 @@
 										"task",
 										"8f9d8732-968d-11e7-b233-0242ac110002"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3502,8 +3330,7 @@
 										"11111111-1111-1111-1111-111111111111",
 										"complete"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -3531,8 +3358,7 @@
 									"path": [
 										"group"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3554,8 +3380,7 @@
 										"group",
 										"8454c987-cbc5-4a24-ba1a-d420283caabd"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3586,8 +3411,7 @@
 										"group",
 										"create"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -3630,8 +3454,7 @@
 									"path": [
 										"form"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3665,8 +3488,7 @@
 									"path": [
 										"form"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3700,8 +3522,7 @@
 									"path": [
 										"register"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3732,8 +3553,7 @@
 										"review-taxes",
 										"submission"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -3783,8 +3603,7 @@
 										"user",
 										"login"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -3826,8 +3645,7 @@
 									"path": [
 										"logout"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -3868,8 +3686,7 @@
 									"path": [
 										"access"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -3916,8 +3733,7 @@
 									"path": [
 										"sandbox"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -3961,91 +3777,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -4083,91 +3884,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -4208,8 +3994,7 @@
 									"path": [
 										"configs"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -4244,8 +4029,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -4280,8 +4064,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -4322,8 +4105,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -4357,8 +4139,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -4393,8 +4174,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -4429,8 +4209,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -4464,8 +4243,7 @@
 									"path": [
 										"permissions"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -4509,91 +4287,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -4632,91 +4395,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -4757,91 +4505,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -4882,91 +4615,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -5011,7 +4729,6 @@
 										{
 											"key": "id",
 											"value": "",
-											"equals": true,
 											"disabled": true
 										},
 										{
@@ -5171,8 +4888,7 @@
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -5211,12 +4927,10 @@
 										{
 											"key": "locale",
 											"value": "fr",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -5250,12 +4964,11 @@
 									"path": [
 										"cases"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "ee350824-e545-4f2d-857a-556950c3ee7f",
+									"id": "d9cd5021-687a-4a2b-922d-34c582b583dd",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5285,8 +4998,7 @@
 											"path": [
 												"cases"
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -5414,12 +5126,11 @@
 										"cases",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "5ca4beaa-4976-4612-822e-0bb16e4f8314",
+									"id": "52072ad7-1576-4d17-9b15-f080a681be2f",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -5450,8 +5161,7 @@
 												"cases",
 												"11111111-1111-1111-1111-111111111111"
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -5579,12 +5289,11 @@
 										"cases",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "3e88b3e8-33c6-4002-a3ea-3d24e5adad16",
+									"id": "58f21f82-8f65-4656-b079-09f160961bbb",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5872,7 +5581,6 @@
 										{
 											"key": "order[id]",
 											"value": "desc",
-											"equals": true,
 											"disabled": true
 										},
 										{
@@ -5918,8 +5626,7 @@
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -5958,12 +5665,10 @@
 										{
 											"key": "locale",
 											"value": "fr",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -5997,12 +5702,11 @@
 									"path": [
 										"case-statuses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "6a23a801-47ee-4dcc-9821-641ccfd46398",
+									"id": "e1ae2cde-e091-41f2-bdaa-0515b47b134f",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -6032,8 +5736,7 @@
 											"path": [
 												"case-statuses"
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -6161,12 +5864,11 @@
 										"case-statuses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "71558dde-ffb1-4080-94c7-a621f09663e8",
+									"id": "20c16951-7baa-49ca-8cfd-317895d91838",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -6197,8 +5899,7 @@
 												"case-statuses",
 												"11111111-1111-1111-1111-111111111111"
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -6326,12 +6027,11 @@
 										"case-statuses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "94690859-ddd7-420a-ae99-6d36aeb00bc3",
+									"id": "4050f2e2-0516-49ee-8804-5f6c337c8239",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -6501,8 +6201,7 @@
 									"path": [
 										"sandbox"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -6546,91 +6245,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -6668,91 +6352,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -6793,8 +6462,7 @@
 									"path": [
 										"configs"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -6829,8 +6497,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -6865,8 +6532,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -6907,8 +6573,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -6942,8 +6607,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -6978,8 +6642,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -7014,8 +6677,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -7049,8 +6711,7 @@
 									"path": [
 										"permissions"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -7215,12 +6876,10 @@
 										{
 											"key": "slug",
 											"value": "road-classifications",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -7259,12 +6918,10 @@
 										{
 											"key": "locale",
 											"value": "fr",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -7298,12 +6955,11 @@
 									"path": [
 										"datas"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "13001939-43c9-4be7-91ea-ed9d39078616",
+									"id": "e53472a8-efc0-4729-bcbd-8ed63fa7872e",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7333,8 +6989,7 @@
 											"path": [
 												"datas"
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -7462,12 +7117,11 @@
 										"datas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "de0d886a-47e2-4cef-a428-92fbe17aa3c3",
+									"id": "5c11d9f5-7439-4803-a907-25efbc0e5333",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -7498,8 +7152,7 @@
 												"datas",
 												"11111111-1111-1111-1111-111111111111"
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -7627,12 +7280,11 @@
 										"datas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "264ccd47-9c2f-40e2-945c-9eeb9fe7df86",
+									"id": "269d8aa5-c979-43a1-b3e0-c26cbbcb5eb1",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7924,8 +7576,7 @@
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -7952,7 +7603,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/files/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cms}}{{environment}}/files/11111111-1111-1111-1111-111111111111?",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
@@ -7964,12 +7615,10 @@
 										{
 											"key": "locale",
 											"value": "fr",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -7996,7 +7645,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/files/123/presentation",
+									"raw": "{{cms}}{{environment}}/files/123/presentation?",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
@@ -8009,12 +7658,10 @@
 										{
 											"key": "locale",
 											"value": "en",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -8048,12 +7695,11 @@
 									"path": [
 										"files"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "18d35a80-fe3d-462e-a8da-ae46aff5fc3e",
+									"id": "9b5dd274-348b-4a4d-982a-e59f72c114d9",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8083,8 +7729,7 @@
 											"path": [
 												"files"
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -8212,12 +7857,11 @@
 										"files",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "51b3ed8f-3210-430d-82a4-18e27e799705",
+									"id": "2437d3d7-fb67-48e6-bdfc-73b2aed1760a",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8248,8 +7892,7 @@
 												"files",
 												"11111111-1111-1111-1111-111111111111"
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -8377,12 +8020,11 @@
 										"files",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "fb0ed4c5-2362-4a57-899f-6df65d592580",
+									"id": "c093dcaa-c58b-429b-81cc-0b7a28862faa",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8550,7 +8192,6 @@
 										{
 											"key": "id",
 											"value": "",
-											"equals": true,
 											"disabled": true
 										},
 										{
@@ -8674,8 +8315,7 @@
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -8714,12 +8354,10 @@
 										{
 											"key": "locale",
 											"value": "fr",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -8753,12 +8391,11 @@
 									"path": [
 										"texts"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "634c57f7-069c-4376-998e-0ed1230e709e",
+									"id": "d0a731be-1db4-4998-a614-8f83dc112543",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8788,8 +8425,7 @@
 											"path": [
 												"texts"
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -8917,12 +8553,11 @@
 										"texts",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "07180494-621e-4d6e-a9ed-6e594e2d4932",
+									"id": "db952980-e07e-4ef7-80d0-19b77ec73d76",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8953,8 +8588,7 @@
 												"texts",
 												"11111111-1111-1111-1111-111111111111"
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -9082,12 +8716,11 @@
 										"texts",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "c17b951f-7001-4b02-b042-37f4a07c9342",
+									"id": "bc5a6c51-49a1-4e3f-9674-e83c9ed73d08",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9379,8 +9012,7 @@
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -9419,12 +9051,10 @@
 										{
 											"key": "locale",
 											"value": "es",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -9458,12 +9088,11 @@
 									"path": [
 										"pages"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "ea8245af-cdf4-41b2-b62f-8e17be762105",
+									"id": "392917ea-87a9-4bf9-bef6-a6f9f252d0ad",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9493,8 +9122,7 @@
 											"path": [
 												"pages"
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -9622,12 +9250,11 @@
 										"pages",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "0a0aa99f-3925-45e1-9f62-a9494894eb33",
+									"id": "392d0638-4dc9-43da-96c1-9a7d650f73c8",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -9658,8 +9285,7 @@
 												"pages",
 												"11111111-1111-1111-1111-111111111111"
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -9787,12 +9413,11 @@
 										"pages",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "94ecb31a-9471-4187-944e-5287a2ca1edc",
+									"id": "21db6773-db64-427c-bba0-21c3f18cf025",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9959,31 +9584,26 @@
 									"query": [
 										{
 											"key": "texts[]",
-											"value": "portal-title",
-											"equals": true
+											"value": "portal-title"
 										},
 										{
 											"key": "texts[]",
-											"value": "portal-description",
-											"equals": true
+											"value": "portal-description"
 										},
 										{
 											"key": "files[]",
-											"value": "portal-logo",
-											"equals": true
+											"value": "portal-logo"
 										},
 										{
 											"key": "files[]",
-											"value": "admin-logo-login",
-											"equals": true
+											"value": "admin-logo-login"
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": [
 								{
-									"id": "9639d5ba-3b6c-4a9d-90af-cff3286a0947",
+									"id": "1191dae7-67ec-4af9-9a50-dec59383e04a",
 									"name": "Created",
 									"originalRequest": {
 										"method": "GET",
@@ -10016,27 +9636,22 @@
 											"query": [
 												{
 													"key": "texts[]",
-													"value": "portal-title",
-													"equals": true
+													"value": "portal-title"
 												},
 												{
 													"key": "texts[]",
-													"value": "portal-description",
-													"equals": true
+													"value": "portal-description"
 												},
 												{
 													"key": "files[]",
-													"value": "portal-logo",
-													"equals": true
+													"value": "portal-logo"
 												},
 												{
 													"key": "files[]",
-													"value": "admin-logo-login",
-													"equals": true
+													"value": "admin-logo-login"
 												}
 											]
-										},
-										"description": null
+										}
 									},
 									"status": "Created",
 									"code": 201,
@@ -10176,8 +9791,7 @@
 									"path": [
 										"sandbox"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -10221,91 +9835,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -10343,91 +9942,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -10471,91 +10055,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "key",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "enabled",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -10590,8 +10159,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -10626,8 +10194,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -10671,91 +10238,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -10790,8 +10342,7 @@
 										"business-units",
 										"25b88f35-eb37-4dae-9d89-668151e11a0d"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -10825,8 +10376,7 @@
 									"path": [
 										"business-units"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -10861,8 +10411,7 @@
 										"business-units",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -10897,8 +10446,7 @@
 										"business-units",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -10932,7 +10480,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/individuals",
+									"raw": "{{identities}}{{environment}}/individuals?",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -10942,121 +10490,101 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[id]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[createdAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[updatedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[deletedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[owner]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -11091,8 +10619,7 @@
 										"individuals",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -11126,8 +10653,7 @@
 									"path": [
 										"individuals"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -11162,8 +10688,7 @@
 										"individuals",
 										"d0daa7e4-07d1-47e6-93f2-0629adaa3b49"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -11198,8 +10723,7 @@
 										"individuals",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -11233,7 +10757,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/individual-personas",
+									"raw": "{{identities}}{{environment}}/individual-personas?",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -11358,12 +10882,10 @@
 										{
 											"key": "individual.uuid",
 											"value": "d0daa7e4-07d1-47e6-93f2-0629adaa3b41",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -11398,8 +10920,7 @@
 										"individual-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -11433,8 +10954,7 @@
 									"path": [
 										"individual-personas"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -11469,8 +10989,7 @@
 										"individual-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -11505,8 +11024,7 @@
 										"individual-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -11540,7 +11058,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/organizations",
+									"raw": "{{identities}}{{environment}}/organizations?",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -11550,121 +11068,101 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[id]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[createdAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[updatedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[deletedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[owner]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -11699,8 +11197,7 @@
 										"organizations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -11734,8 +11231,7 @@
 									"path": [
 										"organizations"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -11770,8 +11266,7 @@
 										"organizations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -11806,8 +11301,7 @@
 										"organizations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -11841,7 +11335,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/organization-personas",
+									"raw": "{{identities}}{{environment}}/organization-personas?",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -11966,12 +11460,10 @@
 										{
 											"key": "individual.uuid",
 											"value": "d0daa7e4-07d1-47e6-93f2-0629adaa3b41",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12006,8 +11498,7 @@
 										"organization-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12041,8 +11532,7 @@
 									"path": [
 										"organization-personas"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12077,8 +11567,7 @@
 										"organization-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12113,8 +11602,7 @@
 										"organization-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -12148,7 +11636,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/anonymouses",
+									"raw": "{{identities}}{{environment}}/anonymouses?",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -12206,26 +11694,22 @@
 										},
 										{
 											"key": "possessor",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "possessor[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "possessorUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "possessorUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
@@ -12295,8 +11779,7 @@
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12331,8 +11814,7 @@
 										"anonymouses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12366,8 +11848,7 @@
 									"path": [
 										"anonymouses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12402,8 +11883,7 @@
 										"anonymouses",
 										"d57d855f-59bf-4af8-a420-4868fbb09e54"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12438,8 +11918,7 @@
 										"anonymouses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -12473,7 +11952,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/anonymous-personas",
+									"raw": "{{identities}}{{environment}}/anonymous-personas?",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -12531,26 +12010,22 @@
 										},
 										{
 											"key": "possessor",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "possessor[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "possessorUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "possessorUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
@@ -12620,8 +12095,7 @@
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12656,8 +12130,7 @@
 										"anonymous-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12691,8 +12164,7 @@
 									"path": [
 										"anonymous-personas"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12727,8 +12199,7 @@
 										"anonymous-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12763,8 +12234,7 @@
 										"anonymous-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -12921,8 +12391,7 @@
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12957,8 +12426,7 @@
 										"staffs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -12992,8 +12460,7 @@
 									"path": [
 										"staffs"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13028,8 +12495,7 @@
 										"staffs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13064,8 +12530,7 @@
 										"staffs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -13222,8 +12687,7 @@
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13258,8 +12722,7 @@
 										"staff-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13293,8 +12756,7 @@
 									"path": [
 										"staff-personas"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13329,8 +12791,7 @@
 										"individual-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13365,8 +12826,7 @@
 										"individual-personas",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -13407,8 +12867,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13443,8 +12902,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13478,8 +12936,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13514,8 +12971,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13550,8 +13006,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -13593,8 +13048,7 @@
 										"permissions",
 										"list"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -13628,7 +13082,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/roles",
+									"raw": "{{identities}}{{environment}}/roles?",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
@@ -13638,145 +13092,121 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "assignee",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "assignee[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "assigneeUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "assigneeUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[id]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[createdAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[updatedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[deletedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[owner]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13811,8 +13241,7 @@
 										"roles",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13846,8 +13275,7 @@
 									"path": [
 										"roles"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13882,8 +13310,7 @@
 										"roles",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -13918,8 +13345,7 @@
 										"roles",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -13966,8 +13392,7 @@
 									"path": [
 										"sandbox"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -14008,8 +13433,7 @@
 									"path": [
 										"health"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14044,8 +13468,7 @@
 										"health",
 										"ping"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -14086,8 +13509,7 @@
 									"path": [
 										"configs"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14122,8 +13544,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14158,8 +13579,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -14200,8 +13620,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14235,8 +13654,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14271,8 +13689,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14307,8 +13724,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14342,8 +13758,7 @@
 									"path": [
 										"permissions"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -14384,8 +13799,7 @@
 									"path": [
 										"assets"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14420,8 +13834,7 @@
 										"assets",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14455,8 +13868,7 @@
 									"path": [
 										"assets"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14491,8 +13903,7 @@
 										"records",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14527,8 +13938,7 @@
 										"records",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -14569,8 +13979,7 @@
 									"path": [
 										"record-associations"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14605,8 +14014,7 @@
 										"record-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14640,8 +14048,7 @@
 									"path": [
 										"record-associations"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14676,8 +14083,7 @@
 										"record-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14712,8 +14118,7 @@
 										"record-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -14760,8 +14165,7 @@
 									"path": [
 										"sandbox"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -14805,91 +14209,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -14927,91 +14316,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -15055,91 +14429,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "key",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "enabled",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -15174,8 +14533,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -15210,8 +14568,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -15255,91 +14612,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -15377,91 +14719,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -15495,8 +14822,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -15531,8 +14857,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -15567,8 +14892,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -15602,8 +14926,7 @@
 									"path": [
 										"permissions"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -15647,91 +14970,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -15770,91 +15078,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -15893,91 +15186,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -16016,91 +15294,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -16139,91 +15402,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -16267,163 +15515,136 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "enabled",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[id]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[createdAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[updatedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[deletedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[owner]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[weight]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "title",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "description",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "presentation",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "services.uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "services.uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -16458,8 +15679,7 @@
 										"categories",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -16493,8 +15713,7 @@
 									"path": [
 										"categories"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -16529,8 +15748,7 @@
 										"categories",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -16565,8 +15783,7 @@
 										"categories",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -16623,7 +15840,6 @@
 										{
 											"key": "uuid",
 											"value": "",
-											"equals": true,
 											"disabled": true
 										},
 										{
@@ -16701,84 +15917,70 @@
 										{
 											"key": "title",
 											"value": "",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "description",
 											"value": "",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "presentation",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "categories.uuid",
 											"value": "",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "order[id]",
 											"value": "",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "order[createdAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[updatedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[deletedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[owner]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[title]",
 											"value": "asc",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "order[weight]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "page",
 											"value": "1",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "limit",
 											"value": "2",
-											"equals": true,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -16813,8 +16015,7 @@
 										"services",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -16848,8 +16049,7 @@
 									"path": [
 										"services"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -16884,8 +16084,7 @@
 										"services",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -16920,8 +16119,7 @@
 										"services",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -17013,14 +16211,12 @@
 										},
 										{
 											"key": "type",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "type[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
@@ -17068,84 +16264,70 @@
 										{
 											"key": "order[id]",
 											"value": "asc",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "order[createdAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[updatedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[deletedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[owner]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[type]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[title]",
 											"value": "desc",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "order[weight]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "title",
 											"value": "",
-											"equals": true,
 											"disabled": true
 										},
 										{
 											"key": "description",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "presentation",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "service.uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "service.uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -17180,13 +16362,12 @@
 										"scenarios",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
 						{
-							"name": "/scenarios/{uuid}/form",
+							"name": "/scenarios/{uuid}/forms",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -17208,22 +16389,21 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/scenarios/11111111-1111-1111-1111-111111111111/form",
+									"raw": "{{services}}{{environment}}/scenarios/11111111-1111-1111-1111-111111111111/forms",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
 										"scenarios",
 										"11111111-1111-1111-1111-111111111111",
-										"form"
+										"forms"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
 						{
-							"name": "/scenarios/{uuid}/form/translation",
+							"name": "/scenarios/{uuid}/forms/translation",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -17245,18 +16425,17 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/scenarios/11111111-1111-1111-1111-111111111111/form/translation",
+									"raw": "{{services}}{{environment}}/scenarios/11111111-1111-1111-1111-111111111111/forms/translation",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
 										"scenarios",
 										"11111111-1111-1111-1111-111111111111",
-										"form",
+										"forms",
 										"translation"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -17290,8 +16469,7 @@
 									"path": [
 										"scenarios"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -17327,8 +16505,7 @@
 										"11111111-1111-1111-1111-111111111111",
 										"submissions"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -17363,8 +16540,7 @@
 										"scenarios",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -17399,8 +16575,7 @@
 										"scenarios",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -17444,8 +16619,7 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
@@ -17492,38 +16666,32 @@
 										},
 										{
 											"key": "identity",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "identity[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "identityUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "identityUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "state",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "state[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
@@ -17564,67 +16732,56 @@
 										},
 										{
 											"key": "order[id]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[createdAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[updatedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[deletedAt]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[owner]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[identity]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[state]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "order[weight]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "scenario.uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "scenario.uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -17659,8 +16816,7 @@
 										"submissions",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -17694,8 +16850,7 @@
 									"path": [
 										"submissions"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -17730,8 +16885,7 @@
 										"submissions",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -17766,8 +16920,7 @@
 										"submissions",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -17812,12 +16965,10 @@
 									"query": [
 										{
 											"key": "test",
-											"value": "123",
-											"equals": true
+											"value": "123"
 										}
 									]
-								},
-								"description": ""
+								}
 							},
 							"response": []
 						}
@@ -17864,8 +17015,7 @@
 									"path": [
 										"sandbox"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -17909,91 +17059,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -18031,91 +17166,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -18159,91 +17279,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "key",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "enabled",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -18278,8 +17383,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -18314,8 +17418,7 @@
 										"configs",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -18359,91 +17462,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -18481,91 +17569,76 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "userUuid[0]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": "",
-											"equals": false,
+											"value": null,
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -18599,8 +17672,7 @@
 									"path": [
 										"accesses"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -18635,8 +17707,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -18671,8 +17742,7 @@
 										"accesses",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -18706,8 +17776,7 @@
 									"path": [
 										"permissions"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -18752,138 +17821,161 @@
 										{
 											"key": "uuid",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "owner",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
 											"value": "",
-											"equals": true,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "identity",
 											"value": "",
-											"equals": true,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "identityUuid",
 											"value": "",
-											"equals": true,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[before]",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "deletedAt[after]",
 											"value": "",
-											"equals": false,
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[uuid]",
+											"value": "",
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "order[createdAt]",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
-											"key": "order[updatedAt]",
+											"key": "order[title]",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
-											"key": "order[deletedAt]",
+											"key": "order[description]",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
-											"key": "order[owner]",
+											"key": "order[identity]",
 											"value": "",
-											"equals": false,
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[identityUuid]",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[dueAt]",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[priority]",
+											"value": "",
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "title",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "description",
 											"value": "",
-											"equals": false,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "page",
 											"value": "1",
-											"equals": true,
+											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "limit",
 											"value": "10",
-											"equals": true,
+											"type": "text",
 											"disabled": true
 										}
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -18918,8 +18010,7 @@
 										"tasks",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -18955,8 +18046,7 @@
 										"11111111-1111-1111-1111-111111111111",
 										"claim"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -18992,13 +18082,12 @@
 										"11111111-1111-1111-1111-111111111111",
 										"claim"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
 						{
-							"name": "/tasks/{uuid}/form",
+							"name": "/tasks/{uuid}/forms",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -19020,22 +18109,21 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/tasks/11111111-1111-1111-1111-111111111111/form",
+									"raw": "{{tasks}}{{environment}}/tasks/11111111-1111-1111-1111-111111111111/forms",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
 									"path": [
 										"tasks",
 										"11111111-1111-1111-1111-111111111111",
-										"form"
+										"forms"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
 						{
-							"name": "/tasks/{uuid}/form/translation",
+							"name": "/tasks/{uuid}/forms/translation",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -19057,18 +18145,17 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/tasks/11111111-1111-1111-1111-111111111111/form/translation",
+									"raw": "{{tasks}}{{environment}}/tasks/11111111-1111-1111-1111-111111111111/forms/translation",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
 									"path": [
 										"tasks",
 										"11111111-1111-1111-1111-111111111111",
-										"form",
+										"forms",
 										"translation"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -19102,8 +18189,7 @@
 									"path": [
 										"tasks"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -19138,8 +18224,7 @@
 										"tasks",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -19175,8 +18260,7 @@
 										"11111111-1111-1111-1111-111111111111",
 										"submission"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -19211,8 +18295,7 @@
 										"tasks",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
@@ -19253,8 +18336,7 @@
 									"path": [
 										"submissions"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -19289,8 +18371,7 @@
 										"submissions",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						},
@@ -19324,8 +18405,7 @@
 									"path": [
 										"submissions"
 									]
-								},
-								"description": null
+								}
 							},
 							"response": []
 						}
