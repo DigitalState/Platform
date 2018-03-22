@@ -41,7 +41,7 @@ all:
         assets:
             enabled: true
             repository: https://github.com/DigitalState/Assets.git
-            version: 0.1.0
+            version: 0.1.1
             host: api.assets.test.ds
             database:
                 host: assets_db
@@ -52,7 +52,7 @@ all:
         authentication:
             enabled: true
             repository: https://github.com/DigitalState/Authentication.git
-            version: 0.1.0
+            version: 0.1.1
             host: api.authentication.test.ds
             database:
                 host: authentication_db
@@ -70,7 +70,7 @@ all:
         cases:
             enabled: true
             repository: https://github.com/DigitalState/Cases.git
-            version: 0.1.0
+            version: 0.1.1
             host: api.cases.test.ds
             database:
                 host: cases_db
@@ -81,7 +81,7 @@ all:
         cms:
             enabled: true
             repository: https://github.com/DigitalState/Cms.git
-            version: 0.1.0
+            version: 0.1.1
             host: api.cms.test.ds
             database:
                 host: cms_db
@@ -116,7 +116,7 @@ all:
         identities:
             enabled: true
             repository: https://github.com/DigitalState/Identities.git
-            version: 0.1.0
+            version: 0.1.1
             host: api.identities.test.ds
             database:
                 host: identities_db
@@ -158,7 +158,7 @@ all:
         records:
             enabled: true
             repository: https://github.com/DigitalState/Records.git
-            version: 0.1.0
+            version: 0.1.1
             host: api.records.test.ds
             database:
                 host: records_db
@@ -169,7 +169,7 @@ all:
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
-            version: 0.1.5
+            version: 0.1.6
             host: api.services.test.ds
             database:
                 host: services_db
@@ -180,7 +180,7 @@ all:
         tasks:
             enabled: false
             repository: https://github.com/DigitalState/Tasks.git
-            version: 0.1.3
+            version: 0.1.4
             host: api.tasks.test.ds
             database:
                 host: tasks_db
