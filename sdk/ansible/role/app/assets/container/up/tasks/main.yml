@@ -18,12 +18,18 @@
             path: '/srv/assets/{{ assets_env_file }}'
             regexp: '^PROXY_HOST='
             line: 'PROXY_HOST={{ assets_proxy_host }}'
-      - name: Configure virtual host environment variable
+      - name: Configure nginx virtual host environment variable
         lineinfile:
             create: yes
             path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^VIRTUAL_HOST='
-            line: 'VIRTUAL_HOST={{ assets_virtual_host }}'
+            regexp: '^NGINX_VIRTUAL_HOST='
+            line: 'NGINX_VIRTUAL_HOST={{ assets_nginx_virtual_host }}'
+      - name: Configure adminer virtual host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/assets/{{ assets_env_file }}'
+            regexp: '^ADMINER_VIRTUAL_HOST='
+            line: 'ADMINER_VIRTUAL_HOST={{ assets_adminer_virtual_host }}'
       - name: Configure discovery host environment variable
         lineinfile:
             create: yes
@@ -88,7 +94,8 @@
       COMPOSE_PROJECT_NAME: '{{ assets_compose_project_name }}'
       NETWORK: '{{ assets_network }}'
       PROXY_HOST: '{{ assets_proxy_host }}'
-      VIRTUAL_HOST: '{{ assets_virtual_host }}'
+      NGINX_VIRTUAL_HOST: '{{ assets_nginx_virtual_host }}'
+      ADMINER_VIRTUAL_HOST: '{{ assets_adminer_virtual_host }}'
       DIRECTORY: '{{ assets_directory }}'
       JWT_PRIVATE_KEY: '{{ assets_jwt_private_key }}'
       JWT_PUBLIC_KEY: '{{ assets_jwt_public_key }}'

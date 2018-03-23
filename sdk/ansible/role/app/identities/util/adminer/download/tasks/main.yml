@@ -1,6 +1,0 @@
----
-- name: Download adminer for identities
-  copy:
-      src: '{{ identities_util_adminer }}'
-      dest: /srv/identities/web/adminer.php
-      mode: 0600

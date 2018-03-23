@@ -1,6 +1,0 @@
----
-- name: Download adminer for services
-  copy:
-      src: '{{ services_util_adminer }}'
-      dest: /srv/services/web/adminer.php
-      mode: 0600

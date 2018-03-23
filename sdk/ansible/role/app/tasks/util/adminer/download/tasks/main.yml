@@ -1,6 +1,0 @@
----
-- name: Download adminer for tasks
-  copy:
-      src: '{{ tasks_util_adminer }}'
-      dest: /srv/tasks/web/adminer.php
-      mode: 0600

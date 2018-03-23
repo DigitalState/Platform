@@ -18,12 +18,18 @@
             path: '/srv/cms/{{ cms_env_file }}'
             regexp: '^PROXY_HOST='
             line: 'PROXY_HOST={{ cms_proxy_host }}'
-      - name: Configure virtual host environment variable
+      - name: Configure nginx virtual host environment variable
         lineinfile:
             create: yes
             path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^VIRTUAL_HOST='
-            line: 'VIRTUAL_HOST={{ cms_virtual_host }}'
+            regexp: '^NGINX_VIRTUAL_HOST='
+            line: 'NGINX_VIRTUAL_HOST={{ cms_nginx_virtual_host }}'
+      - name: Configure adminer virtual host environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cms/{{ cms_env_file }}'
+            regexp: '^ADMINER_VIRTUAL_HOST='
+            line: 'ADMINER_VIRTUAL_HOST={{ cms_adminer_virtual_host }}'
       - name: Configure discovery host environment variable
         lineinfile:
             create: yes
@@ -88,7 +94,8 @@
       COMPOSE_PROJECT_NAME: '{{ cms_compose_project_name }}'
       NETWORK: '{{ cms_network }}'
       PROXY_HOST: '{{ cms_proxy_host }}'
-      VIRTUAL_HOST: '{{ cms_virtual_host }}'
+      NGINX_VIRTUAL_HOST: '{{ cms_nginx_virtual_host }}'
+      ADMINER_VIRTUAL_HOST: '{{ cms_adminer_virtual_host }}'
       DIRECTORY: '{{ cms_directory }}'
       JWT_PRIVATE_KEY: '{{ cms_jwt_private_key }}'
       JWT_PUBLIC_KEY: '{{ cms_jwt_public_key }}'

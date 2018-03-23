@@ -3,7 +3,8 @@ topics_env_file: ~
 topics_compose_project_name: ds_topics
 topics_network: ds_default
 topics_proxy_host: 127.0.0.1
-topics_virtual_host: api.topics.ds
+topics_nginx_virtual_host: api.topics.ds
+topics_adminer_virtual_host: api.adminer.ds
 topics_discovery_host: api.discovery.ds
 topics_directory: /srv/topics
 topics_jwt_private_key: ./var/jwt/key

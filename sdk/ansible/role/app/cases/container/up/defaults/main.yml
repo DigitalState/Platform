@@ -3,7 +3,8 @@ cases_env_file: ~
 cases_compose_project_name: ds_cases
 cases_network: ds_default
 cases_proxy_host: 127.0.0.1
-cases_virtual_host: api.cases.ds
+cases_nginx_virtual_host: api.cases.ds
+cases_adminer_virtual_host: adminer.cases.ds
 cases_discovery_host: api.discovery.ds
 cases_directory: /srv/cases
 cases_jwt_private_key: ./var/jwt/key

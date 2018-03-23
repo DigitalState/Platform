@@ -31,8 +31,6 @@ all:
                 password: anonymous
             admin:
                 password: admin
-        util:
-            adminer: /root/resource/util/adminer.php
         admin:
             enabled: true
             repository: https://github.com/DigitalState/Admin.git
@@ -42,7 +40,10 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Assets.git
             version: 0.1.1
-            host: api.assets.test.ds
+            api:
+                host: api.assets.test.ds
+            adminer:
+                host: adminer.assets.test.ds
             database:
                 host: assets_db
                 port: 5432
@@ -53,7 +54,10 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Authentication.git
             version: 0.1.1
-            host: api.authentication.test.ds
+            api:
+                host: api.authentication.test.ds
+            adminer:
+                host: adminer.authentication.test.ds
             database:
                 host: authentication_db
                 port: 5432
@@ -71,7 +75,10 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Cases.git
             version: 0.1.1
-            host: api.cases.test.ds
+            api:
+                host: api.cases.test.ds
+            adminer:
+                host: adminer.cases.test.ds
             database:
                 host: cases_db
                 port: 5432
@@ -82,7 +89,10 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Cms.git
             version: 0.1.1
-            host: api.cms.test.ds
+            api:
+                host: api.cms.test.ds
+            adminer:
+                host: adminer.cms.test.ds
             database:
                 host: cms_db
                 port: 5432
@@ -117,7 +127,10 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Identities.git
             version: 0.1.1
-            host: api.identities.test.ds
+            api:
+                host: api.identities.test.ds
+            adminer:
+                host: adminer.identities.test.ds
             database:
                 host: identities_db
                 port: 5432
@@ -128,7 +141,10 @@ all:
             enabled: false
             repository: https://github.com/DigitalState/Interactions.git
             version: 0.1.0
-            host: api.interactions.test.ds
+            api:
+                host: api.interactions.test.ds
+            adminer:
+                host: adminer.interactions.test.ds
             database:
                 host: interactions_db
                 port: 5432
@@ -159,7 +175,10 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Records.git
             version: 0.1.1
-            host: api.records.test.ds
+            api:
+                host: api.records.test.ds
+            adminer:
+                host: adminer.records.test.ds
             database:
                 host: records_db
                 port: 5432
@@ -170,7 +189,10 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
             version: 0.1.6
-            host: api.services.test.ds
+            api:
+                host: api.services.test.ds
+            adminer:
+                host: adminer.services.test.ds
             database:
                 host: services_db
                 port: 5432
@@ -181,7 +203,10 @@ all:
             enabled: false
             repository: https://github.com/DigitalState/Tasks.git
             version: 0.1.4
-            host: api.tasks.test.ds
+            api:
+                host: api.tasks.test.ds
+            adminer:
+                host: adminer.tasks.test.ds
             database:
                 host: tasks_db
                 port: 5432
@@ -192,7 +217,10 @@ all:
             enabled: false
             repository: https://github.com/DigitalState/Topics.git
             version: 0.1.0
-            host: api.topics.test.ds
+            api:
+                host: api.topics.test.ds
+            adminer:
+                host: adminer.topics.test.ds
             database:
                 host: topics_db
                 port: 5432

@@ -12,4 +12,3 @@
 - import_playbook: mail/configure.yml
 - import_playbook: database/migration/load.yml
 - import_playbook: database/fixtures/load.yml
-- import_playbook: util/adminer/download.yml

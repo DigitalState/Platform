@@ -3,7 +3,8 @@ interactions_env_file: ~
 interactions_compose_project_name: ds_interactions
 interactions_network: ds_default
 interactions_proxy_host: 127.0.0.1
-interactions_virtual_host: api.interactions.ds
+interactions_nginx_virtual_host: api.interactions.ds
+interactions_adminer_virtual_host: adminer.interactions.ds
 interactions_discovery_host: api.discovery.ds
 interactions_directory: /srv/interactions
 interactions_jwt_private_key: ./var/jwt/key

@@ -3,7 +3,8 @@ assets_env_file: ~
 assets_compose_project_name: ds_assets
 assets_network: ds_default
 assets_proxy_host: 127.0.0.1
-assets_virtual_host: api.assets.ds
+assets_nginx_virtual_host: api.assets.ds
+assets_adminer_virtual_host: adminer.assets.ds
 assets_discovery_host: api.discovery.ds
 assets_directory: /srv/assets
 assets_jwt_private_key: ./var/jwt/key
