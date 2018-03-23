@@ -39,7 +39,7 @@ all:
         assets:
             enabled: true
             repository: https://github.com/DigitalState/Assets.git
-            version: 0.1.1
+            version: 0.2.0
             api:
                 host: api.assets.stag.ds
             adminer:
@@ -53,7 +53,7 @@ all:
         authentication:
             enabled: true
             repository: https://github.com/DigitalState/Authentication.git
-            version: 0.1.1
+            version: 0.2.0
             api:
                 host: api.authentication.stag.ds
             adminer:
@@ -74,7 +74,7 @@ all:
         cases:
             enabled: true
             repository: https://github.com/DigitalState/Cases.git
-            version: 0.1.1
+            version: 0.2.0
             api:
                 host: api.cases.stag.ds
             adminer:
@@ -88,7 +88,7 @@ all:
         cms:
             enabled: true
             repository: https://github.com/DigitalState/Cms.git
-            version: 0.1.1
+            version: 0.2.0
             api:
                 host: api.cms.stag.ds
             adminer:
@@ -126,7 +126,7 @@ all:
         identities:
             enabled: true
             repository: https://github.com/DigitalState/Identities.git
-            version: 0.1.1
+            version: 0.2.0
             api:
                 host: api.identities.stag.ds
             adminer:
@@ -174,7 +174,7 @@ all:
         records:
             enabled: true
             repository: https://github.com/DigitalState/Records.git
-            version: 0.1.1
+            version: 0.2.0
             api:
                 host: api.records.stag.ds
             adminer:
@@ -188,7 +188,7 @@ all:
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
-            version: 0.1.6
+            version: 0.2.0
             api:
                 host: api.services.stag.ds
             adminer:
@@ -202,7 +202,7 @@ all:
         tasks:
             enabled: false
             repository: https://github.com/DigitalState/Tasks.git
-            version: 0.1.4
+            version: 0.2.0
             api:
                 host: api.tasks.stag.ds
             adminer:
