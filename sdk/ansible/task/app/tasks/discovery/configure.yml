@@ -1,7 +1,7 @@
 ---
 - name: Define tasks discovery variables
   set_fact:
-      tasks_discovery_host: '{{ discovery.host }}'
+      tasks_discovery_host: '{{ discovery.api.host }}'
 
 - name: Configure tasks discovery settings
   include_role:

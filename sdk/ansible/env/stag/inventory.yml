@@ -68,7 +68,8 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Camunda.git
             version: 0.1.0
-            host: api.camunda.stag.ds
+            api:
+                host: api.camunda.stag.ds
             username: admin@staff.ds
             password: ~
         cases:
@@ -107,7 +108,8 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Discovery.git
             version: 0.1.0
-            host: api.discovery.stag.ds
+            api:
+                host: api.discovery.stag.ds
         documentation:
             enabled: false
             repository: https://github.com/DigitalState/Documentation.git
@@ -116,7 +118,8 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Formio.git
             version: 0.1.5
-            host: api.formio.stag.ds
+            api:
+                host: api.formio.stag.ds
             username: admin@staff.ds
             password: ~
         guide:
@@ -155,7 +158,8 @@ all:
             enabled: false
             repository: https://github.com/DigitalState/Logs.git
             version: 0.1.0
-            host: api.logs.stag.ds
+            api:
+                host: api.logs.stag.ds
         monitor:
             enabled: false
             repository: https://github.com/DigitalState/Monitor.git

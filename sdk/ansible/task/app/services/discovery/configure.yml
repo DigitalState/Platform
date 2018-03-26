@@ -1,7 +1,7 @@
 ---
 - name: Define services discovery variables
   set_fact:
-      services_discovery_host: '{{ discovery.host }}'
+      services_discovery_host: '{{ discovery.api.host }}'
 
 - name: Configure services discovery settings
   include_role:

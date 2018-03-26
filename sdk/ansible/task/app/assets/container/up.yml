@@ -13,7 +13,7 @@
             assets_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             assets_nginx_virtual_host: '{{ assets.api.host }}'
             assets_adminer_virtual_host: '{{ assets.adminer.host }}'
-            assets_discovery_host: '{{ discovery.host }}'
+            assets_discovery_host: '{{ discovery.api.host }}'
             assets_directory: '{{ directory }}/assets'
             assets_jwt_private_key: '{{ directory }}/assets/var/jwt/key'
             assets_jwt_public_key: '{{ directory }}/assets/var/jwt/key.pub'

@@ -13,7 +13,7 @@
             services_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             services_nginx_virtual_host: '{{ services.api.host }}'
             services_adminer_virtual_host: '{{ services.adminer.host }}'
-            services_discovery_host: '{{ discovery.host }}'
+            services_discovery_host: '{{ discovery.api.host }}'
             services_directory: '{{ directory }}/services'
             services_jwt_private_key: '{{ directory }}/services/var/jwt/key'
             services_jwt_public_key: '{{ directory }}/services/var/jwt/key.pub'

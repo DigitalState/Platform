@@ -1,7 +1,7 @@
 ---
 - name: Define interactions discovery variables
   set_fact:
-      interactions_discovery_host: '{{ discovery.host }}'
+      interactions_discovery_host: '{{ discovery.api.host }}'
 
 - name: Configure interactions discovery settings
   include_role:

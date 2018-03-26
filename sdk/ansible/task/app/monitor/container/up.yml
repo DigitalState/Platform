@@ -12,7 +12,7 @@
             monitor_network: '{{ project }}_default'
             monitor_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             monitor_virtual_host: '{{ monitor.host }}'
-            monitor_discovery_host: '{{ discovery.host }}'
+            monitor_discovery_host: '{{ discovery.api.host }}'
             monitor_directory: '{{ directory }}/monitor'
       - name: Up monitor container
         include_role:

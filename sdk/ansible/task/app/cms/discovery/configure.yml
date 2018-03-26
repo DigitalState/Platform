@@ -1,7 +1,7 @@
 ---
 - name: Define cms discovery variables
   set_fact:
-      cms_discovery_host: '{{ discovery.host }}'
+      cms_discovery_host: '{{ discovery.api.host }}'
 
 - name: Configure cms discovery settings
   include_role:

@@ -68,7 +68,8 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Camunda.git
             version: 0.1.0
-            host: api.camunda.test.ds
+            api:
+                host: api.camunda.test.ds
             username: admin@staff.ds
             password: admin
         cases:
@@ -107,7 +108,8 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Discovery.git
             version: 0.1.0
-            host: api.discovery.test.ds
+            api:
+                host: api.discovery.test.ds
         documentation:
             enabled: false
             repository: https://github.com/DigitalState/Documentation.git
@@ -116,7 +118,8 @@ all:
             enabled: true
             repository: https://github.com/DigitalState/Formio.git
             version: 0.1.5
-            host: api.formio.test.ds
+            api:
+                host: api.formio.test.ds
             username: admin@staff.ds
             password: admin
         guide:
@@ -155,7 +158,8 @@ all:
             enabled: false
             repository: https://github.com/DigitalState/Logs.git
             version: 0.1.0
-            host: api.logs.test.ds
+            api:
+                host: api.logs.test.ds
         monitor:
             enabled: false
             repository: https://github.com/DigitalState/Monitor.git

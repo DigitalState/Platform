@@ -1,7 +1,7 @@
 ---
 - name: Define identities discovery variables
   set_fact:
-      identities_discovery_host: '{{ discovery.host }}'
+      identities_discovery_host: '{{ discovery.api.host }}'
 
 - name: Configure identities discovery settings
   include_role:

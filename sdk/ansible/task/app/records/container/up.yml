@@ -13,7 +13,7 @@
             records_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             records_nginx_virtual_host: '{{ records.api.host }}'
             records_adminer_virtual_host: '{{ records.adminer.host }}'
-            records_discovery_host: '{{ discovery.host }}'
+            records_discovery_host: '{{ discovery.api.host }}'
             records_directory: '{{ directory }}/records'
             records_jwt_private_key: '{{ directory }}/records/var/jwt/key'
             records_jwt_public_key: '{{ directory }}/records/var/jwt/key.pub'

@@ -1,7 +1,7 @@
 ---
 - name: Define cases discovery variables
   set_fact:
-      cases_discovery_host: '{{ discovery.host }}'
+      cases_discovery_host: '{{ discovery.api.host }}'
 
 - name: Configure cases discovery settings
   include_role:

@@ -13,7 +13,7 @@
             tasks_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             tasks_nginx_virtual_host: '{{ tasks.api.host }}'
             tasks_adminer_virtual_host: '{{ tasks.adminer.host }}'
-            tasks_discovery_host: '{{ discovery.host }}'
+            tasks_discovery_host: '{{ discovery.api.host }}'
             tasks_directory: '{{ directory }}/tasks'
             tasks_jwt_private_key: '{{ directory }}/tasks/var/jwt/key'
             tasks_jwt_public_key: '{{ directory }}/tasks/var/jwt/key.pub'

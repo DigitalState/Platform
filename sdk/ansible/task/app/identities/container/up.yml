@@ -13,7 +13,7 @@
             identities_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             identities_nginx_virtual_host: '{{ identities.api.host }}'
             identities_adminer_virtual_host: '{{ identities.adminer.host }}'
-            identities_discovery_host: '{{ discovery.host }}'
+            identities_discovery_host: '{{ discovery.api.host }}'
             identities_directory: '{{ directory }}/identities'
             identities_jwt_private_key: '{{ directory }}/identities/var/jwt/key'
             identities_jwt_public_key: '{{ directory }}/identities/var/jwt/key.pub'

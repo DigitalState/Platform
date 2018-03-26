@@ -13,7 +13,7 @@
             topics_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             topics_nginx_virtual_host: '{{ topics.api.host }}'
             topics_adminer_virtual_host: '{{ topics.adminer.host }}'
-            topics_discovery_host: '{{ discovery.host }}'
+            topics_discovery_host: '{{ discovery.api.host }}'
             topics_directory: '{{ directory }}/topics'
             topics_jwt_private_key: '{{ directory }}/topics/var/jwt/key'
             topics_jwt_public_key: '{{ directory }}/topics/var/jwt/key.pub'

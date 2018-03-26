@@ -13,7 +13,7 @@
             authentication_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             authentication_nginx_virtual_host: '{{ authentication.api.host }}'
             authentication_adminer_virtual_host: '{{ authentication.adminer.host }}'
-            authentication_discovery_host: '{{ discovery.host }}'
+            authentication_discovery_host: '{{ discovery.api.host }}'
             authentication_directory: '{{ directory }}/authentication'
             authentication_jwt_private_key: '{{ directory }}/authentication/var/jwt/key'
             authentication_jwt_public_key: '{{ directory }}/authentication/var/jwt/key.pub'

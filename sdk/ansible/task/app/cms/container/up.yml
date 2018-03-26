@@ -13,7 +13,7 @@
             cms_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             cms_nginx_virtual_host: '{{ cms.api.host }}'
             cms_adminer_virtual_host: '{{ cms.adminer.host }}'
-            cms_discovery_host: '{{ discovery.host }}'
+            cms_discovery_host: '{{ discovery.api.host }}'
             cms_directory: '{{ directory }}/cms'
             cms_jwt_private_key: '{{ directory }}/cms/var/jwt/key'
             cms_jwt_public_key: '{{ directory }}/cms/var/jwt/key.pub'
