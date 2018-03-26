@@ -37,7 +37,7 @@ all:
         assets:
             enabled: true
             repository: https://github.com/DigitalState/Assets.git
-            version: 0.2.0
+            version: 0.2.1
             api:
                 host: api.assets.lab.ds
             adminer:
@@ -51,7 +51,7 @@ all:
         authentication:
             enabled: true
             repository: https://github.com/DigitalState/Authentication.git
-            version: 0.2.0
+            version: 0.2.1
             api:
                 host: api.authentication.lab.ds
             adminer:
@@ -73,7 +73,7 @@ all:
         cases:
             enabled: true
             repository: https://github.com/DigitalState/Cases.git
-            version: 0.2.0
+            version: 0.2.1
             api:
                 host: api.cases.lab.ds
             adminer:
@@ -87,7 +87,7 @@ all:
         cms:
             enabled: true
             repository: https://github.com/DigitalState/Cms.git
-            version: 0.2.0
+            version: 0.2.1
             api:
                 host: api.cms.lab.ds
             adminer:
@@ -127,7 +127,7 @@ all:
         identities:
             enabled: true
             repository: https://github.com/DigitalState/Identities.git
-            version: 0.2.0
+            version: 0.2.1
             api:
                 host: api.identities.lab.ds
             adminer:
@@ -176,7 +176,7 @@ all:
         records:
             enabled: true
             repository: https://github.com/DigitalState/Records.git
-            version: 0.2.0
+            version: 0.2.1
             api:
                 host: api.records.lab.ds
             adminer:
@@ -190,7 +190,7 @@ all:
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
-            version: 0.2.0
+            version: 0.2.1
             api:
                 host: api.services.lab.ds
             adminer:
@@ -204,7 +204,7 @@ all:
         tasks:
             enabled: false
             repository: https://github.com/DigitalState/Tasks.git
-            version: 0.2.0
+            version: 0.2.1
             api:
                 host: api.tasks.lab.ds
             adminer:
