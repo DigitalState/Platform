@@ -20,6 +20,7 @@
 /app/monitor
 /app/portal
 /app/ui
+/app/VERSION
 
 /resource/jwt/*
 !/resource/jwt/dev/.gitkeep

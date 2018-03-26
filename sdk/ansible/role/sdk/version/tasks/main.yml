@@ -1,0 +1,5 @@
+---
+- name: Copy version file
+  copy:
+      src: '/root/VERSION'
+      dest: '/srv/VERSION'

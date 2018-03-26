@@ -13,6 +13,7 @@ services:
             - ./app:/srv
             - ./resource:/root/resource
             - ./sdk/ansible:/etc/ansible
+            - ./VERSION:/root/VERSION
         secrets:
             - source: docker_credential
               target: docker/credential
