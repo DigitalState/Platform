@@ -10,3 +10,12 @@
         include_role:
             name: package/docker
   tags: [system]
+
+- name: Set sdk properties
+  hosts: server
+  become: true
+  tasks:
+      - name: Set version
+        include_role:
+            name: sdk/version
+  tags: [system]
