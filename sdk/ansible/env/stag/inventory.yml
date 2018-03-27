@@ -34,7 +34,7 @@ all:
         admin:
             enabled: true
             repository: https://github.com/DigitalState/Admin.git
-            version: 0.1.4
+            version: 0.1.5
             host: admin.stag.ds
         assets:
             enabled: true
@@ -168,7 +168,7 @@ all:
         portal:
             enabled: true
             repository: https://github.com/DigitalState/Portal.git
-            version: 0.1.4
+            version: 0.1.5
             host: portal.stag.ds
         proxy:
             enabled: true
