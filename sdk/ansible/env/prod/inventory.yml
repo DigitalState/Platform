@@ -39,7 +39,7 @@ all:
         assets:
             enabled: true
             repository: https://github.com/DigitalState/Assets.git
-            version: 0.2.2
+            version: 0.2.3
             api:
                 host: api.assets.prod.ds
             adminer:
@@ -53,7 +53,7 @@ all:
         authentication:
             enabled: true
             repository: https://github.com/DigitalState/Authentication.git
-            version: 0.2.2
+            version: 0.2.3
             api:
                 host: api.authentication.prod.ds
             adminer:
@@ -75,7 +75,7 @@ all:
         cases:
             enabled: true
             repository: https://github.com/DigitalState/Cases.git
-            version: 0.2.2
+            version: 0.2.3
             api:
                 host: api.cases.prod.ds
             adminer:
@@ -89,7 +89,7 @@ all:
         cms:
             enabled: true
             repository: https://github.com/DigitalState/Cms.git
-            version: 0.2.2
+            version: 0.2.3
             api:
                 host: api.cms.prod.ds
             adminer:
@@ -129,7 +129,7 @@ all:
         identities:
             enabled: true
             repository: https://github.com/DigitalState/Identities.git
-            version: 0.2.2
+            version: 0.2.3
             api:
                 host: api.identities.prod.ds
             adminer:
@@ -178,7 +178,7 @@ all:
         records:
             enabled: true
             repository: https://github.com/DigitalState/Records.git
-            version: 0.2.2
+            version: 0.2.3
             api:
                 host: api.records.prod.ds
             adminer:
@@ -192,7 +192,7 @@ all:
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
-            version: 0.2.2
+            version: 0.2.3
             api:
                 host: api.services.prod.ds
             adminer:
@@ -206,7 +206,7 @@ all:
         tasks:
             enabled: false
             repository: https://github.com/DigitalState/Tasks.git
-            version: 0.2.2
+            version: 0.2.3
             api:
                 host: api.tasks.prod.ds
             adminer:
