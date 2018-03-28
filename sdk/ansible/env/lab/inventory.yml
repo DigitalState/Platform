@@ -43,7 +43,7 @@ all:
             adminer:
                 host: adminer.assets.lab.ds
             database:
-                host: assets_db
+                host: assets_database
                 port: 5432
                 name: assets
                 username: assets
@@ -57,7 +57,7 @@ all:
             adminer:
                 host: adminer.authentication.lab.ds
             database:
-                host: authentication_db
+                host: authentication_database
                 port: 5432
                 name: authentication
                 username: authentication
@@ -79,7 +79,7 @@ all:
             adminer:
                 host: adminer.cases.lab.ds
             database:
-                host: cases_db
+                host: cases_database
                 port: 5432
                 name: cases
                 username: cases
@@ -93,7 +93,7 @@ all:
             adminer:
                 host: adminer.cms.lab.ds
             database:
-                host: cms_db
+                host: cms_database
                 port: 5432
                 name: cms
                 username: cms
@@ -133,7 +133,7 @@ all:
             adminer:
                 host: adminer.identities.lab.ds
             database:
-                host: identities_db
+                host: identities_database
                 port: 5432
                 name: identities
                 username: identities
@@ -147,7 +147,7 @@ all:
             adminer:
                 host: adminer.interactions.lab.ds
             database:
-                host: interactions_db
+                host: interactions_database
                 port: 5432
                 name: interactions
                 username: interactions
@@ -182,7 +182,7 @@ all:
             adminer:
                 host: adminer.records.lab.ds
             database:
-                host: records_db
+                host: records_database
                 port: 5432
                 name: records
                 username: records
@@ -196,7 +196,7 @@ all:
             adminer:
                 host: adminer.services.lab.ds
             database:
-                host: services_db
+                host: services_database
                 port: 5432
                 name: services
                 username: services
@@ -210,7 +210,7 @@ all:
             adminer:
                 host: adminer.tasks.lab.ds
             database:
-                host: tasks_db
+                host: tasks_database
                 port: 5432
                 name: tasks
                 username: tasks
@@ -224,7 +224,7 @@ all:
             adminer:
                 host: adminer.topics.lab.ds
             database:
-                host: topics_db
+                host: topics_database
                 port: 5432
                 name: topics
                 username: topics
