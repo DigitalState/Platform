@@ -19,10 +19,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -43,7 +39,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
@@ -59,10 +56,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -84,7 +77,8 @@
 									"path": [
 										"health"
 									]
-								}
+								},
+								"description": "This endpoint returns the list of health check statuses and the overall health status of the microservice."
 							},
 							"response": []
 						},
@@ -93,10 +87,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -119,7 +109,8 @@
 										"health",
 										"ping"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific health check status."
 							},
 							"response": []
 						}
@@ -136,10 +127,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -153,14 +140,102 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{assets}}{{environment}}/configs",
+									"raw": "{{assets}}{{environment}}/configs?",
 									"host": [
 										"{{assets}}{{environment}}"
 									],
 									"path": [
 										"configs"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "key",
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "key[0]",
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "enabled",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of configurations."
 							},
 							"response": []
 						},
@@ -170,10 +245,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -187,15 +258,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{assets}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{assets}}{{environment}}/configs/6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33",
 									"host": [
 										"{{assets}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific configuration."
 							},
 							"response": []
 						},
@@ -204,10 +276,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -219,18 +287,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"value\": \"test\"\n}"
+									"raw": "{\n\t\"value\": \"system@system.ds\",\n\t\"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{assets}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{assets}}{{environment}}/configs/6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33",
 									"host": [
 										"{{assets}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific configuration."
 							},
 							"response": []
 						}
@@ -247,9 +316,118 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
+										"key": "Content-Type",
+										"value": "application/json"
 									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{assets}}{{environment}}/accesses?",
+									"host": [
+										"{{assets}}{{environment}}"
+									],
+									"path": [
+										"accesses"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid[0]",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of access cards."
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -264,14 +442,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{assets}}{{environment}}/accesses",
+									"raw": "{{assets}}{{environment}}/accesses/9b5e8f50-f153-4b00-b0a9-d9f24c09e0af",
 									"host": [
 										"{{assets}}{{environment}}"
 									],
 									"path": [
-										"accesses"
+										"accesses",
+										"9b5e8f50-f153-4b00-b0a9-d9f24c09e0af"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific access card."
 							},
 							"response": []
 						},
@@ -281,10 +461,6 @@
 								"method": "POST",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -295,7 +471,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\n    \"identity\": \"Staff\",\n    \"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\n    \"permissions\": [\n        {\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\n            \"key\": \"asset\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"assignee\": \"Staff\",\n    \"assigneeUuid\": \"e32f09b7-e1cf-4a91-a0e1-6822bf47a662\",\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"asset\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{assets}}{{environment}}/accesses",
@@ -305,7 +481,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": "This endpoint adds an access card to the list."
 							},
 							"response": []
 						},
@@ -315,10 +492,6 @@
 								"method": "PUT",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -329,18 +502,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"permissions\": [\n        {\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\n            \"key\": \"asset\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+									"raw": "{\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"asset\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{assets}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{assets}}{{environment}}/accesses/9b5e8f50-f153-4b00-b0a9-d9f24c09e0af",
 									"host": [
 										"{{assets}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"9b5e8f50-f153-4b00-b0a9-d9f24c09e0af"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific access card."
 							},
 							"response": []
 						},
@@ -350,10 +524,6 @@
 								"method": "DELETE",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -367,27 +537,24 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{assets}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{assets}}{{environment}}/accesses/9b5e8f50-f153-4b00-b0a9-d9f24c09e0af",
 									"host": [
 										"{{assets}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"9b5e8f50-f153-4b00-b0a9-d9f24c09e0af"
 									]
-								}
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						},
 						{
-							"name": "/permissions",
+							"name": "/permissions/list",
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -399,17 +566,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{assets}}{{environment}}/permissions",
+									"raw": "{{assets}}{{environment}}/permissions/list",
 									"host": [
 										"{{assets}}{{environment}}"
 									],
 									"path": [
-										"permissions"
+										"permissions",
+										"list"
 									]
-								}
+								},
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -425,10 +594,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -460,10 +625,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -494,10 +655,6 @@
 							"request": {
 								"method": "POST",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -529,10 +686,6 @@
 								"method": "PUT",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -563,10 +716,6 @@
 							"request": {
 								"method": "DELETE",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -606,10 +755,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -639,10 +784,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -675,10 +816,6 @@
 								"method": "POST",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -708,10 +845,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -743,10 +876,6 @@
 							"request": {
 								"method": "DELETE",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -792,10 +921,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -816,7 +941,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
@@ -833,10 +959,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -850,86 +972,15 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/health?",
+									"raw": "{{authentication}}{{environment}}/health",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
 									"path": [
 										"health"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of health check statuses and the overall health status of the microservice."
 							},
 							"response": []
 						},
@@ -939,10 +990,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -956,87 +1003,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/health/ping?",
+									"raw": "{{authentication}}{{environment}}/health/ping",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
 									"path": [
 										"health",
 										"ping"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns a specific health check status."
 							},
 							"response": []
 						}
@@ -1052,10 +1028,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -1080,76 +1052,92 @@
 									"query": [
 										{
 											"key": "id",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": null,
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": null,
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
 											"key": "key",
-											"value": null,
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "key[0]",
+											"value": "ds_api.user.username",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "enabled",
-											"value": null,
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of configurations."
 							},
 							"response": []
 						},
@@ -1158,10 +1146,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -1176,15 +1160,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{authentication}}{{environment}}/configs/da037c20-59e1-40fb-89bd-c84a2aff6c0b",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"da037c20-59e1-40fb-89bd-c84a2aff6c0b"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific configuration."
 							},
 							"response": []
 						},
@@ -1193,10 +1178,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -1208,18 +1189,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"enabled\": true,\n\t\"version\": 1\n}"
+									"raw": "{\n\t\"value\": \"system@system.ds\",\n\t\"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{authentication}}{{environment}}/configs/da037c20-59e1-40fb-89bd-c84a2aff6c0b",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"da037c20-59e1-40fb-89bd-c84a2aff6c0b"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific configuration."
 							},
 							"response": []
 						}
@@ -1235,10 +1217,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -1263,76 +1241,87 @@
 									"query": [
 										{
 											"key": "id",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": null,
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": null,
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
-											"key": "userUuid",
-											"value": null,
+											"key": "assigneeUuid",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
 											"disabled": true
 										},
 										{
-											"key": "userUuid[0]",
-											"value": null,
+											"key": "assigneeUuid[0]",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": null,
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": "This endpoint returns a list of access cards."
 							},
 							"response": []
 						},
@@ -1341,10 +1330,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -1359,87 +1344,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111?",
+									"raw": "{{authentication}}{{environment}}/accesses/04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
+										"04eb0db0-fbf7-44e1-ba2f-dba056443ec1"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific access card."
 							},
 							"response": []
 						},
@@ -1449,10 +1363,6 @@
 								"method": "POST",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -1463,7 +1373,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\n    \"identity\": \"Staff\",\n    \"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\n    \"permissions\": [\n        {\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"assignee\": \"Staff\",\n    \"assigneeUuid\": \"e32f09b7-e1cf-4a91-a0e1-6822bf47a662\",\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{authentication}}{{environment}}/accesses",
@@ -1473,7 +1383,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": "This endpoint adds an access card to the list."
 							},
 							"response": []
 						},
@@ -1482,10 +1393,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -1497,18 +1404,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"permissions\": [\n        {\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+									"raw": "{\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"user\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{authentication}}{{environment}}/accesses/04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"04eb0db0-fbf7-44e1-ba2f-dba056443ec1"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific access card."
 							},
 							"response": []
 						},
@@ -1517,10 +1425,6 @@
 							"request": {
 								"method": "DELETE",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -1535,27 +1439,24 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{authentication}}{{environment}}/accesses/04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"04eb0db0-fbf7-44e1-ba2f-dba056443ec1"
 									]
-								}
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						},
 						{
-							"name": "/permissions",
+							"name": "/permissions/list",
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -1570,14 +1471,16 @@
 									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/permissions",
+									"raw": "{{authentication}}{{environment}}/permissions/list",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
 									"path": [
-										"permissions"
+										"permissions",
+										"list"
 									]
-								}
+								},
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -1593,10 +1496,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -1631,47 +1530,47 @@
 										},
 										{
 											"key": "uuid",
-											"value": "fca1b603-1c29-4393-85c4-e30611c80abf",
+											"value": "40759f94-3e8b-41a1-8a3c-dd84393da5b9",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "fca1b603-1c29-4393-85c4-e30611c80abf",
+											"value": "40759f94-3e8b-41a1-8a3c-dd84393da5b9",
 											"disabled": true
 										},
 										{
 											"key": "username",
-											"value": "morgan",
+											"value": "admin@staff.ds",
 											"disabled": true
 										},
 										{
 											"key": "email",
-											"value": "morgan@site.com",
+											"value": "admin@staff.ds",
 											"disabled": true
 										},
 										{
 											"key": "identity",
-											"value": "Individual",
+											"value": "Staff",
 											"disabled": true
 										},
 										{
 											"key": "identity[0]",
-											"value": "Individual",
+											"value": "Staff",
 											"disabled": true
 										},
 										{
 											"key": "identityUuid",
-											"value": "9be0af28-ef41-49b7-86d9-72a2d9beb051",
+											"value": "e32f09b7-e1cf-4a91-a0e1-6822bf47a662",
 											"disabled": true
 										},
 										{
 											"key": "identityUuid[0]",
-											"value": "9be0af28-ef41-49b7-86d9-72a2d9beb051",
+											"value": "e32f09b7-e1cf-4a91-a0e1-6822bf47a662",
 											"disabled": true
 										},
 										{
 											"key": "roles",
-											"value": "ROLE_INDIVIDUAL",
+											"value": "ROLE_STAFF",
 											"disabled": true
 										},
 										{
@@ -1730,10 +1629,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -1765,10 +1660,6 @@
 								"method": "POST",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -1798,10 +1689,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -1833,10 +1720,6 @@
 							"request": {
 								"method": "DELETE",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -1876,10 +1759,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -1903,57 +1782,47 @@
 									"query": [
 										{
 											"key": "id",
-											"value": "1",
+											"value": "",
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": "1",
+											"value": "",
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": "fca1b603-1c29-4393-85c4-e30611c80abf",
+											"value": "",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "fca1b603-1c29-4393-85c4-e30611c80abf",
+											"value": "",
 											"disabled": true
 										},
 										{
 											"key": "username",
-											"value": "morgan",
+											"value": "",
 											"disabled": true
 										},
 										{
-											"key": "email",
-											"value": "morgan@site.com",
+											"key": "owner",
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
-											"key": "identity",
-											"value": "Individual",
+											"key": "owner[0]",
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
-											"key": "identity[0]",
-											"value": "Individual",
+											"key": "ownerUuid",
+											"value": "a9d68bf7-5000-49fe-8b00-33dde235b327",
 											"disabled": true
 										},
 										{
-											"key": "identityUuid",
-											"value": "9be0af28-ef41-49b7-86d9-72a2d9beb051",
-											"disabled": true
-										},
-										{
-											"key": "identityUuid[0]",
-											"value": "9be0af28-ef41-49b7-86d9-72a2d9beb051",
-											"disabled": true
-										},
-										{
-											"key": "roles",
-											"value": "ROLE_INDIVIDUAL",
+											"key": "ownerUuid[0]",
+											"value": "a9d68bf7-5000-49fe-8b00-33dde235b327",
 											"disabled": true
 										},
 										{
@@ -1995,11 +1864,6 @@
 											"key": "lastLogin[after]",
 											"value": "2017-01-01",
 											"disabled": true
-										},
-										{
-											"key": "enabled",
-											"value": "true",
-											"disabled": true
 										}
 									]
 								}
@@ -2011,10 +1875,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -2047,10 +1907,6 @@
 								"method": "POST",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -2080,10 +1936,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -2116,10 +1968,6 @@
 								"method": "DELETE",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -2149,7 +1997,7 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Token",
+					"name": "Login Token",
 					"description": null,
 					"item": [
 						{
@@ -3709,10 +3557,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -3733,7 +3577,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
@@ -3750,10 +3595,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -3767,86 +3608,15 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/health?",
+									"raw": "{{cases}}{{environment}}/health",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
 									"path": [
 										"health"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of health check statuses and the overall health status of the microservice."
 							},
 							"response": []
 						},
@@ -3856,10 +3626,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -3873,87 +3639,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/health/ping?",
+									"raw": "{{cases}}{{environment}}/health/ping",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
 									"path": [
 										"health",
 										"ping"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns a specific health check status."
 							},
 							"response": []
 						}
@@ -3970,10 +3665,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -3987,14 +3678,102 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/configs",
+									"raw": "{{cases}}{{environment}}/configs?",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
 									"path": [
 										"configs"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "key",
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "key[0]",
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "enabled",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of configurations."
 							},
 							"response": []
 						},
@@ -4004,10 +3783,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -4021,15 +3796,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cases}}{{environment}}/configs/d497ab6c-22a4-426e-9b8b-93f06c5618bc",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"d497ab6c-22a4-426e-9b8b-93f06c5618bc"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific configuration."
 							},
 							"response": []
 						},
@@ -4038,10 +3814,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -4053,18 +3825,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"value\": \"test\"\n}"
+									"raw": "{\n\t\"value\": \"system@system.ds\",\n\t\"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cases}}{{environment}}/configs/d497ab6c-22a4-426e-9b8b-93f06c5618bc",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"d497ab6c-22a4-426e-9b8b-93f06c5618bc"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific configuration."
 							},
 							"response": []
 						}
@@ -4081,9 +3854,118 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
+										"key": "Content-Type",
+										"value": "application/json"
 									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cases}}{{environment}}/accesses?",
+									"host": [
+										"{{cases}}{{environment}}"
+									],
+									"path": [
+										"accesses"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid[0]",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of access cards."
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -4098,14 +3980,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/accesses",
+									"raw": "{{cases}}{{environment}}/accesses/c793a51b-7771-4d1c-b242-2db610f72702",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
 									"path": [
-										"accesses"
+										"accesses",
+										"c793a51b-7771-4d1c-b242-2db610f72702"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific access card."
 							},
 							"response": []
 						},
@@ -4115,10 +3999,6 @@
 								"method": "POST",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -4129,7 +4009,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Staff\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"entity\": \"BusinessUnit\",\r\n\t\t\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\t\t\"key\": \"case\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"assignee\": \"Staff\",\n    \"assigneeUuid\": \"e32f09b7-e1cf-4a91-a0e1-6822bf47a662\",\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"case\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{cases}}{{environment}}/accesses",
@@ -4139,7 +4019,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": "This endpoint adds an access card to the list."
 							},
 							"response": []
 						},
@@ -4149,10 +4030,6 @@
 								"method": "PUT",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -4163,18 +4040,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\n    \"identity\": \"StafF\",\n    \"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\n    \"permissions\": [\n        {\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\n            \"key\": \"case\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ]\n}"
+									"raw": "{\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"case\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cases}}{{environment}}/accesses/c793a51b-7771-4d1c-b242-2db610f72702",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"c793a51b-7771-4d1c-b242-2db610f72702"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific access card."
 							},
 							"response": []
 						},
@@ -4184,10 +4062,6 @@
 								"method": "DELETE",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -4201,27 +4075,24 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cases}}{{environment}}/accesses/c793a51b-7771-4d1c-b242-2db610f72702",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"c793a51b-7771-4d1c-b242-2db610f72702"
 									]
-								}
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						},
 						{
-							"name": "/permissions",
+							"name": "/permissions/list",
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -4233,17 +4104,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/permissions",
+									"raw": "{{cases}}{{environment}}/permissions/list",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
 									"path": [
-										"permissions"
+										"permissions",
+										"list"
 									]
-								}
+								},
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -4968,7 +4841,7 @@
 							},
 							"response": [
 								{
-									"id": "d344ee36-0bac-456f-91cd-fa33d0cec4f3",
+									"id": "e75b488f-c043-488a-99cf-fbfa112109ae",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5130,7 +5003,7 @@
 							},
 							"response": [
 								{
-									"id": "71fde5ec-2e84-42b5-9e62-04a0fad55b85",
+									"id": "a017024f-2c4e-4642-adb7-c7aaf824ce22",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -5293,7 +5166,7 @@
 							},
 							"response": [
 								{
-									"id": "261a2489-7c03-491c-9873-f772e746cde2",
+									"id": "6a7542ea-0e4d-4634-a09f-f75ed3ae0772",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5706,7 +5579,7 @@
 							},
 							"response": [
 								{
-									"id": "bfee2345-6082-47d5-874c-7933acf3414f",
+									"id": "0ab92a32-d3de-4036-bca8-56ceee2ba463",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5868,7 +5741,7 @@
 							},
 							"response": [
 								{
-									"id": "39f292b9-2668-4def-96e5-6d20bfa7be49",
+									"id": "71c4077c-7665-4b49-b141-eb29a6b14fba",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -6031,7 +5904,7 @@
 							},
 							"response": [
 								{
-									"id": "62f648ae-25b3-482a-bc78-f58829781dc5",
+									"id": "ffde5794-f74e-4e38-923b-1c443a7f2059",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -6177,10 +6050,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -6201,7 +6070,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
@@ -6218,10 +6088,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -6235,86 +6101,15 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/health?",
+									"raw": "{{cms}}{{environment}}/health",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
 									"path": [
 										"health"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of health check statuses and the overall health status of the microservice."
 							},
 							"response": []
 						},
@@ -6324,10 +6119,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -6341,87 +6132,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/health/ping?",
+									"raw": "{{cms}}{{environment}}/health/ping",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
 									"path": [
 										"health",
 										"ping"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns a specific health check status."
 							},
 							"response": []
 						}
@@ -6438,10 +6158,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -6455,14 +6171,102 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/configs",
+									"raw": "{{cms}}{{environment}}/configs?",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
 									"path": [
 										"configs"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "key",
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "key[0]",
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "enabled",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of configurations."
 							},
 							"response": []
 						},
@@ -6472,10 +6276,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -6489,15 +6289,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cms}}{{environment}}/configs/09c78396-8130-4097-955d-1bc644d1f271",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"09c78396-8130-4097-955d-1bc644d1f271"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific configuration."
 							},
 							"response": []
 						},
@@ -6506,10 +6307,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -6521,18 +6318,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"value\": \"test\"\n}"
+									"raw": "{\n\t\"value\": \"system@system.ds\",\n\t\"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cms}}{{environment}}/configs/09c78396-8130-4097-955d-1bc644d1f271",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"09c78396-8130-4097-955d-1bc644d1f271"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific configuration."
 							},
 							"response": []
 						}
@@ -6549,9 +6347,118 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
+										"key": "Content-Type",
+										"value": "application/json"
 									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cms}}{{environment}}/accesses?",
+									"host": [
+										"{{cms}}{{environment}}"
+									],
+									"path": [
+										"accesses"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid[0]",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of access cards."
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -6566,14 +6473,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/accesses",
+									"raw": "{{cms}}{{environment}}/accesses/28e5913f-7539-4501-bd5d-1eb28695ed0a",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
 									"path": [
-										"accesses"
+										"accesses",
+										"28e5913f-7539-4501-bd5d-1eb28695ed0a"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific access card."
 							},
 							"response": []
 						},
@@ -6583,10 +6492,6 @@
 								"method": "POST",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -6597,7 +6502,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Staff\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"entity\": \"BusinessUnit\",\r\n\t\t\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\t\t\"key\": \"data\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"assignee\": \"Staff\",\n    \"assigneeUuid\": \"e32f09b7-e1cf-4a91-a0e1-6822bf47a662\",\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"data\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{cms}}{{environment}}/accesses",
@@ -6607,7 +6512,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": "This endpoint adds an access card to the list."
 							},
 							"response": []
 						},
@@ -6617,10 +6523,6 @@
 								"method": "PUT",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -6631,18 +6533,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Staff\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"entity\": \"BusinessUnit\",\r\n\t\t\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\t\t\"key\": \"data\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
+									"raw": "{\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"data\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cms}}{{environment}}/accesses/28e5913f-7539-4501-bd5d-1eb28695ed0a",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"28e5913f-7539-4501-bd5d-1eb28695ed0a"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific access card."
 							},
 							"response": []
 						},
@@ -6652,10 +6555,6 @@
 								"method": "DELETE",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -6669,27 +6568,24 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cms}}{{environment}}/accesses/28e5913f-7539-4501-bd5d-1eb28695ed0a",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"28e5913f-7539-4501-bd5d-1eb28695ed0a"
 									]
-								}
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						},
 						{
-							"name": "/permissions",
+							"name": "/permissions/list",
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -6701,17 +6597,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/permissions",
+									"raw": "{{cms}}{{environment}}/permissions/list",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
 									"path": [
-										"permissions"
+										"permissions",
+										"list"
 									]
-								}
+								},
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -6959,7 +6857,7 @@
 							},
 							"response": [
 								{
-									"id": "343498b0-2d53-4801-a41e-66477e69d7c7",
+									"id": "323f7632-c03d-4045-8f21-f62dcc906ad4",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7121,7 +7019,7 @@
 							},
 							"response": [
 								{
-									"id": "dbc3a81f-5d0b-4512-a4c9-3caa43f528f2",
+									"id": "a2f4b358-9421-4dbb-8e9d-f2daa534e7a8",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -7284,7 +7182,7 @@
 							},
 							"response": [
 								{
-									"id": "ba011930-90e9-43f6-9bed-f1ba46b7cae9",
+									"id": "e2c673ed-7722-420d-bc39-93c7b8b6c53a",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7699,7 +7597,7 @@
 							},
 							"response": [
 								{
-									"id": "dde4e255-b9d5-41c5-9494-a9996067c0b6",
+									"id": "caaa09e7-4284-4ea9-9197-413e9fc7dd4d",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7861,7 +7759,7 @@
 							},
 							"response": [
 								{
-									"id": "7a96ae14-ccfe-45c3-9ed6-555634524de4",
+									"id": "8f2f0127-5d9d-4221-9aaa-3f36c27d1370",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8024,7 +7922,7 @@
 							},
 							"response": [
 								{
-									"id": "221c1f79-9178-4058-a565-c9b336bd61ef",
+									"id": "dd226779-b400-4592-9aa6-c9a80c370393",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8395,7 +8293,7 @@
 							},
 							"response": [
 								{
-									"id": "f88ba72e-6914-4248-817a-4b2a73292c3c",
+									"id": "9b536c3b-2bdb-44b5-9513-188eb855201e",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8557,7 +8455,7 @@
 							},
 							"response": [
 								{
-									"id": "a2d2aec6-b5d3-40c5-9bac-80ecf007bba6",
+									"id": "53e49f7b-36ff-4e22-b03e-a524b1ea5635",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8720,7 +8618,7 @@
 							},
 							"response": [
 								{
-									"id": "31f9618c-0349-44d3-9829-d10c296563d8",
+									"id": "2e9d25ce-9eb9-4271-9ae2-375ca245ec6b",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9092,7 +8990,7 @@
 							},
 							"response": [
 								{
-									"id": "8d7c38af-68e3-4528-a86e-82c0aaed0600",
+									"id": "4603c0ff-b969-496f-89b6-0a276b95d357",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9254,7 +9152,7 @@
 							},
 							"response": [
 								{
-									"id": "976cc069-7d09-4ab5-85a9-94effaeb858e",
+									"id": "e5344ea9-07d9-4e87-b0cb-9df7b55e893a",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -9417,7 +9315,7 @@
 							},
 							"response": [
 								{
-									"id": "7cedbabf-5d0f-4102-a2c3-f9d9ac3fc992",
+									"id": "1ab882a3-813d-444c-b542-f98863a3edf3",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9603,7 +9501,7 @@
 							},
 							"response": [
 								{
-									"id": "2d27e50d-6835-4a97-9eae-f8b046e434cb",
+									"id": "22032b1a-145b-4d4b-8cf8-82e7ee71aac2",
 									"name": "Created",
 									"originalRequest": {
 										"method": "GET",
@@ -9767,10 +9665,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -9791,7 +9685,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
@@ -9808,10 +9703,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -9825,86 +9716,15 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/health?",
+									"raw": "{{identities}}{{environment}}/health",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
 									"path": [
 										"health"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of health check statuses and the overall health status of the microservice."
 							},
 							"response": []
 						},
@@ -9914,10 +9734,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -9931,87 +9747,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/health/ping?",
+									"raw": "{{identities}}{{environment}}/health/ping",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
 									"path": [
 										"health",
 										"ping"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns a specific health check status."
 							},
 							"response": []
 						}
@@ -10027,10 +9772,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -10055,76 +9796,92 @@
 									"query": [
 										{
 											"key": "id",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": null,
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": null,
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
 											"key": "key",
-											"value": null,
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "key[0]",
+											"value": "ds_api.user.username",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "enabled",
-											"value": null,
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of configurations."
 							},
 							"response": []
 						},
@@ -10133,10 +9890,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -10151,15 +9904,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{identities}}{{environment}}/configs/e8859126-6724-4d4a-94e2-b5b69bbba169",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"e8859126-6724-4d4a-94e2-b5b69bbba169"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific configuration."
 							},
 							"response": []
 						},
@@ -10168,10 +9922,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -10183,18 +9933,298 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"value\": \"test\",\n    \"version\": 1\n}"
+									"raw": "{\n\t\"value\": \"system@system.ds\",\n\t\"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{identities}}{{environment}}/configs/e8859126-6724-4d4a-94e2-b5b69bbba169",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"e8859126-6724-4d4a-94e2-b5b69bbba169"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific configuration."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Access",
+					"description": null,
+					"item": [
+						{
+							"name": "/accesses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/accesses?",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"accesses"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid[0]",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of access cards."
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/accesses/e5bea38e-ae59-498f-85c3-d7836f45396d",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"accesses",
+										"e5bea38e-ae59-498f-85c3-d7836f45396d"
+									]
+								},
+								"description": "This endpoint returns a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"assignee\": \"Staff\",\n    \"assigneeUuid\": \"e32f09b7-e1cf-4a91-a0e1-6822bf47a662\",\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"individual\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/accesses",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"accesses"
+									]
+								},
+								"description": "This endpoint adds an access card to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"individual\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/accesses/e5bea38e-ae59-498f-85c3-d7836f45396d",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"accesses",
+										"e5bea38e-ae59-498f-85c3-d7836f45396d"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/accesses/e5bea38e-ae59-498f-85c3-d7836f45396d",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"accesses",
+										"e5bea38e-ae59-498f-85c3-d7836f45396d"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/permissions/list",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/permissions/list",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"permissions",
+										"list"
+									]
+								},
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -12834,228 +12864,6 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Access",
-					"description": "",
-					"item": [
-						{
-							"name": "/accesses",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/accesses",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"accesses"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/accesses/{uuid}",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Staff\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"entity\": \"BusinessUnit\",\r\n\t\t\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\t\t\"key\": \"data\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
-								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"accesses",
-										"11111111-1111-1111-1111-111111111111"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/accesses",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"6ea06713-ac93-43ed-b764-a8f04b520ffd\",\r\n\t\"assignee\": \"Staff\",\r\n\t\"assigneeUuid\": \"57f18605-10eb-4514-bb97-7fb4cde740c0\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"scope\": \"generic\",\r\n\t\t\t\"entity\": null,\r\n\t\t\t\"entityUuid\": null,\r\n\t\t\t\"key\": \"individual\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
-								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/accesses",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"accesses"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/accesses/{uuid}",
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Staff\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"entity\": \"BusinessUnit\",\r\n\t\t\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\t\t\"key\": \"data\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
-								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"accesses",
-										"11111111-1111-1111-1111-111111111111"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/accesses/{uuid}",
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"accesses",
-										"11111111-1111-1111-1111-111111111111"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Permission",
-					"description": "",
-					"item": [
-						{
-							"name": "/permissions/list",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/permissions/list",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"permissions",
-										"list"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"_postman_isSubFolder": true
-				},
-				{
 					"name": "Role",
 					"description": null,
 					"item": [
@@ -13368,10 +13176,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -13392,7 +13196,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
@@ -13408,10 +13213,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -13433,7 +13234,8 @@
 									"path": [
 										"health"
 									]
-								}
+								},
+								"description": "This endpoint returns the list of health check statuses and the overall health status of the microservice."
 							},
 							"response": []
 						},
@@ -13442,10 +13244,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -13468,7 +13266,8 @@
 										"health",
 										"ping"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific health check status."
 							},
 							"response": []
 						}
@@ -13485,10 +13284,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -13502,14 +13297,102 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{records}}{{environment}}/configs",
+									"raw": "{{records}}{{environment}}/configs?",
 									"host": [
 										"{{records}}{{environment}}"
 									],
 									"path": [
 										"configs"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "key",
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "key[0]",
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "enabled",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of configurations."
 							},
 							"response": []
 						},
@@ -13519,10 +13402,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -13536,15 +13415,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{records}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{records}}{{environment}}/configs/6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33",
 									"host": [
 										"{{records}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific configuration."
 							},
 							"response": []
 						},
@@ -13553,10 +13433,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -13568,18 +13444,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"value\": \"test\"\n}"
+									"raw": "{\n\t\"value\": \"system@system.ds\",\n\t\"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{records}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{records}}{{environment}}/configs/6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33",
 									"host": [
 										"{{records}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific configuration."
 							},
 							"response": []
 						}
@@ -13596,9 +13473,118 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
+										"key": "Content-Type",
+										"value": "application/json"
 									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{records}}{{environment}}/accesses?",
+									"host": [
+										"{{records}}{{environment}}"
+									],
+									"path": [
+										"accesses"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid[0]",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of access cards."
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -13613,14 +13599,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{records}}{{environment}}/accesses",
+									"raw": "{{records}}{{environment}}/accesses/3bbbdfd0-4ea6-4faa-b469-71c58b387dec",
 									"host": [
 										"{{records}}{{environment}}"
 									],
 									"path": [
-										"accesses"
+										"accesses",
+										"3bbbdfd0-4ea6-4faa-b469-71c58b387dec"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific access card."
 							},
 							"response": []
 						},
@@ -13630,10 +13618,6 @@
 								"method": "POST",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -13644,7 +13628,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\n    \"identity\": \"Staff\",\n    \"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\n    \"permissions\": [\n        {\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\n            \"key\": \"record\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"assignee\": \"Staff\",\n    \"assigneeUuid\": \"e32f09b7-e1cf-4a91-a0e1-6822bf47a662\",\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"record\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{records}}{{environment}}/accesses",
@@ -13654,7 +13638,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": "This endpoint adds an access card to the list."
 							},
 							"response": []
 						},
@@ -13664,10 +13649,6 @@
 								"method": "PUT",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -13678,18 +13659,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"permissions\": [\n        {\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\n            \"key\": \"record\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+									"raw": "{\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"record\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{records}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{records}}{{environment}}/accesses/3bbbdfd0-4ea6-4faa-b469-71c58b387dec",
 									"host": [
 										"{{records}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"3bbbdfd0-4ea6-4faa-b469-71c58b387dec"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific access card."
 							},
 							"response": []
 						},
@@ -13699,10 +13681,6 @@
 								"method": "DELETE",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -13716,27 +13694,24 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{records}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{records}}{{environment}}/accesses/3bbbdfd0-4ea6-4faa-b469-71c58b387dec",
 									"host": [
 										"{{records}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"3bbbdfd0-4ea6-4faa-b469-71c58b387dec"
 									]
-								}
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						},
 						{
-							"name": "/permissions",
+							"name": "/permissions/list",
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -13748,17 +13723,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{records}}{{environment}}/permissions",
+									"raw": "{{records}}{{environment}}/permissions/list",
 									"host": [
 										"{{records}}{{environment}}"
 									],
 									"path": [
-										"permissions"
+										"permissions",
+										"list"
 									]
-								}
+								},
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -14141,10 +14118,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -14165,7 +14138,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
@@ -14182,10 +14156,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -14199,86 +14169,15 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/health?",
+									"raw": "{{services}}{{environment}}/health",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
 										"health"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of health check statuses and the overall health status of the microservice."
 							},
 							"response": []
 						},
@@ -14288,10 +14187,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -14305,87 +14200,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/health/ping?",
+									"raw": "{{services}}{{environment}}/health/ping",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
 										"health",
 										"ping"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns a specific health check status."
 							},
 							"response": []
 						}
@@ -14401,10 +14225,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -14429,76 +14249,92 @@
 									"query": [
 										{
 											"key": "id",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": null,
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": null,
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
 											"key": "key",
-											"value": null,
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "key[0]",
+											"value": "ds_api.user.username",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "enabled",
-											"value": null,
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of configurations."
 							},
 							"response": []
 						},
@@ -14507,10 +14343,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -14525,15 +14357,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{services}}{{environment}}/configs/39cc2930-0de7-4173-8ca4-da8e01863afb",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"39cc2930-0de7-4173-8ca4-da8e01863afb"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific configuration."
 							},
 							"response": []
 						},
@@ -14542,10 +14375,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -14557,18 +14386,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"value\": \"test\",\n    \"version\": 1\n}"
+									"raw": "{\n\t\"value\": \"system@system.ds\",\n\t\"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{services}}{{environment}}/configs/39cc2930-0de7-4173-8ca4-da8e01863afb",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"39cc2930-0de7-4173-8ca4-da8e01863afb"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific configuration."
 							},
 							"response": []
 						}
@@ -14584,10 +14414,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -14612,76 +14438,87 @@
 									"query": [
 										{
 											"key": "id",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": null,
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": null,
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
-											"key": "userUuid",
-											"value": null,
+											"key": "assigneeUuid",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
 											"disabled": true
 										},
 										{
-											"key": "userUuid[0]",
-											"value": null,
+											"key": "assigneeUuid[0]",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": null,
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": "This endpoint returns a list of access cards."
 							},
 							"response": []
 						},
@@ -14690,10 +14527,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -14708,87 +14541,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111?",
+									"raw": "{{services}}{{environment}}/accesses/a295c397-0dc7-40eb-b4a2-7c2278bf41d2",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
+										"a295c397-0dc7-40eb-b4a2-7c2278bf41d2"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific access card."
 							},
 							"response": []
 						},
@@ -14798,10 +14560,6 @@
 								"method": "POST",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -14812,7 +14570,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Staff\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"entity\": \"BusinessUnit\",\r\n\t\t\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\t\t\"key\": \"service\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"assignee\": \"Staff\",\n    \"assigneeUuid\": \"e32f09b7-e1cf-4a91-a0e1-6822bf47a662\",\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"service\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{services}}{{environment}}/accesses",
@@ -14822,7 +14580,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": "This endpoint adds an access card to the list."
 							},
 							"response": []
 						},
@@ -14832,10 +14591,6 @@
 								"method": "PUT",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -14846,18 +14601,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"permissions\": [\n\t\t{\n\t\t\t\"entity\": \"BusinessUnit\",\n\t\t\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\n\t\t\t\"key\": \"service\",\n\t\t\t\"attributes\": [\n\t\t\t\t\"BROWSE\",\n\t\t\t\t\"READ\"\n\t\t\t]\n\t\t}\n    ]\n}"
+									"raw": "{\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"record\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{services}}{{environment}}/accesses/a295c397-0dc7-40eb-b4a2-7c2278bf41d2",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"a295c397-0dc7-40eb-b4a2-7c2278bf41d2"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific access card."
 							},
 							"response": []
 						},
@@ -14867,10 +14623,6 @@
 								"method": "DELETE",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -14884,27 +14636,24 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{services}}{{environment}}/accesses/a295c397-0dc7-40eb-b4a2-7c2278bf41d2",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"a295c397-0dc7-40eb-b4a2-7c2278bf41d2"
 									]
-								}
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						},
 						{
-							"name": "/permissions",
+							"name": "/permissions/list",
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -14916,17 +14665,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/permissions",
+									"raw": "{{services}}{{environment}}/permissions/list",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
-										"permissions"
+										"permissions",
+										"list"
 									]
-								}
+								},
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -16991,10 +16742,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -17015,7 +16762,8 @@
 									"path": [
 										"sandbox"
 									]
-								}
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
@@ -17032,10 +16780,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -17049,86 +16793,15 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/health?",
+									"raw": "{{tasks}}{{environment}}/health",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
 									"path": [
 										"health"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of health check statuses and the overall health status of the microservice."
 							},
 							"response": []
 						},
@@ -17138,10 +16811,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -17155,87 +16824,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/health/ping?",
+									"raw": "{{tasks}}{{environment}}/health/ping",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
 									"path": [
 										"health",
 										"ping"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns a specific health check status."
 							},
 							"response": []
 						}
@@ -17251,10 +16849,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -17279,76 +16873,92 @@
 									"query": [
 										{
 											"key": "id",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": null,
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": null,
+											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
 											"key": "key",
-											"value": null,
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "key[0]",
+											"value": "ds_api.user.username",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "enabled",
-											"value": null,
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": "This endpoint returns the list of configurations."
 							},
 							"response": []
 						},
@@ -17357,10 +16967,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -17375,15 +16981,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{tasks}}{{environment}}/configs/6e1d8da3-9671-4bc8-8e9b-38c709527b2d",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"6e1d8da3-9671-4bc8-8e9b-38c709527b2d"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific configuration."
 							},
 							"response": []
 						},
@@ -17392,10 +16999,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -17407,18 +17010,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"value\": \"test\",\n    \"version\": 1\n}"
+									"raw": "{\n\t\"value\": \"system@system.ds\",\n\t\"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/configs/11111111-1111-1111-1111-111111111111",
+									"raw": "{{tasks}}{{environment}}/configs/6e1d8da3-9671-4bc8-8e9b-38c709527b2d",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
 									"path": [
 										"configs",
-										"11111111-1111-1111-1111-111111111111"
+										"6e1d8da3-9671-4bc8-8e9b-38c709527b2d"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific configuration."
 							},
 							"response": []
 						}
@@ -17434,10 +17038,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -17462,76 +17062,87 @@
 									"query": [
 										{
 											"key": "id",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "id[0]",
-											"value": null,
+											"value": "1",
 											"disabled": true
 										},
 										{
 											"key": "uuid",
-											"value": null,
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": null,
+											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": null,
+											"value": "BusinessUnit",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": null,
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
 											"disabled": true
 										},
 										{
-											"key": "userUuid",
-											"value": null,
+											"key": "assigneeUuid",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
 											"disabled": true
 										},
 										{
-											"key": "userUuid[0]",
-											"value": null,
+											"key": "assigneeUuid[0]",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "createdAt[after]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[before]",
-											"value": null,
+											"value": "2017-01-01",
 											"disabled": true
 										},
 										{
 											"key": "updatedAt[after]",
-											"value": null,
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": "This endpoint returns a list of access cards."
 							},
 							"response": []
 						},
@@ -17540,10 +17151,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -17558,87 +17165,16 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111?",
+									"raw": "{{tasks}}{{environment}}/accesses/3923d94b-3aa4-4dfe-a7b8-3ec1bb23dedc",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
+										"3923d94b-3aa4-4dfe-a7b8-3ec1bb23dedc"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific access card."
 							},
 							"response": []
 						},
@@ -17648,10 +17184,6 @@
 								"method": "POST",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -17662,7 +17194,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Staff\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"permissions\": [\r\n\t\t{\r\n\t\t\t\"entity\": \"BusinessUnit\",\r\n\t\t\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\t\t\"key\": \"task\",\r\n\t\t\t\"attributes\": [\r\n\t\t\t\t\"BROWSE\",\r\n\t\t\t\t\"READ\"\r\n\t\t\t]\r\n\t\t}\r\n\t],\r\n\t\"version\": 1\r\n}"
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"assignee\": \"Staff\",\n    \"assigneeUuid\": \"e32f09b7-e1cf-4a91-a0e1-6822bf47a662\",\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"task\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{tasks}}{{environment}}/accesses",
@@ -17672,7 +17204,8 @@
 									"path": [
 										"accesses"
 									]
-								}
+								},
+								"description": "This endpoint adds an access card to the list."
 							},
 							"response": []
 						},
@@ -17682,10 +17215,6 @@
 								"method": "PUT",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -17696,18 +17225,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"permissions\": [\n\t\t{\n\t\t\t\"entity\": \"BusinessUnit\",\n\t\t\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\n\t\t\t\"key\": \"task\",\n\t\t\t\"attributes\": [\n\t\t\t\t\"BROWSE\",\n\t\t\t\t\"READ\"\n\t\t\t]\n\t\t}\n    ]\n}"
+									"raw": "{\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"task\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{tasks}}{{environment}}/accesses/3923d94b-3aa4-4dfe-a7b8-3ec1bb23dedc",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"3923d94b-3aa4-4dfe-a7b8-3ec1bb23dedc"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific access card."
 							},
 							"response": []
 						},
@@ -17717,10 +17247,6 @@
 								"method": "DELETE",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -17734,27 +17260,24 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/accesses/11111111-1111-1111-1111-111111111111",
+									"raw": "{{tasks}}{{environment}}/accesses/3923d94b-3aa4-4dfe-a7b8-3ec1bb23dedc",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
 									"path": [
 										"accesses",
-										"11111111-1111-1111-1111-111111111111"
+										"3923d94b-3aa4-4dfe-a7b8-3ec1bb23dedc"
 									]
-								}
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						},
 						{
-							"name": "/permissions",
+							"name": "/permissions/list",
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -17766,17 +17289,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/permissions",
+									"raw": "{{tasks}}{{environment}}/permissions/list",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
 									"path": [
-										"permissions"
+										"permissions",
+										"list"
 									]
-								}
+								},
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -17793,10 +17318,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -17810,7 +17331,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/tasks",
+									"raw": "{{tasks}}{{environment}}/tasks?",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
@@ -17819,135 +17340,69 @@
 									],
 									"query": [
 										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
 											"key": "uuid",
-											"value": "",
+											"value": "11111111-1111-1111-1111-111111111111",
 											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "",
+											"value": "11111111-1111-1111-1111-111111111111",
 											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "owner",
-											"value": "",
+											"value": "BusinessUnit",
 											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "owner[0]",
-											"value": "",
+											"value": "BusinessUnit",
 											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid",
-											"value": "",
+											"value": "a9d68bf7-5000-49fe-8b00-33dde235b327",
 											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "ownerUuid[0]",
-											"value": "",
+											"value": "a9d68bf7-5000-49fe-8b00-33dde235b327",
 											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "identity",
-											"value": "",
-											"type": "text",
+											"value": "Staff",
+											"disabled": true
+										},
+										{
+											"key": "identity[0]",
+											"value": "Staff",
 											"disabled": true
 										},
 										{
 											"key": "identityUuid",
-											"value": "",
-											"type": "text",
+											"value": "5449ce65-5df0-440d-aead-21a77907e59a",
 											"disabled": true
 										},
 										{
-											"key": "createdAt[before]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "deletedAt[before]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "deletedAt[after]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "order[uuid]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "order[createdAt]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "order[title]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "order[description]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "order[identity]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "order[identityUuid]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "order[dueAt]",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "order[priority]",
-											"value": "",
-											"type": "text",
+											"key": "identityUuid[0]",
+											"value": "5449ce65-5df0-440d-aead-21a77907e59a",
 											"disabled": true
 										},
 										{
@@ -17959,6 +17414,90 @@
 										{
 											"key": "description",
 											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "deletedAt[before]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "deletedAt[after]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[uuid]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[createdAt]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[title]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[description]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[identity]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[identityUuid]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[dueAt]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[priority]",
+											"value": "asc",
 											"type": "text",
 											"disabled": true
 										},
@@ -17975,7 +17514,8 @@
 											"disabled": true
 										}
 									]
-								}
+								},
+								"description": "This endpoint returns a list of tasks."
 							},
 							"response": []
 						},
@@ -17984,10 +17524,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -18010,7 +17546,8 @@
 										"tasks",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific task."
 							},
 							"response": []
 						},
@@ -18019,10 +17556,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -18034,7 +17567,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"identity\": \"Staff\",\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\"\n}"
+									"raw": "{\n\t\"identity\": \"Staff\",\n\t\"identityUuid\": \"5449ce65-5df0-440d-aead-21a77907e59a\"\n}"
 								},
 								"url": {
 									"raw": "{{tasks}}{{environment}}/tasks/11111111-1111-1111-1111-111111111111/claim",
@@ -18046,7 +17579,8 @@
 										"11111111-1111-1111-1111-111111111111",
 										"claim"
 									]
-								}
+								},
+								"description": "This endpoint claims a specific task."
 							},
 							"response": []
 						},
@@ -18055,10 +17589,6 @@
 							"request": {
 								"method": "DELETE",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -18082,7 +17612,8 @@
 										"11111111-1111-1111-1111-111111111111",
 										"claim"
 									]
-								}
+								},
+								"description": "This endpoint unclaims a specific task."
 							},
 							"response": []
 						},
@@ -18091,10 +17622,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -18118,19 +17645,16 @@
 										"11111111-1111-1111-1111-111111111111",
 										"forms"
 									]
-								}
+								},
+								"description": "This endpoint returns the forms for a specific task."
 							},
 							"response": []
 						},
 						{
-							"name": "/tasks/{uuid}/forms/translation",
+							"name": "/tasks/{uuid}/forms/translations",
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -18145,7 +17669,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/tasks/11111111-1111-1111-1111-111111111111/forms/translation",
+									"raw": "{{tasks}}{{environment}}/tasks/11111111-1111-1111-1111-111111111111/forms/translations",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
@@ -18153,9 +17677,10 @@
 										"tasks",
 										"11111111-1111-1111-1111-111111111111",
 										"forms",
-										"translation"
+										"translations"
 									]
-								}
+								},
+								"description": "This endpoint returns the forms translations for a specific task."
 							},
 							"response": []
 						},
@@ -18164,10 +17689,6 @@
 							"request": {
 								"method": "POST",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -18189,7 +17710,8 @@
 									"path": [
 										"tasks"
 									]
-								}
+								},
+								"description": "This endpoint adds a task to the list."
 							},
 							"response": []
 						},
@@ -18198,10 +17720,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -18224,7 +17742,8 @@
 										"tasks",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific task."
 							},
 							"response": []
 						},
@@ -18233,10 +17752,6 @@
 							"request": {
 								"method": "PUT",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -18260,7 +17775,8 @@
 										"11111111-1111-1111-1111-111111111111",
 										"submission"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific task's submission."
 							},
 							"response": []
 						},
@@ -18295,7 +17811,8 @@
 										"tasks",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": "This endpoint deletes a specific task from the list."
 							},
 							"response": []
 						}
@@ -18312,10 +17829,6 @@
 								"method": "GET",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
-									{
 										"key": "Content-Type",
 										"value": "application/json"
 									},
@@ -18329,14 +17842,156 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/submissions",
+									"raw": "{{tasks}}{{environment}}/submissions?",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
 									"path": [
 										"submissions"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "a9d68bf7-5000-49fe-8b00-33dde235b327",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "a9d68bf7-5000-49fe-8b00-33dde235b327",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "identity",
+											"value": "Staff",
+											"disabled": true
+										},
+										{
+											"key": "identity[0]",
+											"value": "Staff",
+											"disabled": true
+										},
+										{
+											"key": "identityUuid",
+											"value": "5449ce65-5df0-440d-aead-21a77907e59a",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "identityUuid[0]",
+											"value": "5449ce65-5df0-440d-aead-21a77907e59a",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "deletedAt[before]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "deletedAt[after]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[uuid]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[createdAt]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[identity]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[identityUuid]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										}
 									]
-								}
+								},
+								"description": "This endpoint returns a list of task submissions."
 							},
 							"response": []
 						},
@@ -18345,10 +18000,6 @@
 							"request": {
 								"method": "GET",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -18371,7 +18022,8 @@
 										"submissions",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific task submission."
 							},
 							"response": []
 						},
@@ -18380,10 +18032,6 @@
 							"request": {
 								"method": "POST",
 								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{token}}"
-									},
 									{
 										"key": "Content-Type",
 										"value": "application/json"
@@ -18405,7 +18053,8 @@
 									"path": [
 										"submissions"
 									]
-								}
+								},
+								"description": "This endpoint adds a task submission to the list."
 							},
 							"response": []
 						}
@@ -18413,11 +18062,6 @@
 					"_postman_isSubFolder": true
 				}
 			]
-		},
-		{
-			"name": "Security",
-			"description": "",
-			"item": []
 		}
 	],
 	"auth": {
