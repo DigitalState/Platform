@@ -160,12 +160,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33",
 											"disabled": true
 										},
 										{
@@ -349,12 +349,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "9b5e8f50-f153-4b00-b0a9-d9f24c09e0af",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "9b5e8f50-f153-4b00-b0a9-d9f24c09e0af",
 											"disabled": true
 										},
 										{
@@ -579,6 +579,85 @@
 									]
 								},
 								"description": "This endpoint returns the list of available permissions."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Statistic",
+					"description": null,
+					"item": [
+						{
+							"name": "/statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{assets}}{{environment}}/statistics",
+									"host": [
+										"{{assets}}{{environment}}"
+									],
+									"path": [
+										"statistics"
+									]
+								},
+								"description": "This endpoint returns a list of statistics."
+							},
+							"response": []
+						},
+						{
+							"name": "/statistics/asset/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{assets}}{{environment}}/statistics/asset/count",
+									"host": [
+										"{{assets}}{{environment}}"
+									],
+									"path": [
+										"statistics",
+										"asset",
+										"count"
+									]
+								},
+								"description": "This endpoint returns the asset count statistic."
 							},
 							"response": []
 						}
@@ -1481,6 +1560,85 @@
 									]
 								},
 								"description": "This endpoint returns the list of available permissions."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Statistic",
+					"description": null,
+					"item": [
+						{
+							"name": "/statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{authentication}}{{environment}}/statistics",
+									"host": [
+										"{{authentication}}{{environment}}"
+									],
+									"path": [
+										"statistics"
+									]
+								},
+								"description": "This endpoint returns a list of statistics."
+							},
+							"response": []
+						},
+						{
+							"name": "/statistics/registration/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{authentication}}{{environment}}/statistics/registration/count",
+									"host": [
+										"{{authentication}}{{environment}}"
+									],
+									"path": [
+										"statistics",
+										"registration",
+										"count"
+									]
+								},
+								"description": "This endpoint returns the registration count statistic."
 							},
 							"response": []
 						}
@@ -3698,12 +3856,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "d497ab6c-22a4-426e-9b8b-93f06c5618bc",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "d497ab6c-22a4-426e-9b8b-93f06c5618bc",
 											"disabled": true
 										},
 										{
@@ -3887,12 +4045,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "c793a51b-7771-4d1c-b242-2db610f72702",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "c793a51b-7771-4d1c-b242-2db610f72702",
 											"disabled": true
 										},
 										{
@@ -4150,86 +4308,15 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/statistics?",
+									"raw": "{{cases}}{{environment}}/statistics",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
 									"path": [
 										"statistics"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns a list of statistics."
 							},
 							"response": []
 						},
@@ -4256,7 +4343,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/statistics/case/count?",
+									"raw": "{{cases}}{{environment}}/statistics/case/count",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
@@ -4264,80 +4351,9 @@
 										"statistics",
 										"case",
 										"count"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the case count statistic."
 							},
 							"response": []
 						},
@@ -4364,7 +4380,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/statistics/case/count/state/open?",
+									"raw": "{{cases}}{{environment}}/statistics/case/count/state/open",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
@@ -4374,80 +4390,9 @@
 										"count",
 										"state",
 										"open"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the case count statistic where the state is open."
 							},
 							"response": []
 						},
@@ -4474,7 +4419,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/statistics/case/count/state/closed?",
+									"raw": "{{cases}}{{environment}}/statistics/case/count/state/closed",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
@@ -4484,80 +4429,9 @@
 										"count",
 										"state",
 										"closed"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the case count statistic where the state is closed."
 							},
 							"response": []
 						}
@@ -4841,7 +4715,7 @@
 							},
 							"response": [
 								{
-									"id": "e75b488f-c043-488a-99cf-fbfa112109ae",
+									"id": "9182aa9c-a2ba-4bd9-853a-01fea7083de2",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5003,7 +4877,7 @@
 							},
 							"response": [
 								{
-									"id": "a017024f-2c4e-4642-adb7-c7aaf824ce22",
+									"id": "0e08f004-33c9-42dd-9e7c-011f3f0b7b95",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -5166,7 +5040,7 @@
 							},
 							"response": [
 								{
-									"id": "6a7542ea-0e4d-4634-a09f-f75ed3ae0772",
+									"id": "a6f86ba0-486a-40a1-9452-9f97a77b5cd2",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5579,7 +5453,7 @@
 							},
 							"response": [
 								{
-									"id": "0ab92a32-d3de-4036-bca8-56ceee2ba463",
+									"id": "a0a2f791-7aa4-448c-8486-ef64b0ebf2d2",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5741,7 +5615,7 @@
 							},
 							"response": [
 								{
-									"id": "71c4077c-7665-4b49-b141-eb29a6b14fba",
+									"id": "cbf52766-ca1f-4c66-bdc0-73eaae74b690",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -5904,7 +5778,7 @@
 							},
 							"response": [
 								{
-									"id": "ffde5794-f74e-4e38-923b-1c443a7f2059",
+									"id": "abc63026-9abd-40e9-b967-26ceecd8a046",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -6191,12 +6065,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "09c78396-8130-4097-955d-1bc644d1f271",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "09c78396-8130-4097-955d-1bc644d1f271",
 											"disabled": true
 										},
 										{
@@ -6380,12 +6254,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "28e5913f-7539-4501-bd5d-1eb28695ed0a",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "28e5913f-7539-4501-bd5d-1eb28695ed0a",
 											"disabled": true
 										},
 										{
@@ -6610,6 +6484,196 @@
 									]
 								},
 								"description": "This endpoint returns the list of available permissions."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Statistic",
+					"description": null,
+					"item": [
+						{
+							"name": "/statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cms}}{{environment}}/statistics",
+									"host": [
+										"{{cms}}{{environment}}"
+									],
+									"path": [
+										"statistics"
+									]
+								},
+								"description": "This endpoint returns a list of statistics."
+							},
+							"response": []
+						},
+						{
+							"name": "/statistics/data/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cms}}{{environment}}/statistics/data/count",
+									"host": [
+										"{{cms}}{{environment}}"
+									],
+									"path": [
+										"statistics",
+										"data",
+										"count"
+									]
+								},
+								"description": "This endpoint returns the data count statistic."
+							},
+							"response": []
+						},
+						{
+							"name": "/statistics/file/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cms}}{{environment}}/statistics/file/count",
+									"host": [
+										"{{cms}}{{environment}}"
+									],
+									"path": [
+										"statistics",
+										"file",
+										"count"
+									]
+								},
+								"description": "This endpoint returns the file count statistic."
+							},
+							"response": []
+						},
+						{
+							"name": "/statistics/page/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cms}}{{environment}}/statistics/page/count",
+									"host": [
+										"{{cms}}{{environment}}"
+									],
+									"path": [
+										"statistics",
+										"page",
+										"count"
+									]
+								},
+								"description": "This endpoint returns the page count statistic."
+							},
+							"response": []
+						},
+						{
+							"name": "/statistics/text/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cms}}{{environment}}/statistics/text/count",
+									"host": [
+										"{{cms}}{{environment}}"
+									],
+									"path": [
+										"statistics",
+										"text",
+										"count"
+									]
+								},
+								"description": "This endpoint returns the page count statistic."
 							},
 							"response": []
 						}
@@ -6857,7 +6921,7 @@
 							},
 							"response": [
 								{
-									"id": "323f7632-c03d-4045-8f21-f62dcc906ad4",
+									"id": "14c77ad1-5e4a-40c6-b155-af4570a50c64",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7019,7 +7083,7 @@
 							},
 							"response": [
 								{
-									"id": "a2f4b358-9421-4dbb-8e9d-f2daa534e7a8",
+									"id": "2febe006-a0d5-448b-914d-29d792c6544a",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -7182,7 +7246,7 @@
 							},
 							"response": [
 								{
-									"id": "e2c673ed-7722-420d-bc39-93c7b8b6c53a",
+									"id": "3b3a633f-ea8b-40d0-b107-a8d929507a1e",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7597,7 +7661,7 @@
 							},
 							"response": [
 								{
-									"id": "caaa09e7-4284-4ea9-9197-413e9fc7dd4d",
+									"id": "d0cf74ff-51d5-4080-91f1-c603348d3ea6",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7759,7 +7823,7 @@
 							},
 							"response": [
 								{
-									"id": "8f2f0127-5d9d-4221-9aaa-3f36c27d1370",
+									"id": "d4adb5c7-9b2c-4829-a144-23fb4a866be6",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -7922,7 +7986,7 @@
 							},
 							"response": [
 								{
-									"id": "dd226779-b400-4592-9aa6-c9a80c370393",
+									"id": "597a9e37-1356-4a46-aeb2-5f01f1942fd7",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8293,7 +8357,7 @@
 							},
 							"response": [
 								{
-									"id": "9b536c3b-2bdb-44b5-9513-188eb855201e",
+									"id": "d959db2c-a988-4ae2-9959-c6206ba86bf5",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8455,7 +8519,7 @@
 							},
 							"response": [
 								{
-									"id": "53e49f7b-36ff-4e22-b03e-a524b1ea5635",
+									"id": "ea6edba2-831c-468e-a98b-e5818843e0cc",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8618,7 +8682,7 @@
 							},
 							"response": [
 								{
-									"id": "2e9d25ce-9eb9-4271-9ae2-375ca245ec6b",
+									"id": "7a4e30ef-6606-4da9-ba4b-247e0b239a2b",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8990,7 +9054,7 @@
 							},
 							"response": [
 								{
-									"id": "4603c0ff-b969-496f-89b6-0a276b95d357",
+									"id": "d2da69b5-139d-4858-a7e2-ef8d89af7aad",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9152,7 +9216,7 @@
 							},
 							"response": [
 								{
-									"id": "e5344ea9-07d9-4e87-b0cb-9df7b55e893a",
+									"id": "b87a3bf2-60d4-4452-a38d-72f61dcf78f6",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -9315,7 +9379,7 @@
 							},
 							"response": [
 								{
-									"id": "1ab882a3-813d-444c-b542-f98863a3edf3",
+									"id": "73ddd936-6ef3-469b-a583-a27083274b23",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9501,7 +9565,7 @@
 							},
 							"response": [
 								{
-									"id": "22032b1a-145b-4d4b-8cf8-82e7ee71aac2",
+									"id": "dd03106a-a6da-4217-a7a2-28aee7466508",
 									"name": "Created",
 									"originalRequest": {
 										"method": "GET",
@@ -9806,12 +9870,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "e8859126-6724-4d4a-94e2-b5b69bbba169",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "e8859126-6724-4d4a-94e2-b5b69bbba169",
 											"disabled": true
 										},
 										{
@@ -9995,12 +10059,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "e5bea38e-ae59-498f-85c3-d7836f45396d",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "e5bea38e-ae59-498f-85c3-d7836f45396d",
 											"disabled": true
 										},
 										{
@@ -10225,6 +10289,196 @@
 									]
 								},
 								"description": "This endpoint returns the list of available permissions."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Statistic",
+					"description": null,
+					"item": [
+						{
+							"name": "/statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/statistics",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"statistics"
+									]
+								},
+								"description": "This endpoint returns a list of statistics."
+							},
+							"response": []
+						},
+						{
+							"name": "/statistics/anonymous/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/statistics/anonymous/count",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"statistics",
+										"anonymous",
+										"count"
+									]
+								},
+								"description": "This endpoint returns the anonymous count statistic."
+							},
+							"response": []
+						},
+						{
+							"name": "/statistics/individual/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/statistics/individual/count",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"statistics",
+										"individual",
+										"count"
+									]
+								},
+								"description": "This endpoint returns the individual count statistic."
+							},
+							"response": []
+						},
+						{
+							"name": "/statistics/organization/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/statistics/organization/count",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"statistics",
+										"organization",
+										"count"
+									]
+								},
+								"description": "This endpoint returns the organization count statistic."
+							},
+							"response": []
+						},
+						{
+							"name": "/statistics/staff/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/statistics/staff/count",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"statistics",
+										"staff",
+										"count"
+									]
+								},
+								"description": "This endpoint returns the staff count statistic."
 							},
 							"response": []
 						}
@@ -13317,12 +13571,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33",
 											"disabled": true
 										},
 										{
@@ -13506,12 +13760,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "3bbbdfd0-4ea6-4faa-b469-71c58b387dec",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "3bbbdfd0-4ea6-4faa-b469-71c58b387dec",
 											"disabled": true
 										},
 										{
@@ -13736,6 +13990,85 @@
 									]
 								},
 								"description": "This endpoint returns the list of available permissions."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Statistic",
+					"description": null,
+					"item": [
+						{
+							"name": "/statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{records}}{{environment}}/statistics",
+									"host": [
+										"{{records}}{{environment}}"
+									],
+									"path": [
+										"statistics"
+									]
+								},
+								"description": "This endpoint returns a list of statistics."
+							},
+							"response": []
+						},
+						{
+							"name": "/statistics/record/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{records}}{{environment}}/statistics/record/count",
+									"host": [
+										"{{records}}{{environment}}"
+									],
+									"path": [
+										"statistics",
+										"record",
+										"count"
+									]
+								},
+								"description": "This endpoint returns the record count statistic."
 							},
 							"response": []
 						}
@@ -14259,12 +14592,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "39cc2930-0de7-4173-8ca4-da8e01863afb",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "39cc2930-0de7-4173-8ca4-da8e01863afb",
 											"disabled": true
 										},
 										{
@@ -14448,12 +14781,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "a295c397-0dc7-40eb-b4a2-7c2278bf41d2",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "a295c397-0dc7-40eb-b4a2-7c2278bf41d2",
 											"disabled": true
 										},
 										{
@@ -14711,86 +15044,15 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/statistics?",
+									"raw": "{{services}}{{environment}}/statistics",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
 										"statistics"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns a list of statistics."
 							},
 							"response": []
 						},
@@ -14817,7 +15079,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/statistics/category/count?",
+									"raw": "{{services}}{{environment}}/statistics/category/count",
 									"host": [
 										"{{services}}{{environment}}"
 									],
@@ -14825,80 +15087,9 @@
 										"statistics",
 										"category",
 										"count"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the category count statistic."
 							},
 							"response": []
 						},
@@ -14925,7 +15116,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/statistics/service/count?",
+									"raw": "{{services}}{{environment}}/statistics/service/count",
 									"host": [
 										"{{services}}{{environment}}"
 									],
@@ -14933,80 +15124,9 @@
 										"statistics",
 										"service",
 										"count"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the service count statistic."
 							},
 							"response": []
 						},
@@ -15033,7 +15153,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/statistics/scenario/count?",
+									"raw": "{{services}}{{environment}}/statistics/scenario/count",
 									"host": [
 										"{{services}}{{environment}}"
 									],
@@ -15041,80 +15161,9 @@
 										"statistics",
 										"scenario",
 										"count"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the scenario count statistic."
 							},
 							"response": []
 						},
@@ -15141,7 +15190,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/statistics/submission/count?",
+									"raw": "{{services}}{{environment}}/statistics/submission/count",
 									"host": [
 										"{{services}}{{environment}}"
 									],
@@ -15149,80 +15198,9 @@
 										"statistics",
 										"submission",
 										"count"
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "id[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "uuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "owner[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "ownerUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "userUuid[0]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "createdAt[after]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[before]",
-											"value": null,
-											"disabled": true
-										},
-										{
-											"key": "updatedAt[after]",
-											"value": null,
-											"disabled": true
-										}
 									]
-								}
+								},
+								"description": "This endpoint returns the submission count statistic."
 							},
 							"response": []
 						}
@@ -16883,12 +16861,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "6e1d8da3-9671-4bc8-8e9b-38c709527b2d",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "da037c20-59e1-40fb-89bd-c84a2aff6c0b",
+											"value": "6e1d8da3-9671-4bc8-8e9b-38c709527b2d",
 											"disabled": true
 										},
 										{
@@ -17072,12 +17050,12 @@
 										},
 										{
 											"key": "uuid",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "3923d94b-3aa4-4dfe-a7b8-3ec1bb23dedc",
 											"disabled": true
 										},
 										{
 											"key": "uuid[0]",
-											"value": "04eb0db0-fbf7-44e1-ba2f-dba056443ec1",
+											"value": "3923d94b-3aa4-4dfe-a7b8-3ec1bb23dedc",
 											"disabled": true
 										},
 										{
@@ -17309,6 +17287,48 @@
 					"_postman_isSubFolder": true
 				},
 				{
+					"name": "Statistic",
+					"description": null,
+					"item": [
+						{
+							"name": "/statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{tasks}}{{environment}}/statistics",
+									"host": [
+										"{{tasks}}{{environment}}"
+									],
+									"path": [
+										"statistics"
+									]
+								},
+								"description": "This endpoint returns a list of statistics."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
 					"name": "Task",
 					"description": null,
 					"item": [
@@ -17407,13 +17427,13 @@
 										},
 										{
 											"key": "title",
-											"value": "",
+											"value": "Review",
 											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "description",
-											"value": "",
+											"value": "Review",
 											"type": "text",
 											"disabled": true
 										},
