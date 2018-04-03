@@ -4,6 +4,9 @@ all:
             ansible_connection: local
         server:
             ansible_connection: local
+#            ansible_host: ~
+#            ansible_port: 22
+#            ansible_ssh_private_key_file: /root/.ssh/lab/key
     vars:
         project: ds
         directory: ~
@@ -32,12 +35,12 @@ all:
         admin:
             enabled: true
             repository: https://github.com/DigitalState/Admin.git
-            version: 0.1.7
+            version: develop
             host: admin.lab.ds
         assets:
             enabled: true
             repository: https://github.com/DigitalState/Assets.git
-            version: 0.2.3
+            version: develop
             api:
                 host: api.assets.lab.ds
             adminer:
@@ -51,7 +54,7 @@ all:
         authentication:
             enabled: true
             repository: https://github.com/DigitalState/Authentication.git
-            version: 0.2.3
+            version: develop
             api:
                 host: api.authentication.lab.ds
             adminer:
@@ -65,7 +68,7 @@ all:
         camunda:
             enabled: true
             repository: https://github.com/DigitalState/Camunda.git
-            version: 0.1.0
+            version: develop
             api:
                 host: api.camunda.lab.ds
             username: admin@staff.ds
@@ -73,7 +76,7 @@ all:
         cases:
             enabled: true
             repository: https://github.com/DigitalState/Cases.git
-            version: 0.2.3
+            version: develop
             api:
                 host: api.cases.lab.ds
             adminer:
@@ -87,7 +90,7 @@ all:
         cms:
             enabled: true
             repository: https://github.com/DigitalState/Cms.git
-            version: 0.2.3
+            version: develop
             api:
                 host: api.cms.lab.ds
             adminer:
@@ -101,21 +104,21 @@ all:
         core:
             enabled: true
             repository: https://github.com/DigitalState/Core.git
-            version: 0.1.0
+            version: develop
         discovery:
             enabled: true
             repository: https://github.com/DigitalState/Discovery.git
-            version: 0.1.0
+            version: develop
             api:
                 host: api.discovery.lab.ds
         documentation:
             enabled: true
             repository: https://github.com/DigitalState/Documentation.git
-            version: 0.1.0
+            version: master
         formio:
             enabled: true
             repository: https://github.com/DigitalState/Formio.git
-            version: 0.1.5
+            version: develop
             api:
                 host: api.formio.lab.ds
             username: admin@staff.ds
@@ -123,11 +126,11 @@ all:
         guide:
             enabled: true
             repository: https://github.com/DigitalState/Guide.git
-            version: 0.1.0
+            version: master
         identities:
             enabled: true
             repository: https://github.com/DigitalState/Identities.git
-            version: 0.2.3
+            version: develop
             api:
                 host: api.identities.lab.ds
             adminer:
@@ -141,7 +144,7 @@ all:
         interactions:
             enabled: false
             repository: https://github.com/DigitalState/Interactions.git
-            version: 0.1.0
+            version: develop
             api:
                 host: api.interactions.lab.ds
             adminer:
@@ -155,28 +158,28 @@ all:
         logs:
             enabled: false
             repository: https://github.com/DigitalState/Logs.git
-            version: 0.1.0
+            version: develop
             api:
                 host: api.logs.lab.ds
         monitor:
             enabled: false
             repository: https://github.com/DigitalState/Monitor.git
-            version: 0.1.0
+            version: develop
             host: monitor.lab.ds
         portal:
             enabled: true
-            version: 0.1.7
             repository: https://github.com/DigitalState/Portal.git
+            version: develop
             host: portal.lab.ds
         proxy:
             enabled: true
             repository: https://github.com/DigitalState/Proxy.git
-            version: 0.1.0
+            version: develop
             port: 80
         records:
             enabled: true
             repository: https://github.com/DigitalState/Records.git
-            version: 0.2.3
+            version: develop
             api:
                 host: api.records.lab.ds
             adminer:
@@ -190,7 +193,7 @@ all:
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
-            version: 0.2.3
+            version: develop
             api:
                 host: api.services.lab.ds
             adminer:
@@ -204,7 +207,7 @@ all:
         tasks:
             enabled: false
             repository: https://github.com/DigitalState/Tasks.git
-            version: 0.2.3
+            version: develop
             api:
                 host: api.tasks.lab.ds
             adminer:
@@ -218,7 +221,7 @@ all:
         topics:
             enabled: false
             repository: https://github.com/DigitalState/Topics.git
-            version: 0.1.0
+            version: develop
             api:
                 host: api.topics.lab.ds
             adminer:
@@ -232,4 +235,4 @@ all:
         ui:
             enabled: true
             repository: https://github.com/DigitalState/Ui.git
-            version: 0.1.0
+            version: develop

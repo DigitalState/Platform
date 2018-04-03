@@ -36,6 +36,7 @@
 !/sdk/git/.gitkeep
 /sdk/ssh/*
 !/sdk/ssh/dev/.gitkeep
+!/sdk/ssh/lab/.gitkeep
 !/sdk/ssh/prod/.gitkeep
 !/sdk/ssh/stag/.gitkeep
 !/sdk/ssh/test/.gitkeep

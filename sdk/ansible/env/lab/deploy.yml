@@ -1,4 +1,5 @@
 ---
+- import_playbook: system/initialize.yml
 - import_playbook: system/setup.yml
 - import_playbook: repository/download.yml
 - import_playbook: repository/override.yml

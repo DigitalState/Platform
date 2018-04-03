@@ -9,9 +9,11 @@
             ssh_directory: '{{ env }}'
             ssh_host: '{{ vars["hostvars"]["server"]["ansible_host"] }}'
             ssh_username: root
+        when: hostvars.server.ansible_connection is not defined
       - name: Install ssh keys
         include_role:
             name: sdk/ssh
+        when: hostvars.server.ansible_connection is not defined
   tags: [system]
 
 - name: Install ansible requirements
@@ -22,4 +24,5 @@
       - name: Install python packages
         include_role:
             name: package/python
+        when: hostvars.server.ansible_connection is not defined
   tags: [system]
