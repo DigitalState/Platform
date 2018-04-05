@@ -1,6 +1,6 @@
 # Lab Environment
 
-The lab environment represents the experimental branch of the DigitalState platform and enables the developer to run the entire system on a local machine as a dockerized application.
+The lab environment represents the experimental branch of the DigitalState platform. It enables the developer to run the latest source code on a local machine as a dockerized application.
 
 ## Table of Contents
 
@@ -10,24 +10,24 @@ The lab environment represents the experimental branch of the DigitalState platf
 
 ## Synopsis
 
-1. **[Install Git and Docker](#1-install-git-and-docker)** on your local machine.
-2. **[Download](#2-download)** the sdk repository.
-3. **[Boot](#3-boot)** the sdk container.
-4. **[Enter the sdk](#4-enter-the-sdk)** container console.
-5. **[Generate JWT keys](#5-generate-jwt-keys)** for the authentication system.
-6. **[Configure](#6-configure)** the Ansible environment.
-7. **[Add DNS entries](#7-add-dns-entries)** to your host file.
-8. **[Execute deploy command](#8-execute-deploy-command)** with Ansible.
+1. **[Install Git and Docker on your local machine.](#1-install-git-and-docker-on-your-local-machine)**
+2. **[Download the sdk repository.](#2-download-the-sdk-repository)**
+3. **[Boot the sdk container.](#3-boot-the-sdk-container)**
+4. **[Enter the sdk container console.](#4-enter-the-sdk-container-console)**
+5. **[Generate JWT keys for the authentication system.](#5-generate-jwt-keys-for-the-authentication-system)**
+6. **[Configure the Ansible environment.](#6-configure-the-ansible-environment)**
+7. **[Add DNS entries to your host file.](#7-add-dns-entries-to-your-host-file)**
+8. **[Run the install command with Ansible.](#8-run-the-install-command-with-ansible)**
 
 ## Deployment
 
-### 1. Install Git and Docker
+### 1. Install Git and Docker on your local machine
 
 To begin, you will need to install Git (for [Windows](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_windows), for [Mac](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_mac), for [Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git#_installing_on_linux)) and Docker (for [Windows](https://www.docker.com/docker-windows), for [Mac](https://docs.docker.com/docker-for-mac), for [Linux](https://docs.docker.com/engine/installation/#server)) on your local machine.
 
 > Note: Docker Toolbox for Windows and Mac is not compatible.
 
-### 2. Download
+### 2. Download the sdk repository
 
 Open a command prompt and download the repository:
 
@@ -37,7 +37,7 @@ Open a command prompt and download the repository:
 > cd Sdk
 ```
 
-### 3. Boot
+### 3. Boot the sdk container
 
 Boot the sdk container:
 
@@ -60,7 +60,7 @@ CONTAINER ID     IMAGE       COMMAND       CREATED           STATUS           PO
 4ceab8511b85     sdk_sdk     "/bin/sh"     3 seconds ago     Up 2 seconds               sdk
 ```
 
-### 4. Enter the sdk
+### 4. Enter the sdk container console
 
 Enter the sdk container console:
 
@@ -76,7 +76,7 @@ $ cd /etc/ansible/env/lab
 
 At this point, you have the sdk container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
-### 5. Generate JWT keys
+### 5. Generate JWT keys for the authentication system
 
 Generate jwt keys for the authentication system:
 
@@ -94,7 +94,7 @@ $ openssl genrsa -out /root/resource/jwt/lab/key -aes256 4096
 $ openssl rsa -pubout -in /root/resource/jwt/lab/key -out /root/resource/jwt/lab/key.pub
 ```
 
-### 6. Configure
+### 6. Configure the Ansible environment
 
 Configure the Ansible lab environment:
 
@@ -118,7 +118,7 @@ Under Docker for Mac, the value should simply be equal to the normal directory p
 
 Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path. For example, if you have put the sdk repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
 
-### 7. Add DNS Entries
+### 7. Add DNS entries to your host file
 
 Add DNS entries to your host file:
 
@@ -155,12 +155,12 @@ Add the following entries:
 127.0.0.1 api.records.lab.ds
 ```
 
-### 8. Execute deploy command
+### 8. Run the install command with Ansible
 
-Deploy the dockerized application locally with the Ansible deploy command:
+Install the dockerized application locally with the Ansible deploy command:
 
 ```
-ansible-playbook ./deploy.yml
+ansible-playbook ./install.yml
 ```
 
 This command downloads repositories, configures settings, builds Docker images, boots up containers, migrates databases and loads data fixtures for each microservice.
