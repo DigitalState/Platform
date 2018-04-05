@@ -693,8 +693,185 @@
 									],
 									"path": [
 										"assets"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "a9d68bf7-5000-49fe-8b00-33dde235b327",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "a9d68bf7-5000-49fe-8b00-33dde235b327",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "identity",
+											"value": "Individual",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "identity[0]",
+											"value": "Individual",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "identityUuid",
+											"value": "d0daa7e4-07d1-47e6-93f2-0629adaa3b49",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "identityUuid[0]",
+											"value": "d0daa7e4-07d1-47e6-93f2-0629adaa3b49",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "title[0]",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "deletedAt[before]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "deletedAt[after]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[id]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[createdAt]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[updatedAt]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[deletedAt]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[owner]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[identity]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[title]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										}
 									]
-								}
+								},
+								"description": "This endpoint returns a list of assets."
 							},
 							"response": []
 						},
@@ -725,7 +902,8 @@
 										"assets",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific asset."
 							},
 							"response": []
 						},
@@ -745,7 +923,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Asset 1\" \r\n\t},\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"d0daa7e4-07d1-47e6-93f2-0629adaa3b49\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Asset 1\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{assets}}{{environment}}/assets",
@@ -755,7 +933,8 @@
 									"path": [
 										"assets"
 									]
-								}
+								},
+								"description": "This endpoint adds an asset to the list."
 							},
 							"response": []
 						},
@@ -786,7 +965,8 @@
 										"assets",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific asset."
 							},
 							"response": []
 						},
@@ -817,7 +997,8 @@
 										"assets",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": "This endpoint deletes a specific asset from the list."
 							},
 							"response": []
 						}
@@ -853,8 +1034,173 @@
 									],
 									"path": [
 										"asset-associations"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "a9d68bf7-5000-49fe-8b00-33dde235b327",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "a9d68bf7-5000-49fe-8b00-33dde235b327",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "identity",
+											"value": "Individual",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "identity[0]",
+											"value": "Individual",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "identityUuid",
+											"value": "d0daa7e4-07d1-47e6-93f2-0629adaa3b49",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "identityUuid[0]",
+											"value": "d0daa7e4-07d1-47e6-93f2-0629adaa3b49",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "deletedAt[before]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "deletedAt[after]",
+											"value": "2017-01-01",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[id]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[createdAt]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[updatedAt]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[deletedAt]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[owner]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[identity]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "order[title]",
+											"value": "asc",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										}
 									]
-								}
+								},
+								"description": "This endpoint returns a list of asset associations."
 							},
 							"response": []
 						},
@@ -885,7 +1231,8 @@
 										"asset-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": "This endpoint returns a specific asset association."
 							},
 							"response": []
 						},
@@ -905,7 +1252,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"asset\": \"{{environment}}/assets/11111111-1111-1111-1111-111111111111\",\r\n\t\"entity\": \"Case\",\r\n\t\"entityUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"11111111-1111-1111-1111-111111111111\",\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"asset\": \"{{environment}}/assets/11111111-1111-1111-1111-111111111111\",\r\n\t\"entity\": \"Case\",\r\n\t\"entityUuid\": \"82184661-3aa4-4c68-a130-e07dc2e0d974\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{assets}}{{environment}}/asset-associations",
@@ -915,7 +1262,8 @@
 									"path": [
 										"asset-associations"
 									]
-								}
+								},
+								"description": "This endpoint adds an asset association to the list."
 							},
 							"response": []
 						},
@@ -946,7 +1294,8 @@
 										"asset-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": "This endpoint edits a specific asset association."
 							},
 							"response": []
 						},
@@ -977,7 +1326,8 @@
 										"asset-associations",
 										"11111111-1111-1111-1111-111111111111"
 									]
-								}
+								},
+								"description": "This endpoint deletes a specific asset association from the list."
 							},
 							"response": []
 						}
@@ -2263,7 +2613,7 @@
 										"system"
 									]
 								},
-								"description": "Login as admin. After posting this request,the token environment variable will be updated."
+								"description": "This endpoint returns an system jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
 							},
 							"response": []
 						},
@@ -2345,7 +2695,7 @@
 										"staff"
 									]
 								},
-								"description": "Login in as staff. After posting this request,the token environment variable will be updated."
+								"description": "This endpoint returns a staff jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
 							},
 							"response": []
 						},
@@ -2400,7 +2750,7 @@
 										"organization"
 									]
 								},
-								"description": "Login in as individual. After posting this request,the token environment variable will be updated."
+								"description": "This endpoint returns an organization jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
 							},
 							"response": []
 						},
@@ -2469,7 +2819,7 @@
 										"individual"
 									]
 								},
-								"description": "Login in as individual. After posting this request,the token environment variable will be updated."
+								"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
 							},
 							"response": []
 						},
@@ -2513,7 +2863,7 @@
 										"anonymous"
 									]
 								},
-								"description": "Login in as anonymous. After posting this request,the token environment variable will be updated."
+								"description": "This endpoint returns an anonymous jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
 							},
 							"response": []
 						}
@@ -2570,7 +2920,7 @@
 										"requests"
 									]
 								},
-								"description": "Login in as admin.\n\nFor convenience, sending this request will update your environment token."
+								"description": "This endpoint sends a password request to the recipient."
 							},
 							"response": []
 						},
@@ -2621,7 +2971,7 @@
 										"11111111111111111111111111111111"
 									]
 								},
-								"description": "Login in as admin.\n\nFor convenience, sending this request will update your environment token."
+								"description": "This endpoint resets the recipients password."
 							},
 							"response": []
 						}
@@ -4762,7 +5112,7 @@
 							},
 							"response": [
 								{
-									"id": "a4d3c6b5-a318-4237-ae4d-8c25978274da",
+									"id": "02923490-95b7-47c3-ad3d-1c8d6b70726c",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -4926,7 +5276,7 @@
 							},
 							"response": [
 								{
-									"id": "fac91706-928c-406b-86dc-9b91599f8e1f",
+									"id": "461b9bf5-579f-452e-83f1-1c658f05791b",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -5091,7 +5441,7 @@
 							},
 							"response": [
 								{
-									"id": "b79627d8-6c3b-4a72-ba3a-6e4dd482984d",
+									"id": "78834983-af0a-4e49-93fe-ce86fbfa80a7",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5533,7 +5883,7 @@
 							},
 							"response": [
 								{
-									"id": "cfc6e8be-7748-4127-a362-d3876da99304",
+									"id": "1c077bcd-7e2a-417a-a261-9985e0a629c4",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5697,7 +6047,7 @@
 							},
 							"response": [
 								{
-									"id": "4a0a81d7-7cba-4976-bea1-1be0f6b123f7",
+									"id": "e01078ee-9664-4613-9b97-4db1b8a3919c",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -5862,7 +6212,7 @@
 							},
 							"response": [
 								{
-									"id": "094bbdc5-316a-41ef-bd43-2aebd913d0f2",
+									"id": "e52176de-899d-4373-9bf6-afba10023466",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7027,7 +7377,7 @@
 							},
 							"response": [
 								{
-									"id": "e53c8622-088b-4451-ac07-3b1f118dd37b",
+									"id": "6a5bb5ff-3356-4788-9558-e222e77bd016",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7191,7 +7541,7 @@
 							},
 							"response": [
 								{
-									"id": "5f5bc679-2e35-4846-887b-e5ffb1da97bb",
+									"id": "d02ec15d-861f-492b-8ada-c376c84e3dda",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -7356,7 +7706,7 @@
 							},
 							"response": [
 								{
-									"id": "e3e5b62e-b0e9-4f39-94fa-27cd3ac8b7fe",
+									"id": "05b0e90a-04e4-4561-a337-3d5759afcf56",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7793,7 +8143,7 @@
 							},
 							"response": [
 								{
-									"id": "9f7c5555-64db-41f5-b18c-02dbda1a6789",
+									"id": "38177cb6-a4a0-4e10-841e-346097b19ca1",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7957,7 +8307,7 @@
 							},
 							"response": [
 								{
-									"id": "505d81ad-3ee4-475e-804c-c0aa6b11ee8e",
+									"id": "6fa37547-0ecb-4ef6-a27e-cd8635dbb89c",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8122,7 +8472,7 @@
 							},
 							"response": [
 								{
-									"id": "db4a0bd3-1ff4-4475-be65-f296303756be",
+									"id": "5c24beae-4147-46d6-b172-bff1ab4f6884",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8514,7 +8864,7 @@
 							},
 							"response": [
 								{
-									"id": "2fac259a-50bc-462e-aeac-a1172e7b5904",
+									"id": "000227e6-46c7-45e5-b788-26bb2622c2c3",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8678,7 +9028,7 @@
 							},
 							"response": [
 								{
-									"id": "023cc68b-c50a-4c4c-a475-0d00125d5e76",
+									"id": "c3ce380e-47aa-4ce8-a07b-54fe1887e78d",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8843,7 +9193,7 @@
 							},
 							"response": [
 								{
-									"id": "e5a6fce1-f692-42dc-92a9-cc608317557b",
+									"id": "111c15b7-9c69-4331-bc57-38ce05f889b6",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9226,7 +9576,7 @@
 							},
 							"response": [
 								{
-									"id": "75363993-e017-4a50-bc36-7fb63bb0d187",
+									"id": "469e96bb-1a94-4d39-9624-d7a8793aeaae",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9390,7 +9740,7 @@
 							},
 							"response": [
 								{
-									"id": "42ec05f9-0cef-4c4a-8cdb-09f12bc3ea92",
+									"id": "ac91cf26-e5eb-49e3-9d0e-18af66b71a68",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -9555,7 +9905,7 @@
 							},
 							"response": [
 								{
-									"id": "a9decbd1-8dcb-4527-9f99-096c0917c5db",
+									"id": "8f4e5eab-1e3a-49e7-ba8d-1d49fa90b840",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9741,7 +10091,7 @@
 							},
 							"response": [
 								{
-									"id": "68220638-9401-43b3-981d-810b2f51622f",
+									"id": "af84bf79-1775-47b3-b577-2bec127e77cb",
 									"name": "Created",
 									"originalRequest": {
 										"method": "GET",
@@ -14572,7 +14922,7 @@
 										},
 										{
 											"key": "order[id]",
-											"value": "1",
+											"value": "asc",
 											"type": "text",
 											"disabled": true
 										},
@@ -14884,18 +15234,6 @@
 											"disabled": true
 										},
 										{
-											"key": "title",
-											"value": "Report a Pothole",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "title[0]",
-											"value": "Report a Pothole",
-											"type": "text",
-											"disabled": true
-										},
-										{
 											"key": "createdAt[before]",
 											"value": "2017-01-01",
 											"type": "text",
@@ -14933,7 +15271,7 @@
 										},
 										{
 											"key": "order[id]",
-											"value": "1",
+											"value": "asc",
 											"type": "text",
 											"disabled": true
 										},
