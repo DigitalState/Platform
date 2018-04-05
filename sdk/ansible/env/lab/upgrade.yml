@@ -1,0 +1,16 @@
+---
+- import_playbook: system/initialize.yml
+- import_playbook: system/setup.yml
+- import_playbook: container/down.yml
+- import_playbook: proxy/container/down.yml
+- import_playbook: repository/download.yml
+- import_playbook: repository/override.yml
+- import_playbook: jwt/key/download.yml
+- import_playbook: proxy/container/up.yml
+- import_playbook: container/up.yml
+- import_playbook: discovery/configure.yml
+- import_playbook: encryption/configure.yml
+- import_playbook: jwt/configure.yml
+- import_playbook: mail/configure.yml
+- import_playbook: database/migration/load.yml
+- import_playbook: database/fixtures/load.yml
