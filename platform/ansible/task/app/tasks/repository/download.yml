@@ -1,0 +1,18 @@
+---
+- block:
+      - name: Define tasks repository variables
+        set_fact:
+            tasks_repository: '{{ tasks.repository }}'
+            tasks_version: '{{ tasks.version }}'
+      - name: Detect git credential file
+        local_action: 'stat path=/root/git/credential'
+        register: git_credential
+      - name: Define tasks repository variables
+        set_fact:
+            tasks_credential: '{{ lookup("file", "/root/git/credential") }}'
+        when: git_credential.stat.exists == true
+      - name: Download tasks repository
+        include_role:
+          name: app/tasks/repository/download
+  when: tasks.enabled
+  tags: [tasks]

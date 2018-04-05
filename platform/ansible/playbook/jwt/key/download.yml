@@ -1,0 +1,23 @@
+---
+- name: Compile jwt list
+  hosts: platform
+  become: true
+  tasks:
+      - name: ...
+        include_tasks: /etc/ansible/task/compiler/jwt/key/download.yml
+  tags: [always]
+
+- name: Download jwt private and public key
+  hosts: server
+  become: true
+  tasks:
+      - name: Define jwt variables
+        set_fact:
+            jwt_private_key: '{{ jwt.private_key }}'
+            jwt_public_key: '{{ jwt.public_key }}'
+
+      - name: Include compiled list
+        include_tasks: '{{ file }}'
+        with_items: '{{ hostvars["platform"]["files"] }}'
+        loop_control:
+            loop_var: file

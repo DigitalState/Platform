@@ -1,0 +1,19 @@
+---
+- name: Create ssh directory
+  file:
+      path: /root/.ssh
+      state: directory
+      mode: 0600
+
+- name: Copy ssh keys to ssh directory
+  shell: 'cp -R /root/ssh/{{ ssh_directory }} /root/.ssh/'
+
+- name: Set ssh keys file permissions to be compatible with open-ssl
+  file:
+      path: /root/.ssh
+      state: directory
+      recurse: yes
+      mode: 0600
+
+- name: Establish ssh connection
+  shell: 'ssh-copy-id -i /root/.ssh/{{ ssh_directory }}/key {{ ssh_username }}@{{ ssh_host }}'

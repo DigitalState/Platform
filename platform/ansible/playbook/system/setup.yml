@@ -1,0 +1,21 @@
+---
+- name: Install core packages
+  hosts: server
+  become: true
+  tasks:
+      - name: Install git packages
+        include_role:
+            name: package/git
+      - name: Install docker packages
+        include_role:
+            name: package/docker
+  tags: [system]
+
+- name: Set platform properties
+  hosts: server
+  become: true
+  tasks:
+      - name: Set version
+        include_role:
+            name: platform/version
+  tags: [system]

@@ -1,8 +1,8 @@
 version: '3.1'
 
 services:
-    sdk:
-        container_name: sdk
+    platform:
+        container_name: platform
         build: .
         privileged: true
         entrypoint: /bin/sh
@@ -10,50 +10,10 @@ services:
         tty: true
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
-            - ./app:/srv
+            - ./platform/ansible:/etc/ansible
+            - ./platform/docker:/root/docker
+            - ./platform/git:/root/git
+            - ./platform/ssh:/root/ssh
             - ./resource:/root/resource
-            - ./sdk/ansible:/etc/ansible
+            - ./app:/srv
             - ./VERSION:/root/VERSION
-        secrets:
-            - source: docker_credential
-              target: docker/credential
-            - source: git_credential
-              target: git/credential
-            - source: ssh_test_key_private
-              target: ssh/test/key
-            - source: ssh_test_key_public
-              target: ssh/test/key.pub
-            - source: ssh_dev_key_private
-              target: ssh/dev/key
-            - source: ssh_dev_key_public
-              target: ssh/dev/key.pub
-            - source: ssh_stag_key_private
-              target: ssh/stag/key
-            - source: ssh_stag_key_public
-              target: ssh/stag/key.pub
-            - source: ssh_prod_key_private
-              target: ssh/prod/key
-            - source: ssh_prod_key_public
-              target: ssh/prod/key.pub
-
-secrets:
-    docker_credential:
-        file: ./sdk/docker/credential
-    git_credential:
-        file: ./sdk/git/credential
-    ssh_test_key_private:
-        file: ./sdk/ssh/test/key
-    ssh_test_key_public:
-        file: ./sdk/ssh/test/key.pub
-    ssh_dev_key_private:
-        file: ./sdk/ssh/dev/key
-    ssh_dev_key_public:
-        file: ./sdk/ssh/dev/key.pub
-    ssh_stag_key_private:
-        file: ./sdk/ssh/stag/key
-    ssh_stag_key_public:
-        file: ./sdk/ssh/stag/key.pub
-    ssh_prod_key_private:
-        file: ./sdk/ssh/prod/key
-    ssh_prod_key_public:
-        file: ./sdk/ssh/prod/key.pub

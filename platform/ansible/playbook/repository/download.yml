@@ -1,0 +1,18 @@
+---
+- name: Compile repository list
+  hosts: platform
+  become: true
+  tasks:
+      - name: ...
+        include_tasks: /etc/ansible/task/compiler/repository/download.yml
+  tags: [always]
+
+- name: Download repositories
+  hosts: server
+  become: true
+  tasks:
+      - name: Include compiled task list
+        include_tasks: '{{ file }}'
+        with_items: '{{ hostvars["platform"]["files"] }}'
+        loop_control:
+            loop_var: file

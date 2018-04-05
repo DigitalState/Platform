@@ -1,0 +1,18 @@
+---
+- name: Compile cache list
+  hosts: platform
+  become: true
+  tasks:
+      - name: ...
+        include_tasks: /etc/ansible/task/compiler/cache/warmup.yml
+  tags: [always]
+
+- name: Warmup caches
+  hosts: server
+  become: true
+  tasks:
+      - name: Include compiled task list
+        include_tasks: '{{ file }}'
+        with_items: '{{ hostvars["platform"]["files"] }}'
+        loop_control:
+            loop_var: file

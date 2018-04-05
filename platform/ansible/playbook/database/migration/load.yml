@@ -1,0 +1,73 @@
+---
+- name: Compile database list
+  hosts: platform
+  become: true
+  tasks:
+      - name: ...
+        include_tasks: /etc/ansible/task/compiler/database/migration/load.yml
+  tags: [always]
+
+- name: Define database migration data
+  hosts: server
+  become: true
+  tasks:
+      - set_fact:
+            # Currently creating the same data structure for all microservice, because they are all close enough.
+            # This should be revised for each microservice adaptation (maybe moved to the task layer).
+            database_migration_data:
+                1.0.0:
+                    user:
+                        system:
+                            uuid: '{{ (ansible_date_time.iso8601_micro + "1")|to_uuid }}'
+                            password: '{{ user.system.password }}'
+                        anonymous:
+                            uuid: '{{ (ansible_date_time.iso8601_micro + "2")|to_uuid }}'
+                            password: '{{ user.anonymous.password }}'
+                        admin:
+                            uuid: '{{ (ansible_date_time.iso8601_micro + "3")|to_uuid }}'
+                            password: '{{ user.admin.password }}'
+                    identity:
+                        system:
+                            uuid: '{{ (ansible_date_time.iso8601_micro + "4")|to_uuid }}'
+                        admin:
+                            uuid: '{{ (ansible_date_time.iso8601_micro + "5")|to_uuid }}'
+                    business_unit:
+                        administration:
+                            uuid: '{{ (ansible_date_time.iso8601_micro + "6")|to_uuid }}'
+                        backoffice:
+                            uuid: '{{ (ansible_date_time.iso8601_micro + "7")|to_uuid }}'
+                        portal:
+                            uuid: '{{ (ansible_date_time.iso8601_micro + "8")|to_uuid }}'
+                    config:
+                        app.bpm.variables.api_url:
+                            value: api_url
+                        app.bpm.variables.api_user:
+                            value: api_user
+                        app.bpm.variables.api_key:
+                            value: api_key
+                        app.bpm.variables.service_uuid:
+                            value: service_uuid
+                        app.bpm.variables.scenario_uuid:
+                            value: scenario_uuid
+                        app.bpm.variables.identity:
+                            value: identity
+                        app.bpm.variables.identity_uuid:
+                            value: identity_uuid
+                        app.bpm.variables.submission_uuid:
+                            value: submission_uuid
+                        app.bpm.variables.start_data:
+                            value: start_data
+                        app.spa.admin:
+                            value: 'http://{{ admin.host }}'
+                        app.spa.portal:
+                            value: 'http://{{ portal.host }}'
+
+- name: Load database migrations
+  hosts: server
+  become: true
+  tasks:
+      - name: Include compiled task list
+        include_tasks: '{{ file }}'
+        with_items: '{{ hostvars["platform"]["files"] }}'
+        loop_control:
+            loop_var: file

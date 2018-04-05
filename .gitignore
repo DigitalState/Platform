@@ -29,14 +29,14 @@
 !/resource/jwt/stag/.gitkeep
 !/resource/jwt/test/.gitkeep
 
-/sdk/ansible/**/*.retry
-/sdk/docker/*
-!/sdk/docker/.gitkeep
-/sdk/git/*
-!/sdk/git/.gitkeep
-/sdk/ssh/*
-!/sdk/ssh/dev/.gitkeep
-!/sdk/ssh/lab/.gitkeep
-!/sdk/ssh/prod/.gitkeep
-!/sdk/ssh/stag/.gitkeep
-!/sdk/ssh/test/.gitkeep
+/platform/ansible/**/*.retry
+/platform/docker/*
+!/platform/docker/.gitkeep
+/platform/git/*
+!/platform/git/.gitkeep
+/platform/ssh/*
+!/platform/ssh/dev/.gitkeep
+!/platform/ssh/lab/.gitkeep
+!/platform/ssh/prod/.gitkeep
+!/platform/ssh/stag/.gitkeep
+!/platform/ssh/test/.gitkeep
