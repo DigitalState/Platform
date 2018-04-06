@@ -11,9 +11,9 @@ The lab environment represents the experimental branch of the DigitalState platf
 ## Synopsis
 
 1. **[Install Git and Docker on your local machine.](#1-install-git-and-docker-on-your-local-machine)**
-2. **[Download the sdk repository.](#2-download-the-sdk-repository)**
-3. **[Boot the sdk container.](#3-boot-the-sdk-container)**
-4. **[Enter the sdk container console.](#4-enter-the-sdk-container-console)**
+2. **[Download the platform repository.](#2-download-the-platform-repository)**
+3. **[Boot the platform container.](#3-boot-the-platform-container)**
+4. **[Enter the platform container console.](#4-enter-the-platform-container-console)**
 5. **[Generate JWT keys for the authentication system.](#5-generate-jwt-keys-for-the-authentication-system)**
 6. **[Configure the Ansible environment.](#6-configure-the-ansible-environment)**
 7. **[Add DNS entries to your host file.](#7-add-dns-entries-to-your-host-file)**
@@ -27,19 +27,19 @@ To begin, you will need to install Git (for [Windows](https://git-scm.com/book/e
 
 > Note: Docker Toolbox for Windows and Mac is not compatible.
 
-### 2. Download the sdk repository
+### 2. Download the platform repository
 
 Open a command prompt and download the repository:
 
 ```
 > cd C:\Users\Demo
-> git clone https://github.com/DigitalState/Sdk.git
-> cd Sdk
+> git clone https://github.com/DigitalState/Platform.git
+> cd Platform
 ```
 
-### 3. Boot the sdk container
+### 3. Boot the platform container
 
-Boot the sdk container:
+Boot the platform container:
 
 ```
 > docker-compose up -d
@@ -56,16 +56,16 @@ Confirm the container has been booted successfully:
 You should see the following output:
 
 ```
-CONTAINER ID     IMAGE       COMMAND       CREATED           STATUS           PORTS     NAMES
-4ceab8511b85     sdk_sdk     "/bin/sh"     3 seconds ago     Up 2 seconds               sdk
+CONTAINER ID     IMAGE                 COMMAND       CREATED           STATUS           PORTS     NAMES
+4ceab8511b85     platform_platform     "/bin/sh"     3 seconds ago     Up 2 seconds               platform
 ```
 
-### 4. Enter the sdk container console
+### 4. Enter the platform container console
 
-Enter the sdk container console:
+Enter the platform container console:
 
 ```
-> docker exec -it sdk /bin/sh
+> docker exec -it platform /bin/sh
 ```
 
 Point to the lab environment directory:
@@ -74,7 +74,7 @@ Point to the lab environment directory:
 $ cd /etc/ansible/env/lab
 ```
 
-At this point, you have the sdk container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
+At this point, you have the platform container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
 
 ### 5. Generate JWT keys for the authentication system
 
@@ -98,25 +98,25 @@ $ openssl rsa -pubout -in /root/resource/jwt/lab/key -out /root/resource/jwt/lab
 
 Configure the Ansible lab environment:
 
-> The lab environment uses the Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) for its configurations.
+> The lab environment uses the Ansible inventory file found [here](/platform/ansible/env/lab/inventory.yml) for its configurations.
 
-The [encryption.secret](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L13) config needs to be set to a random, unique and secret 32 characters string.
+The [encryption.secret](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L13) config needs to be set to a random, unique and secret 32 characters string.
 
-The [jwt.key_pass_phrase](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L17) config needs to be set to the jwt key pass phrase defined at step #5.
+The [jwt.key_pass_phrase](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L17) config needs to be set to the jwt key pass phrase defined at step #5.
 
-The [directory](https://github.com/DigitalState/Sdk/blob/master/sdk/ansible/env/lab/inventory.yml#L9) config needs to be set to the absolute path of the sdk `app` directory. The value will vary depending on your local machine's operating system:
+The [directory](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L9) config needs to be set to the absolute path of the platform `app` directory. The value will vary depending on your local machine's operating system:
 
 **Windows**
 
-Under Docker for Windows with Hyper-V, the value should be equal to the Hyper-V mounted directory path. For example, if you have put the sdk repository at `C:\Users\Demo\Sdk`, then the directory config value should be `/c/Users/Demo/Sdk/app`.
+Under Docker for Windows with Hyper-V, the value should be equal to the Hyper-V mounted directory path. For example, if you have put the platform repository at `C:\Users\Demo\Platform`, then the directory config value should be `/c/Users/Demo/Platform/app`.
 
 **Mac**
 
-Under Docker for Mac, the value should simply be equal to the normal directory path, as long as you have shared the local `/Users` directory with the virtual machine. For example, if you have put the sdk repository at `/Users/demo/sdk`, then the directory config value should be `/Users/demo/sdk/app`.
+Under Docker for Mac, the value should simply be equal to the normal directory path, as long as you have shared the local `/Users` directory with the virtual machine. For example, if you have put the platform repository at `/Users/demo/platform`, then the directory config value should be `/Users/demo/platform/app`.
 
 **Linux**
 
-Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path. For example, if you have put the sdk repository at `/home/demo/sdk`, then the directory config value should be `/home/demo/sdk/app`.
+Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path. For example, if you have put the platform repository at `/home/demo/platform`, then the directory config value should be `/home/demo/platform/app`.
 
 ### 7. Add DNS entries to your host file
 
@@ -182,7 +182,7 @@ Now that the dockerized application is up and running, it is time to test it!
 
 > The DigitalState architecture is essentially a collection of business-focused microservices, all exposing various APIs to create, read, update, and delete data or achieve certain goals.
 
-In order to interact with the API, we suggest using an API gui tool, such as [Postman](https://www.getpostman.com/) (use the desktop version, and **not** the Chrome version). The sdk provides a pre-made Postman [collection file](../../../resource/postman/collection.json) mapping all microservices API endpoints and an [environment file](../../../resource/postman/env/lab.json) ready to be imported. Here are the instructions on how to import [collections](https://www.getpostman.com/docs/postman/collections/creating_collections) and [environments](https://www.getpostman.com/docs/postman/environments_and_globals/manage_environments) in Postman.
+In order to interact with the API, we suggest using an API gui tool, such as [Postman](https://www.getpostman.com/) (use the desktop version, and **not** the Chrome version). The platform provides a pre-made Postman [collection file](../../../resource/postman/collection.json) mapping all microservices API endpoints and an [environment file](../../../resource/postman/env/lab.json) ready to be imported. Here are the instructions on how to import [collections](https://www.getpostman.com/docs/postman/collections/creating_collections) and [environments](https://www.getpostman.com/docs/postman/environments_and_globals/manage_environments) in Postman.
 
 After importing the files, a new collection titled "DigitalState" will appear on the left and a new environment titled "DigitalState Lab" will appear in the dropdown top right.
 

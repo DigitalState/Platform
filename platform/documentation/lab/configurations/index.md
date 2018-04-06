@@ -2,7 +2,7 @@
 
 ## Configurations
 
-The lab environment uses an Ansible inventory file found [here](/sdk/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
+The lab environment uses an Ansible inventory file found [here](/platform/ansible/env/lab/inventory.yml) to describe the host server, general configurations and each enabled microservices.
 
 For this environment, the host server is configured to localhost. This means Ansible will run commands against the container itself and deploy the dockerized application on your local machine.
 
@@ -31,8 +31,8 @@ Afterwards, you will find general configurations.
 </pre>
 
 > **Note:** 
-> Ansible runs within the SDK container, meaning all file and folder path configurations are based on the SDK container filesystem and **not** the local machine filesystem. 
-> The SDK container mounts the **C:\Users\Demo\Sdk\resource** directory to **/root/resource**. Therefore, in the example above, the jwt private key path is set to **/root/resource/jwt/lab/key** and not **C:\Users\Demo\Sdk\resource\jwt\lab\key**
+> Ansible runs within the platform container, meaning all file and folder path configurations are based on the platform container filesystem and **not** the local machine filesystem. 
+> The platform container mounts the **C:\Users\Demo\Platform\resource** directory to **/root/resource**. Therefore, in the example above, the jwt private key path is set to **/root/resource/jwt/lab/key** and not **C:\Users\Demo\Platform\resource\jwt\lab\key**
 
 Finally, you will find the list of each microservices.
 
