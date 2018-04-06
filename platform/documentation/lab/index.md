@@ -202,7 +202,7 @@ Under the "DigitalState" collection, navigate to `Authentication -> Login -> /to
 
 Once a token is obtained, it can be used to access any other protected API endpoints that requires user authentication. Typically, you would need to copy this token to your clipboard and paste it in the next API query you wish to make in Postman. However, our Postman collection has been programmed to keep track of the last logged in user and use the current token on subsequent API requests automatically.
 
-Next, nagivate to `Authentication -> User -> /users`. Click the "Send" button. This action will send a GET request to users API endpoint and return a list of users:
+Next, nagivate to `Authentication -> User -> GET /users`. Click the "Send" button. This action will send a GET request to users API endpoint and return a list of users:
 
 ```
 [
