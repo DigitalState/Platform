@@ -42,18 +42,6 @@
             path: '/srv/topics/{{ topics_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ topics_directory }}'
-      - name: Configure jwt private key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/topics/{{ topics_env_file }}'
-            regexp: '^JWT_PRIVATE_KEY='
-            line: 'JWT_PRIVATE_KEY={{ topics_jwt_private_key }}'
-      - name: Configure jwt public key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/topics/{{ topics_env_file }}'
-            regexp: '^JWT_PUBLIC_KEY='
-            line: 'JWT_PUBLIC_KEY={{ topics_jwt_public_key }}'
       - name: Configure database host environment variable
         lineinfile:
             create: yes
@@ -96,8 +84,6 @@
       PROXY_HOST: '{{ topics_proxy_host }}'
       VIRTUAL_HOST: '{{ topics_virtual_host }}'
       DIRECTORY: '{{ topics_directory }}'
-      JWT_PRIVATE_KEY: '{{ topics_jwt_private_key }}'
-      JWT_PUBLIC_KEY: '{{ topics_jwt_public_key }}'
       DATABASE_HOST: '{{ topics_database_host }}'
       DATABASE_PORT: '{{ topics_database_port }}'
       DATABASE_NAME: '{{ topics_database_name }}'

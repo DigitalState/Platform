@@ -7,8 +7,6 @@ tasks_nginx_virtual_host: api.tasks.ds
 tasks_adminer_virtual_host: adminer.tasks.ds
 tasks_discovery_host: api.discovery.ds
 tasks_directory: /srv/tasks
-tasks_jwt_private_key: ./var/jwt/key
-tasks_jwt_public_key: ./var/jwt/key.pub
 tasks_database_host: tasks_db
 tasks_database_port: 5432
 tasks_database_name: tasks

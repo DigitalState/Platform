@@ -15,8 +15,6 @@
             topics_adminer_virtual_host: '{{ topics.adminer.host }}'
             topics_discovery_host: '{{ discovery.api.host }}'
             topics_directory: '{{ directory }}/topics'
-            topics_jwt_private_key: '{{ directory }}/topics/var/jwt/key'
-            topics_jwt_public_key: '{{ directory }}/topics/var/jwt/key.pub'
             topics_database_host: '{{ topics.database.host }}'
             topics_database_port: '{{ topics.database.port }}'
             topics_database_name: '{{ topics.database.name }}'

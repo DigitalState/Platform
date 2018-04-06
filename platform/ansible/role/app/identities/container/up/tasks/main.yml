@@ -42,18 +42,6 @@
             path: '/srv/identities/{{ identities_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ identities_directory }}'
-      - name: Configure jwt private key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/identities/{{ identities_env_file }}'
-            regexp: '^JWT_PRIVATE_KEY='
-            line: 'JWT_PRIVATE_KEY={{ identities_jwt_private_key }}'
-      - name: Configure jwt public key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/identities/{{ identities_env_file }}'
-            regexp: '^JWT_PUBLIC_KEY='
-            line: 'JWT_PUBLIC_KEY={{ identities_jwt_public_key }}'
       - name: Configure database host environment variable
         lineinfile:
             create: yes
@@ -97,8 +85,6 @@
       NGINX_VIRTUAL_HOST: '{{ identities_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ identities_adminer_virtual_host }}'
       DIRECTORY: '{{ identities_directory }}'
-      JWT_PRIVATE_KEY: '{{ identities_jwt_private_key }}'
-      JWT_PUBLIC_KEY: '{{ identities_jwt_public_key }}'
       DATABASE_HOST: '{{ identities_database_host }}'
       DATABASE_PORT: '{{ identities_database_port }}'
       DATABASE_NAME: '{{ identities_database_name }}'

@@ -15,8 +15,6 @@
             cases_adminer_virtual_host: '{{ cases.adminer.host }}'
             cases_discovery_host: '{{ discovery.api.host }}'
             cases_directory: '{{ directory }}/cases'
-            cases_jwt_private_key: '{{ directory }}/cases/var/jwt/key'
-            cases_jwt_public_key: '{{ directory }}/cases/var/jwt/key.pub'
             cases_database_host: '{{ cases.database.host }}'
             cases_database_port: '{{ cases.database.port }}'
             cases_database_name: '{{ cases.database.name }}'

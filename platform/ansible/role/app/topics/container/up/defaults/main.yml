@@ -7,8 +7,6 @@ topics_nginx_virtual_host: api.topics.ds
 topics_adminer_virtual_host: api.adminer.ds
 topics_discovery_host: api.discovery.ds
 topics_directory: /srv/topics
-topics_jwt_private_key: ./var/jwt/key
-topics_jwt_public_key: ./var/jwt/key.pub
 topics_database_host: topics_db
 topics_database_port: 5432
 topics_database_name: topics

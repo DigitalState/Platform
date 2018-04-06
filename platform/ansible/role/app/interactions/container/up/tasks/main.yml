@@ -42,18 +42,6 @@
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ interactions_directory }}'
-      - name: Configure jwt private key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/interactions/{{ interactions_env_file }}'
-            regexp: '^JWT_PRIVATE_KEY='
-            line: 'JWT_PRIVATE_KEY={{ interactions_jwt_private_key }}'
-      - name: Configure jwt public key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/interactions/{{ interactions_env_file }}'
-            regexp: '^JWT_PUBLIC_KEY='
-            line: 'JWT_PUBLIC_KEY={{ interactions_jwt_public_key }}'
       - name: Configure database host environment variable
         lineinfile:
             create: yes
@@ -97,8 +85,6 @@
       NGINX_VIRTUAL_HOST: '{{ interactions_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ interactions_adminer_virtual_host }}'
       DIRECTORY: '{{ interactions_directory }}'
-      JWT_PRIVATE_KEY: '{{ interactions_jwt_private_key }}'
-      JWT_PUBLIC_KEY: '{{ interactions_jwt_public_key }}'
       DATABASE_HOST: '{{ interactions_database_host }}'
       DATABASE_PORT: '{{ interactions_database_port }}'
       DATABASE_NAME: '{{ interactions_database_name }}'

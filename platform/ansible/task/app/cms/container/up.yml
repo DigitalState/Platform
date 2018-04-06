@@ -15,8 +15,6 @@
             cms_adminer_virtual_host: '{{ cms.adminer.host }}'
             cms_discovery_host: '{{ discovery.api.host }}'
             cms_directory: '{{ directory }}/cms'
-            cms_jwt_private_key: '{{ directory }}/cms/var/jwt/key'
-            cms_jwt_public_key: '{{ directory }}/cms/var/jwt/key.pub'
             cms_database_host: '{{ cms.database.host }}'
             cms_database_port: '{{ cms.database.port }}'
             cms_database_name: '{{ cms.database.name }}'

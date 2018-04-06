@@ -15,8 +15,6 @@
             identities_adminer_virtual_host: '{{ identities.adminer.host }}'
             identities_discovery_host: '{{ discovery.api.host }}'
             identities_directory: '{{ directory }}/identities'
-            identities_jwt_private_key: '{{ directory }}/identities/var/jwt/key'
-            identities_jwt_public_key: '{{ directory }}/identities/var/jwt/key.pub'
             identities_database_host: '{{ identities.database.host }}'
             identities_database_port: '{{ identities.database.port }}'
             identities_database_name: '{{ identities.database.name }}'

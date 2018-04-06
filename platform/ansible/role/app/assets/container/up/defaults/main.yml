@@ -7,8 +7,6 @@ assets_nginx_virtual_host: api.assets.ds
 assets_adminer_virtual_host: adminer.assets.ds
 assets_discovery_host: api.discovery.ds
 assets_directory: /srv/assets
-assets_jwt_private_key: ./var/jwt/key
-assets_jwt_public_key: ./var/jwt/key.pub
 assets_database_host: assets_db
 assets_database_port: 5432
 assets_database_name: assets

@@ -15,8 +15,6 @@
             records_adminer_virtual_host: '{{ records.adminer.host }}'
             records_discovery_host: '{{ discovery.api.host }}'
             records_directory: '{{ directory }}/records'
-            records_jwt_private_key: '{{ directory }}/records/var/jwt/key'
-            records_jwt_public_key: '{{ directory }}/records/var/jwt/key.pub'
             records_database_host: '{{ records.database.host }}'
             records_database_port: '{{ records.database.port }}'
             records_database_name: '{{ records.database.name }}'

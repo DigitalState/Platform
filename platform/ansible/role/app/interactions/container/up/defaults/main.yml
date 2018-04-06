@@ -7,8 +7,6 @@ interactions_nginx_virtual_host: api.interactions.ds
 interactions_adminer_virtual_host: adminer.interactions.ds
 interactions_discovery_host: api.discovery.ds
 interactions_directory: /srv/interactions
-interactions_jwt_private_key: ./var/jwt/key
-interactions_jwt_public_key: ./var/jwt/key.pub
 interactions_database_host: interactions_db
 interactions_database_port: 5432
 interactions_database_name: interactions

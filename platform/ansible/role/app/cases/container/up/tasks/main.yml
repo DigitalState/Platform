@@ -42,18 +42,6 @@
             path: '/srv/cases/{{ cases_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ cases_directory }}'
-      - name: Configure jwt private key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/cases/{{ cases_env_file }}'
-            regexp: '^JWT_PRIVATE_KEY='
-            line: 'JWT_PRIVATE_KEY={{ cases_jwt_private_key }}'
-      - name: Configure jwt public key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/cases/{{ cases_env_file }}'
-            regexp: '^JWT_PUBLIC_KEY='
-            line: 'JWT_PUBLIC_KEY={{ cases_jwt_public_key }}'
       - name: Configure database host environment variable
         lineinfile:
             create: yes
@@ -97,8 +85,6 @@
       NGINX_VIRTUAL_HOST: '{{ cases_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ cases_adminer_virtual_host }}'
       DIRECTORY: '{{ cases_directory }}'
-      JWT_PRIVATE_KEY: '{{ cases_jwt_private_key }}'
-      JWT_PUBLIC_KEY: '{{ cases_jwt_public_key }}'
       DATABASE_HOST: '{{ cases_database_host }}'
       DATABASE_PORT: '{{ cases_database_port }}'
       DATABASE_NAME: '{{ cases_database_name }}'

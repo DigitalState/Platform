@@ -42,18 +42,6 @@
             path: '/srv/tasks/{{ tasks_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ tasks_directory }}'
-      - name: Configure jwt private key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/tasks/{{ tasks_env_file }}'
-            regexp: '^JWT_PRIVATE_KEY='
-            line: 'JWT_PRIVATE_KEY={{ tasks_jwt_private_key }}'
-      - name: Configure jwt public key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/tasks/{{ tasks_env_file }}'
-            regexp: '^JWT_PUBLIC_KEY='
-            line: 'JWT_PUBLIC_KEY={{ tasks_jwt_public_key }}'
       - name: Configure database host environment variable
         lineinfile:
             create: yes
@@ -103,8 +91,6 @@
       NGINX_VIRTUAL_HOST: '{{ tasks_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ tasks_adminer_virtual_host }}'
       DIRECTORY: '{{ tasks_directory }}'
-      JWT_PRIVATE_KEY: '{{ tasks_jwt_private_key }}'
-      JWT_PUBLIC_KEY: '{{ tasks_jwt_public_key }}'
       DATABASE_HOST: '{{ tasks_database_host }}'
       DATABASE_PORT: '{{ tasks_database_port }}'
       DATABASE_NAME: '{{ tasks_database_name }}'

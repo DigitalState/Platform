@@ -15,8 +15,6 @@
             interactions_adminer_virtual_host: '{{ interactions.adminer.host }}'
             interactions_discovery_host: '{{ discovery.api.host }}'
             interactions_directory: '{{ directory }}/interactions'
-            interactions_jwt_private_key: '{{ directory }}/interactions/var/jwt/key'
-            interactions_jwt_public_key: '{{ directory }}/interactions/var/jwt/key.pub'
             interactions_database_host: '{{ interactions.database.host }}'
             interactions_database_port: '{{ interactions.database.port }}'
             interactions_database_name: '{{ interactions.database.name }}'

@@ -42,18 +42,6 @@
             path: '/srv/cms/{{ cms_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ cms_directory }}'
-      - name: Configure jwt private key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^JWT_PRIVATE_KEY='
-            line: 'JWT_PRIVATE_KEY={{ cms_jwt_private_key }}'
-      - name: Configure jwt public key environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^JWT_PUBLIC_KEY='
-            line: 'JWT_PUBLIC_KEY={{ cms_jwt_public_key }}'
       - name: Configure database host environment variable
         lineinfile:
             create: yes
@@ -97,8 +85,6 @@
       NGINX_VIRTUAL_HOST: '{{ cms_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ cms_adminer_virtual_host }}'
       DIRECTORY: '{{ cms_directory }}'
-      JWT_PRIVATE_KEY: '{{ cms_jwt_private_key }}'
-      JWT_PUBLIC_KEY: '{{ cms_jwt_public_key }}'
       DATABASE_HOST: '{{ cms_database_host }}'
       DATABASE_PORT: '{{ cms_database_port }}'
       DATABASE_NAME: '{{ cms_database_name }}'

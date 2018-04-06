@@ -7,8 +7,6 @@ records_nginx_virtual_host: api.records.ds
 records_adminer_virtual_host: adminer.records.ds
 records_discovery_host: api.discovery.ds
 records_directory: /srv/records
-records_jwt_private_key: ./var/jwt/key
-records_jwt_public_key: ./var/jwt/key.pub
 records_database_host: records_db
 records_database_port: 5432
 records_database_name: records

@@ -15,8 +15,6 @@
             tasks_adminer_virtual_host: '{{ tasks.adminer.host }}'
             tasks_discovery_host: '{{ discovery.api.host }}'
             tasks_directory: '{{ directory }}/tasks'
-            tasks_jwt_private_key: '{{ directory }}/tasks/var/jwt/key'
-            tasks_jwt_public_key: '{{ directory }}/tasks/var/jwt/key.pub'
             tasks_database_host: '{{ tasks.database.host }}'
             tasks_database_port: '{{ tasks.database.port }}'
             tasks_database_name: '{{ tasks.database.name }}'

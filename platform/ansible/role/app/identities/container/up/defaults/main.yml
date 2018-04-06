@@ -7,8 +7,6 @@ identities_nginx_virtual_host: api.identities.ds
 identities_adminer_virtual_host: adminer.identities.ds
 identities_discovery_host: api.discovery.ds
 identities_directory: /srv/identities
-identities_jwt_private_key: ./var/jwt/key
-identities_jwt_public_key: ./var/jwt/key.pub
 identities_database_host: identities_db
 identities_database_port: 5432
 identities_database_name: identities

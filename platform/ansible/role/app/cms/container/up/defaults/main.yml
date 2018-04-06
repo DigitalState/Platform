@@ -7,8 +7,6 @@ cms_nginx_virtual_host: api.cms.ds
 cms_adminer_virtual_host: adminer.cms.ds
 cms_discovery_host: api.discovery.ds
 cms_directory: /srv/cms
-cms_jwt_private_key: ./var/jwt/key
-cms_jwt_public_key: ./var/jwt/key.pub
 cms_database_host: cms_db
 cms_database_port: 5432
 cms_database_name: cms
