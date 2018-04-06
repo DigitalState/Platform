@@ -2,11 +2,11 @@
     <img src="https://avatars3.githubusercontent.com/u/12055994?s=200&v=4">
 </a></p>
 
-The SDK provides a **set of tools** to help manage the DigitalState platform, from setting up a local environment for development to deploying to remote servers; from sandbox to production.
+The platform repository provides a **set of tools** to help manage the DigitalState platform, from setting up a local environment for development to deploying to remote servers; from sandbox to production.
 
 It uses **Docker** and **Ansible** to help with orchestration and is the central repository used by developers and devops.
 
-[![works badge](https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg)](sdk/documentation/tested.md)
+[![works badge](https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg)](platform/documentation/tested.md)
 
 ## Table of Contents
 
@@ -19,8 +19,8 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 ## Synopsis
 
 1. **Install** Git and Docker on your local machine.
-2. **Download** the SDK repository.
-3. **Boot** the SDK container.
+2. **Download** the platform repository.
+3. **Boot** the platform container.
 4. **Execute** pre-built Ansible playbook commands.
 
 ## Requirements
@@ -45,13 +45,13 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 ## Documentation
 
-The SDK documentation is grouped by deployment environments:
+The documentation is grouped by deployment environments:
 
-- [Lab](sdk/documentation/lab/index.md) - The lab environment is typically deployed to your local machine and is used to further develop the platform.
-- [Test](sdk/documentation/test/index.md) - The test environment is typically deployed to a remote server and is used for continuous integration.
-- [Development](sdk/documentation/dev/index.md) - The development environment is typically deployed to a remote server and is used as sandbox.
-- [Staging](sdk/documentation/stag/index.md) - The staging environment is typically deployed to a remote server and is used as a pre-production mirror.
-- [Production](sdk/documentation/prod/index.md) - The production environment is typically deployed to a remote server and is used to serve the latest release.
+- [Lab](platform/documentation/lab/index.md) - The lab environment is typically deployed to your local machine and is used to further develop the platform.
+- [Test](platform/documentation/test/index.md) - The test environment is typically deployed to a remote server and is used for continuous integration.
+- [Development](platform/documentation/dev/index.md) - The development environment is typically deployed to a remote server and is used as sandbox.
+- [Staging](platform/documentation/stag/index.md) - The staging environment is typically deployed to a remote server and is used as a pre-production mirror.
+- [Production](platform/documentation/prod/index.md) - The production environment is typically deployed to a remote server and is used to serve the latest release.
 
 ## Contributing
 
