@@ -39,7 +39,7 @@ Open a command prompt and download the repository:
 
 ### 3. Boot the platform container
 
-Boot the platform container:
+Run the following command to boot the platform container:
 
 ```
 > docker-compose up -d
@@ -62,7 +62,7 @@ CONTAINER ID     IMAGE                 COMMAND       CREATED           STATUS   
 
 ### 4. Enter the platform container console
 
-Enter the platform container console:
+Run the following command to enter the platform container console:
 
 ```
 > docker exec -it platform /bin/sh
@@ -78,17 +78,19 @@ At this point, you have the platform container running on your local machine as 
 
 ### 5. Generate JWT keys for the authentication system
 
-Generate jwt keys for the authentication system:
-
 > The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
 > The authentication system requires a private and public key to generate and validate tokens. 
 > Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
+
+Run the following command to generate a jwt private key:
 
 ```
 $ openssl genrsa -out /root/resource/jwt/lab/key -aes256 4096
 ```
 
 > Note: The command above will prompt you for a key pass phrase, take note of it for later.
+
+Run the following command to generate a jwt public key:
 
 ```
 $ openssl rsa -pubout -in /root/resource/jwt/lab/key -out /root/resource/jwt/lab/key.pub
@@ -100,11 +102,11 @@ Configure the Ansible lab environment:
 
 > The lab environment uses the Ansible inventory file found [here](/platform/ansible/env/lab/inventory.yml) for its configurations.
 
-The [encryption.secret](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L13) config needs to be set to a random, unique and secret 32 characters string.
+The [encryption.secret](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L16) config needs to be set to a random, unique and secret 32 characters string.
 
-The [jwt.key_pass_phrase](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L17) config needs to be set to the jwt key pass phrase defined at step #5.
+The [jwt.key_pass_phrase](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L20) config needs to be set to the jwt key pass phrase defined at step #5.
 
-The [directory](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L9) config needs to be set to the absolute path of the platform `app` directory. The value will vary depending on your local machine's operating system:
+The [directory](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L12) config needs to be set to the absolute path of the platform `app` directory. The value will vary depending on your local machine's operating system:
 
 **Windows**
 
@@ -157,7 +159,7 @@ Add the following entries:
 
 ### 8. Run the install command with Ansible
 
-Install the dockerized application locally with the Ansible deploy command:
+Install the dockerized application locally with the Ansible install command:
 
 ```
 ansible-playbook ./install.yml
