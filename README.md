@@ -21,7 +21,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 1. **Install** Git and Docker on your local machine.
 2. **Download** the platform repository.
 3. **Boot** the platform container.
-4. **Execute** pre-built Ansible playbook commands.
+4. **Execute** pre-built Ansible playbooks.
 
 ## Requirements
 
