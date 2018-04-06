@@ -10,6 +10,7 @@
         set_fact:
             interactions_compose_project_name: '{{ project }}_interactions'
             interactions_network: '{{ project }}_default'
+            interactions_image_tag: '{{ interactions.version }}'
             interactions_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             interactions_nginx_virtual_host: '{{ interactions.api.host }}'
             interactions_adminer_virtual_host: '{{ interactions.adminer.host }}'

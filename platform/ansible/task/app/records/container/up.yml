@@ -10,6 +10,7 @@
         set_fact:
             records_compose_project_name: '{{ project }}_records'
             records_network: '{{ project }}_default'
+            records_image_tag: '{{ records.version }}'
             records_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             records_nginx_virtual_host: '{{ records.api.host }}'
             records_adminer_virtual_host: '{{ records.adminer.host }}'

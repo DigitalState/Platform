@@ -2,6 +2,7 @@
 topics_env_file: ~
 topics_compose_project_name: ds_topics
 topics_network: ds_default
+topics_image_tag: master
 topics_proxy_host: 127.0.0.1
 topics_nginx_virtual_host: api.topics.ds
 topics_adminer_virtual_host: api.adminer.ds

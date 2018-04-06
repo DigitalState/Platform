@@ -10,6 +10,7 @@
         set_fact:
             services_compose_project_name: '{{ project }}_services'
             services_network: '{{ project }}_default'
+            services_image_tag: '{{ services.version }}'
             services_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             services_nginx_virtual_host: '{{ services.api.host }}'
             services_adminer_virtual_host: '{{ services.adminer.host }}'

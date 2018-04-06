@@ -10,6 +10,7 @@
         set_fact:
             cms_compose_project_name: '{{ project }}_cms'
             cms_network: '{{ project }}_default'
+            cms_image_tag: '{{ cms.version }}'
             cms_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             cms_nginx_virtual_host: '{{ cms.api.host }}'
             cms_adminer_virtual_host: '{{ cms.adminer.host }}'

@@ -10,6 +10,7 @@
         set_fact:
             assets_compose_project_name: '{{ project }}_assets'
             assets_network: '{{ project }}_default'
+            assets_image_tag: '{{ assets.version }}'
             assets_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             assets_nginx_virtual_host: '{{ assets.api.host }}'
             assets_adminer_virtual_host: '{{ assets.adminer.host }}'

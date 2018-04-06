@@ -12,6 +12,12 @@
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ interactions_network }}'
+      - name: Configure interactions image tag environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/interactions/{{ interactions_env_file }}'
+            regexp: '^IMAGE_TAG='
+            line: 'IMAGE_TAG={{ interactions_image_tag }}'
       - name: Configure proxy host environment variable
         lineinfile:
             create: yes

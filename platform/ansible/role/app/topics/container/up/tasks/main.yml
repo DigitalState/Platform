@@ -12,6 +12,12 @@
             path: '/srv/topics/{{ topics_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ topics_network }}'
+      - name: Configure topics image tag environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/topics/{{ topics_env_file }}'
+            regexp: '^IMAGE_TAG='
+            line: 'IMAGE_TAG={{ topics_image_tag }}'
       - name: Configure proxy host environment variable
         lineinfile:
             create: yes

@@ -12,6 +12,12 @@
             path: '/srv/cms/{{ cms_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ cms_network }}'
+      - name: Configure cms image tag environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/cms/{{ cms_env_file }}'
+            regexp: '^IMAGE_TAG='
+            line: 'IMAGE_TAG={{ cms_image_tag }}'
       - name: Configure proxy host environment variable
         lineinfile:
             create: yes

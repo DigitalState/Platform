@@ -10,6 +10,7 @@
         set_fact:
             topics_compose_project_name: '{{ project }}_topics'
             topics_network: '{{ project }}_default'
+            topics_image_tag: '{{ topics.version }}'
             topics_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             topics_nginx_virtual_host: '{{ topics.api.host }}'
             topics_adminer_virtual_host: '{{ topics.adminer.host }}'

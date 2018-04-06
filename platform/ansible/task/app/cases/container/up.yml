@@ -10,6 +10,7 @@
         set_fact:
             cases_compose_project_name: '{{ project }}_cases'
             cases_network: '{{ project }}_default'
+            cases_image_tag: '{{ cases.version }}'
             cases_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             cases_nginx_virtual_host: '{{ cases.api.host }}'
             cases_adminer_virtual_host: '{{ cases.adminer.host }}'

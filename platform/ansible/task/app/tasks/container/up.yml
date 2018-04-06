@@ -10,6 +10,7 @@
         set_fact:
             tasks_compose_project_name: '{{ project }}_tasks'
             tasks_network: '{{ project }}_default'
+            tasks_image_tag: '{{ tasks.version }}'
             tasks_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             tasks_nginx_virtual_host: '{{ tasks.api.host }}'
             tasks_adminer_virtual_host: '{{ tasks.adminer.host }}'

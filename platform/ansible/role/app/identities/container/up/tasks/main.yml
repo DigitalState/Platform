@@ -12,6 +12,12 @@
             path: '/srv/identities/{{ identities_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ identities_network }}'
+      - name: Configure identities image tag environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/identities/{{ identities_env_file }}'
+            regexp: '^IMAGE_TAG='
+            line: 'IMAGE_TAG={{ identities_image_tag }}'
       - name: Configure proxy host environment variable
         lineinfile:
             create: yes

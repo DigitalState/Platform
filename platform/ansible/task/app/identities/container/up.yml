@@ -10,6 +10,7 @@
         set_fact:
             identities_compose_project_name: '{{ project }}_identities'
             identities_network: '{{ project }}_default'
+            identities_image_tag: '{{ identities.version }}'
             identities_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             identities_nginx_virtual_host: '{{ identities.api.host }}'
             identities_adminer_virtual_host: '{{ identities.adminer.host }}'

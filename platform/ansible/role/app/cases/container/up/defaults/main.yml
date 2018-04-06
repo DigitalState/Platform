@@ -2,6 +2,7 @@
 cases_env_file: ~
 cases_compose_project_name: ds_cases
 cases_network: ds_default
+cases_image_tag: master
 cases_proxy_host: 127.0.0.1
 cases_nginx_virtual_host: api.cases.ds
 cases_adminer_virtual_host: adminer.cases.ds

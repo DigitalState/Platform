@@ -10,6 +10,7 @@
         set_fact:
             authentication_compose_project_name: '{{ project }}_authentication'
             authentication_network: '{{ project }}_default'
+            authentication_image_tag: '{{ authentication.version }}'
             authentication_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             authentication_nginx_virtual_host: '{{ authentication.api.host }}'
             authentication_adminer_virtual_host: '{{ authentication.adminer.host }}'

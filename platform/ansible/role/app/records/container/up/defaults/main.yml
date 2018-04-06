@@ -2,6 +2,7 @@
 records_env_file: ~
 records_compose_project_name: ds_records
 records_network: ds_default
+records_image_tag: master
 records_proxy_host: 127.0.0.1
 records_nginx_virtual_host: api.records.ds
 records_adminer_virtual_host: adminer.records.ds

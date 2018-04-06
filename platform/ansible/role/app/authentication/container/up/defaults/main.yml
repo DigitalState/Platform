@@ -2,6 +2,7 @@
 authentication_env_file: ~
 authentication_compose_project_name: ds_authentication
 authentication_network: ds_default
+authentication_image_tag: master
 authentication_proxy_host: 127.0.0.1
 authentication_nginx_virtual_host: api.authentication.ds
 authentication_adminer_virtual_host: adminer.authentication.ds
