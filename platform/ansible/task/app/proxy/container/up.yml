@@ -6,7 +6,7 @@
         when: env == 'lab'
       - name: Define proxy container variables
         set_fact:
-            proxy_compose_project_name: '{{ project }}'
+            proxy_compose_project_name: '{{ project }}_proxy'
             proxy_port: '{{ proxy.port }}'
       - name: Up proxy container
         include_role:
