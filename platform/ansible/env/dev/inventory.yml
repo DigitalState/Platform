@@ -40,7 +40,7 @@ all:
         assets:
             enabled: true
             repository: https://github.com/DigitalState/Assets.git
-            version: 0.2.3
+            version: 0.3.0
             api:
                 host: api.assets.dev.ds
             adminer:
@@ -54,7 +54,7 @@ all:
         authentication:
             enabled: true
             repository: https://github.com/DigitalState/Authentication.git
-            version: 0.2.3
+            version: 0.3.0
             api:
                 host: api.authentication.dev.ds
             adminer:
@@ -76,7 +76,7 @@ all:
         cases:
             enabled: true
             repository: https://github.com/DigitalState/Cases.git
-            version: 0.2.3
+            version: 0.3.0
             api:
                 host: api.cases.dev.ds
             adminer:
@@ -90,7 +90,7 @@ all:
         cms:
             enabled: true
             repository: https://github.com/DigitalState/Cms.git
-            version: 0.2.3
+            version: 0.3.0
             api:
                 host: api.cms.dev.ds
             adminer:
@@ -130,7 +130,7 @@ all:
         identities:
             enabled: true
             repository: https://github.com/DigitalState/Identities.git
-            version: 0.2.3
+            version: 0.3.0
             api:
                 host: api.identities.dev.ds
             adminer:
@@ -174,12 +174,12 @@ all:
         proxy:
             enabled: true
             repository: https://github.com/DigitalState/Proxy.git
-            version: 0.1.0
+            version: 0.2.0
             port: 80
         records:
             enabled: true
             repository: https://github.com/DigitalState/Records.git
-            version: 0.2.3
+            version: 0.3.0
             api:
                 host: api.records.dev.ds
             adminer:
@@ -193,7 +193,7 @@ all:
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
-            version: 0.2.3
+            version: 0.3.0
             api:
                 host: api.services.dev.ds
             adminer:
@@ -207,7 +207,7 @@ all:
         tasks:
             enabled: false
             repository: https://github.com/DigitalState/Tasks.git
-            version: 0.2.3
+            version: 0.3.0
             api:
                 host: api.tasks.dev.ds
             adminer:
