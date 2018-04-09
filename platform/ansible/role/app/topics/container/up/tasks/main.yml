@@ -87,6 +87,7 @@
   environment:
       COMPOSE_PROJECT_NAME: '{{ topics_compose_project_name }}'
       NETWORK: '{{ topics_network }}'
+      IMAGE_TAG: '{{ topics_image_tag }}'
       PROXY_HOST: '{{ topics_proxy_host }}'
       VIRTUAL_HOST: '{{ topics_virtual_host }}'
       DIRECTORY: '{{ topics_directory }}'

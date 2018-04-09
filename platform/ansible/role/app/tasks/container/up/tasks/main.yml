@@ -93,6 +93,7 @@
   environment:
       COMPOSE_PROJECT_NAME: '{{ tasks_compose_project_name }}'
       NETWORK: '{{ tasks_network }}'
+      IMAGE_TAG: '{{ tasks_image_tag }}'
       PROXY_HOST: '{{ tasks_proxy_host }}'
       NGINX_VIRTUAL_HOST: '{{ tasks_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ tasks_adminer_virtual_host }}'

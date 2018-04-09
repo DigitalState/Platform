@@ -87,6 +87,7 @@
   environment:
       COMPOSE_PROJECT_NAME: '{{ cms_compose_project_name }}'
       NETWORK: '{{ cms_network }}'
+      IMAGE_TAG: '{{ cms_image_tag }}'
       PROXY_HOST: '{{ cms_proxy_host }}'
       NGINX_VIRTUAL_HOST: '{{ cms_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ cms_adminer_virtual_host }}'

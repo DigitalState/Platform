@@ -12,6 +12,12 @@
             path: '/srv/camunda/{{ camunda_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ camunda_network }}'
+      - name: Configure camunda image tag environment variable
+        lineinfile:
+            create: yes
+            path: '/srv/camunda/{{ camunda_env_file }}'
+            regexp: '^IMAGE_TAG='
+            line: 'IMAGE_TAG={{ camunda_image_tag }}'
       - name: Configure java options key environment variable
         lineinfile:
             create: yes
@@ -68,6 +74,7 @@
   environment:
       COMPOSE_PROJECT_NAME: '{{ camunda_compose_project_name }}'
       NETWORK: '{{ camunda_network }}'
+      IMAGE_TAG: '{{ camunda_image_tag }}'
       JAVA_OPTS: '-Djava.security.egd=file:/dev/./urandom -Duser.timezone={{ camunda_timezone }}'
       PROXY_HOST: '{{ camunda_proxy_host }}'
       VIRTUAL_HOST: '{{ camunda_virtual_host }}'

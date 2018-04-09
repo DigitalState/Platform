@@ -87,6 +87,7 @@
   environment:
       COMPOSE_PROJECT_NAME: '{{ identities_compose_project_name }}'
       NETWORK: '{{ identities_network }}'
+      IMAGE_TAG: '{{ identities_image_tag }}'
       PROXY_HOST: '{{ identities_proxy_host }}'
       NGINX_VIRTUAL_HOST: '{{ identities_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ identities_adminer_virtual_host }}'

@@ -10,6 +10,7 @@
         set_fact:
             camunda_compose_project_name: '{{ project }}_camunda'
             camunda_network: '{{ project }}_default'
+            camunda_image_tag: '{{ camunda.version }}'
             camunda_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             camunda_virtual_host: '{{ camunda.api.host }}'
             camunda_discovery_host: '{{ discovery.api.host }}'

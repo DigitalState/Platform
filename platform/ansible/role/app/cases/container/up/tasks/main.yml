@@ -87,6 +87,7 @@
   environment:
       COMPOSE_PROJECT_NAME: '{{ cases_compose_project_name }}'
       NETWORK: '{{ cases_network }}'
+      IMAGE_TAG: '{{ cases_image_tag }}'
       PROXY_HOST: '{{ cases_proxy_host }}'
       NGINX_VIRTUAL_HOST: '{{ cases_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ cases_adminer_virtual_host }}'

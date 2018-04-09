@@ -87,6 +87,7 @@
   environment:
       COMPOSE_PROJECT_NAME: '{{ interactions_compose_project_name }}'
       NETWORK: '{{ interactions_network }}'
+      IMAGE_TAG: '{{ interactions_image_tag }}'
       PROXY_HOST: '{{ interactions_proxy_host }}'
       NGINX_VIRTUAL_HOST: '{{ interactions_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ interactions_adminer_virtual_host }}'

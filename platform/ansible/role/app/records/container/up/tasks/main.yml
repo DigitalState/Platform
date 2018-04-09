@@ -87,6 +87,7 @@
   environment:
       COMPOSE_PROJECT_NAME: '{{ records_compose_project_name }}'
       NETWORK: '{{ records_network }}'
+      IMAGE_TAG: '{{ records_image_tag }}'
       PROXY_HOST: '{{ records_proxy_host }}'
       NGINX_VIRTUAL_HOST: '{{ records_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ records_adminer_virtual_host }}'
