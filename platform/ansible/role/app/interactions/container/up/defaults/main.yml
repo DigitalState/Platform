@@ -1,8 +1,7 @@
 ---
 interactions_env_file: ~
-interactions_compose_project_name: ds_interactions
-interactions_network: ds_default
-interactions_image_tag: master
+interactions_compose_project_name: dsinteractions
+interactions_network: dsproxy_default
 interactions_proxy_host: 127.0.0.1
 interactions_nginx_virtual_host: api.interactions.ds
 interactions_adminer_virtual_host: adminer.interactions.ds

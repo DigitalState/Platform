@@ -1,7 +1,7 @@
 ---
 logs_env_file: ~
-logs_compose_project_name: ds_logs
-logs_network: ds_default
+logs_compose_project_name: dslogs
+logs_network: dsproxy_default
 logs_proxy_host: 127.0.0.1
 logs_virtual_host: api.logs.ds
 logs_discovery_host: api.discovery.ds

@@ -1,7 +1,7 @@
 ---
 formio_env_file: ~
-formio_compose_project_name: ds_formio
-formio_network: ds_default
+formio_compose_project_name: dsformio
+formio_network: dsproxy_default
 formio_proxy_host: 127.0.0.1
 formio_virtual_host: api.formio.ds
 formio_discovery_host: api.discovery.ds

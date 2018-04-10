@@ -9,7 +9,7 @@
       - name: Define monitor container variables
         set_fact:
             monitor_compose_project_name: '{{ project }}_monitor'
-            monitor_network: '{{ project }}_default'
+            monitor_network: '{{ project }}proxy_default'
             monitor_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             monitor_virtual_host: '{{ monitor.host }}'
             monitor_discovery_host: '{{ discovery.api.host }}'

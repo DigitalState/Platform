@@ -4,13 +4,12 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define authentication container variables
         set_fact:
-            authentication_env_file: .env.platform
+            authentication_env_file: .env.lab
         when: env == 'lab'
       - name: Define authentication container variables
         set_fact:
-            authentication_compose_project_name: '{{ project }}_authentication'
-            authentication_network: '{{ project }}_default'
-            authentication_image_tag: '{{ authentication.version }}'
+            authentication_compose_project_name: '{{ project }}authentication'
+            authentication_network: '{{ project }}proxy_default'
             authentication_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             authentication_nginx_virtual_host: '{{ authentication.api.host }}'
             authentication_adminer_virtual_host: '{{ authentication.adminer.host }}'

@@ -4,13 +4,12 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define records container variables
         set_fact:
-            records_env_file: .env.platform
+            records_env_file: .env.lab
         when: env == 'lab'
       - name: Define records container variables
         set_fact:
-            records_compose_project_name: '{{ project }}_records'
-            records_network: '{{ project }}_default'
-            records_image_tag: '{{ records.version }}'
+            records_compose_project_name: '{{ project }}records'
+            records_network: '{{ project }}proxy_default'
             records_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             records_nginx_virtual_host: '{{ records.api.host }}'
             records_adminer_virtual_host: '{{ records.adminer.host }}'

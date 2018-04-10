@@ -1,8 +1,7 @@
 ---
 services_env_file: ~
-services_compose_project_name: ds_services
-services_network: ds_default
-services_image_tag: master
+services_compose_project_name: dsservices
+services_network: dsproxy_default
 services_proxy_host: 127.0.0.1
 services_nginx_virtual_host: api.services.ds
 services_adminer_virtual_host: adminer.services.ds

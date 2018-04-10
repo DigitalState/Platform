@@ -4,13 +4,12 @@
         include_tasks: /etc/ansible/task/app/proxy/container/info.yml
       - name: Define assets container variables
         set_fact:
-            assets_env_file: .env.platform
+            assets_env_file: .env.lab
         when: env == 'lab'
       - name: Define assets container variables
         set_fact:
-            assets_compose_project_name: '{{ project }}_assets'
-            assets_network: '{{ project }}_default'
-            assets_image_tag: '{{ assets.version }}'
+            assets_compose_project_name: '{{ project }}assets'
+            assets_network: '{{ project }}proxy_default'
             assets_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             assets_nginx_virtual_host: '{{ assets.api.host }}'
             assets_adminer_virtual_host: '{{ assets.adminer.host }}'

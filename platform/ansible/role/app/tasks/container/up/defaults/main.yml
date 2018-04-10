@@ -1,8 +1,7 @@
 ---
 tasks_env_file: ~
-tasks_compose_project_name: ds_tasks
-tasks_network: ds_default
-tasks_image_tag: master
+tasks_compose_project_name: dstasks
+tasks_network: dsproxy_default
 tasks_proxy_host: 127.0.0.1
 tasks_nginx_virtual_host: api.tasks.ds
 tasks_adminer_virtual_host: adminer.tasks.ds

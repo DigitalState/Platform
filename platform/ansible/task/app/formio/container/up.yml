@@ -9,7 +9,7 @@
       - name: Define formio container variables
         set_fact:
             formio_compose_project_name: '{{ project }}_formio'
-            formio_network: '{{ project }}_default'
+            formio_network: '{{ project }}proxy_default'
             formio_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             formio_virtual_host: '{{ formio.api.host }}'
             formio_discovery_host: '{{ discovery.api.host }}'

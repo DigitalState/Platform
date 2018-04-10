@@ -12,12 +12,6 @@
             path: '/srv/cases/{{ cases_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ cases_network }}'
-      - name: Configure cases image tag environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/cases/{{ cases_env_file }}'
-            regexp: '^IMAGE_TAG='
-            line: 'IMAGE_TAG={{ cases_image_tag }}'
       - name: Configure proxy host environment variable
         lineinfile:
             create: yes
@@ -83,11 +77,13 @@
 - name: Up cases container
   docker_service:
       project_src: /srv/cases
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
       state: present
   environment:
       COMPOSE_PROJECT_NAME: '{{ cases_compose_project_name }}'
       NETWORK: '{{ cases_network }}'
-      IMAGE_TAG: '{{ cases_image_tag }}'
       PROXY_HOST: '{{ cases_proxy_host }}'
       NGINX_VIRTUAL_HOST: '{{ cases_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ cases_adminer_virtual_host }}'

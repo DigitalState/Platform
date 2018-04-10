@@ -2,5 +2,8 @@
 - name: Stop tasks container
   docker_service:
       project_src: /srv/tasks
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
       state: present
       stopped: yes

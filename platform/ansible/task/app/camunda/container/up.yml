@@ -9,7 +9,7 @@
       - name: Define camunda container variables
         set_fact:
             camunda_compose_project_name: '{{ project }}_camunda'
-            camunda_network: '{{ project }}_default'
+            camunda_network: '{{ project }}proxy_default'
             camunda_image_tag: '{{ camunda.version }}'
             camunda_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             camunda_virtual_host: '{{ camunda.api.host }}'

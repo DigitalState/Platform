@@ -2,5 +2,8 @@
 - name: Stop topics container
   docker_service:
       project_src: /srv/topics
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
       state: present
       stopped: yes

@@ -9,7 +9,7 @@
       - name: Define admin container variables
         set_fact:
             admin_compose_project_name: '{{ project }}_admin'
-            admin_network: '{{ project }}_default'
+            admin_network: '{{ project }}proxy_default'
             admin_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             admin_virtual_host: '{{ admin.host }}'
             admin_discovery_host: '{{ discovery.api.host }}'

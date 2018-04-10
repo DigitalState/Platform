@@ -12,12 +12,6 @@
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ authentication_network }}'
-      - name: Configure authentication image tag environment variable
-        lineinfile:
-            create: yes
-            path: '/srv/authentication/{{ authentication_env_file }}'
-            regexp: '^IMAGE_TAG='
-            line: 'IMAGE_TAG={{ authentication_image_tag }}'
       - name: Configure proxy host environment variable
         lineinfile:
             create: yes
@@ -83,11 +77,13 @@
 - name: Up authentication container
   docker_service:
       project_src: /srv/authentication
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
       state: present
   environment:
       COMPOSE_PROJECT_NAME: '{{ authentication_compose_project_name }}'
       NETWORK: '{{ authentication_network }}'
-      IMAGE_TAG: '{{ authentication_image_tag }}'
       PROXY_HOST: '{{ authentication_proxy_host }}'
       NGINX_VIRTUAL_HOST: '{{ authentication_nginx_virtual_host }}'
       ADMINER_VIRTUAL_HOST: '{{ authentication_adminer_virtual_host }}'

@@ -9,7 +9,7 @@
       - name: Define discovery container environment variables
         set_fact:
             discovery_namespace: '{{ project }}_discovery'
-            discovery_network: '{{ project }}_default'
+            discovery_network: '{{ project }}proxy_default'
             discovery_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             discovery_virtual_host: '{{ discovery.api.host }}'
             discovery_directory: '{{ directory }}/discovery'

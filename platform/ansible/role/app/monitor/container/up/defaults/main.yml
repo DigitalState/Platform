@@ -1,7 +1,7 @@
 ---
 monitor_env_file: ~
-monitor_compose_project_name: ds_monitor
-monitor_network: ds_default
+monitor_compose_project_name: dsmonitor
+monitor_network: dsproxy_default
 monitor_proxy_host: 127.0.0.1
 monitor_virtual_host: monitor.ds
 monitor_discovery_host: api.discovery.ds

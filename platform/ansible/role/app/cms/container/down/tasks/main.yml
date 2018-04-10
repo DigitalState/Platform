@@ -2,4 +2,7 @@
 - name: Down cms container
   docker_service:
       project_src: /srv/cms
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
       state: absent

@@ -10,7 +10,7 @@
       - name: Define logs container variables
         set_fact:
             logs_compose_project_name: '{{ project }}_logs'
-            logs_network: '{{ project }}_default'
+            logs_network: '{{ project }}proxy_default'
             logs_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             logs_virtual_host: '{{ logs.host }}'
             logs_discovery_host: '{{ discovery.api.host }}'

@@ -1,7 +1,7 @@
 ---
 camunda_env_file: ~
-camunda_compose_project_name: ds_camunda
-camunda_network: ds_default
+camunda_compose_project_name: dscamunda
+camunda_network: dsproxy_default
 camunda_image_tag: master
 camunda_timezone: UTC
 camunda_proxy_host: 127.0.0.1

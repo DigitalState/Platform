@@ -2,5 +2,8 @@
 - name: Stop assets container
   docker_service:
       project_src: /srv/assets
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
       state: present
       stopped: yes

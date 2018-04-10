@@ -1,8 +1,7 @@
 ---
 assets_env_file: ~
-assets_compose_project_name: ds_assets
-assets_network: ds_default
-assets_image_tag: master
+assets_compose_project_name: dsassets
+assets_network: dsproxy_default
 assets_proxy_host: 127.0.0.1
 assets_nginx_virtual_host: api.assets.ds
 assets_adminer_virtual_host: adminer.assets.ds

@@ -9,7 +9,7 @@
       - name: Define portal container variables
         set_fact:
             portal_compose_project_name: '{{ project }}_portal'
-            portal_network: '{{ project }}_default'
+            portal_network: '{{ project }}proxy_default'
             portal_proxy_host: '{{ proxy_container_info_ip.stdout }}'
             portal_virtual_host: '{{ portal.host }}'
             portal_discovery_host: '{{ discovery.api.host }}'
