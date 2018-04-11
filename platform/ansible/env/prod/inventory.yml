@@ -104,7 +104,7 @@ all:
         core:
             enabled: false
             repository: https://github.com/DigitalState/Core.git
-            version: 0.1.0
+            version: 0.5.0
         discovery:
             enabled: true
             repository: https://github.com/DigitalState/Discovery.git
