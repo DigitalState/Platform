@@ -2,5 +2,8 @@
 - name: Stop camunda container
   docker_service:
       project_src: /srv/camunda
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
       state: present
       stopped: yes
