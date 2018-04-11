@@ -2,4 +2,7 @@
 - name: Down discovery container
   docker_service:
       project_src: /srv/discovery
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
       state: absent

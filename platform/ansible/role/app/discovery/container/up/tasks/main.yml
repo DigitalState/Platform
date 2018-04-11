@@ -35,6 +35,9 @@
 - name: Up discovery container
   docker_service:
       project_src: /srv/discovery
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
       state: present
   environment:
       COMPOSE_PROJECT_NAME: '{{ discovery_compose_project_name }}'
