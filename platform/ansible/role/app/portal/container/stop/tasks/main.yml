@@ -2,5 +2,8 @@
 - name: Stop portal container
   docker_service:
       project_src: /srv/portal
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
       state: present
       stopped: yes

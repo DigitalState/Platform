@@ -41,6 +41,9 @@
 - name: Up portal container
   docker_service:
       project_src: /srv/portal
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
       state: present
   environment:
       COMPOSE_PROJECT_NAME: '{{ portal_compose_project_name }}'

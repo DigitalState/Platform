@@ -6,7 +6,7 @@
   tasks:
       - name: Define ssh variables
         set_fact:
-            ssh_directory: '{{ env }}'
+            ssh_directory: '{{ env|replace(".", "/") }}'
             ssh_host: '{{ vars["hostvars"]["server"]["ansible_host"] }}'
             ssh_username: root
         when: hostvars.server.ansible_connection is not defined

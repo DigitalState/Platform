@@ -6,17 +6,17 @@ all:
 #            ansible_connection: local
             ansible_host: ~
             ansible_port: 22
-            ansible_ssh_private_key_file: /root/.ssh/test/key
+            ansible_ssh_private_key_file: /root/.ssh/test/ci/key
     vars:
         project: ds
         directory: /srv
-        env: test
+        env: test.ci
         timezone: UTC
         encryption:
             secret: 11111111111111111111111111111111
         jwt:
-            private_key: /root/resource/jwt/test/key
-            public_key: /root/resource/jwt/test/key.pub
+            private_key: /root/resource/jwt/test/ci/key
+            public_key: /root/resource/jwt/test/ci/key.pub
             key_pass_phrase: 1111
         mail:
             transport: smtp
@@ -35,16 +35,16 @@ all:
         admin:
             enabled: true
             repository: https://github.com/DigitalState/Admin.git
-            version: 0.1.7
-            host: admin.test.ds
+            version: 0.5.0
+            host: admin.ci.test.ds
         assets:
             enabled: true
             repository: https://github.com/DigitalState/Assets.git
             version: 0.5.0
             api:
-                host: api.assets.test.ds
+                host: api.assets.ci.test.ds
             adminer:
-                host: adminer.assets.test.ds
+                host: adminer.assets.ci.test.ds
             database:
                 host: assets_database
                 port: 5432
@@ -56,9 +56,9 @@ all:
             repository: https://github.com/DigitalState/Authentication.git
             version: 0.5.0
             api:
-                host: api.authentication.test.ds
+                host: api.authentication.ci.test.ds
             adminer:
-                host: adminer.authentication.test.ds
+                host: adminer.authentication.ci.test.ds
             database:
                 host: authentication_database
                 port: 5432
@@ -70,7 +70,7 @@ all:
             repository: https://github.com/DigitalState/Camunda.git
             version: 0.5.0
             api:
-                host: api.camunda.test.ds
+                host: api.camunda.ci.test.ds
             username: admin@staff.ds
             password: admin
         cases:
@@ -78,9 +78,9 @@ all:
             repository: https://github.com/DigitalState/Cases.git
             version: 0.5.0
             api:
-                host: api.cases.test.ds
+                host: api.cases.ci.test.ds
             adminer:
-                host: adminer.cases.test.ds
+                host: adminer.cases.ci.test.ds
             database:
                 host: cases_database
                 port: 5432
@@ -92,9 +92,9 @@ all:
             repository: https://github.com/DigitalState/Cms.git
             version: 0.5.0
             api:
-                host: api.cms.test.ds
+                host: api.cms.ci.test.ds
             adminer:
-                host: adminer.cms.test.ds
+                host: adminer.cms.ci.test.ds
             database:
                 host: cms_database
                 port: 5432
@@ -110,7 +110,7 @@ all:
             repository: https://github.com/DigitalState/Discovery.git
             version: 0.5.0
             api:
-                host: api.discovery.test.ds
+                host: api.discovery.ci.test.ds
         documentation:
             enabled: false
             repository: https://github.com/DigitalState/Documentation.git
@@ -120,7 +120,7 @@ all:
             repository: https://github.com/DigitalState/Formio.git
             version: 0.5.0
             api:
-                host: api.formio.test.ds
+                host: api.formio.ci.test.ds
             username: admin@staff.ds
             password: admin
         guide:
@@ -132,9 +132,9 @@ all:
             repository: https://github.com/DigitalState/Identities.git
             version: 0.5.0
             api:
-                host: api.identities.test.ds
+                host: api.identities.ci.test.ds
             adminer:
-                host: adminer.identities.test.ds
+                host: adminer.identities.ci.test.ds
             database:
                 host: identities_database
                 port: 5432
@@ -146,9 +146,9 @@ all:
             repository: https://github.com/DigitalState/Interactions.git
             version: 0.1.0
             api:
-                host: api.interactions.test.ds
+                host: api.interactions.ci.test.ds
             adminer:
-                host: adminer.interactions.test.ds
+                host: adminer.interactions.ci.test.ds
             database:
                 host: interactions_database
                 port: 5432
@@ -160,30 +160,30 @@ all:
             repository: https://github.com/DigitalState/Logs.git
             version: 0.1.0
             api:
-                host: api.logs.test.ds
+                host: api.logs.ci.test.ds
         monitor:
             enabled: false
             repository: https://github.com/DigitalState/Monitor.git
             version: 0.1.0
-            host: monitor.test.ds
+            host: monitor.ci.test.ds
         portal:
             enabled: true
             repository: https://github.com/DigitalState/Portal.git
-            version: 0.1.7
-            host: portal.test.ds
+            version: 0.5.0
+            host: portal.ci.test.ds
         proxy:
             enabled: true
             repository: https://github.com/DigitalState/Proxy.git
-            version: 0.2.0
+            version: 0.5.0
             port: 80
         records:
             enabled: true
             repository: https://github.com/DigitalState/Records.git
             version: 0.5.0
             api:
-                host: api.records.test.ds
+                host: api.records.ci.test.ds
             adminer:
-                host: adminer.records.test.ds
+                host: adminer.records.ci.test.ds
             database:
                 host: records_database
                 port: 5432
@@ -195,9 +195,9 @@ all:
             repository: https://github.com/DigitalState/Services.git
             version: 0.5.0
             api:
-                host: api.services.test.ds
+                host: api.services.ci.test.ds
             adminer:
-                host: adminer.services.test.ds
+                host: adminer.services.ci.test.ds
             database:
                 host: services_database
                 port: 5432
@@ -209,9 +209,9 @@ all:
             repository: https://github.com/DigitalState/Tasks.git
             version: 0.5.0
             api:
-                host: api.tasks.test.ds
+                host: api.tasks.ci.test.ds
             adminer:
-                host: adminer.tasks.test.ds
+                host: adminer.tasks.ci.test.ds
             database:
                 host: tasks_database
                 port: 5432
@@ -223,9 +223,9 @@ all:
             repository: https://github.com/DigitalState/Topics.git
             version: 0.1.0
             api:
-                host: api.topics.test.ds
+                host: api.topics.ci.test.ds
             adminer:
-                host: adminer.topics.test.ds
+                host: adminer.topics.ci.test.ds
             database:
                 host: topics_database
                 port: 5432
@@ -235,4 +235,4 @@ all:
         ui:
             enabled: false
             repository: https://github.com/DigitalState/Ui.git
-            version: 0.1.0
+            version: 0.5.0

@@ -27,7 +27,7 @@
 !/resource/jwt/lab/.gitkeep
 !/resource/jwt/prod/.gitkeep
 !/resource/jwt/stag/.gitkeep
-!/resource/jwt/test/.gitkeep
+!/resource/jwt/test/ci/.gitkeep
 
 /platform/ansible/**/*.retry
 /platform/docker/*
@@ -39,4 +39,4 @@
 !/platform/ssh/lab/.gitkeep
 !/platform/ssh/prod/.gitkeep
 !/platform/ssh/stag/.gitkeep
-!/platform/ssh/test/.gitkeep
+!/platform/ssh/test/ci/.gitkeep
