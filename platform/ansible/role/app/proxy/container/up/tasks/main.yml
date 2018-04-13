@@ -17,6 +17,9 @@
 - name: Up proxy container
   docker_service:
       project_src: /srv/proxy
+      files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
       state: present
   environment:
       COMPOSE_PROJECT_NAME: '{{ proxy_compose_project_name }}'
