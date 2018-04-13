@@ -11,6 +11,5 @@ before_install:
   - sudo openssl rsa -pubout -in resource/jwt/test/ci/key -out resource/jwt/test/ci/key.pub -passin pass:${JWT_KEY_PASS_PHASE}
 
 script:
-  - pwd
-#  - docker-compose up -d
-#  - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test/ci && ansible-playbook ./install.yml"
+  - docker-compose up -d
+  - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test/ci && ansible-playbook ./install.yml"
