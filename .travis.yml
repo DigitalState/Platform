@@ -12,4 +12,4 @@ before_install:
 
 script:
   - docker-compose up -d
-  - docker-compose exec platform ansible-playbook /etc/ansible/env/test/ci/install.yml
+  - docker-compose exec platform cd /etc/ansible/env/test/ci && ansible-playbook ./install.yml
