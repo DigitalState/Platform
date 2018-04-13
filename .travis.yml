@@ -5,7 +5,7 @@ services:
 
 before_install:
   - sudo openssl genrsa -out resource/jwt/test/ci/key -aes256 -passout pass:1111 4096
-  - sudo openssl rsa -pubout -in resource/jwt/test/ci/key -out resource/jwt/lab/key.pub
+  - sudo openssl rsa -pubout -in resource/jwt/test/ci/key -out resource/jwt/test/ci/key.pub
 
 script:
   - docker-compose up -d
