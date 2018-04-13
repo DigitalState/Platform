@@ -14,3 +14,4 @@ script:
   - docker-compose up -d
   - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test/ci && ansible-playbook ./install.yml"
   - docker ps -a
+  - docker logs dsidentities_php_1
