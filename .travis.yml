@@ -3,6 +3,10 @@ sudo: required
 services:
   - docker
 
+before_install:
+  - sudo openssl genrsa -out resource/jwt/test/ci/key -aes256 4096
+  - sudo openssl rsa -pubout -in resource/jwt/lab/key -out resource/jwt/lab/key.pub
+
 script:
   - docker-compose up -d
-  - docker-compose exec platform ansible-playbook /etc/ansible/env/lab/install.yml
+  - docker-compose exec platform ansible-playbook /etc/ansible/env/test/ci/install.yml
