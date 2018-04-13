@@ -7,8 +7,8 @@ services:
   - docker
 
 before_install:
-  - sudo openssl genrsa -out resource/jwt/test/ci/key -aes256 -passout pass:${DOCKER_COMPOSE_VERSION} 4096
-  - sudo openssl rsa -pubout -in resource/jwt/test/ci/key -out resource/jwt/test/ci/key.pub -passin pass:${DOCKER_COMPOSE_VERSION}
+  - sudo openssl genrsa -out resource/jwt/test/ci/key -aes256 -passout pass:${JWT_KEY_PASS_PHASE} 4096
+  - sudo openssl rsa -pubout -in resource/jwt/test/ci/key -out resource/jwt/test/ci/key.pub -passin pass:${JWT_KEY_PASS_PHASE}
 
 script:
   - docker-compose up -d
