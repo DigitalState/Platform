@@ -4,7 +4,7 @@
   become: true
   tasks:
       - name: ...
-        include_tasks: /etc/ansible/task/compiler/cache/warmup.yml
+        include_tasks: /etc/ansible/task/platform/compiler/cache/warmup.yml
   tags: [always]
 
 - name: Warmup caches

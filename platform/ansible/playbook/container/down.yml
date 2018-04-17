@@ -4,7 +4,7 @@
   become: true
   tasks:
       - name: ...
-        include_tasks: /etc/ansible/task/compiler/container/down.yml
+        include_tasks: /etc/ansible/task/platform/compiler/container/down.yml
   tags: [always]
 
 - name: Down containers

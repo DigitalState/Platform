@@ -4,7 +4,7 @@
   become: true
   tasks:
       - name: ...
-        include_tasks: /etc/ansible/task/compiler/database/fixtures/load.yml
+        include_tasks: /etc/ansible/task/platform/compiler/database/fixtures/load.yml
   tags: [always]
 
 - name: Load database fixtures

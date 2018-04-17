@@ -4,7 +4,7 @@
   become: true
   tasks:
       - name: ...
-        include_tasks: /etc/ansible/task/compiler/config/set.yml
+        include_tasks: /etc/ansible/task/platform/compiler/config/set.yml
   tags: [always]
 
 - name: Set configs

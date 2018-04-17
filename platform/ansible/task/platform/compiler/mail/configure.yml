@@ -1,21 +1,21 @@
 ---
 - name: ...
-  include_tasks: /etc/ansible/task/compiler/find.yml
+  include_tasks: /etc/ansible/task/platform/compiler/find.yml
   vars:
-      tag: jwt
+      tag: mail
 
 - name: ...
   set_fact:
       files: []
 
 - name: ...
-  include_tasks: /etc/ansible/task/compiler/item.yml
+  include_tasks: /etc/ansible/task/platform/compiler/item.yml
   vars:
-      tag: jwt
+      tag: mail
       task: configure
   with_items: '{{ items }}'
   when: vars[item|basename].enabled
 
 - name: Completed
   debug:
-      msg: Jwt list has been compiled.
+      msg: Mail list has been compiled.

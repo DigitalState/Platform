@@ -1,6 +1,6 @@
 ---
 - name: ...
-  include_tasks: /etc/ansible/task/compiler/find.yml
+  include_tasks: /etc/ansible/task/platform/compiler/find.yml
   vars:
       tag: discovery
 
@@ -9,7 +9,7 @@
       files: []
 
 - name: ...
-  include_tasks: /etc/ansible/task/compiler/item.yml
+  include_tasks: /etc/ansible/task/platform/compiler/item.yml
   vars:
       tag: discovery
       task: configure

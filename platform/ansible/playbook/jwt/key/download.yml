@@ -4,7 +4,7 @@
   become: true
   tasks:
       - name: ...
-        include_tasks: /etc/ansible/task/compiler/jwt/key/download.yml
+        include_tasks: /etc/ansible/task/platform/compiler/jwt/key/download.yml
   tags: [always]
 
 - name: Download jwt private and public key

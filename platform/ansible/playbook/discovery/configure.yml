@@ -4,7 +4,7 @@
   become: true
   tasks:
       - name: ...
-        include_tasks: /etc/ansible/task/compiler/discovery/configure.yml
+        include_tasks: /etc/ansible/task/platform/compiler/discovery/configure.yml
   tags: [always]
 
 - name: Configure discovery settings
