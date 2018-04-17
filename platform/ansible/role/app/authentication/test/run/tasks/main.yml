@@ -1,0 +1,15 @@
+---
+- name: Run authentication tests
+  shell:
+      cmd: docker-compose exec -T php vendor/bin/behat
+      chdir: /srv/authentication
+  register: authentication_test_run_result
+  changed_when: false
+
+- name: Register authentication tests result
+  set_fact:
+     authentication_test_run_result: '{{ authentication_test_run_result.stdout_lines[authentication_test_run_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
+
+- name: Display authentication tests result
+  debug:
+      msg: '{{ authentication_test_run_result[0] }} / {{ authentication_test_run_result[1] }}'

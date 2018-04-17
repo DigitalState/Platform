@@ -1,0 +1,6 @@
+---
+- name: Run records tests
+  include_role:
+      name: app/records/test/run
+  when: records.enabled
+  tags: [records]

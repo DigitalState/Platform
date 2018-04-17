@@ -1,0 +1,6 @@
+---
+- name: Run cms tests
+  include_role:
+      name: app/cms/test/run
+  when: cms.enabled
+  tags: [cms]

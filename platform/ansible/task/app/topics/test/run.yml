@@ -1,0 +1,6 @@
+---
+- name: Run topics tests
+  include_role:
+      name: app/topics/test/run
+  when: topics.enabled
+  tags: [topics]

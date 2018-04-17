@@ -1,0 +1,6 @@
+---
+- name: Validate interactions tests
+  include_role:
+      name: app/interactions/test/validate
+  when: interactions.enabled
+  tags: [interactions]

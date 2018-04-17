@@ -1,0 +1,6 @@
+---
+- name: Run authentication tests
+  include_role:
+      name: app/authentication/test/run
+  when: authentication.enabled
+  tags: [authentication]

@@ -1,0 +1,9 @@
+---
+- name: Run topics tests
+  include_role:
+      name: app/topics/test/run
+
+- name: Validate topics tests result
+  debug:
+      msg: '{{ topics_test_run_result[0] }} / {{ topics_test_run_result[1] }}'
+  failed_when: topics_test_run_result[0] != topics_test_run_result[1]

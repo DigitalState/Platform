@@ -1,0 +1,9 @@
+---
+- name: Run assets tests
+  include_role:
+      name: app/assets/test/run
+
+- name: Validate assets tests result
+  debug:
+      msg: '{{ assets_test_run_result[0] }} / {{ assets_test_run_result[1] }}'
+  failed_when: assets_test_run_result[0] != assets_test_run_result[1]

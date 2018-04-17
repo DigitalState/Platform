@@ -1,0 +1,6 @@
+---
+- name: Validate authentication tests
+  include_role:
+      name: app/authentication/test/validate
+  when: authentication.enabled
+  tags: [authentication]

@@ -1,0 +1,6 @@
+---
+- name: Validate identities tests
+  include_role:
+      name: app/identities/test/validate
+  when: identities.enabled
+  tags: [identities]

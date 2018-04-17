@@ -1,0 +1,21 @@
+---
+- name: ...
+  include_tasks: /etc/ansible/task/platform/compiler/find.yml
+  vars:
+      tag: test
+
+- name: ...
+  set_fact:
+      files: []
+
+- name: ...
+  include_tasks: /etc/ansible/task/platform/compiler/item.yml
+  vars:
+      tag: test
+      task: run
+  with_items: '{{ items }}'
+  when: vars[item|basename].enabled
+
+- name: Completed
+  debug:
+      msg: Test list has been compiled.

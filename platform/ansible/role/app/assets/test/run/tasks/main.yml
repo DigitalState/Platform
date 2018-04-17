@@ -1,0 +1,15 @@
+---
+- name: Run assets tests
+  shell:
+      cmd: docker-compose exec -T php vendor/bin/behat
+      chdir: /srv/assets
+  register: assets_test_run_result
+  changed_when: false
+
+- name: Register assets tests result
+  set_fact:
+     assets_test_run_result: '{{ assets_test_run_result.stdout_lines[assets_test_run_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
+
+- name: Display assets tests result
+  debug:
+      msg: '{{ assets_test_run_result[0] }} / {{ assets_test_run_result[1] }}'

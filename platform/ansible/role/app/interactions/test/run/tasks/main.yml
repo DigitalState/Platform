@@ -1,0 +1,15 @@
+---
+- name: Run interactions tests
+  shell:
+      cmd: docker-compose exec -T php vendor/bin/behat
+      chdir: /srv/interactions
+  register: interactions_test_run_result
+  changed_when: false
+
+- name: Register interactions tests result
+  set_fact:
+     interactions_test_run_result: '{{ interactions_test_run_result.stdout_lines[interactions_test_run_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
+
+- name: Display interactions tests result
+  debug:
+      msg: '{{ interactions_test_run_result[0] }} / {{ interactions_test_run_result[1] }}'

@@ -1,0 +1,15 @@
+---
+- name: Run tasks tests
+  shell:
+      cmd: docker-compose exec -T php vendor/bin/behat
+      chdir: /srv/tasks
+  register: tasks_test_run_result
+  changed_when: false
+
+- name: Register tasks tests result
+  set_fact:
+     tasks_test_run_result: '{{ tasks_test_run_result.stdout_lines[tasks_test_run_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
+
+- name: Display tasks tests result
+  debug:
+      msg: '{{ tasks_test_run_result[0] }} / {{ tasks_test_run_result[1] }}'

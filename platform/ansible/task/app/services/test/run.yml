@@ -1,0 +1,6 @@
+---
+- name: Run services tests
+  include_role:
+      name: app/services/test/run
+  when: services.enabled
+  tags: [services]

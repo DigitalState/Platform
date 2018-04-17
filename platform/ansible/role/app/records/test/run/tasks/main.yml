@@ -1,0 +1,15 @@
+---
+- name: Run records tests
+  shell:
+      cmd: docker-compose exec -T php vendor/bin/behat
+      chdir: /srv/records
+  register: records_test_run_result
+  changed_when: false
+
+- name: Register records tests result
+  set_fact:
+     records_test_run_result: '{{ records_test_run_result.stdout_lines[records_test_run_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
+
+- name: Display records tests result
+  debug:
+      msg: '{{ records_test_run_result[0] }} / {{ records_test_run_result[1] }}'

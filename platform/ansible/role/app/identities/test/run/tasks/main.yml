@@ -1,0 +1,15 @@
+---
+- name: Run identities tests
+  shell:
+      cmd: docker-compose exec -T php vendor/bin/behat
+      chdir: /srv/identities
+  register: identities_test_run_result
+  changed_when: false
+
+- name: Register identities tests result
+  set_fact:
+     identities_test_run_result: '{{ identities_test_run_result.stdout_lines[identities_test_run_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
+
+- name: Display identities tests result
+  debug:
+      msg: '{{ identities_test_run_result[0] }} / {{ identities_test_run_result[1] }}'

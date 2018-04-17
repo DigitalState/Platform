@@ -1,0 +1,6 @@
+---
+- name: Validate assets tests
+  include_role:
+      name: app/assets/test/validate
+  when: assets.enabled
+  tags: [assets]

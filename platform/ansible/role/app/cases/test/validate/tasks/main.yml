@@ -1,0 +1,9 @@
+---
+- name: Run cases tests
+  include_role:
+      name: app/cases/test/run
+
+- name: Validate cases tests result
+  debug:
+      msg: '{{ cases_test_run_result[0] }} / {{ cases_test_run_result[1] }}'
+  failed_when: cases_test_run_result[0] != cases_test_run_result[1]

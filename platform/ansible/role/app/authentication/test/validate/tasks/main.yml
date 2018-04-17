@@ -1,0 +1,9 @@
+---
+- name: Run authentication tests
+  include_role:
+      name: app/authentication/test/run
+
+- name: Validate authentication tests result
+  debug:
+      msg: '{{ authentication_test_run_result[0] }} / {{ authentication_test_run_result[1] }}'
+  failed_when: authentication_test_run_result[0] != authentication_test_run_result[1]

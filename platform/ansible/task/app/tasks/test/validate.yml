@@ -1,0 +1,6 @@
+---
+- name: Validate tasks tests
+  include_role:
+      name: app/tasks/test/validate
+  when: tasks.enabled
+  tags: [tasks]

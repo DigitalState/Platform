@@ -1,0 +1,15 @@
+---
+- name: Run cases tests
+  shell:
+      cmd: docker-compose exec -T php vendor/bin/behat
+      chdir: /srv/cases
+  register: cases_test_run_result
+  changed_when: false
+
+- name: Register cases tests result
+  set_fact:
+     cases_test_run_result: '{{ cases_test_run_result.stdout_lines[cases_test_run_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
+
+- name: Display cases tests result
+  debug:
+      msg: '{{ cases_test_run_result[0] }} / {{ cases_test_run_result[1] }}'

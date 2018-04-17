@@ -1,0 +1,6 @@
+---
+- name: Run identities tests
+  include_role:
+      name: app/identities/test/run
+  when: identities.enabled
+  tags: [identities]

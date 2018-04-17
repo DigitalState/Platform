@@ -1,0 +1,6 @@
+---
+- name: Validate records tests
+  include_role:
+      name: app/records/test/validate
+  when: records.enabled
+  tags: [records]

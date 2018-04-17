@@ -1,0 +1,18 @@
+---
+- name: Compile test list
+  hosts: platform
+  become: true
+  tasks:
+      - name: ...
+        include_tasks: /etc/ansible/task/platform/compiler/test/validate.yml
+  tags: [always]
+
+- name: Validate tests
+  hosts: server
+  become: true
+  tasks:
+      - name: Include compiled task list
+        include_tasks: '{{ file }}'
+        with_items: '{{ hostvars["platform"]["files"] }}'
+        loop_control:
+            loop_var: file

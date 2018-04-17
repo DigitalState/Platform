@@ -1,0 +1,6 @@
+---
+- name: Run cases tests
+  include_role:
+      name: app/cases/test/run
+  when: cases.enabled
+  tags: [cases]
