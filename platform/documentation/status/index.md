@@ -1,4 +1,4 @@
-# Lab
+# Continuous Integration
 
 | Platform | [![Build Status](https://travis-ci.org/DigitalState/Platform.svg?branch=develop)](https://travis-ci.org/DigitalState/Platform) | [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Platform/badge.svg?branch=develop)](https://coveralls.io/github/DigitalState/Platform?branch=develop) | [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DigitalState/Platform/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/DigitalState/Platform/?branch=develop) |
 | :-- | :-- | :-- | :-- |
@@ -34,5 +34,5 @@
 | Records | [![Build Status](https://travis-ci.org/DigitalState/Records.svg?branch=master)](https://travis-ci.org/DigitalState/Records) | [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Records/badge.svg?branch=master)](https://coveralls.io/github/DigitalState/Records?branch=master) | [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DigitalState/Records/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/DigitalState/Records/?branch=master) |
 | Services | [![Build Status](https://travis-ci.org/DigitalState/Services.svg?branch=master)](https://travis-ci.org/DigitalState/Services) | [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Services/badge.svg?branch=master)](https://coveralls.io/github/DigitalState/Services?branch=master) | [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DigitalState/Services/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/DigitalState/Services/?branch=master) |
 
-# Previous versions
+
 
