@@ -28,11 +28,11 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 ## Requirements
 
-**For Linux:** Git, Docker, Docker Compose
+**For Linux:** Git, Docker, Docker Compose.
 
-**For Windows:** Windows Pro with HyperV, Git, DockerForWindows
+**For Windows:** Windows Pro with HyperV, Git, DockerForWindows.
 
-**For Mac:** Git, DockerForMac
+**For Mac:** Git, DockerForMac.
 
 > Note: Docker toolkit is not compatible.
 
@@ -49,8 +49,6 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 - [Development](platform/documentation/env/dev/index.md) - The development environment is typically deployed to a remote server and is used as sandbox.
 - [Staging](platform/documentation/env/stag/index.md) - The staging environment is typically deployed to a remote server and is used as a pre-production mirror.
 - [Production](platform/documentation/env/prod/index.md) - The production environment is typically deployed to a remote server and is used to serve the latest release.
-
-
 
 ## Contributing
 
