@@ -35,12 +35,12 @@ all:
         admin:
             enabled: true
             repository: https://github.com/DigitalState/Admin.git
-            version: 0.5.0
+            version: develop
             host: admin.ci.test.ds
         assets:
             enabled: true
             repository: https://github.com/DigitalState/Assets.git
-            version: 0.5.0
+            version: develop
             api:
                 host: api.assets.ci.test.ds
             adminer:
@@ -54,7 +54,7 @@ all:
         authentication:
             enabled: true
             repository: https://github.com/DigitalState/Authentication.git
-            version: 0.5.0
+            version: develop
             api:
                 host: api.authentication.ci.test.ds
             adminer:
@@ -68,7 +68,7 @@ all:
         camunda:
             enabled: true
             repository: https://github.com/DigitalState/Camunda.git
-            version: 0.5.0
+            version: develop
             api:
                 host: api.camunda.ci.test.ds
             username: admin@staff.ds
@@ -76,7 +76,7 @@ all:
         cases:
             enabled: true
             repository: https://github.com/DigitalState/Cases.git
-            version: 0.5.0
+            version: develop
             api:
                 host: api.cases.ci.test.ds
             adminer:
@@ -90,7 +90,7 @@ all:
         cms:
             enabled: true
             repository: https://github.com/DigitalState/Cms.git
-            version: 0.5.0
+            version: develop
             api:
                 host: api.cms.ci.test.ds
             adminer:
@@ -104,21 +104,21 @@ all:
         core:
             enabled: false
             repository: https://github.com/DigitalState/Core.git
-            version: 0.5.0
+            version: develop
         discovery:
             enabled: true
             repository: https://github.com/DigitalState/Discovery.git
-            version: 0.5.0
+            version: develop
             api:
                 host: api.discovery.ci.test.ds
         documentation:
             enabled: false
             repository: https://github.com/DigitalState/Documentation.git
-            version: 0.5.0
+            version: develop
         formio:
             enabled: true
             repository: https://github.com/DigitalState/Formio.git
-            version: 0.5.0
+            version: develop
             api:
                 host: api.formio.ci.test.ds
             username: admin@staff.ds
@@ -126,11 +126,11 @@ all:
         guide:
             enabled: false
             repository: https://github.com/DigitalState/Guide.git
-            version: 0.5.0
+            version: develop
         identities:
             enabled: true
             repository: https://github.com/DigitalState/Identities.git
-            version: 0.5.0
+            version: develop
             api:
                 host: api.identities.ci.test.ds
             adminer:
@@ -144,7 +144,7 @@ all:
         interactions:
             enabled: false
             repository: https://github.com/DigitalState/Interactions.git
-            version: 0.1.0
+            version: develop
             api:
                 host: api.interactions.ci.test.ds
             adminer:
@@ -158,28 +158,28 @@ all:
         logs:
             enabled: false
             repository: https://github.com/DigitalState/Logs.git
-            version: 0.1.0
+            version: develop
             api:
                 host: api.logs.ci.test.ds
         monitor:
             enabled: false
             repository: https://github.com/DigitalState/Monitor.git
-            version: 0.1.0
+            version: develop
             host: monitor.ci.test.ds
         portal:
             enabled: true
             repository: https://github.com/DigitalState/Portal.git
-            version: 0.5.0
+            version: develop
             host: portal.ci.test.ds
         proxy:
             enabled: true
             repository: https://github.com/DigitalState/Proxy.git
-            version: 0.5.0
+            version: develop
             port: 80
         records:
             enabled: true
             repository: https://github.com/DigitalState/Records.git
-            version: 0.5.0
+            version: develop
             api:
                 host: api.records.ci.test.ds
             adminer:
@@ -193,7 +193,7 @@ all:
         services:
             enabled: true
             repository: https://github.com/DigitalState/Services.git
-            version: 0.5.0
+            version: develop
             api:
                 host: api.services.ci.test.ds
             adminer:
@@ -207,7 +207,7 @@ all:
         tasks:
             enabled: false
             repository: https://github.com/DigitalState/Tasks.git
-            version: 0.5.0
+            version: develop
             api:
                 host: api.tasks.ci.test.ds
             adminer:
@@ -221,7 +221,7 @@ all:
         topics:
             enabled: false
             repository: https://github.com/DigitalState/Topics.git
-            version: 0.1.0
+            version: develop
             api:
                 host: api.topics.ci.test.ds
             adminer:
@@ -235,4 +235,4 @@ all:
         ui:
             enabled: false
             repository: https://github.com/DigitalState/Ui.git
-            version: 0.5.0
+            version: develop
