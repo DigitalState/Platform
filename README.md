@@ -28,22 +28,11 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 ## Requirements
 
-**For Linux**
+**For Linux:** Git, Docker, Docker Compose
 
-- Git
-- Docker
-- Docker Compose
+**For Windows:** Windows Pro with HyperV, Git, DockerForWindows
 
-**For Windows**
-
-- Windows Pro with HyperV
-- Git
-- DockerForWindows
-
-**For Mac**
-
-- Git
-- DockerForMac
+**For Mac:** Git, DockerForMac
 
 > Note: Docker toolkit is not compatible.
 
