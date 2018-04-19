@@ -1,0 +1,2 @@
+---
+- import_playbook: /etc/ansible/playbook/proxy/container/down.yml
