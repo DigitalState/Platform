@@ -1,12 +1,14 @@
 # Lab Environment
 
-The lab environment represents the experimental branch of the DigitalState platform. It enables the developer to run the latest source code on a local machine as a dockerized application.
+The lab environment is typically deployed to your local machine and is used to further develop the platform.
+
+It represents the experimental branch of the DigitalState platform and enables the developer to run the latest source code on a local machine as a dockerized application.
 
 ## Table of Contents
 
 - [Synopsis](#synopsis)
 - [Deployment](#deployment)
-- [Explore and test microservices](#explore-and-test-microservices)
+- [Explore](#explore)
 
 ## Synopsis
 
@@ -169,18 +171,17 @@ This command downloads repositories, configures settings, builds Docker images, 
 
 > Note: Depending on the power of your machine and internet speed, this command may take a while to finish.
 
-![Overview](images/overview.png)
-
-## Explore and test microservices
+## Explore
 
 Now that the dockerized application is up and running, it is time to test it!
+
+![Overview](images/overview.png)
 
 - Portal UI: http://portal.lab.ds/ (Username: morgan@individual.ds / Password: morgan)
 - Admin UI: http://admin.lab.ds/ (admin@staff.ds / admin)
 - Formio: http://api.formio.lab.ds/ (admin@staff.ds / admin)
 - Camunda: http://api.camunda.lab.ds/camunda
 - Postman: [collection](/resource/postman/collection.json) / [environment](/resource/postman/env/lab.json)
-
 
 > The DigitalState architecture is essentially a collection of business-focused microservices, all exposing various APIs to create, read, update, and delete data or achieve certain goals.
 

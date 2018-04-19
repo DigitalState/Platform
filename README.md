@@ -32,6 +32,7 @@ It uses **Docker** and **Ansible** to help with orchestration and is the central
 
 - Git
 - Docker
+- Docker Compose
 
 **For Windows**
 
