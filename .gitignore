@@ -31,6 +31,8 @@
 !/resource/jwt/stag/.gitkeep
 !/resource/jwt/test/ci/.gitkeep
 !/resource/jwt/test/release/.gitkeep
+/resource/fixtures/*
+!/resource/fixtures/.gitkeep
 
 /platform/ansible/**/*.retry
 /platform/docker/*
