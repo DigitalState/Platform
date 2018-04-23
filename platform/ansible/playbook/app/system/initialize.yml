@@ -10,9 +10,9 @@
         ssh_host: '{{ vars["hostvars"]["server"]["ansible_host"] }}'
         ssh_username: root
       when: hostvars.server.ansible_connection is not defined
-    - name: Install ssh keys
+    - name: Establish ssh connection
       include_role:
-        name: platform/ssh
+        name: platform/ssh/connect
       when: hostvars.server.ansible_connection is not defined
   tags: [system]
 
