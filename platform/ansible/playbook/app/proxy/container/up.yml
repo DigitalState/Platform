@@ -3,6 +3,6 @@
   hosts: server
   become: true
   tasks:
-      - name: Include task
-        include_tasks: /etc/ansible/task/app/proxy/container/up.yml
+    - name: Include task
+      include_tasks: /etc/ansible/task/app/proxy/container/up.yml
   tags: [always]

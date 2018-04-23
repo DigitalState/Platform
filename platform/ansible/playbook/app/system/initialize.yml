@@ -4,16 +4,16 @@
   become: true
   gather_facts: false
   tasks:
-      - name: Define ssh variables
-        set_fact:
-            ssh_directory: '{{ env|replace(".", "/") }}'
-            ssh_host: '{{ vars["hostvars"]["server"]["ansible_host"] }}'
-            ssh_username: root
-        when: hostvars.server.ansible_connection is not defined
-      - name: Install ssh keys
-        include_role:
-            name: platform/ssh
-        when: hostvars.server.ansible_connection is not defined
+    - name: Define ssh variables
+      set_fact:
+        ssh_directory: '{{ env|replace(".", "/") }}'
+        ssh_host: '{{ vars["hostvars"]["server"]["ansible_host"] }}'
+        ssh_username: root
+      when: hostvars.server.ansible_connection is not defined
+    - name: Install ssh keys
+      include_role:
+        name: platform/ssh
+      when: hostvars.server.ansible_connection is not defined
   tags: [system]
 
 - name: Install ansible requirements
@@ -21,8 +21,8 @@
   become: true
   gather_facts: false
   tasks:
-      - name: Install python packages
-        include_role:
-            name: package/python
-        when: hostvars.server.ansible_connection is not defined
+    - name: Install python packages
+      include_role:
+        name: package/python
+      when: hostvars.server.ansible_connection is not defined
   tags: [system]
