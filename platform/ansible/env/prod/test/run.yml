@@ -1,2 +1,2 @@
 ---
-- import_playbook: /etc/ansible/playbook/test/run.yml
+- import_playbook: /etc/ansible/playbook/app/test/run.yml

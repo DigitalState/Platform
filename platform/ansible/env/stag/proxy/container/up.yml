@@ -1,2 +1,2 @@
 ---
-- import_playbook: /etc/ansible/playbook/proxy/container/up.yml
+- import_playbook: /etc/ansible/playbook/app/proxy/container/up.yml
