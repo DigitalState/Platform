@@ -1,0 +1,18 @@
+---
+- name: Backup topics fixtures directory
+  shell: 'mv /srv/topics/src/AppBundle/Resources/fixtures/{{ topics_fixtures }} /srv/topics/src/AppBundle/Resources/fixtures/_{{ topics_fixtures }}'
+
+- name: Download topics fixtures directory override
+  copy:
+    src: '{{ topics_override }}'
+    dest: '/srv/topics/src/AppBundle/Resources/fixtures/{{ topics_fixtures }}'
+
+- import_tasks: load.yml
+
+- name: Delete topics fixtures directory override
+  file:
+    path: '/srv/topics/src/AppBundle/Resources/fixtures/{{ topics_fixtures }}'
+    state: absent
+
+- name: Restore topics fixtures directory backup
+  shell: 'mv /srv/topics/src/AppBundle/Resources/fixtures/_{{ topics_fixtures }} /srv/topics/src/AppBundle/Resources/fixtures/{{ topics_fixtures }}'

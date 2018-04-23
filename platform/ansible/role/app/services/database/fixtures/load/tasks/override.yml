@@ -1,0 +1,18 @@
+---
+- name: Backup services fixtures directory
+  shell: 'mv /srv/services/src/AppBundle/Resources/fixtures/{{ services_fixtures }} /srv/services/src/AppBundle/Resources/fixtures/_{{ services_fixtures }}'
+
+- name: Download services fixtures directory override
+  copy:
+    src: '{{ services_override }}'
+    dest: '/srv/services/src/AppBundle/Resources/fixtures/{{ services_fixtures }}'
+
+- import_tasks: load.yml
+
+- name: Delete services fixtures directory override
+  file:
+    path: '/srv/services/src/AppBundle/Resources/fixtures/{{ services_fixtures }}'
+    state: absent
+
+- name: Restore services fixtures directory backup
+  shell: 'mv /srv/services/src/AppBundle/Resources/fixtures/_{{ services_fixtures }} /srv/services/src/AppBundle/Resources/fixtures/{{ services_fixtures }}'

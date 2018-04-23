@@ -24,7 +24,6 @@ all:
             port: ~
             username: mail@localhost
             password: ~
-        fixtures: dev
         user:
             system:
                 password: system

@@ -1,12 +1,8 @@
 ---
-- name: Detect custom topics fixtures directory
-  local_action: 'stat path=/root/resource/fixtures/{{ topics_fixtures }}/topics'
-  register: directory
-
-- name: Load default topics database fixtures
+- name: Load topics database fixtures
   import_tasks: default.yml
-  when: directory.stat.exists == false
+  when: topics_override == ""
 
-- name: Load custom topics database fixtures
-  import_tasks: custom.yml
-  when: directory.stat.exists == true
+- name: Load topics database fixtures override
+  import_tasks: override.yml
+  when: topics_override != ""

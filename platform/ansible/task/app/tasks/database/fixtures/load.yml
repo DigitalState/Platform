@@ -1,12 +1,19 @@
 ---
 - block:
-      - name: Define tasks database variables
-        set_fact:
-            tasks_fixtures: '{{ fixtures }}'
-      - name: Load tasks database fixtures
-        include_role:
-            name: app/tasks/database/fixtures/load
-  when:
-      - tasks.enabled
-      - fixtures is not none
+    - name: Detect tasks fixtures directory override
+      local_action: 'stat path=/root/resource/fixtures/tasks'
+      register: directory
+    - name: Define tasks database fixtures variables
+      set_fact:
+        tasks_fixtures: 'dev'
+        tasks_override: '{{ "/root/resource/fixtures/tasks" if directory.stat.exists == true else "" }}'
+    - name: Define tasks database fixtures variables
+      set_fact:
+        tasks_fixtures: 'test'
+        tasks_override: ''
+      when: env[0:4] == 'test'
+    - name: Load tasks database fixtures
+      include_role:
+        name: app/tasks/database/fixtures/load
+  when: tasks.enabled
   tags: [tasks]

@@ -1,0 +1,18 @@
+---
+- name: Backup authentication fixtures directory
+  shell: 'mv /srv/authentication/src/AppBundle/Resources/fixtures/{{ authentication_fixtures }} /srv/authentication/src/AppBundle/Resources/fixtures/_{{ authentication_fixtures }}'
+
+- name: Download authentication fixtures directory override
+  copy:
+    src: '{{ authentication_override }}'
+    dest: '/srv/authentication/src/AppBundle/Resources/fixtures/{{ authentication_fixtures }}'
+
+- import_tasks: load.yml
+
+- name: Delete authentication fixtures directory override
+  file:
+    path: '/srv/authentication/src/AppBundle/Resources/fixtures/{{ authentication_fixtures }}'
+    state: absent
+
+- name: Restore authentication fixtures directory backup
+  shell: 'mv /srv/authentication/src/AppBundle/Resources/fixtures/_{{ authentication_fixtures }} /srv/authentication/src/AppBundle/Resources/fixtures/{{ authentication_fixtures }}'

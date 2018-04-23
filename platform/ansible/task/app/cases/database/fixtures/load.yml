@@ -1,12 +1,19 @@
 ---
 - block:
-      - name: Define cases database variables
-        set_fact:
-            cases_fixtures: '{{ fixtures }}'
-      - name: Load cases database fixtures
-        include_role:
-            name: app/cases/database/fixtures/load
-  when:
-      - cases.enabled
-      - fixtures is not none
+    - name: Detect cases fixtures directory override
+      local_action: 'stat path=/root/resource/fixtures/cases'
+      register: directory
+    - name: Define cases database fixtures variables
+      set_fact:
+        cases_fixtures: 'dev'
+        cases_override: '{{ "/root/resource/fixtures/cases" if directory.stat.exists == true else "" }}'
+    - name: Define cases database fixtures variables
+      set_fact:
+        cases_fixtures: 'test'
+        cases_override: ''
+      when: env[0:4] == 'test'
+    - name: Load cases database fixtures
+      include_role:
+        name: app/cases/database/fixtures/load
+  when: cases.enabled
   tags: [cases]

@@ -1,0 +1,18 @@
+---
+- name: Backup records fixtures directory
+  shell: 'mv /srv/records/src/AppBundle/Resources/fixtures/{{ records_fixtures }} /srv/records/src/AppBundle/Resources/fixtures/_{{ records_fixtures }}'
+
+- name: Download records fixtures directory override
+  copy:
+    src: '{{ records_override }}'
+    dest: '/srv/records/src/AppBundle/Resources/fixtures/{{ records_fixtures }}'
+
+- import_tasks: load.yml
+
+- name: Delete records fixtures directory override
+  file:
+    path: '/srv/records/src/AppBundle/Resources/fixtures/{{ records_fixtures }}'
+    state: absent
+
+- name: Restore records fixtures directory backup
+  shell: 'mv /srv/records/src/AppBundle/Resources/fixtures/_{{ records_fixtures }} /srv/records/src/AppBundle/Resources/fixtures/{{ records_fixtures }}'

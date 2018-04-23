@@ -1,12 +1,19 @@
 ---
 - block:
-      - name: Define services database variables
-        set_fact:
-            services_fixtures: '{{ fixtures }}'
-      - name: Load services database fixtures
-        include_role:
-            name: app/services/database/fixtures/load
-  when:
-      - services.enabled
-      - fixtures is not none
+    - name: Detect services fixtures directory override
+      local_action: 'stat path=/root/resource/fixtures/services'
+      register: directory
+    - name: Define services database fixtures variables
+      set_fact:
+        services_fixtures: 'dev'
+        services_override: '{{ "/root/resource/fixtures/services" if directory.stat.exists == true else "" }}'
+    - name: Define services database fixtures variables
+      set_fact:
+        services_fixtures: 'test'
+        services_override: ''
+      when: env[0:4] == 'test'
+    - name: Load services database fixtures
+      include_role:
+        name: app/services/database/fixtures/load
+  when: services.enabled
   tags: [services]

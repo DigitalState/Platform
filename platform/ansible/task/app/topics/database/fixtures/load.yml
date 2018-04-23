@@ -1,12 +1,19 @@
 ---
 - block:
-      - name: Define topics database variables
-        set_fact:
-            topics_fixtures: '{{ fixtures }}'
-      - name: Load topics database fixtures
-        include_role:
-            name: app/topics/database/fixtures/load
-  when:
-      - topics.enabled
-      - fixtures is not none
+    - name: Detect topics fixtures directory override
+      local_action: 'stat path=/root/resource/fixtures/topics'
+      register: directory
+    - name: Define topics database fixtures variables
+      set_fact:
+        topics_fixtures: 'dev'
+        topics_override: '{{ "/root/resource/fixtures/topics" if directory.stat.exists == true else "" }}'
+    - name: Define topics database fixtures variables
+      set_fact:
+        topics_fixtures: 'test'
+        topics_override: ''
+      when: env[0:4] == 'test'
+    - name: Load topics database fixtures
+      include_role:
+        name: app/topics/database/fixtures/load
+  when: topics.enabled
   tags: [topics]

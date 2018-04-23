@@ -1,12 +1,8 @@
 ---
-- name: Detect custom identities fixtures directory
-  local_action: 'stat path=/root/resource/fixtures/{{ identities_fixtures }}/identities'
-  register: directory
-
-- name: Load default identities database fixtures
+- name: Load identities database fixtures
   import_tasks: default.yml
-  when: directory.stat.exists == false
+  when: identities_override == ""
 
-- name: Load custom identities database fixtures
-  import_tasks: custom.yml
-  when: directory.stat.exists == true
+- name: Load identities database fixtures override
+  import_tasks: override.yml
+  when: identities_override != ""

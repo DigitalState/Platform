@@ -1,5 +1,9 @@
 ---
 - name: Load services database fixtures
   shell:
-      cmd: 'docker-compose exec -T php php bin/console doctrine:fixtures:load --env={{ services_fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures --no-interaction | cat'
-      chdir: /srv/services
+    cmd: 'docker-compose exec -T php php bin/console doctrine:fixtures:load --env={{ services_fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures --no-interaction | cat'
+    chdir: /srv/services
+
+- name: Pause while services fixtures load
+  pause:
+    seconds: 15
