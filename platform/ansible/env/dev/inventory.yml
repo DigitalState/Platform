@@ -1,237 +1,237 @@
 all:
-    hosts:
-        platform:
-            ansible_connection: local
-        server:
-#            ansible_connection: local
-            ansible_host: ~
-            ansible_port: 22
-            ansible_ssh_private_key_file: /root/.ssh/dev/key
-    vars:
-        project: ds
-        directory: /srv
-        env: dev
-        timezone: UTC
-        encryption:
-            secret: ~
-        jwt:
-            private_key: /root/resource/jwt/dev/key
-            public_key: /root/resource/jwt/dev/key.pub
-            key_pass_phrase: ~
-        mail:
-            transport: smtp
-            host: 127.0.0.1
-            port: ~
-            username: mail@localhost
-            password: ~
-        user:
-            system:
-                password: system
-            anonymous:
-                password: anonymous
-            admin:
-                password: admin
-        admin:
-            enabled: true
-            repository: https://github.com/DigitalState/Admin.git
-            version: 0.5.0
-            host: admin.dev.ds
-        assets:
-            enabled: true
-            repository: https://github.com/DigitalState/Assets.git
-            version: 0.5.0
-            api:
-                host: api.assets.dev.ds
-            adminer:
-                host: adminer.assets.dev.ds
-            database:
-                host: assets_database
-                port: 5432
-                name: assets
-                username: assets
-                password: assets
-        authentication:
-            enabled: true
-            repository: https://github.com/DigitalState/Authentication.git
-            version: 0.5.0
-            api:
-                host: api.authentication.dev.ds
-            adminer:
-                host: adminer.authentication.dev.ds
-            database:
-                host: authentication_database
-                port: 5432
-                name: authentication
-                username: authentication
-                password: authentication
-        camunda:
-            enabled: true
-            repository: https://github.com/DigitalState/Camunda.git
-            version: 0.5.0
-            api:
-                host: api.camunda.dev.ds
-            username: admin@staff.ds
-            password: admin
-        cases:
-            enabled: true
-            repository: https://github.com/DigitalState/Cases.git
-            version: 0.5.0
-            api:
-                host: api.cases.dev.ds
-            adminer:
-                host: adminer.cases.dev.ds
-            database:
-                host: cases_database
-                port: 5432
-                name: cases
-                username: cases
-                password: cases
-        cms:
-            enabled: true
-            repository: https://github.com/DigitalState/Cms.git
-            version: 0.5.0
-            api:
-                host: api.cms.dev.ds
-            adminer:
-                host: adminer.cms.dev.ds
-            database:
-                host: cms_database
-                port: 5432
-                name: cms
-                username: cms
-                password: cms
-        core:
-            enabled: false
-            repository: https://github.com/DigitalState/Core.git
-            version: 0.5.0
-        discovery:
-            enabled: true
-            repository: https://github.com/DigitalState/Discovery.git
-            version: 0.5.0
-            api:
-                host: api.discovery.dev.ds
-        documentation:
-            enabled: false
-            repository: https://github.com/DigitalState/Documentation.git
-            version: 0.5.0
-        formio:
-            enabled: true
-            repository: https://github.com/DigitalState/Formio.git
-            version: 0.5.0
-            api:
-                host: api.formio.dev.ds
-            username: admin@staff.ds
-            password: admin
-        guide:
-            enabled: false
-            repository: https://github.com/DigitalState/Guide.git
-            version: 0.5.0
-        identities:
-            enabled: true
-            repository: https://github.com/DigitalState/Identities.git
-            version: 0.5.0
-            api:
-                host: api.identities.dev.ds
-            adminer:
-                host: adminer.identities.dev.ds
-            database:
-                host: identities_database
-                port: 5432
-                name: identities
-                username: identities
-                password: identities
-        interactions:
-            enabled: false
-            repository: https://github.com/DigitalState/Interactions.git
-            version: 0.1.0
-            api:
-                host: api.interactions.dev.ds
-            adminer:
-                host: adminer.interactions.dev.ds
-            database:
-                host: interactions_database
-                port: 5432
-                name: interactions
-                username: interactions
-                password: interactions
-        logs:
-            enabled: false
-            repository: https://github.com/DigitalState/Logs.git
-            version: 0.1.0
-            api:
-                host: api.logs.dev.ds
-        monitor:
-            enabled: false
-            repository: https://github.com/DigitalState/Monitor.git
-            version: 0.1.0
-            host: monitor.dev.ds
-        portal:
-            enabled: true
-            repository: https://github.com/DigitalState/Portal.git
-            version: 0.5.0
-            host: portal.dev.ds
-        proxy:
-            enabled: true
-            repository: https://github.com/DigitalState/Proxy.git
-            version: 0.5.0
-            port: 80
-        records:
-            enabled: true
-            repository: https://github.com/DigitalState/Records.git
-            version: 0.5.0
-            api:
-                host: api.records.dev.ds
-            adminer:
-                host: adminer.records.dev.ds
-            database:
-                host: records_database
-                port: 5432
-                name: records
-                username: records
-                password: records
-        services:
-            enabled: true
-            repository: https://github.com/DigitalState/Services.git
-            version: 0.5.0
-            api:
-                host: api.services.dev.ds
-            adminer:
-                host: adminer.services.dev.ds
-            database:
-                host: services_database
-                port: 5432
-                name: services
-                username: services
-                password: services
-        tasks:
-            enabled: false
-            repository: https://github.com/DigitalState/Tasks.git
-            version: 0.5.0
-            api:
-                host: api.tasks.dev.ds
-            adminer:
-                host: adminer.tasks.dev.ds
-            database:
-                host: tasks_database
-                port: 5432
-                name: tasks
-                username: tasks
-                password: tasks
-        topics:
-            enabled: false
-            repository: https://github.com/DigitalState/Topics.git
-            version: 0.1.0
-            api:
-                host: api.topics.dev.ds
-            adminer:
-                host: adminer.topics.dev.ds
-            database:
-                host: topics_database
-                port: 5432
-                name: topics
-                username: topics
-                password: topics
-        ui:
-            enabled: false
-            repository: https://github.com/DigitalState/Ui.git
-            version: 0.5.0
+  hosts:
+    platform:
+      ansible_connection: local
+    server:
+#      ansible_connection: local
+      ansible_host: ~
+      ansible_port: 22
+      ansible_ssh_private_key_file: /root/.ssh/dev/key
+  vars:
+    project: ds
+    directory: /srv
+    env: dev
+    timezone: UTC
+    encryption:
+      secret: ~
+    jwt:
+      private_key: /root/resource/jwt/dev/key
+      public_key: /root/resource/jwt/dev/key.pub
+      key_pass_phrase: ~
+    mail:
+      transport: smtp
+      host: 127.0.0.1
+      port: ~
+      username: mail@localhost
+      password: ~
+    user:
+      system:
+        password: system
+      anonymous:
+        password: anonymous
+      admin:
+        password: admin
+    admin:
+      enabled: true
+      repository: https://github.com/DigitalState/Admin.git
+      version: 0.5.0
+      host: admin.dev.ds
+    assets:
+      enabled: true
+      repository: https://github.com/DigitalState/Assets.git
+      version: 0.5.0
+      api:
+        host: api.assets.dev.ds
+      adminer:
+        host: adminer.assets.dev.ds
+      database:
+        host: assets_database
+        port: 5432
+        name: assets
+        username: assets
+        password: assets
+    authentication:
+      enabled: true
+      repository: https://github.com/DigitalState/Authentication.git
+      version: 0.5.0
+      api:
+        host: api.authentication.dev.ds
+      adminer:
+        host: adminer.authentication.dev.ds
+      database:
+        host: authentication_database
+        port: 5432
+        name: authentication
+        username: authentication
+        password: authentication
+    camunda:
+      enabled: true
+      repository: https://github.com/DigitalState/Camunda.git
+      version: 0.5.0
+      api:
+        host: api.camunda.dev.ds
+      username: admin@staff.ds
+      password: admin
+    cases:
+      enabled: true
+      repository: https://github.com/DigitalState/Cases.git
+      version: 0.5.0
+      api:
+        host: api.cases.dev.ds
+      adminer:
+        host: adminer.cases.dev.ds
+      database:
+        host: cases_database
+        port: 5432
+        name: cases
+        username: cases
+        password: cases
+    cms:
+      enabled: true
+      repository: https://github.com/DigitalState/Cms.git
+      version: 0.5.0
+      api:
+        host: api.cms.dev.ds
+      adminer:
+        host: adminer.cms.dev.ds
+      database:
+        host: cms_database
+        port: 5432
+        name: cms
+        username: cms
+        password: cms
+    core:
+      enabled: false
+      repository: https://github.com/DigitalState/Core.git
+      version: 0.5.0
+    discovery:
+      enabled: true
+      repository: https://github.com/DigitalState/Discovery.git
+      version: 0.5.0
+      api:
+        host: api.discovery.dev.ds
+    documentation:
+      enabled: false
+      repository: https://github.com/DigitalState/Documentation.git
+      version: 0.5.0
+    formio:
+      enabled: true
+      repository: https://github.com/DigitalState/Formio.git
+      version: 0.5.0
+      api:
+        host: api.formio.dev.ds
+      username: admin@staff.ds
+      password: admin
+    guide:
+      enabled: false
+      repository: https://github.com/DigitalState/Guide.git
+      version: 0.5.0
+    identities:
+      enabled: true
+      repository: https://github.com/DigitalState/Identities.git
+      version: 0.5.0
+      api:
+        host: api.identities.dev.ds
+      adminer:
+        host: adminer.identities.dev.ds
+      database:
+        host: identities_database
+        port: 5432
+        name: identities
+        username: identities
+        password: identities
+    interactions:
+      enabled: false
+      repository: https://github.com/DigitalState/Interactions.git
+      version: 0.1.0
+      api:
+        host: api.interactions.dev.ds
+      adminer:
+        host: adminer.interactions.dev.ds
+      database:
+        host: interactions_database
+        port: 5432
+        name: interactions
+        username: interactions
+        password: interactions
+    logs:
+      enabled: false
+      repository: https://github.com/DigitalState/Logs.git
+      version: 0.1.0
+      api:
+        host: api.logs.dev.ds
+    monitor:
+      enabled: false
+      repository: https://github.com/DigitalState/Monitor.git
+      version: 0.1.0
+      host: monitor.dev.ds
+    portal:
+      enabled: true
+      repository: https://github.com/DigitalState/Portal.git
+      version: 0.5.0
+      host: portal.dev.ds
+    proxy:
+      enabled: true
+      repository: https://github.com/DigitalState/Proxy.git
+      version: 0.5.0
+      port: 80
+    records:
+      enabled: true
+      repository: https://github.com/DigitalState/Records.git
+      version: 0.5.0
+      api:
+        host: api.records.dev.ds
+      adminer:
+        host: adminer.records.dev.ds
+      database:
+        host: records_database
+        port: 5432
+        name: records
+        username: records
+        password: records
+    services:
+      enabled: true
+      repository: https://github.com/DigitalState/Services.git
+      version: 0.5.0
+      api:
+        host: api.services.dev.ds
+      adminer:
+        host: adminer.services.dev.ds
+      database:
+        host: services_database
+        port: 5432
+        name: services
+        username: services
+        password: services
+    tasks:
+      enabled: false
+      repository: https://github.com/DigitalState/Tasks.git
+      version: 0.5.0
+      api:
+        host: api.tasks.dev.ds
+      adminer:
+        host: adminer.tasks.dev.ds
+      database:
+        host: tasks_database
+        port: 5432
+        name: tasks
+        username: tasks
+        password: tasks
+    topics:
+      enabled: false
+      repository: https://github.com/DigitalState/Topics.git
+      version: 0.1.0
+      api:
+        host: api.topics.dev.ds
+      adminer:
+        host: adminer.topics.dev.ds
+      database:
+        host: topics_database
+        port: 5432
+        name: topics
+        username: topics
+        password: topics
+    ui:
+      enabled: false
+      repository: https://github.com/DigitalState/Ui.git
+      version: 0.5.0
