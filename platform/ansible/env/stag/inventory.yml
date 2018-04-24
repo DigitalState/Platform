@@ -15,9 +15,7 @@ all:
     encryption:
       secret: ~
     jwt:
-      private_key: /root/resource/jwt/stag/key
-      public_key: /root/resource/jwt/stag/key.pub
-      key_pass_phrase: ~
+      pass_phrase: ~
     mail:
       transport: smtp
       host: 127.0.0.1

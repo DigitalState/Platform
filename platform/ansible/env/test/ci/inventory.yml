@@ -15,9 +15,7 @@ all:
     encryption:
       secret: 11111111111111111111111111111111
     jwt:
-      private_key: /root/resource/jwt/test/ci/key
-      public_key: /root/resource/jwt/test/ci/key.pub
-      key_pass_phrase: 1111
+      pass_phrase: 1111
     mail:
       transport: smtp
       host: 127.0.0.1

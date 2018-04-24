@@ -13,8 +13,8 @@
   tasks:
     - name: Define jwt variables
       set_fact:
-        jwt_private_key: '{{ jwt.private_key }}'
-        jwt_public_key: '{{ jwt.public_key }}'
+        jwt_private_key: '/root/resource/jwt/{{ env|replace(".", "/") }}/key'
+        jwt_public_key: '/root/resource/jwt/{{ env|replace(".", "/") }}/key.pub'
 
     - name: Include compiled list
       include_tasks: '{{ file }}'
