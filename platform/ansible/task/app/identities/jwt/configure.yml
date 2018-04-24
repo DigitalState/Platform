@@ -1,7 +1,7 @@
 ---
 - name: Define identities jwt variables
   set_fact:
-      identities_jwt_key_pass_phrase: '{{ jwt.key_pass_phrase }}'
+      identities_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
 
 - name: Configure identities jwt key pass phrase
   include_role:

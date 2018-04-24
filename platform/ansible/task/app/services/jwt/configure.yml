@@ -1,7 +1,7 @@
 ---
 - name: Define services jwt variables
   set_fact:
-      services_jwt_key_pass_phrase: '{{ jwt.key_pass_phrase }}'
+      services_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
 
 - name: Configure services jwt key pass phrase
   include_role:

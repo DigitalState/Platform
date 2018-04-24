@@ -1,7 +1,7 @@
 ---
 - name: Define cases jwt variables
   set_fact:
-      cases_jwt_key_pass_phrase: '{{ jwt.key_pass_phrase }}'
+      cases_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
 
 - name: Configure cases jwt key pass phrase
   include_role:

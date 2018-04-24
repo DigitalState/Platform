@@ -1,7 +1,7 @@
 ---
 - name: Define cms jwt variables
   set_fact:
-      cms_jwt_key_pass_phrase: '{{ jwt.key_pass_phrase }}'
+      cms_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
 
 - name: Configure cms jwt key pass phrase
   include_role:

@@ -1,7 +1,7 @@
 ---
 - name: Define assets jwt variables
   set_fact:
-      assets_jwt_key_pass_phrase: '{{ jwt.key_pass_phrase }}'
+      assets_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
 
 - name: Configure assets jwt key pass phrase
   include_role:
