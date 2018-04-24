@@ -1,0 +1,2 @@
+---
+- import_playbook: /etc/ansible/playbook/platform/ssh/key/create.yml

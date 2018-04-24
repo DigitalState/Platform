@@ -1,0 +1,13 @@
+---
+- name: Create ssh private and public keys
+  hosts: platform
+  become: true
+  tasks:
+    - name: Check if the ssh private key exists
+      stat:
+        path: '/root/ssh/{{ env|replace(".", "/") }}/key'
+      register: _private
+    - name: Create ssh private key
+      shell:
+        cmd: 'ssh-keygen -t rsa -N "" -f /root/ssh/{{ env|replace(".", "/") }}/key'
+      when: _private.stat.exists == false

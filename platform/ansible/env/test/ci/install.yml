@@ -1,4 +1,5 @@
 ---
+- import_playbook: platform/ssh/key/create.yml
 - import_playbook: platform/jwt/key/create.yml
 - import_playbook: app/system/initialize.yml
 - import_playbook: app/system/setup.yml
