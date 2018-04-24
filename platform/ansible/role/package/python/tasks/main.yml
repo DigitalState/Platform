@@ -1,11 +1,11 @@
 ---
 - name: Detect remote OS
   raw: uname -a
-  register: os
+  register: _os
   changed_when: false
 
 - import_tasks: ubuntu.yml
-  when: os.stdout.find('Ubuntu')
+  when: _os.stdout.find('Ubuntu')
 
 - name: Gather facts
   setup:

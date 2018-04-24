@@ -2,11 +2,11 @@
 - block:
     - name: Detect assets fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/assets'
-      register: directory
+      register: _directory
     - name: Define assets database fixtures variables
       set_fact:
         assets_fixtures: 'dev'
-        assets_override: '{{ "/root/resource/fixtures/assets" if directory.stat.exists == true else "" }}'
+        assets_override: '{{ "/root/resource/fixtures/assets" if _directory.stat.exists == true else "" }}'
     - name: Define assets database fixtures variables
       set_fact:
         assets_fixtures: 'test'

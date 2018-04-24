@@ -22,11 +22,11 @@
             tasks_database_password: '{{ tasks.database.password }}'
       - name: Detect docker credential file
         local_action: 'stat path=/root/docker/credential'
-        register: docker_credential
+        register: _docker_credential
       - name: Define tasks container variables
         set_fact:
             tasks_credential: '{{ lookup("file", "/root/docker/credential") }}'
-        when: docker_credential.stat.exists == true
+        when: _docker_credential.stat.exists == true
       - name: Up tasks container
         include_role:
             name: app/tasks/container/up

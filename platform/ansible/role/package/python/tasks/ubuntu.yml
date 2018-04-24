@@ -1,11 +1,11 @@
 ---
 - name: Install python
   raw: bash -c 'test -e /usr/bin/python || (apt -qqy update && apt install -qqy python-minimal)'
-  register: output
-  changed_when: output.stdout != ''
+  register: _output
+  changed_when: _output.stdout != ''
 
 - name: Install pip
   raw: bash -c 'test -e /usr/bin/pip || (apt -qqy update && apt install -qqy python-pip)'
-  register: output
-  changed_when: output.stdout != ''
+  register: _output
+  changed_when: _output.stdout != ''
 

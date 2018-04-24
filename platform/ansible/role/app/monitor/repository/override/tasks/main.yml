@@ -1,10 +1,10 @@
 ---
 - name: Detect monitor repository override directory
   local_action: 'stat path={{ monitor_repository_override }}'
-  register: repository_override
+  register: _repository_override
 
 - name: Download monitor repository override directory
   copy:
       src: '{{ monitor_repository_override }}/'
       dest: /srv/monitor
-  when: repository_override.stat.exists == true
+  when: _repository_override.stat.exists == true

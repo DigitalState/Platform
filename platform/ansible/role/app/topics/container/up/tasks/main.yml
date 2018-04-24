@@ -97,7 +97,7 @@
   shell:
       cmd: docker-compose exec -T php pidof php-fpm | cat
       chdir: /srv/topics
-  register: output
-  until: output.stdout|match('^[0-9]+(\s[0-9]+)*$')
+  register: _output
+  until: _output.stdout|match('^[0-9]+(\s[0-9]+)*$')
   retries: 60
   delay: 10

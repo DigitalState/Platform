@@ -1,10 +1,10 @@
 ---
 - name: Detect admin repository override directory
   local_action: 'stat path={{ admin_repository_override }}'
-  register: repository_override
+  register: _repository_override
 
 - name: Download admin repository override directory
   copy:
       src: '{{ admin_repository_override }}/'
       dest: /srv/admin
-  when: repository_override.stat.exists == true
+  when: _repository_override.stat.exists == true

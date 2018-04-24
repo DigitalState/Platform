@@ -2,11 +2,11 @@
 - block:
     - name: Detect services fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/services'
-      register: directory
+      register: _directory
     - name: Define services database fixtures variables
       set_fact:
         services_fixtures: 'dev'
-        services_override: '{{ "/root/resource/fixtures/services" if directory.stat.exists == true else "" }}'
+        services_override: '{{ "/root/resource/fixtures/services" if _directory.stat.exists == true else "" }}'
     - name: Define services database fixtures variables
       set_fact:
         services_fixtures: 'test'

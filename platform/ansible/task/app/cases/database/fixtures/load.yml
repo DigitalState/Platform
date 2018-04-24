@@ -2,11 +2,11 @@
 - block:
     - name: Detect cases fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/cases'
-      register: directory
+      register: _directory
     - name: Define cases database fixtures variables
       set_fact:
         cases_fixtures: 'dev'
-        cases_override: '{{ "/root/resource/fixtures/cases" if directory.stat.exists == true else "" }}'
+        cases_override: '{{ "/root/resource/fixtures/cases" if _directory.stat.exists == true else "" }}'
     - name: Define cases database fixtures variables
       set_fact:
         cases_fixtures: 'test'

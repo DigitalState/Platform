@@ -2,11 +2,11 @@
 - block:
     - name: Detect tasks fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/tasks'
-      register: directory
+      register: _directory
     - name: Define tasks database fixtures variables
       set_fact:
         tasks_fixtures: 'dev'
-        tasks_override: '{{ "/root/resource/fixtures/tasks" if directory.stat.exists == true else "" }}'
+        tasks_override: '{{ "/root/resource/fixtures/tasks" if _directory.stat.exists == true else "" }}'
     - name: Define tasks database fixtures variables
       set_fact:
         tasks_fixtures: 'test'

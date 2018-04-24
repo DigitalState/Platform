@@ -2,11 +2,11 @@
 - block:
     - name: Detect interactions fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/interactions'
-      register: directory
+      register: _directory
     - name: Define interactions database fixtures variables
       set_fact:
         interactions_fixtures: 'dev'
-        interactions_override: '{{ "/root/resource/fixtures/interactions" if directory.stat.exists == true else "" }}'
+        interactions_override: '{{ "/root/resource/fixtures/interactions" if _directory.stat.exists == true else "" }}'
     - name: Define interactions database fixtures variables
       set_fact:
         interactions_fixtures: 'test'

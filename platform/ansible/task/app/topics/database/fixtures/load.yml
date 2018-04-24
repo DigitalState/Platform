@@ -2,11 +2,11 @@
 - block:
     - name: Detect topics fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/topics'
-      register: directory
+      register: _directory
     - name: Define topics database fixtures variables
       set_fact:
         topics_fixtures: 'dev'
-        topics_override: '{{ "/root/resource/fixtures/topics" if directory.stat.exists == true else "" }}'
+        topics_override: '{{ "/root/resource/fixtures/topics" if _directory.stat.exists == true else "" }}'
     - name: Define topics database fixtures variables
       set_fact:
         topics_fixtures: 'test'

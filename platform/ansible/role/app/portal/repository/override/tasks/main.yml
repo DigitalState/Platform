@@ -1,10 +1,10 @@
 ---
 - name: Detect portal repository override directory
   local_action: 'stat path={{ portal_repository_override }}'
-  register: repository_override
+  register: _repository_override
 
 - name: Download portal repository override directory
   copy:
       src: '{{ portal_repository_override }}/'
       dest: /srv/portal
-  when: repository_override.stat.exists == true
+  when: _repository_override.stat.exists == true

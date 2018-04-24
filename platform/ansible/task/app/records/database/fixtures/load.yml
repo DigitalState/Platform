@@ -2,11 +2,11 @@
 - block:
     - name: Detect records fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/records'
-      register: directory
+      register: _directory
     - name: Define records database fixtures variables
       set_fact:
         records_fixtures: 'dev'
-        records_override: '{{ "/root/resource/fixtures/records" if directory.stat.exists == true else "" }}'
+        records_override: '{{ "/root/resource/fixtures/records" if _directory.stat.exists == true else "" }}'
     - name: Define records database fixtures variables
       set_fact:
         records_fixtures: 'test'

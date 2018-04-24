@@ -2,11 +2,11 @@
 - block:
     - name: Detect identities fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/identities'
-      register: directory
+      register: _directory
     - name: Define identities database fixtures variables
       set_fact:
         identities_fixtures: 'dev'
-        identities_override: '{{ "/root/resource/fixtures/identities" if directory.stat.exists == true else "" }}'
+        identities_override: '{{ "/root/resource/fixtures/identities" if _directory.stat.exists == true else "" }}'
     - name: Define identities database fixtures variables
       set_fact:
         identities_fixtures: 'test'

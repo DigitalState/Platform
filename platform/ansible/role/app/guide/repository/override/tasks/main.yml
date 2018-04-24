@@ -1,10 +1,10 @@
 ---
 - name: Detect guide repository override directory
   local_action: 'stat path={{ guide_repository_override }}'
-  register: repository_override
+  register: _repository_override
 
 - name: Download guide repository override directory
   copy:
       src: '{{ guide_repository_override }}/'
       dest: /srv/guide
-  when: repository_override.stat.exists == true
+  when: _repository_override.stat.exists == true

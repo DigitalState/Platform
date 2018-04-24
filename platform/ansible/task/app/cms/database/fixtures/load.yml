@@ -2,11 +2,11 @@
 - block:
     - name: Detect cms fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/cms'
-      register: directory
+      register: _directory
     - name: Define cms database fixtures variables
       set_fact:
         cms_fixtures: 'dev'
-        cms_override: '{{ "/root/resource/fixtures/cms" if directory.stat.exists == true else "" }}'
+        cms_override: '{{ "/root/resource/fixtures/cms" if _directory.stat.exists == true else "" }}'
     - name: Define cms database fixtures variables
       set_fact:
         cms_fixtures: 'test'

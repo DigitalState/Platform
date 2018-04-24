@@ -1,10 +1,10 @@
 ---
 - name: Detect discovery repository override directory
   local_action: 'stat path={{ discovery_repository_override }}'
-  register: repository_override
+  register: _repository_override
 
 - name: Download discovery repository override directory
   copy:
       src: '{{ discovery_repository_override }}/'
       dest: /srv/discovery
-  when: repository_override.stat.exists == true
+  when: _repository_override.stat.exists == true
