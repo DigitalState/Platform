@@ -15,7 +15,7 @@
       stat:
         path: '/root/resource/jwt/{{ env|replace(".", "/") }}/key.pub'
       register: _public
-    - name: Create jwt private key
+    - name: Create jwt public key
       shell:
         cmd: 'openssl rsa -pubout -in /root/resource/jwt/{{ env|replace(".", "/") }}/key -out /root/resource/jwt/{{ env|replace(".", "/") }}/key.pub -passin pass:{{ jwt.pass_phrase }}'
       when: _public.stat.exists == false
