@@ -3,9 +3,19 @@
   hosts: platform
   become: true
   tasks:
+    - name: Check if the jwt private key exists
+      stat:
+        path: '/root/resource/jwt/{{ env|replace(".", "/") }}/key'
+      register: _private
     - name: Create jwt private key
       shell:
         cmd: 'openssl genrsa -out /root/resource/jwt/{{ env|replace(".", "/") }}/key -aes256 -passout pass:{{ jwt.pass_phrase }} 4096'
+      when: _private.stat.exists == false
+    - name: Check if the jwt public key exists
+      stat:
+        path: '/root/resource/jwt/{{ env|replace(".", "/") }}/key.pub'
+      register: _public
     - name: Create jwt private key
       shell:
         cmd: 'openssl rsa -pubout -in /root/resource/jwt/{{ env|replace(".", "/") }}/key -out /root/resource/jwt/{{ env|replace(".", "/") }}/key.pub -passin pass:{{ jwt.pass_phrase }}'
+      when: _public.stat.exists == false
