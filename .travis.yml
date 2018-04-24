@@ -6,4 +6,4 @@ services:
 script:
   - docker-compose up -d
   - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test/ci && ansible-playbook ./install.yml"
-  - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test/ci && ansible-playbook ./test/validate.yml"
+  - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test/ci && ansible-playbook ./app/test/validate.yml"
