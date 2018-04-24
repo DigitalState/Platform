@@ -16,10 +16,9 @@ It represents the experimental branch of the DigitalState platform and enables t
 2. **[Download the platform repository.](#2-download-the-platform-repository)**
 3. **[Boot the platform container.](#3-boot-the-platform-container)**
 4. **[Enter the platform container console.](#4-enter-the-platform-container-console)**
-5. **[Generate JWT keys for the authentication system.](#5-generate-jwt-keys-for-the-authentication-system)**
-6. **[Configure the Ansible environment.](#6-configure-the-ansible-environment)**
-7. **[Add DNS entries to your host file.](#7-add-dns-entries-to-your-host-file)**
-8. **[Run the install command with Ansible.](#8-run-the-install-command-with-ansible)**
+5. **[Configure the Ansible environment.](#6-configure-the-ansible-environment)**
+6. **[Add DNS entries to your host file.](#7-add-dns-entries-to-your-host-file)**
+7. **[Run the install command with Ansible.](#8-run-the-install-command-with-ansible)**
 
 ## Deployment
 
@@ -76,29 +75,9 @@ Point to the lab environment directory:
 $ cd /etc/ansible/env/lab
 ```
 
-At this point, you have the platform container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands. 
+At this point, you have the platform container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands.
 
-### 5. Generate JWT keys for the authentication system
-
-> The DigitalState architecture uses [jwt](https://jwt.io/introduction/) tokens for user authentication. 
-> The authentication system requires a private and public key to generate and validate tokens. 
-> Jwt keys should be unique to each projects and are not included in this repository for security reasons. 
-
-Run the following command to generate a jwt private key:
-
-```
-$ openssl genrsa -out /root/resource/jwt/lab/key -aes256 4096
-```
-
-> Note: The command above will prompt you for a key pass phrase, take note of it for later.
-
-Run the following command to generate a jwt public key:
-
-```
-$ openssl rsa -pubout -in /root/resource/jwt/lab/key -out /root/resource/jwt/lab/key.pub
-```
-
-### 6. Configure the Ansible environment
+### 5. Configure the Ansible environment
 
 Configure the Ansible lab environment:
 
@@ -122,7 +101,7 @@ Under Docker for Mac, the value should simply be equal to the normal directory p
 
 Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path. For example, if you have put the platform repository at `/home/demo/platform`, then the directory config value should be `/home/demo/platform/app`.
 
-### 7. Add DNS entries to your host file
+### 6. Add DNS entries to your host file
 
 Add DNS entries to your host file:
 
@@ -159,7 +138,7 @@ Add the following entries:
 127.0.0.1 api.records.lab.ds
 ```
 
-### 8. Run the install command with Ansible
+### 7. Run the install command with Ansible
 
 Install the dockerized application locally with the Ansible install command:
 
