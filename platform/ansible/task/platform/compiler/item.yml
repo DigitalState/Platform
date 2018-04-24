@@ -5,5 +5,5 @@
 
 - name: ...
   set_fact:
-      files: '{{ files }} + [ "{{ _result.stat.path }}" ]'
+      _files: '{{ _files }} + [ "{{ _result.stat.path }}" ]'
   when: _result.stat.exists == true
