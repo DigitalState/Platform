@@ -9,10 +9,10 @@
 
 - name: ...
   set_fact:
-      items: []
+      _items: []
 
 - name: ...
   set_fact:
-      items: '{{ items }} + [ "{{ item.path|dirname }}" ]'
+      _items: '{{ _items }} + [ "{{ item.path|dirname }}" ]'
   with_items: '{{ _result.files }}'
   no_log: true

@@ -6,14 +6,14 @@
 
 - name: ...
   set_fact:
-      files: []
+      _files: []
 
 - name: ...
   include_tasks: /etc/ansible/task/platform/compiler/item.yml
   vars:
       tag: jwt
       task: configure
-  with_items: '{{ items }}'
+  with_items: '{{ _items }}'
   when: vars[item|basename].enabled
 
 - name: Completed

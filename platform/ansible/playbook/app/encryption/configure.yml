@@ -13,6 +13,6 @@
   tasks:
     - name: Include compiled list
       include_tasks: '{{ file }}'
-      with_items: '{{ hostvars["platform"]["files"] }}'
+      with_items: '{{ hostvars["platform"]["_files"] }}'
       loop_control:
         loop_var: file
