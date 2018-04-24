@@ -23,7 +23,7 @@
 - name: Install docker compose
   when: _docker_compose.stat.exists == false
   get_url:
-      url: 'https://github.com/docker/compose/releases/download/{{ _docker_compose_version }}/docker-compose-{{ _docker_compose_package }}'
+      url: 'https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-{{ docker_compose_package }}'
       dest: /usr/local/bin/docker-compose
       mode: u+x,g+x
 
@@ -36,4 +36,4 @@
 - name: Install pip docker-compose package
   pip:
       name: docker-compose
-      version: '{{ _docker_compose_version }}'
+      version: '{{ docker_compose_version }}'
