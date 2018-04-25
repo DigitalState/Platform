@@ -32,7 +32,7 @@ This is the central repository and starting point for developers.
 - **Docker**
 - **Docker Compose**
 
-If you are on _Windows_, **Windows Pro** with **HyperV** and **DockerForWindows** is required.
+If you are on _Windows_, **Windows Pro** with **HyperV** and **DockerForWindows** are required.
 
 If you are on _Mac_, **DockerForMac** is required.
 
