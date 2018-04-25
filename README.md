@@ -32,9 +32,9 @@ This is the central repository and starting point for developers.
 - Docker
 - Docker Compose
 
-If you are on __Windows__, **Windows Pro** with **HyperV** and **DockerForWindows** is required.
+If you are on _Windows_, **Windows Pro** with **HyperV** and **DockerForWindows** is required.
 
-If you are on __Mac__, **DockerForMac** is required.
+If you are on _Mac_, **DockerForMac** is required.
 
 Docker toolkit is not compatible.
 
