@@ -28,9 +28,9 @@ This is the central repository and starting point for developers.
 
 ## Requirements
 
-- Git
-- Docker
-- Docker Compose
+- **Git**
+- **Docker**
+- **Docker Compose**
 
 If you are on _Windows_, **Windows Pro** with **HyperV** and **DockerForWindows** is required.
 
