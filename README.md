@@ -24,17 +24,19 @@ This is the central repository and starting point for developers.
 1. **Install** Docker on your local machine.
 2. **Download** the Platform repository.
 3. **Boot** the Platform container.
-4. **Execute** pre-built Ansible playbooks.
+4. **Execute** Ansible playbooks to deploy instances.
 
 ## Requirements
 
-Git, Docker, Docker Compose.
+- Git
+- Docker
+- Docker Compose.
 
-> If you are on Windows, Windows Pro with HyperV and DockerForWindows is required.
+If you are on Windows, Windows Pro with HyperV and DockerForWindows is required.
 
-> If you are on Mac, DockerForMac is required.
+If you are on Mac, DockerForMac is required.
 
-> Docker toolkit is not compatible, regardless of operating system.
+> Docker toolkit is not compatible.
 
 ## Documentation
 
