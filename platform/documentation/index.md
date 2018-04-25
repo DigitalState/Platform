@@ -1,7 +1,9 @@
 # Documentation
 
 - [Status](platform/documentation/status/index.md)
+
 - [Environments](platform/documentation/env/index.md)
+
   - [Lab](platform/documentation/env/lab/index.md)
 
     The lab environment is typically deployed to your local machine and is used to further develop the platform.
