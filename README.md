@@ -42,7 +42,7 @@ Docker toolkit is not compatible.
 
 - [User Guide](https://github.com/DigitalState/Guide)
 - [Developer Documentation](https://github.com/DigitalState/Documentation)
-- [Platform Orchestration](https://github.com/DigitalState/Platform/blob/develop/platform/documentation/index.md)
+- [Platform Documentation](https://github.com/DigitalState/Platform/blob/develop/platform/documentation/index.md)
 
 ## Contributing
 
