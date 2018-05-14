@@ -4,7 +4,7 @@
       shell: 'mv /srv/assets/src/AppBundle/Resources/fixtures/{{ assets_fixtures }} /srv/assets/src/AppBundle/Resources/fixtures/_{{ assets_fixtures }}'
     - name: Download assets fixtures directory override
       copy:
-        src: '{{ assets_override }}'
+        src: '{{ assets_override }}/'
         dest: '/srv/assets/src/AppBundle/Resources/fixtures/{{ assets_fixtures }}'
     - import_tasks: load.yml
     - name: Delete assets fixtures directory override

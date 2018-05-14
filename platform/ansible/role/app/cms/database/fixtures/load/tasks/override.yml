@@ -4,7 +4,7 @@
       shell: 'mv /srv/cms/src/AppBundle/Resources/fixtures/{{ cms_fixtures }} /srv/cms/src/AppBundle/Resources/fixtures/_{{ cms_fixtures }}'
     - name: Download cms fixtures directory override
       copy:
-        src: '{{ cms_override }}'
+        src: '{{ cms_override }}/'
         dest: '/srv/cms/src/AppBundle/Resources/fixtures/{{ cms_fixtures }}'
     - import_tasks: load.yml
     - name: Delete cms fixtures directory override

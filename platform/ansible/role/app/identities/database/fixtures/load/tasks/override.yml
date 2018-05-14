@@ -4,7 +4,7 @@
       shell: 'mv /srv/identities/src/AppBundle/Resources/fixtures/{{ identities_fixtures }} /srv/identities/src/AppBundle/Resources/fixtures/_{{ identities_fixtures }}'
     - name: Download identities fixtures directory override
       copy:
-        src: '{{ identities_override }}'
+        src: '{{ identities_override }}/'
         dest: '/srv/identities/src/AppBundle/Resources/fixtures/{{ identities_fixtures }}'
     - import_tasks: load.yml
     - name: Delete identities fixtures directory override

@@ -4,7 +4,7 @@
       shell: 'mv /srv/topics/src/AppBundle/Resources/fixtures/{{ topics_fixtures }} /srv/topics/src/AppBundle/Resources/fixtures/_{{ topics_fixtures }}'
     - name: Download topics fixtures directory override
       copy:
-        src: '{{ topics_override }}'
+        src: '{{ topics_override }}/'
         dest: '/srv/topics/src/AppBundle/Resources/fixtures/{{ topics_fixtures }}'
     - import_tasks: load.yml
     - name: Delete topics fixtures directory override
