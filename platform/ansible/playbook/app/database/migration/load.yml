@@ -60,9 +60,9 @@
               app.bpm.variables.start_data:
                 value: start_data
               app.spa.admin:
-                value: 'http://{{ admin.host }}'
+                value: 'http://{{ app.admin.host }}'
               app.spa.portal:
-                value: 'http://{{ portal.host }}'
+                value: 'http://{{ app.portal.host }}'
       tags: [always]
 
 - name: Load database migration
