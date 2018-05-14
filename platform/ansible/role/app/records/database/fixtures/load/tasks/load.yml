@@ -2,7 +2,7 @@
 - block:
     - name: Load records database fixtures
       shell:
-        cmd: 'docker-compose exec -T php php bin/console doctrine:fixtures:load --env={{ records_fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures --no-interaction | cat'
+        cmd: 'docker-compose exec -T php php bin/console doctrine:fixtures:load --env={{ records_fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures --no-interaction'
         chdir: /srv/records
     - name: Pause while records fixtures load
       pause:
