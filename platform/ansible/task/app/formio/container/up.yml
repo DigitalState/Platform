@@ -8,7 +8,7 @@
       when: env == 'lab'
     - name: Define formio container variables
       set_fact:
-        formio_compose_project_name: '{{ project }}_formio'
+        formio_compose_project_name: '{{ project }}formio'
         formio_network: '{{ project }}proxy_default'
         formio_proxy_host: '{{ proxy_container_info_ip.stdout }}'
         formio_virtual_host: '{{ app.formio.api.host }}'

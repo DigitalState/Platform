@@ -8,7 +8,7 @@
       when: env == 'lab'
     - name: Define camunda container variables
       set_fact:
-        camunda_compose_project_name: '{{ project }}_camunda'
+        camunda_compose_project_name: '{{ project }}camunda'
         camunda_network: '{{ project }}proxy_default'
         camunda_proxy_host: '{{ proxy_container_info_ip.stdout }}'
         camunda_virtual_host: '{{ app.camunda.api.host }}'
