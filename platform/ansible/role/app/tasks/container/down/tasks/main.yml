@@ -1,8 +1,10 @@
 ---
-- name: Down tasks container
-  docker_service:
-      project_src: /srv/tasks
-      files:
+- block:
+    - name: Down tasks container
+      docker_service:
+        project_src: /srv/tasks
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: absent
+        state: absent
+  tags: [tasks]

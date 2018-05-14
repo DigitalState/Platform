@@ -1,6 +1,7 @@
 ---
-- name: Download portal repository override directory
-  include_role:
-      name: app/portal/repository/override
-  when: portal.enabled
+- block:
+    - name: Download portal repository override directory
+      include_role:
+        name: app/portal/repository/override
+  when: app.portal.enabled
   tags: [portal]

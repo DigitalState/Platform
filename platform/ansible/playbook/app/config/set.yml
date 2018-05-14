@@ -1,10 +1,14 @@
 ---
-- name: Compile config list
+- name: Compile config/set task list
   hosts: platform
   become: true
   tasks:
-    - name: ...
-      include_tasks: /etc/ansible/task/platform/compiler/config/set.yml
+    - name: Compile files
+      compile:
+        app: '{{ app }}'
+        directory: /etc/ansible/task/app/*
+        task: config/set
+      register: _result
   tags: [always]
 
 - name: Set configs
@@ -12,7 +16,7 @@
   become: true
   tasks:
     - name: Include compiled task list
-      include_tasks: '{{ file }}'
-      with_items: '{{ hostvars["platform"]["_files"] }}'
+      include_tasks: '{{ _file }}'
+      with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
       loop_control:
-        loop_var: file
+        loop_var: _file

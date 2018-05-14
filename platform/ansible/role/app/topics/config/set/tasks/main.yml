@@ -1,6 +1,8 @@
 ---
-- name: Set topics config
-  shell:
-      cmd: 'docker-compose exec -T php php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
-      chdir: /srv/topics
-  with_dict: '{{ topics_config }}'
+- block:
+    - name: Set topics config
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+        chdir: /srv/topics
+      with_dict: '{{ topics_config }}'
+  tags: [topics]

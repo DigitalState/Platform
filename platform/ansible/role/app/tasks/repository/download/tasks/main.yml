@@ -1,7 +1,9 @@
 ---
-- name: Download tasks repository
-  git:
-      repo: '{{ tasks_repository if tasks_credential is none else tasks_repository|replace("//", "//"+tasks_credential+"@") }}'
-      version: '{{ tasks_version }}'
-      dest: /srv/tasks
-      force: yes
+- block:
+    - name: Download tasks repository
+      git:
+        repo: '{{ tasks_repository if tasks_credential is none else tasks_repository|replace("//", "//"+tasks_credential+"@") }}'
+        version: '{{ tasks_version }}'
+        dest: /srv/tasks
+        force: yes
+  tags: [tasks]

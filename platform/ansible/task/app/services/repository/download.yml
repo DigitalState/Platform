@@ -1,11 +1,11 @@
 ---
 - block:
-      - name: Define services repository variables
-        set_fact:
-            services_repository: '{{ services.repository }}'
-            services_version: '{{ services.version }}'
-      - name: Download services repository
-        include_role:
-          name: app/services/repository/download
-  when: services.enabled
+    - name: Define services repository variables
+      set_fact:
+        services_repository: '{{ app.services.repository }}'
+        services_version: '{{ app.services.version }}'
+    - name: Download services repository
+      include_role:
+        name: app/services/repository/download
+  when: app.services.enabled
   tags: [services]

@@ -15,5 +15,5 @@
     - name: Load authentication database fixtures
       include_role:
         name: app/authentication/database/fixtures/load
-  when: authentication.enabled
+  when: app.authentication.enabled
   tags: [authentication]

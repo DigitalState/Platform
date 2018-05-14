@@ -1,25 +1,24 @@
 ---
-- name: Compile discovery list
+- name: Compile discovery/configure task list
   hosts: platform
   become: true
   tasks:
-    - name: ...
-      include_tasks: /etc/ansible/task/platform/compiler/discovery/configure.yml
+    - name: Compile files
+      compile:
+        app: '{{ app }}'
+        directory: /etc/ansible/task/app/*
+        task: discovery/configure
+      register: _result
   tags: [always]
 
 - name: Configure discovery settings
   hosts: server
   become: true
   tasks:
-    - name: Include compiled list
-      include_tasks: '{{ file }}'
-      with_items: '{{ hostvars["platform"]["_files"] }}'
+    - name: Include compiled task list
+      include_tasks: '{{ _file }}'
+      with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
       loop_control:
-        loop_var: file
-
-- name: Configure discovery settings
-  hosts: server
-  become: true
-  tasks:
+        loop_var: _file
     - name: Configure discovery domain mapping
       include_tasks: /etc/ansible/task/app/discovery/map/configure.yml

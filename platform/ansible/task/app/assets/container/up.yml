@@ -1,27 +1,28 @@
 ---
 - block:
-      - name: Gather information for assets container
-        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-      - name: Define assets container variables
-        set_fact:
-            assets_env_file: .env.lab
-        when: env == 'lab'
-      - name: Define assets container variables
-        set_fact:
-            assets_compose_project_name: '{{ project }}assets'
-            assets_network: '{{ project }}proxy_default'
-            assets_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-            assets_nginx_virtual_host: '{{ assets.api.host }}'
-            assets_adminer_virtual_host: '{{ assets.adminer.host }}'
-            assets_discovery_host: '{{ discovery.api.host }}'
-            assets_directory: '{{ directory }}/assets'
-            assets_database_host: '{{ assets.database.host }}'
-            assets_database_port: '{{ assets.database.port }}'
-            assets_database_name: '{{ assets.database.name }}'
-            assets_database_username: '{{ assets.database.username }}'
-            assets_database_password: '{{ assets.database.password }}'
-      - name: Up assets container
-        include_role:
-            name: app/assets/container/up
-  when: assets.enabled
+    - name: Gather information for assets container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Define assets container variables
+      set_fact:
+        assets_env_file: .env.lab
+      when: env == 'lab'
+    - name: Define assets container variables
+      set_fact:
+        assets_compose_project_name: '{{ project }}assets'
+        assets_network: '{{ project }}proxy_default'
+        assets_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        assets_nginx_virtual_host: '{{ app.assets.api.host }}'
+        assets_adminer_virtual_host: '{{ app.assets.adminer.host }}'
+        assets_rebrow_virtual_host: '{{ app.assets.rebrow.host }}'
+        assets_discovery_host: '{{ app.discovery.api.host }}'
+        assets_directory: '{{ directory }}/assets'
+        assets_database_host: '{{ app.assets.database.host }}'
+        assets_database_port: '{{ app.assets.database.port }}'
+        assets_database_name: '{{ app.assets.database.name }}'
+        assets_database_username: '{{ app.assets.database.username }}'
+        assets_database_password: '{{ app.assets.database.password }}'
+    - name: Up assets container
+      include_role:
+        name: app/assets/container/up
+  when: app.assets.enabled
   tags: [assets]

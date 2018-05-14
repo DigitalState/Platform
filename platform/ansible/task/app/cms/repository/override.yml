@@ -1,6 +1,7 @@
 ---
-- name: Download cms repository override directory
-  include_role:
-      name: app/cms/repository/override
-  when: cms.enabled
+- block:
+    - name: Download cms repository override directory
+      include_role:
+        name: app/cms/repository/override
+  when: app.cms.enabled
   tags: [cms]

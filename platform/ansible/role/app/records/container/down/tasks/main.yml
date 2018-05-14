@@ -1,8 +1,10 @@
 ---
-- name: Down records container
-  docker_service:
-      project_src: /srv/records
-      files:
+- block:
+    - name: Down records container
+      docker_service:
+        project_src: /srv/records
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: absent
+        state: absent
+  tags: [records]

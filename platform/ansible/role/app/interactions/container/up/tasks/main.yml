@@ -1,104 +1,111 @@
 ---
 - block:
-      - name: Configure interactions namespace environment variable
-        lineinfile:
+    - block:
+        - name: Configure interactions namespace environment variable
+          lineinfile:
             create: yes
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^COMPOSE_PROJECT_NAME='
             line: 'COMPOSE_PROJECT_NAME={{ interactions_compose_project_name }}'
-      - name: Configure interactions network environment variable
-        lineinfile:
+        - name: Configure interactions network environment variable
+          lineinfile:
             create: yes
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ interactions_network }}'
-      - name: Configure proxy host environment variable
-        lineinfile:
+        - name: Configure proxy host environment variable
+          lineinfile:
             create: yes
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^PROXY_HOST='
             line: 'PROXY_HOST={{ interactions_proxy_host }}'
-      - name: Configure nginx virtual host environment variable
-        lineinfile:
+        - name: Configure nginx virtual host environment variable
+          lineinfile:
             create: yes
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^NGINX_VIRTUAL_HOST='
             line: 'NGINX_VIRTUAL_HOST={{ interactions_nginx_virtual_host }}'
-      - name: Configure adminer virtual host environment variable
-        lineinfile:
+        - name: Configure adminer virtual host environment variable
+          lineinfile:
             create: yes
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^ADMINER_VIRTUAL_HOST='
             line: 'ADMINER_VIRTUAL_HOST={{ interactions_adminer_virtual_host }}'
-      - name: Configure discovery host environment variable
-        lineinfile:
+        - name: Configure rebrow virtual host environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/interactions/{{ interactions_env_file }}'
+            regexp: '^REBROW_VIRTUAL_HOST='
+            line: 'REBROW_VIRTUAL_HOST={{ interactions_rebrow_virtual_host }}'
+        - name: Configure discovery host environment variable
+          lineinfile:
             create: yes
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^DISCOVERY_HOST='
             line: 'DISCOVERY_HOST={{ interactions_discovery_host }}'
-      - name: Configure directory environment variable
-        lineinfile:
+        - name: Configure directory environment variable
+          lineinfile:
             create: yes
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ interactions_directory }}'
-      - name: Configure database host environment variable
-        lineinfile:
+        - name: Configure database host environment variable
+          lineinfile:
             create: yes
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^DATABASE_HOST='
             line: 'DATABASE_HOST={{ interactions_database_host }}'
-      - name: Configure database port environment variable
-        lineinfile:
+        - name: Configure database port environment variable
+          lineinfile:
             create: yes
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^DATABASE_PORT='
             line: 'DATABASE_PORT={{ interactions_database_port }}'
-      - name: Configure database name environment variable
-        lineinfile:
+        - name: Configure database name environment variable
+          lineinfile:
             create: yes
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^DATABASE_NAME='
             line: 'DATABASE_NAME={{ interactions_database_name }}'
-      - name: Configure database username environment variable
-        lineinfile:
+        - name: Configure database username environment variable
+          lineinfile:
             create: yes
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^DATABASE_USERNAME='
             line: 'DATABASE_USERNAME={{ interactions_database_username }}'
-      - name: Configure database password environment variable
-        lineinfile:
+        - name: Configure database password environment variable
+          lineinfile:
             create: yes
             path: '/srv/interactions/{{ interactions_env_file }}'
             regexp: '^DATABASE_PASSWORD='
             line: 'DATABASE_PASSWORD={{ interactions_database_password }}'
-  when: interactions_env_file is not none
-
-- name: Up interactions container
-  docker_service:
-      project_src: /srv/interactions
-      files:
+      when: interactions_env_file is not none
+    - name: Up interactions container
+      docker_service:
+        project_src: /srv/interactions
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: present
-  environment:
-      COMPOSE_PROJECT_NAME: '{{ interactions_compose_project_name }}'
-      NETWORK: '{{ interactions_network }}'
-      PROXY_HOST: '{{ interactions_proxy_host }}'
-      NGINX_VIRTUAL_HOST: '{{ interactions_nginx_virtual_host }}'
-      ADMINER_VIRTUAL_HOST: '{{ interactions_adminer_virtual_host }}'
-      DIRECTORY: '{{ interactions_directory }}'
-      DATABASE_HOST: '{{ interactions_database_host }}'
-      DATABASE_PORT: '{{ interactions_database_port }}'
-      DATABASE_NAME: '{{ interactions_database_name }}'
-      DATABASE_USERNAME: '{{ interactions_database_username }}'
-      DATABASE_PASSWORD: '{{ interactions_database_password }}'
-
-- name: Waiting for interactions container to finalize installation
-  shell:
-      cmd: docker-compose exec -T php pidof php-fpm | cat
-      chdir: /srv/interactions
-  register: _output
-  until: _output.stdout|match('^[0-9]+(\s[0-9]+)*$')
-  retries: 60
-  delay: 10
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ interactions_compose_project_name }}'
+        NETWORK: '{{ interactions_network }}'
+        PROXY_HOST: '{{ interactions_proxy_host }}'
+        NGINX_VIRTUAL_HOST: '{{ interactions_nginx_virtual_host }}'
+        ADMINER_VIRTUAL_HOST: '{{ interactions_adminer_virtual_host }}'
+        REBROW_VIRTUAL_HOST: '{{ interactions_rebrow_virtual_host }}'
+        DIRECTORY: '{{ interactions_directory }}'
+        DATABASE_HOST: '{{ interactions_database_host }}'
+        DATABASE_PORT: '{{ interactions_database_port }}'
+        DATABASE_NAME: '{{ interactions_database_name }}'
+        DATABASE_USERNAME: '{{ interactions_database_username }}'
+        DATABASE_PASSWORD: '{{ interactions_database_password }}'
+    - name: Waiting for interactions container to finalize installation
+      shell:
+        cmd: docker-compose exec -T php pidof php-fpm | cat
+        chdir: /srv/interactions
+      register: _output
+      until: _output.stdout|match('^[0-9]+(\s[0-9]+)*$')
+      retries: 60
+      delay: 10
+  tags: [interactions]

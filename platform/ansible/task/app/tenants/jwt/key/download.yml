@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Download tenants jwt keys
+      include_role:
+        name: app/tenants/jwt/key/download
+  when: app.tenants.enabled
+  tags: [tenants]

@@ -1,6 +1,8 @@
 ---
-- name: Configure identities discovery host setting
-  lineinfile:
-      path: '{{ identities_discovery_config_file }}'
-      regexp: '^\s{4}discovery_host:'
-      line: '    discovery_host: {{ identities_discovery_host }}'
+- block:
+    - name: Configure identities discovery host setting
+      lineinfile:
+        path: '{{ identities_discovery_config_file }}'
+        regexp: '^\s{4}discovery_host:'
+        line: '    discovery_host: {{ identities_discovery_host }}'
+  tags: [identities]

@@ -1,0 +1,15 @@
+---
+- block:
+    - name: Run tenants tests
+      shell:
+        cmd: docker-compose exec -T php vendor/bin/behat
+        chdir: /srv/tenants
+      register: tenants_test_run_result
+      changed_when: false
+    - name: Register tenants tests result
+      set_fact:
+        tenants_test_run_result: '{{ tenants_test_run_result.stdout_lines[tenants_test_run_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
+    - name: Display tenants tests result
+      debug:
+        msg: '{{ tenants_test_run_result[0] }} / {{ tenants_test_run_result[1] }}'
+  tags: [tenants]

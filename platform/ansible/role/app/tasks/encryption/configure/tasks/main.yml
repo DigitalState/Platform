@@ -1,6 +1,8 @@
 ---
-- name: Configure tasks encryption secret setting
-  lineinfile:
-      path: '{{ tasks_encryption_config_file }}'
-      regexp: '^\s{4}secret:'
-      line: '    secret: {{ tasks_encryption_secret }}'
+- block:
+    - name: Configure tasks encryption secret setting
+      lineinfile:
+        path: '{{ tasks_encryption_config_file }}'
+        regexp: '^\s{4}secret:'
+        line: '    secret: {{ tasks_encryption_secret }}'
+  tags: [tasks]

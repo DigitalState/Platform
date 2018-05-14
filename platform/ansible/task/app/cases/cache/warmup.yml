@@ -1,6 +1,7 @@
 ---
-- name: Warmup cases cache
-  include_role:
-      name: app/cases/cache/warmup
-  when: cases.enabled
+- block:
+    - name: Warmup cases cache
+      include_role:
+        name: app/cases/cache/warmup
+  when: app.cases.enabled
   tags: [cases]

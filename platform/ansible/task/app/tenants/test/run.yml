@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Run tenants tests
+      include_role:
+        name: app/tenants/test/run
+  when: app.tenants.enabled
+  tags: [tenants]

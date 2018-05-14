@@ -5,6 +5,7 @@ services_network: dsproxy_default
 services_proxy_host: 127.0.0.1
 services_nginx_virtual_host: api.services.ds
 services_adminer_virtual_host: adminer.services.ds
+services_rebrow_virtual_host: rebrow.services.ds
 services_discovery_host: api.discovery.ds
 services_directory: /srv/services
 services_database_host: services_db

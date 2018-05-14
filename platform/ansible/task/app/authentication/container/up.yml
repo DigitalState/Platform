@@ -1,27 +1,28 @@
 ---
 - block:
-      - name: Gather information for authentication container
-        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-      - name: Define authentication container variables
-        set_fact:
-            authentication_env_file: .env.lab
-        when: env == 'lab'
-      - name: Define authentication container variables
-        set_fact:
-            authentication_compose_project_name: '{{ project }}authentication'
-            authentication_network: '{{ project }}proxy_default'
-            authentication_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-            authentication_nginx_virtual_host: '{{ authentication.api.host }}'
-            authentication_adminer_virtual_host: '{{ authentication.adminer.host }}'
-            authentication_discovery_host: '{{ discovery.api.host }}'
-            authentication_directory: '{{ directory }}/authentication'
-            authentication_database_host: '{{ authentication.database.host }}'
-            authentication_database_port: '{{ authentication.database.port }}'
-            authentication_database_name: '{{ authentication.database.name }}'
-            authentication_database_username: '{{ authentication.database.username }}'
-            authentication_database_password: '{{ authentication.database.password }}'
-      - name: Up authentication container
-        include_role:
-            name: app/authentication/container/up
-  when: authentication.enabled
+    - name: Gather information for authentication container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Define authentication container variables
+      set_fact:
+        authentication_env_file: .env.lab
+      when: env == 'lab'
+    - name: Define authentication container variables
+      set_fact:
+        authentication_compose_project_name: '{{ project }}authentication'
+        authentication_network: '{{ project }}proxy_default'
+        authentication_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        authentication_nginx_virtual_host: '{{ app.authentication.api.host }}'
+        authentication_adminer_virtual_host: '{{ app.authentication.adminer.host }}'
+        authentication_rebrow_virtual_host: '{{ app.authentication.rebrow.host }}'
+        authentication_discovery_host: '{{ app.discovery.api.host }}'
+        authentication_directory: '{{ directory }}/authentication'
+        authentication_database_host: '{{ app.authentication.database.host }}'
+        authentication_database_port: '{{ app.authentication.database.port }}'
+        authentication_database_name: '{{ app.authentication.database.name }}'
+        authentication_database_username: '{{ app.authentication.database.username }}'
+        authentication_database_password: '{{ app.authentication.database.password }}'
+    - name: Up authentication container
+      include_role:
+        name: app/authentication/container/up
+  when: app.authentication.enabled
   tags: [authentication]

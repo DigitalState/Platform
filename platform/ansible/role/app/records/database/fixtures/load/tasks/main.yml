@@ -1,8 +1,9 @@
 ---
-- name: Load records database fixtures
-  import_tasks: default.yml
-  when: records_override == ""
-
-- name: Load records database fixtures override
-  import_tasks: override.yml
-  when: records_override != ""
+- block:
+    - name: Load records database fixtures
+      import_tasks: default.yml
+      when: records_override == ""
+    - name: Load records database fixtures override
+      import_tasks: override.yml
+      when: records_override != ""
+  tags: [records]

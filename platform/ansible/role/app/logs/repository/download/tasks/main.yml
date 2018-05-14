@@ -1,7 +1,9 @@
 ---
-- name: Download logs repository
-  git:
-      repo: '{{ logs_repository }}'
-      version: '{{ logs_version }}'
-      dest: /srv/logs
-      force: yes
+- block:
+    - name: Download logs repository
+      git:
+        repo: '{{ logs_repository }}'
+        version: '{{ logs_version }}'
+        dest: /srv/logs
+        force: yes
+  tags: [logs]

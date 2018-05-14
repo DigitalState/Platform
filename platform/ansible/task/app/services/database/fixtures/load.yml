@@ -15,5 +15,5 @@
     - name: Load services database fixtures
       include_role:
         name: app/services/database/fixtures/load
-  when: services.enabled
+  when: app.services.enabled
   tags: [services]

@@ -1,5 +1,7 @@
 ---
-- include_role:
-      name: app/formio/container/stop
-  when: formio is not none
+- block:
+    - name: Stop formio container
+      include_role:
+        name: app/formio/container/stop
+  when: app.formio.enabled
   tags: [formio]

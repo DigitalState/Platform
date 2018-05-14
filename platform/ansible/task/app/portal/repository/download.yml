@@ -1,11 +1,11 @@
 ---
 - block:
-      - name: Define portal repository variables
-        set_fact:
-            portal_repository: '{{ portal.repository }}'
-            portal_version: '{{ portal.version }}'
-      - name: Download portal repository
-        include_role:
-            name: app/portal/repository/download
-  when: portal.enabled
+    - name: Define portal repository variables
+      set_fact:
+        portal_repository: '{{ app.portal.repository }}'
+        portal_version: '{{ app.portal.version }}'
+    - name: Download portal repository
+      include_role:
+        name: app/portal/repository/download
+  when: app.portal.enabled
   tags: [portal]

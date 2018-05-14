@@ -1,8 +1,10 @@
 ---
-- name: Download admin repository
-  git:
-      repo: '{{ admin_repository }}'
-      version: '{{ admin_version }}'
-      recursive: yes
-      dest: /srv/admin
-      force: yes
+- block:
+    - name: Download admin repository
+      git:
+        repo: '{{ admin_repository }}'
+        version: '{{ admin_version }}'
+        recursive: yes
+        dest: /srv/admin
+        force: yes
+  tags: [assets]

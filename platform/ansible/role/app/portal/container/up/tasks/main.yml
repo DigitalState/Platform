@@ -1,54 +1,55 @@
 ---
 - block:
-      - name: Configure portal namespace environment variable
-        lineinfile:
+    - block:
+        - name: Configure portal namespace environment variable
+          lineinfile:
             create: yes
             path: '/srv/portal/{{ portal_env_file }}'
             regexp: '^COMPOSE_PROJECT_NAME='
             line: 'COMPOSE_PROJECT_NAME={{ portal_compose_project_name }}'
-      - name: Configure portal network environment variable
-        lineinfile:
+        - name: Configure portal network environment variable
+          lineinfile:
             create: yes
             path: '/srv/portal/{{ portal_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ portal_network }}'
-      - name: Configure proxy host environment variable
-        lineinfile:
+        - name: Configure proxy host environment variable
+          lineinfile:
             create: yes
             path: '/srv/portal/{{ portal_env_file }}'
             regexp: '^PROXY_HOST='
             line: 'PROXY_HOST={{ portal_proxy_host }}'
-      - name: Configure virtual host environment variable
-        lineinfile:
+        - name: Configure virtual host environment variable
+          lineinfile:
             create: yes
             path: '/srv/portal/{{ portal_env_file }}'
             regexp: '^VIRTUAL_HOST='
             line: 'VIRTUAL_HOST={{ portal_virtual_host }}'
-      - name: Configure discovery host environment variable
-        lineinfile:
+        - name: Configure discovery host environment variable
+          lineinfile:
             create: yes
             path: '/srv/portal/{{ portal_env_file }}'
             regexp: '^DISCOVERY_HOST='
             line: 'DISCOVERY_HOST={{ portal_discovery_host }}'
-      - name: Configure directory environment variable
-        lineinfile:
+        - name: Configure directory environment variable
+          lineinfile:
             create: yes
             path: '/srv/portal/{{ portal_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ portal_directory }}'
-  when: portal_env_file is not none
-
-- name: Up portal container
-  docker_service:
-      project_src: /srv/portal
-      files:
+      when: portal_env_file is not none
+    - name: Up portal container
+      docker_service:
+        project_src: /srv/portal
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: present
-  environment:
-      COMPOSE_PROJECT_NAME: '{{ portal_compose_project_name }}'
-      NETWORK: '{{ portal_network }}'
-      PROXY_HOST: '{{ portal_proxy_host }}'
-      VIRTUAL_HOST: '{{ portal_virtual_host }}'
-      DISCOVERY_HOST: '{{ portal_discovery_host }}'
-      DIRECTORY: '{{ portal_directory }}'
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ portal_compose_project_name }}'
+        NETWORK: '{{ portal_network }}'
+        PROXY_HOST: '{{ portal_proxy_host }}'
+        VIRTUAL_HOST: '{{ portal_virtual_host }}'
+        DISCOVERY_HOST: '{{ portal_discovery_host }}'
+        DIRECTORY: '{{ portal_directory }}'
+  tags: [portal]

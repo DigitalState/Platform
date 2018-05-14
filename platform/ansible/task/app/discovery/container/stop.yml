@@ -1,6 +1,7 @@
 ---
-- name: Stop discovery container
-  include_role:
-      name: app/discovery/container/stop
-  when: discovery.enabled
+- block:
+    - name: Stop discovery container
+      include_role:
+        name: app/discovery/container/stop
+  when: app.discovery.enabled
   tags: [discovery]

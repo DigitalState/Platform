@@ -1,10 +1,10 @@
 ---
-- name: Define assets jwt variables
-  set_fact:
-      assets_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
-
-- name: Configure assets jwt key pass phrase
-  include_role:
-      name: app/assets/jwt/configure
-  when: assets.enabled
+- block:
+    - name: Define assets jwt variables
+      set_fact:
+        assets_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
+    - name: Configure assets jwt key pass phrase
+      include_role:
+        name: app/assets/jwt/configure
+  when: app.assets.enabled
   tags: [assets]

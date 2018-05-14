@@ -1,27 +1,28 @@
 ---
 - block:
-      - name: Gather information for topics container
-        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-      - name: Define topics container variables
-        set_fact:
-            topics_env_file: .env.lab
-        when: env == 'lab'
-      - name: Define topics container variables
-        set_fact:
-            topics_compose_project_name: '{{ project }}topics'
-            topics_network: '{{ project }}proxy_default'
-            topics_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-            topics_nginx_virtual_host: '{{ topics.api.host }}'
-            topics_adminer_virtual_host: '{{ topics.adminer.host }}'
-            topics_discovery_host: '{{ discovery.api.host }}'
-            topics_directory: '{{ directory }}/topics'
-            topics_database_host: '{{ topics.database.host }}'
-            topics_database_port: '{{ topics.database.port }}'
-            topics_database_name: '{{ topics.database.name }}'
-            topics_database_username: '{{ topics.database.username }}'
-            topics_database_password: '{{ topics.database.password }}'
-      - name: Up topics container
-        include_role:
-            name: app/topics/container/up
-  when: topics.enabled
+    - name: Gather information for topics container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Define topics container variables
+      set_fact:
+        topics_env_file: .env.lab
+      when: env == 'lab'
+    - name: Define topics container variables
+      set_fact:
+        topics_compose_project_name: '{{ project }}topics'
+        topics_network: '{{ project }}proxy_default'
+        topics_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        topics_nginx_virtual_host: '{{ app.topics.api.host }}'
+        topics_adminer_virtual_host: '{{ app.topics.adminer.host }}'
+        topics_rebrow_virtual_host: '{{ app.topics.rebrow.host }}'
+        topics_discovery_host: '{{ app.discovery.api.host }}'
+        topics_directory: '{{ directory }}/topics'
+        topics_database_host: '{{ app.topics.database.host }}'
+        topics_database_port: '{{ app.topics.database.port }}'
+        topics_database_name: '{{ app.topics.database.name }}'
+        topics_database_username: '{{ app.topics.database.username }}'
+        topics_database_password: '{{ app.topics.database.password }}'
+    - name: Up topics container
+      include_role:
+        name: app/topics/container/up
+  when: app.topics.enabled
   tags: [topics]

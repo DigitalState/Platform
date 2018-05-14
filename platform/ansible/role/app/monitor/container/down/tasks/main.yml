@@ -1,5 +1,7 @@
 ---
-- name: Down monitor container
-  docker_service:
-      project_src: /srv/monitor
-      state: absent
+- block:
+    - name: Down monitor container
+      docker_service:
+        project_src: /srv/monitor
+        state: absent
+  tags: [monitor]

@@ -1,6 +1,8 @@
 ---
-- name: Set authentication config
-  shell:
-      cmd: 'docker-compose exec -T php php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
-      chdir: /srv/authentication
-  with_dict: '{{ authentication_config }}'
+- block:
+    - name: Set authentication config
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+        chdir: /srv/authentication
+      with_dict: '{{ authentication_config }}'
+  tags: [authentication]

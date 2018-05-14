@@ -15,5 +15,5 @@
     - name: Load cms database fixtures
       include_role:
         name: app/cms/database/fixtures/load
-  when: cms.enabled
+  when: app.cms.enabled
   tags: [cms]

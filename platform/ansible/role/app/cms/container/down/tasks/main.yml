@@ -1,8 +1,10 @@
 ---
-- name: Down cms container
-  docker_service:
-      project_src: /srv/cms
-      files:
+- block:
+    - name: Down cms container
+      docker_service:
+        project_src: /srv/cms
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: absent
+        state: absent
+  tags: [cms]

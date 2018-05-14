@@ -1,6 +1,7 @@
 ---
-- name: Clear services cache
-  include_role:
-      name: app/services/cache/clear
-  when: services.enabled
+- block:
+    - name: Clear services cache
+      include_role:
+        name: app/services/cache/clear
+  when: app.services.enabled
   tags: [services]

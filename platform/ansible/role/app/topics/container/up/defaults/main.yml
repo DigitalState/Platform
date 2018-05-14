@@ -5,6 +5,7 @@ topics_network: dsproxy_default
 topics_proxy_host: 127.0.0.1
 topics_nginx_virtual_host: api.topics.ds
 topics_adminer_virtual_host: api.adminer.ds
+topics_rebrow_virtual_host: api.rebrow.ds
 topics_discovery_host: api.discovery.ds
 topics_directory: /srv/topics
 topics_database_host: topics_db

@@ -1,6 +1,7 @@
 ---
-- name: Down cases container
-  include_role:
-      name: app/cases/container/down
-  when: cases.enabled
+- block:
+    - name: Down cases container
+      include_role:
+        name: app/cases/container/down
+  when: app.cases.enabled
   tags: [cases]

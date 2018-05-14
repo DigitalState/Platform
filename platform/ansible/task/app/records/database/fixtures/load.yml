@@ -15,5 +15,5 @@
     - name: Load records database fixtures
       include_role:
         name: app/records/database/fixtures/load
-  when: records.enabled
+  when: app.records.enabled
   tags: [records]

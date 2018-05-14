@@ -1,6 +1,8 @@
 ---
-- name: Stop logs container
-  docker_service:
-      project_src: /srv/logs
-      state: present
-      stopped: yes
+- block:
+    - name: Stop logs container
+      docker_service:
+        project_src: /srv/logs
+        state: present
+        stopped: yes
+  tags: [logs]

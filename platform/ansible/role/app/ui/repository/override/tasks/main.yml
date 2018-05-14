@@ -1,10 +1,11 @@
 ---
-- name: Detect ui repository override directory
-  local_action: 'stat path={{ ui_repository_override }}'
-  register: _repository_override
-
-- name: Download ui repository override directory
-  copy:
-      src: '{{ ui_repository_override }}/'
-      dest: /srv/ui
-  when: _repository_override.stat.exists == true
+- block:
+    - name: Detect ui repository override directory
+      local_action: 'stat path={{ ui_repository_override }}'
+      register: _repository_override
+    - name: Download ui repository override directory
+      copy:
+        src: '{{ ui_repository_override }}/'
+        dest: /srv/ui
+      when: _repository_override.stat.exists == true
+  tags: [ui]

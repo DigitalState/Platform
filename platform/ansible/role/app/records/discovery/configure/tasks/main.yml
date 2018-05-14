@@ -1,6 +1,8 @@
 ---
-- name: Configure records discovery host setting
-  lineinfile:
-      path: '{{ records_discovery_config_file }}'
-      regexp: '^\s{4}discovery_host:'
-      line: '    discovery_host: {{ records_discovery_host }}'
+- block:
+    - name: Configure records discovery host setting
+      lineinfile:
+        path: '{{ records_discovery_config_file }}'
+        regexp: '^\s{4}discovery_host:'
+        line: '    discovery_host: {{ records_discovery_host }}'
+  tags: [records]

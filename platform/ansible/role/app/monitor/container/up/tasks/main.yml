@@ -1,63 +1,64 @@
 ---
 - block:
-      - name: Configure monitor namespace environment variable
-        lineinfile:
+    - block:
+        - name: Configure monitor namespace environment variable
+          lineinfile:
             create: yes
             path: '/srv/monitor/{{ monitor_env_file }}'
             regexp: '^COMPOSE_PROJECT_NAME='
             line: 'COMPOSE_PROJECT_NAME={{ monitor_compose_project_name }}'
-      - name: Configure monitor network environment variable
-        lineinfile:
+        - name: Configure monitor network environment variable
+          lineinfile:
             create: yes
             path: '/srv/monitor/{{ monitor_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ monitor_network }}'
-      - name: Configure proxy host environment variable
-        lineinfile:
+        - name: Configure proxy host environment variable
+          lineinfile:
             create: yes
             path: '/srv/monitor/{{ monitor_env_file }}'
             regexp: '^PROXY_HOST='
             line: 'PROXY_HOST={{ monitor_proxy_host }}'
-      - name: Configure virtual host environment variable
-        lineinfile:
+        - name: Configure virtual host environment variable
+          lineinfile:
             create: yes
             path: '/srv/monitor/{{ monitor_env_file }}'
             regexp: '^VIRTUAL_HOST='
             line: 'VIRTUAL_HOST={{ monitor_virtual_host }}'
-      - name: Configure discovery host environment variable
-        lineinfile:
+        - name: Configure discovery host environment variable
+          lineinfile:
             create: yes
             path: '/srv/monitor/{{ monitor_env_file }}'
             regexp: '^DISCOVERY_HOST='
             line: 'DISCOVERY_HOST={{ monitor_discovery_host }}'
-      - name: Configure directory environment variable
-        lineinfile:
+        - name: Configure directory environment variable
+          lineinfile:
             create: yes
             path: '/srv/monitor/{{ monitor_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ monitor_directory }}'
-      - name: Configure jwt private key environment variable
-        lineinfile:
+        - name: Configure jwt private key environment variable
+          lineinfile:
             create: yes
             path: '/srv/monitor/{{ monitor_env_file }}'
             regexp: '^JWT_PRIVATE_KEY='
             line: 'JWT_PRIVATE_KEY={{ monitor_jwt_private_key }}'
-      - name: Configure jwt public key environment variable
-        lineinfile:
+        - name: Configure jwt public key environment variable
+          lineinfile:
             create: yes
             path: '/srv/monitor/{{ monitor_env_file }}'
             regexp: '^JWT_PUBLIC_KEY='
             line: 'JWT_PUBLIC_KEY={{ monitor_jwt_public_key }}'
-  when: monitor_env_file is not none
-
-- name: Up monitor container
-  docker_service:
-      project_src: /srv/monitor
-      state: present
-  environment:
-      COMPOSE_PROJECT_NAME: '{{ monitor_compose_project_name }}'
-      NETWORK: '{{ monitor_network }}'
-      PROXY_HOST: '{{ monitor_proxy_host }}'
-      VIRTUAL_HOST: '{{ monitor_virtual_host }}'
-      DIRECTORY: '{{ monitor_directory }}'
-      DISCOVERY: '{{ monitor_discovery|to_json }}'
+      when: monitor_env_file is not none
+    - name: Up monitor container
+      docker_service:
+        project_src: /srv/monitor
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ monitor_compose_project_name }}'
+        NETWORK: '{{ monitor_network }}'
+        PROXY_HOST: '{{ monitor_proxy_host }}'
+        VIRTUAL_HOST: '{{ monitor_virtual_host }}'
+        DIRECTORY: '{{ monitor_directory }}'
+        DISCOVERY: '{{ monitor_discovery|to_json }}'
+  tags: [monitor]

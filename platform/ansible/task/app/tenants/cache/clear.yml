@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Clear tenants cache
+      include_role:
+        name: app/tenants/cache/clear
+  when: app.tenants.enabled
+  tags: [tenants]

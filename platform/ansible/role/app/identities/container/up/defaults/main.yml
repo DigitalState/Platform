@@ -5,6 +5,7 @@ identities_network: dsproxy_default
 identities_proxy_host: 127.0.0.1
 identities_nginx_virtual_host: api.identities.ds
 identities_adminer_virtual_host: adminer.identities.ds
+identities_rebrow_virtual_host: rebrow.identities.ds
 identities_discovery_host: api.discovery.ds
 identities_directory: /srv/identities
 identities_database_host: identities_db

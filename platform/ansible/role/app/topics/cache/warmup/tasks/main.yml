@@ -1,5 +1,7 @@
 ---
-- name: Warmup topics cache
-  shell:
-      cmd: docker-compose exec -T php php bin/console cache:warmup --env=prod | cat
-      chdir: /srv/topics
+- block:
+    - name: Warmup topics cache
+      shell:
+        cmd: docker-compose exec -T php php bin/console cache:warmup --env=prod | cat
+        chdir: /srv/topics
+  tags: [topics]

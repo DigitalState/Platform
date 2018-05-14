@@ -1,0 +1,18 @@
+---
+- block:
+    - name: Define tenants repository variables
+      set_fact:
+        tenants_repository: '{{ app.tenants.repository }}'
+        tenants_version: '{{ app.tenants.version }}'
+    - name: Detect git credential file
+      local_action: 'stat path=/root/git/credential'
+      register: _git_credential
+    - name: Define tenants repository variables
+      set_fact:
+        tenants_credential: '{{ lookup("file", "/root/git/credential") }}'
+      when: _git_credential.stat.exists == true
+    - name: Download tenants repository
+      include_role:
+        name: app/tenants/repository/download
+  when: app.tenants.enabled
+  tags: [tenants]

@@ -1,0 +1,16 @@
+---
+tenants_env_file: ~
+tenants_compose_project_name: dstenants
+tenants_network: dsproxy_default
+tenants_proxy_host: 127.0.0.1
+tenants_nginx_virtual_host: api.tenants.ds
+tenants_adminer_virtual_host: adminer.tenants.ds
+tenants_rebrow_virtual_host: rebrow.tenants.ds
+tenants_discovery_host: api.discovery.ds
+tenants_directory: /srv/tenants
+tenants_database_host: tenants_db
+tenants_database_port: 5432
+tenants_database_name: tenants
+tenants_database_username: tenants
+tenants_database_password: tenants
+tenants_credential: ~

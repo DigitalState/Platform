@@ -5,6 +5,7 @@ cases_network: dsproxy_default
 cases_proxy_host: 127.0.0.1
 cases_nginx_virtual_host: api.cases.ds
 cases_adminer_virtual_host: adminer.cases.ds
+cases_rebrow_virtual_host: rebrow.cases.ds
 cases_discovery_host: api.discovery.ds
 cases_directory: /srv/cases
 cases_database_host: cases_db

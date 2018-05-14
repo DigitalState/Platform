@@ -1,9 +1,11 @@
 ---
-- name: Stop interactions container
-  docker_service:
-      project_src: /srv/interactions
-      files:
+- block:
+    - name: Stop interactions container
+      docker_service:
+        project_src: /srv/interactions
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: present
-      stopped: yes
+        state: present
+        stopped: yes
+  tags: [interactions]

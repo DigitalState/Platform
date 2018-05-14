@@ -1,6 +1,7 @@
 ---
-- name: Warmup tasks cache
-  include_role:
-      name: app/tasks/cache/warmup
-  when: tasks.enabled
+- block:
+    - name: Warmup tasks cache
+      include_role:
+        name: app/tasks/cache/warmup
+  when: app.tasks.enabled
   tags: [tasks]

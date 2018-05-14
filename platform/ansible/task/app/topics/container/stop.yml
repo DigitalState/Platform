@@ -1,6 +1,7 @@
 ---
-- name: Stop topics container
-  include_role:
-      name: app/topics/container/stop
-  when: topics.enabled
+- block:
+    - name: Stop topics container
+      include_role:
+        name: app/topics/container/stop
+  when: app.topics.enabled
   tags: [topics]

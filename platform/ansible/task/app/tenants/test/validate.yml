@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Validate tenants tests
+      include_role:
+        name: app/tenants/test/validate
+  when: app.tenants.enabled
+  tags: [tenants]

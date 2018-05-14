@@ -1,6 +1,7 @@
 ---
-- name: Down authentication container
-  include_role:
-      name: app/authentication/container/down
-  when: authentication.enabled
+- block:
+    - name: Down authentication container
+      include_role:
+        name: app/authentication/container/down
+  when: app.authentication.enabled
   tags: [authentication]

@@ -1,10 +1,14 @@
 ---
-- name: Compile database list
+- name: Compile database/fixtures/load task list
   hosts: platform
   become: true
   tasks:
-    - name: ...
-      include_tasks: /etc/ansible/task/platform/compiler/database/fixtures/load.yml
+    - name: Compile files
+      compile:
+        app: '{{ app }}'
+        directory: /etc/ansible/task/app/*
+        task: database/fixtures/load
+      register: _result
   tags: [always]
 
 - name: Load database fixtures
@@ -12,7 +16,7 @@
   become: true
   tasks:
     - name: Include compiled task list
-      include_tasks: '{{ file }}'
-      with_items: '{{ hostvars["platform"]["_files"] }}'
+      include_tasks: '{{ _file }}'
+      with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
       loop_control:
-        loop_var: file
+        loop_var: _file

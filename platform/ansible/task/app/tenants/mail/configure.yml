@@ -1,0 +1,14 @@
+---
+- block:
+    - name: Define tenants mail variables
+      set_fact:
+        tenants_mail_transport: '{{ mail.transport }}'
+        tenants_mail_host: '{{ mail.host }}'
+        tenants_mail_port: '{{ mail.port }}'
+        tenants_mail_username: '{{ mail.username }}'
+        tenants_mail_password: '{{ mail.password }}'
+    - name: Configure tenants mail settings
+      include_role:
+        name: app/tenants/mail/configure
+  when: app.tenants.enabled
+  tags: [tenants]

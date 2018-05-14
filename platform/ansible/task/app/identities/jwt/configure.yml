@@ -1,10 +1,10 @@
 ---
-- name: Define identities jwt variables
-  set_fact:
-      identities_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
-
-- name: Configure identities jwt key pass phrase
-  include_role:
-      name: app/identities/jwt/configure
-  when: identities.enabled
+- block:
+    - name: Define identities jwt variables
+      set_fact:
+        identities_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
+    - name: Configure identities jwt key pass phrase
+      include_role:
+        name: app/identities/jwt/configure
+  when: app.identities.enabled
   tags: [identities]

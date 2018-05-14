@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Down tenants container
+      docker_service:
+        project_src: /srv/tenants
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
+        state: absent
+  tags: [tenants]

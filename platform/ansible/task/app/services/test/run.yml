@@ -1,6 +1,7 @@
 ---
-- name: Run services tests
-  include_role:
-      name: app/services/test/run
-  when: services.enabled
+- block:
+    - name: Run services tests
+      include_role:
+        name: app/services/test/run
+  when: app.services.enabled
   tags: [services]

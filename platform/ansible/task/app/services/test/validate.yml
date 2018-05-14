@@ -1,6 +1,7 @@
 ---
-- name: Validate services tests
-  include_role:
-      name: app/services/test/validate
-  when: services.enabled
+- block:
+    - name: Validate services tests
+      include_role:
+        name: app/services/test/validate
+  when: app.services.enabled
   tags: [services]

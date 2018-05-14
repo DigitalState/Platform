@@ -1,6 +1,7 @@
 ---
-- name: Download identities jwt keys
-  include_role:
-      name: app/identities/jwt/key/download
-  when: identities.enabled
+- block:
+    - name: Download identities jwt keys
+      include_role:
+        name: app/identities/jwt/key/download
+  when: app.identities.enabled
   tags: [identities]

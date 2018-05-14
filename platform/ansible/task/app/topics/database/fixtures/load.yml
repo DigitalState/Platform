@@ -15,5 +15,5 @@
     - name: Load topics database fixtures
       include_role:
         name: app/topics/database/fixtures/load
-  when: topics.enabled
+  when: app.topics.enabled
   tags: [topics]

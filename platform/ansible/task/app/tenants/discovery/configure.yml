@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Define tenants discovery variables
+      set_fact:
+        tenants_discovery_host: '{{ app.discovery.api.host }}'
+    - name: Configure tenants discovery settings
+      include_role:
+        name: app/tenants/discovery/configure
+  when: app.tenants.enabled
+  tags: [tenants]

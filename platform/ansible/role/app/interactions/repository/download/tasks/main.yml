@@ -1,7 +1,9 @@
 ---
-- name: Download interactions repository
-  git:
-      repo: '{{ interactions_repository }}'
-      version: '{{ interactions_version }}'
-      dest: /srv/interactions
-      force: yes
+- block:
+    - name: Download interactions repository
+      git:
+        repo: '{{ interactions_repository }}'
+        version: '{{ interactions_version }}'
+        dest: /srv/interactions
+        force: yes
+  tags: [interactions]

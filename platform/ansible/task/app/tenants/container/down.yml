@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Down tenants container
+      include_role:
+        name: app/tenants/container/down
+  when: app.tenants.enabled
+  tags: [tenants]

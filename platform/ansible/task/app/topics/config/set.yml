@@ -2,9 +2,9 @@
 - block:
     - name: Define topics config variables
       set_fact:
-          topics_config: '{{ config }}'
+        topics_config: '{{ config }}'
     - name: Set topics configs
       include_role:
-          name: app/topics/config/set
-  when: topics.enabled
+        name: app/topics/config/set
+  when: app.topics.enabled
   tags: [topics]

@@ -1,27 +1,28 @@
 ---
 - block:
-      - name: Gather information for records container
-        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-      - name: Define records container variables
-        set_fact:
-            records_env_file: .env.lab
-        when: env == 'lab'
-      - name: Define records container variables
-        set_fact:
-            records_compose_project_name: '{{ project }}records'
-            records_network: '{{ project }}proxy_default'
-            records_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-            records_nginx_virtual_host: '{{ records.api.host }}'
-            records_adminer_virtual_host: '{{ records.adminer.host }}'
-            records_discovery_host: '{{ discovery.api.host }}'
-            records_directory: '{{ directory }}/records'
-            records_database_host: '{{ records.database.host }}'
-            records_database_port: '{{ records.database.port }}'
-            records_database_name: '{{ records.database.name }}'
-            records_database_username: '{{ records.database.username }}'
-            records_database_password: '{{ records.database.password }}'
-      - name: Up records container
-        include_role:
-            name: app/records/container/up
-  when: records.enabled
+    - name: Gather information for records container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Define records container variables
+      set_fact:
+        records_env_file: .env.lab
+      when: env == 'lab'
+    - name: Define records container variables
+      set_fact:
+        records_compose_project_name: '{{ project }}records'
+        records_network: '{{ project }}proxy_default'
+        records_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        records_nginx_virtual_host: '{{ app.records.api.host }}'
+        records_adminer_virtual_host: '{{ app.records.adminer.host }}'
+        records_rebrow_virtual_host: '{{ app.records.rebrow.host }}'
+        records_discovery_host: '{{ app.discovery.api.host }}'
+        records_directory: '{{ directory }}/records'
+        records_database_host: '{{ app.records.database.host }}'
+        records_database_port: '{{ app.records.database.port }}'
+        records_database_name: '{{ app.records.database.name }}'
+        records_database_username: '{{ app.records.database.username }}'
+        records_database_password: '{{ app.records.database.password }}'
+    - name: Up records container
+      include_role:
+        name: app/records/container/up
+  when: app.records.enabled
   tags: [records]

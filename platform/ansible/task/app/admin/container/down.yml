@@ -1,6 +1,7 @@
 ---
-- name: Down admin container
-  include_role:
-      name: app/admin/container/down
-  when: admin.enabled
+- block:
+    - name: Down admin container
+      include_role:
+        name: app/admin/container/down
+  when: app.admin.enabled
   tags: [admin]

@@ -1,6 +1,7 @@
 ---
-- name: Down discovery container
-  include_role:
-      name: app/discovery/container/down
-  when: discovery.enabled
+- block:
+    - name: Down discovery container
+      include_role:
+        name: app/discovery/container/down
+  when: app.discovery.enabled
   tags: [discovery]

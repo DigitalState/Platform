@@ -1,8 +1,9 @@
 ---
-- name: Load interactions database fixtures
-  import_tasks: default.yml
-  when: interactions_override == ""
-
-- name: Load interactions database fixtures override
-  import_tasks: override.yml
-  when: interactions_override != ""
+- block:
+    - name: Load interactions database fixtures
+      import_tasks: default.yml
+      when: interactions_override == ""
+    - name: Load interactions database fixtures override
+      import_tasks: override.yml
+      when: interactions_override != ""
+  tags: [interactions]

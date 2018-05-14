@@ -1,2 +1,4 @@
 ---
-- import_tasks: load.yml
+- block:
+    - import_tasks: load.yml
+  tags: [records]

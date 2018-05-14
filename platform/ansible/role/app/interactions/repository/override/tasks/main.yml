@@ -1,10 +1,11 @@
 ---
-- name: Detect interactions repository override directory
-  local_action: 'stat path={{ interactions_repository_override }}'
-  register: _repository_override
-
-- name: Download interactions repository override directory
-  copy:
-      src: '{{ interactions_repository_override }}/'
-      dest: /srv/interactions
-  when: _repository_override.stat.exists == true
+- block:
+    - name: Detect interactions repository override directory
+      local_action: 'stat path={{ interactions_repository_override }}'
+      register: _repository_override
+    - name: Download interactions repository override directory
+      copy:
+        src: '{{ interactions_repository_override }}/'
+        dest: /srv/interactions
+      when: _repository_override.stat.exists == true
+  tags: [interactions]

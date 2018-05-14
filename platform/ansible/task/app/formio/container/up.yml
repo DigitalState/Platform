@@ -1,23 +1,23 @@
 ---
 - block:
-      - name: Gather information for formio container
-        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-      - name: Define authentication container variables
-        set_fact:
-            formio_env_file: .env.platform
-        when: env == 'lab'
-      - name: Define formio container variables
-        set_fact:
-            formio_compose_project_name: '{{ project }}_formio'
-            formio_network: '{{ project }}proxy_default'
-            formio_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-            formio_virtual_host: '{{ formio.api.host }}'
-            formio_discovery_host: '{{ discovery.api.host }}'
-            formio_directory: '{{ directory }}/formio'
-            formio_username: '{{ formio.username }}'
-            formio_password: '{{ formio.password }}'
-      - name: Up formio container
-        include_role:
-            name: app/formio/container/up
-  when: formio.enabled
+    - name: Gather information for formio container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Define authentication container variables
+      set_fact:
+        formio_env_file: .env.platform
+      when: env == 'lab'
+    - name: Define formio container variables
+      set_fact:
+        formio_compose_project_name: '{{ project }}_formio'
+        formio_network: '{{ project }}proxy_default'
+        formio_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        formio_virtual_host: '{{ app.formio.api.host }}'
+        formio_discovery_host: '{{ app.discovery.api.host }}'
+        formio_directory: '{{ directory }}/formio'
+        formio_username: '{{ app.formio.username }}'
+        formio_password: '{{ app.formio.password }}'
+    - name: Up formio container
+      include_role:
+        name: app/formio/container/up
+  when: app.formio.enabled
   tags: [formio]

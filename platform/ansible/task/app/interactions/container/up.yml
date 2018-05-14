@@ -1,27 +1,28 @@
 ---
 - block:
-      - name: Gather information for interactions container
-        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-      - name: Define interactions container variables
-        set_fact:
-            interactions_env_file: .env.lab
-        when: env == 'lab'
-      - name: Define interactions container variables
-        set_fact:
-            interactions_compose_project_name: '{{ project }}interactions'
-            interactions_network: '{{ project }}proxy_default'
-            interactions_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-            interactions_nginx_virtual_host: '{{ interactions.api.host }}'
-            interactions_adminer_virtual_host: '{{ interactions.adminer.host }}'
-            interactions_discovery_host: '{{ discovery.api.host }}'
-            interactions_directory: '{{ directory }}/interactions'
-            interactions_database_host: '{{ interactions.database.host }}'
-            interactions_database_port: '{{ interactions.database.port }}'
-            interactions_database_name: '{{ interactions.database.name }}'
-            interactions_database_username: '{{ interactions.database.username }}'
-            interactions_database_password: '{{ interactions.database.password }}'
-      - name: Up interactions container
-        include_role:
-            name: app/interactions/container/up
-  when: interactions.enabled
+    - name: Gather information for interactions container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Define interactions container variables
+      set_fact:
+        interactions_env_file: .env.lab
+      when: env == 'lab'
+    - name: Define interactions container variables
+      set_fact:
+        interactions_compose_project_name: '{{ project }}interactions'
+        interactions_network: '{{ project }}proxy_default'
+        interactions_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        interactions_nginx_virtual_host: '{{ app.interactions.api.host }}'
+        interactions_adminer_virtual_host: '{{ app.interactions.adminer.host }}'
+        interactions_rebrow_virtual_host: '{{ app.interactions.rebrow.host }}'
+        interactions_discovery_host: '{{ app.discovery.api.host }}'
+        interactions_directory: '{{ directory }}/interactions'
+        interactions_database_host: '{{ app.interactions.database.host }}'
+        interactions_database_port: '{{ app.interactions.database.port }}'
+        interactions_database_name: '{{ app.interactions.database.name }}'
+        interactions_database_username: '{{ app.interactions.database.username }}'
+        interactions_database_password: '{{ app.interactions.database.password }}'
+    - name: Up interactions container
+      include_role:
+        name: app/interactions/container/up
+  when: app.interactions.enabled
   tags: [interactions]

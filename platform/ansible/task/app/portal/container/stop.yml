@@ -1,6 +1,7 @@
 ---
-- name: Stop proxy container
-  include_role:
-      name: app/portal/container/stop
-  when: portal.enabled
+- block:
+    - name: Stop proxy container
+      include_role:
+        name: app/portal/container/stop
+  when: app.portal.enabled
   tags: [portal]

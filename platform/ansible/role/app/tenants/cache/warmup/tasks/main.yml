@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Warmup tenants cache
+      shell:
+        cmd: docker-compose exec -T php php bin/console cache:warmup --env=prod | cat
+        chdir: /srv/tenants
+  tags: [tenants]

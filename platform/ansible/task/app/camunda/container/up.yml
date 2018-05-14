@@ -1,24 +1,24 @@
 ---
 - block:
-      - name: Gather information for camunda container
-        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-      - name: Define camunda container variables
-        set_fact:
-            camunda_env_file: .env.platform
-        when: env == 'lab'
-      - name: Define camunda container variables
-        set_fact:
-            camunda_compose_project_name: '{{ project }}_camunda'
-            camunda_network: '{{ project }}proxy_default'
-            camunda_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-            camunda_virtual_host: '{{ camunda.api.host }}'
-            camunda_discovery_host: '{{ discovery.api.host }}'
-            camunda_directory: '{{ directory }}/camunda'
-            camunda_timezone: '{{ timezone }}'
-            camunda_username: '{{ camunda.username }}'
-            camunda_password: '{{ camunda.password }}'
-      - name: Up camunda container
-        include_role:
-            name: app/camunda/container/up
-  when: camunda.enabled
+    - name: Gather information for camunda container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Define camunda container variables
+      set_fact:
+        camunda_env_file: .env.platform
+      when: env == 'lab'
+    - name: Define camunda container variables
+      set_fact:
+        camunda_compose_project_name: '{{ project }}_camunda'
+        camunda_network: '{{ project }}proxy_default'
+        camunda_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        camunda_virtual_host: '{{ app.camunda.api.host }}'
+        camunda_discovery_host: '{{ app.discovery.api.host }}'
+        camunda_directory: '{{ directory }}/camunda'
+        camunda_timezone: '{{ timezone }}'
+        camunda_username: '{{ app.camunda.username }}'
+        camunda_password: '{{ app.camunda.password }}'
+    - name: Up camunda container
+      include_role:
+        name: app/camunda/container/up
+  when: app.camunda.enabled
   tags: [camunda]

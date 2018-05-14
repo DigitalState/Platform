@@ -1,104 +1,111 @@
 ---
 - block:
-      - name: Configure authentication namespace environment variable
-        lineinfile:
+    - block:
+        - name: Configure authentication namespace environment variable
+          lineinfile:
             create: yes
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^COMPOSE_PROJECT_NAME='
             line: 'COMPOSE_PROJECT_NAME={{ authentication_compose_project_name }}'
-      - name: Configure authentication network environment variable
-        lineinfile:
+        - name: Configure authentication network environment variable
+          lineinfile:
             create: yes
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ authentication_network }}'
-      - name: Configure proxy host environment variable
-        lineinfile:
+        - name: Configure proxy host environment variable
+          lineinfile:
             create: yes
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^PROXY_HOST='
             line: 'PROXY_HOST={{ authentication_proxy_host }}'
-      - name: Configure nginx virtual host environment variable
-        lineinfile:
+        - name: Configure nginx virtual host environment variable
+          lineinfile:
             create: yes
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^NGINX_VIRTUAL_HOST='
             line: 'NGINX_VIRTUAL_HOST={{ authentication_nginx_virtual_host }}'
-      - name: Configure adminer virtual host environment variable
-        lineinfile:
+        - name: Configure adminer virtual host environment variable
+          lineinfile:
             create: yes
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^ADMINER_VIRTUAL_HOST='
             line: 'ADMINER_VIRTUAL_HOST={{ authentication_adminer_virtual_host }}'
-      - name: Configure discovery host environment variable
-        lineinfile:
+        - name: Configure rebrow virtual host environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/authentication/{{ authentication_env_file }}'
+            regexp: '^REBROW_VIRTUAL_HOST='
+            line: 'REBROW_VIRTUAL_HOST={{ authentication_rebrow_virtual_host }}'
+        - name: Configure discovery host environment variable
+          lineinfile:
             create: yes
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^DISCOVERY_HOST='
             line: 'DISCOVERY_HOST={{ authentication_discovery_host }}'
-      - name: Configure directory environment variable
-        lineinfile:
+        - name: Configure directory environment variable
+          lineinfile:
             create: yes
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ authentication_directory }}'
-      - name: Configure database host environment variable
-        lineinfile:
+        - name: Configure database host environment variable
+          lineinfile:
             create: yes
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^DATABASE_HOST='
             line: 'DATABASE_HOST={{ authentication_database_host }}'
-      - name: Configure database port environment variable
-        lineinfile:
+        - name: Configure database port environment variable
+          lineinfile:
             create: yes
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^DATABASE_PORT='
             line: 'DATABASE_PORT={{ authentication_database_port }}'
-      - name: Configure database name environment variable
-        lineinfile:
+        - name: Configure database name environment variable
+          lineinfile:
             create: yes
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^DATABASE_NAME='
             line: 'DATABASE_NAME={{ authentication_database_name }}'
-      - name: Configure database username environment variable
-        lineinfile:
+        - name: Configure database username environment variable
+          lineinfile:
             create: yes
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^DATABASE_USERNAME='
             line: 'DATABASE_USERNAME={{ authentication_database_username }}'
-      - name: Configure database password environment variable
-        lineinfile:
+        - name: Configure database password environment variable
+          lineinfile:
             create: yes
             path: '/srv/authentication/{{ authentication_env_file }}'
             regexp: '^DATABASE_PASSWORD='
             line: 'DATABASE_PASSWORD={{ authentication_database_password }}'
-  when: authentication_env_file is not none
-
-- name: Up authentication container
-  docker_service:
-      project_src: /srv/authentication
-      files:
+      when: authentication_env_file is not none
+    - name: Up authentication container
+      docker_service:
+        project_src: /srv/authentication
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: present
-  environment:
-      COMPOSE_PROJECT_NAME: '{{ authentication_compose_project_name }}'
-      NETWORK: '{{ authentication_network }}'
-      PROXY_HOST: '{{ authentication_proxy_host }}'
-      NGINX_VIRTUAL_HOST: '{{ authentication_nginx_virtual_host }}'
-      ADMINER_VIRTUAL_HOST: '{{ authentication_adminer_virtual_host }}'
-      DIRECTORY: '{{ authentication_directory }}'
-      DATABASE_HOST: '{{ authentication_database_host }}'
-      DATABASE_PORT: '{{ authentication_database_port }}'
-      DATABASE_NAME: '{{ authentication_database_name }}'
-      DATABASE_USERNAME: '{{ authentication_database_username }}'
-      DATABASE_PASSWORD: '{{ authentication_database_password }}'
-
-- name: Waiting for authentication container to finalize installation
-  shell:
-      cmd: docker-compose exec -T php pidof php-fpm | cat
-      chdir: /srv/authentication
-  register: _output
-  until: _output.stdout|match('^[0-9]+(\s[0-9]+)*$')
-  retries: 60
-  delay: 10
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ authentication_compose_project_name }}'
+        NETWORK: '{{ authentication_network }}'
+        PROXY_HOST: '{{ authentication_proxy_host }}'
+        NGINX_VIRTUAL_HOST: '{{ authentication_nginx_virtual_host }}'
+        ADMINER_VIRTUAL_HOST: '{{ authentication_adminer_virtual_host }}'
+        REBROW_VIRTUAL_HOST: '{{ authentication_rebrow_virtual_host }}'
+        DIRECTORY: '{{ authentication_directory }}'
+        DATABASE_HOST: '{{ authentication_database_host }}'
+        DATABASE_PORT: '{{ authentication_database_port }}'
+        DATABASE_NAME: '{{ authentication_database_name }}'
+        DATABASE_USERNAME: '{{ authentication_database_username }}'
+        DATABASE_PASSWORD: '{{ authentication_database_password }}'
+    - name: Waiting for authentication container to finalize installation
+      shell:
+        cmd: docker-compose exec -T php pidof php-fpm | cat
+        chdir: /srv/authentication
+      register: _output
+      until: _output.stdout|match('^[0-9]+(\s[0-9]+)*$')
+      retries: 60
+      delay: 10
+  tags: [authentication]

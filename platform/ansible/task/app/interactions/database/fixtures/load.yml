@@ -15,5 +15,5 @@
     - name: Load interactions database fixtures
       include_role:
         name: app/interactions/database/fixtures/load
-  when: interactions.enabled
+  when: app.interactions.enabled
   tags: [interactions]

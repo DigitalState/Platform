@@ -1,8 +1,9 @@
 ---
-- name: Load cms database fixtures
-  import_tasks: default.yml
-  when: cms_override == ""
-
-- name: Load cms database fixtures override
-  import_tasks: override.yml
-  when: cms_override != ""
+- block:
+    - name: Load cms database fixtures
+      import_tasks: default.yml
+      when: cms_override == ""
+    - name: Load cms database fixtures override
+      import_tasks: override.yml
+      when: cms_override != ""
+  tags: [cms]

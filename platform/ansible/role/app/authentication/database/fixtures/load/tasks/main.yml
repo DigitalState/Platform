@@ -1,8 +1,9 @@
 ---
-- name: Load authentication database fixtures
-  import_tasks: default.yml
-  when: authentication_override == ""
-
-- name: Load authentication database fixtures override
-  import_tasks: override.yml
-  when: authentication_override != ""
+- block:
+    - name: Load authentication database fixtures
+      import_tasks: default.yml
+      when: authentication_override == ""
+    - name: Load authentication database fixtures override
+      import_tasks: override.yml
+      when: authentication_override != ""
+  tags: [authentication]

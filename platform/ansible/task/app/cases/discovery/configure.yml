@@ -1,10 +1,10 @@
 ---
-- name: Define cases discovery variables
-  set_fact:
-      cases_discovery_host: '{{ discovery.api.host }}'
-
-- name: Configure cases discovery settings
-  include_role:
-      name: app/cases/discovery/configure
-  when: cases.enabled
+- block:
+    - name: Define cases discovery variables
+      set_fact:
+        cases_discovery_host: '{{ app.discovery.api.host }}'
+    - name: Configure cases discovery settings
+      include_role:
+        name: app/cases/discovery/configure
+  when: app.cases.enabled
   tags: [cases]

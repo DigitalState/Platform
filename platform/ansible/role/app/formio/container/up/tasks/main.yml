@@ -1,87 +1,84 @@
 ---
-- name: Configure client host config
-  replace:
-      path: /srv/formio/formio/client/dist/config.js
-      regexp: api\.formio\.ds
-      replace: '{{ formio_virtual_host }}'
-
-- name: Configure app host config
-  replace:
-      path: /srv/formio/formio/config/default.json
-      regexp: api\.formio\.ds
-      replace: '{{ formio_virtual_host }}'
-
 - block:
-      - name: Configure formio namespace environment variable
-        lineinfile:
+    - name: Configure client host config
+      replace:
+        path: /srv/formio/formio/client/dist/config.js
+        regexp: api\.formio\.ds
+        replace: '{{ formio_virtual_host }}'
+    - name: Configure app host config
+      replace:
+        path: /srv/formio/formio/config/default.json
+        regexp: api\.formio\.ds
+        replace: '{{ formio_virtual_host }}'
+    - block:
+        - name: Configure formio namespace environment variable
+          lineinfile:
             create: yes
             path: '/srv/formio/{{ formio_env_file }}'
             regexp: '^COMPOSE_PROJECT_NAME='
             line: 'COMPOSE_PROJECT_NAME={{ formio_compose_project_name }}'
-      - name: Configure formio network environment variable
-        lineinfile:
+        - name: Configure formio network environment variable
+          lineinfile:
             create: yes
             path: '/srv/formio/{{ formio_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ formio_network }}'
-      - name: Configure proxy host environment variable
-        lineinfile:
+        - name: Configure proxy host environment variable
+          lineinfile:
             create: yes
             path: '/srv/formio/{{ formio_env_file }}'
             regexp: '^PROXY_HOST='
             line: 'PROXY_HOST={{ formio_proxy_host }}'
-      - name: Configure virtual host environment variable
-        lineinfile:
+        - name: Configure virtual host environment variable
+          lineinfile:
             create: yes
             path: '/srv/formio/{{ formio_env_file }}'
             regexp: '^VIRTUAL_HOST='
             line: 'VIRTUAL_HOST={{ formio_virtual_host }}'
-      - name: Configure discovery host environment variable
-        lineinfile:
+        - name: Configure discovery host environment variable
+          lineinfile:
             create: yes
             path: '/srv/formio/{{ formio_env_file }}'
             regexp: '^DISCOVERY_HOST='
             line: 'DISCOVERY_HOST={{ formio_discovery_host }}'
-      - name: Configure directory environment variable
-        lineinfile:
+        - name: Configure directory environment variable
+          lineinfile:
             create: yes
             path: '/srv/formio/{{ formio_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ formio_directory }}'
-      - name: Configure username environment variable
-        lineinfile:
+        - name: Configure username environment variable
+          lineinfile:
             create: yes
             path: '/srv/formio/{{ formio_env_file }}'
             regexp: '^USERNAME='
             line: 'USERNAME={{ formio_username }}'
-      - name: Configure password environment variable
-        lineinfile:
+        - name: Configure password environment variable
+          lineinfile:
             create: yes
             path: '/srv/formio/{{ formio_env_file }}'
             regexp: '^PASSWORD='
             line: 'PASSWORD={{ formio_password }}'
-  when: formio_env_file is not none
-
-- name: Ansible docker_service bug work-around
-  set_fact:
-      _formio: '{{ formio }}'
-
-- name: Up formio container
-  docker_service:
-      project_src: /srv/formio
-      files:
+      when: formio_env_file is not none
+    - name: Ansible docker_service bug work-around
+      set_fact:
+        _formio: '{{ formio }}'
+    - name: Up formio container
+      docker_service:
+        project_src: /srv/formio
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: present
-  environment:
-      COMPOSE_PROJECT_NAME: '{{ formio_compose_project_name }}'
-      NETWORK: '{{ formio_network }}'
-      PROXY_HOST: '{{ formio_proxy_host }}'
-      VIRTUAL_HOST: '{{ formio_virtual_host }}'
-      DIRECTORY: '{{ formio_directory }}'
-      USERNAME: '{{ formio_username }}'
-      PASSWORD: '{{ formio_password }}'
-
-- name: Ansible docker_service bug work-around
-  set_fact:
-      formio: '{{ _formio }}'
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ formio_compose_project_name }}'
+        NETWORK: '{{ formio_network }}'
+        PROXY_HOST: '{{ formio_proxy_host }}'
+        VIRTUAL_HOST: '{{ formio_virtual_host }}'
+        DIRECTORY: '{{ formio_directory }}'
+        USERNAME: '{{ formio_username }}'
+        PASSWORD: '{{ formio_password }}'
+    - name: Ansible docker_service bug work-around
+      set_fact:
+        formio: '{{ _formio }}'
+  tags: [formio]

@@ -1,18 +1,22 @@
 ---
-- name: Compile encryption list
+- name: Compile encryption/configure task list
   hosts: platform
   become: true
   tasks:
-    - name: ...
-      include_tasks: /etc/ansible/task/platform/compiler/encryption/configure.yml
+    - name: Compile files
+      compile:
+        app: '{{ app }}'
+        directory: /etc/ansible/task/app/*
+        task: encryption/configure
+      register: _result
   tags: [always]
 
 - name: Configure encryption settings
   hosts: server
   become: true
   tasks:
-    - name: Include compiled list
-      include_tasks: '{{ file }}'
-      with_items: '{{ hostvars["platform"]["_files"] }}'
+    - name: Include compiled task list
+      include_tasks: '{{ _file }}'
+      with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
       loop_control:
-        loop_var: file
+        loop_var: _file

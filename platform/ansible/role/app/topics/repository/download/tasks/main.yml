@@ -1,7 +1,9 @@
 ---
-- name: Download topics repository
-  git:
-      repo: '{{ topics_repository }}'
-      version: '{{ topics_version }}'
-      dest: /srv/topics
-      force: yes
+- block:
+    - name: Download topics repository
+      git:
+        repo: '{{ topics_repository }}'
+        version: '{{ topics_version }}'
+        dest: /srv/topics
+        force: yes
+  tags: [topics]

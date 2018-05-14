@@ -1,34 +1,35 @@
 ---
 - block:
-      - name: Gather information for tasks container
-        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-      - name: Define tasks container variables
-        set_fact:
-            tasks_env_file: .env.lab
-        when: env == 'lab'
-      - name: Define tasks container variables
-        set_fact:
-            tasks_compose_project_name: '{{ project }}tasks'
-            tasks_network: '{{ project }}proxy_default'
-            tasks_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-            tasks_nginx_virtual_host: '{{ tasks.api.host }}'
-            tasks_adminer_virtual_host: '{{ tasks.adminer.host }}'
-            tasks_discovery_host: '{{ discovery.api.host }}'
-            tasks_directory: '{{ directory }}/tasks'
-            tasks_database_host: '{{ tasks.database.host }}'
-            tasks_database_port: '{{ tasks.database.port }}'
-            tasks_database_name: '{{ tasks.database.name }}'
-            tasks_database_username: '{{ tasks.database.username }}'
-            tasks_database_password: '{{ tasks.database.password }}'
-      - name: Detect docker credential file
-        local_action: 'stat path=/root/docker/credential'
-        register: _docker_credential
-      - name: Define tasks container variables
-        set_fact:
-            tasks_credential: '{{ lookup("file", "/root/docker/credential") }}'
-        when: _docker_credential.stat.exists == true
-      - name: Up tasks container
-        include_role:
-            name: app/tasks/container/up
-  when: tasks.enabled
+    - name: Gather information for tasks container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Define tasks container variables
+      set_fact:
+        tasks_env_file: .env.lab
+      when: env == 'lab'
+    - name: Define tasks container variables
+      set_fact:
+        tasks_compose_project_name: '{{ project }}tasks'
+        tasks_network: '{{ project }}proxy_default'
+        tasks_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        tasks_nginx_virtual_host: '{{ app.tasks.api.host }}'
+        tasks_adminer_virtual_host: '{{ app.tasks.adminer.host }}'
+        tasks_rebrow_virtual_host: '{{ app.tasks.rebrow.host }}'
+        tasks_discovery_host: '{{ app.discovery.api.host }}'
+        tasks_directory: '{{ directory }}/tasks'
+        tasks_database_host: '{{ app.tasks.database.host }}'
+        tasks_database_port: '{{ app.tasks.database.port }}'
+        tasks_database_name: '{{ app.tasks.database.name }}'
+        tasks_database_username: '{{ app.tasks.database.username }}'
+        tasks_database_password: '{{ app.tasks.database.password }}'
+    - name: Detect docker credential file
+      local_action: 'stat path=/root/docker/credential'
+      register: _docker_credential
+    - name: Define tasks container variables
+      set_fact:
+        tasks_credential: '{{ lookup("file", "/root/docker/credential") }}'
+      when: _docker_credential.stat.exists == true
+    - name: Up tasks container
+      include_role:
+        name: app/tasks/container/up
+  when: app.tasks.enabled
   tags: [tasks]

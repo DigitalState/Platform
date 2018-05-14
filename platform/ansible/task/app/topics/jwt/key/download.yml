@@ -1,6 +1,7 @@
 ---
-- name: Download topics jwt keys
-  include_role:
-      name: app/topics/jwt/key/download
-  when: topics.enabled
+- block:
+    - name: Download topics jwt keys
+      include_role:
+        name: app/topics/jwt/key/download
+  when: app.topics.enabled
   tags: [topics]

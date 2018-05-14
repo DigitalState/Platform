@@ -1,6 +1,7 @@
 ---
-- name: Warmup identities cache
-  include_role:
-      name: app/identities/cache/warmup
-  when: identities.enabled
+- block:
+    - name: Warmup identities cache
+      include_role:
+        name: app/identities/cache/warmup
+  when: app.identities.enabled
   tags: [identities]

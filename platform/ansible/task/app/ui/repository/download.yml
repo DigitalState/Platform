@@ -1,11 +1,11 @@
 ---
 - block:
-      - name: Define ui repository variables
-        set_fact:
-            ui_repository: '{{ ui.repository }}'
-            ui_version: '{{ ui.version }}'
-      - name: Download ui repository
-        include_role:
-            name: app/ui/repository/download
-  when: ui.enabled
+    - name: Define ui repository variables
+      set_fact:
+        ui_repository: '{{ app.ui.repository }}'
+        ui_version: '{{ app.ui.version }}'
+    - name: Download ui repository
+      include_role:
+        name: app/ui/repository/download
+  when: app.ui.enabled
   tags: [ui]

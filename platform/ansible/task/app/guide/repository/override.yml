@@ -1,6 +1,7 @@
 ---
-- name: Download guide repository override directory
-  include_role:
-      name: app/guide/repository/override
-  when: guide is not none
+- block:
+    - name: Download guide repository override directory
+      include_role:
+        name: app/guide/repository/override
+  when: app.guide.enabled
   tags: [guide]

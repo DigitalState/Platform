@@ -1,6 +1,7 @@
 ---
-- name: Down topics container
-  include_role:
-      name: app/topics/container/down
-  when: topics.enabled
+- block:
+    - name: Down topics container
+      include_role:
+        name: app/topics/container/down
+  when: app.topics.enabled
   tags: [topics]

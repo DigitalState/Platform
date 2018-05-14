@@ -1,54 +1,55 @@
 ---
 - block:
-      - name: Configure admin namespace environment variable
-        lineinfile:
+    - block:
+        - name: Configure admin namespace environment variable
+          lineinfile:
             create: yes
             path: '/srv/admin/{{ admin_env_file }}'
             regexp: '^COMPOSE_PROJECT_NAME='
             line: 'COMPOSE_PROJECT_NAME={{ admin_compose_project_name }}'
-      - name: Configure admin network environment variable
-        lineinfile:
+        - name: Configure admin network environment variable
+          lineinfile:
             create: yes
             path: '/srv/admin/{{ admin_env_file }}'
             regexp: '^NETWORK='
             line: 'NETWORK={{ admin_network }}'
-      - name: Configure proxy host environment variable
-        lineinfile:
+        - name: Configure proxy host environment variable
+          lineinfile:
             create: yes
             path: '/srv/admin/{{ admin_env_file }}'
             regexp: '^PROXY_HOST='
             line: 'PROXY_HOST={{ admin_proxy_host }}'
-      - name: Configure virtual host environment variable
-        lineinfile:
+        - name: Configure virtual host environment variable
+          lineinfile:
             create: yes
             path: '/srv/admin/{{ admin_env_file }}'
             regexp: '^VIRTUAL_HOST='
             line: 'VIRTUAL_HOST={{ admin_virtual_host }}'
-      - name: Configure discovery host environment variable
-        lineinfile:
+        - name: Configure discovery host environment variable
+          lineinfile:
             create: yes
             path: '/srv/admin/{{ admin_env_file }}'
             regexp: '^DISCOVERY_HOST='
             line: 'DISCOVERY_HOST={{ admin_discovery_host }}'
-      - name: Configure directory environment variable
-        lineinfile:
+        - name: Configure directory environment variable
+          lineinfile:
             create: yes
             path: '/srv/admin/{{ admin_env_file }}'
             regexp: '^DIRECTORY='
             line: 'DIRECTORY={{ admin_directory }}'
-  when: admin_env_file is not none
-
-- name: Up admin container
-  docker_service:
-      project_src: /srv/admin
-      files:
+      when: admin_env_file is not none
+    - name: Up admin container
+      docker_service:
+        project_src: /srv/admin
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: present
-  environment:
-      COMPOSE_PROJECT_NAME: '{{ admin_compose_project_name }}'
-      NETWORK: '{{ admin_network }}'
-      PROXY_HOST: '{{ admin_proxy_host }}'
-      VIRTUAL_HOST: '{{ admin_virtual_host }}'
-      DISCOVERY_HOST: '{{ admin_discovery_host }}'
-      DIRECTORY: '{{ admin_directory }}'
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ admin_compose_project_name }}'
+        NETWORK: '{{ admin_network }}'
+        PROXY_HOST: '{{ admin_proxy_host }}'
+        VIRTUAL_HOST: '{{ admin_virtual_host }}'
+        DISCOVERY_HOST: '{{ admin_discovery_host }}'
+        DIRECTORY: '{{ admin_directory }}'
+  tags: [admin]

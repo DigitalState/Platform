@@ -1,6 +1,8 @@
 ---
-- name: Stop proxy container
-  docker_service:
-      project_src: /srv/proxy
-      state: present
-      stopped: yes
+- block:
+    - name: Stop proxy container
+      docker_service:
+        project_src: /srv/proxy
+        state: present
+        stopped: yes
+  tags: [proxy]

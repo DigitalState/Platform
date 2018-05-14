@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Warmup tenants cache
+      include_role:
+        name: app/tenants/cache/warmup
+  when: app.tenants.enabled
+  tags: [tenants]

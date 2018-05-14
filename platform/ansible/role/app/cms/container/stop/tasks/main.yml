@@ -1,9 +1,11 @@
 ---
-- name: Stop cms container
-  docker_service:
-      project_src: /srv/cms
-      files:
+- block:
+    - name: Stop cms container
+      docker_service:
+        project_src: /srv/cms
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: present
-      stopped: yes
+        state: present
+        stopped: yes
+  tags: [cms]

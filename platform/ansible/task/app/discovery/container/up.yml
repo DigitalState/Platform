@@ -1,20 +1,20 @@
 ---
 - block:
-      - name: Gather information for discovery container
-        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-      - name: Define discovery container variables
-        set_fact:
-            discovery_env_file: .env.platform
-        when: env == 'lab'
-      - name: Define discovery container environment variables
-        set_fact:
-            discovery_namespace: '{{ project }}_discovery'
-            discovery_network: '{{ project }}proxy_default'
-            discovery_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-            discovery_virtual_host: '{{ discovery.api.host }}'
-            discovery_directory: '{{ directory }}/discovery'
-      - name: Up discovery container
-        include_role:
-            name: app/discovery/container/up
-  when: discovery.enabled
+    - name: Gather information for discovery container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Define discovery container variables
+      set_fact:
+        discovery_env_file: .env.platform
+      when: env == 'lab'
+    - name: Define discovery container environment variables
+      set_fact:
+        discovery_namespace: '{{ project }}_discovery'
+        discovery_network: '{{ project }}proxy_default'
+        discovery_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        discovery_virtual_host: '{{ app.discovery.api.host }}'
+        discovery_directory: '{{ directory }}/discovery'
+    - name: Up discovery container
+      include_role:
+        name: app/discovery/container/up
+  when: app.discovery.enabled
   tags: [discovery]

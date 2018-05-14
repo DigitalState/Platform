@@ -1,15 +1,15 @@
 ---
 - block:
-      - name: Define proxy container variables
-        set_fact:
-            proxy_env_file: .env.lab
-        when: env == 'lab'
-      - name: Define proxy container variables
-        set_fact:
-            proxy_compose_project_name: '{{ project }}proxy'
-            proxy_port: '{{ proxy.port }}'
-      - name: Up proxy container
-        include_role:
-            name: app/proxy/container/up
-  when: proxy.enabled
+    - name: Define proxy container variables
+      set_fact:
+        proxy_env_file: .env.lab
+      when: env == 'lab'
+    - name: Define proxy container variables
+      set_fact:
+        proxy_compose_project_name: '{{ project }}proxy'
+        proxy_port: '{{ app.proxy.port }}'
+    - name: Up proxy container
+      include_role:
+        name: app/proxy/container/up
+  when: app.proxy.enabled
   tags: [proxy]

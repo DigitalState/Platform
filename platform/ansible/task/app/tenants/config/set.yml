@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Define tenants config variables
+      set_fact:
+        tenants_config: '{{ config }}'
+    - name: Set tenants configs
+      include_role:
+        name: app/tenants/config/set
+  when: app.tenants.enabled
+  tags: [tenants]

@@ -1,6 +1,7 @@
 ---
-- name: Download admin repository override directory
-  include_role:
-      name: app/admin/repository/override
-  when: admin.enabled
+- block:
+    - name: Download admin repository override directory
+      include_role:
+        name: app/admin/repository/override
+  when: app.admin.enabled
   tags: [admin]

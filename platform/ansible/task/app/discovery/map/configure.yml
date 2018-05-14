@@ -2,23 +2,24 @@
 - block:
     - name: Define discovery map variable
       set_fact:
-          discovery_map:
-              assets: '{{ assets.api.host }}'
-              authentication: '{{ authentication.api.host }}'
-              camunda: '{{ camunda.api.host }}/engine-rest'
-              cases: '{{ cases.api.host }}'
-              cms: '{{ cms.api.host }}'
-              discovery: '{{ discovery.api.host }}'
-              formio: '{{ formio.api.host }}'
-              identities: '{{ identities.api.host }}'
-              interactions: '{{ interactions.api.host }}'
-              logs: '{{ logs.api.host }}'
-              records: '{{ records.api.host }}'
-              services: '{{ services.api.host }}'
-              tasks: '{{ tasks.api.host }}'
-              topics: '{{ topics.api.host }}'
+        discovery_map:
+          assets: '{{ app.assets.api.host }}'
+          authentication: '{{ app.authentication.api.host }}'
+          camunda: '{{ app.camunda.api.host }}/engine-rest'
+          cases: '{{ app.cases.api.host }}'
+          cms: '{{ app.cms.api.host }}'
+          discovery: '{{ app.discovery.api.host }}'
+          formio: '{{ app.formio.api.host }}'
+          identities: '{{ app.identities.api.host }}'
+          interactions: '{{ app.interactions.api.host }}'
+          logs: '{{ app.logs.api.host }}'
+          records: '{{ app.records.api.host }}'
+          services: '{{ app.services.api.host }}'
+          tasks: '{{ app.tasks.api.host }}'
+          tenants: '{{ app.tenants.api.host }}'
+          topics: '{{ app.topics.api.host }}'
     - name: Set discovery map
       include_role:
-          name: app/discovery/map/configure
-  when: discovery.enabled
+        name: app/discovery/map/configure
+  when: app.discovery.enabled
   tags: [discovery]

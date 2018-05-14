@@ -1,6 +1,8 @@
 ---
-- name: Configure interactions discovery host setting
-  lineinfile:
-      path: '{{ interactions_discovery_config_file }}'
-      regexp: '^\s{4}discovery_host:'
-      line: '    discovery_host: {{ interactions_discovery_host }}'
+- block:
+    - name: Configure interactions discovery host setting
+      lineinfile:
+        path: '{{ interactions_discovery_config_file }}'
+        regexp: '^\s{4}discovery_host:'
+        line: '    discovery_host: {{ interactions_discovery_host }}'
+  tags: [interactions]

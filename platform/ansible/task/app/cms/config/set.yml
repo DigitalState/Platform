@@ -2,9 +2,9 @@
 - block:
     - name: Define cms config variables
       set_fact:
-          cms_config: '{{ config }}'
+        cms_config: '{{ config }}'
     - name: Set cms configs
       include_role:
-          name: app/cms/config/set
-  when: cms.enabled
+        name: app/cms/config/set
+  when: app.cms.enabled
   tags: [cms]

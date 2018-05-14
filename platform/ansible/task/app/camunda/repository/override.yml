@@ -1,6 +1,7 @@
 ---
-- name: Download camunda repository override directory
-  include_role:
-      name: app/camunda/repository/override
-  when: camunda is not none
+- block:
+    - name: Download camunda repository override directory
+      include_role:
+        name: app/camunda/repository/override
+  when: app.camunda.enabled
   tags: [camunda]

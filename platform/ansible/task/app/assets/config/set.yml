@@ -2,9 +2,9 @@
 - block:
     - name: Define assets config variables
       set_fact:
-          assets_config: '{{ config }}'
+        assets_config: '{{ config }}'
     - name: Set assets configs
       include_role:
-          name: app/assets/config/set
-  when: assets.enabled
+        name: app/assets/config/set
+  when: app.assets.enabled
   tags: [assets]

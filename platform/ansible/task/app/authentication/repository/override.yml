@@ -1,6 +1,7 @@
 ---
-- name: Download authentication repository override directory
-  include_role:
-      name: app/authentication/repository/override
-  when: authentication.enabled
+- block:
+    - name: Download authentication repository override directory
+      include_role:
+        name: app/authentication/repository/override
+  when: app.authentication.enabled
   tags: [authentication]

@@ -1,10 +1,11 @@
 ---
-- name: Detect formio repository override directory
-  local_action: 'stat path={{ formio_repository_override }}'
-  register: _repository_override
-
-- name: Download formio repository override directory
-  copy:
-      src: '{{ formio_repository_override }}/'
-      dest: /srv/formio
-  when: _repository_override.stat.exists == true
+- block:
+    - name: Detect formio repository override directory
+      local_action: 'stat path={{ formio_repository_override }}'
+      register: _repository_override
+    - name: Download formio repository override directory
+      copy:
+        src: '{{ formio_repository_override }}/'
+        dest: /srv/formio
+      when: _repository_override.stat.exists == true
+  tags: [formio]

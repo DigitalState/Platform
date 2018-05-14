@@ -1,6 +1,7 @@
 ---
-- name: Stop logs container
-  include_role:
-      name: app/logs/container/stop
-  when: logs.enabled
+- block:
+    - name: Stop logs container
+      include_role:
+        name: app/logs/container/stop
+  when: app.logs.enabled
   tags: [logs]

@@ -1,6 +1,7 @@
 ---
-- name: Clear topics cache
-  include_role:
-      name: app/topics/cache/clear
-  when: topics.enabled
+- block:
+    - name: Clear topics cache
+      include_role:
+        name: app/topics/cache/clear
+  when: app.topics.enabled
   tags: [topics]

@@ -1,6 +1,7 @@
 ---
-- name: Run authentication tests
-  include_role:
-      name: app/authentication/test/run
-  when: authentication.enabled
+- block:
+    - name: Run authentication tests
+      include_role:
+        name: app/authentication/test/run
+  when: app.authentication.enabled
   tags: [authentication]

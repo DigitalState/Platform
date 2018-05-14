@@ -1,10 +1,10 @@
 ---
-- name: Define authentication discovery variables
-  set_fact:
-      authentication_discovery_host: '{{ discovery.api.host }}'
-
-- name: Configure authentication discovery settings
-  include_role:
-      name: app/authentication/discovery/configure
-  when: authentication.enabled
+- block:
+    - name: Define authentication discovery variables
+      set_fact:
+        authentication_discovery_host: '{{ app.discovery.api.host }}'
+    - name: Configure authentication discovery settings
+      include_role:
+        name: app/authentication/discovery/configure
+  when: app.authentication.enabled
   tags: [authentication]

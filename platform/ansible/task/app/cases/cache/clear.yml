@@ -1,6 +1,7 @@
 ---
-- name: Clear cases cache
-  include_role:
-      name: app/cases/cache/clear
-  when: cases.enabled
+- block:
+    - name: Clear cases cache
+      include_role:
+        name: app/cases/cache/clear
+  when: app.cases.enabled
   tags: [cases]

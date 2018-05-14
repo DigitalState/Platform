@@ -1,6 +1,8 @@
 ---
-- name: Set services config
-  shell:
-      cmd: 'docker-compose exec -T php php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
-      chdir: /srv/services
-  with_dict: '{{ services_config }}'
+- block:
+    - name: Set services config
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+        chdir: /srv/services
+      with_dict: '{{ services_config }}'
+  tags: [services]

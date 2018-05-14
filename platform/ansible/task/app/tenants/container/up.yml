@@ -1,0 +1,35 @@
+---
+- block:
+    - name: Gather information for tenants container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Define tenants container variables
+      set_fact:
+        tenants_env_file: .env.lab
+      when: env == 'lab'
+    - name: Define tenants container variables
+      set_fact:
+        tenants_compose_project_name: '{{ project }}tenants'
+        tenants_network: '{{ project }}proxy_default'
+        tenants_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        tenants_nginx_virtual_host: '{{ app.tenants.api.host }}'
+        tenants_adminer_virtual_host: '{{ app.tenants.adminer.host }}'
+        tenants_rebrow_virtual_host: '{{ app.tenants.rebrow.host }}'
+        tenants_discovery_host: '{{ app.discovery.api.host }}'
+        tenants_directory: '{{ directory }}/tenants'
+        tenants_database_host: '{{ app.tenants.database.host }}'
+        tenants_database_port: '{{ app.tenants.database.port }}'
+        tenants_database_name: '{{ app.tenants.database.name }}'
+        tenants_database_username: '{{ app.tenants.database.username }}'
+        tenants_database_password: '{{ app.tenants.database.password }}'
+    - name: Detect docker credential file
+      local_action: 'stat path=/root/docker/credential'
+      register: _docker_credential
+    - name: Define tenants container variables
+      set_fact:
+        tenants_credential: '{{ lookup("file", "/root/docker/credential") }}'
+      when: _docker_credential.stat.exists == true
+    - name: Up tenants container
+      include_role:
+        name: app/tenants/container/up
+  when: app.tenants.enabled
+  tags: [tenants]

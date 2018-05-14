@@ -1,5 +1,7 @@
 ---
-- name: Clear authentication cache
-  shell:
-      cmd: docker-compose exec -T php php bin/console cache:clear --no-warmup --env=prod | cat
-      chdir: /srv/authentication
+- block:
+    - name: Clear authentication cache
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console cache:clear --no-warmup --env={{ authentication_env }}'
+        chdir: /srv/authentication
+  tags: [authentication]

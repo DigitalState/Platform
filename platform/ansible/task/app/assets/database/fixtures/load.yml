@@ -15,5 +15,5 @@
     - name: Load assets database fixtures
       include_role:
         name: app/assets/database/fixtures/load
-  when: assets.enabled
+  when: app.assets.enabled
   tags: [assets]

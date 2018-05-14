@@ -1,6 +1,7 @@
 ---
-- name: Stop assets container
-  include_role:
-      name: app/assets/container/stop
-  when: assets.enabled
+- block:
+    - name: Stop assets container
+      include_role:
+        name: app/assets/container/stop
+  when: app.assets.enabled
   tags: [assets]

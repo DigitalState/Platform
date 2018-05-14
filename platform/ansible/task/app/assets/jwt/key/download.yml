@@ -1,6 +1,7 @@
 ---
-- name: Download assets jwt keys
-  include_role:
-      name: app/assets/jwt/key/download
-  when: assets.enabled
+- block:
+    - name: Download assets jwt keys
+      include_role:
+        name: app/assets/jwt/key/download
+  when: app.assets.enabled
   tags: [assets]

@@ -15,5 +15,5 @@
     - name: Load identities database fixtures
       include_role:
         name: app/identities/database/fixtures/load
-  when: identities.enabled
+  when: app.identities.enabled
   tags: [identities]

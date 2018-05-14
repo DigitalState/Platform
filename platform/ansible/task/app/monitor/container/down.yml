@@ -1,6 +1,7 @@
 ---
-- name: Down monitor container
-  include_role:
-      name: app/monitor/container/down
-  when: monitor.enabled
+- block:
+    - name: Down monitor container
+      include_role:
+        name: app/monitor/container/down
+  when: app.monitor.enabled
   tags: [monitor]

@@ -1,6 +1,7 @@
 ---
-- name: Run tasks tests
-  include_role:
-      name: app/tasks/test/run
-  when: tasks.enabled
+- block:
+    - name: Run tasks tests
+      include_role:
+        name: app/tasks/test/run
+  when: app.tasks.enabled
   tags: [tasks]

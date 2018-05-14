@@ -1,6 +1,7 @@
 ---
-- name: Validate cms tests
-  include_role:
-      name: app/cms/test/validate
-  when: cms.enabled
+- block:
+    - name: Validate cms tests
+      include_role:
+        name: app/cms/test/validate
+  when: app.cms.enabled
   tags: [cms]

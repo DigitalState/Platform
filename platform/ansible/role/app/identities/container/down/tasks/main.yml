@@ -1,8 +1,10 @@
 ---
-- name: Down identities container
-  docker_service:
-      project_src: /srv/identities
-      files:
+- block:
+    - name: Down identities container
+      docker_service:
+        project_src: /srv/identities
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: absent
+        state: absent
+  tags: [identities]

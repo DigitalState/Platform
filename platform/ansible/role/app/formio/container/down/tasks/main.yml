@@ -1,8 +1,10 @@
 ---
-- name: Down formio container
-  docker_service:
-      project_src: /srv/formio
-      files:
+- block:
+    - name: Down formio container
+      docker_service:
+        project_src: /srv/formio
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: absent
+        state: absent
+  tags: [formio]

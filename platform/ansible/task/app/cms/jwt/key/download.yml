@@ -1,6 +1,7 @@
 ---
-- name: Download cms jwt keys
-  include_role:
-      name: app/cms/jwt/key/download
-  when: cms.enabled
+- block:
+    - name: Download cms jwt keys
+      include_role:
+        name: app/cms/jwt/key/download
+  when: app.cms.enabled
   tags: [cms]

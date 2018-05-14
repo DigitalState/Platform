@@ -5,6 +5,7 @@ authentication_network: dsproxy_default
 authentication_proxy_host: 127.0.0.1
 authentication_nginx_virtual_host: api.authentication.ds
 authentication_adminer_virtual_host: adminer.authentication.ds
+authentication_rebrow_virtual_host: rebrow.authentication.ds
 authentication_discovery_host: api.discovery.ds
 authentication_directory: /srv/authentication
 authentication_database_host: authentication_db

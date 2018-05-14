@@ -1,6 +1,7 @@
 ---
-- name: Validate records tests
-  include_role:
-      name: app/records/test/validate
-  when: records.enabled
+- block:
+    - name: Validate records tests
+      include_role:
+        name: app/records/test/validate
+  when: app.records.enabled
   tags: [records]

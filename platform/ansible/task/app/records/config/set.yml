@@ -2,9 +2,9 @@
 - block:
     - name: Define records config variables
       set_fact:
-          records_config: '{{ config }}'
+        records_config: '{{ config }}'
     - name: Set records configs
       include_role:
-          name: app/records/config/set
-  when: records.enabled
+        name: app/records/config/set
+  when: app.records.enabled
   tags: [records]

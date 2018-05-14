@@ -1,6 +1,7 @@
 ---
-- name: Down interactions container
-  include_role:
-      name: app/interactions/container/down
-  when: interactions.enabled
+- block:
+    - name: Down interactions container
+      include_role:
+        name: app/interactions/container/down
+  when: app.interactions.enabled
   tags: [interactions]

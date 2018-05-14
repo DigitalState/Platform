@@ -1,6 +1,7 @@
 ---
-- name: Stop interactions container
-  include_role:
-      name: app/interactions/container/stop
-  when: interactions.enabled
+- block:
+    - name: Stop interactions container
+      include_role:
+        name: app/interactions/container/stop
+  when: app.interactions.enabled
   tags: [interactions]

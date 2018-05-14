@@ -1,12 +1,11 @@
 ---
-- name: Define camunda repository variables
-  set_fact:
-      camunda_repository: '{{ camunda.repository }}'
-      camunda_version: '{{ camunda.version }}'
-  tags: [camunda]
-
-- name: Download camunda repository
-  include_role:
-      name: app/camunda/repository/download
-  when: camunda.enabled
+- block:
+    - name: Define camunda repository variables
+      set_fact:
+        camunda_repository: '{{ app.camunda.repository }}'
+        camunda_version: '{{ app.camunda.version }}'
+    - name: Download camunda repository
+      include_role:
+        name: app/camunda/repository/download
+  when: app.camunda.enabled
   tags: [camunda]

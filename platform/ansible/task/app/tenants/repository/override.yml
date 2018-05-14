@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Download tenants repository override directory
+      include_role:
+        name: app/tenants/repository/override
+  when: app.tenants.enabled
+  tags: [tenants]

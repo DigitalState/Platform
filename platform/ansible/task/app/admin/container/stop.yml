@@ -1,6 +1,7 @@
 ---
-- name: Stop admin container
-  include_role:
-      name: app/admin/container/stop
-  when: admin.enabled
+- block:
+    - name: Stop admin container
+      include_role:
+        name: app/admin/container/stop
+  when: app.admin.enabled
   tags: [admin]

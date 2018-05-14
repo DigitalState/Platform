@@ -15,5 +15,5 @@
     - name: Load tasks database fixtures
       include_role:
         name: app/tasks/database/fixtures/load
-  when: tasks.enabled
+  when: app.tasks.enabled
   tags: [tasks]

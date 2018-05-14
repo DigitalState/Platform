@@ -1,0 +1,116 @@
+---
+- block:
+    - block:
+        - name: Configure tenants namespace environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^COMPOSE_PROJECT_NAME='
+            line: 'COMPOSE_PROJECT_NAME={{ tenants_compose_project_name }}'
+        - name: Configure tenants network environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^NETWORK='
+            line: 'NETWORK={{ tenants_network }}'
+        - name: Configure proxy host environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^PROXY_HOST='
+            line: 'PROXY_HOST={{ tenants_proxy_host }}'
+        - name: Configure nginx virtual host environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^NGINX_VIRTUAL_HOST='
+            line: 'NGINX_VIRTUAL_HOST={{ tenants_nginx_virtual_host }}'
+        - name: Configure adminer virtual host environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^ADMINER_VIRTUAL_HOST='
+            line: 'ADMINER_VIRTUAL_HOST={{ tenants_adminer_virtual_host }}'
+        - name: Configure rebrow virtual host environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^REBROW_VIRTUAL_HOST='
+            line: 'REBROW_VIRTUAL_HOST={{ tenants_rebrow_virtual_host }}'
+        - name: Configure discovery host environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^DISCOVERY_HOST='
+            line: 'DISCOVERY_HOST={{ tenants_discovery_host }}'
+        - name: Configure directory environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^DIRECTORY='
+            line: 'DIRECTORY={{ tenants_directory }}'
+        - name: Configure database host environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^DATABASE_HOST='
+            line: 'DATABASE_HOST={{ tenants_database_host }}'
+        - name: Configure database port environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^DATABASE_PORT='
+            line: 'DATABASE_PORT={{ tenants_database_port }}'
+        - name: Configure database name environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^DATABASE_NAME='
+            line: 'DATABASE_NAME={{ tenants_database_name }}'
+        - name: Configure database username environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^DATABASE_USERNAME='
+            line: 'DATABASE_USERNAME={{ tenants_database_username }}'
+        - name: Configure database password environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/tenants/{{ tenants_env_file }}'
+            regexp: '^DATABASE_PASSWORD='
+            line: 'DATABASE_PASSWORD={{ tenants_database_password }}'
+      when: tenants_env_file is not none
+    - name: Log into docker
+      docker_login:
+        email: '{{ tenants_credential.split(":")[0] }}'
+        username: '{{ tenants_credential.split(":")[1] }}'
+        password: '{{ tenants_credential.split(":")[2] }}'
+    - name: Up tenants container
+      docker_service:
+        project_src: /srv/tenants
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ tenants_compose_project_name }}'
+        NETWORK: '{{ tenants_network }}'
+        PROXY_HOST: '{{ tenants_proxy_host }}'
+        NGINX_VIRTUAL_HOST: '{{ tenants_nginx_virtual_host }}'
+        ADMINER_VIRTUAL_HOST: '{{ tenants_adminer_virtual_host }}'
+        REBROW_VIRTUAL_HOST: '{{ tenants_rebrow_virtual_host }}'
+        DIRECTORY: '{{ tenants_directory }}'
+        DATABASE_HOST: '{{ tenants_database_host }}'
+        DATABASE_PORT: '{{ tenants_database_port }}'
+        DATABASE_NAME: '{{ tenants_database_name }}'
+        DATABASE_USERNAME: '{{ tenants_database_username }}'
+        DATABASE_PASSWORD: '{{ tenants_database_password }}'
+    - name: Waiting for tenants container to finalize installation
+      shell:
+        cmd: docker-compose exec -T php pidof php-fpm | cat
+        chdir: /srv/tenants
+      register: _output
+      until: _output.stdout|match('^[0-9]+(\s[0-9]+)*$')
+      retries: 60
+      delay: 10
+  tags: [tenants]

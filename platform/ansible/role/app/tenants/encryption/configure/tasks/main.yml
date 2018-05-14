@@ -1,0 +1,8 @@
+---
+- block:
+    - name: Configure tenants encryption secret setting
+      lineinfile:
+        path: '{{ tenants_encryption_config_file }}'
+        regexp: '^\s{4}secret:'
+        line: '    secret: {{ tenants_encryption_secret }}'
+  tags: [tenants]

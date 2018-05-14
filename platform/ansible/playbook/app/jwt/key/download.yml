@@ -1,10 +1,14 @@
 ---
-- name: Compile jwt list
+- name: Compile jwt/key/download task list
   hosts: platform
   become: true
   tasks:
-    - name: ...
-      include_tasks: /etc/ansible/task/platform/compiler/jwt/key/download.yml
+    - name: Compile files
+      compile:
+        app: '{{ app }}'
+        directory: /etc/ansible/task/app/*
+        task: jwt/key/download
+      register: _result
   tags: [always]
 
 - name: Download jwt private and public key
@@ -15,9 +19,8 @@
       set_fact:
         jwt_private_key: '/root/resource/jwt/{{ env|replace(".", "/") }}/key'
         jwt_public_key: '/root/resource/jwt/{{ env|replace(".", "/") }}/key.pub'
-
-    - name: Include compiled list
-      include_tasks: '{{ file }}'
-      with_items: '{{ hostvars["platform"]["_files"] }}'
+    - name: Include compiled task list
+      include_tasks: '{{ _file }}'
+      with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
       loop_control:
-        loop_var: file
+        loop_var: _file

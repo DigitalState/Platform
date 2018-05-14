@@ -1,8 +1,10 @@
 ---
-- name: Down authentication container
-  docker_service:
-      project_src: /srv/authentication
-      files:
+- block:
+    - name: Down authentication container
+      docker_service:
+        project_src: /srv/authentication
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: absent
+        state: absent
+  tags: [authentication]

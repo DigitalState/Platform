@@ -1,6 +1,7 @@
 ---
-- name: Download documentation repository override directory
-  include_role:
-      name: app/documentation/repository/override
-  when: documentation is not none
+- block:
+    - name: Download documentation repository override directory
+      include_role:
+        name: app/documentation/repository/override
+  when: app.documentation.enabled
   tags: [documentation]

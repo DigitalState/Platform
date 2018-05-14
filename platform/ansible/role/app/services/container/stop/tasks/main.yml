@@ -1,9 +1,11 @@
 ---
-- name: Stop services container
-  docker_service:
-      project_src: /srv/services
-      files:
+- block:
+    - name: Stop services container
+      docker_service:
+        project_src: /srv/services
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: present
-      stopped: yes
+        state: present
+        stopped: yes
+  tags: [services]

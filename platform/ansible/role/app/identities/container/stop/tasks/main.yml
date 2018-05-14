@@ -1,9 +1,11 @@
 ---
-- name: Stop identities container
-  docker_service:
-      project_src: /srv/identities
-      files:
+- block:
+    - name: Stop identities container
+      docker_service:
+        project_src: /srv/identities
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: present
-      stopped: yes
+        state: present
+        stopped: yes
+  tags: [identities]

@@ -1,5 +1,7 @@
 ---
-- name: Clear cases cache
-  shell:
-      cmd: docker-compose exec -T php php bin/console cache:clear --no-warmup --env=prod | cat
-      chdir: /srv/cases
+- block:
+    - name: Clear cases cache
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console cache:clear --no-warmup --env={{ cases_env }}'
+        chdir: /srv/cases
+  tags: [cases]

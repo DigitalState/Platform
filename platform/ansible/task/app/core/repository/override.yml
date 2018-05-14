@@ -1,6 +1,7 @@
 ---
-- name: Download core repository override directory
-  include_role:
-      name: app/core/repository/override
-  when: core.enabled
+- block:
+    - name: Download core repository override directory
+      include_role:
+        name: app/core/repository/override
+  when: app.core.enabled
   tags: [core]

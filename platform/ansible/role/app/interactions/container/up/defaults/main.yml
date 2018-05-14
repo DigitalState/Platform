@@ -5,6 +5,7 @@ interactions_network: dsproxy_default
 interactions_proxy_host: 127.0.0.1
 interactions_nginx_virtual_host: api.interactions.ds
 interactions_adminer_virtual_host: adminer.interactions.ds
+interactions_rebrow_virtual_host: rebrow.interactions.ds
 interactions_discovery_host: api.discovery.ds
 interactions_directory: /srv/interactions
 interactions_database_host: interactions_db

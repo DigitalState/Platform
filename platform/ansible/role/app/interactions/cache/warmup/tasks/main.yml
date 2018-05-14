@@ -1,5 +1,7 @@
 ---
-- name: Warmup interactions cache
-  shell:
-      cmd: docker-compose exec -T php php bin/console cache:warmup --env=prod | cat
-      chdir: /srv/interactions
+- block:
+    - name: Warmup interactions cache
+      shell:
+        cmd: docker-compose exec -T php php bin/console cache:warmup --env=prod | cat
+        chdir: /srv/interactions
+  tags: [interactions]

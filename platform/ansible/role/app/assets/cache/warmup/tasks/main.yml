@@ -1,5 +1,7 @@
 ---
-- name: Warmup assets cache
-  shell:
-      cmd: docker-compose exec -T php php bin/console cache:warmup --env=prod | cat
-      chdir: /srv/assets
+- block:
+    - name: Warmup assets cache
+      shell:
+        cmd: docker-compose exec -T php php bin/console cache:warmup --env=prod | cat
+        chdir: /srv/assets
+  tags: [assets]

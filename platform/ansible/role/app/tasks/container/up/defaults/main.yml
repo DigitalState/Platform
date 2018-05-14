@@ -5,6 +5,7 @@ tasks_network: dsproxy_default
 tasks_proxy_host: 127.0.0.1
 tasks_nginx_virtual_host: api.tasks.ds
 tasks_adminer_virtual_host: adminer.tasks.ds
+tasks_rebrow_virtual_host: rebrow.tasks.ds
 tasks_discovery_host: api.discovery.ds
 tasks_directory: /srv/tasks
 tasks_database_host: tasks_db

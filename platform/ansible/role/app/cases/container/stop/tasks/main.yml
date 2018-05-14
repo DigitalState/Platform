@@ -1,9 +1,11 @@
 ---
-- name: Stop cases container
-  docker_service:
-      project_src: /srv/cases
-      files:
+- block:
+    - name: Stop cases container
+      docker_service:
+        project_src: /srv/cases
+        files:
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
-      state: present
-      stopped: yes
+        state: present
+        stopped: yes
+  tags: [cases]

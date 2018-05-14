@@ -1,10 +1,10 @@
 ---
-- name: Define assets discovery variables
-  set_fact:
-      assets_discovery_host: '{{ discovery.api.host }}'
-
-- name: Configure assets discovery settings
-  include_role:
-      name: app/assets/discovery/configure
-  when: assets.enabled
+- block:
+    - name: Define assets discovery variables
+      set_fact:
+        assets_discovery_host: '{{ app.discovery.api.host }}'
+    - name: Configure assets discovery settings
+      include_role:
+        name: app/assets/discovery/configure
+  when: app.assets.enabled
   tags: [assets]

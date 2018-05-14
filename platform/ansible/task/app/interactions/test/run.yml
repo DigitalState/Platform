@@ -1,6 +1,7 @@
 ---
-- name: Run interactions tests
-  include_role:
-      name: app/interactions/test/run
-  when: interactions.enabled
+- block:
+    - name: Run interactions tests
+      include_role:
+        name: app/interactions/test/run
+  when: app.interactions.enabled
   tags: [interactions]

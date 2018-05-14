@@ -1,27 +1,28 @@
 ---
 - block:
-      - name: Gather information for cases container
-        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-      - name: Define cases container variables
-        set_fact:
-            cases_env_file: .env.lab
-        when: env == 'lab'
-      - name: Define cases container variables
-        set_fact:
-            cases_compose_project_name: '{{ project }}cases'
-            cases_network: '{{ project }}proxy_default'
-            cases_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-            cases_nginx_virtual_host: '{{ cases.api.host }}'
-            cases_adminer_virtual_host: '{{ cases.adminer.host }}'
-            cases_discovery_host: '{{ discovery.api.host }}'
-            cases_directory: '{{ directory }}/cases'
-            cases_database_host: '{{ cases.database.host }}'
-            cases_database_port: '{{ cases.database.port }}'
-            cases_database_name: '{{ cases.database.name }}'
-            cases_database_username: '{{ cases.database.username }}'
-            cases_database_password: '{{ cases.database.password }}'
-      - name: Up cases container
-        include_role:
-            name: app/cases/container/up
-  when: cases.enabled
+    - name: Gather information for cases container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Define cases container variables
+      set_fact:
+        cases_env_file: .env.lab
+      when: env == 'lab'
+    - name: Define cases container variables
+      set_fact:
+        cases_compose_project_name: '{{ project }}cases'
+        cases_network: '{{ project }}proxy_default'
+        cases_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        cases_nginx_virtual_host: '{{ app.cases.api.host }}'
+        cases_adminer_virtual_host: '{{ app.cases.adminer.host }}'
+        cases_rebrow_virtual_host: '{{ app.cases.rebrow.host }}'
+        cases_discovery_host: '{{ app.discovery.api.host }}'
+        cases_directory: '{{ directory }}/cases'
+        cases_database_host: '{{ app.cases.database.host }}'
+        cases_database_port: '{{ app.cases.database.port }}'
+        cases_database_name: '{{ app.cases.database.name }}'
+        cases_database_username: '{{ app.cases.database.username }}'
+        cases_database_password: '{{ app.cases.database.password }}'
+    - name: Up cases container
+      include_role:
+        name: app/cases/container/up
+  when: app.cases.enabled
   tags: [cases]

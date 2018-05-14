@@ -1,8 +1,9 @@
 ---
-- name: Load topics database fixtures
-  import_tasks: default.yml
-  when: topics_override == ""
-
-- name: Load topics database fixtures override
-  import_tasks: override.yml
-  when: topics_override != ""
+- block:
+    - name: Load topics database fixtures
+      import_tasks: default.yml
+      when: topics_override == ""
+    - name: Load topics database fixtures override
+      import_tasks: override.yml
+      when: topics_override != ""
+  tags: [topics]

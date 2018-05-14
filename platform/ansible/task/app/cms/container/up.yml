@@ -1,27 +1,28 @@
 ---
 - block:
-      - name: Gather information for cms container
-        include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-      - name: Define cms container variables
-        set_fact:
-            cms_env_file: .env.lab
-        when: env == 'lab'
-      - name: Define cms container variables
-        set_fact:
-            cms_compose_project_name: '{{ project }}cms'
-            cms_network: '{{ project }}proxy_default'
-            cms_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-            cms_nginx_virtual_host: '{{ cms.api.host }}'
-            cms_adminer_virtual_host: '{{ cms.adminer.host }}'
-            cms_discovery_host: '{{ discovery.api.host }}'
-            cms_directory: '{{ directory }}/cms'
-            cms_database_host: '{{ cms.database.host }}'
-            cms_database_port: '{{ cms.database.port }}'
-            cms_database_name: '{{ cms.database.name }}'
-            cms_database_username: '{{ cms.database.username }}'
-            cms_database_password: '{{ cms.database.password }}'
-      - name: Up cms container
-        include_role:
-            name: app/cms/container/up
-  when: cms.enabled
+    - name: Gather information for cms container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Define cms container variables
+      set_fact:
+        cms_env_file: .env.lab
+      when: env == 'lab'
+    - name: Define cms container variables
+      set_fact:
+        cms_compose_project_name: '{{ project }}cms'
+        cms_network: '{{ project }}proxy_default'
+        cms_proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        cms_nginx_virtual_host: '{{ app.cms.api.host }}'
+        cms_adminer_virtual_host: '{{ app.cms.adminer.host }}'
+        cms_rebrow_virtual_host: '{{ app.cms.rebrow.host }}'
+        cms_discovery_host: '{{ app.discovery.api.host }}'
+        cms_directory: '{{ directory }}/cms'
+        cms_database_host: '{{ app.cms.database.host }}'
+        cms_database_port: '{{ app.cms.database.port }}'
+        cms_database_name: '{{ app.cms.database.name }}'
+        cms_database_username: '{{ app.cms.database.username }}'
+        cms_database_password: '{{ app.cms.database.password }}'
+    - name: Up cms container
+      include_role:
+        name: app/cms/container/up
+  when: app.cms.enabled
   tags: [cms]

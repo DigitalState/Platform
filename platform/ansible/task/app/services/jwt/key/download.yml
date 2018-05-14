@@ -1,6 +1,7 @@
 ---
-- name: Download services jwt keys
-  include_role:
-      name: app/services/jwt/key/download
-  when: services.enabled
+- block:
+    - name: Download services jwt keys
+      include_role:
+        name: app/services/jwt/key/download
+  when: app.services.enabled
   tags: [services]

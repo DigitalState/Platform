@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Clear tenants cache
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console cache:clear --no-warmup --env={{ tenants_env }}'
+        chdir: /srv/tenants
+  tags: [tenants]

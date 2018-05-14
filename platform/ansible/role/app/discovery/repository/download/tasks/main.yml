@@ -1,7 +1,9 @@
 ---
-- name: Download discovery repository
-  git:
-      repo: '{{ discovery_repository }}'
-      version: '{{ discovery_version }}'
-      dest: /srv/discovery
-      force: yes
+- block:
+    - name: Download discovery repository
+      git:
+        repo: '{{ discovery_repository }}'
+        version: '{{ discovery_version }}'
+        dest: /srv/discovery
+        force: yes
+  tags: [discovery]

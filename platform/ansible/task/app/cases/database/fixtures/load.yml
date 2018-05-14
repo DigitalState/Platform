@@ -15,5 +15,5 @@
     - name: Load cases database fixtures
       include_role:
         name: app/cases/database/fixtures/load
-  when: cases.enabled
+  when: app.cases.enabled
   tags: [cases]

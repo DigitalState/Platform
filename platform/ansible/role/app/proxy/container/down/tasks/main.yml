@@ -1,5 +1,7 @@
 ---
-- name: Down proxy container
-  docker_service:
-      project_src: /srv/proxy
-      state: absent
+- block:
+    - name: Down proxy container
+      docker_service:
+        project_src: /srv/proxy
+        state: absent
+  tags: [proxy]

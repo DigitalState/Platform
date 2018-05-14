@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Stop tenants container
+      include_role:
+        name: app/tenants/container/stop
+  when: app.tenants.enabled
+  tags: [tenants]

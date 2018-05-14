@@ -5,6 +5,7 @@ records_network: dsproxy_default
 records_proxy_host: 127.0.0.1
 records_nginx_virtual_host: api.records.ds
 records_adminer_virtual_host: adminer.records.ds
+records_rebrow_virtual_host: rebrow.records.ds
 records_discovery_host: api.discovery.ds
 records_directory: /srv/records
 records_database_host: records_db

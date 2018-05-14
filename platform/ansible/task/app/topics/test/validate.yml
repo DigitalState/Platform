@@ -1,6 +1,7 @@
 ---
-- name: Validate topics tests
-  include_role:
-      name: app/topics/test/validate
-  when: topics.enabled
+- block:
+    - name: Validate topics tests
+      include_role:
+        name: app/topics/test/validate
+  when: app.topics.enabled
   tags: [topics]

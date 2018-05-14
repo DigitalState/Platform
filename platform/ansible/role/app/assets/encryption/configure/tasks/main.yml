@@ -1,6 +1,8 @@
 ---
-- name: Configure assets encryption secret setting
-  lineinfile:
-      path: '{{ assets_encryption_config_file }}'
-      regexp: '^\s{4}secret:'
-      line: '    secret: {{ assets_encryption_secret }}'
+- block:
+    - name: Configure assets encryption secret setting
+      lineinfile:
+        path: '{{ assets_encryption_config_file }}'
+        regexp: '^\s{4}secret:'
+        line: '    secret: {{ assets_encryption_secret }}'
+  tags: [assets]
