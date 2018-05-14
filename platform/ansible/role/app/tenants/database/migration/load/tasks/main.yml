@@ -17,7 +17,7 @@
       no_log: yes
     - name: Load tenants database migration
       shell:
-        cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:migrate {{ "" if tenants_database_migration_version is none else tenants_database_migration_version|replace(".", "_") }} --no-interaction | cat'
+        cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:migrate {{ "" if tenants_database_migration_version is none else tenants_database_migration_version|replace(".", "_") }} --no-interaction'
         chdir: /srv/tenants
     # The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
     - name: Pause while tenants database migration loads
