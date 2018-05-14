@@ -63,6 +63,7 @@
                 value: 'http://{{ admin.host }}'
               app.spa.portal:
                 value: 'http://{{ portal.host }}'
+      tags: [always]
 
 - name: Load database migration
   hosts: server
@@ -73,3 +74,4 @@
       with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
       loop_control:
         loop_var: _file
+      tags: [always]

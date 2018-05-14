@@ -21,3 +21,4 @@
       with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
       loop_control:
         loop_var: _file
+      tags: [always]

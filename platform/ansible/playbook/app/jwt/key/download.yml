@@ -19,8 +19,10 @@
       set_fact:
         jwt_private_key: '/root/resource/jwt/{{ env|replace(".", "/") }}/key'
         jwt_public_key: '/root/resource/jwt/{{ env|replace(".", "/") }}/key.pub'
+      tags: [always]
     - name: Include compiled task list
       include_tasks: '{{ _file }}'
       with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
       loop_control:
         loop_var: _file
+      tags: [always]

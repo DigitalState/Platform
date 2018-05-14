@@ -20,5 +20,7 @@
       with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
       loop_control:
         loop_var: _file
+      tags: [always]
     - name: Configure discovery domain mapping
       include_tasks: /etc/ansible/task/app/discovery/map/configure.yml
+      tags: [always]
