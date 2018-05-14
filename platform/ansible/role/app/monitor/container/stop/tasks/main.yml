@@ -3,6 +3,9 @@
     - name: Stop monitor container
       docker_service:
         project_src: /srv/monitor
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
         state: present
         stopped: yes
   tags: [monitor]
