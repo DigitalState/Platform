@@ -3,5 +3,9 @@
     - name: Down proxy container
       docker_service:
         project_src: /srv/proxy
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ env }}.yml'
         state: absent
+        remove_volumes: '{{ "no" if proxy_persistent else "yes" }}'
   tags: [proxy]

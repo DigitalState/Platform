@@ -7,4 +7,5 @@
           - docker-compose.yml
           - 'docker-compose.{{ env }}.yml'
         state: absent
+        remove_volumes: '{{ "no" if camunda_persistent else "yes" }}'
   tags: [camunda]
