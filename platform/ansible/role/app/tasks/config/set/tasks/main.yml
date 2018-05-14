@@ -2,7 +2,7 @@
 - block:
     - name: Set tasks config
       shell:
-        cmd: 'docker-compose exec -T php php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+        cmd: 'docker-compose exec -T php php bin/console ds:config:set {{ item.key }} {{ item.value }}'
         chdir: /srv/tasks
       with_dict: '{{ tasks_config }}'
   tags: [tasks]

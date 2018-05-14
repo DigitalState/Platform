@@ -2,7 +2,7 @@
 - block:
     - name: Set cases config
       shell:
-        cmd: 'docker-compose exec -T php php bin/console ds:config:set {{ item.key }} {{ item.value }} | cat'
+        cmd: 'docker-compose exec -T php php bin/console ds:config:set {{ item.key }} {{ item.value }}'
         chdir: /srv/cases
       with_dict: '{{ cases_config }}'
   tags: [cases]
