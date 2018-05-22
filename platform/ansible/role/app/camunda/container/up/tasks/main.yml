@@ -56,9 +56,6 @@
             regexp: '^PASSWORD='
             line: 'PASSWORD={{ camunda_password }}'
       when: camunda_env_file is not none
-    - name: Ansible docker_service bug work-around
-      set_fact:
-        _camunda: '{{ camunda }}'
     - name: Up camunda container
       docker_service:
         project_src: /srv/camunda
@@ -76,7 +73,4 @@
         DIRECTORY: '{{ camunda_directory }}'
         USERNAME: '{{ camunda_username }}'
         PASSWORD: '{{ camunda_password }}'
-    - name: Ansible docker_service bug work-around
-      set_fact:
-        camunda: '{{ _camunda }}'
   tags: [camunda]

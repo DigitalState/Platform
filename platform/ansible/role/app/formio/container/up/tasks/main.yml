@@ -60,9 +60,6 @@
             regexp: '^PASSWORD='
             line: 'PASSWORD={{ formio_password }}'
       when: formio_env_file is not none
-    - name: Ansible docker_service bug work-around
-      set_fact:
-        _formio: '{{ formio }}'
     - name: Up formio container
       docker_service:
         project_src: /srv/formio
@@ -78,7 +75,4 @@
         DIRECTORY: '{{ formio_directory }}'
         USERNAME: '{{ formio_username }}'
         PASSWORD: '{{ formio_password }}'
-    - name: Ansible docker_service bug work-around
-      set_fact:
-        formio: '{{ _formio }}'
   tags: [formio]
