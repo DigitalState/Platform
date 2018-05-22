@@ -37,7 +37,7 @@ If you are on _Windows_, **Windows Pro** with **HyperV** and **DockerForWindows*
 
 If you are on _Mac_, **DockerForMac** is required.
 
-Docker toolkit is not compatible.
+Docker Toolkit is not compatible.
 
 ## Documentation
 
