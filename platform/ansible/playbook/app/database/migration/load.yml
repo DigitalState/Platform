@@ -20,6 +20,8 @@
           1.0.0:
             tenant:
               uuid: '{{ (ansible_date_time.iso8601_micro + "1")|to_uuid }}'
+              title:
+                en: Tenant
             user:
               system:
                 uuid: '{{ (ansible_date_time.iso8601_micro + "2")|to_uuid }}'
