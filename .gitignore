@@ -1,8 +1,6 @@
 /.idea
 
-/app/documentation
-/app/guide
-/app/proxy
+/app/admin
 /app/assets
 /app/authentication
 /app/camunda
@@ -10,17 +8,20 @@
 /app/cms
 /app/core
 /app/discovery
+/app/documentation
 /app/formio
+/app/guide
 /app/identities
 /app/interactions
 /app/logs
+/app/monitor
+/app/portal
+/app/proxy
 /app/records
 /app/services
 /app/tasks
+/app/tenants
 /app/topics
-/app/admin
-/app/monitor
-/app/portal
 /app/ui
 /app/VERSION
 
