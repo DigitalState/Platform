@@ -12,13 +12,13 @@ It represents the experimental branch of the DigitalState platform and enables t
 
 ## Synopsis
 
-1. **[Install Git and Docker on your local machine.](#1-install-git-and-docker-on-your-local-machine)**
-2. **[Download the platform repository.](#2-download-the-platform-repository)**
-3. **[Boot the platform container.](#3-boot-the-platform-container)**
-4. **[Enter the platform container console.](#4-enter-the-platform-container-console)**
-5. **[Configure the Ansible environment.](#6-configure-the-ansible-environment)**
-6. **[Add DNS entries to your host file.](#7-add-dns-entries-to-your-host-file)**
-7. **[Run the install command with Ansible.](#8-run-the-install-command-with-ansible)**
+1. [Install Git and Docker on your local machine.](#1-install-git-and-docker-on-your-local-machine)
+2. [Download the platform repository.](#2-download-the-platform-repository)
+3. [Boot the platform container.](#3-boot-the-platform-container)
+4. [Enter the platform container console.](#4-enter-the-platform-container-console)
+5. [Configure the Ansible environment.](#6-configure-the-ansible-environment)
+6. [Add DNS entries to your host file.](#7-add-dns-entries-to-your-host-file)
+7. [Run the install command with Ansible.](#8-run-the-install-command-with-ansible)
 
 ## Deployment
 
