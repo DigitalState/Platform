@@ -41,9 +41,9 @@ Docker Toolkit is not compatible.
 
 ## Documentation
 
-- [User Guide](https://github.com/DigitalState/Guide)
-- [Developer Documentation](https://github.com/DigitalState/Documentation)
 - [Platform Documentation](https://github.com/DigitalState/Platform/blob/develop/platform/documentation/index.md)
+- [Developer Documentation](https://github.com/DigitalState/Documentation)
+- [User Guide](https://github.com/DigitalState/Guide)
 
 ## Contributing
 
