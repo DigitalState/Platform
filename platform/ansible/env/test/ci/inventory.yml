@@ -130,6 +130,8 @@ all:
         version: develop
         api:
           host: api.formio.ci.test.ds
+        adminer:
+          host: adminer.formio.ci.test.ds
         username: admin@staff.ds
         password: admin
       guide:

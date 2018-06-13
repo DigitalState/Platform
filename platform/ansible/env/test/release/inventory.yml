@@ -130,6 +130,8 @@ all:
         version: 0.6.0
         api:
           host: api.formio.release.test.ds
+        adminer:
+          host: adminer.formio.release.test.ds
         username: admin@staff.ds
         password: admin
       guide:

@@ -4,12 +4,12 @@
       replace:
         path: /srv/formio/formio/client/dist/config.js
         regexp: api\.formio\.ds
-        replace: '{{ formio_virtual_host }}'
+        replace: '{{ formio_formio_virtual_host }}'
     - name: Configure app host config
       replace:
         path: /srv/formio/formio/config/default.json
         regexp: api\.formio\.ds
-        replace: '{{ formio_virtual_host }}'
+        replace: '{{ formio_formio_virtual_host }}'
     - block:
         - name: Configure formio namespace environment variable
           lineinfile:
@@ -29,12 +29,18 @@
             path: '/srv/formio/{{ formio_env_file }}'
             regexp: '^PROXY_HOST='
             line: 'PROXY_HOST={{ formio_proxy_host }}'
-        - name: Configure virtual host environment variable
+        - name: Configure formio virtual host environment variable
           lineinfile:
             create: yes
             path: '/srv/formio/{{ formio_env_file }}'
-            regexp: '^VIRTUAL_HOST='
-            line: 'VIRTUAL_HOST={{ formio_virtual_host }}'
+            regexp: '^FORMIO_VIRTUAL_HOST='
+            line: 'FORMIO_VIRTUAL_HOST={{ formio_formio_virtual_host }}'
+        - name: Configure adminer virtual host environment variable
+          lineinfile:
+            create: yes
+            path: '/srv/formio/{{ formio_env_file }}'
+            regexp: '^ADMINER_VIRTUAL_HOST='
+            line: 'ADMINER_VIRTUAL_HOST={{ formio_adminer_virtual_host }}'
         - name: Configure discovery host environment variable
           lineinfile:
             create: yes
@@ -71,7 +77,8 @@
         COMPOSE_PROJECT_NAME: '{{ formio_compose_project_name }}'
         NETWORK: '{{ formio_network }}'
         PROXY_HOST: '{{ formio_proxy_host }}'
-        VIRTUAL_HOST: '{{ formio_virtual_host }}'
+        FORMIO_VIRTUAL_HOST: '{{ formio_formio_virtual_host }}'
+        ADMINER_VIRTUAL_HOST: '{{ formio_adminer_virtual_host }}'
         DIRECTORY: '{{ formio_directory }}'
         USERNAME: '{{ formio_username }}'
         PASSWORD: '{{ formio_password }}'

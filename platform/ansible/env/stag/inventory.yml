@@ -130,6 +130,8 @@ all:
         version: 0.6.0
         api:
           host: api.formio.stag.ds
+        adminer:
+          host: adminer.formio.stag.ds
         username: admin@staff.ds
         password: ~
       guide:
