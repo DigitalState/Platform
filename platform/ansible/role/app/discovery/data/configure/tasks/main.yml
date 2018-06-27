@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Configure discovery data
+      copy:
+        content: '{{ discovery_data|to_json }}'
+        dest: '{{ discovery_data_config_file }}'
+  tags: [discovery]

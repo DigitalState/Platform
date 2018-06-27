@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Define discovery map variable
+    - name: Define discovery dns variable
       set_fact:
         discovery_map:
           assets: '{{ app.assets.api.host }}'
@@ -18,8 +18,8 @@
           tasks: '{{ app.tasks.api.host }}'
           tenants: '{{ app.tenants.api.host }}'
           topics: '{{ app.topics.api.host }}'
-    - name: Set discovery map
+    - name: Set discovery dns
       include_role:
-        name: app/discovery/map/configure
+        name: app/discovery/dns/configure
   when: app.discovery.enabled
   tags: [discovery]

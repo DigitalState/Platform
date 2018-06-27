@@ -1,0 +1,3 @@
+---
+discovery_data_config_file: /srv/discovery/web/data.json
+discovery_data: {}

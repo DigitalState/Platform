@@ -1,0 +1,3 @@
+---
+discovery_dns_config_file: /srv/discovery/web/index.json
+discovery_dns: {}

@@ -1,0 +1,77 @@
+---
+- block:
+    - name: Define discovery data variable
+      set_fact:
+        discovery_data:
+          assets:
+            host: '{{ app.assets.api.host }}'
+            enabled: '{{ app.assets.enabled }}'
+            attributes:
+              tenant: true
+          authentication:
+            host: '{{ app.authentication.api.host }}'
+            enabled: '{{ app.authentication.enabled }}'
+            attributes:
+              tenant: true
+          camunda:
+            host: '{{ app.camunda.api.host }}/engine-rest'
+            enabled: '{{ app.camunda.enabled }}'
+          cases:
+            host: '{{ app.cases.api.host }}'
+            enabled: '{{ app.cases.enabled }}'
+            attributes:
+              tenant: true
+          cms:
+            host: '{{ app.cms.api.host }}'
+            enabled: '{{ app.cms.enabled }}'
+            attributes:
+              tenant: true
+          discovery:
+            host: '{{ app.discovery.api.host }}'
+            enabled: '{{ app.discovery.enabled }}'
+          formio:
+            host: '{{ app.formio.api.host }}'
+            enabled: '{{ app.formio.enabled }}'
+          identities:
+            host: '{{ app.identities.api.host }}'
+            enabled: '{{ app.identities.enabled }}'
+            attributes:
+              tenant: true
+          interactions:
+            host: '{{ app.interactions.api.host }}'
+            enabled: '{{ app.interactions.enabled }}'
+            attributes:
+              tenant: true
+          logs:
+            host: '{{ app.logs.api.host }}'
+            enabled: '{{ app.logs.enabled }}'
+          records:
+            host: '{{ app.records.api.host }}'
+            enabled: '{{ app.records.enabled }}'
+            attributes:
+              tenant: true
+          services:
+            host: '{{ app.services.api.host }}'
+            enabled: '{{ app.services.enabled }}'
+            attributes:
+              tenant: true
+          tasks:
+            host: '{{ app.tasks.api.host }}'
+            enabled: '{{ app.tasks.enabled }}'
+            attributes:
+              tenant: true
+          tenants:
+            host: '{{ app.tenants.api.host }}'
+            enabled: '{{ app.tenants.enabled }}'
+            attributes:
+              tenant: true
+          topics:
+            host: '{{ app.topics.api.host }}'
+            enabled: '{{ app.topics.enabled }}'
+            attributes:
+              tenant: true
+    - name: Set discovery data
+      include_role:
+        name: app/discovery/data/configure
+  when: app.discovery.enabled
+  tags: [discovery]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Configure discovery dns
+      copy:
+        content: '{{ discovery_dns|to_json }}'
+        dest: '{{ discovery_dns_config_file }}'
+  tags: [discovery]

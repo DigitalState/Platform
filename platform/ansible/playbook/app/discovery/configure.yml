@@ -21,6 +21,9 @@
       loop_control:
         loop_var: _file
       tags: [always]
-    - name: Configure discovery domain mapping
-      include_tasks: /etc/ansible/task/app/discovery/map/configure.yml
+    - name: Configure discovery dns
+      include_tasks: /etc/ansible/task/app/discovery/dns/configure.yml
+      tags: [always]
+    - name: Configure discovery data
+      include_tasks: /etc/ansible/task/app/discovery/data/configure.yml
       tags: [always]
