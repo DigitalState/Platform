@@ -1,0 +1,4 @@
+---
+tenants_system_config_file: /srv/tenants/app/config/parameters.yml
+tenants_system_username: system
+tenants_system_password: ~

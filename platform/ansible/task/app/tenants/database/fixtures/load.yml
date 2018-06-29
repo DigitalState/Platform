@@ -11,7 +11,7 @@
       set_fact:
         tenants_fixtures: 'test'
         tenants_override: ''
-      when: env[0:4] == 'test'
+      when: platform.env[0:4] == 'test'
     - name: Load tenants database fixtures
       include_role:
         name: app/tenants/database/fixtures/load

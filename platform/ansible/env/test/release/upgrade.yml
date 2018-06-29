@@ -1,6 +1,6 @@
 ---
-- import_playbook: app/system/initialize.yml
-- import_playbook: app/system/setup.yml
+- import_playbook: app/server/initialize.yml
+- import_playbook: app/server/setup.yml
 - import_playbook: app/container/down.yml
 - import_playbook: app/repository/download.yml
 - import_playbook: app/repository/override.yml

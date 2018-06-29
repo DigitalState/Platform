@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Define tasks system variables
+      set_fact:
+        tasks_system_username: '{{ platform.system.username }}'
+        tasks_system_password: '{{ platform.system.password }}'
+    - name: Configure tasks system settings
+      include_role:
+        name: app/tasks/system/configure
+  when: app.tasks.enabled
+  tags: [tasks]

@@ -1,4 +1,5 @@
 ---
+proxy_env: prod
 proxy_env_file: ~
 proxy_compose_project_name: dsproxy
 proxy_port: 443

@@ -2,7 +2,7 @@
 - block:
     - name: Define services encryption variables
       set_fact:
-        services_encryption_secret: '{{ encryption.secret }}'
+        services_encryption_secret: '{{ platform.encryption.secret }}'
     - name: Configure services encryption settings
       include_role:
         name: app/services/encryption/configure

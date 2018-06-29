@@ -1,4 +1,5 @@
 ---
+cases_env: prod
 cases_env_file: ~
 cases_compose_project_name: dscases
 cases_network: dsproxy_default

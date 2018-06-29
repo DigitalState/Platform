@@ -1,4 +1,5 @@
 ---
+camunda_env: prod
 camunda_env_file: ~
 camunda_compose_project_name: dscamunda
 camunda_network: dsproxy_default

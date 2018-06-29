@@ -1,0 +1,23 @@
+---
+- name: Compile system/configure task list
+  hosts: platform
+  become: true
+  tasks:
+    - name: Compile files
+      compile:
+        app: '{{ app }}'
+        directory: /etc/ansible/task/app/*
+        task: system/configure
+      register: _result
+  tags: [always]
+
+- name: Configure system settings
+  hosts: server
+  become: true
+  tasks:
+    - name: Include compiled task list
+      include_tasks: '{{ _file }}'
+      with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
+      loop_control:
+        loop_var: _file
+      tags: [always]

@@ -1,4 +1,5 @@
 ---
+interactions_env: prod
 interactions_env_file: ~
 interactions_compose_project_name: dsinteractions
 interactions_network: dsproxy_default

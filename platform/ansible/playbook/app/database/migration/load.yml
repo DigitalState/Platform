@@ -22,16 +22,22 @@
               uuid: '{{ (ansible_date_time.iso8601_micro + "1")|to_uuid }}'
               title:
                 en: Tenant
+            system:
+              username: '{{ platform.system.username }}'
+              password: '{{ platform.system.password }}'
             user:
               system:
                 uuid: '{{ (ansible_date_time.iso8601_micro + "2")|to_uuid }}'
-                password: '{{ user.system.password }}'
+                username: '{{ platform.user.system.username }}'
+                password: '{{ platform.user.system.password }}'
               anonymous:
                 uuid: '{{ (ansible_date_time.iso8601_micro + "3")|to_uuid }}'
-                password: '{{ user.anonymous.password }}'
+                username: '{{ platform.user.anonymous.username }}'
+                password: '{{ platform.user.anonymous.password }}'
               admin:
                 uuid: '{{ (ansible_date_time.iso8601_micro + "4")|to_uuid }}'
-                password: '{{ user.admin.password }}'
+                username: '{{ platform.user.admin.username }}'
+                password: '{{ platform.user.admin.password }}'
             identity:
               system:
                 uuid: '{{ (ansible_date_time.iso8601_micro + "5")|to_uuid }}'

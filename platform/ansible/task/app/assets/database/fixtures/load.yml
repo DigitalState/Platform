@@ -11,7 +11,7 @@
       set_fact:
         assets_fixtures: 'test'
         assets_override: ''
-      when: env[0:4] == 'test'
+      when: platform.env[0:4] == 'test'
     - name: Load assets database fixtures
       include_role:
         name: app/assets/database/fixtures/load

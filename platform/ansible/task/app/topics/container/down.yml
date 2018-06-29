@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define topics container variables
+      set_fact:
+        topics_env: '{{ platform.env }}'
     - name: Down topics container
       include_role:
         name: app/topics/container/down

@@ -90,7 +90,7 @@
         project_src: /srv/tasks
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ tasks_env }}.yml'
         state: present
       environment:
         COMPOSE_PROJECT_NAME: '{{ tasks_compose_project_name }}'

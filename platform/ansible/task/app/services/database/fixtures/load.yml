@@ -11,7 +11,7 @@
       set_fact:
         services_fixtures: 'test'
         services_override: ''
-      when: env[0:4] == 'test'
+      when: platform.env[0:4] == 'test'
     - name: Load services database fixtures
       include_role:
         name: app/services/database/fixtures/load

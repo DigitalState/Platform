@@ -2,11 +2,11 @@
 - block:
     - name: Define authentication mail variables
       set_fact:
-        authentication_mail_transport: '{{ mail.transport }}'
-        authentication_mail_host: '{{ mail.host }}'
-        authentication_mail_port: '{{ mail.port }}'
-        authentication_mail_username: '{{ mail.username }}'
-        authentication_mail_password: '{{ mail.password }}'
+        authentication_mail_transport: '{{ platform.mail.transport }}'
+        authentication_mail_host: '{{ platform.mail.host }}'
+        authentication_mail_port: '{{ platform.mail.port }}'
+        authentication_mail_username: '{{ platform.mail.username }}'
+        authentication_mail_password: '{{ platform.mail.password }}'
     - name: Configure authentication mail settings
       include_role:
         name: app/authentication/mail/configure

@@ -1,6 +1,9 @@
 ---
 - block:
-    - name: Stop proxy container
+    - name: Define portal container variables
+      set_fact:
+        portal_env: '{{ platform.env }}'
+    - name: Stop portal container
       include_role:
         name: app/portal/container/stop
   when: app.portal.enabled

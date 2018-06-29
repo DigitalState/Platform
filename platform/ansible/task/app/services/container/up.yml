@@ -4,18 +4,19 @@
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Define services container variables
       set_fact:
-        services_env_file: .env.lab
-      when: env == 'lab'
+        services_env_file: .env.platform
+      when: platform.env == 'lab'
     - name: Define services container variables
       set_fact:
-        services_compose_project_name: '{{ project }}services'
-        services_network: '{{ project }}proxy_default'
+        services_env: '{{ platform.env }}'
+        services_compose_project_name: '{{ platform.namespace }}services'
+        services_network: '{{ platform.namespace }}proxy_default'
         services_proxy_host: '{{ proxy_container_info_ip.stdout }}'
         services_nginx_virtual_host: '{{ app.services.api.host }}'
         services_adminer_virtual_host: '{{ app.services.adminer.host }}'
         services_rebrow_virtual_host: '{{ app.services.rebrow.host }}'
         services_discovery_host: '{{ app.discovery.api.host }}'
-        services_directory: '{{ directory }}/services'
+        services_directory: '{{ platform.app }}/services'
         services_database_host: '{{ app.services.database.host }}'
         services_database_port: '{{ app.services.database.port }}'
         services_database_name: '{{ app.services.database.name }}'

@@ -1,6 +1,9 @@
 ---
 - block:
-    - name: Down proxy container
+    - name: Define portal container variables
+      set_fact:
+        portal_env: '{{ platform.env }}'
+    - name: Down portal container
       include_role:
         name: app/portal/container/down
   when: app.portal.enabled

@@ -4,18 +4,19 @@
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Define topics container variables
       set_fact:
-        topics_env_file: .env.lab
-      when: env == 'lab'
+        topics_env_file: .env.platform
+      when: platform.env == 'lab'
     - name: Define topics container variables
       set_fact:
-        topics_compose_project_name: '{{ project }}topics'
-        topics_network: '{{ project }}proxy_default'
+        topics_env: '{{ platform.env }}'
+        topics_compose_project_name: '{{ platform.namespace }}topics'
+        topics_network: '{{ platform.namespace }}proxy_default'
         topics_proxy_host: '{{ proxy_container_info_ip.stdout }}'
         topics_nginx_virtual_host: '{{ app.topics.api.host }}'
         topics_adminer_virtual_host: '{{ app.topics.adminer.host }}'
         topics_rebrow_virtual_host: '{{ app.topics.rebrow.host }}'
         topics_discovery_host: '{{ app.discovery.api.host }}'
-        topics_directory: '{{ directory }}/topics'
+        topics_directory: '{{ platform.app }}/topics'
         topics_database_host: '{{ app.topics.database.host }}'
         topics_database_port: '{{ app.topics.database.port }}'
         topics_database_name: '{{ app.topics.database.name }}'

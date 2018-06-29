@@ -5,7 +5,7 @@
         project_src: /srv/logs
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ logs_env }}.yml'
         state: absent
         remove_volumes: '{{ "no" if logs_persistent else "yes" }}'
   tags: [logs]

@@ -1,4 +1,5 @@
 ---
+formio_env: prod
 formio_env_file: ~
 formio_compose_project_name: dsformio
 formio_network: dsproxy_default

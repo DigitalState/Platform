@@ -5,7 +5,7 @@
         project_src: /srv/identities
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ identities_env }}.yml'
         state: absent
         remove_volumes: '{{ "no" if identities_persistent else "yes" }}'
   tags: [identities]

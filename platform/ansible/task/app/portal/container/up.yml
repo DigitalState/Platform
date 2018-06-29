@@ -5,15 +5,16 @@
     - name: Define portal container variables
       set_fact:
         portal_env_file: .env.platform
-      when: env == 'lab'
+      when: platform.env == 'lab'
     - name: Define portal container variables
       set_fact:
-        portal_compose_project_name: '{{ project }}portal'
-        portal_network: '{{ project }}proxy_default'
+        portal_env: '{{ platform.env }}'
+        portal_compose_project_name: '{{ platform.namespace }}portal'
+        portal_network: '{{ platform.namespace }}proxy_default'
         portal_proxy_host: '{{ proxy_container_info_ip.stdout }}'
         portal_virtual_host: '{{ app.portal.host }}'
         portal_discovery_host: '{{ app.discovery.api.host }}'
-        portal_directory: '{{ directory }}/portal'
+        portal_directory: '{{ platform.app }}/portal'
     - name: Up portal container
       include_role:
         name: app/portal/container/up

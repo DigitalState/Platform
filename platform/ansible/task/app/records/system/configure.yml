@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Define records system variables
+      set_fact:
+        records_system_username: '{{ platform.system.username }}'
+        records_system_password: '{{ platform.system.password }}'
+    - name: Configure records system settings
+      include_role:
+        name: app/records/system/configure
+  when: app.records.enabled
+  tags: [records]

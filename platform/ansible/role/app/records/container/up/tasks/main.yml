@@ -85,7 +85,7 @@
         project_src: /srv/records
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ records_env }}.yml'
         state: present
       environment:
         COMPOSE_PROJECT_NAME: '{{ records_compose_project_name }}'

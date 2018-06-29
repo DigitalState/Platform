@@ -1,4 +1,5 @@
 ---
+portal_env: prod
 portal_env_file: ~
 portal_compose_project_name: dsportal
 portal_network: dsproxy_default

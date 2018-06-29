@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Define topics system variables
+      set_fact:
+        topics_system_username: '{{ platform.system.username }}'
+        topics_system_password: '{{ platform.system.password }}'
+    - name: Configure topics system settings
+      include_role:
+        name: app/topics/system/configure
+  when: app.topics.enabled
+  tags: [topics]

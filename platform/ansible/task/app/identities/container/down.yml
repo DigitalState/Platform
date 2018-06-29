@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define identities container variables
+      set_fact:
+        identities_env: '{{ platform.env }}'
     - name: Down identities container
       include_role:
         name: app/identities/container/down

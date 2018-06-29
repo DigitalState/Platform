@@ -5,16 +5,17 @@
     - name: Define authentication container variables
       set_fact:
         formio_env_file: .env.platform
-      when: env == 'lab'
+      when: platform.env == 'lab'
     - name: Define formio container variables
       set_fact:
-        formio_compose_project_name: '{{ project }}formio'
-        formio_network: '{{ project }}proxy_default'
+        formio_env: '{{ platform.env }}'
+        formio_compose_project_name: '{{ platform.namespace }}formio'
+        formio_network: '{{ platform.namespace }}proxy_default'
         formio_proxy_host: '{{ proxy_container_info_ip.stdout }}'
         formio_formio_virtual_host: '{{ app.formio.api.host }}'
         formio_adminer_virtual_host: '{{ app.formio.adminer.host }}'
         formio_discovery_host: '{{ app.discovery.api.host }}'
-        formio_directory: '{{ directory }}/formio'
+        formio_directory: '{{ platform.app }}/formio'
         formio_username: '{{ app.formio.username }}'
         formio_password: '{{ app.formio.password }}'
     - name: Up formio container

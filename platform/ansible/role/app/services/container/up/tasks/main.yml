@@ -85,7 +85,7 @@
         project_src: /srv/services
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ services_env }}.yml'
         state: present
       environment:
         COMPOSE_PROJECT_NAME: '{{ services_compose_project_name }}'

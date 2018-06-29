@@ -2,7 +2,7 @@
 - block:
     - name: Define records jwt variables
       set_fact:
-        records_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
+        records_jwt_key_pass_phrase: '{{ platform.jwt.pass_phrase }}'
     - name: Configure records jwt key pass phrase
       include_role:
         name: app/records/jwt/configure

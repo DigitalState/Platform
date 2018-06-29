@@ -2,7 +2,7 @@
 - block:
     - name: Define interactions encryption variables
       set_fact:
-        interactions_encryption_secret: '{{ encryption.secret }}'
+        interactions_encryption_secret: '{{ platform.encryption.secret }}'
     - name: Configure interactions encryption settings
       include_role:
         name: app/interactions/encryption/configure

@@ -1,4 +1,5 @@
 ---
+discovery_env: prod
 discovery_env_file: ~
 discovery_compose_project_name: dsdiscovery
 discovery_network: dsproxy_default

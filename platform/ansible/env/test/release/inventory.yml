@@ -8,27 +8,34 @@ all:
 #      ansible_port: 22
 #      ansible_ssh_private_key_file: /root/.ssh/test/release/key
   vars:
-    project: ds
-    directory: /home/travis/build/DigitalState/Platform/app
-    env: test.release
-    timezone: UTC
-    encryption:
-      secret: 11111111111111111111111111111111
-    jwt:
-      pass_phrase: 1111
-    mail:
-      transport: smtp
-      host: 127.0.0.1
-      port: ~
-      username: mail@localhost
-      password: ~
-    user:
+    platform:
+      namespace: ds
+      env: test.release
+      app: /home/travis/build/DigitalState/Platform/app
+      timezone: UTC
+      encryption:
+        secret: 11111111111111111111111111111111
+      jwt:
+        pass_phrase: 1111
+      mail:
+        transport: smtp
+        host: 127.0.0.1
+        port: ~
+        username: mail@localhost
+        password: ~
       system:
-        password: system
-      anonymous:
-        password: anonymous
-      admin:
-        password: admin
+        username: system
+        password: '$2y$12$dDJ1PEFFEpS/Vy9YovKbA.3S8Eh7xJVQ.PGUcWTvp1h8QCQaL/6JS'
+      user:
+        system:
+          username: system@system.ds
+          password: system
+        anonymous:
+          username: anonymous@anonymous.ds
+          password: anonymous
+        admin:
+          username: admin@staff.ds
+          password: admin
     app:
       admin:
         enabled: true

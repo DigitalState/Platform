@@ -2,7 +2,7 @@
 - block:
     - name: Define tasks jwt variables
       set_fact:
-        tasks_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
+        tasks_jwt_key_pass_phrase: '{{ platform.jwt.pass_phrase }}'
     - name: Configure tasks jwt key pass phrase
       include_role:
         name: app/tasks/jwt/configure

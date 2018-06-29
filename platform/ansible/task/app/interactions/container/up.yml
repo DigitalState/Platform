@@ -4,18 +4,19 @@
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Define interactions container variables
       set_fact:
-        interactions_env_file: .env.lab
-      when: env == 'lab'
+        interactions_env_file: .env.platform
+      when: platform.env == 'lab'
     - name: Define interactions container variables
       set_fact:
-        interactions_compose_project_name: '{{ project }}interactions'
-        interactions_network: '{{ project }}proxy_default'
+        interactions_env: '{{ platform.env }}'
+        interactions_compose_project_name: '{{ platform.namespace }}interactions'
+        interactions_network: '{{ platform.namespace }}proxy_default'
         interactions_proxy_host: '{{ proxy_container_info_ip.stdout }}'
         interactions_nginx_virtual_host: '{{ app.interactions.api.host }}'
         interactions_adminer_virtual_host: '{{ app.interactions.adminer.host }}'
         interactions_rebrow_virtual_host: '{{ app.interactions.rebrow.host }}'
         interactions_discovery_host: '{{ app.discovery.api.host }}'
-        interactions_directory: '{{ directory }}/interactions'
+        interactions_directory: '{{ platform.app }}/interactions'
         interactions_database_host: '{{ app.interactions.database.host }}'
         interactions_database_port: '{{ app.interactions.database.port }}'
         interactions_database_name: '{{ app.interactions.database.name }}'

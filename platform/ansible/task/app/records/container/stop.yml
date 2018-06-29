@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define records container variables
+      set_fact:
+        records_env: '{{ platform.env }}'
     - name: Stop records container
       include_role:
         name: app/records/container/stop

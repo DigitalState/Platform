@@ -85,7 +85,7 @@
         project_src: /srv/identities
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ identities_env }}.yml'
         state: present
       environment:
         COMPOSE_PROJECT_NAME: '{{ identities_compose_project_name }}'

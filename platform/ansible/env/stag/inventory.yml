@@ -8,27 +8,34 @@ all:
       ansible_port: 22
       ansible_ssh_private_key_file: /root/.ssh/stag/key
   vars:
-    project: ds
-    directory: /srv
-    env: stag
-    timezone: UTC
-    encryption:
-      secret: ~
-    jwt:
-      pass_phrase: ~
-    mail:
-      transport: smtp
-      host: 127.0.0.1
-      port: ~
-      username: mail@localhost
-      password: ~
-    user:
+    platform:
+      namespace: ds
+      env: stag
+      app: /srv
+      timezone: UTC
+      encryption:
+        secret: ~
+      jwt:
+        pass_phrase: ~
+      mail:
+        transport: smtp
+        host: 127.0.0.1
+        port: ~
+        username: mail@localhost
+        password: ~
       system:
+        username: system
         password: ~
-      anonymous:
-        password: ~
-      admin:
-        password: ~
+      user:
+        system:
+          username: system@system.ds
+          password: ~
+        anonymous:
+          username: anonymous@anonymous.ds
+          password: ~
+        admin:
+          username: admin@staff.ds
+          password: ~
     app:
       admin:
         enabled: true

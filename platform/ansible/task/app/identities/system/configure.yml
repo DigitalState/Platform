@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Define identities system variables
+      set_fact:
+        identities_system_username: '{{ platform.system.username }}'
+        identities_system_password: '{{ platform.system.password }}'
+    - name: Configure identities system settings
+      include_role:
+        name: app/identities/system/configure
+  when: app.identities.enabled
+  tags: [identities]

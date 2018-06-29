@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Define tenants system variables
+      set_fact:
+        tenants_system_username: '{{ platform.system.username }}'
+        tenants_system_password: '{{ platform.system.password }}'
+    - name: Configure tenants system settings
+      include_role:
+        name: app/tenants/system/configure
+  when: app.tenants.enabled
+  tags: [tenants]

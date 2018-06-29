@@ -1,0 +1,4 @@
+---
+interactions_system_config_file: /srv/interactions/app/config/parameters.yml
+interactions_system_username: system
+interactions_system_password: ~

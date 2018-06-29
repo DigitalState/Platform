@@ -5,7 +5,7 @@
         project_src: /srv/records
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ records_env }}.yml'
         state: present
         stopped: yes
   tags: [records]

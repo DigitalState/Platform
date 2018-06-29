@@ -1,2 +1,3 @@
 ---
+admin_env: prod
 admin_persistent: false

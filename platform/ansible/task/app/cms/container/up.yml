@@ -4,18 +4,19 @@
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Define cms container variables
       set_fact:
-        cms_env_file: .env.lab
-      when: env == 'lab'
+        cms_env_file: .env.platform
+      when: platform.env == 'lab'
     - name: Define cms container variables
       set_fact:
-        cms_compose_project_name: '{{ project }}cms'
-        cms_network: '{{ project }}proxy_default'
+        cms_env: '{{ platform.env }}'
+        cms_compose_project_name: '{{ platform.namespace }}cms'
+        cms_network: '{{ platform.namespace }}proxy_default'
         cms_proxy_host: '{{ proxy_container_info_ip.stdout }}'
         cms_nginx_virtual_host: '{{ app.cms.api.host }}'
         cms_adminer_virtual_host: '{{ app.cms.adminer.host }}'
         cms_rebrow_virtual_host: '{{ app.cms.rebrow.host }}'
         cms_discovery_host: '{{ app.discovery.api.host }}'
-        cms_directory: '{{ directory }}/cms'
+        cms_directory: '{{ platform.app }}/cms'
         cms_database_host: '{{ app.cms.database.host }}'
         cms_database_port: '{{ app.cms.database.port }}'
         cms_database_name: '{{ app.cms.database.name }}'

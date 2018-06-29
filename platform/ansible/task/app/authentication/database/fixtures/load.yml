@@ -11,7 +11,7 @@
       set_fact:
         authentication_fixtures: 'test'
         authentication_override: ''
-      when: env[0:4] == 'test'
+      when: platform.env[0:4] == 'test'
     - name: Load authentication database fixtures
       include_role:
         name: app/authentication/database/fixtures/load

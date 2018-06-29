@@ -85,7 +85,7 @@
         project_src: /srv/assets
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ assets_env }}.yml'
         state: present
       environment:
         COMPOSE_PROJECT_NAME: '{{ assets_compose_project_name }}'

@@ -2,7 +2,7 @@
 - block:
     - name: Define tenants jwt variables
       set_fact:
-        tenants_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
+        tenants_jwt_key_pass_phrase: '{{ platform.jwt.pass_phrase }}'
     - name: Configure tenants jwt key pass phrase
       include_role:
         name: app/tenants/jwt/configure

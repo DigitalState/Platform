@@ -1,2 +1,3 @@
 ---
+records_env: prod
 records_persistent: false

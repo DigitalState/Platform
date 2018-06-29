@@ -53,6 +53,9 @@
     - name: Up monitor container
       docker_service:
         project_src: /srv/monitor
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ logs_env }}.yml'
         state: present
       environment:
         COMPOSE_PROJECT_NAME: '{{ monitor_compose_project_name }}'

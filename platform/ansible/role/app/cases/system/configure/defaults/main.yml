@@ -1,0 +1,4 @@
+---
+cases_system_config_file: /srv/cases/app/config/parameters.yml
+cases_system_username: system
+cases_system_password: ~

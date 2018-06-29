@@ -2,11 +2,11 @@
 - block:
     - name: Define assets mail variables
       set_fact:
-        assets_mail_transport: '{{ mail.transport }}'
-        assets_mail_host: '{{ mail.host }}'
-        assets_mail_port: '{{ mail.port }}'
-        assets_mail_username: '{{ mail.username }}'
-        assets_mail_password: '{{ mail.password }}'
+        assets_mail_transport: '{{ platform.mail.transport }}'
+        assets_mail_host: '{{ platform.mail.host }}'
+        assets_mail_port: '{{ platform.mail.port }}'
+        assets_mail_username: '{{ platform.mail.username }}'
+        assets_mail_password: '{{ platform.mail.password }}'
     - name: Configure assets mail settings
       include_role:
         name: app/assets/mail/configure

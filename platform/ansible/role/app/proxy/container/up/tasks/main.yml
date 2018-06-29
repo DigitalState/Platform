@@ -19,7 +19,7 @@
         project_src: /srv/proxy
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ proxy_env }}.yml'
         state: present
       environment:
         COMPOSE_PROJECT_NAME: '{{ proxy_compose_project_name }}'

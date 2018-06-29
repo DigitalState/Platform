@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define interactions container variables
+      set_fact:
+        interactions_env: '{{ platform.env }}'
     - name: Stop interactions container
       include_role:
         name: app/interactions/container/stop

@@ -1,4 +1,5 @@
 ---
+logs_env: prod
 logs_env_file: ~
 logs_compose_project_name: dslogs
 logs_network: dsproxy_default

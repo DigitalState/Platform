@@ -5,15 +5,16 @@
     - name: Define admin container variables
       set_fact:
         admin_env_file: .env.platform
-      when: env == 'lab'
+      when: platform.env == 'lab'
     - name: Define admin container variables
       set_fact:
-        admin_compose_project_name: '{{ project }}admin'
-        admin_network: '{{ project }}proxy_default'
+        admin_env: '{{ platform.env }}'
+        admin_compose_project_name: '{{ platform.namespace }}admin'
+        admin_network: '{{ platform.namespace }}proxy_default'
         admin_proxy_host: '{{ proxy_container_info_ip.stdout }}'
         admin_virtual_host: '{{ app.admin.host }}'
         admin_discovery_host: '{{ app.discovery.api.host }}'
-        admin_directory: '{{ directory }}/admin'
+        admin_directory: '{{ platform.app }}/admin'
     - name: Up admin container
       include_role:
         name: app/admin/container/up

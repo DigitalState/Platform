@@ -1,2 +1,3 @@
 ---
+tenants_env: prod
 tenants_persistent: false

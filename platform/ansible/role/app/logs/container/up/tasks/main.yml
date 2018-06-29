@@ -53,6 +53,9 @@
     - name: Up logs container
       docker_service:
         project_src: /srv/logs
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ logs_env }}.yml'
         state: present
       environment:
         COMPOSE_PROJECT_NAME: '{{ logs_compose_project_name }}'

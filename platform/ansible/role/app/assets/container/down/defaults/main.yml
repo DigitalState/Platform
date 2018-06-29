@@ -1,2 +1,3 @@
 ---
+assets_env: prod
 assets_persistent: false

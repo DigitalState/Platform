@@ -2,11 +2,11 @@
 - block:
     - name: Define records mail variables
       set_fact:
-        records_mail_transport: '{{ mail.transport }}'
-        records_mail_host: '{{ mail.host }}'
-        records_mail_port: '{{ mail.port }}'
-        records_mail_username: '{{ mail.username }}'
-        records_mail_password: '{{ mail.password }}'
+        records_mail_transport: '{{ platform.mail.transport }}'
+        records_mail_host: '{{ platform.mail.host }}'
+        records_mail_port: '{{ platform.mail.port }}'
+        records_mail_username: '{{ platform.mail.username }}'
+        records_mail_password: '{{ platform.mail.password }}'
     - name: Configure records mail settings
       include_role:
         name: app/records/mail/configure

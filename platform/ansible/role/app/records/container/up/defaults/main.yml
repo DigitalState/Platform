@@ -1,4 +1,5 @@
 ---
+records_env: prod
 records_env_file: ~
 records_compose_project_name: dsrecords
 records_network: dsproxy_default

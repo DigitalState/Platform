@@ -5,15 +5,16 @@
     - name: Define logs container variables
       set_fact:
         logs_env_file: .env.platform
-      when: env == 'lab'
+      when: platform.env == 'lab'
     - name: Define logs container variables
       set_fact:
-        logs_compose_project_name: '{{ project }}_logs'
-        logs_network: '{{ project }}proxy_default'
+        logs_env: '{{ platform.env }}'
+        logs_compose_project_name: '{{ platform.namespace }}logs'
+        logs_network: '{{ platform.namespace }}proxy_default'
         logs_proxy_host: '{{ proxy_container_info_ip.stdout }}'
         logs_virtual_host: '{{ app.logs.host }}'
         logs_discovery_host: '{{ app.discovery.api.host }}'
-        logs_directory: '{{ directory }}/logs'
+        logs_directory: '{{ platform.app }}/logs'
     - name: Up logs container
       include_role:
         name: app/logs/container/up

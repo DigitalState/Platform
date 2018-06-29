@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Configure authentication system username setting
+      lineinfile:
+        path: '{{ authentication_system_config_file }}'
+        regexp: '^\s{4}system_username:'
+        line: '    system_username: {{ authentication_system_username }}'
+    - name: Configure authentication mail password setting
+      lineinfile:
+        path: '{{ authentication_system_config_file }}'
+        regexp: '^\s{4}system_password:'
+        line: '    system_password: ''{{ authentication_system_password }}'''
+  tags: [authentication]

@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define tenants container variables
+      set_fact:
+        tenants_env: '{{ platform.env }}'
     - name: Down tenants container
       include_role:
         name: app/tenants/container/down

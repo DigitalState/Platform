@@ -1,0 +1,4 @@
+---
+assets_system_config_file: /srv/assets/app/config/parameters.yml
+assets_system_username: system
+assets_system_password: ~

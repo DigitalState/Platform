@@ -1,0 +1,4 @@
+---
+authentication_system_config_file: /srv/authentication/app/config/parameters.yml
+authentication_system_username: system
+authentication_system_password: ~

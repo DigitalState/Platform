@@ -2,7 +2,7 @@
 - block:
     - name: Define cms encryption variables
       set_fact:
-        cms_encryption_secret: '{{ encryption.secret }}'
+        cms_encryption_secret: '{{ platform.encryption.secret }}'
     - name: Configure cms encryption settings
       include_role:
         name: app/cms/encryption/configure

@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Define assets system variables
+      set_fact:
+        assets_system_username: '{{ platform.system.username }}'
+        assets_system_password: '{{ platform.system.password }}'
+    - name: Configure assets system settings
+      include_role:
+        name: app/assets/system/configure
+  when: app.assets.enabled
+  tags: [assets]

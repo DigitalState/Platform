@@ -11,7 +11,7 @@
       set_fact:
         tasks_fixtures: 'test'
         tasks_override: ''
-      when: env[0:4] == 'test'
+      when: platform.env[0:4] == 'test'
     - name: Load tasks database fixtures
       include_role:
         name: app/tasks/database/fixtures/load

@@ -4,18 +4,19 @@
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Define tenants container variables
       set_fact:
-        tenants_env_file: .env.lab
-      when: env == 'lab'
+        tenants_env_file: .env.platform
+      when: platform.env == 'lab'
     - name: Define tenants container variables
       set_fact:
-        tenants_compose_project_name: '{{ project }}tenants'
-        tenants_network: '{{ project }}proxy_default'
+        tenants_env: '{{ platform.env }}'
+        tenants_compose_project_name: '{{ platform.namespace }}tenants'
+        tenants_network: '{{ platform.namespace }}proxy_default'
         tenants_proxy_host: '{{ proxy_container_info_ip.stdout }}'
         tenants_nginx_virtual_host: '{{ app.tenants.api.host }}'
         tenants_adminer_virtual_host: '{{ app.tenants.adminer.host }}'
         tenants_rebrow_virtual_host: '{{ app.tenants.rebrow.host }}'
         tenants_discovery_host: '{{ app.discovery.api.host }}'
-        tenants_directory: '{{ directory }}/tenants'
+        tenants_directory: '{{ platform.app }}/tenants'
         tenants_database_host: '{{ app.tenants.database.host }}'
         tenants_database_port: '{{ app.tenants.database.port }}'
         tenants_database_name: '{{ app.tenants.database.name }}'

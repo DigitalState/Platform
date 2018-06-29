@@ -2,7 +2,7 @@
 - block:
     - name: Define topics jwt variables
       set_fact:
-        topics_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
+        topics_jwt_key_pass_phrase: '{{ platform.jwt.pass_phrase }}'
     - name: Configure topics jwt key pass phrase
       include_role:
         name: app/topics/jwt/configure

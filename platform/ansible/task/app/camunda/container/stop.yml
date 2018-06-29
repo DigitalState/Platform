@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define camunda container variables
+      set_fact:
+        camunda_env: '{{ platform.env }}'
     - name: Stop camunda container
       include_role:
         name: app/camunda/container/stop

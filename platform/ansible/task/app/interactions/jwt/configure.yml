@@ -2,7 +2,7 @@
 - block:
     - name: Define interactions jwt variables
       set_fact:
-        interactions_jwt_key_pass_phrase: '{{ jwt.pass_phrase }}'
+        interactions_jwt_key_pass_phrase: '{{ platform.jwt.pass_phrase }}'
     - name: Configure interactions jwt key pass phrase
       include_role:
         name: app/interactions/jwt/configure

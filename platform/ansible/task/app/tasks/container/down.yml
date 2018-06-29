@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define tasks container variables
+      set_fact:
+        tasks_env: '{{ platform.env }}'
     - name: Down tasks container
       include_role:
         name: app/tasks/container/down

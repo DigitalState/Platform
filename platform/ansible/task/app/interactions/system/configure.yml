@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Define interactions system variables
+      set_fact:
+        interactions_system_username: '{{ platform.system.username }}'
+        interactions_system_password: '{{ platform.system.password }}'
+    - name: Configure interactions system settings
+      include_role:
+        name: app/interactions/system/configure
+  when: app.interactions.enabled
+  tags: [interactions]

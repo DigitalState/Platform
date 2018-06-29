@@ -85,7 +85,7 @@
         project_src: /srv/cases
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ cases_env }}.yml'
         state: present
       environment:
         COMPOSE_PROJECT_NAME: '{{ cases_compose_project_name }}'

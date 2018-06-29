@@ -1,2 +1,3 @@
 ---
+logs_env: prod
 logs_persistent: false

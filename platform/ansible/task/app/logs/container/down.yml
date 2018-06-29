@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define logs container variables
+      set_fact:
+        logs_env: '{{ platform.env }}'
     - name: Down logs container
       include_role:
         name: app/logs/container/down

@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Define cases system variables
+      set_fact:
+        cases_system_username: '{{ platform.system.username }}'
+        cases_system_password: '{{ platform.system.password }}'
+    - name: Configure cases system settings
+      include_role:
+        name: app/cases/system/configure
+  when: app.cases.enabled
+  tags: [cases]

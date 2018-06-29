@@ -2,11 +2,11 @@
 - block:
     - name: Define services mail variables
       set_fact:
-        services_mail_transport: '{{ mail.transport }}'
-        services_mail_host: '{{ mail.host }}'
-        services_mail_port: '{{ mail.port }}'
-        services_mail_username: '{{ mail.username }}'
-        services_mail_password: '{{ mail.password }}'
+        services_mail_transport: '{{ platform.mail.transport }}'
+        services_mail_host: '{{ platform.mail.host }}'
+        services_mail_port: '{{ platform.mail.port }}'
+        services_mail_username: '{{ platform.mail.username }}'
+        services_mail_password: '{{ platform.mail.password }}'
     - name: Configure services mail settings
       include_role:
         name: app/services/mail/configure

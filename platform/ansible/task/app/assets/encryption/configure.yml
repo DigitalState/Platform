@@ -2,7 +2,7 @@
 - block:
     - name: Define assets encryption variables
       set_fact:
-        assets_encryption_secret: '{{ encryption.secret }}'
+        assets_encryption_secret: '{{ platform.encryption.secret }}'
     - name: Configure assets encryption settings
       include_role:
         name: app/assets/encryption/configure

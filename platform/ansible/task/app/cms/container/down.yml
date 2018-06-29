@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define cms container variables
+      set_fact:
+        cms_env: '{{ platform.env }}'
     - name: Down cms container
       include_role:
         name: app/cms/container/down

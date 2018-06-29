@@ -5,7 +5,7 @@
         project_src: /srv/cms
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ cms_env }}.yml'
         state: present
         stopped: yes
   tags: [cms]

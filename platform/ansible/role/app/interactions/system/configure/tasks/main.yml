@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Configure interactions system username setting
+      lineinfile:
+        path: '{{ interactions_system_config_file }}'
+        regexp: '^\s{4}system_username:'
+        line: '    system_username: {{ interactions_system_username }}'
+    - name: Configure interactions mail password setting
+      lineinfile:
+        path: '{{ interactions_system_config_file }}'
+        regexp: '^\s{4}system_password:'
+        line: '    system_password: ''{{ interactions_system_password }}'''
+  tags: [interactions]

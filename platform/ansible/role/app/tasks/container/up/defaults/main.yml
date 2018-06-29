@@ -1,4 +1,5 @@
 ---
+tasks_env: prod
 tasks_env_file: ~
 tasks_compose_project_name: dstasks
 tasks_network: dsproxy_default

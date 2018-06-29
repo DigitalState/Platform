@@ -1,4 +1,5 @@
 ---
+services_env: prod
 services_env_file: ~
 services_compose_project_name: dsservices
 services_network: dsproxy_default

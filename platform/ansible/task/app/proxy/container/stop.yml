@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define proxy container variables
+      set_fact:
+        proxy_env: '{{ platform.env }}'
     - name: Stop proxy container
       include_role:
         name: app/proxy/container/stop

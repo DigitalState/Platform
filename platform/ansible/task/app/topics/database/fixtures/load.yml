@@ -11,7 +11,7 @@
       set_fact:
         topics_fixtures: 'test'
         topics_override: ''
-      when: env[0:4] == 'test'
+      when: platform.env[0:4] == 'test'
     - name: Load topics database fixtures
       include_role:
         name: app/topics/database/fixtures/load

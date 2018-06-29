@@ -1,0 +1,4 @@
+---
+cms_system_config_file: /srv/cms/app/config/parameters.yml
+cms_system_username: system
+cms_system_password: ~

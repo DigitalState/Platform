@@ -2,7 +2,7 @@
 - block:
     - name: Define discovery dns variable
       set_fact:
-        discovery_map:
+        discovery_dns:
           assets: '{{ app.assets.api.host }}'
           authentication: '{{ app.authentication.api.host }}'
           camunda: '{{ app.camunda.api.host }}/engine-rest'

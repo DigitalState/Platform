@@ -5,7 +5,7 @@
         project_src: /srv/topics
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ topics_env }}.yml'
         state: present
         stopped: yes
   tags: [topics]

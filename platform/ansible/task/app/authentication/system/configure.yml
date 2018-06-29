@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Define authentication system variables
+      set_fact:
+        authentication_system_username: '{{ platform.system.username }}'
+        authentication_system_password: '{{ platform.system.password }}'
+    - name: Configure authentication system settings
+      include_role:
+        name: app/authentication/system/configure
+  when: app.authentication.enabled
+  tags: [authentication]

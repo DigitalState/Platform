@@ -1,2 +1,3 @@
 ---
+tasks_env: prod
 tasks_persistent: false

@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define cases container variables
+      set_fact:
+        cases_env: '{{ platform.env }}'
     - name: Stop cases container
       include_role:
         name: app/cases/container/stop

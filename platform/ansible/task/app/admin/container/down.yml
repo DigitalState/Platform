@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define admin container variables
+      set_fact:
+        admin_env: '{{ platform.env }}'
     - name: Down admin container
       include_role:
         name: app/admin/container/down

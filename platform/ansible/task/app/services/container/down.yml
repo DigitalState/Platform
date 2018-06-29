@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define services container variables
+      set_fact:
+        services_env: '{{ platform.env }}'
     - name: Down services container
       include_role:
         name: app/services/container/down

@@ -5,7 +5,7 @@
         project_src: /srv/assets
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ env }}.yml'
+          - 'docker-compose.{{ assets_env }}.yml'
         state: present
         stopped: yes
   tags: [assets]

@@ -1,4 +1,5 @@
 ---
+authentication_env: prod
 authentication_env_file: ~
 authentication_compose_project_name: dsauthentication
 authentication_network: dsproxy_default

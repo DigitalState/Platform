@@ -1,5 +1,8 @@
 ---
 - block:
+    - name: Define discovery container variables
+      set_fact:
+        discovery_env: '{{ platform.env }}'
     - name: Down discovery container
       include_role:
         name: app/discovery/container/down
