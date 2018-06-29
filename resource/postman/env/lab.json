@@ -1,13 +1,7 @@
 {
-  "id": "d8bbaaf8-9d69-a179-714c-c6c1a7107b92",
-  "name": "DigitalState Lab",
+  "id": "80efe45f-d1c8-4b79-bd5e-edcd6ab3634b",
+  "name": "Platform Lab",
   "values": [
-    {
-      "key": "env",
-      "value": "lab",
-      "enabled": true,
-      "type": "text"
-    },
     {
       "key": "schema",
       "value": "http",
@@ -51,6 +45,12 @@
       "type": "text"
     },
     {
+      "key": "discovery",
+      "value": "{{schema}}://api.discovery.{{host}}",
+      "enabled": true,
+      "type": "text"
+    },
+    {
       "key": "formio",
       "value": "{{schema}}://api.formio.{{host}}",
       "enabled": true,
@@ -81,14 +81,26 @@
       "type": "text"
     },
     {
+      "key": "tenants",
+      "value": "{{schema}}://api.tenants.{{host}}",
+      "enabled": true,
+      "type": "text"
+    },
+    {
       "key": "environment",
       "value": "/app_dev.php",
       "enabled": true,
       "type": "text"
     },
     {
-      "key": "token",
-      "value": "",
+      "key": "system_username",
+      "value": "system",
+      "enabled": true,
+      "type": "text"
+    },
+    {
+      "key": "system_password",
+      "value": "system",
       "enabled": true,
       "type": "text"
     },
@@ -97,9 +109,15 @@
       "value": "",
       "enabled": true,
       "type": "text"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "enabled": true,
+      "type": "text"
     }
   ],
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2018-03-02T22:11:52.740Z",
-  "_postman_exported_using": "Postman/6.0.8"
+  "_postman_exported_at": "2018-06-29T13:43:40.162Z",
+  "_postman_exported_using": "Postman/6.0.10"
 }
