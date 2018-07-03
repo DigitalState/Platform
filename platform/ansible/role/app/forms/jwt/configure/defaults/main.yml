@@ -1,0 +1,3 @@
+---
+forms_config_file: /srv/forms/app/config/parameters.yml
+forms_jwt_key_pass_phrase: ~

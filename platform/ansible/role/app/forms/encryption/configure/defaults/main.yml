@@ -1,0 +1,3 @@
+---
+forms_encryption_config_file: /srv/forms/app/config/parameters.yml
+forms_encryption_secret: ~

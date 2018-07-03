@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Define forms system variables
+      set_fact:
+        forms_system_username: '{{ platform.system.username }}'
+        forms_system_password: '{{ platform.system.password }}'
+    - name: Configure forms system settings
+      include_role:
+        name: app/forms/system/configure
+  when: app.forms.enabled
+  tags: [forms]

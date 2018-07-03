@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Define forms encryption variables
+      set_fact:
+        forms_encryption_secret: '{{ platform.encryption.secret }}'
+    - name: Configure forms encryption settings
+      include_role:
+        name: app/forms/encryption/configure
+  when: app.forms.enabled
+  tags: [forms]

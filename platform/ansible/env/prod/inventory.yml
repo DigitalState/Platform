@@ -141,6 +141,22 @@ all:
           host: adminer.formio.prod.ds
         username: admin@staff.ds
         password: ~
+      forms:
+        enabled: true
+        repository: https://github.com/DigitalState/Forms.git
+        version: 0.6.0
+        api:
+          host: api.forms.prod.ds
+        adminer:
+          host: adminer.forms.prod.ds
+        rebrow:
+          host: rebrow.forms.prod.ds
+        database:
+          host: forms_database
+          port: 5432
+          name: forms
+          username: forms
+          password: ~
       guide:
         enabled: false
         repository: https://github.com/DigitalState/Guide.git

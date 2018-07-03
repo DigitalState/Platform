@@ -1,0 +1,7 @@
+---
+forms_mail_config_file: /srv/forms/app/config/parameters.yml
+forms_mail_transport: smtp
+forms_mail_host: 127.0.0.1
+forms_mail_port: ~
+forms_mail_username: admin@localhost
+forms_mail_password: ~

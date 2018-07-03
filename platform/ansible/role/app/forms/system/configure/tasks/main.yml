@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Configure forms system username setting
+      lineinfile:
+        path: '{{ forms_system_config_file }}'
+        regexp: '^\s{4}system_username:'
+        line: '    system_username: {{ forms_system_username }}'
+    - name: Configure forms mail password setting
+      lineinfile:
+        path: '{{ forms_system_config_file }}'
+        regexp: '^\s{4}system_password:'
+        line: '    system_password: ''{{ forms_system_password }}'''
+  tags: [forms]

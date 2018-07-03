@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Download forms jwt keys
+      include_role:
+        name: app/forms/jwt/key/download
+  when: app.forms.enabled
+  tags: [forms]

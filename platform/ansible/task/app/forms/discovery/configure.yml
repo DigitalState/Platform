@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Define forms discovery variables
+      set_fact:
+        forms_discovery_host: '{{ app.discovery.api.host }}'
+    - name: Configure forms discovery settings
+      include_role:
+        name: app/forms/discovery/configure
+  when: app.forms.enabled
+  tags: [forms]

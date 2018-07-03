@@ -1,0 +1,8 @@
+---
+- block:
+    - name: Configure forms encryption secret setting
+      lineinfile:
+        path: '{{ forms_encryption_config_file }}'
+        regexp: '^\s{4}secret:'
+        line: '    secret: {{ forms_encryption_secret }}'
+  tags: [forms]

@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Backup forms fixtures directory
+      shell: 'mv /srv/forms/src/AppBundle/Resources/fixtures/{{ forms_fixtures }} /srv/forms/src/AppBundle/Resources/fixtures/_{{ forms_fixtures }}'
+    - name: Download forms fixtures directory override
+      copy:
+        src: '{{ forms_override }}/'
+        dest: '/srv/forms/src/AppBundle/Resources/fixtures/{{ forms_fixtures }}'
+    - import_tasks: load.yml
+    - name: Delete forms fixtures directory override
+      file:
+        path: '/srv/forms/src/AppBundle/Resources/fixtures/{{ forms_fixtures }}'
+        state: absent
+    - name: Restore forms fixtures directory backup
+      shell: 'mv /srv/forms/src/AppBundle/Resources/fixtures/_{{ forms_fixtures }} /srv/forms/src/AppBundle/Resources/fixtures/{{ forms_fixtures }}'
+  tags: [forms]

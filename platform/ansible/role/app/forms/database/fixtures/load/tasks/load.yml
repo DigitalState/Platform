@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Load forms database fixtures
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console doctrine:fixtures:load --env={{ forms_fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures --no-interaction'
+        chdir: /srv/forms
+    - name: Pause while forms fixtures load
+      pause:
+        seconds: 15
+  tags: [forms]

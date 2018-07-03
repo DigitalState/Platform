@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Run forms tests
+      include_role:
+        name: app/forms/test/run
+    - name: Validate forms tests result
+      debug:
+        msg: '{{ forms_test_run_result[0] }} / {{ forms_test_run_result[1] }}'
+      failed_when: forms_test_run_result[0] != forms_test_run_result[1]
+  tags: [forms]

@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Down forms container
+      docker_service:
+        project_src: /srv/forms
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ forms_env }}.yml'
+        state: absent
+        remove_volumes: '{{ "no" if forms_persistent else "yes" }}'
+  tags: [forms]

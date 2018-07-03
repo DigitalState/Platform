@@ -141,6 +141,22 @@ all:
           host: adminer.formio.ci.test.ds
         username: admin@staff.ds
         password: admin
+      forms:
+        enabled: true
+        repository: https://github.com/DigitalState/Forms.git
+        version: develop
+        api:
+          host: api.forms.ci.test.ds
+        adminer:
+          host: adminer.forms.ci.test.ds
+        rebrow:
+          host: rebrow.forms.ci.test.ds
+        database:
+          host: forms_database
+          port: 5432
+          name: forms
+          username: forms
+          password: forms
       guide:
         enabled: false
         repository: https://github.com/DigitalState/Guide.git

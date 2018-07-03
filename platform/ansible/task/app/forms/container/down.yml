@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Define forms container variables
+      set_fact:
+        forms_env: '{{ platform.env }}'
+    - name: Down forms container
+      include_role:
+        name: app/forms/container/down
+  when: app.forms.enabled
+  tags: [forms]

@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Define forms repository variables
+      set_fact:
+        forms_repository: '{{ app.forms.repository }}'
+        forms_version: '{{ app.forms.version }}'
+    - name: Download forms repository
+      include_role:
+        name: app/forms/repository/download
+  when: app.forms.enabled
+  tags: [forms]

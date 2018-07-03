@@ -11,5 +11,6 @@
 - import_playbook: app/encryption/configure.yml
 - import_playbook: app/jwt/configure.yml
 - import_playbook: app/mail/configure.yml
+- import_playbook: app/system/configure.yml
 - import_playbook: app/database/migration/load.yml
 - import_playbook: app/database/fixtures/load.yml
