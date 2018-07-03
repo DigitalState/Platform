@@ -83,11 +83,11 @@ Configure the Ansible lab environment:
 
 > The lab environment uses the Ansible inventory file found [here](/platform/ansible/env/lab/inventory.yml) for its configurations.
 
-The [encryption.secret](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L16) config needs to be set to a random, unique and secret 32 characters string.
+The [encryption.secret](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L17) config needs to be set to a random, unique and secret 32 characters string.
 
-The [jwt.pass_phrase](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L18) config needs to be set to the jwt key pass phrase defined at step #5.
+The [jwt.pass_phrase](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L19) config needs to be set to the jwt key pass phrase defined at step #5.
 
-The [directory](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L12) config needs to be set to the absolute path of the platform `app` directory. The value will vary depending on your local machine's operating system:
+The [app](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L14) config needs to be set to the absolute path of the platform `app` directory. The value will vary depending on your local machine's operating system:
 
 **Windows**
 
@@ -126,16 +126,34 @@ Add the following entries:
 ```
 127.0.0.1 admin.lab.ds
 127.0.0.1 portal.lab.ds
+127.0.0.1 adminer.assets.lab.ds
 127.0.0.1 api.assets.lab.ds
+127.0.0.1 rebrow.assets.lab.ds
+127.0.0.1 adminer.authentication.lab.ds
 127.0.0.1 api.authentication.lab.ds
+127.0.0.1 rebrow.authentication.lab.ds
 127.0.0.1 api.camunda.lab.ds
+127.0.0.1 adminer.cases.lab.ds
 127.0.0.1 api.cases.lab.ds
+127.0.0.1 rebrow.cases.lab.ds
+127.0.0.1 adminer.cms.lab.ds
 127.0.0.1 api.cms.lab.ds
+127.0.0.1 rebrow.cms.lab.ds
 127.0.0.1 api.discovery.lab.ds
+127.0.0.1 adminer.formio.lab.ds
 127.0.0.1 api.formio.lab.ds
+127.0.0.1 adminer.forms.lab.ds
+127.0.0.1 api.forms.lab.ds
+127.0.0.1 rebrow.forms.lab.ds
+127.0.0.1 adminer.identities.lab.ds
 127.0.0.1 api.identities.lab.ds
+127.0.0.1 rebrow.identities.lab.ds
+127.0.0.1 adminer.services.lab.ds
 127.0.0.1 api.services.lab.ds
+127.0.0.1 rebrow.services.lab.ds
+127.0.0.1 adminer.records.lab.ds
 127.0.0.1 api.records.lab.ds
+127.0.0.1 rebrow.records.lab.ds
 ```
 
 ### 7. Run the install command with Ansible

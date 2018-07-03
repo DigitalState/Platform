@@ -57,6 +57,12 @@
       "type": "text"
     },
     {
+      "key": "forms",
+      "value": "{{schema}}://api.forms.{{host}}",
+      "enabled": true,
+      "type": "text"
+    },
+    {
       "key": "identities",
       "value": "{{schema}}://api.identities.{{host}}",
       "enabled": true,
@@ -118,6 +124,6 @@
     }
   ],
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2018-06-29T13:43:40.162Z",
+  "_postman_exported_at": "2018-07-03T14:51:09.165Z",
   "_postman_exported_using": "Postman/6.0.10"
 }
