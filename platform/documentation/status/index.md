@@ -17,7 +17,7 @@
 | Records | [![Build Status](https://travis-ci.org/DigitalState/Records.svg?branch=develop)](https://travis-ci.org/DigitalState/Records) | [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Records/badge.svg?branch=develop)](https://coveralls.io/github/DigitalState/Records?branch=develop) | [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DigitalState/Records/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/DigitalState/Records/?branch=develop) |
 | Services | [![Build Status](https://travis-ci.org/DigitalState/Services.svg?branch=develop)](https://travis-ci.org/DigitalState/Services) | [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Services/badge.svg?branch=develop)](https://coveralls.io/github/DigitalState/Services?branch=develop) | [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DigitalState/Services/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/DigitalState/Services/?branch=develop) |
 
-[Release v0.6.0](v0.7.0.md)
+[Release v0.7.0](v0.7.0.md)
 
 [Release v0.6.0](v0.6.0.md)
 
