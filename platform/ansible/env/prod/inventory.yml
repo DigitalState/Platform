@@ -40,12 +40,12 @@ all:
       admin:
         enabled: true
         repository: https://github.com/DigitalState/Admin.git
-        version: 0.6.0
+        version: 0.7.0
         host: admin.prod.ds
       assets:
         enabled: true
         repository: https://github.com/DigitalState/Assets.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.assets.prod.ds
         adminer:
@@ -61,7 +61,7 @@ all:
       authentication:
         enabled: true
         repository: https://github.com/DigitalState/Authentication.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.authentication.prod.ds
         adminer:
@@ -78,7 +78,7 @@ all:
         enabled: true
         order: -10
         repository: https://github.com/DigitalState/Camunda.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.camunda.prod.ds
         username: admin@staff.ds
@@ -86,7 +86,7 @@ all:
       cases:
         enabled: true
         repository: https://github.com/DigitalState/Cases.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.cases.prod.ds
         adminer:
@@ -102,7 +102,7 @@ all:
       cms:
         enabled: true
         repository: https://github.com/DigitalState/Cms.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.cms.prod.ds
         adminer:
@@ -118,23 +118,23 @@ all:
       core:
         enabled: false
         repository: https://github.com/DigitalState/Core.git
-        version: 0.6.0
+        version: 0.7.0
       discovery:
         enabled: true
         order: -20
         repository: https://github.com/DigitalState/Discovery.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.discovery.prod.ds
       documentation:
         enabled: false
         repository: https://github.com/DigitalState/Documentation.git
-        version: 0.6.0
+        version: 0.7.0
       formio:
         enabled: true
         order: -10
         repository: https://github.com/DigitalState/Formio.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.formio.prod.ds
         adminer:
@@ -144,7 +144,7 @@ all:
       forms:
         enabled: true
         repository: https://github.com/DigitalState/Forms.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.forms.prod.ds
         adminer:
@@ -160,11 +160,11 @@ all:
       guide:
         enabled: false
         repository: https://github.com/DigitalState/Guide.git
-        version: 0.6.0
+        version: 0.7.0
       identities:
         enabled: true
         repository: https://github.com/DigitalState/Identities.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.identities.prod.ds
         adminer:
@@ -207,18 +207,18 @@ all:
       portal:
         enabled: true
         repository: https://github.com/DigitalState/Portal.git
-        version: 0.6.0
+        version: 0.7.0
         host: portal.prod.ds
       proxy:
         enabled: true
         order: -30
         repository: https://github.com/DigitalState/Proxy.git
-        version: 0.6.0
+        version: 0.7.0
         port: 80
       records:
         enabled: true
         repository: https://github.com/DigitalState/Records.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.records.prod.ds
         adminer:
@@ -234,7 +234,7 @@ all:
       services:
         enabled: true
         repository: https://github.com/DigitalState/Services.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.services.prod.ds
         adminer:
@@ -250,7 +250,7 @@ all:
       tasks:
         enabled: false
         repository: https://github.com/DigitalState/Tasks.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.tasks.prod.ds
         adminer:
@@ -266,7 +266,7 @@ all:
       tenants:
         enabled: false
         repository: https://github.com/DigitalState/Tenants.git
-        version: 0.6.0
+        version: 0.7.0
         api:
           host: api.tenants.prod.ds
         adminer:
@@ -298,4 +298,4 @@ all:
       ui:
         enabled: false
         repository: https://github.com/DigitalState/Ui.git
-        version: 0.6.0
+        version: 0.7.0
