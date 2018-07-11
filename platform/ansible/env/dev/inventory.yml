@@ -23,6 +23,13 @@ all:
         port: ~
         username: mail@localhost
         password: ~
+      integration:
+        github:
+          id: ~
+          secret: ~
+        twitter:
+          id: ~
+          secret: ~
       system:
         username: system
         password: '$2y$12$dDJ1PEFFEpS/Vy9YovKbA.3S8Eh7xJVQ.PGUcWTvp1h8QCQaL/6JS'
@@ -248,7 +255,7 @@ all:
           username: services
           password: services
       tasks:
-        enabled: false
+        enabled: true
         repository: https://github.com/DigitalState/Tasks.git
         version: 0.7.0
         api:
@@ -264,7 +271,7 @@ all:
           username: tasks
           password: tasks
       tenants:
-        enabled: false
+        enabled: true
         repository: https://github.com/DigitalState/Tenants.git
         version: 0.7.0
         api:

@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Define authentication integration variables
+      set_fact:
+        authentication_integration_github_id: '{{ platform.integration.github.id }}'
+        authentication_integration_github_secret: '{{ platform.integration.github.secret }}'
+        authentication_integration_twitter_id: '{{ platform.integration.twitter.id }}'
+        authentication_integration_twitter_secret: '{{ platform.integration.twitter.secret }}'
+    - name: Configure authentication integration settings
+      include_role:
+        name: app/authentication/integration/configure
+  when: app.authentication.enabled
+  tags: [authentication]

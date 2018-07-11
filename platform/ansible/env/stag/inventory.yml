@@ -23,6 +23,13 @@ all:
         port: ~
         username: mail@localhost
         password: ~
+      integration:
+        github:
+          id: ~
+          secret: ~
+        twitter:
+          id: ~
+          secret: ~
       system:
         username: system
         password: ~
