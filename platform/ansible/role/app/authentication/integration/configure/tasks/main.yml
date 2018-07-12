@@ -5,19 +5,23 @@
         path: '{{ authentication_integration_config_file }}'
         regexp: '^\s{4}integration_github_id:'
         line: '    integration_github_id: ''{{ authentication_integration_github_id }}'''
+      when: authentication_integration_github_id is not none
     - name: Configure authentication integration github secret setting
       lineinfile:
         path: '{{ authentication_integration_config_file }}'
         regexp: '^\s{4}integration_github_secret:'
         line: '    integration_github_secret: ''{{ authentication_integration_github_secret }}'''
+      when: authentication_integration_github_secret is not none
     - name: Configure authentication integration twitter id setting
       lineinfile:
         path: '{{ authentication_integration_config_file }}'
         regexp: '^\s{4}integration_twitter_id:'
         line: '    integration_twitter_id: ''{{ authentication_integration_twitter_id }}'''
+      when: authentication_integration_twitter_id is not none
     - name: Configure authentication integration github secret setting
       lineinfile:
         path: '{{ authentication_integration_config_file }}'
         regexp: '^\s{4}integration_twitter_secret:'
         line: '    integration_twitter_secret: ''{{ authentication_integration_twitter_secret }}'''
+      when: authentication_integration_twitter_secret is not none
   tags: [authentication]
