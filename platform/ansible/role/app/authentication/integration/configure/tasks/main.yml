@@ -4,36 +4,30 @@
       lineinfile:
         path: '{{ file }}'
         regexp: '^\s{4}integration_github_id:'
-        line: '    integration_github_id: ''{{ github.id }}'''
-      when: github.id is not none
+        line: '    integration_github_id: ''{{ "id" if github.id is none else github.id }}'''
     - name: Configure authentication integration github secret setting
       lineinfile:
         path: '{{ file }}'
         regexp: '^\s{4}integration_github_secret:'
-        line: '    integration_github_secret: ''{{ github.secret }}'''
-      when: github.secret is not none
+        line: '    integration_github_secret: ''{{ "secret" if github.secret is none else github.secret }}'''
     - name: Configure authentication integration google id setting
       lineinfile:
         path: '{{ file }}'
         regexp: '^\s{4}integration_google_id:'
-        line: '    integration_google_id: ''{{ google.id }}'''
-      when: google.id is not none
+        line: '    integration_google_id: ''{{ "id" if google.id is none else google.id }}'''
     - name: Configure authentication integration google secret setting
       lineinfile:
         path: '{{ file }}'
         regexp: '^\s{4}integration_google_secret:'
-        line: '    integration_google_secret: ''{{ google.secret }}'''
-      when: google.secret is not none
+        line: '    integration_google_secret: ''{{ "secret" if google.secret is none else google.secret }}'''
     - name: Configure authentication integration twitter id setting
       lineinfile:
         path: '{{ file }}'
         regexp: '^\s{4}integration_twitter_id:'
-        line: '    integration_twitter_id: ''{{ twitter.id }}'''
-      when: twitter.id is not none
+        line: '    integration_twitter_id: ''{{ "id" if twitter.id is none else twitter.id }}'''
     - name: Configure authentication integration twitter secret setting
       lineinfile:
         path: '{{ file }}'
         regexp: '^\s{4}integration_twitter_secret:'
-        line: '    integration_twitter_secret: ''{{ twitter.secret }}'''
-      when: twitter.secret is not none
+        line: '    integration_twitter_secret: ''{{ "secret" if twitter.secret is none else twitter.secret }}'''
   tags: [authentication]
