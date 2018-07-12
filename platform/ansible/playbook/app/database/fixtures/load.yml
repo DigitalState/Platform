@@ -12,7 +12,7 @@
   tags: [always]
 
 - name: Load database fixtures
-  hosts: server
+  hosts: app
   become: true
   tasks:
     - name: Include compiled task list

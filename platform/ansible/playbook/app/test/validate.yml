@@ -12,7 +12,7 @@
   tags: [always]
 
 - name: Validate tests
-  hosts: server
+  hosts: app
   become: true
   tasks:
     - name: Include compiled task list

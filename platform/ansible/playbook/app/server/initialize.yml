@@ -7,7 +7,7 @@
     - name: Define ssh variables
       set_fact:
         ssh_directory: '{{ platform.env|replace(".", "/") }}'
-        ssh_host: '{{ vars["hostvars"]["server"]["ansible_host"] }}'
+        ssh_host: '{{ vars["hostvars"]["app"]["ansible_host"] }}'
         ssh_username: root
       when: hostvars.server.ansible_connection is not defined
     - name: Establish ssh connection
@@ -17,7 +17,7 @@
   tags: [system]
 
 - name: Install ansible requirements
-  hosts: server
+  hosts: app
   become: true
   gather_facts: false
   tasks:

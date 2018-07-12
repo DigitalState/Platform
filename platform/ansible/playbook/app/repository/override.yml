@@ -12,7 +12,7 @@
   tags: [always]
 
 - name: Override repositories
-  hosts: server
+  hosts: app
   become: true
   tasks:
     - name: Include compiled task list

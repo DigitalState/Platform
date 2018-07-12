@@ -12,7 +12,7 @@
   tags: [always]
 
 - name: Download jwt private and public key
-  hosts: server
+  hosts: app
   become: true
   tasks:
     - name: Define jwt variables

@@ -13,7 +13,7 @@
   tags: [always]
 
 - name: Stop containers
-  hosts: server
+  hosts: app
   become: true
   tasks:
     - name: Include compiled task list

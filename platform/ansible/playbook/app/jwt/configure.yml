@@ -12,7 +12,7 @@
   tags: [always]
 
 - name: Configure jwt settings
-  hosts: server
+  hosts: app
   become: true
   tasks:
     - name: Include compiled task list

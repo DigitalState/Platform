@@ -12,7 +12,7 @@
   tags: [always]
 
 - name: Define database migration data
-  hosts: server
+  hosts: app
   become: true
   tasks:
     - set_fact:
@@ -58,7 +58,7 @@
       tags: [always]
 
 - name: Load database migration
-  hosts: server
+  hosts: app
   become: true
   tasks:
     - name: Include compiled task list

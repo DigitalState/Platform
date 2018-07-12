@@ -12,7 +12,7 @@
   tags: [always]
 
 - name: Up containers
-  hosts: server
+  hosts: app
   become: true
   tasks:
     - name: Include compiled task list
