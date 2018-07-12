@@ -1,6 +1,0 @@
----
-authentication_integration_config_file: /srv/authentication/app/config/parameters.yml
-authentication_integration_github_id: ~
-authentication_integration_github_secret: ~
-authentication_integration_twitter_id: ~
-authentication_integration_twitter_secret: ~

@@ -1,0 +1,11 @@
+---
+file: /srv/authentication/app/config/parameters.yml
+github:
+  id: ~
+  secret: ~
+google:
+  id: ~
+  secret: ~
+twitter:
+  id: ~
+  secret: ~
