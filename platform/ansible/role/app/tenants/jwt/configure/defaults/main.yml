@@ -1,3 +1,0 @@
----
-tenants_config_file: /srv/tenants/app/config/parameters.yml
-tenants_jwt_key_pass_phrase: ~

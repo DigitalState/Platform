@@ -5,6 +5,6 @@
         name: app/records/test/run
     - name: Validate records tests result
       debug:
-        msg: '{{ records_test_run_result[0] }} / {{ records_test_run_result[1] }}'
-      failed_when: records_test_run_result[0] != records_test_run_result[1]
+        msg: '{{ _result[0] }} / {{ _result[1] }}'
+      failed_when: _result[0] != _result[1]
   tags: [records]

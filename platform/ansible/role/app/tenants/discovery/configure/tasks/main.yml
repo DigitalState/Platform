@@ -2,7 +2,7 @@
 - block:
     - name: Configure tenants discovery host setting
       lineinfile:
-        path: '{{ tenants_discovery_config_file }}'
+        path: '/srv/tenants/app/config/parameters.yml'
         regexp: '^\s{4}discovery_host:'
-        line: '    discovery_host: {{ tenants_discovery_host }}'
+        line: '    discovery_host: {{ _host }}'
   tags: [tenants]

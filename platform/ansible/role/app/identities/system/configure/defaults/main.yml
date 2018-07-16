@@ -1,4 +1,0 @@
----
-identities_system_config_file: /srv/identities/app/config/parameters.yml
-identities_system_username: system
-identities_system_password: ~

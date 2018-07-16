@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define interactions discovery variables
-      set_fact:
-        interactions_discovery_host: '{{ app.discovery.api.host }}'
     - name: Configure interactions discovery settings
       include_role:
         name: app/interactions/discovery/configure
+      vars:
+        _host: '{{ app.discovery.api.host }}'
   when: app.interactions.enabled
   tags: [interactions]

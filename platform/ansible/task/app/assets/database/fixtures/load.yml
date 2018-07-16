@@ -2,18 +2,12 @@
 - block:
     - name: Detect assets fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/assets'
-      register: _directory
-    - name: Define assets database fixtures variables
-      set_fact:
-        assets_fixtures: 'dev'
-        assets_override: '{{ "/root/resource/fixtures/assets" if _directory.stat.exists == true else "" }}'
-    - name: Define assets database fixtures variables
-      set_fact:
-        assets_fixtures: 'test'
-        assets_override: ''
-      when: platform.env[0:4] == 'test'
+      register: override
     - name: Load assets database fixtures
       include_role:
         name: app/assets/database/fixtures/load
+      vars:
+        _fixtures: '{{ "test" if env[0:4] == "test" else "dev" }}'
+        _override: '{{ "/root/resource/fixtures/assets" if override.stat.exists == true and env[0:4] != "test" else "" }}'
   when: app.assets.enabled
   tags: [assets]

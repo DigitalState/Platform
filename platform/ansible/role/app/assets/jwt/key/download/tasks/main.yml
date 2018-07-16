@@ -2,12 +2,12 @@
 - block:
     - name: Download assets jwt private key
       copy:
-        src: '{{ jwt_private_key }}'
+        src: '{{ _private_key }}'
         dest: /srv/assets/var/jwt/key
         mode: 0600
     - name: Download assets jwt public key
       copy:
-        src: '{{ jwt_public_key }}'
+        src: '{{ _public_key }}'
         dest: /srv/assets/var/jwt/key.pub
         mode: 0600
   tags: [assets]

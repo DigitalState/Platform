@@ -1,4 +1,0 @@
----
-records_system_config_file: /srv/records/app/config/parameters.yml
-records_system_username: system
-records_system_password: ~

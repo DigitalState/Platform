@@ -2,18 +2,12 @@
 - block:
     - name: Detect cms fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/cms'
-      register: _directory
-    - name: Define cms database fixtures variables
-      set_fact:
-        cms_fixtures: 'dev'
-        cms_override: '{{ "/root/resource/fixtures/cms" if _directory.stat.exists == true else "" }}'
-    - name: Define cms database fixtures variables
-      set_fact:
-        cms_fixtures: 'test'
-        cms_override: ''
-      when: platform.env[0:4] == 'test'
+      register: override
     - name: Load cms database fixtures
       include_role:
         name: app/cms/database/fixtures/load
+      vars:
+        _fixtures: '{{ "test" if env[0:4] == "test" else "dev" }}'
+        _override: '{{ "/root/resource/fixtures/cms" if override.stat.exists == true and env[0:4] != "test" else "" }}'
   when: app.cms.enabled
   tags: [cms]

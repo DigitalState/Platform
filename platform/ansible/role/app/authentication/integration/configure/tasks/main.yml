@@ -2,32 +2,32 @@
 - block:
     - name: Configure authentication integration github id setting
       lineinfile:
-        path: '{{ file }}'
+        path: '/srv/authentication/app/config/parameters.yml'
         regexp: '^\s{4}integration_github_id:'
-        line: '    integration_github_id: ''{{ "id" if github.id is none else github.id }}'''
+        line: '    integration_github_id: ''{{ "id" if _github.id is none else _github.id }}'''
     - name: Configure authentication integration github secret setting
       lineinfile:
-        path: '{{ file }}'
+        path: '/srv/authentication/app/config/parameters.yml'
         regexp: '^\s{4}integration_github_secret:'
-        line: '    integration_github_secret: ''{{ "secret" if github.secret is none else github.secret }}'''
+        line: '    integration_github_secret: ''{{ "secret" if _github.secret is none else _github.secret }}'''
     - name: Configure authentication integration google id setting
       lineinfile:
-        path: '{{ file }}'
+        path: '/srv/authentication/app/config/parameters.yml'
         regexp: '^\s{4}integration_google_id:'
-        line: '    integration_google_id: ''{{ "id" if google.id is none else google.id }}'''
+        line: '    integration_google_id: ''{{ "id" if _google.id is none else _google.id }}'''
     - name: Configure authentication integration google secret setting
       lineinfile:
-        path: '{{ file }}'
+        path: '/srv/authentication/app/config/parameters.yml'
         regexp: '^\s{4}integration_google_secret:'
-        line: '    integration_google_secret: ''{{ "secret" if google.secret is none else google.secret }}'''
+        line: '    integration_google_secret: ''{{ "secret" if _google.secret is none else _google.secret }}'''
     - name: Configure authentication integration twitter id setting
       lineinfile:
-        path: '{{ file }}'
+        path: '/srv/authentication/app/config/parameters.yml'
         regexp: '^\s{4}integration_twitter_id:'
-        line: '    integration_twitter_id: ''{{ "id" if twitter.id is none else twitter.id }}'''
+        line: '    integration_twitter_id: ''{{ "id" if _twitter.id is none else _twitter.id }}'''
     - name: Configure authentication integration twitter secret setting
       lineinfile:
-        path: '{{ file }}'
+        path: '/srv/authentication/app/config/parameters.yml'
         regexp: '^\s{4}integration_twitter_secret:'
-        line: '    integration_twitter_secret: ''{{ "secret" if twitter.secret is none else twitter.secret }}'''
+        line: '    integration_twitter_secret: ''{{ "secret" if _twitter.secret is none else _twitter.secret }}'''
   tags: [authentication]

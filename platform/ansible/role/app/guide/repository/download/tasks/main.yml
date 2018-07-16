@@ -2,8 +2,8 @@
 - block:
     - name: Download guide repository
       git:
-        repo: '{{ guide_repository }}'
-        version: '{{ guide_version }}'
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
         dest: /srv/guide
         force: yes
   tags: [guide]

@@ -3,5 +3,8 @@
     - name: Download tenants jwt keys
       include_role:
         name: app/tenants/jwt/key/download
+      vars:
+        _private_key: '/root/resource/jwt/{{ env|replace(".", "/") }}/key'
+        _public_key: '/root/resource/jwt/{{ env|replace(".", "/") }}/key.pub'
   when: app.tenants.enabled
   tags: [tenants]

@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define admin container variables
-      set_fact:
-        admin_env: '{{ platform.env }}'
     - name: Stop admin container
       include_role:
         name: app/admin/container/stop
+      vars:
+        _env: '{{ env }}'
   when: app.admin.enabled
   tags: [admin]

@@ -2,28 +2,23 @@
 - block:
     - name: Gather information for topics container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-    - name: Define topics container variables
-      set_fact:
-        topics_env_file: .env.platform
-      when: platform.env == 'lab'
-    - name: Define topics container variables
-      set_fact:
-        topics_env: '{{ platform.env }}'
-        topics_compose_project_name: '{{ platform.namespace }}topics'
-        topics_network: '{{ platform.namespace }}proxy_default'
-        topics_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        topics_nginx_virtual_host: '{{ app.topics.api.host }}'
-        topics_adminer_virtual_host: '{{ app.topics.adminer.host }}'
-        topics_rebrow_virtual_host: '{{ app.topics.rebrow.host }}'
-        topics_discovery_host: '{{ app.discovery.api.host }}'
-        topics_directory: '{{ platform.app }}/topics'
-        topics_database_host: '{{ app.topics.database.host }}'
-        topics_database_port: '{{ app.topics.database.port }}'
-        topics_database_name: '{{ app.topics.database.name }}'
-        topics_database_username: '{{ app.topics.database.username }}'
-        topics_database_password: '{{ app.topics.database.password }}'
     - name: Up topics container
       include_role:
         name: app/topics/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}topics'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _nginx_virtual_host: '{{ app.topics.api.host }}'
+        _adminer_virtual_host: '{{ app.topics.adminer.host }}'
+        _rebrow_virtual_host: '{{ app.topics.rebrow.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _directory: '{{ directory }}/topics'
+        _database_host: '{{ app.topics.database.host }}'
+        _database_port: '{{ app.topics.database.port }}'
+        _database_name: '{{ app.topics.database.name }}'
+        _database_username: '{{ app.topics.database.username }}'
+        _database_password: '{{ app.topics.database.password }}'
   when: app.topics.enabled
   tags: [topics]

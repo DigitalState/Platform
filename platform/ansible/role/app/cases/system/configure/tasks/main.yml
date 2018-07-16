@@ -2,12 +2,12 @@
 - block:
     - name: Configure cases system username setting
       lineinfile:
-        path: '{{ cases_system_config_file }}'
+        path: '/srv/cases/app/config/parameters.yml'
         regexp: '^\s{4}system_username:'
-        line: '    system_username: {{ cases_system_username }}'
+        line: '    system_username: {{ _username }}'
     - name: Configure cases mail password setting
       lineinfile:
-        path: '{{ cases_system_config_file }}'
+        path: '/srv/cases/app/config/parameters.yml'
         regexp: '^\s{4}system_password:'
-        line: '    system_password: ''{{ cases_system_password }}'''
+        line: '    system_password: ''{{ _password }}'''
   tags: [cases]

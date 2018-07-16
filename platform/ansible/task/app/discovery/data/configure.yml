@@ -1,8 +1,10 @@
 ---
 - block:
-    - name: Define discovery data variable
-      set_fact:
-        discovery_data:
+    - name: Set discovery data
+      include_role:
+        name: app/discovery/data/configure
+      vars:
+        _data:
           assets:
             host: '{{ app.assets.api.host }}'
             enabled: '{{ app.assets.enabled }}'
@@ -70,8 +72,5 @@
             enabled: '{{ app.topics.enabled }}'
             attributes:
               tenant: true
-    - name: Set discovery data
-      include_role:
-        name: app/discovery/data/configure
   when: app.discovery.enabled
   tags: [discovery]

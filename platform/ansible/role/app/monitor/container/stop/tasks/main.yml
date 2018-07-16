@@ -5,7 +5,7 @@
         project_src: /srv/monitor
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ monitor_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: present
         stopped: yes
   tags: [monitor]

@@ -1,11 +1,11 @@
 ---
 - block:
     - name: Detect documentation repository override directory
-      local_action: 'stat path={{ documentation_repository_override }}'
-      register: _repository_override
+      local_action: 'stat path={{ _directory }}'
+      register: _override
     - name: Download documentation repository override directory
       copy:
-        src: '{{ documentation_repository_override }}/'
+        src: '{{ _directory }}/'
         dest: /srv/documentation
-      when: _repository_override.stat.exists == true
+      when: _override.stat.exists == true
   tags: [documentation]

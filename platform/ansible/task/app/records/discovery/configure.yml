@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define records discovery variables
-      set_fact:
-        records_discovery_host: '{{ app.discovery.api.host }}'
     - name: Configure records discovery settings
       include_role:
         name: app/records/discovery/configure
+      vars:
+        _host: '{{ app.discovery.api.host }}'
   when: app.records.enabled
   tags: [records]

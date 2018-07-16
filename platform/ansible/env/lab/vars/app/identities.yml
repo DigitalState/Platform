@@ -1,0 +1,17 @@
+---
+identities:
+  enabled: true
+  repository: https://github.com/DigitalState/Identities.git
+  version: develop
+  api:
+    host: api.identities.lab.ds
+  adminer:
+    host: adminer.identities.lab.ds
+  rebrow:
+    host: rebrow.identities.lab.ds
+  database:
+    host: identities_database
+    port: 5432
+    name: identities
+    username: identities
+    password: identities

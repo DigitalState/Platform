@@ -1,16 +1,16 @@
 ---
 - block:
     - name: Backup identities fixtures directory
-      shell: 'mv /srv/identities/src/AppBundle/Resources/fixtures/{{ identities_fixtures }} /srv/identities/src/AppBundle/Resources/fixtures/_{{ identities_fixtures }}'
+      shell: 'mv /srv/identities/src/AppBundle/Resources/fixtures/{{ _fixtures }} /srv/identities/src/AppBundle/Resources/fixtures/_{{ _fixtures }}'
     - name: Download identities fixtures directory override
       copy:
-        src: '{{ identities_override }}/'
-        dest: '/srv/identities/src/AppBundle/Resources/fixtures/{{ identities_fixtures }}'
+        src: '{{ _override }}/'
+        dest: '/srv/identities/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
     - import_tasks: load.yml
     - name: Delete identities fixtures directory override
       file:
-        path: '/srv/identities/src/AppBundle/Resources/fixtures/{{ identities_fixtures }}'
+        path: '/srv/identities/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
         state: absent
     - name: Restore identities fixtures directory backup
-      shell: 'mv /srv/identities/src/AppBundle/Resources/fixtures/_{{ identities_fixtures }} /srv/identities/src/AppBundle/Resources/fixtures/{{ identities_fixtures }}'
+      shell: 'mv /srv/identities/src/AppBundle/Resources/fixtures/_{{ _fixtures }} /srv/identities/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
   tags: [identities]

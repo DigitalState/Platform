@@ -2,28 +2,23 @@
 - block:
     - name: Gather information for forms container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-    - name: Define forms container variables
-      set_fact:
-        forms_env_file: .env.platform
-      when: platform.env == 'lab'
-    - name: Define forms container variables
-      set_fact:
-        forms_env: '{{ platform.env }}'
-        forms_compose_project_name: '{{ platform.namespace }}forms'
-        forms_network: '{{ platform.namespace }}proxy_default'
-        forms_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        forms_nginx_virtual_host: '{{ app.forms.api.host }}'
-        forms_adminer_virtual_host: '{{ app.forms.adminer.host }}'
-        forms_rebrow_virtual_host: '{{ app.forms.rebrow.host }}'
-        forms_discovery_host: '{{ app.discovery.api.host }}'
-        forms_directory: '{{ platform.app }}/forms'
-        forms_database_host: '{{ app.forms.database.host }}'
-        forms_database_port: '{{ app.forms.database.port }}'
-        forms_database_name: '{{ app.forms.database.name }}'
-        forms_database_username: '{{ app.forms.database.username }}'
-        forms_database_password: '{{ app.forms.database.password }}'
     - name: Up forms container
       include_role:
         name: app/forms/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}forms'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _nginx_virtual_host: '{{ app.forms.api.host }}'
+        _adminer_virtual_host: '{{ app.forms.adminer.host }}'
+        _rebrow_virtual_host: '{{ app.forms.rebrow.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _directory: '{{ directory }}/forms'
+        _database_host: '{{ app.forms.database.host }}'
+        _database_port: '{{ app.forms.database.port }}'
+        _database_name: '{{ app.forms.database.name }}'
+        _database_username: '{{ app.forms.database.username }}'
+        _database_password: '{{ app.forms.database.password }}'
   when: app.forms.enabled
   tags: [forms]

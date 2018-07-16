@@ -1,11 +1,11 @@
 ---
 - block:
     - name: Detect forms repository override directory
-      local_action: 'stat path={{ forms_repository_override }}'
-      register: _repository_override
+      local_action: 'stat path={{ _directory }}'
+      register: _override
     - name: Download forms repository override directory
       copy:
-        src: '{{ forms_repository_override }}/'
+        src: '{{ _directory }}/'
         dest: /srv/forms
-      when: _repository_override.stat.exists == true
+      when: _override.stat.exists == true
   tags: [forms]

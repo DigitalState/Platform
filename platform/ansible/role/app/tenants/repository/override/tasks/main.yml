@@ -1,11 +1,11 @@
 ---
 - block:
     - name: Detect tenants repository override directory
-      local_action: 'stat path={{ tenants_repository_override }}'
-      register: _repository_override
+      local_action: 'stat path={{ _directory }}'
+      register: _override
     - name: Download tenants repository override directory
       copy:
-        src: '{{ tenants_repository_override }}/'
+        src: '{{ _directory }}/'
         dest: /srv/tenants
-      when: _repository_override.stat.exists == true
+      when: _override.stat.exists == true
   tags: [tenants]

@@ -2,7 +2,7 @@
 - block:
     - name: Load interactions database fixtures
       shell:
-        cmd: 'docker-compose exec -T php php bin/console doctrine:fixtures:load --env={{ interactions_fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures --no-interaction'
+        cmd: 'docker-compose exec -T php php bin/console doctrine:fixtures:load --env={{ _fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures --no-interaction'
         chdir: /srv/interactions
     - name: Pause while interactions fixtures load
       pause:

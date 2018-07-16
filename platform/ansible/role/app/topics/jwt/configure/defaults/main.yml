@@ -1,3 +1,0 @@
----
-topics_config_file: /srv/topics/app/config/parameters.yml
-topics_jwt_key_pass_phrase: ~

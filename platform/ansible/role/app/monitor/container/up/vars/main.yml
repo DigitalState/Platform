@@ -1,0 +1,9 @@
+---
+_env: prod
+_compose_project_name: dsmonitor
+_network: dsproxy_default
+_proxy_host: 127.0.0.1
+_virtual_host: monitor.ds
+_discovery_host: api.discovery.ds
+_directory: /srv/monitor
+_discovery: {}

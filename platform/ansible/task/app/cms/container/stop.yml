@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define cms container variables
-      set_fact:
-        cms_env: '{{ platform.env }}'
     - name: Stop cms container
       include_role:
         name: app/cms/container/stop
+      vars:
+        _env: '{{ env }}'
   when: app.cms.enabled
   tags: [cms]

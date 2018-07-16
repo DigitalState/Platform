@@ -1,11 +1,10 @@
 ---
 - block:
-    - name: Define guide repository variables
-      set_fact:
-        guide_repository: '{{ app.guide.repository }}'
-        guide_version: '{{ app.guide.version }}'
     - name: Download guide repository
       include_role:
         name: app/guide/repository/download
+      vars:
+        _repository: '{{ app.guide.repository }}'
+        _version: '{{ app.guide.version }}'
   when: app.guide.enabled
   tags: [guide]

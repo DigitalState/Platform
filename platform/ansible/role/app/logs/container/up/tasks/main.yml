@@ -1,66 +1,16 @@
 ---
 - block:
-    - block:
-        - name: Configure logs namespace environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/logs/{{ logs_env_file }}'
-            regexp: '^COMPOSE_PROJECT_NAME='
-            line: 'COMPOSE_PROJECT_NAME={{ logs_compose_project_name }}'
-        - name: Configure logs network environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/logs/{{ logs_env_file }}'
-            regexp: '^NETWORK='
-            line: 'NETWORK={{ logs_network }}'
-        - name: Configure proxy host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/logs/{{ logs_env_file }}'
-            regexp: '^PROXY_HOST='
-            line: 'PROXY_HOST={{ logs_proxy_host }}'
-        - name: Configure virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/logs/{{ logs_env_file }}'
-            regexp: '^VIRTUAL_HOST='
-            line: 'VIRTUAL_HOST={{ logs_virtual_host }}'
-        - name: Configure discovery host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/logs/{{ logs_env_file }}'
-            regexp: '^DISCOVERY_HOST='
-            line: 'DISCOVERY_HOST={{ logs_discovery_host }}'
-        - name: Configure directory environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/logs/{{ logs_env_file }}'
-            regexp: '^DIRECTORY='
-            line: 'DIRECTORY={{ logs_directory }}'
-        - name: Configure jwt private key environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/logs/{{ logs_env_file }}'
-            regexp: '^JWT_PRIVATE_KEY='
-            line: 'JWT_PRIVATE_KEY={{ logs_jwt_private_key }}'
-        - name: Configure jwt public key environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/logs/{{ logs_env_file }}'
-            regexp: '^JWT_PUBLIC_KEY='
-            line: 'JWT_PUBLIC_KEY={{ logs_jwt_public_key }}'
-      when: logs_env_file is not none
     - name: Up logs container
       docker_service:
         project_src: /srv/logs
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ logs_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: present
       environment:
-        COMPOSE_PROJECT_NAME: '{{ logs_compose_project_name }}'
-        NETWORK: '{{ logs_network }}'
-        PROXY_HOST: '{{ logs_proxy_host }}'
-        VIRTUAL_HOST: '{{ logs_virtual_host }}'
-        DIRECTORY: '{{ logs_directory }}'
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        VIRTUAL_HOST: '{{ _virtual_host }}'
+        DIRECTORY: '{{ _directory }}'
   tags: [logs]

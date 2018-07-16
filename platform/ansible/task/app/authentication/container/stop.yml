@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define authentication container variables
-      set_fact:
-        authentication_env: '{{ platform.env }}'
     - name: Stop authentication container
       include_role:
         name: app/authentication/container/stop
+      vars:
+        _env: '{{ env }}'
   when: app.authentication.enabled
   tags: [authentication]

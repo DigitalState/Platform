@@ -2,28 +2,23 @@
 - block:
     - name: Gather information for cases container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-    - name: Define cases container variables
-      set_fact:
-        cases_env_file: .env.platform
-      when: platform.env == 'lab'
-    - name: Define cases container variables
-      set_fact:
-        cases_env: '{{ platform.env }}'
-        cases_compose_project_name: '{{ platform.namespace }}cases'
-        cases_network: '{{ platform.namespace }}proxy_default'
-        cases_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        cases_nginx_virtual_host: '{{ app.cases.api.host }}'
-        cases_adminer_virtual_host: '{{ app.cases.adminer.host }}'
-        cases_rebrow_virtual_host: '{{ app.cases.rebrow.host }}'
-        cases_discovery_host: '{{ app.discovery.api.host }}'
-        cases_directory: '{{ platform.app }}/cases'
-        cases_database_host: '{{ app.cases.database.host }}'
-        cases_database_port: '{{ app.cases.database.port }}'
-        cases_database_name: '{{ app.cases.database.name }}'
-        cases_database_username: '{{ app.cases.database.username }}'
-        cases_database_password: '{{ app.cases.database.password }}'
     - name: Up cases container
       include_role:
         name: app/cases/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}cases'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _nginx_virtual_host: '{{ app.cases.api.host }}'
+        _adminer_virtual_host: '{{ app.cases.adminer.host }}'
+        _rebrow_virtual_host: '{{ app.cases.rebrow.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _directory: '{{ directory }}/cases'
+        _database_host: '{{ app.cases.database.host }}'
+        _database_port: '{{ app.cases.database.port }}'
+        _database_name: '{{ app.cases.database.name }}'
+        _database_username: '{{ app.cases.database.username }}'
+        _database_password: '{{ app.cases.database.password }}'
   when: app.cases.enabled
   tags: [cases]

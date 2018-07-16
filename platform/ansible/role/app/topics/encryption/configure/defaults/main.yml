@@ -1,3 +1,0 @@
----
-topics_encryption_config_file: /srv/topics/app/config/parameters.yml
-topics_encryption_secret: ~

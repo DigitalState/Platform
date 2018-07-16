@@ -1,0 +1,7 @@
+---
+logs:
+  enabled: false
+  repository: https://github.com/DigitalState/Logs.git
+  version: develop
+  api:
+    host: api.logs.ci.test.ds

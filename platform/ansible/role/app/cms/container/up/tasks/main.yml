@@ -1,105 +1,25 @@
 ---
 - block:
-    - block:
-        - name: Configure cms namespace environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^COMPOSE_PROJECT_NAME='
-            line: 'COMPOSE_PROJECT_NAME={{ cms_compose_project_name }}'
-        - name: Configure cms network environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^NETWORK='
-            line: 'NETWORK={{ cms_network }}'
-        - name: Configure proxy host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^PROXY_HOST='
-            line: 'PROXY_HOST={{ cms_proxy_host }}'
-        - name: Configure nginx virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^NGINX_VIRTUAL_HOST='
-            line: 'NGINX_VIRTUAL_HOST={{ cms_nginx_virtual_host }}'
-        - name: Configure adminer virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^ADMINER_VIRTUAL_HOST='
-            line: 'ADMINER_VIRTUAL_HOST={{ cms_adminer_virtual_host }}'
-        - name: Configure rebrow virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^REBROW_VIRTUAL_HOST='
-            line: 'REBROW_VIRTUAL_HOST={{ cms_rebrow_virtual_host }}'
-        - name: Configure discovery host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^DISCOVERY_HOST='
-            line: 'DISCOVERY_HOST={{ cms_discovery_host }}'
-        - name: Configure directory environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^DIRECTORY='
-            line: 'DIRECTORY={{ cms_directory }}'
-        - name: Configure database host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^DATABASE_HOST='
-            line: 'DATABASE_HOST={{ cms_database_host }}'
-        - name: Configure database port environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^DATABASE_PORT='
-            line: 'DATABASE_PORT={{ cms_database_port }}'
-        - name: Configure database name environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^DATABASE_NAME='
-            line: 'DATABASE_NAME={{ cms_database_name }}'
-        - name: Configure database username environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^DATABASE_USERNAME='
-            line: 'DATABASE_USERNAME={{ cms_database_username }}'
-        - name: Configure database password environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/cms/{{ cms_env_file }}'
-            regexp: '^DATABASE_PASSWORD='
-            line: 'DATABASE_PASSWORD={{ cms_database_password }}'
-      when: cms_env_file is not none
     - name: Up cms container
       docker_service:
         project_src: /srv/cms
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ cms_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: present
       environment:
-        COMPOSE_PROJECT_NAME: '{{ cms_compose_project_name }}'
-        NETWORK: '{{ cms_network }}'
-        PROXY_HOST: '{{ cms_proxy_host }}'
-        NGINX_VIRTUAL_HOST: '{{ cms_nginx_virtual_host }}'
-        ADMINER_VIRTUAL_HOST: '{{ cms_adminer_virtual_host }}'
-        REBROW_VIRTUAL_HOST: '{{ cms_rebrow_virtual_host }}'
-        DIRECTORY: '{{ cms_directory }}'
-        DATABASE_HOST: '{{ cms_database_host }}'
-        DATABASE_PORT: '{{ cms_database_port }}'
-        DATABASE_NAME: '{{ cms_database_name }}'
-        DATABASE_USERNAME: '{{ cms_database_username }}'
-        DATABASE_PASSWORD: '{{ cms_database_password }}'
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        NGINX_VIRTUAL_HOST: '{{ _nginx_virtual_host }}'
+        ADMINER_VIRTUAL_HOST: '{{ _adminer_virtual_host }}'
+        REBROW_VIRTUAL_HOST: '{{ _rebrow_virtual_host }}'
+        DIRECTORY: '{{ _directory }}'
+        DATABASE_HOST: '{{ _database_host }}'
+        DATABASE_PORT: '{{ _database_port }}'
+        DATABASE_NAME: '{{ _database_name }}'
+        DATABASE_USERNAME: '{{ _database_username }}'
+        DATABASE_PASSWORD: '{{ _database_password }}'
     - name: Waiting for cms container to finalize installation
       shell:
         cmd: docker-compose exec -T php pidof php-fpm | cat

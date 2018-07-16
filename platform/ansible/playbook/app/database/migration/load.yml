@@ -1,4 +1,6 @@
 ---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+
 - name: Compile database/migration/load task list
   hosts: platform
   become: true
@@ -8,7 +10,7 @@
         app: '{{ app }}'
         directory: /etc/ansible/task/app/*
         task: database/migration/load
-      register: _result
+      register: files
   tags: [always]
 
 - name: Define database migration data
@@ -16,28 +18,28 @@
   become: true
   tasks:
     - set_fact:
-        database_migration_data:
+        data:
           1.0.0:
             tenant:
               uuid: '{{ (ansible_date_time.iso8601_micro + "1")|to_uuid }}'
               title:
                 en: Tenant
             system:
-              username: '{{ platform.system.username }}'
-              password: '{{ platform.system.password }}'
+              username: '{{ system.username }}'
+              password: '{{ system.password }}'
             user:
               system:
                 uuid: '{{ (ansible_date_time.iso8601_micro + "2")|to_uuid }}'
-                username: '{{ platform.user.system.username }}'
-                password: '{{ platform.user.system.password }}'
+                username: '{{ user.system.username }}'
+                password: '{{ user.system.password }}'
               anonymous:
                 uuid: '{{ (ansible_date_time.iso8601_micro + "3")|to_uuid }}'
-                username: '{{ platform.user.anonymous.username }}'
-                password: '{{ platform.user.anonymous.password }}'
+                username: '{{ user.anonymous.username }}'
+                password: '{{ user.anonymous.password }}'
               admin:
                 uuid: '{{ (ansible_date_time.iso8601_micro + "4")|to_uuid }}'
-                username: '{{ platform.user.admin.username }}'
-                password: '{{ platform.user.admin.password }}'
+                username: '{{ user.admin.username }}'
+                password: '{{ user.admin.password }}'
             identity:
               system:
                 uuid: '{{ (ansible_date_time.iso8601_micro + "5")|to_uuid }}'
@@ -62,8 +64,6 @@
   become: true
   tasks:
     - name: Include compiled task list
-      include_tasks: '{{ _file }}'
-      with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
-      loop_control:
-        loop_var: _file
+      include_tasks: '{{ item }}'
+      with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
       tags: [always]

@@ -2,12 +2,12 @@
 - block:
     - name: Configure services system username setting
       lineinfile:
-        path: '{{ services_system_config_file }}'
+        path: '/srv/services/app/config/parameters.yml'
         regexp: '^\s{4}system_username:'
-        line: '    system_username: {{ services_system_username }}'
+        line: '    system_username: {{ _username }}'
     - name: Configure services mail password setting
       lineinfile:
-        path: '{{ services_system_config_file }}'
+        path: '/srv/services/app/config/parameters.yml'
         regexp: '^\s{4}system_password:'
-        line: '    system_password: ''{{ services_system_password }}'''
+        line: '    system_password: ''{{ _password }}'''
   tags: [services]

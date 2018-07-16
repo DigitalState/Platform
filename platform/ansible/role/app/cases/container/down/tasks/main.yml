@@ -5,7 +5,7 @@
         project_src: /srv/cases
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ cases_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: absent
-        remove_volumes: '{{ "no" if cases_persistent else "yes" }}'
+        remove_volumes: '{{ "no" if _persistent else "yes" }}'
   tags: [cases]

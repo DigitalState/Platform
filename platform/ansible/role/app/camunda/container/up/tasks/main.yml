@@ -1,76 +1,20 @@
 ---
 - block:
-    - block:
-        - name: Configure camunda namespace environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/camunda/{{ camunda_env_file }}'
-            regexp: '^COMPOSE_PROJECT_NAME='
-            line: 'COMPOSE_PROJECT_NAME={{ camunda_compose_project_name }}'
-        - name: Configure camunda network environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/camunda/{{ camunda_env_file }}'
-            regexp: '^NETWORK='
-            line: 'NETWORK={{ camunda_network }}'
-        - name: Configure java options key environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/camunda/{{ camunda_env_file }}'
-            regexp: '^JAVA_OPTS='
-            line: 'JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Duser.timezone={{ camunda_timezone }}'
-        - name: Configure proxy host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/camunda/{{ camunda_env_file }}'
-            regexp: '^PROXY_HOST='
-            line: 'PROXY_HOST={{ camunda_proxy_host }}'
-        - name: Configure virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/camunda/{{ camunda_env_file }}'
-            regexp: '^VIRTUAL_HOST='
-            line: 'VIRTUAL_HOST={{ camunda_virtual_host }}'
-        - name: Configure discovery host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/camunda/{{ camunda_env_file }}'
-            regexp: '^DISCOVERY_HOST='
-            line: 'DISCOVERY_HOST={{ camunda_discovery_host }}'
-        - name: Configure directory environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/camunda/{{ camunda_env_file }}'
-            regexp: '^DIRECTORY='
-            line: 'DIRECTORY={{ camunda_directory }}'
-        - name: Configure username environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/camunda/{{ camunda_env_file }}'
-            regexp: '^USERNAME='
-            line: 'USERNAME={{ camunda_username }}'
-        - name: Configure password environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/camunda/{{ camunda_env_file }}'
-            regexp: '^PASSWORD='
-            line: 'PASSWORD={{ camunda_password }}'
-      when: camunda_env_file is not none
     - name: Up camunda container
       docker_service:
         project_src: /srv/camunda
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ camunda_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: present
         debug: no
       environment:
-        COMPOSE_PROJECT_NAME: '{{ camunda_compose_project_name }}'
-        NETWORK: '{{ camunda_network }}'
-        JAVA_OPTS: '-Djava.security.egd=file:/dev/./urandom -Duser.timezone={{ camunda_timezone }}'
-        PROXY_HOST: '{{ camunda_proxy_host }}'
-        VIRTUAL_HOST: '{{ camunda_virtual_host }}'
-        DIRECTORY: '{{ camunda_directory }}'
-        USERNAME: '{{ camunda_username }}'
-        PASSWORD: '{{ camunda_password }}'
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        JAVA_OPTS: '-Djava.security.egd=file:/dev/./urandom -Duser.timezone={{ _timezone }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        VIRTUAL_HOST: '{{ _virtual_host }}'
+        DIRECTORY: '{{ _directory }}'
+        USERNAME: '{{ _username }}'
+        PASSWORD: '{{ _password }}'
   tags: [camunda]

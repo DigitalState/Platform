@@ -2,8 +2,8 @@
 - block:
     - name: Download forms repository
       git:
-        repo: '{{ forms_repository }}'
-        version: '{{ forms_version }}'
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
         dest: /srv/forms
         force: yes
   tags: [forms]

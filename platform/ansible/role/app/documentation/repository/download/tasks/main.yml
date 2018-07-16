@@ -2,8 +2,8 @@
 - block:
     - name: Download documentation repository
       git:
-        repo: '{{ documentation_repository }}'
-        version: '{{ documentation_version }}'
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
         dest: /srv/documentation
         force: yes
   tags: [documentation]

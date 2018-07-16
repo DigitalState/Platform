@@ -1,0 +1,17 @@
+---
+assets:
+  enabled: true
+  repository: https://github.com/DigitalState/Assets.git
+  version: 0.7.0
+  api:
+    host: api.assets.stag.ds
+  adminer:
+    host: adminer.assets.stag.ds
+  rebrow:
+    host: rebrow.assets.stag.ds
+  database:
+    host: assets_database
+    port: 5432
+    name: assets
+    username: assets
+    password: ~

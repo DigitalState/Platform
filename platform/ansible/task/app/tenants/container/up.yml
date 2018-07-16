@@ -2,35 +2,27 @@
 - block:
     - name: Gather information for tenants container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-    - name: Define tenants container variables
-      set_fact:
-        tenants_env_file: .env.platform
-      when: platform.env == 'lab'
-    - name: Define tenants container variables
-      set_fact:
-        tenants_env: '{{ platform.env }}'
-        tenants_compose_project_name: '{{ platform.namespace }}tenants'
-        tenants_network: '{{ platform.namespace }}proxy_default'
-        tenants_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        tenants_nginx_virtual_host: '{{ app.tenants.api.host }}'
-        tenants_adminer_virtual_host: '{{ app.tenants.adminer.host }}'
-        tenants_rebrow_virtual_host: '{{ app.tenants.rebrow.host }}'
-        tenants_discovery_host: '{{ app.discovery.api.host }}'
-        tenants_directory: '{{ platform.app }}/tenants'
-        tenants_database_host: '{{ app.tenants.database.host }}'
-        tenants_database_port: '{{ app.tenants.database.port }}'
-        tenants_database_name: '{{ app.tenants.database.name }}'
-        tenants_database_username: '{{ app.tenants.database.username }}'
-        tenants_database_password: '{{ app.tenants.database.password }}'
     - name: Detect docker credential file
       local_action: 'stat path=/root/docker/credential'
-      register: _docker_credential
-    - name: Define tenants container variables
-      set_fact:
-        tenants_credential: '{{ lookup("file", "/root/docker/credential") }}'
-      when: _docker_credential.stat.exists == true
+      register: docker_credential
     - name: Up tenants container
       include_role:
         name: app/tenants/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}tenants'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _nginx_virtual_host: '{{ app.tenants.api.host }}'
+        _adminer_virtual_host: '{{ app.tenants.adminer.host }}'
+        _rebrow_virtual_host: '{{ app.tenants.rebrow.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _directory: '{{ directory }}/tenants'
+        _database_host: '{{ app.tenants.database.host }}'
+        _database_port: '{{ app.tenants.database.port }}'
+        _database_name: '{{ app.tenants.database.name }}'
+        _database_username: '{{ app.tenants.database.username }}'
+        _database_password: '{{ app.tenants.database.password }}'
+        _credential: '{{ lookup("file", "/root/docker/credential") if docker_credential.stat.exists == true else none}}'
   when: app.tenants.enabled
   tags: [tenants]

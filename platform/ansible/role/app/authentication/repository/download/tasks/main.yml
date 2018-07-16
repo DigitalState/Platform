@@ -2,8 +2,8 @@
 - block:
     - name: Download authentication repository
       git:
-        repo: '{{ authentication_repository }}'
-        version: '{{ authentication_version }}'
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
         dest: /srv/authentication
         force: yes
   tags: [authentication]

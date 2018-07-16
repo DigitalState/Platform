@@ -1,105 +1,25 @@
 ---
 - block:
-    - block:
-        - name: Configure services namespace environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^COMPOSE_PROJECT_NAME='
-            line: 'COMPOSE_PROJECT_NAME={{ services_compose_project_name }}'
-        - name: Configure services network environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^NETWORK='
-            line: 'NETWORK={{ services_network }}'
-        - name: Configure proxy host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^PROXY_HOST='
-            line: 'PROXY_HOST={{ services_proxy_host }}'
-        - name: Configure nginx virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^NGINX_VIRTUAL_HOST='
-            line: 'NGINX_VIRTUAL_HOST={{ services_nginx_virtual_host }}'
-        - name: Configure adminer virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^ADMINER_VIRTUAL_HOST='
-            line: 'ADMINER_VIRTUAL_HOST={{ services_adminer_virtual_host }}'
-        - name: Configure rebrow virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^REBROW_VIRTUAL_HOST='
-            line: 'REBROW_VIRTUAL_HOST={{ services_rebrow_virtual_host }}'
-        - name: Configure discovery host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^DISCOVERY_HOST='
-            line: 'DISCOVERY_HOST={{ services_discovery_host }}'
-        - name: Configure directory environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^DIRECTORY='
-            line: 'DIRECTORY={{ services_directory }}'
-        - name: Configure database host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^DATABASE_HOST='
-            line: 'DATABASE_HOST={{ services_database_host }}'
-        - name: Configure database port environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^DATABASE_PORT='
-            line: 'DATABASE_PORT={{ services_database_port }}'
-        - name: Configure database name environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^DATABASE_NAME='
-            line: 'DATABASE_NAME={{ services_database_name }}'
-        - name: Configure database username environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^DATABASE_USERNAME='
-            line: 'DATABASE_USERNAME={{ services_database_username }}'
-        - name: Configure database password environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/services/{{ services_env_file }}'
-            regexp: '^DATABASE_PASSWORD='
-            line: 'DATABASE_PASSWORD={{ services_database_password }}'
-      when: services_env_file is not none
     - name: Up services container
       docker_service:
         project_src: /srv/services
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ services_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: present
       environment:
-        COMPOSE_PROJECT_NAME: '{{ services_compose_project_name }}'
-        NETWORK: '{{ services_network }}'
-        PROXY_HOST: '{{ services_proxy_host }}'
-        NGINX_VIRTUAL_HOST: '{{ services_nginx_virtual_host }}'
-        ADMINER_VIRTUAL_HOST: '{{ services_adminer_virtual_host }}'
-        REBROW_VIRTUAL_HOST: '{{ services_rebrow_virtual_host }}'
-        DIRECTORY: '{{ services_directory }}'
-        DATABASE_HOST: '{{ services_database_host }}'
-        DATABASE_PORT: '{{ services_database_port }}'
-        DATABASE_NAME: '{{ services_database_name }}'
-        DATABASE_USERNAME: '{{ services_database_username }}'
-        DATABASE_PASSWORD: '{{ services_database_password }}'
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        NGINX_VIRTUAL_HOST: '{{ _nginx_virtual_host }}'
+        ADMINER_VIRTUAL_HOST: '{{ _adminer_virtual_host }}'
+        REBROW_VIRTUAL_HOST: '{{ _rebrow_virtual_host }}'
+        DIRECTORY: '{{ _directory }}'
+        DATABASE_HOST: '{{ _database_host }}'
+        DATABASE_PORT: '{{ _database_port }}'
+        DATABASE_NAME: '{{ _database_name }}'
+        DATABASE_USERNAME: '{{ _database_username }}'
+        DATABASE_PASSWORD: '{{ _database_password }}'
     - name: Waiting for services container to finalize installation
       shell:
         cmd: docker-compose exec -T php pidof php-fpm | cat

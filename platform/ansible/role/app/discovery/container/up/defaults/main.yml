@@ -1,8 +1,0 @@
----
-discovery_env: prod
-discovery_env_file: ~
-discovery_compose_project_name: dsdiscovery
-discovery_network: dsproxy_default
-discovery_proxy_host: 127.0.0.1
-discovery_virtual_host: api.discovery.ds
-discovery_directory: /srv/discovery

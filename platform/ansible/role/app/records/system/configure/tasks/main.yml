@@ -2,12 +2,12 @@
 - block:
     - name: Configure records system username setting
       lineinfile:
-        path: '{{ records_system_config_file }}'
+        path: '/srv/records/app/config/parameters.yml'
         regexp: '^\s{4}system_username:'
-        line: '    system_username: {{ records_system_username }}'
+        line: '    system_username: {{ _username }}'
     - name: Configure records mail password setting
       lineinfile:
-        path: '{{ records_system_config_file }}'
+        path: '/srv/records/app/config/parameters.yml'
         regexp: '^\s{4}system_password:'
-        line: '    system_password: ''{{ records_system_password }}'''
+        line: '    system_password: ''{{ _password }}'''
   tags: [records]

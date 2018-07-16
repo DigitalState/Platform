@@ -1,11 +1,10 @@
 ---
 - block:
-    - name: Define assets repository variables
-      set_fact:
-        assets_repository: '{{ app.assets.repository }}'
-        assets_version: '{{ app.assets.version }}'
     - name: Download assets repository
       include_role:
         name: app/assets/repository/download
+      vars:
+        _repository: '{{ app.assets.repository }}'
+        _version: '{{ app.assets.version }}'
   when: app.assets.enabled
   tags: [assets]

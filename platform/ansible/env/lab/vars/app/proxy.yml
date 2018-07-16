@@ -1,0 +1,7 @@
+---
+proxy:
+  enabled: true
+  order: -30
+  repository: https://github.com/DigitalState/Proxy.git
+  version: develop
+  port: 80

@@ -2,35 +2,27 @@
 - block:
     - name: Gather information for tasks container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-    - name: Define tasks container variables
-      set_fact:
-        tasks_env_file: .env.platform
-      when: platform.env == 'lab'
-    - name: Define tasks container variables
-      set_fact:
-        tasks_env: '{{ platform.env }}'
-        tasks_compose_project_name: '{{ platform.namespace }}tasks'
-        tasks_network: '{{ platform.namespace }}proxy_default'
-        tasks_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        tasks_nginx_virtual_host: '{{ app.tasks.api.host }}'
-        tasks_adminer_virtual_host: '{{ app.tasks.adminer.host }}'
-        tasks_rebrow_virtual_host: '{{ app.tasks.rebrow.host }}'
-        tasks_discovery_host: '{{ app.discovery.api.host }}'
-        tasks_directory: '{{ platform.app }}/tasks'
-        tasks_database_host: '{{ app.tasks.database.host }}'
-        tasks_database_port: '{{ app.tasks.database.port }}'
-        tasks_database_name: '{{ app.tasks.database.name }}'
-        tasks_database_username: '{{ app.tasks.database.username }}'
-        tasks_database_password: '{{ app.tasks.database.password }}'
     - name: Detect docker credential file
       local_action: 'stat path=/root/docker/credential'
-      register: _docker_credential
-    - name: Define tasks container variables
-      set_fact:
-        tasks_credential: '{{ lookup("file", "/root/docker/credential") }}'
-      when: _docker_credential.stat.exists == true
+      register: docker_credential
     - name: Up tasks container
       include_role:
         name: app/tasks/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}tasks'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _nginx_virtual_host: '{{ app.tasks.api.host }}'
+        _adminer_virtual_host: '{{ app.tasks.adminer.host }}'
+        _rebrow_virtual_host: '{{ app.tasks.rebrow.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _directory: '{{ directory }}/tasks'
+        _database_host: '{{ app.tasks.database.host }}'
+        _database_port: '{{ app.tasks.database.port }}'
+        _database_name: '{{ app.tasks.database.name }}'
+        _database_username: '{{ app.tasks.database.username }}'
+        _database_password: '{{ app.tasks.database.password }}'
+        _credential: '{{ lookup("file", "/root/docker/credential") if docker_credential.stat.exists == true else none }}'
   when: app.tasks.enabled
   tags: [tasks]

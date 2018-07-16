@@ -3,5 +3,8 @@
     - name: Download authentication jwt keys
       include_role:
         name: app/authentication/jwt/key/download
+      vars:
+        _private_key: '/root/resource/jwt/{{ env|replace(".", "/") }}/key'
+        _public_key: '/root/resource/jwt/{{ env|replace(".", "/") }}/key.pub'
   when: app.authentication.enabled
   tags: [authentication]

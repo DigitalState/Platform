@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define forms jwt variables
-      set_fact:
-        forms_jwt_key_pass_phrase: '{{ platform.jwt.pass_phrase }}'
     - name: Configure forms jwt key pass phrase
       include_role:
         name: app/forms/jwt/configure
+      vars:
+        _pass_phrase: '{{ jwt.pass_phrase }}'
   when: app.forms.enabled
   tags: [forms]

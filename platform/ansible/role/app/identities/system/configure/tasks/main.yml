@@ -2,12 +2,12 @@
 - block:
     - name: Configure identities system username setting
       lineinfile:
-        path: '{{ identities_system_config_file }}'
+        path: '/srv/identities/app/config/parameters.yml'
         regexp: '^\s{4}system_username:'
-        line: '    system_username: {{ identities_system_username }}'
+        line: '    system_username: {{ _username }}'
     - name: Configure identities mail password setting
       lineinfile:
-        path: '{{ identities_system_config_file }}'
+        path: '/srv/identities/app/config/parameters.yml'
         regexp: '^\s{4}system_password:'
-        line: '    system_password: ''{{ identities_system_password }}'''
+        line: '    system_password: ''{{ _password }}'''
   tags: [identities]

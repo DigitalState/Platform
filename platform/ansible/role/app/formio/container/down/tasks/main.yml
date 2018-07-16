@@ -5,7 +5,7 @@
         project_src: /srv/formio
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ formio_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: absent
-        remove_volumes: '{{ "no" if formio_persistent else "yes" }}'
+        remove_volumes: '{{ "no" if _persistent else "yes" }}'
   tags: [formio]

@@ -3,5 +3,8 @@
     - name: Download cases jwt keys
       include_role:
         name: app/cases/jwt/key/download
+      vars:
+        _private_key: '/root/resource/jwt/{{ env|replace(".", "/") }}/key'
+        _public_key: '/root/resource/jwt/{{ env|replace(".", "/") }}/key.pub'
   when: app.cases.enabled
   tags: [cases]

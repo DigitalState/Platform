@@ -2,8 +2,8 @@
 - block:
     - name: Download admin repository
       git:
-        repo: '{{ admin_repository }}'
-        version: '{{ admin_version }}'
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
         recursive: yes
         dest: /srv/admin
         force: yes

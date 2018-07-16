@@ -2,12 +2,12 @@
 - block:
     - name: Configure tasks system username setting
       lineinfile:
-        path: '{{ tasks_system_config_file }}'
+        path: '/srv/tasks/app/config/parameters.yml'
         regexp: '^\s{4}system_username:'
-        line: '    system_username: {{ tasks_system_username }}'
+        line: '    system_username: {{ _username }}'
     - name: Configure tasks mail password setting
       lineinfile:
-        path: '{{ tasks_system_config_file }}'
+        path: '/srv/tasks/app/config/parameters.yml'
         regexp: '^\s{4}system_password:'
-        line: '    system_password: ''{{ tasks_system_password }}'''
+        line: '    system_password: ''{{ _password }}'''
   tags: [tasks]

@@ -1,3 +1,0 @@
----
-tasks_config_file: /srv/tasks/app/config/parameters.yml
-tasks_jwt_key_pass_phrase: ~

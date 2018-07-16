@@ -5,7 +5,7 @@
         project_src: /srv/assets
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ assets_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: absent
-        remove_volumes: '{{ "no" if assets_persistent else "yes" }}'
+        remove_volumes: '{{ "no" if _persistent else "yes" }}'
   tags: [assets]

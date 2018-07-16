@@ -4,5 +4,5 @@
       shell:
         cmd: 'docker-compose exec -T php php bin/console ds:config:set {{ item.key }} {{ item.value }}'
         chdir: /srv/authentication
-      with_dict: '{{ authentication_config }}'
+      with_dict: '{{ _config }}'
   tags: [authentication]

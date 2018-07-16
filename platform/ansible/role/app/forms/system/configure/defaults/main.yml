@@ -1,4 +1,0 @@
----
-forms_system_config_file: /srv/forms/app/config/parameters.yml
-forms_system_username: system
-forms_system_password: ~

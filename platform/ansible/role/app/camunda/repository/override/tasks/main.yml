@@ -1,11 +1,11 @@
 ---
 - block:
     - name: Detect camunda repository override directory
-      local_action: 'stat path={{ camunda_repository_override }}'
-      register: _repository_override
+      local_action: 'stat path={{ _directory }}'
+      register: _override
     - name: Download camunda repository override directory
       copy:
-        src: '{{ camunda_repository_override }}/'
+        src: '{{ _directory }}/'
         dest: /srv/camunda
-      when: _repository_override.stat.exists == true
+      when: _override.stat.exists == true
   tags: [camunda]

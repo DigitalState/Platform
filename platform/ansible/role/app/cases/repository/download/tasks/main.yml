@@ -2,8 +2,8 @@
 - block:
     - name: Download cases repository
       git:
-        repo: '{{ cases_repository }}'
-        version: '{{ cases_version }}'
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
         dest: /srv/cases
         force: yes
   tags: [cases]

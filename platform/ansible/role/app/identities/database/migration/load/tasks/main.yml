@@ -5,19 +5,17 @@
         src: '/srv/identities/src/AppBundle/Resources/migrations/{{ item.key|replace(".", "_") }}.yml'
         remote_src: yes
         dest: '/srv/identities/src/AppBundle/Resources/migrations/_{{ item.key|replace(".", "_") }}.yml'
-      with_dict: '{{ identities_database_migration_data }}'
-      when: identities_database_migration_data is not none
+      with_dict: '{{ _data }}'
       no_log: yes
     - name: Create custom identities database migration file
       copy:
         dest: '/srv/identities/src/AppBundle/Resources/migrations/{{ item.key|replace(".", "_") }}.yml'
         content: '{{ item.value|to_nice_yaml }}'
-      with_dict: '{{ identities_database_migration_data }}'
-      when: identities_database_migration_data is not none
+      with_dict: '{{ _data }}'
       no_log: yes
     - name: Load identities database migration
       shell:
-        cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:migrate {{ "" if identities_database_migration_version is none else identities_database_migration_version|replace(".", "_") }} --no-interaction'
+        cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:migrate {{ "" if _version is none else _version|replace(".", "_") }} --no-interaction'
         chdir: /srv/identities
     # The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
     - name: Pause while identities database migration loads
@@ -27,22 +25,19 @@
       file:
         path: '/srv/identities/src/AppBundle/Resources/migrations/{{ item.key|replace(".", "_") }}.yml'
         state: absent
-      with_dict: '{{ identities_database_migration_data }}'
-      when: identities_database_migration_data is not none
+      with_dict: '{{ _data }}'
       no_log: yes
     - name: Restore identities database migration file
       copy:
         src: '/srv/identities/src/AppBundle/Resources/migrations/_{{ item.key|replace(".", "_") }}.yml'
         remote_src: yes
         dest: '/srv/identities/src/AppBundle/Resources/migrations/{{ item.key|replace(".", "_") }}.yml'
-      with_dict: '{{ identities_database_migration_data }}'
-      when: identities_database_migration_data is not none
+      with_dict: '{{ _data }}'
       no_log: yes
     - name: Remove backup identities database migration file
       file:
         path: '/srv/identities/src/AppBundle/Resources/migrations/_{{ item.key|replace(".", "_") }}.yml'
         state: absent
-      with_dict: '{{ identities_database_migration_data }}'
-      when: identities_database_migration_data is not none
+      with_dict: '{{ _data }}'
       no_log: yes
   tags: [identities]

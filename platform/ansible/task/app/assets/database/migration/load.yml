@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define assets database migration variables
-      set_fact:
-        assets_database_migration_data: '{{ database_migration_data }}'
     - name: Load assets database migration
       include_role:
         name: app/assets/database/migration/load
+      vars:
+        _data: '{{ data }}'
   when: app.assets.enabled
   tags: [assets]

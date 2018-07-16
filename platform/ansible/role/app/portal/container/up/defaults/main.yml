@@ -1,9 +1,0 @@
----
-portal_env: prod
-portal_env_file: ~
-portal_compose_project_name: dsportal
-portal_network: dsproxy_default
-portal_proxy_host: 127.0.0.1
-portal_virtual_host: portal.ds
-portal_discovery_host: api.discovery.ds
-portal_directory: /srv/portal

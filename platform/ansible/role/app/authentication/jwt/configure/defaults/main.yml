@@ -1,3 +1,0 @@
----
-authentication_config_file: /srv/authentication/app/config/parameters.yml
-authentication_jwt_key_pass_phrase: ~

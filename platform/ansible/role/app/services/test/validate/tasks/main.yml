@@ -5,6 +5,6 @@
         name: app/services/test/run
     - name: Validate services tests result
       debug:
-        msg: '{{ services_test_run_result[0] }} / {{ services_test_run_result[1] }}'
-      failed_when: services_test_run_result[0] != services_test_run_result[1]
+        msg: '{{ _result[0] }} / {{ _result[1] }}'
+      failed_when: _result[0] != _result[1]
   tags: [services]

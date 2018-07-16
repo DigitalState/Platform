@@ -2,6 +2,6 @@
 - block:
     - name: Configure discovery data
       copy:
-        content: '{{ discovery_data|to_json }}'
-        dest: '{{ discovery_data_config_file }}'
+        content: '{{ _data|to_nice_json }}'
+        dest: '/srv/discovery/web/data.json'
   tags: [discovery]

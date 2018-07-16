@@ -1,4 +1,6 @@
 ---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+
 - name: Compile discovery/configure task list
   hosts: platform
   become: true
@@ -8,7 +10,7 @@
         app: '{{ app }}'
         directory: /etc/ansible/task/app/*
         task: discovery/configure
-      register: _result
+      register: files
   tags: [always]
 
 - name: Configure discovery settings
@@ -16,10 +18,8 @@
   become: true
   tasks:
     - name: Include compiled task list
-      include_tasks: '{{ _file }}'
-      with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
-      loop_control:
-        loop_var: _file
+      include_tasks: '{{ item }}'
+      with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
       tags: [always]
     - name: Configure discovery dns
       include_tasks: /etc/ansible/task/app/discovery/dns/configure.yml

@@ -1,3 +1,0 @@
----
-tenants_encryption_config_file: /srv/tenants/app/config/parameters.yml
-tenants_encryption_secret: ~

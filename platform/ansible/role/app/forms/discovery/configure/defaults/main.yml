@@ -1,3 +1,0 @@
----
-forms_discovery_config_file: /srv/forms/app/config/parameters.yml
-forms_discovery_host: api.discovery.ds

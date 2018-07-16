@@ -2,12 +2,12 @@
 - block:
     - name: Configure assets system username setting
       lineinfile:
-        path: '{{ assets_system_config_file }}'
+        path: '/srv/assets/app/config/parameters.yml'
         regexp: '^\s{4}system_username:'
-        line: '    system_username: {{ assets_system_username }}'
+        line: '    system_username: {{ _username }}'
     - name: Configure assets mail password setting
       lineinfile:
-        path: '{{ assets_system_config_file }}'
+        path: '/srv/assets/app/config/parameters.yml'
         regexp: '^\s{4}system_password:'
-        line: '    system_password: ''{{ assets_system_password }}'''
+        line: '    system_password: ''{{ _password }}'''
   tags: [assets]

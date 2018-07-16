@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define tasks discovery variables
-      set_fact:
-        tasks_discovery_host: '{{ app.discovery.api.host }}'
     - name: Configure tasks discovery settings
       include_role:
         name: app/tasks/discovery/configure
+      vars:
+        _host: '{{ app.discovery.api.host }}'
   when: app.tasks.enabled
   tags: [tasks]

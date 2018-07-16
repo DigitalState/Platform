@@ -1,11 +1,11 @@
 ---
 - block:
     - name: Detect authentication repository override directory
-      local_action: 'stat path={{ authentication_repository_override }}'
-      register: _repository_override
+      local_action: 'stat path={{ _directory }}'
+      register: _override
     - name: Download authentication repository override directory
       copy:
-        src: '{{ authentication_repository_override }}/'
+        src: '{{ _directory }}/'
         dest: /srv/authentication
-      when: _repository_override.stat.exists == true
+      when: _override.stat.exists == true
   tags: [authentication]

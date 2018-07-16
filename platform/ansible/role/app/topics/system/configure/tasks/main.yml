@@ -2,12 +2,12 @@
 - block:
     - name: Configure topics system username setting
       lineinfile:
-        path: '{{ topics_system_config_file }}'
+        path: '/srv/topics/app/config/parameters.yml'
         regexp: '^\s{4}system_username:'
-        line: '    system_username: {{ topics_system_username }}'
+        line: '    system_username: {{ _username }}'
     - name: Configure topics mail password setting
       lineinfile:
-        path: '{{ topics_system_config_file }}'
+        path: '/srv/topics/app/config/parameters.yml'
         regexp: '^\s{4}system_password:'
-        line: '    system_password: ''{{ topics_system_password }}'''
+        line: '    system_password: ''{{ _password }}'''
   tags: [topics]

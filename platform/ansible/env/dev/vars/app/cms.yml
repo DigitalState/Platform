@@ -1,0 +1,17 @@
+---
+cms:
+  enabled: true
+  repository: https://github.com/DigitalState/Cms.git
+  version: 0.7.0
+  api:
+    host: api.cms.dev.ds
+  adminer:
+    host: adminer.cms.dev.ds
+  rebrow:
+    host: rebrow.cms.dev.ds
+  database:
+    host: cms_database
+    port: 5432
+    name: cms
+    username: cms
+    password: cms

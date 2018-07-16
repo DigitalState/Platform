@@ -1,11 +1,10 @@
 ---
 - block:
-    - name: Define formio repository variables
-      set_fact:
-        formio_repository: '{{ app.formio.repository }}'
-        formio_version: '{{ app.formio.version }}'
     - name: Download formio repository
       include_role:
         name: app/formio/repository/download
+      vars:
+        _repository: '{{ app.formio.repository }}'
+        _version: '{{ app.formio.version }}'
   when: app.formio.enabled
   tags: [formio]

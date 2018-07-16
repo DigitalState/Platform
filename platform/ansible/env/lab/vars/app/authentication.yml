@@ -1,0 +1,17 @@
+---
+authentication:
+  enabled: true
+  repository: https://github.com/DigitalState/Authentication.git
+  version: develop
+  api:
+    host: api.authentication.lab.ds
+  adminer:
+    host: adminer.authentication.lab.ds
+  rebrow:
+    host: rebrow.authentication.lab.ds
+  database:
+    host: authentication_database
+    port: 5432
+    name: authentication
+    username: authentication
+    password: authentication

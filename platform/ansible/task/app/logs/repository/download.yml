@@ -1,11 +1,10 @@
 ---
 - block:
-    - name: Define logs repository variables
-      set_fact:
-        logs_repository: '{{ app.logs.repository }}'
-        logs_version: '{{ app.logs.version }}'
     - name: Download logs repository
       include_role:
         name: app/logs/repository/download
+      vars:
+        _repository: '{{ app.logs.repository }}'
+        _version: '{{ app.logs.version }}'
   when: app.logs.enabled
   tags: [logs]

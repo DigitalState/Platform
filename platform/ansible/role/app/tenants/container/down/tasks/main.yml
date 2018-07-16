@@ -5,7 +5,7 @@
         project_src: /srv/tenants
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ tenants_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: absent
-        remove_volumes: '{{ "no" if tenants_persistent else "yes" }}'
+        remove_volumes: '{{ "no" if _persistent else "yes" }}'
   tags: [tenants]

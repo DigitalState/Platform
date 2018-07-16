@@ -2,7 +2,7 @@
 - block:
     - name: Configure tasks encryption secret setting
       lineinfile:
-        path: '{{ tasks_encryption_config_file }}'
+        path: '/srv/tasks/app/config/parameters.yml'
         regexp: '^\s{4}secret:'
-        line: '    secret: {{ tasks_encryption_secret }}'
+        line: '    secret: {{ _secret }}'
   tags: [tasks]

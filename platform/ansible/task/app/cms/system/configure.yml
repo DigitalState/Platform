@@ -1,11 +1,10 @@
 ---
 - block:
-    - name: Define cms system variables
-      set_fact:
-        cms_system_username: '{{ platform.system.username }}'
-        cms_system_password: '{{ platform.system.password }}'
     - name: Configure cms system settings
       include_role:
         name: app/cms/system/configure
+      vars:
+        _username: '{{ system.username }}'
+        _password: '{{ system.password }}'
   when: app.cms.enabled
   tags: [cms]

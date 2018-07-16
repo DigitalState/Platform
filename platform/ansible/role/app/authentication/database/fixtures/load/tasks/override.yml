@@ -1,16 +1,16 @@
 ---
 - block:
     - name: Backup authentication fixtures directory
-      shell: 'mv /srv/authentication/src/AppBundle/Resources/fixtures/{{ authentication_fixtures }} /srv/authentication/src/AppBundle/Resources/fixtures/_{{ authentication_fixtures }}'
+      shell: 'mv /srv/authentication/src/AppBundle/Resources/fixtures/{{ _fixtures }} /srv/authentication/src/AppBundle/Resources/fixtures/_{{ _fixtures }}'
     - name: Download authentication fixtures directory override
       copy:
-        src: '{{ authentication_override }}/'
-        dest: '/srv/authentication/src/AppBundle/Resources/fixtures/{{ authentication_fixtures }}'
+        src: '{{ _override }}/'
+        dest: '/srv/authentication/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
     - import_tasks: load.yml
     - name: Delete authentication fixtures directory override
       file:
-        path: '/srv/authentication/src/AppBundle/Resources/fixtures/{{ authentication_fixtures }}'
+        path: '/srv/authentication/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
         state: absent
     - name: Restore authentication fixtures directory backup
-      shell: 'mv /srv/authentication/src/AppBundle/Resources/fixtures/_{{ authentication_fixtures }} /srv/authentication/src/AppBundle/Resources/fixtures/{{ authentication_fixtures }}'
+      shell: 'mv /srv/authentication/src/AppBundle/Resources/fixtures/_{{ _fixtures }} /srv/authentication/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
   tags: [authentication]

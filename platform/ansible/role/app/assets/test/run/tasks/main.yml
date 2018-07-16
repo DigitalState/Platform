@@ -4,12 +4,12 @@
       shell:
         cmd: docker-compose exec -T php vendor/bin/behat
         chdir: /srv/assets
-      register: assets_test_run_result
+      register: _result
       changed_when: false
     - name: Register assets tests result
       set_fact:
-        assets_test_run_result: '{{ assets_test_run_result.stdout_lines[assets_test_run_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
+        _result: '{{ _result.stdout_lines[_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
     - name: Display assets tests result
       debug:
-        msg: '{{ assets_test_run_result[0] }} / {{ assets_test_run_result[1] }}'
+        msg: '{{ _result[0] }} / {{ _result[1] }}'
   tags: [assets]

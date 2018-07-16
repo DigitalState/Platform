@@ -1,0 +1,17 @@
+---
+tenants:
+  enabled: true
+  repository: https://github.com/DigitalState/Tenants.git
+  version: 0.7.0
+  api:
+    host: api.tenants.dev.ds
+  adminer:
+    host: adminer.tenants.dev.ds
+  rebrow:
+    host: rebrow.tenants.dev.ds
+  database:
+    host: tenants_database
+    port: 5432
+    name: tenants
+    username: tenants
+    password: tenants

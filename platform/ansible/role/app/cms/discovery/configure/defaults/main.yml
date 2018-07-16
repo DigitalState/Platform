@@ -1,3 +1,0 @@
----
-cms_discovery_config_file: /srv/cms/app/config/parameters.yml
-cms_discovery_host: api.discovery.ds

@@ -1,3 +1,0 @@
----
-authentication_discovery_config_file: /srv/authentication/app/config/parameters.yml
-authentication_discovery_host: api.discovery.ds

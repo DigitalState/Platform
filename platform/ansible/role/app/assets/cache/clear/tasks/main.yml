@@ -2,6 +2,6 @@
 - block:
     - name: Clear assets cache
       shell:
-        cmd: 'docker-compose exec -T php php bin/console cache:clear --no-warmup --env={{ assets_env }}'
+        cmd: 'docker-compose exec -T php php bin/console cache:clear --no-warmup --env={{ _env }}'
         chdir: /srv/assets
   tags: [assets]

@@ -4,12 +4,12 @@
       shell:
         cmd: docker-compose exec -T php vendor/bin/behat
         chdir: /srv/cms
-      register: cms_test_run_result
+      register: _result
       changed_when: false
     - name: Register cms tests result
       set_fact:
-        cms_test_run_result: '{{ cms_test_run_result.stdout_lines[cms_test_run_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
+        result: '{{ _result.stdout_lines[_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
     - name: Display cms tests result
       debug:
-        msg: '{{ cms_test_run_result[0] }} / {{ cms_test_run_result[1] }}'
+        msg: '{{ _result[0] }} / {{ _result[1] }}'
   tags: [cms]

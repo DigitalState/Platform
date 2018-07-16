@@ -1,4 +1,0 @@
----
-services_system_config_file: /srv/services/app/config/parameters.yml
-services_system_username: system
-services_system_password: ~

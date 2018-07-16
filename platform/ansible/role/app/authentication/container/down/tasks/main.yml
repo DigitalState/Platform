@@ -5,7 +5,7 @@
         project_src: /srv/authentication
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ authentication_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: absent
-        remove_volumes: '{{ "no" if authentication_persistent else "yes" }}'
+        remove_volumes: '{{ "no" if _persistent else "yes" }}'
   tags: [authentication]

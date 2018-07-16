@@ -2,6 +2,6 @@
 - block:
     - name: Warmup topics cache
       shell:
-        cmd: 'docker-compose exec -T php php bin/console cache:warmup --env={{ topics_env }}'
+        cmd: 'docker-compose exec -T php php bin/console cache:warmup --env={{ _env }}'
         chdir: /srv/topics
   tags: [topics]

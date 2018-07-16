@@ -5,7 +5,7 @@
         project_src: /srv/discovery
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ discovery_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: absent
-        remove_volumes: '{{ "no" if discovery_persistent else "yes" }}'
+        remove_volumes: '{{ "no" if _persistent else "yes" }}'
   tags: [discovery]

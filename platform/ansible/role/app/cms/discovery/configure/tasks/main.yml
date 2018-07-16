@@ -2,7 +2,7 @@
 - block:
     - name: Configure cms discovery host setting
       lineinfile:
-        path: '{{ cms_discovery_config_file }}'
+        path: '/srv/cms/app/config/parameters.yml'
         regexp: '^\s{4}discovery_host:'
-        line: '    discovery_host: {{ cms_discovery_host }}'
+        line: '    discovery_host: {{ _host }}'
   tags: [cms]

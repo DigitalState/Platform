@@ -2,18 +2,12 @@
 - block:
     - name: Detect records fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/records'
-      register: _directory
-    - name: Define records database fixtures variables
-      set_fact:
-        records_fixtures: 'dev'
-        records_override: '{{ "/root/resource/fixtures/records" if _directory.stat.exists == true else "" }}'
-    - name: Define records database fixtures variables
-      set_fact:
-        records_fixtures: 'test'
-        records_override: ''
-      when: platform.env[0:4] == 'test'
+      register: override
     - name: Load records database fixtures
       include_role:
         name: app/records/database/fixtures/load
+      vars:
+        _fixtures: '{{ "test" if env[0:4] == "test" else "dev" }}'
+        _override: '{{ "/root/resource/fixtures/records" if override.stat.exists == true and env[0:4] != "test" else "" }}'
   when: app.records.enabled
   tags: [records]

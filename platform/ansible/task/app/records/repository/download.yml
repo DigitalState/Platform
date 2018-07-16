@@ -1,11 +1,10 @@
 ---
 - block:
-    - name: Define records repository variables
-      set_fact:
-        records_repository: '{{ app.records.repository }}'
-        records_version: '{{ app.records.version }}'
     - name: Download records repository
       include_role:
         name: app/records/repository/download
+      vars:
+        _repository: '{{ app.records.repository }}'
+        _version: '{{ app.records.version }}'
   when: app.records.enabled
   tags: [records]

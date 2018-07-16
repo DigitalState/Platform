@@ -1,0 +1,8 @@
+---
+discovery:
+  enabled: true
+  order: -20
+  repository: https://github.com/DigitalState/Discovery.git
+  version: develop
+  api:
+    host: api.discovery.lab.ds

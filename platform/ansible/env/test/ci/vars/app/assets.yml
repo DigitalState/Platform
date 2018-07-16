@@ -1,0 +1,17 @@
+---
+assets:
+  enabled: true
+  repository: https://github.com/DigitalState/Assets.git
+  version: develop
+  api:
+    host: api.assets.ci.test.ds
+  adminer:
+    host: adminer.assets.ci.test.ds
+  rebrow:
+    host: rebrow.assets.ci.test.ds
+  database:
+    host: assets_database
+    port: 5432
+    name: assets
+    username: assets
+    password: assets

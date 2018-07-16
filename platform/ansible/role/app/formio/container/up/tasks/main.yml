@@ -4,82 +4,26 @@
       replace:
         path: /srv/formio/formio/client/dist/config.js
         regexp: api\.formio\.ds
-        replace: '{{ formio_formio_virtual_host }}'
+        replace: '{{ _formio_virtual_host }}'
     - name: Configure app host config
       replace:
         path: /srv/formio/formio/config/default.json
         regexp: api\.formio\.ds
-        replace: '{{ formio_formio_virtual_host }}'
-    - block:
-        - name: Configure formio namespace environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/formio/{{ formio_env_file }}'
-            regexp: '^COMPOSE_PROJECT_NAME='
-            line: 'COMPOSE_PROJECT_NAME={{ formio_compose_project_name }}'
-        - name: Configure formio network environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/formio/{{ formio_env_file }}'
-            regexp: '^NETWORK='
-            line: 'NETWORK={{ formio_network }}'
-        - name: Configure proxy host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/formio/{{ formio_env_file }}'
-            regexp: '^PROXY_HOST='
-            line: 'PROXY_HOST={{ formio_proxy_host }}'
-        - name: Configure formio virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/formio/{{ formio_env_file }}'
-            regexp: '^FORMIO_VIRTUAL_HOST='
-            line: 'FORMIO_VIRTUAL_HOST={{ formio_formio_virtual_host }}'
-        - name: Configure adminer virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/formio/{{ formio_env_file }}'
-            regexp: '^ADMINER_VIRTUAL_HOST='
-            line: 'ADMINER_VIRTUAL_HOST={{ formio_adminer_virtual_host }}'
-        - name: Configure discovery host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/formio/{{ formio_env_file }}'
-            regexp: '^DISCOVERY_HOST='
-            line: 'DISCOVERY_HOST={{ formio_discovery_host }}'
-        - name: Configure directory environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/formio/{{ formio_env_file }}'
-            regexp: '^DIRECTORY='
-            line: 'DIRECTORY={{ formio_directory }}'
-        - name: Configure username environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/formio/{{ formio_env_file }}'
-            regexp: '^USERNAME='
-            line: 'USERNAME={{ formio_username }}'
-        - name: Configure password environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/formio/{{ formio_env_file }}'
-            regexp: '^PASSWORD='
-            line: 'PASSWORD={{ formio_password }}'
-      when: formio_env_file is not none
+        replace: '{{ _formio_virtual_host }}'
     - name: Up formio container
       docker_service:
         project_src: /srv/formio
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ formio_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: present
       environment:
-        COMPOSE_PROJECT_NAME: '{{ formio_compose_project_name }}'
-        NETWORK: '{{ formio_network }}'
-        PROXY_HOST: '{{ formio_proxy_host }}'
-        FORMIO_VIRTUAL_HOST: '{{ formio_formio_virtual_host }}'
-        ADMINER_VIRTUAL_HOST: '{{ formio_adminer_virtual_host }}'
-        DIRECTORY: '{{ formio_directory }}'
-        USERNAME: '{{ formio_username }}'
-        PASSWORD: '{{ formio_password }}'
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        FORMIO_VIRTUAL_HOST: '{{ _formio_virtual_host }}'
+        ADMINER_VIRTUAL_HOST: '{{ _adminer_virtual_host }}'
+        DIRECTORY: '{{ _directory }}'
+        USERNAME: '{{ _username }}'
+        PASSWORD: '{{ _password }}'
   tags: [formio]

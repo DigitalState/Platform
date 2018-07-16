@@ -1,3 +1,0 @@
----
-tenants_discovery_config_file: /srv/tenants/app/config/parameters.yml
-tenants_discovery_host: api.discovery.ds

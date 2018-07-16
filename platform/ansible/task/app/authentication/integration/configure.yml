@@ -4,8 +4,8 @@
       include_role:
         name: app/authentication/integration/configure
       vars:
-        github: '{{ platform.integration.github }}'
-        google: '{{ platform.integration.google }}'
-        twitter: '{{ platform.integration.twitter }}'
+        _github: '{{ integration.github }}'
+        _google: '{{ integration.google }}'
+        _twitter: '{{ integration.twitter }}'
   when: app.authentication.enabled
   tags: [authentication]

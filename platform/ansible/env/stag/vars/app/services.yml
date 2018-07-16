@@ -1,0 +1,17 @@
+---
+services:
+  enabled: true
+  repository: https://github.com/DigitalState/Services.git
+  version: 0.7.0
+  api:
+    host: api.services.stag.ds
+  adminer:
+    host: adminer.services.stag.ds
+  rebrow:
+    host: rebrow.services.stag.ds
+  database:
+    host: services_database
+    port: 5432
+    name: services
+    username: services
+    password: ~

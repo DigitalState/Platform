@@ -1,11 +1,11 @@
 ---
 - block:
     - name: Detect services repository override directory
-      local_action: 'stat path={{ services_repository_override }}'
-      register: _repository_override
+      local_action: 'stat path={{ _directory }}'
+      register: _override
     - name: Download services repository override directory
       copy:
-        src: '{{ services_repository_override }}/'
+        src: '{{ _directory }}/'
         dest: /srv/services
-      when: _repository_override.stat.exists == true
+      when: _override.stat.exists == true
   tags: [services]

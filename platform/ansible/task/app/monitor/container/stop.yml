@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define monitor container variables
-      set_fact:
-        monitor_env: '{{ platform.env }}'
     - name: Stop monitor container
       include_role:
         name: app/monitor/container/stop
+      vars:
+        _env: '{{ env }}'
   when: app.monitor.enabled
   tags: [monitor]

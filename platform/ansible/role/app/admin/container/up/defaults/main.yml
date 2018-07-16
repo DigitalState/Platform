@@ -1,9 +1,0 @@
----
-admin_env: prod
-admin_env_file: ~
-admin_compose_project_name: dsadmin
-admin_network: dsproxy_default
-admin_proxy_host: 127.0.0.1
-admin_virtual_host: admin.ds
-admin_discovery_host: api.discovery.ds
-admin_directory: /srv/admin

@@ -2,28 +2,23 @@
 - block:
     - name: Gather information for services container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-    - name: Define services container variables
-      set_fact:
-        services_env_file: .env.platform
-      when: platform.env == 'lab'
-    - name: Define services container variables
-      set_fact:
-        services_env: '{{ platform.env }}'
-        services_compose_project_name: '{{ platform.namespace }}services'
-        services_network: '{{ platform.namespace }}proxy_default'
-        services_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        services_nginx_virtual_host: '{{ app.services.api.host }}'
-        services_adminer_virtual_host: '{{ app.services.adminer.host }}'
-        services_rebrow_virtual_host: '{{ app.services.rebrow.host }}'
-        services_discovery_host: '{{ app.discovery.api.host }}'
-        services_directory: '{{ platform.app }}/services'
-        services_database_host: '{{ app.services.database.host }}'
-        services_database_port: '{{ app.services.database.port }}'
-        services_database_name: '{{ app.services.database.name }}'
-        services_database_username: '{{ app.services.database.username }}'
-        services_database_password: '{{ app.services.database.password }}'
     - name: Up services container
       include_role:
         name: app/services/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}services'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _nginx_virtual_host: '{{ app.services.api.host }}'
+        _adminer_virtual_host: '{{ app.services.adminer.host }}'
+        _rebrow_virtual_host: '{{ app.services.rebrow.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _directory: '{{ directory }}/services'
+        _database_host: '{{ app.services.database.host }}'
+        _database_port: '{{ app.services.database.port }}'
+        _database_name: '{{ app.services.database.name }}'
+        _database_username: '{{ app.services.database.username }}'
+        _database_password: '{{ app.services.database.password }}'
   when: app.services.enabled
   tags: [services]

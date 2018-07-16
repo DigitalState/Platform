@@ -1,21 +1,23 @@
 ---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+
 - name: Create jwt private and public keys
   hosts: platform
   become: true
   tasks:
     - name: Check if the jwt private key exists
       stat:
-        path: '/root/resource/jwt/{{ platform.env|replace(".", "/") }}/key'
-      register: _private
+        path: '/root/resource/jwt/{{ env|replace(".", "/") }}/key'
+      register: private
     - name: Create jwt private key
       shell:
-        cmd: 'openssl genrsa -out /root/resource/jwt/{{ platform.env|replace(".", "/") }}/key -aes256 -passout pass:{{ platform.jwt.pass_phrase }} 4096'
-      when: _private.stat.exists == false
+        cmd: 'openssl genrsa -out /root/resource/jwt/{{ env|replace(".", "/") }}/key -aes256 -passout pass:{{ jwt.pass_phrase }} 4096'
+      when: private.stat.exists == false
     - name: Check if the jwt public key exists
       stat:
-        path: '/root/resource/jwt/{{ platform.env|replace(".", "/") }}/key.pub'
-      register: _public
+        path: '/root/resource/jwt/{{ env|replace(".", "/") }}/key.pub'
+      register: public
     - name: Create jwt public key
       shell:
-        cmd: 'openssl rsa -pubout -in /root/resource/jwt/{{ platform.env|replace(".", "/") }}/key -out /root/resource/jwt/{{ platform.env|replace(".", "/") }}/key.pub -passin pass:{{ platform.jwt.pass_phrase }}'
-      when: _public.stat.exists == false
+        cmd: 'openssl rsa -pubout -in /root/resource/jwt/{{ env|replace(".", "/") }}/key -out /root/resource/jwt/{{ env|replace(".", "/") }}/key.pub -passin pass:{{ jwt.pass_phrase }}'
+      when: public.stat.exists == false

@@ -1,105 +1,25 @@
 ---
 - block:
-    - block:
-        - name: Configure assets namespace environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^COMPOSE_PROJECT_NAME='
-            line: 'COMPOSE_PROJECT_NAME={{ assets_compose_project_name }}'
-        - name: Configure assets network environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^NETWORK='
-            line: 'NETWORK={{ assets_network }}'
-        - name: Configure proxy host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^PROXY_HOST='
-            line: 'PROXY_HOST={{ assets_proxy_host }}'
-        - name: Configure nginx virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^NGINX_VIRTUAL_HOST='
-            line: 'NGINX_VIRTUAL_HOST={{ assets_nginx_virtual_host }}'
-        - name: Configure adminer virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^ADMINER_VIRTUAL_HOST='
-            line: 'ADMINER_VIRTUAL_HOST={{ assets_adminer_virtual_host }}'
-        - name: Configure rebrow virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^REBROW_VIRTUAL_HOST='
-            line: 'REBROW_VIRTUAL_HOST={{ assets_rebrow_virtual_host }}'
-        - name: Configure discovery host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^DISCOVERY_HOST='
-            line: 'DISCOVERY_HOST={{ assets_discovery_host }}'
-        - name: Configure directory environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^DIRECTORY='
-            line: 'DIRECTORY={{ assets_directory }}'
-        - name: Configure database host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^DATABASE_HOST='
-            line: 'DATABASE_HOST={{ assets_database_host }}'
-        - name: Configure database port environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^DATABASE_PORT='
-            line: 'DATABASE_PORT={{ assets_database_port }}'
-        - name: Configure database name environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^DATABASE_NAME='
-            line: 'DATABASE_NAME={{ assets_database_name }}'
-        - name: Configure database username environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^DATABASE_USERNAME='
-            line: 'DATABASE_USERNAME={{ assets_database_username }}'
-        - name: Configure database password environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/assets/{{ assets_env_file }}'
-            regexp: '^DATABASE_PASSWORD='
-            line: 'DATABASE_PASSWORD={{ assets_database_password }}'
-      when: assets_env_file is not none
     - name: Up assets container
       docker_service:
         project_src: /srv/assets
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ assets_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: present
       environment:
-        COMPOSE_PROJECT_NAME: '{{ assets_compose_project_name }}'
-        NETWORK: '{{ assets_network }}'
-        PROXY_HOST: '{{ assets_proxy_host }}'
-        NGINX_VIRTUAL_HOST: '{{ assets_nginx_virtual_host }}'
-        ADMINER_VIRTUAL_HOST: '{{ assets_adminer_virtual_host }}'
-        REBROW_VIRTUAL_HOST: '{{ assets_rebrow_virtual_host }}'
-        DIRECTORY: '{{ assets_directory }}'
-        DATABASE_HOST: '{{ assets_database_host }}'
-        DATABASE_PORT: '{{ assets_database_port }}'
-        DATABASE_NAME: '{{ assets_database_name }}'
-        DATABASE_USERNAME: '{{ assets_database_username }}'
-        DATABASE_PASSWORD: '{{ assets_database_password }}'
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        NGINX_VIRTUAL_HOST: '{{ _nginx_virtual_host }}'
+        ADMINER_VIRTUAL_HOST: '{{ _adminer_virtual_host }}'
+        REBROW_VIRTUAL_HOST: '{{ _rebrow_virtual_host }}'
+        DIRECTORY: '{{ _directory }}'
+        DATABASE_HOST: '{{ _database_host }}'
+        DATABASE_PORT: '{{ _database_port }}'
+        DATABASE_NAME: '{{ _database_name }}'
+        DATABASE_USERNAME: '{{ _database_username }}'
+        DATABASE_PASSWORD: '{{ _database_password }}'
     - name: Waiting for assets container to finalize installation
       shell:
         cmd: docker-compose exec -T php pidof php-fpm | cat

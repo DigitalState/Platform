@@ -2,8 +2,8 @@
 - block:
     - name: Download proxy repository
       git:
-        repo: '{{ proxy_repository }}'
-        version: '{{ proxy_version }}'
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
         dest: /srv/proxy
         force: yes
   tags: [proxy]

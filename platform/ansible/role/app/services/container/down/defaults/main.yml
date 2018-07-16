@@ -1,3 +1,0 @@
----
-services_env: prod
-services_persistent: false

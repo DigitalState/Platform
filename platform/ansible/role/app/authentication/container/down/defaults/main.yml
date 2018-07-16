@@ -1,3 +1,0 @@
----
-authentication_env: prod
-authentication_persistent: false

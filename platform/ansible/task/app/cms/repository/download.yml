@@ -1,11 +1,10 @@
 ---
 - block:
-    - name: Define cms repository variables
-      set_fact:
-        cms_repository: '{{ app.cms.repository }}'
-        cms_version: '{{ app.cms.version }}'
     - name: Download cms repository
       include_role:
         name: app/cms/repository/download
+      vars:
+        _repository: '{{ app.cms.repository }}'
+        _version: '{{ app.cms.version }}'
   when: app.cms.enabled
   tags: [cms]

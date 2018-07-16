@@ -1,0 +1,17 @@
+---
+forms:
+  enabled: true
+  repository: https://github.com/DigitalState/Forms.git
+  version: develop
+  api:
+    host: api.forms.lab.ds
+  adminer:
+    host: adminer.forms.lab.ds
+  rebrow:
+    host: rebrow.forms.lab.ds
+  database:
+    host: forms_database
+    port: 5432
+    name: forms
+    username: forms
+    password: forms

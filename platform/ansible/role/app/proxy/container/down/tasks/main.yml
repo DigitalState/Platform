@@ -5,7 +5,7 @@
         project_src: /srv/proxy
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ proxy_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: absent
-        remove_volumes: '{{ "no" if proxy_persistent else "yes" }}'
+        remove_volumes: '{{ "no" if _persistent else "yes" }}'
   tags: [proxy]

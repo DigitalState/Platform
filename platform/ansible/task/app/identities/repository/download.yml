@@ -1,11 +1,10 @@
 ---
 - block:
-    - name: Define identities repository variables
-      set_fact:
-        identities_repository: '{{ app.identities.repository }}'
-        identities_version: '{{ app.identities.version }}'
     - name: Download identities repository
       include_role:
         name: app/identities/repository/download
+      vars:
+        _repository: '{{ app.identities.repository }}'
+        _version: '{{ app.identities.version }}'
   when: app.identities.enabled
   tags: [identities]

@@ -1,16 +1,16 @@
 ---
 - block:
     - name: Backup interactions fixtures directory
-      shell: 'mv /srv/interactions/src/AppBundle/Resources/fixtures/{{ interactions_fixtures }} /srv/interactions/src/AppBundle/Resources/fixtures/_{{ interactions_fixtures }}'
+      shell: 'mv /srv/interactions/src/AppBundle/Resources/fixtures/{{ _fixtures }} /srv/interactions/src/AppBundle/Resources/fixtures/_{{ _fixtures }}'
     - name: Download interactions fixtures directory override
       copy:
-        src: '{{ interactions_override }}/'
-        dest: '/srv/interactions/src/AppBundle/Resources/fixtures/{{ interactions_fixtures }}'
+        src: '{{ _override }}/'
+        dest: '/srv/interactions/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
     - import_tasks: load.yml
     - name: Delete interactions fixtures directory override
       file:
-        path: '/srv/interactions/src/AppBundle/Resources/fixtures/{{ interactions_fixtures }}'
+        path: '/srv/interactions/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
         state: absent
     - name: Restore interactions fixtures directory backup
-      shell: 'mv /srv/interactions/src/AppBundle/Resources/fixtures/_{{ interactions_fixtures }} /srv/interactions/src/AppBundle/Resources/fixtures/{{ interactions_fixtures }}'
+      shell: 'mv /srv/interactions/src/AppBundle/Resources/fixtures/_{{ _fixtures }} /srv/interactions/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
   tags: [interactions]

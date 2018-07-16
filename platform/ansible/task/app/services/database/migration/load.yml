@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define services database migration variables
-      set_fact:
-        services_database_migration_data: '{{ database_migration_data }}'
     - name: Load services database migration
       include_role:
         name: app/services/database/migration/load
+      vars:
+        _data: '{{ data }}'
   when: app.services.enabled
   tags: [services]

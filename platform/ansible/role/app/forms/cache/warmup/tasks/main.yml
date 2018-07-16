@@ -2,6 +2,6 @@
 - block:
     - name: Warmup forms cache
       shell:
-        cmd: 'docker-compose exec -T php php bin/console cache:warmup --env={{ forms_env }}'
+        cmd: 'docker-compose exec -T php php bin/console cache:warmup --env={{ _env }}'
         chdir: /srv/forms
   tags: [forms]

@@ -2,7 +2,7 @@
 - block:
     - name: Configure tenants encryption secret setting
       lineinfile:
-        path: '{{ tenants_encryption_config_file }}'
+        path: '/srv/tenants/app/config/parameters.yml'
         regexp: '^\s{4}secret:'
-        line: '    secret: {{ tenants_encryption_secret }}'
+        line: '    secret: {{ _secret }}'
   tags: [tenants]

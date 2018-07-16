@@ -2,7 +2,7 @@
 - block:
     - name: Configure interactions discovery host setting
       lineinfile:
-        path: '{{ interactions_discovery_config_file }}'
+        path: '/srv/interactions/app/config/parameters.yml'
         regexp: '^\s{4}discovery_host:'
-        line: '    discovery_host: {{ interactions_discovery_host }}'
+        line: '    discovery_host: {{ _host }}'
   tags: [interactions]

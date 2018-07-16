@@ -1,8 +1,10 @@
 ---
 - block:
-    - name: Define discovery dns variable
-      set_fact:
-        discovery_dns:
+    - name: Set discovery dns
+      include_role:
+        name: app/discovery/dns/configure
+      vars:
+        _dns:
           assets: '{{ app.assets.api.host }}'
           authentication: '{{ app.authentication.api.host }}'
           camunda: '{{ app.camunda.api.host }}/engine-rest'
@@ -18,8 +20,5 @@
           tasks: '{{ app.tasks.api.host }}'
           tenants: '{{ app.tenants.api.host }}'
           topics: '{{ app.topics.api.host }}'
-    - name: Set discovery dns
-      include_role:
-        name: app/discovery/dns/configure
   when: app.discovery.enabled
   tags: [discovery]

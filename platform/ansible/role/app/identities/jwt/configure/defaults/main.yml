@@ -1,3 +1,0 @@
----
-identities_config_file: /srv/identities/app/config/parameters.yml
-identities_jwt_key_pass_phrase: ~

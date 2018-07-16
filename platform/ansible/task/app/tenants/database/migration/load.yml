@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define tenants database migration variables
-      set_fact:
-        tenants_database_migration_data: '{{ database_migration_data }}'
     - name: Load tenants database migration
       include_role:
         name: app/tenants/database/migration/load
+      vars:
+        _data: '{{ data }}'
   when: app.tenants.enabled
   tags: [tenants]

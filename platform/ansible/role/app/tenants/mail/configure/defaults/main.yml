@@ -1,7 +1,0 @@
----
-tenants_mail_config_file: /srv/tenants/app/config/parameters.yml
-tenants_mail_transport: smtp
-tenants_mail_host: 127.0.0.1
-tenants_mail_port: ~
-tenants_mail_username: admin@localhost
-tenants_mail_password: ~

@@ -1,0 +1,17 @@
+---
+authentication:
+  enabled: true
+  repository: https://github.com/DigitalState/Authentication.git
+  version: 0.7.0
+  api:
+    host: api.authentication.stag.ds
+  adminer:
+    host: adminer.authentication.stag.ds
+  rebrow:
+    host: rebrow.authentication.stag.ds
+  database:
+    host: authentication_database
+    port: 5432
+    name: authentication
+    username: authentication
+    password: ~

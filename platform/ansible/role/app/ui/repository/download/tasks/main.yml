@@ -2,8 +2,8 @@
 - block:
     - name: Download ui repository
       git:
-        repo: '{{ ui_repository }}'
-        version: '{{ ui_version }}'
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
         dest: /srv/ui
         force: yes
   tags: [ui]

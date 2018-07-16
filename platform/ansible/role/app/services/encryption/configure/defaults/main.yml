@@ -1,3 +1,0 @@
----
-services_encryption_config_file: /srv/services/app/config/parameters.yml
-services_encryption_secret: ~

@@ -5,6 +5,6 @@
         name: app/interactions/test/run
     - name: Validate interactions tests result
       debug:
-        msg: '{{ interactions_test_run_result[0] }} / {{ interactions_test_run_result[1] }}'
-      failed_when: interactions_test_run_result[0] != interactions_test_run_result[1]
+        msg: '{{ _result[0] }} / {{ _result[1] }}'
+      failed_when: _result[0] != _result[1]
   tags: [interactions]

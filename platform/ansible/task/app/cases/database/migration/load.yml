@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define cases database migration variables
-      set_fact:
-        cases_database_migration_data: '{{ database_migration_data }}'
     - name: Load cases database migration
       include_role:
         name: app/cases/database/migration/load
+      vars:
+        _data: '{{ data }}'
   when: app.cases.enabled
   tags: [cases]

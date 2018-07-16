@@ -1,0 +1,13 @@
+---
+- name: Include variables files
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Include main variables file
+      include_vars:
+        file: '/etc/ansible/env/{{ env }}/vars/main.yml'
+    - name: Include app variables files
+      include_vars:
+        dir: '/etc/ansible/env/{{ env }}/vars/app'
+        name: app
+  tags: [always]

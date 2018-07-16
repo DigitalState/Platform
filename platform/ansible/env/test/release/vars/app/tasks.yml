@@ -1,0 +1,17 @@
+---
+tasks:
+  enabled: false
+  repository: https://github.com/DigitalState/Tasks.git
+  version: 0.7.0
+  api:
+    host: api.tasks.release.test.ds
+  adminer:
+    host: adminer.tasks.release.test.ds
+  rebrow:
+    host: rebrow.tasks.release.test.ds
+  database:
+    host: tasks_database
+    port: 5432
+    name: tasks
+    username: tasks
+    password: tasks

@@ -1,0 +1,37 @@
+---
+namespace: ds
+directory: /srv
+timezone: UTC
+encryption:
+  secret: 11111111111111111111111111111111
+jwt:
+  pass_phrase: 1111
+mail:
+  transport: smtp
+  host: 127.0.0.1
+  port: ~
+  username: mail@localhost
+  password: ~
+integration:
+  github:
+    id: ~
+    secret: ~
+  google:
+    id: ~
+    secret: ~
+  twitter:
+    id: ~
+    secret: ~
+system:
+  username: system
+  password: '$2y$12$dDJ1PEFFEpS/Vy9YovKbA.3S8Eh7xJVQ.PGUcWTvp1h8QCQaL/6JS'
+user:
+  system:
+    username: system@system.ds
+    password: system
+  anonymous:
+    username: anonymous@anonymous.ds
+    password: anonymous
+  admin:
+    username: admin@staff.ds
+    password: admin

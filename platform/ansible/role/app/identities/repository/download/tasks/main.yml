@@ -2,8 +2,8 @@
 - block:
     - name: Download identities repository
       git:
-        repo: '{{ identities_repository }}'
-        version: '{{ identities_version }}'
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
         dest: /srv/identities
         force: yes
   tags: [identities]

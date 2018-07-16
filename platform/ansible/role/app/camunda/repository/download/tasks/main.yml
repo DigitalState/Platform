@@ -2,8 +2,8 @@
 - block:
     - name: Download camunda repository
       git:
-        repo: '{{ camunda_repository }}'
-        version: '{{ camunda_version }}'
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
         dest: /srv/camunda
         force: yes
   tags: [camunda]

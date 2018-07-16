@@ -1,11 +1,11 @@
 ---
 - block:
     - name: Detect topics repository override directory
-      local_action: 'stat path={{ topics_repository_override }}'
-      register: _repository_override
+      local_action: 'stat path={{ _directory }}'
+      register: _override
     - name: Download topics repository override directory
       copy:
-        src: '{{ topics_repository_override }}/'
+        src: '{{ _directory }}/'
         dest: /srv/topics
-      when: _repository_override.stat.exists == true
+      when: _override.stat.exists == true
   tags: [topics]

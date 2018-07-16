@@ -1,0 +1,17 @@
+---
+cms:
+  enabled: true
+  repository: https://github.com/DigitalState/Cms.git
+  version: 0.7.0
+  api:
+    host: api.cms.stag.ds
+  adminer:
+    host: adminer.cms.stag.ds
+  rebrow:
+    host: rebrow.cms.stag.ds
+  database:
+    host: cms_database
+    port: 5432
+    name: cms
+    username: cms
+    password: ~

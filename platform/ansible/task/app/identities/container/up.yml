@@ -2,28 +2,23 @@
 - block:
     - name: Gather information for identities container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-    - name: Define identities container variables
-      set_fact:
-        identities_env_file: .env.platform
-      when: platform.env == 'lab'
-    - name: Define identities container variables
-      set_fact:
-        identities_env: '{{ platform.env }}'
-        identities_compose_project_name: '{{ platform.namespace }}identities'
-        identities_network: '{{ platform.namespace }}proxy_default'
-        identities_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        identities_nginx_virtual_host: '{{ app.identities.api.host }}'
-        identities_adminer_virtual_host: '{{ app.identities.adminer.host }}'
-        identities_rebrow_virtual_host: '{{ app.identities.rebrow.host }}'
-        identities_discovery_host: '{{ app.discovery.api.host }}'
-        identities_directory: '{{ platform.app }}/identities'
-        identities_database_host: '{{ app.identities.database.host }}'
-        identities_database_port: '{{ app.identities.database.port }}'
-        identities_database_name: '{{ app.identities.database.name }}'
-        identities_database_username: '{{ app.identities.database.username }}'
-        identities_database_password: '{{ app.identities.database.password }}'
     - name: Up identities container
       include_role:
         name: app/identities/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}identities'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _nginx_virtual_host: '{{ app.identities.api.host }}'
+        _adminer_virtual_host: '{{ app.identities.adminer.host }}'
+        _rebrow_virtual_host: '{{ app.identities.rebrow.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _directory: '{{ directory }}/identities'
+        _database_host: '{{ app.identities.database.host }}'
+        _database_port: '{{ app.identities.database.port }}'
+        _database_name: '{{ app.identities.database.name }}'
+        _database_username: '{{ app.identities.database.username }}'
+        _database_password: '{{ app.identities.database.password }}'
   when: app.identities.enabled
   tags: [identities]

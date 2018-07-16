@@ -1,4 +1,6 @@
 ---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+
 - name: Compile jwt/key/download task list
   hosts: platform
   become: true
@@ -8,21 +10,14 @@
         app: '{{ app }}'
         directory: /etc/ansible/task/app/*
         task: jwt/key/download
-      register: _result
+      register: files
   tags: [always]
 
 - name: Download jwt private and public key
   hosts: app
   become: true
   tasks:
-    - name: Define jwt variables
-      set_fact:
-        jwt_private_key: '/root/resource/jwt/{{ platform.env|replace(".", "/") }}/key'
-        jwt_public_key: '/root/resource/jwt/{{ platform.env|replace(".", "/") }}/key.pub'
-      tags: [always]
     - name: Include compiled task list
-      include_tasks: '{{ _file }}'
-      with_items: '{{ hostvars["platform"]["_result"]["tasks"] }}'
-      loop_control:
-        loop_var: _file
+      include_tasks: '{{ item }}'
+      with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
       tags: [always]

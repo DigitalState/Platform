@@ -2,18 +2,12 @@
 - block:
     - name: Detect forms fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/forms'
-      register: _directory
-    - name: Define forms database fixtures variables
-      set_fact:
-        forms_fixtures: 'dev'
-        forms_override: '{{ "/root/resource/fixtures/forms" if _directory.stat.exists == true else "" }}'
-    - name: Define forms database fixtures variables
-      set_fact:
-        forms_fixtures: 'test'
-        forms_override: ''
-      when: platform.env[0:4] == 'test'
+      register: override
     - name: Load forms database fixtures
       include_role:
         name: app/forms/database/fixtures/load
+      vars:
+        _fixtures: '{{ "test" if env[0:4] == "test" else "dev" }}'
+        _override: '{{ "/root/resource/fixtures/forms" if override.stat.exists == true and env[0:4] != "test" else "" }}'
   when: app.forms.enabled
   tags: [forms]

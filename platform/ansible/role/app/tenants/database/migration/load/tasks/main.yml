@@ -5,19 +5,17 @@
         src: '/srv/tenants/src/AppBundle/Resources/migrations/{{ item.key|replace(".", "_") }}.yml'
         remote_src: yes
         dest: '/srv/tenants/src/AppBundle/Resources/migrations/_{{ item.key|replace(".", "_") }}.yml'
-      with_dict: '{{ tenants_database_migration_data }}'
-      when: tenants_database_migration_data is not none
+      with_dict: '{{ _data }}'
       no_log: yes
     - name: Create custom tenants database migration file
       copy:
         dest: '/srv/tenants/src/AppBundle/Resources/migrations/{{ item.key|replace(".", "_") }}.yml'
         content: '{{ item.value|to_nice_yaml }}'
-      with_dict: '{{ tenants_database_migration_data }}'
-      when: tenants_database_migration_data is not none
+      with_dict: '{{ _data }}'
       no_log: yes
     - name: Load tenants database migration
       shell:
-        cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:migrate {{ "" if tenants_database_migration_version is none else tenants_database_migration_version|replace(".", "_") }} --no-interaction'
+        cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:migrate {{ "" if _version is none else _version|replace(".", "_") }} --no-interaction'
         chdir: /srv/tenants
     # The restore backup task below runs before docker-compose above finishes executing. Look into fixing this.
     - name: Pause while tenants database migration loads
@@ -27,22 +25,19 @@
       file:
         path: '/srv/tenants/src/AppBundle/Resources/migrations/{{ item.key|replace(".", "_") }}.yml'
         state: absent
-      with_dict: '{{ tenants_database_migration_data }}'
-      when: tenants_database_migration_data is not none
+      with_dict: '{{ _data }}'
       no_log: yes
     - name: Restore tenants database migration file
       copy:
         src: '/srv/tenants/src/AppBundle/Resources/migrations/_{{ item.key|replace(".", "_") }}.yml'
         remote_src: yes
         dest: '/srv/tenants/src/AppBundle/Resources/migrations/{{ item.key|replace(".", "_") }}.yml'
-      with_dict: '{{ tenants_database_migration_data }}'
-      when: tenants_database_migration_data is not none
+      with_dict: '{{ _data }}'
       no_log: yes
     - name: Remove backup tenants database migration file
       file:
         path: '/srv/tenants/src/AppBundle/Resources/migrations/_{{ item.key|replace(".", "_") }}.yml'
         state: absent
-      with_dict: '{{ tenants_database_migration_data }}'
-      when: tenants_database_migration_data is not none
+      with_dict: '{{ _data }}'
       no_log: yes
   tags: [tenants]

@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define identities database migration variables
-      set_fact:
-        identities_database_migration_data: '{{ database_migration_data }}'
     - name: Load identities database migration
       include_role:
         name: app/identities/database/migration/load
+      vars:
+        _data: '{{ data }}'
   when: app.identities.enabled
   tags: [identities]

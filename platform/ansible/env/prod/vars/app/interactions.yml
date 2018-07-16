@@ -1,0 +1,17 @@
+---
+interactions:
+  enabled: false
+  repository: https://github.com/DigitalState/Interactions.git
+  version: 0.1.0
+  api:
+    host: api.interactions.prod.ds
+  adminer:
+    host: adminer.interactions.prod.ds
+  rebrow:
+    host: rebrow.interactions.prod.ds
+  database:
+    host: interactions_database
+    port: 5432
+    name: interactions
+    username: interactions
+    password: ~

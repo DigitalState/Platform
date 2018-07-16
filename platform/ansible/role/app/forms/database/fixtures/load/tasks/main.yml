@@ -2,8 +2,8 @@
 - block:
     - name: Load forms database fixtures
       import_tasks: default.yml
-      when: forms_override == ""
+      when: _override is none
     - name: Load forms database fixtures override
       import_tasks: override.yml
-      when: forms_override != ""
+      when: _override is not none
   tags: [forms]

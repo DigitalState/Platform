@@ -2,8 +2,8 @@
 - block:
     - name: Download tenants repository
       git:
-        repo: '{{ tenants_repository if tenants_credential is none else tenants_repository|replace("//", "//"+tenants_credential+"@") }}'
-        version: '{{ tenants_version }}'
+        repo: '{{ _repository if _credential is none else _repository|replace("//", "//"+_credential+"@") }}'
+        version: '{{ version }}'
         dest: /srv/tenants
         force: yes
   tags: [tenants]

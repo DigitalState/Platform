@@ -1,11 +1,10 @@
 ---
 - block:
-    - name: Define services system variables
-      set_fact:
-        services_system_username: '{{ platform.system.username }}'
-        services_system_password: '{{ platform.system.password }}'
     - name: Configure services system settings
       include_role:
         name: app/services/system/configure
+      vars:
+        _username: '{{ system.username }}'
+        _password: '{{ system.password }}'
   when: app.services.enabled
   tags: [services]

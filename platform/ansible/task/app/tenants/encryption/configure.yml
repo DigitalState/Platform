@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define tenants encryption variables
-      set_fact:
-        tenants_encryption_secret: '{{ platform.encryption.secret }}'
     - name: Configure tenants encryption settings
       include_role:
         name: app/tenants/encryption/configure
+      vars:
+        _secret: '{{ encryption.secret }}'
   when: app.tenants.enabled
   tags: [tenants]

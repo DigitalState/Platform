@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define identities discovery variables
-      set_fact:
-        identities_discovery_host: '{{ app.discovery.api.host }}'
     - name: Configure identities discovery settings
       include_role:
         name: app/identities/discovery/configure
+      vars:
+        _host: '{{ app.discovery.api.host }}'
   when: app.identities.enabled
   tags: [identities]

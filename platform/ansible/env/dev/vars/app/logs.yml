@@ -1,0 +1,7 @@
+---
+logs:
+  enabled: false
+  repository: https://github.com/DigitalState/Logs.git
+  version: 0.1.0
+  api:
+    host: api.logs.dev.ds

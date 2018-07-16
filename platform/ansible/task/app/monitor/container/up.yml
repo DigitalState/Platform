@@ -2,21 +2,16 @@
 - block:
     - name: Gather information for monitor container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-    - name: Define monitor container variables
-      set_fact:
-        monitor_env_file: .env.platform
-      when: platform.env == 'lab'
-    - name: Define monitor container variables
-      set_fact:
-        monitor_env: '{{ platform.env }}'
-        monitor_compose_project_name: '{{ platform.namespace }}monitor'
-        monitor_network: '{{ platform.namespace }}proxy_default'
-        monitor_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        monitor_virtual_host: '{{ app.monitor.host }}'
-        monitor_discovery_host: '{{ app.discovery.api.host }}'
-        monitor_directory: '{{ platform.app }}/monitor'
     - name: Up monitor container
       include_role:
         name: app/monitor/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}monitor'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _virtual_host: '{{ app.monitor.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _directory: '{{ directory }}/monitor'
   when: app.monitor.enabled
   tags: [monitor]

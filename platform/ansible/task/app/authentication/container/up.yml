@@ -2,28 +2,23 @@
 - block:
     - name: Gather information for authentication container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-    - name: Define authentication container variables
-      set_fact:
-        authentication_env_file: .env.platform
-      when: platform.env == 'lab'
-    - name: Define authentication container variables
-      set_fact:
-        authentication_env: '{{ platform.env }}'
-        authentication_compose_project_name: '{{ platform.namespace }}authentication'
-        authentication_network: '{{ platform.namespace }}proxy_default'
-        authentication_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        authentication_nginx_virtual_host: '{{ app.authentication.api.host }}'
-        authentication_adminer_virtual_host: '{{ app.authentication.adminer.host }}'
-        authentication_rebrow_virtual_host: '{{ app.authentication.rebrow.host }}'
-        authentication_discovery_host: '{{ app.discovery.api.host }}'
-        authentication_directory: '{{ platform.app }}/authentication'
-        authentication_database_host: '{{ app.authentication.database.host }}'
-        authentication_database_port: '{{ app.authentication.database.port }}'
-        authentication_database_name: '{{ app.authentication.database.name }}'
-        authentication_database_username: '{{ app.authentication.database.username }}'
-        authentication_database_password: '{{ app.authentication.database.password }}'
     - name: Up authentication container
       include_role:
         name: app/authentication/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}authentication'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _nginx_virtual_host: '{{ app.authentication.api.host }}'
+        _adminer_virtual_host: '{{ app.authentication.adminer.host }}'
+        _rebrow_virtual_host: '{{ app.authentication.rebrow.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _directory: '{{ directory }}/authentication'
+        _database_host: '{{ app.authentication.database.host }}'
+        _database_port: '{{ app.authentication.database.port }}'
+        _database_name: '{{ app.authentication.database.name }}'
+        _database_username: '{{ app.authentication.database.username }}'
+        _database_password: '{{ app.authentication.database.password }}'
   when: app.authentication.enabled
   tags: [authentication]

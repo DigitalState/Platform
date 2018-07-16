@@ -2,21 +2,16 @@
 - block:
     - name: Gather information for logs container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-    - name: Define logs container variables
-      set_fact:
-        logs_env_file: .env.platform
-      when: platform.env == 'lab'
-    - name: Define logs container variables
-      set_fact:
-        logs_env: '{{ platform.env }}'
-        logs_compose_project_name: '{{ platform.namespace }}logs'
-        logs_network: '{{ platform.namespace }}proxy_default'
-        logs_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        logs_virtual_host: '{{ app.logs.host }}'
-        logs_discovery_host: '{{ app.discovery.api.host }}'
-        logs_directory: '{{ platform.app }}/logs'
     - name: Up logs container
       include_role:
         name: app/logs/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}logs'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _virtual_host: '{{ app.logs.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _directory: '{{ directory }}/logs'
   when: app.logs.enabled
   tags: [logs]

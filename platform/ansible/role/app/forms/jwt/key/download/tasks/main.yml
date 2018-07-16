@@ -2,12 +2,12 @@
 - block:
     - name: Download forms jwt private key
       copy:
-        src: '{{ jwt_private_key }}'
+        src: '{{ _private_key }}'
         dest: /srv/forms/var/jwt/key
         mode: 0600
     - name: Download forms jwt public key
       copy:
-        src: '{{ jwt_public_key }}'
+        src: '{{ _public_key }}'
         dest: /srv/forms/var/jwt/key.pub
         mode: 0600
   tags: [forms]

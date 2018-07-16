@@ -1,16 +1,16 @@
 ---
 - block:
     - name: Backup records fixtures directory
-      shell: 'mv /srv/records/src/AppBundle/Resources/fixtures/{{ records_fixtures }} /srv/records/src/AppBundle/Resources/fixtures/_{{ records_fixtures }}'
+      shell: 'mv /srv/records/src/AppBundle/Resources/fixtures/{{ _fixtures }} /srv/records/src/AppBundle/Resources/fixtures/_{{ _fixtures }}'
     - name: Download records fixtures directory override
       copy:
-        src: '{{ records_override }}/'
-        dest: '/srv/records/src/AppBundle/Resources/fixtures/{{ records_fixtures }}'
+        src: '{{ _override }}/'
+        dest: '/srv/records/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
     - import_tasks: load.yml
     - name: Delete records fixtures directory override
       file:
-        path: '/srv/records/src/AppBundle/Resources/fixtures/{{ records_fixtures }}'
+        path: '/srv/records/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
         state: absent
     - name: Restore records fixtures directory backup
-      shell: 'mv /srv/records/src/AppBundle/Resources/fixtures/_{{ records_fixtures }} /srv/records/src/AppBundle/Resources/fixtures/{{ records_fixtures }}'
+      shell: 'mv /srv/records/src/AppBundle/Resources/fixtures/_{{ _fixtures }} /srv/records/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
   tags: [records]

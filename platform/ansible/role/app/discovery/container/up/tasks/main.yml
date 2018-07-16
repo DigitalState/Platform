@@ -1,48 +1,16 @@
 ---
 - block:
-    - block:
-        - name: Configure discovery namespace environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/discovery/{{ discovery_env_file }}'
-            regexp: '^COMPOSE_PROJECT_NAME='
-            line: 'COMPOSE_PROJECT_NAME={{ discovery_compose_project_name }}'
-        - name: Configure discovery network environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/discovery/{{ discovery_env_file }}'
-            regexp: '^NETWORK='
-            line: 'NETWORK={{ discovery_network }}'
-        - name: Configure proxy host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/discovery/{{ discovery_env_file }}'
-            regexp: '^PROXY_HOST='
-            line: 'PROXY_HOST={{ discovery_proxy_host }}'
-        - name: Configure virtual host environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/discovery/{{ discovery_env_file }}'
-            regexp: '^VIRTUAL_HOST='
-            line: 'VIRTUAL_HOST={{ discovery_virtual_host }}'
-        - name: Configure directory environment variable
-          lineinfile:
-            create: yes
-            path: '/srv/discovery/{{ discovery_env_file }}'
-            regexp: '^DIRECTORY='
-            line: 'DIRECTORY={{ discovery_directory }}'
-      when: discovery_env_file is not none
     - name: Up discovery container
       docker_service:
         project_src: /srv/discovery
         files:
           - docker-compose.yml
-          - 'docker-compose.{{ discovery_env }}.yml'
+          - 'docker-compose.{{ _env }}.yml'
         state: present
       environment:
-        COMPOSE_PROJECT_NAME: '{{ discovery_compose_project_name }}'
-        NETWORK: '{{ discovery_network }}'
-        PROXY_HOST: '{{ discovery_proxy_host }}'
-        VIRTUAL_HOST: '{{ discovery_virtual_host }}'
-        DIRECTORY: '{{ discovery_directory }}'
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        VIRTUAL_HOST: '{{ _virtual_host }}'
+        DIRECTORY: '{{ _directory }}'
   tags: [discovery]

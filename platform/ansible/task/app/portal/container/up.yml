@@ -2,21 +2,16 @@
 - block:
     - name: Gather information for portal container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-    - name: Define portal container variables
-      set_fact:
-        portal_env_file: .env.platform
-      when: platform.env == 'lab'
-    - name: Define portal container variables
-      set_fact:
-        portal_env: '{{ platform.env }}'
-        portal_compose_project_name: '{{ platform.namespace }}portal'
-        portal_network: '{{ platform.namespace }}proxy_default'
-        portal_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        portal_virtual_host: '{{ app.portal.host }}'
-        portal_discovery_host: '{{ app.discovery.api.host }}'
-        portal_directory: '{{ platform.app }}/portal'
     - name: Up portal container
       include_role:
         name: app/portal/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}portal'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _virtual_host: '{{ app.portal.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _directory: '{{ directory }}/portal'
   when: app.portal.enabled
   tags: [portal]

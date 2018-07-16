@@ -2,18 +2,12 @@
 - block:
     - name: Detect tenants fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/tenants'
-      register: _directory
-    - name: Define tenants database fixtures variables
-      set_fact:
-        tenants_fixtures: 'dev'
-        tenants_override: '{{ "/root/resource/fixtures/tenants" if _directory.stat.exists == true else "" }}'
-    - name: Define tenants database fixtures variables
-      set_fact:
-        tenants_fixtures: 'test'
-        tenants_override: ''
-      when: platform.env[0:4] == 'test'
+      register: override
     - name: Load tenants database fixtures
       include_role:
         name: app/tenants/database/fixtures/load
+      vars:
+        _fixtures: '{{ "test" if env[0:4] == "test" else "dev" }}'
+        _override: '{{ "/root/resource/fixtures/tenants" if override.stat.exists == true and env[0:4] != "test" else "" }}'
   when: app.tenants.enabled
   tags: [tenants]

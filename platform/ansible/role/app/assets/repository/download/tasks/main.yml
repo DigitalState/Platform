@@ -2,8 +2,8 @@
 - block:
     - name: Download assets repository
       git:
-        repo: '{{ assets_repository }}'
-        version: '{{ assets_version }}'
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
         dest: /srv/assets
         force: yes
   tags: [assets]

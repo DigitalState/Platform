@@ -1,11 +1,11 @@
 ---
 - block:
     - name: Detect core repository override directory
-      local_action: 'stat path={{ core_repository_override }}'
-      register: _repository_override
+      local_action: 'stat path={{ _directory }}'
+      register: _override
     - name: Download core repository override directory
       copy:
-        src: '{{ core_repository_override }}/'
+        src: '{{ _directory }}/'
         dest: /srv/core
-      when: _repository_override.stat.exists == true
+      when: _override.stat.exists == true
   tags: [core]

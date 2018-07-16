@@ -2,7 +2,7 @@
 - block:
     - name: Configure records encryption secret setting
       lineinfile:
-        path: '{{ records_encryption_config_file }}'
+        path: '/srv/records/app/config/parameters.yml'
         regexp: '^\s{4}secret:'
-        line: '    secret: {{ records_encryption_secret }}'
+        line: '    secret: {{ _secret }}'
   tags: [records]

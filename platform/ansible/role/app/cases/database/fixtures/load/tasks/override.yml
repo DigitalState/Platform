@@ -1,16 +1,16 @@
 ---
 - block:
     - name: Backup cases fixtures directory
-      shell: 'mv /srv/cases/src/AppBundle/Resources/fixtures/{{ cases_fixtures }} /srv/cases/src/AppBundle/Resources/fixtures/_{{ cases_fixtures }}'
+      shell: 'mv /srv/cases/src/AppBundle/Resources/fixtures/{{ _fixtures }} /srv/cases/src/AppBundle/Resources/fixtures/_{{ _fixtures }}'
     - name: Download cases fixtures directory override
       copy:
-        src: '{{ cases_override }}/'
-        dest: '/srv/cases/src/AppBundle/Resources/fixtures/{{ cases_fixtures }}'
+        src: '{{ _override }}/'
+        dest: '/srv/cases/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
     - import_tasks: load.yml
     - name: Delete cases fixtures directory override
       file:
-        path: '/srv/cases/src/AppBundle/Resources/fixtures/{{ cases_fixtures }}'
+        path: '/srv/cases/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
         state: absent
     - name: Restore cases fixtures directory backup
-      shell: 'mv /srv/cases/src/AppBundle/Resources/fixtures/_{{ cases_fixtures }} /srv/cases/src/AppBundle/Resources/fixtures/{{ cases_fixtures }}'
+      shell: 'mv /srv/cases/src/AppBundle/Resources/fixtures/_{{ _fixtures }} /srv/cases/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
   tags: [cases]

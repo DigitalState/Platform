@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define cms discovery variables
-      set_fact:
-        cms_discovery_host: '{{ app.discovery.api.host }}'
     - name: Configure cms discovery settings
       include_role:
         name: app/cms/discovery/configure
+      vars:
+        _host: '{{ app.discovery.api.host }}'
   when: app.cms.enabled
   tags: [cms]

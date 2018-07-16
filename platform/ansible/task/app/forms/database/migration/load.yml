@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define forms database migration variables
-      set_fact:
-        forms_database_migration_data: '{{ database_migration_data }}'
     - name: Load forms database migration
       include_role:
         name: app/forms/database/migration/load
+      vars:
+        _data: '{{ data }}'
   when: app.forms.enabled
   tags: [forms]

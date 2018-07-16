@@ -2,18 +2,12 @@
 - block:
     - name: Detect tasks fixtures directory override
       local_action: 'stat path=/root/resource/fixtures/tasks'
-      register: _directory
-    - name: Define tasks database fixtures variables
-      set_fact:
-        tasks_fixtures: 'dev'
-        tasks_override: '{{ "/root/resource/fixtures/tasks" if _directory.stat.exists == true else "" }}'
-    - name: Define tasks database fixtures variables
-      set_fact:
-        tasks_fixtures: 'test'
-        tasks_override: ''
-      when: platform.env[0:4] == 'test'
+      register: override
     - name: Load tasks database fixtures
       include_role:
         name: app/tasks/database/fixtures/load
+      vars:
+        fixtures: '{{ "test" if env[0:4] == "test" else "dev" }}'
+        override: '{{ "/root/resource/fixtures/tasks" if override.stat.exists == true and env[0:4] != "test" else "" }}'
   when: app.tasks.enabled
   tags: [tasks]

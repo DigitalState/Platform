@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define identities encryption variables
-      set_fact:
-        identities_encryption_secret: '{{ platform.encryption.secret }}'
     - name: Configure identities encryption settings
       include_role:
         name: app/identities/encryption/configure
+      vars:
+        _secret: '{{ encryption.secret }}'
   when: app.identities.enabled
   tags: [identities]

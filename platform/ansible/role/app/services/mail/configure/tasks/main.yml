@@ -2,27 +2,27 @@
 - block:
     - name: Configure services mail transport setting
       lineinfile:
-        path: '{{ services_mail_config_file }}'
+        path: '/srv/services/app/config/parameters.yml'
         regexp: '^\s{4}mailer_transport:'
-        line: '    mailer_transport: {{ services_mail_transport }}'
+        line: '    mailer_transport: {{ _transport }}'
     - name: Configure services mail host setting
       lineinfile:
-        path: '{{ services_mail_config_file }}'
+        path: '/srv/services/app/config/parameters.yml'
         regexp: '^\s{4}mailer_host:'
-        line: '    mailer_host: {{ services_mail_host }}'
+        line: '    mailer_host: {{ _host }}'
     - name: Configure services mail port setting
       lineinfile:
-        path: '{{ services_mail_config_file }}'
+        path: '/srv/services/app/config/parameters.yml'
         regexp: '^\s{4}mailer_port:'
-        line: '    mailer_port: {{ services_mail_port }}'
+        line: '    mailer_port: {{ _port }}'
     - name: Configure services mail username setting
       lineinfile:
-        path: '{{ services_mail_config_file }}'
+        path: '/srv/services/app/config/parameters.yml'
         regexp: '^\s{4}mailer_user:'
-        line: '    mailer_user: {{ services_mail_username }}'
+        line: '    mailer_user: {{ _username }}'
     - name: Configure services mail password setting
       lineinfile:
-        path: '{{ services_mail_config_file }}'
+        path: '/srv/services/app/config/parameters.yml'
         regexp: '^\s{4}mailer_password:'
-        line: '    mailer_password: ''{{ services_mail_password }}'''
+        line: '    mailer_password: ''{{ _password }}'''
   tags: [services]

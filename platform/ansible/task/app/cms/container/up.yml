@@ -2,28 +2,23 @@
 - block:
     - name: Gather information for cms container
       include_tasks: /etc/ansible/task/app/proxy/container/info.yml
-    - name: Define cms container variables
-      set_fact:
-        cms_env_file: .env.platform
-      when: platform.env == 'lab'
-    - name: Define cms container variables
-      set_fact:
-        cms_env: '{{ platform.env }}'
-        cms_compose_project_name: '{{ platform.namespace }}cms'
-        cms_network: '{{ platform.namespace }}proxy_default'
-        cms_proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        cms_nginx_virtual_host: '{{ app.cms.api.host }}'
-        cms_adminer_virtual_host: '{{ app.cms.adminer.host }}'
-        cms_rebrow_virtual_host: '{{ app.cms.rebrow.host }}'
-        cms_discovery_host: '{{ app.discovery.api.host }}'
-        cms_directory: '{{ platform.app }}/cms'
-        cms_database_host: '{{ app.cms.database.host }}'
-        cms_database_port: '{{ app.cms.database.port }}'
-        cms_database_name: '{{ app.cms.database.name }}'
-        cms_database_username: '{{ app.cms.database.username }}'
-        cms_database_password: '{{ app.cms.database.password }}'
     - name: Up cms container
       include_role:
         name: app/cms/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}cms'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _nginx_virtual_host: '{{ app.cms.api.host }}'
+        _adminer_virtual_host: '{{ app.cms.adminer.host }}'
+        _rebrow_virtual_host: '{{ app.cms.rebrow.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _directory: '{{ directory }}/cms'
+        _database_host: '{{ app.cms.database.host }}'
+        _database_port: '{{ app.cms.database.port }}'
+        _database_name: '{{ app.cms.database.name }}'
+        _database_username: '{{ app.cms.database.username }}'
+        _database_password: '{{ app.cms.database.password }}'
   when: app.cms.enabled
   tags: [cms]

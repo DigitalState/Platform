@@ -1,14 +1,13 @@
 ---
 - block:
-    - name: Define forms mail variables
-      set_fact:
-        forms_mail_transport: '{{ platform.mail.transport }}'
-        forms_mail_host: '{{ platform.mail.host }}'
-        forms_mail_port: '{{ platform.mail.port }}'
-        forms_mail_username: '{{ platform.mail.username }}'
-        forms_mail_password: '{{ platform.mail.password }}'
     - name: Configure forms mail settings
       include_role:
         name: app/forms/mail/configure
+      vars:
+        _transport: '{{ mail.transport }}'
+        _host: '{{ mail.host }}'
+        _port: '{{ mail.port }}'
+        _username: '{{ mail.username }}'
+        _password: '{{ mail.password }}'
   when: app.forms.enabled
   tags: [forms]

@@ -2,7 +2,7 @@
 - block:
     - name: Configure forms discovery host setting
       lineinfile:
-        path: '{{ forms_discovery_config_file }}'
+        path: '/srv/forms/app/config/parameters.yml'
         regexp: '^\s{4}discovery_host:'
-        line: '    discovery_host: {{ forms_discovery_host }}'
+        line: '    discovery_host: {{ _host }}'
   tags: [forms]

@@ -1,10 +1,9 @@
 ---
 - block:
-    - name: Define formio container variables
-      set_fact:
-        formio_env: '{{ platform.env }}'
     - name: Stop formio container
       include_role:
         name: app/formio/container/stop
+      vars:
+        _env: '{{ env }}'
   when: app.formio.enabled
   tags: [formio]

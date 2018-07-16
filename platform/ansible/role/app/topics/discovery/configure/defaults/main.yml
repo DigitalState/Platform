@@ -1,3 +1,0 @@
----
-topics_discovery_config_file: /srv/topics/app/config/parameters.yml
-topics_discovery_host: api.discovery.ds

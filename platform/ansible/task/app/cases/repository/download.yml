@@ -1,11 +1,10 @@
 ---
 - block:
-    - name: Define cases repository variables
-      set_fact:
-        cases_repository: '{{ app.cases.repository }}'
-        cases_version: '{{ app.cases.version }}'
     - name: Download cases repository
       include_role:
         name: app/cases/repository/download
+      vars:
+        _repository: '{{ app.cases.repository }}'
+        _version: '{{ app.cases.version }}'
   when: app.cases.enabled
   tags: [cases]

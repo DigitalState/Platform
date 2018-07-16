@@ -1,4 +1,0 @@
----
-tasks_system_config_file: /srv/tasks/app/config/parameters.yml
-tasks_system_username: system
-tasks_system_password: ~

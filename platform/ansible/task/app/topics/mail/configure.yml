@@ -1,14 +1,13 @@
 ---
 - block:
-    - name: Define topics mail variables
-      set_fact:
-        topics_mail_transport: '{{ platform.mail.transport }}'
-        topics_mail_host: '{{ platform.mail.host }}'
-        topics_mail_port: '{{ platform.mail.port }}'
-        topics_mail_username: '{{ platform.mail.username }}'
-        topics_mail_password: '{{ platform.mail.password }}'
     - name: Configure topics mail settings
       include_role:
         name: app/topics/mail/configure
+      vars:
+        _transport: '{{ mail.transport }}'
+        _host: '{{ mail.host }}'
+        _port: '{{ mail.port }}'
+        _username: '{{ mail.username }}'
+        _password: '{{ mail.password }}'
   when: app.topics.enabled
   tags: [topics]

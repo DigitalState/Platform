@@ -1,12 +1,10 @@
 ---
 - block:
-    - name: Define documentation repository variables
-      set_fact:
-        documentation_repository: '{{ app.documentation.repository }}'
-        documentation_version: '{{ app.documentation.version }}'
-      tags: [documentation]
     - name: Download documentation repository
       include_role:
         name: app/documentation/repository/download
+      vars:
+        _repository: '{{ app.documentation.repository }}'
+        _version: '{{ app.documentation.version }}'
   when: app.documentation.enabled
   tags: [documentation]
