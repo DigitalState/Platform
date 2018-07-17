@@ -5,9 +5,9 @@
   tasks:
     - name: Include main variables file
       include_vars:
-        file: '/etc/ansible/env/{{ env }}/vars/main.yml'
+        file: '/etc/ansible/env/{{ env|replace(".", "/") }}/vars/main.yml'
     - name: Include app variables files
       include_vars:
-        dir: '/etc/ansible/env/{{ env }}/vars/app'
+        dir: '/etc/ansible/env/{{ env|replace(".", "/") }}/vars/app'
         name: app
   tags: [always]
