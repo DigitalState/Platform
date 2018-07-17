@@ -3,7 +3,7 @@
     - name: Download tasks repository
       git:
         repo: '{{ _repository if _credential is none else _repository|replace("//", "//"+_credential+"@") }}'
-        version: '{{ version }}'
+        version: '{{ _version }}'
         dest: /srv/tasks
         force: yes
   tags: [tasks]

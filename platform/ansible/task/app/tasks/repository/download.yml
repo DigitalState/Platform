@@ -9,6 +9,6 @@
       vars:
         _repository: '{{ app.tasks.repository }}'
         _version: '{{ app.tasks.version }}'
-        _credential: '{{ lookup("file", "/root/git/credential") if git_credential.stat.exists == true else none }}'
+        _credential: '{{ lookup("file", "/root/git/credential") if git_credential.stat.exists == true else "" }}'
   when: app.tasks.enabled
   tags: [tasks]

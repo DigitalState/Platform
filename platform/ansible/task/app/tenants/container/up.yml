@@ -23,6 +23,6 @@
         _database_name: '{{ app.tenants.database.name }}'
         _database_username: '{{ app.tenants.database.username }}'
         _database_password: '{{ app.tenants.database.password }}'
-        _credential: '{{ lookup("file", "/root/docker/credential") if docker_credential.stat.exists == true else none}}'
+        _credential: '{{ lookup("file", "/root/docker/credential") if docker_credential.stat.exists == true else "" }}'
   when: app.tenants.enabled
   tags: [tenants]

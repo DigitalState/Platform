@@ -5,6 +5,7 @@
         email: '{{ _credential.split(":")[0] }}'
         username: '{{ _credential.split(":")[1] }}'
         password: '{{ _credential.split(":")[2] }}'
+      changed_when: false
     - name: Up tasks container
       docker_service:
         project_src: /srv/tasks

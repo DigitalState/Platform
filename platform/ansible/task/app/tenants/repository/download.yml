@@ -9,6 +9,6 @@
       vars:
         _repository: '{{ app.tenants.repository }}'
         _version: '{{ app.tenants.version }}'
-        _credential: '{{ lookup("file", "/root/git/credential") if git_credential.stat.exists == true else none }}'
+        _credential: '{{ lookup("file", "/root/git/credential") if git_credential.stat.exists == true else "" }}'
   when: app.tenants.enabled
   tags: [tenants]

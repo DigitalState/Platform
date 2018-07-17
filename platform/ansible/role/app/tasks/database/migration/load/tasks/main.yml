@@ -2,16 +2,20 @@
 - block:
     - name: Backup tasks database migration file
       copy:
-        src: '/srv/tasks/src/AppBundle/Resources/migrations/{{ item.key|replace(".", "_") }}.yml'
+        src: '/srv/tasks/src/AppBundle/Resources/migrations/{{ _file.key|replace(".", "_") }}.yml'
         remote_src: yes
-        dest: '/srv/tasks/src/AppBundle/Resources/migrations/_{{ item.key|replace(".", "_") }}.yml'
+        dest: '/srv/tasks/src/AppBundle/Resources/migrations/_{{ _file.key|replace(".", "_") }}.yml'
       with_dict: '{{ _data }}'
+      loop_control:
+        loop_var: _file
       no_log: yes
     - name: Create custom tasks database migration file
       copy:
-        dest: '/srv/tasks/src/AppBundle/Resources/migrations/{{ item.key|replace(".", "_") }}.yml'
-        content: '{{ item.value|to_nice_yaml }}'
+        dest: '/srv/tasks/src/AppBundle/Resources/migrations/{{ _file.key|replace(".", "_") }}.yml'
+        content: '{{ _file.value|to_nice_yaml }}'
       with_dict: '{{ _data }}'
+      loop_control:
+        loop_var: _file
       no_log: yes
     - name: Load tasks database migration
       shell:
@@ -23,21 +27,27 @@
         seconds: 15
     - name: Delete custom tasks database migration file
       file:
-        path: '/srv/tasks/src/AppBundle/Resources/migrations/{{ item.key|replace(".", "_") }}.yml'
+        path: '/srv/tasks/src/AppBundle/Resources/migrations/{{ _file.key|replace(".", "_") }}.yml'
         state: absent
       with_dict: '{{ _data }}'
+      loop_control:
+        loop_var: _file
       no_log: yes
     - name: Restore tasks database migration file
       copy:
-        src: '/srv/tasks/src/AppBundle/Resources/migrations/_{{ item.key|replace(".", "_") }}.yml'
+        src: '/srv/tasks/src/AppBundle/Resources/migrations/_{{ _file.key|replace(".", "_") }}.yml'
         remote_src: yes
-        dest: '/srv/tasks/src/AppBundle/Resources/migrations/{{ item.key|replace(".", "_") }}.yml'
+        dest: '/srv/tasks/src/AppBundle/Resources/migrations/{{ _file.key|replace(".", "_") }}.yml'
       with_dict: '{{ _data }}'
+      loop_control:
+        loop_var: _file
       no_log: yes
     - name: Remove backup tasks database migration file
       file:
-        path: '/srv/tasks/src/AppBundle/Resources/migrations/_{{ item.key|replace(".", "_") }}.yml'
+        path: '/srv/tasks/src/AppBundle/Resources/migrations/_{{ _file.key|replace(".", "_") }}.yml'
         state: absent
       with_dict: '{{ _data }}'
+      loop_control:
+        loop_var: _file
       no_log: yes
   tags: [tasks]

@@ -2,8 +2,8 @@
 - block:
     - name: Download monitor repository
       git:
-        repo: '{{ repository }}'
-        version: '{{ version }}'
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
         recursive: yes
         dest: /srv/monitor
         force: yes

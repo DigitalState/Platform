@@ -7,7 +7,7 @@
         name: app/discovery/container/up
       vars:
         _env: '{{ env }}'
-        _compose_project_name: '{{ namespace }}_discovery'
+        _compose_project_name: '{{ namespace }}discovery'
         _network: '{{ namespace }}proxy_default'
         _proxy_host: '{{ proxy_container_info_ip.stdout }}'
         _virtual_host: '{{ app.discovery.api.host }}'
