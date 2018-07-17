@@ -8,7 +8,7 @@
       changed_when: false
     - name: Register records tests result
       set_fact:
-        result: '{{ _result.stdout_lines[_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
+        _result: '{{ _result.stdout_lines[_result.stdout_lines|length - 2]|regex_findall("[0-9]+") }}'
     - name: Display records tests result
       debug:
         msg: '{{ _result[0] }} / {{ _result[1] }}'
