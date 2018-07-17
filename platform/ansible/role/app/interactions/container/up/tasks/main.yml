@@ -28,4 +28,5 @@
       until: _output.stdout is match('^[0-9]+(\s[0-9]+)*$')
       retries: 60
       delay: 10
+      changed_when: false
   tags: [interactions]
