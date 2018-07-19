@@ -83,11 +83,11 @@ Configure the Ansible lab environment:
 
 > The lab environment uses the Ansible inventory file found [here](/platform/ansible/env/lab/inventory.yml) for its configurations.
 
-The [encryption.secret](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L17) config needs to be set to a random, unique and secret 32 characters string.
+The [encryption.secret](https://github.com/DigitalState/Platform/blob/develop/platform/ansible/env/lab/vars/main.yml#L6) config needs to be set to a random, unique and secret 32 characters string.
 
-The [jwt.pass_phrase](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L19) config needs to be set to the jwt key pass phrase defined at step #5.
+The [jwt.pass_phrase](https://github.com/DigitalState/Platform/blob/develop/platform/ansible/env/lab/vars/main.yml#L8) config needs to be set to the jwt key pass phrase defined at step #5.
 
-The [app](https://github.com/DigitalState/Platform/blob/master/platform/ansible/env/lab/inventory.yml#L14) config needs to be set to the absolute path of the platform `app` directory. The value will vary depending on your local machine's operating system:
+The [directory](https://github.com/DigitalState/Platform/blob/develop/platform/ansible/env/lab/vars/main.yml#L3) config needs to be set to the absolute path of the platform `app` directory. The value will vary depending on your local machine's operating system:
 
 **Windows**
 
