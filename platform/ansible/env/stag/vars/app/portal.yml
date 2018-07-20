@@ -1,6 +1,6 @@
 ---
 portal:
-  enabled: true
+  enabled: false
   repository: https://github.com/DigitalState/Portal.git
   version: 0.7.0
   host: portal.stag.ds

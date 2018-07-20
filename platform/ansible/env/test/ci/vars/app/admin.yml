@@ -1,6 +1,6 @@
 ---
 admin:
-  enabled: true
+  enabled: false
   repository: https://github.com/DigitalState/Admin.git
   version: develop
   host: admin.ci.test.ds
