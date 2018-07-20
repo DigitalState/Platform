@@ -12,7 +12,7 @@ This is the central repository and starting point for developers.
 [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Platform/badge.svg?branch=master)](https://coveralls.io/github/DigitalState/Platform?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DigitalState/Platform/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/DigitalState/Platform/?branch=master)
 
-:warning: The __develop__ branch of Platform represents the latest development efforts and should be considered experimental. For a stable release, consult the [releases page](https://github.com/DigitalState/Platform/releases).
+> :warning: The __develop__ branch of Platform represents the latest development efforts and should be considered experimental. For a stable release, consult the [releases page](https://github.com/DigitalState/Platform/releases).
 
 ## Table of Contents
 
