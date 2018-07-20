@@ -1,4 +1,4 @@
-# Continuous Integration
+# Develop
 
 | Platform | [![Build Status](https://travis-ci.org/DigitalState/Platform.svg?branch=develop)](https://travis-ci.org/DigitalState/Platform) | [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Platform/badge.svg?branch=develop)](https://coveralls.io/github/DigitalState/Platform?branch=develop) | [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DigitalState/Platform/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/DigitalState/Platform/?branch=develop) |
 | :-- | :-- | :-- | :-- |
