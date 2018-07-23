@@ -6,6 +6,8 @@ The Platform repository provides a Docker container, with Ansible pre-installed,
 
 This is the central repository and starting point for developers.
 
+---
+
 :warning: The __develop__ branch of Platform represents the latest development efforts and should be considered experimental. For a stable release, consult the [releases page](https://github.com/DigitalState/Platform/releases).
 
 [![works badge](https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg)](platform/documentation/status/index.md)
