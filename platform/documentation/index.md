@@ -2,14 +2,14 @@
 
 ## Table of Contents
 
-- [Status](#status)
+- [Build Status](#build-status)
 - [Environments](#environments)
 
 ## Build Status
 
 - [Develop](branches/develop.md)<br>The build status of the latest development efforts.
 - [Release 0.7.0](releases/v0.7.0.md)<br>The build status of the latest release.
-- [Previous Releases](releases/index.md)
+- [Previous Releases](releases/index.md)<br>The build statuses of previous releases.
 
 ## Environments
 
