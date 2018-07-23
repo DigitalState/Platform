@@ -1,3 +1,3 @@
 # Branches
 
-- [develop](develop.md)
+- [Develop](develop.md)
