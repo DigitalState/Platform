@@ -6,13 +6,13 @@ The Platform repository provides a Docker container, with Ansible pre-installed,
 
 This is the central repository and starting point for developers.
 
+> :warning: The __develop__ branch of Platform represents the latest development efforts and should be considered experimental. For a stable release, consult the [releases page](https://github.com/DigitalState/Platform/releases).
+
 [![works badge](https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg)](platform/documentation/status/index.md)
 [![Build Status](https://travis-ci.org/DigitalState/Platform.svg?branch=master)](https://travis-ci.org/DigitalState/Platform)
 [![Build status](https://ci.appveyor.com/api/projects/status/b1fspe5xkp44ty69/branch/develop?svg=true)](https://ci.appveyor.com/project/marioprudhomme/platform/branch/develop)
 [![Coverage Status](https://coveralls.io/repos/github/DigitalState/Platform/badge.svg?branch=master)](https://coveralls.io/github/DigitalState/Platform?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DigitalState/Platform/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/DigitalState/Platform/?branch=master)
-
-> :warning: The __develop__ branch of Platform represents the latest development efforts and should be considered experimental. For a stable release, consult the [releases page](https://github.com/DigitalState/Platform/releases).
 
 ## Table of Contents
 
