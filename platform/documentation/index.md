@@ -7,10 +7,9 @@
 
 ## Build Status
 
-- [develop](branches/develop.md)
-- [v0.7.0](releases/v0.7.0.md)
-- [v0.6.0](releases/v0.6.0.md)
-- [v0.5.0](releases/v0.5.0.md)
+- [Develop](branches/develop.md)<br>The build status of the latest development efforts.
+- [Release 0.7.0](releases/v0.7.0.md)<br>The build status of the latest release.
+- [Previous Releases](releases/index.md)
 
 ## Environments
 
