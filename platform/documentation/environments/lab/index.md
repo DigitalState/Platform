@@ -4,6 +4,8 @@ The lab environment is typically deployed to your local machine and is used to f
 
 It represents the experimental branch of the DigitalState platform and enables the developer to run the latest source code on a local machine as a dockerized application.
 
+> :warning: This environment is inherently not compatible with tagged releases of the Platform. To install a tagged release locally, use the dev environment and configure the its inventory to point to your local machine.
+
 ## Table of Contents
 
 - [Synopsis](#synopsis)
