@@ -2,7 +2,7 @@
 
 The lab environment is typically deployed to your local machine and is used to further develop the platform.
 
-It represents the experimental branch of the DigitalState platform and enables the developer to run the latest source code on a local machine as a dockerized application.
+It represents the experimental branch of the DigitalState Platform and enables the developer to run the latest source code on a local machine as a dockerized application.
 
 > :warning: This environment is inherently not compatible with tagged releases of the Platform. To install a tagged release locally, use the dev environment and configure the its inventory to point to your local machine.
 
@@ -15,9 +15,9 @@ It represents the experimental branch of the DigitalState platform and enables t
 ## Synopsis
 
 1. [Install Git and Docker on your local machine.](#1-install-git-and-docker-on-your-local-machine)
-2. [Download the platform repository.](#2-download-the-platform-repository)
-3. [Boot the platform container.](#3-boot-the-platform-container)
-4. [Enter the platform container console.](#4-enter-the-platform-container-console)
+2. [Download the Platform repository.](#2-download-the-platform-repository)
+3. [Boot the Platform container.](#3-boot-the-platform-container)
+4. [Enter the Platform container console.](#4-enter-the-platform-container-console)
 5. [Configure the Ansible environment.](#5-configure-the-ansible-environment)
 6. [Add DNS entries to your host file.](#6-add-dns-entries-to-your-host-file)
 7. [Run the install command with Ansible.](#7-run-the-install-command-with-ansible)
@@ -30,7 +30,7 @@ To begin, you will need to install Git (for [Windows](https://git-scm.com/book/e
 
 > Note: Docker Toolbox for Windows and Mac is not compatible.
 
-### 2. Download the platform repository
+### 2. Download the Platform repository
 
 Open a command prompt and download the repository:
 
@@ -40,9 +40,9 @@ Open a command prompt and download the repository:
 > cd Platform
 ```
 
-### 3. Boot the platform container
+### 3. Boot the Platform container
 
-Run the following command to boot the platform container:
+Run the following command to boot the Platform container:
 
 ```
 > docker-compose up -d
@@ -63,9 +63,9 @@ CONTAINER ID     IMAGE                 COMMAND       CREATED           STATUS   
 4ceab8511b85     platform_platform     "/bin/sh"     3 seconds ago     Up 2 seconds               platform
 ```
 
-### 4. Enter the platform container console
+### 4. Enter the Platform container console
 
-Run the following command to enter the platform container console:
+Run the following command to enter the Platform container console:
 
 ```
 > docker exec -it platform /bin/sh
@@ -77,7 +77,7 @@ Point to the lab environment directory:
 $ cd /etc/ansible/env/lab
 ```
 
-At this point, you have the platform container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands.
+At this point, you have the Platform container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands.
 
 ### 5. Configure the Ansible environment
 
