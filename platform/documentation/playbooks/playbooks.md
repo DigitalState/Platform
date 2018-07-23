@@ -1,6 +1,6 @@
 # Playbooks
 
-Below is the full list of available Ansible playbooks:
+Playbooks are divided in two main categories: Application and Platform playbooks.
 
 ## Table of Contents
 
