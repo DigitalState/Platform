@@ -21,6 +21,6 @@
 
 ## Playbooks
 
-- [Architecture](playbooks/architecture.md)The general architecture and core concepts of the Platform playbooks.
+- [Architecture](playbooks/architecture.md)<br>The general architecture and core concepts of the Platform playbooks.
 - [Available Commands](playbooks/commands/index.md)<br>The list of available commands related to orchestration.
 
