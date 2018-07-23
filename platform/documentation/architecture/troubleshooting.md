@@ -1,5 +1,7 @@
 # Troubleshooting
 
+The troubleshooting section helps you debug and investigate potential issues with the Platform during or after deployment.
+
 ## Table of Contents
 
 - [Ansible](#ansible)
@@ -8,11 +10,29 @@
 
 ## Ansible
 
+## Tests
+
 Running functional tests:
 
 ```
 cd /etc/ansible/env/lab
 ansible-playbook app/test/run.yml
+```
+
+## Cache
+
+Clearing all caches, including cache from each microservices:
+
+```
+cd /etc/ansible/env/lab
+ansible-playbook app/cache/clear.yml
+```
+
+Warming up all caches, including cache from each microservices:
+
+```
+cd /etc/ansible/env/lab
+ansible-playbook app/cache/warmup.yml
 ```
 
 ## Docker
