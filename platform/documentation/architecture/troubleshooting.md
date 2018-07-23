@@ -12,7 +12,7 @@ The troubleshooting section helps you debug and investigate potential issues wit
 
 ### Tests
 
-Running functional tests:
+Running functional tests for each microservices:
 
 ```
 cd /etc/ansible/env/lab
