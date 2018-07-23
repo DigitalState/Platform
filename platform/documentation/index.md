@@ -7,6 +7,7 @@ The Platform repository provides a Docker container, with Ansible pre-installed,
 - [Architecture](#architecture)
 - [Environments](#environments)
 - [Playbooks](#playbooks)
+- [Build Status](#build-status)
 
 ## Architecture
 
