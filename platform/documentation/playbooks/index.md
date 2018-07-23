@@ -1,8 +1,6 @@
-# Lab Environment
+# Playbooks
 
-## Commands
-
-Below is the full list of available commands:
+Below is the full list of available Ansible playbooks:
 
 - [Deploy](deploy.md)
 - System
@@ -22,8 +20,6 @@ Below is the full list of available commands:
     - [Up](container/up.md)
     - [Down](container/down.md)
     - [Stop](container/stop.md)
-    - Env
-        - [Configure](container/env/configure.md)
 - Database
     - [Migrate](database/migrate.md)
     - Data
