@@ -4,7 +4,7 @@ The lab environment is typically deployed to your local machine and is used to f
 
 It represents the experimental branch of the DigitalState Platform and enables the developer to run the latest source code on a local machine as a dockerized application.
 
-> :warning: This environment is inherently not compatible with tagged releases of the Platform. To install a tagged release locally, use the dev environment and configure the its inventory to point to your local machine.
+> :warning: This environment is inherently not compatible with tagged releases of the Platform. To install a tagged release locally, use the dev environment and configure the [app server host](https://github.com/DigitalState/Platform/blob/develop/platform/ansible/env/dev/inventory.yml#L5) to your local machine.
 
 ## Table of Contents
 
