@@ -2,32 +2,15 @@
 
 Below is the full list of available Ansible playbooks:
 
-- [Deploy](deploy.md)
-- System
-    - [Setup](system/setup.md)
+## Table of Contents
+
+- [Application Playbooks](#application-playbooks)
+- [Platform Playbooks](#platform-playbooks)
+
+## Application Playbooks
+
 - Repository
-    - [Download](repository/download.md)
-    - [Override](repository/override.md)
-- JWT
-    - [Download](jwt/download.md)
-    - [Configure](jwt/download.md)
-- Proxy
-    - Container
-        - [Up](proxy/container/up.md)
-        - [Down](proxy/container/down.md)
-        - [Stop](proxy/container/stop.md)
-- Container
-    - [Up](container/up.md)
-    - [Down](container/down.md)
-    - [Stop](container/stop.md)
-- Database
-    - [Migrate](database/migrate.md)
-    - Data
-        - [load](database/data/load.md)
-- Cache
-    - [Clear](cache/clear.md)
-    - [Warmup](cache/warmup.md)
-- Config
-    - [Set](config/set.md)
-    - Api
-        - [Configure](config/api/configure.md)
+  - [Download](repository/download.md)<br>Download each enabled microservices repositories to the `app` directory.
+
+## Platform Playbooks
+
