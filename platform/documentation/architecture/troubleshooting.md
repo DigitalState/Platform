@@ -10,7 +10,7 @@ The troubleshooting section helps you debug and investigate potential issues wit
 
 ## Ansible
 
-## Tests
+### Tests
 
 Running functional tests:
 
@@ -19,7 +19,7 @@ cd /etc/ansible/env/lab
 ansible-playbook app/test/run.yml
 ```
 
-## Cache
+### Cache
 
 Clearing all caches, including cache from each microservices:
 
