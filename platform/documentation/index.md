@@ -7,7 +7,7 @@
 
 ## Build Status
 
-- [Develop](status/branches/develop.md)<br>The build status of the latest development efforts.
+- [Develop Branch](status/branches/develop.md)<br>The build status of the latest development efforts.
 - [Latest release (0.7.0)](status/releases/0.7.0.md)<br>The build status of the latest release.
 - [Previous Releases](status/releases/index.md)<br>The build statuses of previous releases.
 
