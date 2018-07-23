@@ -7,7 +7,7 @@ The Platform repository provides a Docker container, with Ansible pre-installed,
 - [Architecture](#architecture)
 - [Environments](#environments)
 - [Playbooks](#playbooks)
-- [Cookbooks](#cookbooks)
+- [Tutorials](#tutorials)
 - [Build Status](#build-status)
 
 ## Architecture
@@ -28,7 +28,7 @@ The Platform repository provides a Docker container, with Ansible pre-installed,
 - [Structure](playbooks/structure.md)<br>The structure behind playbooks, tasks and roles.
 - [List of Available Playbooks](playbooks/playbooks.md)<br>The list of available commands related to orchestration and development.
 
-## Cookbooks
+## Tutorials
 
 ## Build Status
 
