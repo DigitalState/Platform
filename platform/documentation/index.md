@@ -1,6 +1,6 @@
 # Documentation
 
-The Platform repository provides a Docker container, with Ansible pre-installed, to help orchestrate instances of the DigitalState Platform. It comes with a wide variety of **Ansible playbooks** to help the developer manage local and remote deployments; from sandbox to production.
+The Platform repository provides a Docker container, with Ansible pre-installed, to help orchestrate instances of the DigitalState Application. It comes with a wide variety of **Ansible playbooks** to help the developer manage local and remote deployments; from sandbox to production.
 
 ## Table of Contents
 
@@ -23,6 +23,5 @@ The Platform repository provides a Docker container, with Ansible pre-installed,
 
 ## Playbooks
 
-- [Architecture](playbooks/architecture.md)<br>The general architecture and core concepts of the Platform playbooks.
-- [Available Commands](playbooks/commands/index.md)<br>The list of available commands related to orchestration.
-
+- [Architecture](playbooks/architecture.md)<br>The core concepts of the Platform and general architecture of playbooks.
+- [Available Commands](playbooks/commands/index.md)<br>The list of available commands related to orchestration and development.
