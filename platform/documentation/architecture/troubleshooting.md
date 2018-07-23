@@ -67,18 +67,18 @@ docker ps -a
 
 A microservice represents a collection of Docker containers for a particular subject.
 
-Also, the troubleshooting commands below are more direct against the microservice and doesn't go through the Ansible abstraction.
+Also, the troubleshooting commands below are more directly against the microservice and doesn't go through the Ansible abstraction.
 
 ### Cache
 
-Clearing the cache for a given microservice:
+Clearing the cache for a given Symfony-based microservice:
 
 ```
 cd app/authentication
 docker-compose exec php php bin/console cache:clear
 ```
 
-Warming up the cache for a given microservice:
+Warming up the cache for a given Symfony-based microservice:
 
 ```
 cd app/authentication
@@ -87,7 +87,7 @@ docker-compose exec php php bin/console cache:warmup
 
 ### Logs
 
-Viewing the logs for a given microservice:
+Viewing the logs for a given Symfony-based microservice:
 
 ```
 cd app/authentication
@@ -96,7 +96,7 @@ tail -f var/logs/dev.log
 
 ### Routing
 
-Viewing all defined routes for a given microservice:
+Viewing all defined routes for a given Symfony-based microservice:
 
 ```
 cd app/authentication
