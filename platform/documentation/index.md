@@ -5,9 +5,12 @@
 - [Status](#status)
 - [Environments](#environments)
 
-## Status
+## Build Status
 
-- [Status](status/index.md)<br>The current state of the Platform, includes build status, test coverage, etc.
+- [develop](branches/develop.md)
+- [v0.7.0](releases/v0.7.0.md)
+- [v0.6.0](releases/v0.6.0.md)
+- [v0.5.0](releases/v0.5.0.md)
 
 ## Environments
 
@@ -16,3 +19,7 @@
 - [Development](dev/index.md)<br>The development environment is typically deployed to a remote server and is used as sandbox.
 - [Staging](stag/index.md)<br>The staging environment is typically deployed to a remote server and is used as a pre-production mirror.
 - [Production](prod/index.md)<br>The production environment is typically deployed to a remote server and is used to serve the latest release.
+
+## Playbooks
+
+- [Status](status/index.md)<br>The current state of the Platform, includes build status, test coverage, etc.
