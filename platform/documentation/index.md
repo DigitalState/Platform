@@ -5,19 +5,13 @@ The Platform repository provides a Docker container, with Ansible pre-installed,
 ## Table of Contents
 
 - [Architecture](#architecture)
-- [Build Status](#build-status)
 - [Environments](#environments)
 - [Playbooks](#playbooks)
 
 ## Architecture
 
-- [Core Architecture](architecture/core.md)<br>The Platform core architecture and general concepts.
-
-## Build Status
-
-- [Develop Branch](status/branches/develop.md)<br>The build status of the latest development efforts.
-- [Latest Release (0.7.0)](status/releases/0.7.0.md)<br>The build status of the latest release.
-- [Previous Releases](status/releases/index.md)<br>The build statuses of previous releases.
+- [General Architecture](architecture/general.md)<br>The Platform general architecture and core concepts.
+- [Troubleshooting](architecture/troubleshooting.md)<br>Various strategies to help troubleshooting Ansible, Docker, Symfony, etc.
 
 ## Environments
 
@@ -31,3 +25,10 @@ The Platform repository provides a Docker container, with Ansible pre-installed,
 
 - [Structure](playbooks/structure.md)<br>The structure behind playbooks, tasks and roles.
 - [List of Available Playbooks](playbooks/playbooks.md)<br>The list of available commands related to orchestration and development.
+
+## Build Status
+
+- [Develop Branch](status/branches/develop.md)<br>The build status of the latest development efforts.
+- [Latest Release (0.7.0)](status/releases/0.7.0.md)<br>The build status of the latest release.
+- [Previous Releases](status/releases/index.md)<br>The build statuses of previous releases.
+- [Build Status](#build-status)
