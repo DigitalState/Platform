@@ -1,69 +1,82 @@
 # Troubleshooting
 
-The troubleshooting section helps you debug and investigate potential issues with the Platform during or after deployment.
+The troubleshooting section helps you debug and investigate potential issues with the platform or application, during and after deployment.
 
 ## Table of Contents
 
-- [Ansible](#ansible)
-- [Docker](#docker)
-- [Symfony](#symfony)
+- [Platform](#platform)
+- [Application](#application)
+- [Microservice](#microservice)
 
-## Ansible
+## Platform
 
-### Tests
+The platform represents the local Docker container running Ansible for orchestration.
 
-Running functional tests for each microservices:
+### Container
+
+Entering the container in console mode:
+
+```
+docker exec -it platform /bin/sh
+```
+
+## Application
+
+The application represents the collection of Docker containers of each microservices.
+
+### Tests Suite
+
+Running the complete tests suite of the application:
 
 ```
 cd /etc/ansible/env/lab
 ansible-playbook app/test/run.yml
 ```
 
+> Internally, this command runs each microservices tests suite.
+
 ### Cache
 
-Clearing all caches, including cache from each microservices:
+Clearing all application caches:
 
 ```
 cd /etc/ansible/env/lab
 ansible-playbook app/cache/clear.yml
 ```
 
-Warming up all caches, including cache from each microservices:
+> Internally, this command clears each microservices caches.
+
+Warming up all application caches:
 
 ```
 cd /etc/ansible/env/lab
 ansible-playbook app/cache/warmup.yml
 ```
 
-## Docker
+> Internally, this command warms up each microservices caches.
 
 ### Containers
 
-Listing all Docker containers:
+Listing all Docker containers of the application:
 
 ```
 docker ps -a
 ```
 
-Viewing logs for a given Docker container:
+## Microservice
 
-```
-cd app/authentication
-docker-compose logs php
-```
-
-## Symfony
+A microservice represents a collection of Docker containers for a particular subject.
 
 ### Cache
 
-Clearing the Symfony cache for a given microservice:
+Clearing the cache for a given microservice:
 
 ```
 cd app/authentication
 docker-compose exec php php bin/console cache:clear
 ```
 
-Warming up the Symfony cache for a given microservice:
+Warming up the cache for a given microservice:
 
 ```
 cd app/authentication
@@ -72,7 +85,7 @@ docker-compose exec php php bin/console cache:warmup
 
 ### Logs
 
-Viewing the Symfony logs for a given microservice:
+Viewing the logs for a given microservice:
 
 ```
 cd app/authentication
