@@ -67,6 +67,8 @@ docker ps -a
 
 A microservice represents a collection of Docker containers for a particular subject.
 
+Also, the troubleshooting commands below are more direct against the microservice and doesn't go through the Ansible abstraction.
+
 ### Cache
 
 Clearing the cache for a given microservice:
