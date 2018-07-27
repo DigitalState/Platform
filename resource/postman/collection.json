@@ -426,11 +426,11 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Debug",
-					"description": null,
+					"name": "Reference",
+					"description": "",
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/reference/permissions",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -445,18 +445,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{assets}}{{environment}}/sandbox",
+									"raw": "{{assets}}{{environment}}/reference/permissions",
 									"host": [
 										"{{assets}}{{environment}}"
 									],
 									"path": [
-										"sandbox"
+										"reference",
+										"permissions"
 									]
 								},
-								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -646,6 +647,273 @@
 									]
 								},
 								"description": "This endpoint edits a specific configuration."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Metadata",
+					"description": null,
+					"item": [
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{assets}}{{environment}}/metadatas?",
+									"host": [
+										"{{assets}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "title[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{assets}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{assets}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint returns a specific metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{assets}}{{environment}}/metadatas",
+									"host": [
+										"{{assets}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									]
+								},
+								"description": "This endpoint adds a metadata to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{assets}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{assets}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{assets}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{assets}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						}
@@ -893,38 +1161,6 @@
 									]
 								},
 								"description": "This endpoint deletes a specific access card from the list."
-							},
-							"response": []
-						},
-						{
-							"name": "/permissions/list",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
-								},
-								"url": {
-									"raw": "{{assets}}{{environment}}/permissions/list",
-									"host": [
-										"{{assets}}{{environment}}"
-									],
-									"path": [
-										"permissions",
-										"list"
-									]
-								},
-								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -1671,6 +1907,44 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Debug",
+					"description": null,
+					"item": [
+						{
+							"name": "/sandbox",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{assets}}{{environment}}/sandbox",
+									"host": [
+										"{{assets}}{{environment}}"
+									],
+									"path": [
+										"sandbox"
+									]
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		},
@@ -2095,11 +2369,11 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Meta",
+					"name": "Reference",
 					"description": "",
 					"item": [
 						{
-							"name": "/meta/permissions",
+							"name": "/reference/permissions",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -2117,54 +2391,16 @@
 									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{authentication}}{{environment}}/meta/permissions",
+									"raw": "{{authentication}}{{environment}}/reference/permissions",
 									"host": [
 										"{{authentication}}{{environment}}"
 									],
 									"path": [
-										"meta",
+										"reference",
 										"permissions"
 									]
 								},
 								"description": "This endpoint returns the list of available permissions."
-							},
-							"response": []
-						}
-					],
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Debug",
-					"description": null,
-					"item": [
-						{
-							"name": "/sandbox",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{authentication}}{{environment}}/sandbox",
-									"host": [
-										"{{authentication}}{{environment}}"
-									],
-									"path": [
-										"sandbox"
-									]
-								},
-								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
@@ -2354,6 +2590,273 @@
 									]
 								},
 								"description": "This endpoint edits a specific configuration."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Metadata",
+					"description": null,
+					"item": [
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{authentication}}{{environment}}/metadatas?",
+									"host": [
+										"{{authentication}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "title[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{authentication}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{authentication}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint returns a specific metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{authentication}}{{environment}}/metadatas",
+									"host": [
+										"{{authentication}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									]
+								},
+								"description": "This endpoint adds a metadata to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{authentication}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{authentication}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{authentication}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{authentication}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						}
@@ -3038,7 +3541,7 @@
 										}
 									]
 								},
-								"description": "This endpoint returns an system jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+								"description": "This endpoint returns a system JWT token. The JWT token returned from this request is automatically added to the postman environment token variable."
 							},
 							"response": []
 						},
@@ -3128,73 +3631,7 @@
 										}
 									]
 								},
-								"description": "This endpoint returns a staff jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-							},
-							"response": []
-						},
-						{
-							"name": "/auth/organization",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "5e99aa18-e8b1-4653-9571-ffdabffec533",
-										"type": "text/javascript",
-										"exec": [
-											"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-										]
-									}
-								}
-							],
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/x-www-form-urlencoded"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "urlencoded",
-									"urlencoded": [
-										{
-											"key": "username",
-											"value": "acme@organization.ds",
-											"type": "text"
-										},
-										{
-											"key": "password",
-											"value": "acme",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{authentication}}{{environment}}/auth/organization?",
-									"host": [
-										"{{authentication}}{{environment}}"
-									],
-									"path": [
-										"auth",
-										"organization"
-									],
-									"query": [
-										{
-											"key": "tenant",
-											"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-											"description": "Tenant 1",
-											"disabled": true
-										}
-									]
-								},
-								"description": "This endpoint returns an organization jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+								"description": "This endpoint returns a staff JWT token. The JWT token returned from this request is automatically added to the postman environment token variable."
 							},
 							"response": []
 						},
@@ -3272,7 +3709,73 @@
 										}
 									]
 								},
-								"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+								"description": "This endpoint returns an individual JWT token. The JWT token returned from this request is automatically added to the postman environment token variable."
+							},
+							"response": []
+						},
+						{
+							"name": "/auth/organization",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5e99aa18-e8b1-4653-9571-ffdabffec533",
+										"type": "text/javascript",
+										"exec": [
+											"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+										]
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "acme@organization.ds",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "acme",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{authentication}}{{environment}}/auth/organization?",
+									"host": [
+										"{{authentication}}{{environment}}"
+									],
+									"path": [
+										"auth",
+										"organization"
+									],
+									"query": [
+										{
+											"key": "tenant",
+											"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+											"description": "Tenant 1",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns an organization JWT token. The JWT token returned from this request is automatically added to the postman environment token variable."
 							},
 							"response": []
 						},
@@ -3324,7 +3827,7 @@
 										}
 									]
 								},
-								"description": "This endpoint returns an anonymous jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+								"description": "This endpoint returns an anonymous JWT token. The JWT token returned from this request is automatically added to the postman environment token variable."
 							},
 							"response": []
 						}
@@ -4115,6 +4618,44 @@
 									]
 								},
 								"description": "This endpoint resets the recipients password."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Debug",
+					"description": null,
+					"item": [
+						{
+							"name": "/sandbox",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{authentication}}{{environment}}/sandbox",
+									"host": [
+										"{{authentication}}{{environment}}"
+									],
+									"path": [
+										"sandbox"
+									]
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
@@ -5825,11 +6366,11 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Debug",
-					"description": null,
+					"name": "Reference",
+					"description": "",
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/reference/permissions",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -5844,18 +6385,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{forms}}{{environment}}/sandbox",
+									"raw": "{{forms}}{{environment}}/reference/permissions",
 									"host": [
 										"{{forms}}{{environment}}"
 									],
 									"path": [
-										"sandbox"
+										"reference",
+										"permissions"
 									]
 								},
-								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -6045,6 +6587,273 @@
 									]
 								},
 								"description": "This endpoint edits a specific configuration."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Metadata",
+					"description": null,
+					"item": [
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{forms}}{{environment}}/metadatas?",
+									"host": [
+										"{{forms}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "title[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{forms}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{forms}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint returns a specific metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{forms}}{{environment}}/metadatas",
+									"host": [
+										"{{forms}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									]
+								},
+								"description": "This endpoint adds a metadata to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{forms}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{forms}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{forms}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{forms}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						}
@@ -6292,38 +7101,6 @@
 									]
 								},
 								"description": "This endpoint deletes a specific access card from the list."
-							},
-							"response": []
-						},
-						{
-							"name": "/permissions/list",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
-								},
-								"url": {
-									"raw": "{{forms}}{{environment}}/permissions/list",
-									"host": [
-										"{{forms}}{{environment}}"
-									],
-									"path": [
-										"permissions",
-										"list"
-									]
-								},
-								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -6688,6 +7465,44 @@
 									]
 								},
 								"description": "This endpoint deletes a specific record from the list."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Debug",
+					"description": null,
+					"item": [
+						{
+							"name": "/sandbox",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{forms}}{{environment}}/sandbox",
+									"host": [
+										"{{forms}}{{environment}}"
+									],
+									"path": [
+										"sandbox"
+									]
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
@@ -7117,11 +7932,11 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Debug",
-					"description": null,
+					"name": "Reference",
+					"description": "",
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/reference/permissions",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -7136,18 +7951,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{cases}}{{environment}}/sandbox",
+									"raw": "{{cases}}{{environment}}/reference/permissions",
 									"host": [
 										"{{cases}}{{environment}}"
 									],
 									"path": [
-										"sandbox"
+										"reference",
+										"permissions"
 									]
 								},
-								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -7337,6 +8153,273 @@
 									]
 								},
 								"description": "This endpoint edits a specific configuration."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Metadata",
+					"description": null,
+					"item": [
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cases}}{{environment}}/metadatas?",
+									"host": [
+										"{{cases}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "title[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cases}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{cases}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint returns a specific metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{cases}}{{environment}}/metadatas",
+									"host": [
+										"{{cases}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									]
+								},
+								"description": "This endpoint adds a metadata to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{cases}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{cases}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cases}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{cases}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						}
@@ -7584,38 +8667,6 @@
 									]
 								},
 								"description": "This endpoint deletes a specific access card from the list."
-							},
-							"response": []
-						},
-						{
-							"name": "/permissions/list",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
-								},
-								"url": {
-									"raw": "{{cases}}{{environment}}/permissions/list",
-									"host": [
-										"{{cases}}{{environment}}"
-									],
-									"path": [
-										"permissions",
-										"list"
-									]
-								},
-								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -8045,7 +9096,7 @@
 							},
 							"response": [
 								{
-									"id": "1885c247-27cd-4b22-9aa5-85673bab0f89",
+									"id": "5bae4f61-d281-489b-858b-a02155c1c063",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8205,7 +9256,7 @@
 							},
 							"response": [
 								{
-									"id": "caf3af78-3389-4e47-80ff-da396dd2b236",
+									"id": "f3058201-ca84-409f-9320-0b517296a8ec",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8366,7 +9417,7 @@
 							},
 							"response": [
 								{
-									"id": "af3df4f6-4a3b-44fc-a1d3-661ea8b51819",
+									"id": "70c701c0-392f-4fc3-ad0e-eb12e8c98be0",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8796,7 +9847,7 @@
 							},
 							"response": [
 								{
-									"id": "fbc3bf36-de2f-41ca-9bbd-82318d310ccc",
+									"id": "9dedb38f-78ca-43db-a17b-206142d99569",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8956,7 +10007,7 @@
 							},
 							"response": [
 								{
-									"id": "cf39dd5b-2486-45c6-9175-cbeef8c4ede3",
+									"id": "d1012b49-7734-47a1-9f01-0d45e307fa29",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -9117,7 +10168,7 @@
 							},
 							"response": [
 								{
-									"id": "2b842217-d4a0-4fe1-ba50-061f8d97f3ae",
+									"id": "5be9327d-7966-4ee0-8449-87b69c44c8fc",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9243,6 +10294,44 @@
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Debug",
+					"description": null,
+					"item": [
+						{
+							"name": "/sandbox",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cases}}{{environment}}/sandbox",
+									"host": [
+										"{{cases}}{{environment}}"
+									],
+									"path": [
+										"sandbox"
+									]
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+							},
+							"response": []
 						}
 					],
 					"_postman_isSubFolder": true
@@ -9670,11 +10759,11 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Debug",
-					"description": null,
+					"name": "Reference",
+					"description": "",
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/reference/permissions",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -9689,18 +10778,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{cms}}{{environment}}/sandbox",
+									"raw": "{{cms}}{{environment}}/reference/permissions",
 									"host": [
 										"{{cms}}{{environment}}"
 									],
 									"path": [
-										"sandbox"
+										"reference",
+										"permissions"
 									]
 								},
-								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -9890,6 +10980,273 @@
 									]
 								},
 								"description": "This endpoint edits a specific configuration."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Metadata",
+					"description": null,
+					"item": [
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cms}}{{environment}}/metadatas?",
+									"host": [
+										"{{cms}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "title[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cms}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{cms}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint returns a specific metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{cms}}{{environment}}/metadatas",
+									"host": [
+										"{{cms}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									]
+								},
+								"description": "This endpoint adds a metadata to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{cms}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{cms}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cms}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{cms}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						}
@@ -10137,38 +11494,6 @@
 									]
 								},
 								"description": "This endpoint deletes a specific access card from the list."
-							},
-							"response": []
-						},
-						{
-							"name": "/permissions/list",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
-								},
-								"url": {
-									"raw": "{{cms}}{{environment}}/permissions/list",
-									"host": [
-										"{{cms}}{{environment}}"
-									],
-									"path": [
-										"permissions",
-										"list"
-									]
-								},
-								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -10596,7 +11921,7 @@
 							},
 							"response": [
 								{
-									"id": "b15c7ab4-b59f-4fd1-b263-2a1a25e7d2da",
+									"id": "172c6081-c890-444b-9768-97f44861c7ff",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10756,7 +12081,7 @@
 							},
 							"response": [
 								{
-									"id": "2bf356e2-c1f9-426b-a8d7-e54fe534f4ed",
+									"id": "87c96e80-c494-4c9c-9d1f-20afba29e9e9",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -10917,7 +12242,7 @@
 							},
 							"response": [
 								{
-									"id": "8cb6cbab-042e-4db0-b542-176999d93a9e",
+									"id": "67284236-8fe1-4f17-b180-9f396f0979c3",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -11338,7 +12663,7 @@
 							},
 							"response": [
 								{
-									"id": "afe46f62-0f17-4d99-87df-d6cd92795f9a",
+									"id": "5fb70c23-c331-4874-8324-aa05b0c26bd0",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -11498,7 +12823,7 @@
 							},
 							"response": [
 								{
-									"id": "1c4506f4-9956-458c-8125-614adedc2707",
+									"id": "b6005e8c-a0ec-4dea-8f80-0ce1d4973712",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -11659,7 +12984,7 @@
 							},
 							"response": [
 								{
-									"id": "a67d87bd-9fe0-459b-b6da-073f99584158",
+									"id": "60d7cb72-f693-4822-a436-02b990406ba6",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12039,7 +13364,7 @@
 							},
 							"response": [
 								{
-									"id": "7f876470-0d60-4dbb-8af8-b0bede11b819",
+									"id": "7591edad-6cf9-44f8-82bc-243d5042dce3",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12199,7 +13524,7 @@
 							},
 							"response": [
 								{
-									"id": "ea4a7d9f-5424-4671-a2e4-aed145f9a278",
+									"id": "de75e7ad-07d4-48ae-9dd5-1aa42c2b1fc1",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -12360,7 +13685,7 @@
 							},
 							"response": [
 								{
-									"id": "ef403cbb-8161-4804-acf0-925b6d46d1b0",
+									"id": "e5ff60f3-3cab-40c2-8e37-5e42b99142c6",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12731,7 +14056,7 @@
 							},
 							"response": [
 								{
-									"id": "198a41b8-9df5-4264-bf03-9493c30d2383",
+									"id": "0ab12095-8e73-407c-9d0c-2270126eee78",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12891,7 +14216,7 @@
 							},
 							"response": [
 								{
-									"id": "2caff8d7-3a65-4a15-a8e2-af233bcdefc2",
+									"id": "6e01cc69-6ebf-4ee9-956e-d033a0dcb85e",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -13052,7 +14377,7 @@
 							},
 							"response": [
 								{
-									"id": "4b5685c8-fc04-4d8e-b59d-841c8dcd6280",
+									"id": "6be19cfb-468c-4333-a4e1-5c915aaa555c",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -13234,7 +14559,7 @@
 							},
 							"response": [
 								{
-									"id": "b3adcc8f-6aa8-443c-b3cf-f3e3083d09e9",
+									"id": "dd8713e1-37f3-4309-b895-2ed5f99080f2",
 									"name": "Created",
 									"originalRequest": {
 										"method": "GET",
@@ -13378,6 +14703,44 @@
 									"body": "{\"id\":2,\"uuid\":\"8d9bb943-a2d1-44c3-bfa0-09de59ac5717\",\"createdAt\":\"2017-06-22T00:12:01+00:00\",\"updatedAt\":\"2017-06-22T00:12:01+00:00\",\"deletedAt\":null,\"owner\":\"BusinessUnit\",\"ownerUuid\":\"7e105be4-578d-4a1f-bc04-fd85f3ddcc38\",\"identity\":\"Individual\",\"identityUuid\":\"9be0af28-ef41-49b7-86d9-72a2d9beb051\",\"title\":{\"en\":\"Case 1\",\"fr\":\"Cas 1\"}}"
 								}
 							]
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Debug",
+					"description": null,
+					"item": [
+						{
+							"name": "/sandbox",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{cms}}{{environment}}/sandbox",
+									"host": [
+										"{{cms}}{{environment}}"
+									],
+									"path": [
+										"sandbox"
+									]
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+							},
+							"response": []
 						}
 					],
 					"_postman_isSubFolder": true
@@ -13847,11 +15210,11 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Debug",
-					"description": null,
+					"name": "Reference",
+					"description": "",
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/reference/permissions",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -13866,18 +15229,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{identities}}{{environment}}/sandbox",
+									"raw": "{{identities}}{{environment}}/reference/permissions",
 									"host": [
 										"{{identities}}{{environment}}"
 									],
 									"path": [
-										"sandbox"
+										"reference",
+										"permissions"
 									]
 								},
-								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -14067,6 +15431,273 @@
 									]
 								},
 								"description": "This endpoint edits a specific configuration."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Metadata",
+					"description": null,
+					"item": [
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/metadatas?",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "title[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint returns a specific metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/metadatas",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									]
+								},
+								"description": "This endpoint adds a metadata to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						}
@@ -14314,38 +15945,6 @@
 									]
 								},
 								"description": "This endpoint deletes a specific access card from the list."
-							},
-							"response": []
-						},
-						{
-							"name": "/permissions/list",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
-								},
-								"url": {
-									"raw": "{{identities}}{{environment}}/permissions/list",
-									"host": [
-										"{{identities}}{{environment}}"
-									],
-									"path": [
-										"permissions",
-										"list"
-									]
-								},
-								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -17682,7 +19281,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\r\n\t\"title\": {\r\n\t\t\"en\": \"Staff Member\",\r\n\t\t\"fr\": \"Membre du personnel\"\r\n\t},\r\n\t\"slug\": \"staff-member\",\r\n\t\"permissions\": {\r\n\t\t\"identities\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"individual\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"individual_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"cases\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"case\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"case_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\r\n\t\"title\": {\r\n\t\t\"en\": \"Staff Member\",\r\n\t\t\"fr\": \"Membre du personnel\"\r\n\t},\r\n\t\"slug\": \"staff-member\",\r\n\t\"permissions\": {\r\n\t\t\"assets\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"authentication\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"cases\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"cms\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"identities\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"records\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"services\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"tasks\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"tenants\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{identities}}{{environment}}/roles",
@@ -17758,6 +19357,44 @@
 									]
 								},
 								"description": "This endpoint deletes a specific role from the list."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Debug",
+					"description": null,
+					"item": [
+						{
+							"name": "/sandbox",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{identities}}{{environment}}/sandbox",
+									"host": [
+										"{{identities}}{{environment}}"
+									],
+									"path": [
+										"sandbox"
+									]
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
@@ -18187,11 +19824,11 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Debug",
-					"description": null,
+					"name": "Reference",
+					"description": "",
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/reference/permissions",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -18206,18 +19843,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{records}}{{environment}}/sandbox",
+									"raw": "{{records}}{{environment}}/reference/permissions",
 									"host": [
 										"{{records}}{{environment}}"
 									],
 									"path": [
-										"sandbox"
+										"reference",
+										"permissions"
 									]
 								},
-								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -18407,6 +20045,273 @@
 									]
 								},
 								"description": "This endpoint edits a specific configuration."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Metadata",
+					"description": null,
+					"item": [
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{records}}{{environment}}/metadatas?",
+									"host": [
+										"{{records}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "title[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{records}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{records}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint returns a specific metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{records}}{{environment}}/metadatas",
+									"host": [
+										"{{records}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									]
+								},
+								"description": "This endpoint adds a metadata to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{records}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{records}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{records}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{records}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						}
@@ -18654,38 +20559,6 @@
 									]
 								},
 								"description": "This endpoint deletes a specific access card from the list."
-							},
-							"response": []
-						},
-						{
-							"name": "/permissions/list",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
-								},
-								"url": {
-									"raw": "{{records}}{{environment}}/permissions/list",
-									"host": [
-										"{{records}}{{environment}}"
-									],
-									"path": [
-										"permissions",
-										"list"
-									]
-								},
-								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -19432,6 +21305,44 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Debug",
+					"description": null,
+					"item": [
+						{
+							"name": "/sandbox",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{records}}{{environment}}/sandbox",
+									"host": [
+										"{{records}}{{environment}}"
+									],
+									"path": [
+										"sandbox"
+									]
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		},
@@ -19856,11 +21767,11 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Debug",
-					"description": null,
+					"name": "Reference",
+					"description": "",
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/reference/permissions",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -19875,18 +21786,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{services}}{{environment}}/sandbox",
+									"raw": "{{services}}{{environment}}/reference/permissions",
 									"host": [
 										"{{services}}{{environment}}"
 									],
 									"path": [
-										"sandbox"
+										"reference",
+										"permissions"
 									]
 								},
-								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -20076,6 +21988,273 @@
 									]
 								},
 								"description": "This endpoint edits a specific configuration."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Metadata",
+					"description": null,
+					"item": [
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{services}}{{environment}}/metadatas?",
+									"host": [
+										"{{services}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "title[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{services}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{services}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint returns a specific metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{services}}{{environment}}/metadatas",
+									"host": [
+										"{{services}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									]
+								},
+								"description": "This endpoint adds a metadata to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{services}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{services}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{services}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{services}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						}
@@ -20323,38 +22502,6 @@
 									]
 								},
 								"description": "This endpoint deletes a specific access card from the list."
-							},
-							"response": []
-						},
-						{
-							"name": "/permissions/list",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
-								},
-								"url": {
-									"raw": "{{services}}{{environment}}/permissions/list",
-									"host": [
-										"{{services}}{{environment}}"
-									],
-									"path": [
-										"permissions",
-										"list"
-									]
-								},
-								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -22029,6 +24176,44 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Debug",
+					"description": null,
+					"item": [
+						{
+							"name": "/sandbox",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{services}}{{environment}}/sandbox",
+									"host": [
+										"{{services}}{{environment}}"
+									],
+									"path": [
+										"sandbox"
+									]
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		},
@@ -22453,11 +24638,11 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Debug",
-					"description": null,
+					"name": "Reference",
+					"description": "",
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/reference/permissions",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -22472,18 +24657,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{tasks}}{{environment}}/sandbox",
+									"raw": "{{tasks}}{{environment}}/reference/permissions",
 									"host": [
 										"{{tasks}}{{environment}}"
 									],
 									"path": [
-										"sandbox"
+										"reference",
+										"permissions"
 									]
 								},
-								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -22673,6 +24859,273 @@
 									]
 								},
 								"description": "This endpoint edits a specific configuration."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Metadata",
+					"description": null,
+					"item": [
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{tasks}}{{environment}}/metadatas?",
+									"host": [
+										"{{tasks}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "title[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{tasks}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{tasks}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint returns a specific metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{tasks}}{{environment}}/metadatas",
+									"host": [
+										"{{tasks}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									]
+								},
+								"description": "This endpoint adds a metadata to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{tasks}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{tasks}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{tasks}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{tasks}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						}
@@ -22920,38 +25373,6 @@
 									]
 								},
 								"description": "This endpoint deletes a specific access card from the list."
-							},
-							"response": []
-						},
-						{
-							"name": "/permissions/list",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
-								},
-								"url": {
-									"raw": "{{tasks}}{{environment}}/permissions/list",
-									"host": [
-										"{{tasks}}{{environment}}"
-									],
-									"path": [
-										"permissions",
-										"list"
-									]
-								},
-								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -23744,6 +26165,44 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Debug",
+					"description": null,
+					"item": [
+						{
+							"name": "/sandbox",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{tasks}}{{environment}}/sandbox",
+									"host": [
+										"{{tasks}}{{environment}}"
+									],
+									"path": [
+										"sandbox"
+									]
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		},
@@ -24168,11 +26627,11 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Debug",
-					"description": null,
+					"name": "Reference",
+					"description": "",
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/reference/permissions",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -24187,18 +26646,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
 								},
 								"url": {
-									"raw": "{{tenants}}{{environment}}/sandbox",
+									"raw": "{{tenants}}{{environment}}/reference/permissions",
 									"host": [
 										"{{tenants}}{{environment}}"
 									],
 									"path": [
-										"sandbox"
+										"reference",
+										"permissions"
 									]
 								},
-								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -24388,6 +26848,273 @@
 									]
 								},
 								"description": "This endpoint edits a specific configuration."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Metadata",
+					"description": null,
+					"item": [
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{tenants}}{{environment}}/metadatas?",
+									"host": [
+										"{{tenants}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "title[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{tenants}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{tenants}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint returns a specific metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{tenants}}{{environment}}/metadatas",
+									"host": [
+										"{{tenants}}{{environment}}"
+									],
+									"path": [
+										"metadatas"
+									]
+								},
+								"description": "This endpoint adds a metadata to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{tenants}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{tenants}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{tenants}}{{environment}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{tenants}}{{environment}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
 							},
 							"response": []
 						}
@@ -24635,38 +27362,6 @@
 									]
 								},
 								"description": "This endpoint deletes a specific access card from the list."
-							},
-							"response": []
-						},
-						{
-							"name": "/permissions/list",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
-								},
-								"url": {
-									"raw": "{{tenants}}{{environment}}/permissions/list",
-									"host": [
-										"{{tenants}}{{environment}}"
-									],
-									"path": [
-										"permissions",
-										"list"
-									]
-								},
-								"description": "This endpoint returns the list of available permissions."
 							},
 							"response": []
 						}
@@ -25007,6 +27702,44 @@
 									]
 								},
 								"description": "This endpoint deletes a specific user from the list."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Debug",
+					"description": null,
+					"item": [
+						{
+							"name": "/sandbox",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{tenants}}{{environment}}/sandbox",
+									"host": [
+										"{{tenants}}{{environment}}"
+									],
+									"path": [
+										"sandbox"
+									]
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
 							},
 							"response": []
 						}
