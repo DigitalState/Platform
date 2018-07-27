@@ -5,3 +5,4 @@ logs:
   version: 0.1.0
   api:
     host: api.logs.release.test.ds
+  attributes: {}

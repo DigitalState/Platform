@@ -4,3 +4,4 @@ monitor:
   repository: https://github.com/DigitalState/Monitor.git
   version: develop
   host: monitor.lab.ds
+  attributes: {}

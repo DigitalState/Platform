@@ -15,3 +15,6 @@ topics:
     name: topics
     username: topics
     password: ~
+  attributes:
+    access: true
+    tenant: true

@@ -10,3 +10,4 @@ formio:
     host: adminer.formio.prod.ds
   username: admin@staff.ds
   password: ~
+  attributes: {}

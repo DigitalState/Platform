@@ -8,3 +8,4 @@ camunda:
     host: api.camunda.release.test.ds
   username: admin@staff.ds
   password: admin
+  attributes: {}

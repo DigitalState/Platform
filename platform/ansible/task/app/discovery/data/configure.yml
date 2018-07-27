@@ -8,69 +8,62 @@
           assets:
             host: '{{ app.assets.api.host }}'
             enabled: '{{ app.assets.enabled }}'
-            attributes:
-              tenant: true
+            attributes: '{{ app.assets.attributes }}'
           authentication:
             host: '{{ app.authentication.api.host }}'
             enabled: '{{ app.authentication.enabled }}'
-            attributes:
-              tenant: true
+            attributes: '{{ app.authentication.attributes }}'
           camunda:
             host: '{{ app.camunda.api.host }}/engine-rest'
             enabled: '{{ app.camunda.enabled }}'
+            attributes: '{{ app.camunda.attributes }}'
           cases:
             host: '{{ app.cases.api.host }}'
             enabled: '{{ app.cases.enabled }}'
-            attributes:
-              tenant: true
+            attributes: '{{ app.cases.attributes }}'
           cms:
             host: '{{ app.cms.api.host }}'
             enabled: '{{ app.cms.enabled }}'
-            attributes:
-              tenant: true
+            attributes: '{{ app.cms.attributes }}'
           discovery:
             host: '{{ app.discovery.api.host }}'
             enabled: '{{ app.discovery.enabled }}'
+            attributes: '{{ app.discovery.attributes }}'
           formio:
             host: '{{ app.formio.api.host }}'
             enabled: '{{ app.formio.enabled }}'
+            attributes: '{{ app.formio.attributes }}'
           identities:
             host: '{{ app.identities.api.host }}'
             enabled: '{{ app.identities.enabled }}'
-            attributes:
-              tenant: true
+            attributes: '{{ app.identities.attributes }}'
           interactions:
             host: '{{ app.interactions.api.host }}'
             enabled: '{{ app.interactions.enabled }}'
-            attributes:
-              tenant: true
+            attributes: '{{ app.interactions.attributes }}'
           logs:
             host: '{{ app.logs.api.host }}'
             enabled: '{{ app.logs.enabled }}'
+            attributes: '{{ app.logs.attributes }}'
           records:
             host: '{{ app.records.api.host }}'
             enabled: '{{ app.records.enabled }}'
-            attributes:
-              tenant: true
+            attributes: '{{ app.records.attributes }}'
           services:
             host: '{{ app.services.api.host }}'
             enabled: '{{ app.services.enabled }}'
-            attributes:
-              tenant: true
+            attributes: '{{ app.services.attributes }}'
           tasks:
             host: '{{ app.tasks.api.host }}'
             enabled: '{{ app.tasks.enabled }}'
-            attributes:
-              tenant: true
+            attributes: '{{ app.tasks.attributes }}'
           tenants:
             host: '{{ app.tenants.api.host }}'
             enabled: '{{ app.tenants.enabled }}'
-            attributes:
-              tenant: true
+            attributes: '{{ app.tenants.attributes }}'
           topics:
             host: '{{ app.topics.api.host }}'
             enabled: '{{ app.topics.enabled }}'
-            attributes:
-              tenant: true
+            attributes: '{{ app.topics.attributes }}'
   when: app.discovery.enabled
   tags: [discovery]

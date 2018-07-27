@@ -5,3 +5,4 @@ logs:
   version: develop
   api:
     host: api.logs.lab.ds
+  attributes: {}

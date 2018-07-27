@@ -15,3 +15,6 @@ records:
     name: records
     username: records
     password: records
+  attributes:
+    access: true
+    tenant: true

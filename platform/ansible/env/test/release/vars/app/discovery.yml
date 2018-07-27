@@ -6,3 +6,4 @@ discovery:
   version: 0.7.0
   api:
     host: api.discovery.release.test.ds
+  attributes: {}

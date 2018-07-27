@@ -15,3 +15,6 @@ cases:
     name: cases
     username: cases
     password: cases
+  attributes:
+    access: true
+    tenant: true

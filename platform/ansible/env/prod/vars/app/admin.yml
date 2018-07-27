@@ -4,3 +4,4 @@ admin:
   repository: https://github.com/DigitalState/Admin.git
   version: 0.7.0
   host: admin.prod.ds
+  attributes: {}

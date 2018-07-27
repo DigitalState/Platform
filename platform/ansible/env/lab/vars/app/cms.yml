@@ -15,3 +15,6 @@ cms:
     name: cms
     username: cms
     password: cms
+  attributes:
+    access: true
+    tenant: true

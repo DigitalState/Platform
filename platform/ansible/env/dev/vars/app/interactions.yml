@@ -15,3 +15,6 @@ interactions:
     name: interactions
     username: interactions
     password: interactions
+  attributes:
+    access: true
+    tenant: true

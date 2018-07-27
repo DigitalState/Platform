@@ -15,3 +15,6 @@ forms:
     name: forms
     username: forms
     password: ~
+  attributes:
+    access: true
+    tenant: true

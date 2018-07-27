@@ -6,3 +6,4 @@ discovery:
   version: develop
   api:
     host: api.discovery.ci.test.ds
+  attributes: {}
