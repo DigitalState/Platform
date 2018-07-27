@@ -33,6 +33,10 @@
             host: '{{ app.formio.api.host }}'
             enabled: '{{ app.formio.enabled }}'
             attributes: '{{ app.formio.attributes }}'
+          forms:
+            host: '{{ app.forms.api.host }}'
+            enabled: '{{ app.forms.enabled }}'
+            attributes: '{{ app.forms.attributes }}'
           identities:
             host: '{{ app.identities.api.host }}'
             enabled: '{{ app.identities.enabled }}'
