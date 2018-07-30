@@ -57,6 +57,8 @@
                 value: 'http://{{ app.admin.host }}'
               app.spa.portal:
                 value: 'http://{{ app.portal.host }}'
+              app.spa.portal.oauth.success:
+                value: 'http://{{ app.portal.host }}/oauth/success'
       tags: [always]
 
 - name: Load database migration
