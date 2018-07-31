@@ -2,7 +2,7 @@
 authentication:
   enabled: true
   repository: https://github.com/DigitalState/Authentication.git
-  version: 0.7.0
+  version: 0.8.0
   api:
     host: api.authentication.stag.ds
   adminer:
