@@ -1,6 +1,6 @@
 ---
 tasks:
-  enabled: true
+  enabled: false
   repository: https://github.com/DigitalState/Tasks.git
   version: 0.8.0
   api:
