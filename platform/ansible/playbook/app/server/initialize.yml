@@ -10,9 +10,9 @@
       include_role:
         name: platform/ssh/connect
       vars:
-        directory: '{{ env|replace(".", "/") }}'
-        host: '{{ vars["hostvars"]["app"]["ansible_host"] }}'
-        username: root
+        _directory: '{{ env|replace(".", "/") }}'
+        _host: '{{ vars["hostvars"]["app"]["ansible_host"] }}'
+        _username: root
       when: hostvars.app.ansible_connection is not defined
   tags: [system]
 
