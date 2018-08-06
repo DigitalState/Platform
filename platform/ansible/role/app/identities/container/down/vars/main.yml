@@ -1,3 +1,17 @@
 ---
 _env: prod
+_compose_project_name: dsidentities
+_network: dsproxy_default
+_proxy_host: 127.0.0.1
+_nginx_virtual_host: api.identities.ds
+_adminer_virtual_host: adminer.identities.ds
+_rebrow_virtual_host: rebrow.identities.ds
+_discovery_host: api.discovery.ds
+_discovery_credential: ~
+_directory: /srv/identities
+_database_host: identities_db
+_database_port: 5432
+_database_name: identities
+_database_username: identities
+_database_password: identities
 _persistent: false

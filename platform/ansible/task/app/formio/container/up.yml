@@ -13,6 +13,7 @@
         _formio_virtual_host: '{{ app.formio.api.host }}'
         _adminer_virtual_host: '{{ app.formio.adminer.host }}'
         _discovery_host: '{{ app.discovery.api.host }}'
+        _discovery_credential: '{{ app.discovery.credential.master }}'
         _directory: '{{ directory }}/formio'
         _username: '{{ app.formio.username }}'
         _password: '{{ app.formio.password }}'

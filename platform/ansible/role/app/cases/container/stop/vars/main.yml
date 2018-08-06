@@ -1,2 +1,16 @@
 ---
 _env: prod
+_compose_project_name: dscases
+_network: dsproxy_default
+_proxy_host: 127.0.0.1
+_nginx_virtual_host: api.cases.ds
+_adminer_virtual_host: adminer.cases.ds
+_rebrow_virtual_host: rebrow.cases.ds
+_discovery_host: api.discovery.ds
+_discovery_credential: ~
+_directory: /srv/cases
+_database_host: cases_db
+_database_port: 5432
+_database_name: cases
+_database_username: cases
+_database_password: cases

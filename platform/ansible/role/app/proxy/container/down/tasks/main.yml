@@ -8,4 +8,7 @@
           - 'docker-compose.{{ _env }}.yml'
         state: absent
         remove_volumes: '{{ "no" if _persistent else "yes" }}'
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        PORT: '{{ _port }}'
   tags: [proxy]

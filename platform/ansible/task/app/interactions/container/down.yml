@@ -5,5 +5,19 @@
         name: app/interactions/container/down
       vars:
         _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}interactions'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _nginx_virtual_host: '{{ app.interactions.api.host }}'
+        _adminer_virtual_host: '{{ app.interactions.adminer.host }}'
+        _rebrow_virtual_host: '{{ app.interactions.rebrow.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _discovery_credential: '{{ app.discovery.credential.master }}'
+        _directory: '{{ directory }}/interactions'
+        _database_host: '{{ app.interactions.database.host }}'
+        _database_port: '{{ app.interactions.database.port }}'
+        _database_name: '{{ app.interactions.database.name }}'
+        _database_username: '{{ app.interactions.database.username }}'
+        _database_password: '{{ app.interactions.database.password }}'
   when: app.interactions.enabled
   tags: [interactions]

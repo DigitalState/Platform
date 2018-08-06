@@ -6,4 +6,6 @@ discovery:
   version: 0.8.0
   api:
     host: api.discovery.stag.ds
+  acl:
+    master: ~
   attributes: {}

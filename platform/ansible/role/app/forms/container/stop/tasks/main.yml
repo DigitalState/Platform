@@ -8,4 +8,19 @@
           - 'docker-compose.{{ _env }}.yml'
         state: present
         stopped: yes
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        NGINX_VIRTUAL_HOST: '{{ _nginx_virtual_host }}'
+        ADMINER_VIRTUAL_HOST: '{{ _adminer_virtual_host }}'
+        REBROW_VIRTUAL_HOST: '{{ _rebrow_virtual_host }}'
+        DISCOVERY_HOST: '{{ _discovery_host }}'
+        DISCOVERY_CREDENTIAL: '{{ _discovery_credential }}'
+        DIRECTORY: '{{ _directory }}'
+        DATABASE_HOST: '{{ _database_host }}'
+        DATABASE_PORT: '{{ _database_port }}'
+        DATABASE_NAME: '{{ _database_name }}'
+        DATABASE_USERNAME: '{{ _database_username }}'
+        DATABASE_PASSWORD: '{{ _database_password }}'
   tags: [forms]

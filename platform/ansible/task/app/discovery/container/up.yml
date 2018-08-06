@@ -12,5 +12,7 @@
         _proxy_host: '{{ proxy_container_info_ip.stdout }}'
         _virtual_host: '{{ app.discovery.api.host }}'
         _directory: '{{ directory }}/discovery'
+        _config:
+          acl_master_token: '{{ app.discovery.credential.master}}'
   when: app.discovery.enabled
   tags: [discovery]

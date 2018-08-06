@@ -1,6 +1,6 @@
 ---
 namespace: ds
-directory: ~
+directory: /c/Users/mario/Workspace/DigitalState/Platform/app
 timezone: UTC
 encryption:
   secret: 11111111111111111111111111111111

@@ -20,6 +20,8 @@
         NGINX_VIRTUAL_HOST: '{{ _nginx_virtual_host }}'
         ADMINER_VIRTUAL_HOST: '{{ _adminer_virtual_host }}'
         REBROW_VIRTUAL_HOST: '{{ _rebrow_virtual_host }}'
+        DISCOVERY_HOST: '{{ _discovery_host }}'
+        DISCOVERY_CREDENTIAL: '{{ _discovery_credential }}'
         DIRECTORY: '{{ _directory }}'
         DATABASE_HOST: '{{ _database_host }}'
         DATABASE_PORT: '{{ _database_port }}'

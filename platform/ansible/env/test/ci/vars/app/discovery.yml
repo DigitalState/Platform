@@ -6,4 +6,6 @@ discovery:
   version: develop
   api:
     host: api.discovery.ci.test.ds
+  acl:
+    master: 740a4d9d-fd25-4371-ac48-ff3fc7879be0
   attributes: {}

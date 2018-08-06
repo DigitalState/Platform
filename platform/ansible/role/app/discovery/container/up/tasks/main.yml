@@ -12,5 +12,7 @@
         NETWORK: '{{ _network }}'
         PROXY_HOST: '{{ _proxy_host }}'
         VIRTUAL_HOST: '{{ _virtual_host }}'
+        VIRTUAL_PORT: '{{ _virtual_port }}'
         DIRECTORY: '{{ _directory }}'
+        CONFIG: '{{ _config|to_json }}'
   tags: [discovery]

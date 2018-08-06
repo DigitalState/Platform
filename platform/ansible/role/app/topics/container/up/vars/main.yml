@@ -7,6 +7,7 @@ _nginx_virtual_host: api.topics.ds
 _adminer_virtual_host: api.adminer.ds
 _rebrow_virtual_host: api.rebrow.ds
 _discovery_host: api.discovery.ds
+_discovery_credential: ~
 _directory: /srv/topics
 _database_host: topics_db
 _database_port: 5432

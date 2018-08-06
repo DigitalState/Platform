@@ -5,5 +5,7 @@
         name: app/proxy/container/down
       vars:
         _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}proxy'
+        _port: '{{ app.proxy.port }}'
   when: app.proxy.enabled
   tags: [proxy]

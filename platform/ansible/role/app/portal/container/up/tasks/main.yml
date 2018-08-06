@@ -13,5 +13,6 @@
         PROXY_HOST: '{{ _proxy_host }}'
         VIRTUAL_HOST: '{{ _virtual_host }}'
         DISCOVERY_HOST: '{{ _discovery_host }}'
+        DISCOVERY_CREDENTIAL: '{{ _discovery_credential }}'
         DIRECTORY: '{{ _directory }}'
   tags: [portal]

@@ -1,3 +1,17 @@
 ---
 _env: prod
+_compose_project_name: dsforms
+_network: dsproxy_default
+_proxy_host: 127.0.0.1
+_nginx_virtual_host: api.forms.ds
+_adminer_virtual_host: adminer.forms.ds
+_rebrow_virtual_host: rebrow.forms.ds
+_discovery_host: api.discovery.ds
+_discovery_credential: ~
+_directory: /srv/forms
+_database_host: forms_db
+_database_port: 5432
+_database_name: forms
+_database_username: forms
+_database_password: forms
 _persistent: false

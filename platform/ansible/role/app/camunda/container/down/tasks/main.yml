@@ -8,4 +8,15 @@
           - 'docker-compose.{{ _env }}.yml'
         state: absent
         remove_volumes: '{{ "no" if _persistent else "yes" }}'
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        JAVA_OPTS: '-Djava.security.egd=file:/dev/./urandom -Duser.timezone={{ _timezone }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        VIRTUAL_HOST: '{{ _virtual_host }}'
+        DISCOVERY_HOST: '{{ _discovery_host }}'
+        DISCOVERY_CREDENTIAL: '{{ _discovery_credential }}'
+        DIRECTORY: '{{ _directory }}'
+        USERNAME: '{{ _username }}'
+        PASSWORD: '{{ _password }}'
   tags: [camunda]

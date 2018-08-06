@@ -5,5 +5,19 @@
         name: app/cases/container/down
       vars:
         _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}cases'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _nginx_virtual_host: '{{ app.cases.api.host }}'
+        _adminer_virtual_host: '{{ app.cases.adminer.host }}'
+        _rebrow_virtual_host: '{{ app.cases.rebrow.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _discovery_credential: '{{ app.discovery.credential.master }}'
+        _directory: '{{ directory }}/cases'
+        _database_host: '{{ app.cases.database.host }}'
+        _database_port: '{{ app.cases.database.port }}'
+        _database_name: '{{ app.cases.database.name }}'
+        _database_username: '{{ app.cases.database.username }}'
+        _database_password: '{{ app.cases.database.password }}'
   when: app.cases.enabled
   tags: [cases]

@@ -5,5 +5,12 @@
         name: app/portal/container/down
       vars:
         _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}portal'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _virtual_host: '{{ app.portal.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _discovery_credential: '{{ app.discovery.credential.master }}'
+        _directory: '{{ directory }}/portal'
   when: app.portal.enabled
   tags: [portal]
