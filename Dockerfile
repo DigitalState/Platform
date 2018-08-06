@@ -1,9 +1,19 @@
-FROM williamyeh/ansible:alpine3
+FROM alpine:3.6
 
-## Smtp util
-#RUN apk add --no-cache perl curl \
-#    && curl -SLk http://www.jetmore.org/john/code/swaks/files/swaks-20130209.0/swaks -o swaks \
-#    && chmod +x swaks \
-#    && mv swaks /usr/bin
+RUN \
+    # Sudo
+    apk --update add sudo && \
+
+    # Python
+    apk --update add python py-pip openssl ca-certificates && \
+    apk --update add --virtual build-dependencies python-dev libffi-dev openssl-dev build-base && \
+    pip install --upgrade pip cffi && \
+
+    # Ansible
+    pip install ansible && \
+
+    # Clean up
+    apk del build-dependencies && \
+    rm -rf /var/cache/apk/*
 
 WORKDIR /etc/ansible/env/lab

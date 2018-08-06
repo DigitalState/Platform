@@ -15,5 +15,5 @@ services:
       - ./platform/git:/root/git
       - ./platform/ssh:/root/ssh
       - ./resource:/root/resource
-      - ./app:/srv
       - ./VERSION:/root/VERSION
+      - ./app:/srv
