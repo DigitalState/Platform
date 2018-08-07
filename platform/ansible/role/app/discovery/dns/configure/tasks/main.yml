@@ -1,7 +1,0 @@
----
-- block:
-    - name: Configure discovery dns
-      copy:
-        content: '{{ _dns|to_nice_json }}'
-        dest: '/srv/discovery/web/index.json'
-  tags: [discovery]

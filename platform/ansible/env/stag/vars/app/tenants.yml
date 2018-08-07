@@ -15,6 +15,3 @@ tenants:
     name: tenants
     username: tenants
     password: ~
-  attributes:
-    access: true
-    tenant: true

@@ -15,6 +15,3 @@ assets:
     name: assets
     username: assets
     password: assets
-  attributes:
-    access: true
-    tenant: true

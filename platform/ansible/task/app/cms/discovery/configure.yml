@@ -5,5 +5,6 @@
         name: app/cms/discovery/configure
       vars:
         _host: '{{ app.discovery.api.host }}'
+        _credential: '{{ app.discovery.credential.master }}'
   when: app.cms.enabled
   tags: [cms]

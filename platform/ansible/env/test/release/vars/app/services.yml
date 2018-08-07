@@ -15,6 +15,3 @@ services:
     name: services
     username: services
     password: services
-  attributes:
-    access: true
-    tenant: true

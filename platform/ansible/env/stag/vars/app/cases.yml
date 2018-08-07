@@ -15,6 +15,3 @@ cases:
     name: cases
     username: cases
     password: ~
-  attributes:
-    access: true
-    tenant: true

@@ -1,0 +1,10 @@
+---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+
+- name: Configure discovery configs
+  hosts: app
+  become: true
+  tasks:
+    - name: Configure discovery configs
+      include_tasks: /etc/ansible/task/app/discovery/config/configure.yml
+      tags: [always]

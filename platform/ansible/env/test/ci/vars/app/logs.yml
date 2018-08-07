@@ -5,4 +5,3 @@ logs:
   version: develop
   api:
     host: api.logs.ci.test.ds
-  attributes: {}

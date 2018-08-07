@@ -1,0 +1,40 @@
+---
+- block:
+    - name: Configure discovery store key-value data
+      include_role:
+        name: app/discovery/config/configure
+      vars:
+        _data:
+          services/assets/host: '{{ app.assets.api.host }}'
+          services/assets/enabled: '{{ app.assets.enabled }}'
+          services/authentication/host: '{{ app.authentication.api.host }}'
+          services/authentication/enabled: '{{ app.authentication.enabled }}'
+          services/camunda/host: '{{ app.camunda.api.host }}/engine-rest'
+          services/camunda/enabled: '{{ app.camunda.enabled }}'
+          services/cases/host: '{{ app.cases.api.host }}'
+          services/cases/enabled: '{{ app.cases.enabled }}'
+          services/cms/host: '{{ app.cms.api.host }}'
+          services/cms/enabled: '{{ app.cms.enabled }}'
+          services/formio/host: '{{ app.formio.api.host }}'
+          services/formio/enabled: '{{ app.formio.enabled }}'
+          services/forms/host: '{{ app.forms.api.host }}'
+          services/forms/enabled: '{{ app.forms.enabled }}'
+          services/identities/host: '{{ app.identities.api.host }}'
+          services/identities/enabled: '{{ app.identities.enabled }}'
+          services/interactions/host: '{{ app.interactions.api.host }}'
+          services/interactions/enabled: '{{ app.interactions.enabled }}'
+          services/logs/host: '{{ app.logs.api.host }}'
+          services/logs/enabled: '{{ app.logs.enabled }}'
+          services/records/host: '{{ app.records.api.host }}'
+          services/records/enabled: '{{ app.records.enabled }}'
+          services/services/host: '{{ app.services.api.host }}'
+          services/services/enabled: '{{ app.services.enabled }}'
+          services/tasks/host: '{{ app.tasks.api.host }}'
+          services/tasks/enabled: '{{ app.tasks.enabled }}'
+          services/tenants/host: '{{ app.tenants.api.host }}'
+          services/tenants/enabled: '{{ app.tenants.enabled }}'
+          services/topics/host: '{{ app.topics.api.host }}'
+          services/topics/enabled: '{{ app.topics.enabled }}'
+        _credential: '{{ app.discovery.credential.master }}'
+  when: app.discovery.enabled
+  tags: [discovery]

@@ -21,9 +21,3 @@
       include_tasks: '{{ item }}'
       with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
       tags: [always]
-    - name: Configure discovery dns
-      include_tasks: /etc/ansible/task/app/discovery/dns/configure.yml
-      tags: [always]
-    - name: Configure discovery data
-      include_tasks: /etc/ansible/task/app/discovery/data/configure.yml
-      tags: [always]

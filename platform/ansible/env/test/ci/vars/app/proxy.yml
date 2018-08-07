@@ -5,4 +5,3 @@ proxy:
   repository: https://github.com/DigitalState/Proxy.git
   version: develop
   port: 80
-  attributes: {}

@@ -8,4 +8,3 @@ camunda:
     host: api.camunda.stag.ds
   username: admin@staff.ds
   password: ~
-  attributes: {}

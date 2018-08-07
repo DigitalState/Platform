@@ -4,4 +4,3 @@ portal:
   repository: https://github.com/DigitalState/Portal.git
   version: 0.8.0
   host: portal.prod.ds
-  attributes: {}

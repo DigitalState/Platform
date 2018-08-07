@@ -15,6 +15,3 @@ identities:
     name: identities
     username: identities
     password: ~
-  attributes:
-    access: true
-    tenant: true

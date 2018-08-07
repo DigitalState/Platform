@@ -5,5 +5,6 @@
         name: app/interactions/discovery/configure
       vars:
         _host: '{{ app.discovery.api.host }}'
+        _credential: '{{ app.discovery.credential.master }}'
   when: app.interactions.enabled
   tags: [interactions]

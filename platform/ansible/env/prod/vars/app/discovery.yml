@@ -8,4 +8,3 @@ discovery:
     host: api.discovery.prod.ds
   acl:
     master: ~
-  attributes: {}

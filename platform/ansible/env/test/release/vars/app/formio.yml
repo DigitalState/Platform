@@ -10,4 +10,3 @@ formio:
     host: adminer.formio.release.test.ds
   username: admin@staff.ds
   password: admin
-  attributes: {}

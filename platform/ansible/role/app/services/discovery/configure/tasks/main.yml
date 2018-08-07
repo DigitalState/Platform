@@ -5,4 +5,9 @@
         path: '/srv/services/app/config/parameters.yml'
         regexp: '^\s{4}discovery_host:'
         line: '    discovery_host: {{ _host }}'
+    - name: Configure services discovery credential setting
+      lineinfile:
+        path: '/srv/services/app/config/parameters.yml'
+        regexp: '^\s{4}discovery_credential:'
+        line: '    discovery_credential: {{ _credential }}'
   tags: [services]

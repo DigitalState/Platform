@@ -4,4 +4,3 @@ admin:
   repository: https://github.com/DigitalState/Admin.git
   version: develop
   host: admin.ci.test.ds
-  attributes: {}

@@ -4,4 +4,3 @@ monitor:
   repository: https://github.com/DigitalState/Monitor.git
   version: 0.8.0
   host: monitor.release.test.ds
-  attributes: {}

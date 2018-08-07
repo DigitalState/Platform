@@ -8,4 +8,3 @@ discovery:
     host: api.discovery.lab.ds
   credential:
     master: a0500a68-c736-4e0f-a998-35380cf1791e
-  attributes: {}
