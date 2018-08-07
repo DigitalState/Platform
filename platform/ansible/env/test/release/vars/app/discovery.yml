@@ -6,5 +6,5 @@ discovery:
   version: 0.8.0
   api:
     host: api.discovery.release.test.ds
-  acl:
+  credential:
     master: 740a4d9d-fd25-4371-ac48-ff3fc7879be0
