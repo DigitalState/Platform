@@ -4,6 +4,9 @@ RUN \
     # Sudo
     apk --update add sudo && \
 
+    # SSH
+    apk --update add sshpass openssh-client rsync && \
+
     # Python
     apk --update add python py-pip openssl ca-certificates && \
     apk --update add --virtual build-dependencies python-dev libffi-dev openssl-dev build-base && \
@@ -11,9 +14,6 @@ RUN \
 
     # Ansible
     pip install ansible && \
-
-    # SSH
-    apk --update add sshpass openssh-client rsync && \
 
     # Clean up
     apk del build-dependencies && \
