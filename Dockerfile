@@ -12,6 +12,9 @@ RUN \
     # Ansible
     pip install ansible && \
 
+    # SSH
+    apk --update add sshpass openssh-client rsync && \
+
     # Clean up
     apk del build-dependencies && \
     rm -rf /var/cache/apk/*
