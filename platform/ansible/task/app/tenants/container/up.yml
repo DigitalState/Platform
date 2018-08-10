@@ -1,7 +1,5 @@
 ---
 - block:
-    - name: Gather information for tenants container
-      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Detect docker credential file
       local_action: 'stat path=/root/docker/credential'
       register: docker_credential
@@ -12,18 +10,15 @@
         _env: '{{ env }}'
         _compose_project_name: '{{ namespace }}tenants'
         _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _nginx_virtual_host: '{{ app.tenants.api.host }}'
-        _adminer_virtual_host: '{{ app.tenants.adminer.host }}'
-        _rebrow_virtual_host: '{{ app.tenants.rebrow.host }}'
-        _discovery_host: '{{ app.discovery.api.host }}'
-        _discovery_credential: '{{ app.discovery.credential.master }}'
         _directory: '{{ directory }}/tenants'
+        _api_host: '{{ app.tenants.api.host }}'
         _database_host: '{{ app.tenants.database.host }}'
         _database_port: '{{ app.tenants.database.port }}'
         _database_name: '{{ app.tenants.database.name }}'
         _database_username: '{{ app.tenants.database.username }}'
         _database_password: '{{ app.tenants.database.password }}'
+        _database_ui_host: '{{ app.tenants.database.ui.host }}'
+        _cache_ui_host: '{{ app.tenants.cache.ui.host }}'
         _credential: '{{ lookup("file", "/root/docker/credential") if docker_credential.stat.exists == true else "" }}'
   when: app.tenants.enabled
   tags: [tenants]

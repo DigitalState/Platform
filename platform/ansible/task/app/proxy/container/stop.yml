@@ -5,7 +5,5 @@
         name: app/proxy/container/stop
       vars:
         _env: '{{ env }}'
-        _compose_project_name: '{{ namespace }}proxy'
-        _port: '{{ app.proxy.port }}'
   when: app.proxy.enabled
   tags: [proxy]

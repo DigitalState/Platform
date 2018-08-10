@@ -1,7 +1,5 @@
 ---
 - block:
-    - name: Gather information for camunda container
-      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Up camunda container
       include_role:
         name: app/camunda/container/up
@@ -9,11 +7,8 @@
         _env: '{{ env }}'
         _compose_project_name: '{{ namespace }}camunda'
         _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _virtual_host: '{{ app.camunda.api.host }}'
-        _discovery_host: '{{ app.discovery.api.host }}'
-        _discovery_credential: '{{ app.discovery.credential.master }}'
         _directory: '{{ directory }}/camunda'
+        _api_host: '{{ app.camunda.api.host }}'
         _timezone: '{{ timezone }}'
         _username: '{{ app.camunda.username }}'
         _password: '{{ app.camunda.password }}'

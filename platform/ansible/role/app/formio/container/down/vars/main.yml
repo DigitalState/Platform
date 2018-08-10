@@ -1,13 +1,3 @@
 ---
 _env: prod
-_compose_project_name: dsformio
-_network: dsproxy_default
-_proxy_host: 127.0.0.1
-_formio_virtual_host: api.formio.ds
-_adminer_virtual_host: adminer.formio.ds
-_discovery_host: api.discovery.ds
-_discovery_credential: ~
-_directory: /srv/formio
-_username: admin
-_password: admin
 _persistent: false

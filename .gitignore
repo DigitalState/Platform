@@ -31,8 +31,7 @@
 !/resource/jwt/lab/.gitkeep
 !/resource/jwt/prod/.gitkeep
 !/resource/jwt/stag/.gitkeep
-!/resource/jwt/test/ci/.gitkeep
-!/resource/jwt/test/release/.gitkeep
+!/resource/jwt/test/.gitkeep
 /resource/fixtures/*
 !/resource/fixtures/.gitkeep
 
@@ -46,5 +45,4 @@
 !/platform/ssh/lab/.gitkeep
 !/platform/ssh/prod/.gitkeep
 !/platform/ssh/stag/.gitkeep
-!/platform/ssh/test/ci/.gitkeep
-!/platform/ssh/test/release/.gitkeep
+!/platform/ssh/test/.gitkeep

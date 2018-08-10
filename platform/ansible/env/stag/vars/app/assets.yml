@@ -5,13 +5,14 @@ assets:
   version: 0.8.0
   api:
     host: api.assets.stag.ds
-  adminer:
-    host: adminer.assets.stag.ds
-  rebrow:
-    host: rebrow.assets.stag.ds
   database:
     host: assets_database
     port: 5432
     name: assets
     username: assets
     password: ~
+    ui:
+      host: ui.database.assets.stag.ds
+  cache:
+    ui:
+      host: ui.cache.assets.stag.ds

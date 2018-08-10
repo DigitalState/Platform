@@ -1,7 +1,5 @@
 ---
 - block:
-    - name: Gather information for discovery container
-      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Up discovery container
       include_role:
         name: app/discovery/container/up
@@ -9,10 +7,9 @@
         _env: '{{ env }}'
         _compose_project_name: '{{ namespace }}discovery'
         _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _virtual_host: '{{ app.discovery.api.host }}'
         _directory: '{{ directory }}/discovery'
         _config:
-          acl_master_token: '{{ app.discovery.credential.master}}'
+          acl_master_token: '{{ app.discovery.token.master}}'
+        _discovery_token: '{{ app.discovery.token.master}}'
   when: app.discovery.enabled
   tags: [discovery]

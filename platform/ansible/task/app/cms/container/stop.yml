@@ -5,19 +5,5 @@
         name: app/cms/container/stop
       vars:
         _env: '{{ env }}'
-        _compose_project_name: '{{ namespace }}cms'
-        _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _nginx_virtual_host: '{{ app.cms.api.host }}'
-        _adminer_virtual_host: '{{ app.cms.adminer.host }}'
-        _rebrow_virtual_host: '{{ app.cms.rebrow.host }}'
-        _discovery_host: '{{ app.discovery.api.host }}'
-        _discovery_credential: '{{ app.discovery.credential.master }}'
-        _directory: '{{ directory }}/cms'
-        _database_host: '{{ app.cms.database.host }}'
-        _database_port: '{{ app.cms.database.port }}'
-        _database_name: '{{ app.cms.database.name }}'
-        _database_username: '{{ app.cms.database.username }}'
-        _database_password: '{{ app.cms.database.password }}'
   when: app.cms.enabled
   tags: [cms]

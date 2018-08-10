@@ -5,13 +5,14 @@ assets:
   version: develop
   api:
     host: api.assets.lab.ds
-  adminer:
-    host: adminer.assets.lab.ds
-  rebrow:
-    host: rebrow.assets.lab.ds
   database:
     host: assets_database
     port: 5432
     name: assets
     username: assets
     password: assets
+    ui:
+      host: ui.database.assets.lab.ds
+  cache:
+    ui:
+      host: ui.cache.assets.lab.ds

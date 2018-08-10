@@ -1,0 +1,18 @@
+---
+identities:
+  enabled: true
+  repository: https://github.com/DigitalState/Identities.git
+  version: develop
+  api:
+    host: api.identities.test.ds
+  database:
+    host: identities_database
+    port: 5432
+    name: identities
+    username: identities
+    password: identities
+    ui:
+      host: ui.database.identities.test.ds
+  cache:
+    ui:
+      host: ui.cache.identities.test.ds

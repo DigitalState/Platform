@@ -1,17 +1,3 @@
 ---
 _env: prod
-_compose_project_name: dsservices
-_network: dsproxy_default
-_proxy_host: 127.0.0.1
-_nginx_virtual_host: api.services.ds
-_adminer_virtual_host: adminer.services.ds
-_rebrow_virtual_host: rebrow.services.ds
-_discovery_host: api.discovery.ds
-_discovery_credential: ~
-_directory: /srv/services
-_database_host: services_db
-_database_port: 5432
-_database_name: services
-_database_username: services
-_database_password: services
 _persistent: false

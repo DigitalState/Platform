@@ -4,7 +4,5 @@ discovery:
   order: -20
   repository: https://github.com/DigitalState/Discovery.git
   version: 0.8.0
-  api:
-    host: api.discovery.stag.ds
-  credential:
+  token:
     master: ~

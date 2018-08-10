@@ -6,7 +6,8 @@ formio:
   version: 0.8.0
   api:
     host: api.formio.prod.ds
-  adminer:
-    host: adminer.formio.prod.ds
+  database:
+    ui:
+      host: adminer.formio.prod.ds
   username: admin@staff.ds
   password: ~

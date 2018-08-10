@@ -5,13 +5,14 @@ topics:
   version: 0.8.0
   api:
     host: api.topics.stag.ds
-  adminer:
-    host: adminer.topics.stag.ds
-  rebrow:
-    host: rebrow.topics.stag.ds
   database:
     host: topics_database
     port: 5432
     name: topics
     username: topics
     password: ~
+    ui:
+      host: ui.database.topics.stag.ds
+  cache:
+    ui:
+      host: ui.cache.topics.stag.ds

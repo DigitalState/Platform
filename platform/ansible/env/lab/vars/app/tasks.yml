@@ -5,13 +5,14 @@ tasks:
   version: develop
   api:
     host: api.tasks.lab.ds
-  adminer:
-    host: adminer.tasks.lab.ds
-  rebrow:
-    host: rebrow.tasks.lab.ds
   database:
     host: tasks_database
     port: 5432
     name: tasks
     username: tasks
     password: tasks
+    ui:
+      host: ui.database.tasks.lab.ds
+  cache:
+    ui:
+      host: ui.cache.tasks.lab.ds

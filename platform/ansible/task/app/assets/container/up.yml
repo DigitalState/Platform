@@ -1,7 +1,5 @@
 ---
 - block:
-    - name: Gather information for assets container
-      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Up assets container
       include_role:
         name: app/assets/container/up
@@ -9,17 +7,14 @@
         _env: '{{ env }}'
         _compose_project_name: '{{ namespace }}assets'
         _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _nginx_virtual_host: '{{ app.assets.api.host }}'
-        _adminer_virtual_host: '{{ app.assets.adminer.host }}'
-        _rebrow_virtual_host: '{{ app.assets.rebrow.host }}'
-        _discovery_host: '{{ app.discovery.api.host }}'
-        _discovery_credential: '{{ app.discovery.credential.master }}'
         _directory: '{{ directory }}/assets'
+        _api_host: '{{ app.assets.api.host }}'
         _database_host: '{{ app.assets.database.host }}'
         _database_port: '{{ app.assets.database.port }}'
         _database_name: '{{ app.assets.database.name }}'
         _database_username: '{{ app.assets.database.username }}'
         _database_password: '{{ app.assets.database.password }}'
+        _database_ui_host: '{{ app.assets.database.ui.host }}'
+        _cache_ui_host: '{{ app.assets.cache.ui.host }}'
   when: app.assets.enabled
   tags: [assets]

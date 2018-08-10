@@ -1,7 +1,5 @@
 ---
 - block:
-    - name: Gather information for forms container
-      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Up forms container
       include_role:
         name: app/forms/container/up
@@ -9,17 +7,14 @@
         _env: '{{ env }}'
         _compose_project_name: '{{ namespace }}forms'
         _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _nginx_virtual_host: '{{ app.forms.api.host }}'
-        _adminer_virtual_host: '{{ app.forms.adminer.host }}'
-        _rebrow_virtual_host: '{{ app.forms.rebrow.host }}'
-        _discovery_host: '{{ app.discovery.api.host }}'
-        _discovery_credential: '{{ app.discovery.credential.master }}'
         _directory: '{{ directory }}/forms'
+        _api_host: '{{ app.forms.api.host }}'
         _database_host: '{{ app.forms.database.host }}'
         _database_port: '{{ app.forms.database.port }}'
         _database_name: '{{ app.forms.database.name }}'
         _database_username: '{{ app.forms.database.username }}'
         _database_password: '{{ app.forms.database.password }}'
-  when: app.forms.enabled
+        _database_ui_host: '{{ app.forms.database.ui.host }}'
+        _cache_ui_host: '{{ app.forms.cache.ui.host }}'
+  when: app.cms.enabled
   tags: [forms]

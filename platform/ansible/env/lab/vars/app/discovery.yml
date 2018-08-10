@@ -4,7 +4,5 @@ discovery:
   order: -20
   repository: https://github.com/DigitalState/Discovery.git
   version: develop
-  api:
-    host: api.discovery.lab.ds
-  credential:
+  token:
     master: a0500a68-c736-4e0f-a998-35380cf1791e

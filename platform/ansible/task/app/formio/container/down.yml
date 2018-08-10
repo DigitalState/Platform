@@ -5,15 +5,5 @@
         name: app/formio/container/down
       vars:
         _env: '{{ env }}'
-        _compose_project_name: '{{ namespace }}formio'
-        _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _formio_virtual_host: '{{ app.formio.api.host }}'
-        _adminer_virtual_host: '{{ app.formio.adminer.host }}'
-        _discovery_host: '{{ app.discovery.api.host }}'
-        _discovery_credential: '{{ app.discovery.credential.master }}'
-        _directory: '{{ directory }}/formio'
-        _username: '{{ app.formio.username }}'
-        _password: '{{ app.formio.password }}'
   when: app.formio.enabled
   tags: [formio]

@@ -1,0 +1,8 @@
+all:
+  hosts:
+    platform:
+      ansible_connection: local
+    app:
+      ansible_connection: local
+  vars:
+    env: test

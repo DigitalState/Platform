@@ -1,7 +1,5 @@
 ---
 - block:
-    - name: Gather information for authentication container
-      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Up authentication container
       include_role:
         name: app/authentication/container/up
@@ -9,17 +7,14 @@
         _env: '{{ env }}'
         _compose_project_name: '{{ namespace }}authentication'
         _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _nginx_virtual_host: '{{ app.authentication.api.host }}'
-        _adminer_virtual_host: '{{ app.authentication.adminer.host }}'
-        _rebrow_virtual_host: '{{ app.authentication.rebrow.host }}'
-        _discovery_host: '{{ app.discovery.api.host }}'
-        _discovery_credential: '{{ app.discovery.credential.master }}'
         _directory: '{{ directory }}/authentication'
+        _api_host: '{{ app.authentication.api.host }}'
         _database_host: '{{ app.authentication.database.host }}'
         _database_port: '{{ app.authentication.database.port }}'
         _database_name: '{{ app.authentication.database.name }}'
         _database_username: '{{ app.authentication.database.username }}'
         _database_password: '{{ app.authentication.database.password }}'
+        _database_ui_host: '{{ app.authentication.database.ui.host }}'
+        _cache_ui_host: '{{ app.authentication.cache.ui.host }}'
   when: app.authentication.enabled
   tags: [authentication]

@@ -1,7 +1,5 @@
 ---
 - block:
-    - name: Gather information for formio container
-      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Up formio container
       include_role:
         name: app/formio/container/up
@@ -9,12 +7,9 @@
         _env: '{{ env }}'
         _compose_project_name: '{{ namespace }}formio'
         _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _formio_virtual_host: '{{ app.formio.api.host }}'
-        _adminer_virtual_host: '{{ app.formio.adminer.host }}'
-        _discovery_host: '{{ app.discovery.api.host }}'
-        _discovery_credential: '{{ app.discovery.credential.master }}'
         _directory: '{{ directory }}/formio'
+        _api_host: '{{ app.formio.api.host }}'
+        _database_ui_host: '{{ app.formio.database.ui.host }}'
         _username: '{{ app.formio.username }}'
         _password: '{{ app.formio.password }}'
   when: app.formio.enabled

@@ -5,12 +5,5 @@
         name: app/admin/container/down
       vars:
         _env: '{{ env }}'
-        _compose_project_name: '{{ namespace }}admin'
-        _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _virtual_host: '{{ app.admin.host }}'
-        _discovery_host: '{{ app.discovery.api.host }}'
-        _discovery_credential: '{{ app.discovery.credential.master }}'
-        _directory: '{{ directory }}/admin'
   when: app.admin.enabled
   tags: [admin]

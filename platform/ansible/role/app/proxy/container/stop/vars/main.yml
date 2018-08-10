@@ -1,4 +1,2 @@
 ---
 _env: prod
-_compose_project_name: dsproxy
-_port: 443

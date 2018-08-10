@@ -5,13 +5,14 @@ services:
   version: 0.8.0
   api:
     host: api.services.prod.ds
-  adminer:
-    host: adminer.services.prod.ds
-  rebrow:
-    host: rebrow.services.prod.ds
   database:
     host: services_database
     port: 5432
     name: services
     username: services
     password: ~
+    ui:
+      host: ui.database.services.prod.ds
+  cache:
+    ui:
+      host: ui.cache.services.prod.ds

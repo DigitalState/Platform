@@ -1,0 +1,8 @@
+---
+discovery:
+  enabled: true
+  order: -20
+  repository: https://github.com/DigitalState/Discovery.git
+  version: develop
+  token:
+    master: 740a4d9d-fd25-4371-ac48-ff3fc7879be0

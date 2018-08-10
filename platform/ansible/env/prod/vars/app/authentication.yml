@@ -5,13 +5,14 @@ authentication:
   version: 0.8.0
   api:
     host: api.authentication.prod.ds
-  adminer:
-    host: adminer.authentication.prod.ds
-  rebrow:
-    host: rebrow.authentication.prod.ds
   database:
     host: authentication_database
     port: 5432
     name: authentication
     username: authentication
     password: ~
+    ui:
+      host: ui.database.authentication.prod.ds
+  cache:
+    ui:
+      host: ui.cache.authentication.prod.ds

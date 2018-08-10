@@ -5,13 +5,14 @@ forms:
   version: 0.8.0
   api:
     host: api.forms.prod.ds
-  adminer:
-    host: adminer.forms.prod.ds
-  rebrow:
-    host: rebrow.forms.prod.ds
   database:
     host: forms_database
     port: 5432
     name: forms
     username: forms
     password: ~
+    ui:
+      host: ui.database.forms.prod.ds
+  cache:
+    ui:
+      host: ui.cache.forms.prod.ds

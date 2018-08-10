@@ -1,16 +1,2 @@
 ---
 _env: prod
-_compose_project_name: dsrecords
-_network: dsproxy_default
-_proxy_host: 127.0.0.1
-_nginx_virtual_host: api.records.ds
-_adminer_virtual_host: adminer.records.ds
-_rebrow_virtual_host: rebrow.records.ds
-_discovery_host: api.discovery.ds
-_discovery_credential: ~
-_directory: /srv/records
-_database_host: records_db
-_database_port: 5432
-_database_name: records
-_database_username: records
-_database_password: records

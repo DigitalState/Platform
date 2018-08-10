@@ -7,9 +7,9 @@
   tasks:
     - name: Check if the ssh private key exists
       stat:
-        path: '/root/ssh/{{ env|replace(".", "/") }}/key'
+        path: '/root/ssh/{{ env }}/key'
       register: private
     - name: Create ssh private key
       shell:
-        cmd: 'ssh-keygen -t rsa -N "" -f /root/ssh/{{ env|replace(".", "/") }}/key'
+        cmd: 'ssh-keygen -t rsa -N "" -f /root/ssh/{{ env }}/key'
       when: private.stat.exists == false

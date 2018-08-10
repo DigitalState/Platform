@@ -1,4 +1,7 @@
 ---
 _env: prod
 _compose_project_name: dsproxy
+_directory: /srv/proxy
 _port: 443
+_ui_port: 444
+_discovery_token: ~

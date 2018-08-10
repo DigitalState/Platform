@@ -1,7 +1,5 @@
 ---
 - block:
-    - name: Gather information for records container
-      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
     - name: Up records container
       include_role:
         name: app/records/container/up
@@ -9,17 +7,14 @@
         _env: '{{ env }}'
         _compose_project_name: '{{ namespace }}records'
         _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _nginx_virtual_host: '{{ app.records.api.host }}'
-        _adminer_virtual_host: '{{ app.records.adminer.host }}'
-        _rebrow_virtual_host: '{{ app.records.rebrow.host }}'
-        _discovery_host: '{{ app.discovery.api.host }}'
-        _discovery_credential: '{{ app.discovery.credential.master }}'
         _directory: '{{ directory }}/records'
+        _api_host: '{{ app.records.api.host }}'
         _database_host: '{{ app.records.database.host }}'
         _database_port: '{{ app.records.database.port }}'
         _database_name: '{{ app.records.database.name }}'
         _database_username: '{{ app.records.database.username }}'
         _database_password: '{{ app.records.database.password }}'
+        _database_ui_host: '{{ app.records.database.ui.host }}'
+        _cache_ui_host: '{{ app.records.cache.ui.host }}'
   when: app.records.enabled
   tags: [records]

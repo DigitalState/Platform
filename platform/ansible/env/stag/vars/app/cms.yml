@@ -5,13 +5,14 @@ cms:
   version: 0.8.0
   api:
     host: api.cms.stag.ds
-  adminer:
-    host: adminer.cms.stag.ds
-  rebrow:
-    host: rebrow.cms.stag.ds
   database:
     host: cms_database
     port: 5432
     name: cms
     username: cms
     password: ~
+    ui:
+      host: ui.database.cms.stag.ds
+  cache:
+    ui:
+      host: ui.cache.cms.stag.ds

@@ -5,13 +5,14 @@ cases:
   version: 0.8.0
   api:
     host: api.cases.stag.ds
-  adminer:
-    host: adminer.cases.stag.ds
-  rebrow:
-    host: rebrow.cases.stag.ds
   database:
     host: cases_database
     port: 5432
     name: cases
     username: cases
     password: ~
+    ui:
+      host: ui.database.cases.stag.ds
+  cache:
+    ui:
+      host: ui.cache.cases.stag.ds

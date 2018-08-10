@@ -4,4 +4,8 @@ proxy:
   order: -30
   repository: https://github.com/DigitalState/Proxy.git
   version: 0.8.0
-  port: 80
+  port: 443
+  discovery:
+    token: ~
+  ui:
+    port: 444

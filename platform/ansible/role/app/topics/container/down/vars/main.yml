@@ -1,17 +1,3 @@
 ---
 _env: prod
-_compose_project_name: dstopics
-_network: dsproxy_default
-_proxy_host: 127.0.0.1
-_nginx_virtual_host: api.topics.ds
-_adminer_virtual_host: api.adminer.ds
-_rebrow_virtual_host: api.rebrow.ds
-_discovery_host: api.discovery.ds
-_discovery_credential: ~
-_directory: /srv/topics
-_database_host: topics_db
-_database_port: 5432
-_database_name: topics
-_database_username: topics
-_database_password: topics
 _persistent: false

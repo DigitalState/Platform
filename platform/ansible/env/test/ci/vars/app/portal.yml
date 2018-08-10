@@ -1,6 +1,0 @@
----
-portal:
-  enabled: false
-  repository: https://github.com/DigitalState/Portal.git
-  version: develop
-  host: portal.ci.test.ds

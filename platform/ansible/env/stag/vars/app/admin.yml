@@ -3,4 +3,5 @@ admin:
   enabled: false
   repository: https://github.com/DigitalState/Admin.git
   version: 0.8.0
-  host: admin.stag.ds
+  ui:
+    host: admin.stag.ds

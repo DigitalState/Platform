@@ -5,13 +5,14 @@ cases:
   version: develop
   api:
     host: api.cases.lab.ds
-  adminer:
-    host: adminer.cases.lab.ds
-  rebrow:
-    host: rebrow.cases.lab.ds
   database:
     host: cases_database
     port: 5432
     name: cases
     username: cases
     password: cases
+    ui:
+      host: ui.database.cases.lab.ds
+  cache:
+    ui:
+      host: ui.cache.cases.lab.ds

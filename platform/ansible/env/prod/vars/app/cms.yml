@@ -5,13 +5,14 @@ cms:
   version: 0.8.0
   api:
     host: api.cms.prod.ds
-  adminer:
-    host: adminer.cms.prod.ds
-  rebrow:
-    host: rebrow.cms.prod.ds
   database:
     host: cms_database
     port: 5432
     name: cms
     username: cms
     password: ~
+    ui:
+      host: ui.database.cms.prod.ds
+  cache:
+    ui:
+      host: ui.cache.cms.prod.ds

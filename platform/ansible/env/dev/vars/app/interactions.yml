@@ -5,13 +5,14 @@ interactions:
   version: 0.8.0
   api:
     host: api.interactions.dev.ds
-  adminer:
-    host: adminer.interactions.dev.ds
-  rebrow:
-    host: rebrow.interactions.dev.ds
   database:
     host: interactions_database
     port: 5432
     name: interactions
     username: interactions
     password: interactions
+    ui:
+      host: ui.database.interactions.dev.ds
+  cache:
+    ui:
+      host: ui.cache.interactions.dev.ds

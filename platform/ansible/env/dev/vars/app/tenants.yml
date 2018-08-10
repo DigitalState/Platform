@@ -5,13 +5,14 @@ tenants:
   version: 0.8.0
   api:
     host: api.tenants.dev.ds
-  adminer:
-    host: adminer.tenants.dev.ds
-  rebrow:
-    host: rebrow.tenants.dev.ds
   database:
     host: tenants_database
     port: 5432
     name: tenants
     username: tenants
     password: tenants
+    ui:
+      host: ui.database.tenants.dev.ds
+  cache:
+    ui:
+      host: ui.cache.tenants.dev.ds

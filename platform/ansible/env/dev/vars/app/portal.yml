@@ -3,4 +3,5 @@ portal:
   enabled: false
   repository: https://github.com/DigitalState/Portal.git
   version: 0.8.0
-  host: portal.dev.ds
+  ui:
+    host: portal.dev.ds

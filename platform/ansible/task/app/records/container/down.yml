@@ -5,19 +5,5 @@
         name: app/records/container/down
       vars:
         _env: '{{ env }}'
-        _compose_project_name: '{{ namespace }}records'
-        _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _nginx_virtual_host: '{{ app.records.api.host }}'
-        _adminer_virtual_host: '{{ app.records.adminer.host }}'
-        _rebrow_virtual_host: '{{ app.records.rebrow.host }}'
-        _discovery_host: '{{ app.discovery.api.host }}'
-        _discovery_credential: '{{ app.discovery.credential.master }}'
-        _directory: '{{ directory }}/records'
-        _database_host: '{{ app.records.database.host }}'
-        _database_port: '{{ app.records.database.port }}'
-        _database_name: '{{ app.records.database.name }}'
-        _database_username: '{{ app.records.database.username }}'
-        _database_password: '{{ app.records.database.password }}'
   when: app.records.enabled
   tags: [records]

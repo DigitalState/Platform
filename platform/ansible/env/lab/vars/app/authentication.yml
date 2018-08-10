@@ -5,13 +5,14 @@ authentication:
   version: develop
   api:
     host: api.authentication.lab.ds
-  adminer:
-    host: adminer.authentication.lab.ds
-  rebrow:
-    host: rebrow.authentication.lab.ds
   database:
     host: authentication_database
     port: 5432
     name: authentication
     username: authentication
     password: authentication
+    ui:
+      host: ui.database.authentication.lab.ds
+  cache:
+    ui:
+      host: ui.cache.authentication.lab.ds

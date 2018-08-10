@@ -1,6 +1,0 @@
----
-admin:
-  enabled: false
-  repository: https://github.com/DigitalState/Admin.git
-  version: 0.8.0
-  host: admin.release.test.ds

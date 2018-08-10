@@ -4,12 +4,12 @@
       replace:
         path: /srv/formio/formio/client/dist/config.js
         regexp: api\.formio\.ds
-        replace: '{{ _formio_virtual_host }}'
+        replace: '{{ _api_host }}'
     - name: Configure app host config
       replace:
         path: /srv/formio/formio/config/default.json
         regexp: api\.formio\.ds
-        replace: '{{ _formio_virtual_host }}'
+        replace: '{{ _api_host }}'
     - name: Up formio container
       docker_service:
         project_src: /srv/formio
@@ -20,12 +20,9 @@
       environment:
         COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
         NETWORK: '{{ _network }}'
-        PROXY_HOST: '{{ _proxy_host }}'
-        FORMIO_VIRTUAL_HOST: '{{ _formio_virtual_host }}'
-        ADMINER_VIRTUAL_HOST: '{{ _adminer_virtual_host }}'
-        DISCOVERY_HOST: '{{ _discovery_host }}'
-        DISCOVERY_CREDENTIAL: '{{ _discovery_credential }}'
         DIRECTORY: '{{ _directory }}'
+        API_HOST: '{{ _api_host }}'
+        DATABASE_UI_HOST: '{{ _database_ui_host }}'
         USERNAME: '{{ _username }}'
         PASSWORD: '{{ _password }}'
   tags: [formio]

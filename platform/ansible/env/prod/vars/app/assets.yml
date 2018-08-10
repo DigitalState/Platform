@@ -5,13 +5,14 @@ assets:
   version: 0.8.0
   api:
     host: api.assets.prod.ds
-  adminer:
-    host: adminer.assets.prod.ds
-  rebrow:
-    host: rebrow.assets.prod.ds
   database:
     host: assets_database
     port: 5432
     name: assets
     username: assets
     password: ~
+    ui:
+      host: ui.database.assets.prod.ds
+  cache:
+    ui:
+      host: ui.cache.assets.prod.ds

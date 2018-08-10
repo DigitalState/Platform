@@ -1,7 +1,0 @@
----
-- block:
-    - name: Obtain proxy container ip
-      shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.{{ namespace }}proxy_default.IPAddress {{ '}}' }}' {{ namespace }}proxy_nginx_1
-      register: proxy_container_info_ip
-      changed_when: false
-  tags: [always]

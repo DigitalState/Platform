@@ -3,4 +3,5 @@ admin:
   enabled: false
   repository: https://github.com/DigitalState/Admin.git
   version: develop
-  host: admin.lab.ds
+  ui:
+    host: admin.lab.ds

@@ -5,19 +5,5 @@
         name: app/services/container/down
       vars:
         _env: '{{ env }}'
-        _compose_project_name: '{{ namespace }}services'
-        _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
-        _nginx_virtual_host: '{{ app.services.api.host }}'
-        _adminer_virtual_host: '{{ app.services.adminer.host }}'
-        _rebrow_virtual_host: '{{ app.services.rebrow.host }}'
-        _discovery_host: '{{ app.discovery.api.host }}'
-        _discovery_credential: '{{ app.discovery.credential.master }}'
-        _directory: '{{ directory }}/services'
-        _database_host: '{{ app.services.database.host }}'
-        _database_port: '{{ app.services.database.port }}'
-        _database_name: '{{ app.services.database.name }}'
-        _database_username: '{{ app.services.database.username }}'
-        _database_password: '{{ app.services.database.password }}'
   when: app.services.enabled
   tags: [services]

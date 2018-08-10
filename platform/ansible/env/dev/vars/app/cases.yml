@@ -5,13 +5,14 @@ cases:
   version: 0.8.0
   api:
     host: api.cases.dev.ds
-  adminer:
-    host: adminer.cases.dev.ds
-  rebrow:
-    host: rebrow.cases.dev.ds
   database:
     host: cases_database
     port: 5432
     name: cases
     username: cases
     password: cases
+    ui:
+      host: ui.database.cases.dev.ds
+  cache:
+    ui:
+      host: ui.cache.cases.dev.ds
