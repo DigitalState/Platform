@@ -60,7 +60,7 @@ ansible-playbook app/cache/warmup.yml
 Listing all Docker containers of the application:
 
 ```
-docker ps -a
+docker ps -a -f "name=ds"
 ```
 
 ## Microservice
