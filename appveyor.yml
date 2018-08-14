@@ -9,7 +9,7 @@ init:
   - SET PATH=c:\tools\php72;%PATH%
 
 environment:
-    APP_ENV: 'test'
+  APP_ENV: 'test'
 
 install:
   - ps: Set-Service wuauserv -StartupType Manual
