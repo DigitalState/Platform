@@ -1,0 +1,8 @@
+---
+- block:
+    - name: Configure services namespace setting
+      lineinfile:
+        path: '/srv/services/app/config/parameters.yml'
+        regexp: '^\s{4}namespace:'
+        line: '    namespace: {{ _namespace }}'
+  tags: [services]

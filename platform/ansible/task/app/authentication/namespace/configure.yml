@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure authentication namespace settings
+      include_role:
+        name: app/authentication/namespace/configure
+      vars:
+        _namespace: '{{ namespace }}'
+  when: app.authentication.enabled
+  tags: [authentication]

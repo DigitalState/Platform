@@ -13,5 +13,6 @@
 - import_playbook: app/integration/configure.yml
 - import_playbook: app/jwt/configure.yml
 - import_playbook: app/mail/configure.yml
+- import_playbook: app/namespace/configure.yml
 - import_playbook: app/system/configure.yml
 
