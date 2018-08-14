@@ -54,11 +54,11 @@
                 uuid: '{{ (ansible_date_time.iso8601_micro + "9")|to_uuid }}'
             config:
               app.spa.admin:
-                value: 'http://{{ app.admin.host }}'
+                value: 'http://{{ app.admin.ui.host }}'
               app.spa.portal:
-                value: 'http://{{ app.portal.host }}'
+                value: 'http://{{ app.portal.ui.host }}'
               app.spa.portal.oauth.success:
-                value: 'http://{{ app.portal.host }}/oauth/success'
+                value: 'http://{{ app.portal.ui.host }}/oauth/success'
       tags: [always]
 
 - name: Load database migration
