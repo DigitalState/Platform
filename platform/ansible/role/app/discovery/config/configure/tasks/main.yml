@@ -4,5 +4,5 @@
       shell:
         cmd: 'docker-compose exec -T bootstrap env CONSUL_HTTP_TOKEN={{ _credential }} consul kv put "{{ item.key }}" "{{ item.value }}"'
         chdir: /srv/discovery
-      with_dict: '{{ _data }}'
+      with_dict: '{{ _config }}'
   tags: [discovery]
