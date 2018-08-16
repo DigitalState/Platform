@@ -1,10 +1,12 @@
 ---
 - block:
+    - name: Obtain discovery container ip
+      include_tasks: /etc/ansible/task/app/discovery/container/info.yml
     - name: Configure tenants discovery settings
       include_role:
         name: app/tenants/discovery/configure
       vars:
-        _host: '{{ app.discovery.api.host }}'
-        _credential: '{{ app.discovery.credential.master }}'
+        _host: '{{ discovery_container_info_ip.stdout }}:8500'
+        _credential: '{{ app.discovery.token.master }}'
   when: app.tenants.enabled
   tags: [tenants]
