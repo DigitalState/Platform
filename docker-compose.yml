@@ -17,8 +17,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./platform/ansible:/etc/ansible
-      - ./platform/docker:/root/docker
-      - ./platform/git:/root/git
       - ./platform/ssh:/root/ssh
       - ./resource:/root/resource
       - ./VERSION:/root/VERSION
