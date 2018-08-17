@@ -1,4 +1,5 @@
 /.idea
+/.env.override
 
 /app/admin
 /app/assets
