@@ -36,10 +36,6 @@
 !/resource/fixtures/.gitkeep
 
 /platform/ansible/**/*.retry
-/platform/docker/*
-!/platform/docker/.gitkeep
-/platform/git/*
-!/platform/git/.gitkeep
 /platform/ssh/*
 !/platform/ssh/dev/.gitkeep
 !/platform/ssh/lab/.gitkeep
