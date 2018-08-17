@@ -1,14 +1,13 @@
 ---
 - block:
-    - name: Detect git credential file
-      local_action: 'stat path=/root/git/credential'
-      register: git_credential
     - name: Download tasks repository
       include_role:
         name: app/tasks/repository/download
       vars:
         _repository: '{{ app.tasks.repository }}'
         _version: '{{ app.tasks.version }}'
-        _credential: '{{ lookup("file", "/root/git/credential") if git_credential.stat.exists == true else "" }}'
+        _credential:
+          username: '{{ github.username }}'
+          password: '{{ github.password }}'
   when: app.tasks.enabled
   tags: [tasks]

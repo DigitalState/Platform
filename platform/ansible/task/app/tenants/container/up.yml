@@ -1,8 +1,5 @@
 ---
 - block:
-    - name: Detect docker credential file
-      local_action: 'stat path=/root/docker/credential'
-      register: docker_credential
     - name: Up tenants container
       include_role:
         name: app/tenants/container/up
@@ -19,6 +16,9 @@
         _database_password: '{{ app.tenants.database.password }}'
         _database_ui_host: '{{ app.tenants.database.ui.host }}'
         _cache_ui_host: '{{ app.tenants.cache.ui.host }}'
-        _credential: '{{ lookup("file", "/root/docker/credential") if docker_credential.stat.exists == true else "" }}'
+        _credential:
+          email: '{{ dockerhub.email }}'
+          username: '{{ dockerhub.username }}'
+          password: '{{ dockerhub.password }}'
   when: app.tenants.enabled
   tags: [tenants]

@@ -11,4 +11,7 @@ _database_username: tasks
 _database_password: tasks
 _database_ui_host: ui.database.tasks.ds
 _cache_ui_host: ui.cache.tasks.ds
-_credential: ~
+_credential:
+  email: ~
+  username: ~
+  password: ~

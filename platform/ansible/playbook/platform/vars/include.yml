@@ -3,9 +3,9 @@
   hosts: all
   gather_facts: false
   tasks:
-    - name: Include main variables file
+    - name: Include base variables files
       include_vars:
-        file: '/etc/ansible/env/{{ env }}/vars/main.yml'
+        dir: '/etc/ansible/env/{{ env }}/vars'
     - name: Include app variables files
       include_vars:
         dir: '/etc/ansible/env/{{ env }}/vars/app'

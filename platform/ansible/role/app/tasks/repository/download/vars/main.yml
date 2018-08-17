@@ -1,4 +1,6 @@
 ---
 _repository: https://github.com/DigitalState/Tasks.git
 _version: master
-_credential: ~
+_credential:
+  username: ~
+  password: ~

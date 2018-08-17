@@ -4,6 +4,12 @@ services:
   platform:
     container_name: platform
     build: .
+    environment:
+      - GITHUB_USERNAME
+      - GITHUB_PASSWORD
+      - DOCKERHUB_EMAIL
+      - DOCKERHUB_USERNAME
+      - DOCKERHUB_PASSWORD
     privileged: true
     entrypoint: /bin/sh
     stdin_open: true

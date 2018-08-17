@@ -11,4 +11,8 @@ _database_username: tenants
 _database_password: tenants
 _database_ui_host: ui.database.tenants.ds
 _cache_ui_host: ui.cache.tenants.ds
-_credential: ~
+_credential:
+  email: ~
+  username: ~
+  password: ~
+

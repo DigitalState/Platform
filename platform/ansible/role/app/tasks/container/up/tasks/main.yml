@@ -2,9 +2,9 @@
 - block:
     - name: Log into docker
       docker_login:
-        email: '{{ _credential.split(":")[0] }}'
-        username: '{{ _credential.split(":")[1] }}'
-        password: '{{ _credential.split(":")[2] }}'
+        email: '{{ _credential.email }}'
+        username: '{{ _credential.username }}'
+        password: '{{ _credential.password }}'
       changed_when: false
     - name: Up tasks container
       docker_service:
