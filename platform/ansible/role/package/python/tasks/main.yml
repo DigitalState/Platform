@@ -4,6 +4,9 @@
   register: _os
   changed_when: false
 
+- import_tasks: alpine.yml
+  when: _os.stdout.find('moby')
+
 - import_tasks: ubuntu.yml
   when: _os.stdout.find('Ubuntu')
 

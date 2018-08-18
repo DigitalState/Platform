@@ -1,8 +1,8 @@
 ---
 - import_playbook: platform/ssh/key/create.yml
 - import_playbook: platform/jwt/key/create.yml
-- import_playbook: app/server/initialize.yml
-- import_playbook: app/server/setup.yml
+- import_playbook: app/initialize.yml
+- import_playbook: app/setup.yml
 - import_playbook: app/repository/download.yml
 - import_playbook: app/repository/override.yml
 - import_playbook: app/jwt/key/download.yml

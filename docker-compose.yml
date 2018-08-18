@@ -1,9 +1,20 @@
 version: '3.1'
 
 services:
+  app:
+    container_name: app
+    build:
+      context: ./app
+    environment:
+      SERVICE_IGNORE: 'true'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./app/srv:/srv
+
   platform:
     container_name: platform
-    build: .
+    build:
+      context: ./platform
     environment:
       - GITHUB_USERNAME
       - GITHUB_PASSWORD
@@ -15,9 +26,7 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
       - ./platform/ansible:/etc/ansible
       - ./platform/ssh:/root/ssh
-      - ./resource:/root/resource
+      - ./app/resource:/root/resource
       - ./VERSION:/root/VERSION
-      - ./app:/srv

@@ -4,7 +4,7 @@ RUN \
     # Sudo
     apk --update add sudo && \
 
-    # SSH
+    # SSH client
     apk --update add sshpass openssh-client rsync && \
 
     # Python

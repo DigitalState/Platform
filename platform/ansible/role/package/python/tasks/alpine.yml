@@ -1,0 +1,10 @@
+---
+- name: Install python
+  raw: bash -c 'apk --update add python py-pip openssl ca-certificates && apk --update add --virtual build-dependencies python-dev libffi-dev openssl-dev build-base'
+  register: _output
+  changed_when: _output.stdout != ''
+
+- name: Install pip
+  raw: bash -c 'pip install --upgrade pip cffi'
+  register: _output
+  changed_when: _output.stdout != ''
