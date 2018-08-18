@@ -2,11 +2,9 @@
     <img src="https://avatars3.githubusercontent.com/u/12055994?s=200&v=4">
 </a></p>
 
-The **Platform** repository provides a toolkit to help orchestrate instances of the DigitalState **Application**. It uses Docker containers with **Ansible** pre-configured to help the developer manage local and remote deployments; from sandbox to production.
+The **Platform** repository provides a toolkit to help orchestrate instances of the DigitalState **Application**. It uses a Docker container with **Ansible** pre-configured to help the developer manage local and remote deployments; from sandbox to production.
 
 This is the central repository and starting point for developers.
-
-As a quick start guide, consult the [dev environment](/platform/documentation/environments/dev/index.md) documentation.
 
 [![works badge](https://cdn.rawgit.com/nikku/works-on-my-machine/v0.2.0/badge.svg)](platform/documentation/status/branches/develop.md)
 [![Build Status](https://travis-ci.org/DigitalState/Platform.svg?branch=master)](https://travis-ci.org/DigitalState/Platform)
@@ -17,10 +15,15 @@ As a quick start guide, consult the [dev environment](/platform/documentation/en
 
 ## Table of Contents
 
+- [Quickstart](#requirements)
 - [Requirements](#requirements)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Credits](#credits)
+
+## Quickstart
+
+To quickly get started with an installed sandbox environment, consult the [dev environment](/platform/documentation/environments/dev/index.md) documentation.
 
 ## Requirements
 
@@ -32,7 +35,7 @@ If you are on _Windows_, **Windows Pro** with **HyperV** and **DockerForWindows*
 
 If you are on _Mac_, **DockerForMac** is required.
 
-> :warning: Docker Toolkit is not compatible.
+:warning: _Docker Toolkit is not compatible._
 
 ## Documentation
 
