@@ -2,9 +2,9 @@
     <img src="https://avatars3.githubusercontent.com/u/12055994?s=200&v=4">
 </a></p>
 
-The Platform repository provides a Docker container, with Ansible pre-installed, to help orchestrate instances of the DigitalState Application. It comes with a wide variety of **Ansible playbooks** to help the developer manage local and remote deployments; from sandbox to production.
+The Platform repository provides pre-configured Docker containers to help orchestrate instances of the DigitalState Application. It comes with **Ansible** pre-installed and a wide variety of **playbooks** to help the developer manage local and remote deployments; from sandbox to production.
 
-This is the central repository and starting point for developers.
+This is the central repository and starting point for developers. As a quick start guide, consult the [dev environment](/platform/documentation/environments/dev/index.md) documentation.
 
 > :warning: The __develop__ branch of Platform represents the latest development efforts and should be considered experimental. For a stable release, consult the [releases page](https://github.com/DigitalState/Platform/releases).
 
@@ -17,18 +17,10 @@ This is the central repository and starting point for developers.
 
 ## Table of Contents
 
-- [Synopsis](#synopsis)
 - [Requirements](#requirements)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Credits](#credits)
-
-## Synopsis
-
-1. **Install** Docker on your local machine.
-2. **Download** the Platform repository.
-3. **Boot** the Platform container.
-4. **Execute** Ansible playbooks to deploy instances.
 
 ## Requirements
 
