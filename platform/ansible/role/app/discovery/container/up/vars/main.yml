@@ -4,4 +4,5 @@ _compose_project_name: dsdiscovery
 _network: dsproxy_default
 _directory: /srv/discovery
 _config: {}
+_ui_host: ui.discovery.ds
 _discovery_token: ~

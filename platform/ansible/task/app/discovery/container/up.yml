@@ -9,7 +9,8 @@
         _network: '{{ namespace }}proxy_default'
         _directory: '{{ directory }}/discovery'
         _config:
-          acl_master_token: '{{ app.discovery.token.master}}'
-        _discovery_token: '{{ app.discovery.token.master}}'
+          acl_master_token: '{{ app.discovery.token.master }}'
+        _ui_host: '{{ app.discovery.ui.host }}'
+        _discovery_token: '{{ app.discovery.token.master }}'
   when: app.discovery.enabled
   tags: [discovery]

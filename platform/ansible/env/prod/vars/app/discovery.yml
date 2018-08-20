@@ -6,3 +6,5 @@ discovery:
   version: 0.8.0
   token:
     master: ~
+  ui:
+    host: ui.discovery.prod.ds

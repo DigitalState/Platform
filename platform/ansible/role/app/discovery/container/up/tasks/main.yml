@@ -12,5 +12,6 @@
         NETWORK: '{{ _network }}'
         DIRECTORY: '{{ _directory }}'
         CONFIG: '{{ _config|to_json }}'
+        UI_HOST: '{{ _ui_host }}'
         DISCOVERY_TOKEN: '{{ _discovery_token }}'
   tags: [discovery]
