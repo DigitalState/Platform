@@ -23,9 +23,9 @@ This is the central repository and starting point for developers.
 
 ## Quickstart
 
-To install a tagged release in dev mode, consult the [dev environment](/platform/documentation/environments/dev/index.md) documentation.
+If you wish to test a stable release of the application in a sandbox, we suggest using the [dev environment](/platform/documentation/environments/dev/index.md) setup documentation.
 
-To install the latest code in lab mode, consult the [lab environment](/platform/documentation/environments/lab/index.md) documentation.
+If you wish to further develop the application using the latest development efforts, we suggest using the [lab environment](/platform/documentation/environments/lab/index.md) setup documentation.
 
 ## Requirements
 
