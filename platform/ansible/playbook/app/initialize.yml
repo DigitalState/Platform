@@ -13,7 +13,7 @@
         _directory: '{{ env }}'
         _host: '{{ vars["hostvars"]["app"]["ansible_host"] }}'
         _username: root
-      when: hostvars.app.ansible_connection is not defined
+      when: env not in ["lab", "test"]
   tags: [system]
 
 - name: Install ansible requirements
@@ -24,5 +24,4 @@
     - name: Install python packages
       include_role:
         name: package/python
-      when: hostvars.app.ansible_connection is not defined
   tags: [system]
