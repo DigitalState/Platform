@@ -1,6 +1,6 @@
 ---
 namespace: ds
-directory: /home/travis/build/DigitalState/Platform/app
+directory: /home/travis/build/DigitalState/Platform/app/srv
 timezone: UTC
 encryption:
   secret: 11111111111111111111111111111111
