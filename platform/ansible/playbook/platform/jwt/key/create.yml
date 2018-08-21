@@ -7,17 +7,17 @@
   tasks:
     - name: Check if the jwt private key exists
       stat:
-        path: '/root/resource/jwt/{{ env }}/key'
+        path: '/root/jwt/{{ env }}/key'
       register: private
     - name: Create jwt private key
       shell:
-        cmd: 'openssl genrsa -out /root/resource/jwt/{{ env }}/key -aes256 -passout pass:{{ jwt.pass_phrase }} 4096'
+        cmd: 'openssl genrsa -out /root/jwt/{{ env }}/key -aes256 -passout pass:{{ jwt.pass_phrase }} 4096'
       when: private.stat.exists == false
     - name: Check if the jwt public key exists
       stat:
-        path: '/root/resource/jwt/{{ env }}/key.pub'
+        path: '/root/jwt/{{ env }}/key.pub'
       register: public
     - name: Create jwt public key
       shell:
-        cmd: 'openssl rsa -pubout -in /root/resource/jwt/{{ env }}/key -out /root/resource/jwt/{{ env }}/key.pub -passin pass:{{ jwt.pass_phrase }}'
+        cmd: 'openssl rsa -pubout -in /root/jwt/{{ env }}/key -out /root/jwt/{{ env }}/key.pub -passin pass:{{ jwt.pass_phrase }}'
       when: public.stat.exists == false

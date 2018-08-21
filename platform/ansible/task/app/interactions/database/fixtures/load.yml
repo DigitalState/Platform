@@ -1,13 +1,13 @@
 ---
 - block:
     - name: Detect interactions fixtures directory override
-      local_action: 'stat path=/root/resource/fixtures/interactions'
+      local_action: 'stat path=/root/fixtures/interactions'
       register: override
     - name: Load interactions database fixtures
       include_role:
         name: app/interactions/database/fixtures/load
       vars:
         _fixtures: '{{ "test" if env == "test" else "dev" }}'
-        _override: '{{ "/root/resource/fixtures/interactions" if override.stat.exists == true and env != "test" else "" }}'
+        _override: '{{ "/root/fixtures/interactions" if override.stat.exists == true and env != "test" else "" }}'
   when: app.interactions.enabled
   tags: [interactions]

@@ -3,12 +3,12 @@
 
 /app/srv/*
 !/app/srv/.gitkeep
-/app/resource/jwt/*
-!/app/resource/jwt/dev/.gitkeep
-!/app/resource/jwt/lab/.gitkeep
-!/app/resource/jwt/prod/.gitkeep
-!/app/resource/jwt/stag/.gitkeep
-!/app/resource/jwt/test/.gitkeep
+/app/jwt/*
+!/app/jwt/dev/.gitkeep
+!/app/jwt/lab/.gitkeep
+!/app/jwt/prod/.gitkeep
+!/app/jwt/stag/.gitkeep
+!/app/jwt/test/.gitkeep
 
 /platform/ansible/**/*.retry
 /platform/ssh/*

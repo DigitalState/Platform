@@ -1,13 +1,13 @@
 ---
 - block:
     - name: Detect tasks fixtures directory override
-      local_action: 'stat path=/root/resource/fixtures/tasks'
+      local_action: 'stat path=/root/fixtures/tasks'
       register: override
     - name: Load tasks database fixtures
       include_role:
         name: app/tasks/database/fixtures/load
       vars:
         fixtures: '{{ "test" if env == "test" else "dev" }}'
-        override: '{{ "/root/resource/fixtures/tasks" if override.stat.exists == true and env != "test" else "" }}'
+        override: '{{ "/root/fixtures/tasks" if override.stat.exists == true and env != "test" else "" }}'
   when: app.tasks.enabled
   tags: [tasks]

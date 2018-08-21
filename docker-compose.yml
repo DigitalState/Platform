@@ -28,5 +28,7 @@ services:
     volumes:
       - ./platform/ansible:/etc/ansible
       - ./platform/ssh:/root/ssh
-      - ./app/resource:/root/resource
+      - ./app/fixtures:/root/fixtures
+      - ./app/jwt:/root/jwt
+      - ./app/repository:/root/repository
       - ./VERSION:/root/VERSION
