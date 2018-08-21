@@ -1,7 +1,7 @@
-FROM alpine:3.6
+FROM alpine:3.8
 
 RUN \
-    # Sudo
+    # SUDO
     apk --update add sudo && \
 
     # SSH client
