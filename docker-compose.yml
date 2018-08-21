@@ -16,11 +16,11 @@ services:
     build:
       context: ./platform
     environment:
-      - GITHUB_USERNAME
-      - GITHUB_PASSWORD
-      - DOCKERHUB_EMAIL
-      - DOCKERHUB_USERNAME
-      - DOCKERHUB_PASSWORD
+      GITHUB_USERNAME: '${GITHUB_USERNAME}'
+      GITHUB_PASSWORD: '${GITHUB_PASSWORD}'
+      DOCKERHUB_EMAIL: '${DOCKERHUB_EMAIL}'
+      DOCKERHUB_USERNAME: '${DOCKERHUB_USERNAME}'
+      DOCKERHUB_PASSWORD: '${DOCKERHUB_PASSWORD}'
     privileged: true
     entrypoint: /bin/sh
     stdin_open: true
