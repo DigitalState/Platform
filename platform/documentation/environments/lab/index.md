@@ -137,7 +137,7 @@ Add the following entries:
 
 ### 6. Run the install playbook with Ansible
 
-Install the dockerized application locally with the following Ansible install command:
+Run the following command to install the dockerized application:
 
 ```
 ansible-playbook ./install.yml
