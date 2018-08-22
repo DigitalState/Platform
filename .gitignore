@@ -1,14 +1,15 @@
 /.idea
 /docker-compose.override.yml
 
-/app/srv/*
-!/app/srv/.gitkeep
 /app/jwt/*
 !/app/jwt/dev/.gitkeep
 !/app/jwt/lab/.gitkeep
 !/app/jwt/prod/.gitkeep
 !/app/jwt/stag/.gitkeep
 !/app/jwt/test/.gitkeep
+/app/srv/*
+!/app/srv/.gitkeep
+/app/vendor
 
 /platform/ansible/**/*.retry
 /platform/ssh/*

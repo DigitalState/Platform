@@ -10,6 +10,10 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./app/srv:/srv
+      - ./app/behat.yml:/root/tests/behat.yml
+      - ./app/composer.json:/root/tests/composer.json
+      - ./app/composer.lock:/root/tests/composer.lock
+      - ./app/features:/root/tests/features
 
   platform:
     container_name: platform
