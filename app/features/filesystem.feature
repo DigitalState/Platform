@@ -8,9 +8,11 @@ Feature: Navigate app filesystem
       VERSION
       assets
       authentication
+      camunda
       cases
       cms
       discovery
+      formio
       forms
       identities
       proxy

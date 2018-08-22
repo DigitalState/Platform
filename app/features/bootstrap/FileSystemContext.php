@@ -49,7 +49,7 @@ class FileSystemContext implements Context
      * @throws \Exception
      */
     public function iShouldGet(PyStringNode $string)
-    {var_dump(implode("\n", $this->output));var_dump((string) $string);
+    {
         if (implode("\n", $this->output) !== (string) $string) {
             throw new Exception('Command output does not match expected output.');
         }
