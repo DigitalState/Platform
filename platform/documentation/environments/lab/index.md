@@ -18,9 +18,8 @@ It represents the experimental branch of the DigitalState Platform and enables t
 2. [Download the platform repository.](#2-download-the-platform-repository)
 3. [Boot the platform container.](#3-boot-the-platform-container)
 4. [Enter the platform container console.](#4-enter-the-platform-container-console)
-5. [Configure the Ansible environment.](#5-configure-the-ansible-environment)
-6. [Add DNS entries to your host file.](#6-add-dns-entries-to-your-host-file)
-7. [Run the install command with Ansible.](#7-run-the-install-command-with-ansible)
+5. [Add DNS entries to your host file.](#5-add-dns-entries-to-your-host-file)
+6. [Run the install command with Ansible.](#6-run-the-install-command-with-ansible)
 
 ## Deployment
 
@@ -30,9 +29,11 @@ To begin, you will need to install Git (for [Windows](https://git-scm.com/book/e
 
 > Note: Docker Toolbox for Windows and Mac is not compatible.
 
+> Note: If you are on Windows, Windows Pro with HyperV is required.
+
 ### 2. Download the platform repository
 
-Open a command prompt and download the repository:
+Open a console and download the repository:
 
 ```
 > cd C:\Users\Demo
@@ -50,7 +51,7 @@ Run the following command to boot the platform container:
 
 > Note: Docker may prompt you to share your drive (for Docker volumes).
 
-Confirm the container has been booted successfully:
+Run the following command to confirm the container has been booted successfully:
 
 ```
 > docker ps
@@ -59,9 +60,12 @@ Confirm the container has been booted successfully:
 You should see the following output:
 
 ```
-CONTAINER ID     IMAGE                 COMMAND       CREATED           STATUS           PORTS     NAMES
-4ceab8511b85     platform_platform     "/bin/sh"     3 seconds ago     Up 2 seconds               platform
+CONTAINER ID   IMAGE               COMMAND               CREATED         STATUS         PORTS    NAMES
+4ceab8511b85   platform_platform   "/bin/sh"             3 seconds ago   Up 2 seconds            platform
+e9aa40751206   platform_app        "/usr/sbin/sshd -D"   3 seconds ago   Up 2 seconds   22/tcp   app
 ```
+
+> Note: There is also an app container being created. This container is used to hold the deployed application instance when running the lab environment.
 
 ### 4. Enter the platform container console
 
@@ -77,37 +81,9 @@ Point to the lab environment directory:
 $ cd /etc/ansible/env/lab
 ```
 
-At this point, you have the platform container running on your local machine as a bare Linux Alpine system with Ansible pre-installed and ready to accept commands.
+At this point, you have the platform container running on your local machine as a bare Linux Alpine system with Ansible pre-configured and ready to run playbooks.
 
-### 5. Configure the Ansible environment
-
-Configure the Ansible lab environment:
-
-> The lab environment uses the Ansible inventory file found [here](/platform/ansible/env/lab/inventory.yml) for its configurations.
-
-The [encryption.secret](https://github.com/DigitalState/Platform/blob/develop/platform/ansible/env/lab/vars/main.yml#L6) config needs to be set to a random, unique and secret 32 characters string.
-
-The [jwt.pass_phrase](https://github.com/DigitalState/Platform/blob/develop/platform/ansible/env/lab/vars/main.yml#L8) config needs to be set to the jwt key pass phrase defined at step #5.
-
-The [directory](https://github.com/DigitalState/Platform/blob/develop/platform/ansible/env/lab/vars/main.yml#L3) config needs to be set to the absolute path of the platform `app` directory. The value will vary depending on your local machine's operating system:
-
-**Windows**
-
-Under Docker for Windows with Hyper-V, the value should be equal to the Hyper-V mounted directory path. For example, if you have put the platform repository at `C:\Users\Demo\Platform`, then the directory config value should be `/c/Users/Demo/Platform/app`.
-
-**Mac**
-
-Under Docker for Mac, the value should simply be equal to the normal directory path, as long as you have shared the local `/Users` directory with the virtual machine. For example, if you have put the platform repository at `/Users/demo/platform`, then the directory config value should be `/Users/demo/platform/app`.
-
-**Linux**
-
-Under operating systems that supports Docker natively, the value should simply be equal to the normal directory path. For example, if you have put the platform repository at `/home/demo/platform`, then the directory config value should be `/home/demo/platform/app`.
-
-### 6. Add DNS entries to your host file
-
-Add DNS entries to your host file:
-
-> The lab environment uses a local dns under *.lab.ds.
+### 5. Add DNS entries to your host file
 
 Locate the host file on your local machine.
 
@@ -128,45 +104,46 @@ Add the following entries:
 ```
 127.0.0.1 admin.lab.ds
 127.0.0.1 portal.lab.ds
-127.0.0.1 adminer.assets.lab.ds
 127.0.0.1 api.assets.lab.ds
-127.0.0.1 rebrow.assets.lab.ds
-127.0.0.1 adminer.authentication.lab.ds
+127.0.0.1 ui.database.assets.lab.ds
+127.0.0.1 ui.cache.assets.lab.ds
 127.0.0.1 api.authentication.lab.ds
-127.0.0.1 rebrow.authentication.lab.ds
+127.0.0.1 ui.database.authentication.lab.ds
+127.0.0.1 ui.cache.authentication.lab.ds
 127.0.0.1 api.camunda.lab.ds
-127.0.0.1 adminer.cases.lab.ds
 127.0.0.1 api.cases.lab.ds
-127.0.0.1 rebrow.cases.lab.ds
-127.0.0.1 adminer.cms.lab.ds
+127.0.0.1 ui.database.cases.lab.ds
+127.0.0.1 ui.cache.cases.lab.ds
 127.0.0.1 api.cms.lab.ds
-127.0.0.1 rebrow.cms.lab.ds
+127.0.0.1 ui.database.cms.lab.ds
+127.0.0.1 ui.cache.cms.lab.ds
 127.0.0.1 api.discovery.lab.ds
-127.0.0.1 adminer.formio.lab.ds
+127.0.0.1 ui.discovery.lab.ds
 127.0.0.1 api.formio.lab.ds
-127.0.0.1 adminer.forms.lab.ds
+127.0.0.1 ui.database.formio.lab.ds
 127.0.0.1 api.forms.lab.ds
-127.0.0.1 rebrow.forms.lab.ds
-127.0.0.1 adminer.identities.lab.ds
+127.0.0.1 ui.database.forms.lab.ds
+127.0.0.1 ui.cache.forms.lab.ds
 127.0.0.1 api.identities.lab.ds
-127.0.0.1 rebrow.identities.lab.ds
-127.0.0.1 adminer.services.lab.ds
+127.0.0.1 ui.database.identities.lab.ds
+127.0.0.1 ui.cache.identities.lab.ds
 127.0.0.1 api.services.lab.ds
-127.0.0.1 rebrow.services.lab.ds
-127.0.0.1 adminer.records.lab.ds
+127.0.0.1 ui.database.services.lab.ds
+127.0.0.1 ui.cache.services.lab.ds
 127.0.0.1 api.records.lab.ds
-127.0.0.1 rebrow.records.lab.ds
+127.0.0.1 ui.database.records.lab.ds
+127.0.0.1 ui.cache.records.lab.ds
 ```
 
-### 7. Run the install command with Ansible
+### 6. Run the install playbook with Ansible
 
-Install the dockerized application locally with the Ansible install command:
+Install the dockerized application locally with the following Ansible install command:
 
 ```
 ansible-playbook ./install.yml
 ```
 
-This command downloads repositories, configures settings, builds Docker images, boots up containers, migrates databases and loads data fixtures for each microservice.
+This command downloads repositories, sets configurations, boots up Docker containerscontainers, migrates databases and loads data fixtures for each microservice.
 
 > Note: Depending on the power of your machine and internet speed, this command may take a while to finish.
 
