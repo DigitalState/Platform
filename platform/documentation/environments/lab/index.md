@@ -147,9 +147,11 @@ ansible-playbook ./install.yml
 
 This playbook fully deploys the collection of microservices to the app container. It involves downloading source code repositories, setting configurations, booting up Docker containers, migrating databases and warming up caches for each microservice.
 
-The lab environment involves two Docker containers: **platform** and **app**. The platform container is an Alpine-based linux container with **Ansible** pre-configured with a wide variety of pre-programmed playbooks. The app container is an Alpine-based linux container with an **SSH** server pre-configured, ready to host the application.
+The lab environment involves two Docker containers: **platform** and **app**. The platform container is an Alpine-based linux container with **Ansible** pre-configured with a wide variety of pre-programmed playbooks. The app container is an Alpine-based linux container with a **SSH** server pre-configured, ready to host the application.
 
-Essentially, the platform container is used by the developer to issue orchestration commands to the app container. The app container is only used in the lab environment and is not meant to be for production. In a production environment, the app container would be replaced by a host machine or docker container manager, such as [Rancher](https://github.com/rancher/rancher).
+Essentially, the platform container is used by the developer to issue orchestration commands to the app container.
+
+> Note: The app container is only used in the lab environment and is not meant to be for production. In a production environment, the app container would be replaced by a host machine or a docker container manager, such as [Rancher](https://github.com/rancher/rancher).
 
 Below is a diagram displaying the gist of the lab environment.
 
