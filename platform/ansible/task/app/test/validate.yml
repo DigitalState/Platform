@@ -1,0 +1,5 @@
+---
+- block:
+    - name: Validate app tests
+      include_role:
+        name: app/test/validate

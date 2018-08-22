@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Run app tests
+      include_role:
+        name: app/test/run
+    - name: Validate app tests result
+      debug:
+        msg: '{{ _result[0] }} / {{ _result[1] }}'
+      failed_when: _result[0] != _result[1]

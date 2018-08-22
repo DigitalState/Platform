@@ -21,3 +21,6 @@
       include_tasks: '{{ item }}'
       with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
       tags: [always]
+    - name: Include app tasks
+      include_tasks: /etc/ansible/task/app/test/validate.yml
+      tags: [always]
