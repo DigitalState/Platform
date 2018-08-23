@@ -153,12 +153,32 @@ Below is a diagram displaying the gist of the lab environment:
 
 Now that the dockerized application is up and running, it is time to test it!
 
+- [Proxy](#proxy)
+- [Discovery](#discovery)
+- [Api](#api)
 - [Portal](#portal)
 - [Admin](#admin)
 - [Formio](#formio)
 - [Camunda](#camunda)
-- [Portal](#portal)
-- [Portal](#portal)
+
+### Proxy
+
+The Proxy SPA is a private website used by developers to manage the reverse-proxy.
+
+- **Url:** `http://ui.proxy.lab.ds`
+
+### Discovery
+
+The Discovery SPA is a private website used by developers to manage the services catalog, key-value configurations, etc.
+
+- **Url:** `http://ui.discovery.lab.ds`
+- **Token:** `a0500a68-c736-4e0f-a998-35380cf1791e`
+
+### Api
+
+The Api is fully mapped through a Postman [collection](/app/documentation/postman/collection.json) and [environment](/app/documentation/postman/env/lab.json) file.
+
+There is also a [tutorial available](/platform/documentation/tutorials/postman.md) on getting started with Postman.
 
 ### Portal
 
@@ -189,22 +209,3 @@ The Formio SPA is a private website used by staff members to manage forms.
 The Camunda SPA is a private website used by staff members to manage workflows.
 
 - **Url:** `http://api.camunda.lab.ds/camunda`
-
-### Proxy
-
-The Proxy SPA is a private website used by developers to manage the reverse-proxy.
-
-- **Url:** `http://ui.proxy.lab.ds`
-
-### Discovery
-
-The Discovery SPA is a private website used by developers to manage the services catalog, key-value configurations, etc.
-
-- **Url:** `http://ui.discovery.lab.ds`
-- **Token:** `a0500a68-c736-4e0f-a998-35380cf1791e`
-
-### Api
-
-The Api is fully mapped through a Postman [collection](/app/documentation/postman/collection.json) and [environment](/app/documentation/postman/env/lab.json) file.
-
-There is also a [tutorial available](/platform/documentation/tutorials/postman.md) on getting started with Postman.
