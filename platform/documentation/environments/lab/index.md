@@ -140,7 +140,7 @@ Add the following entries:
 
 The lab environment involves two containers: **platform** and **app**. The platform container is an Alpine-based linux container with **Ansible** pre-configured with a wide variety of pre-programmed playbooks. The app container is an Alpine-based linux container with a **SSH** server pre-configured, ready to host the application.
 
-The platform container is used by the developer to issue Ansible orchestration commands to the app container.
+Essentially, the platform container is used by the developer to issue Ansible orchestration commands to the app container.
 
 > Note: The app container is only used during development. It enables the developer to host the app on a local machine. In a production environment, the app container would be replaced by a host machine or a docker container manager, such as [Rancher](https://github.com/rancher/rancher).
 
