@@ -30,6 +30,8 @@ The **Platform** repository provides a toolkit to help orchestrate instances of 
 
 ## Tutorials
 
+- [Getting started with Postman](tutorials/postman.md/branches/develop.md)<br>This tutorial will help you get started with Postman and setup the collection and environment.
+
 ## Build Status
 
 - [Develop Branch](status/branches/develop.md)<br>The build status of the latest development efforts.
