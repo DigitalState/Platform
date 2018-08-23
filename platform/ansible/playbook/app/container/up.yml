@@ -17,20 +17,6 @@
   hosts: app
   become: true
   tasks:
-    - name: Obtain app container srv mount
-      shell: docker inspect --format '{{ '{{' }}range .Mounts{{ '}}' }}{{ '{{' }}if (eq .Destination "/srv"){{ '}}' }}{{ '{{' }}.Source{{ '}}' }}{{ '{{' }}end{{ '}}' }}{{ '{{' }}end{{ '}}' }}' app
-      register: app_container_mount_srv
-      when:
-        - directory is none
-        - hostvars['app']['ansible_host'] == 'app'
-      tags: [always]
-    - name: Define directory variable
-      set_fact:
-        directory: '{{ app_container_mount_srv.stdout }}'
-      when:
-        - directory is none
-        - hostvars['app']['ansible_host'] == 'app'
-      tags: [always]
     - name: Include compiled task list
       include_tasks: '{{ item }}'
       with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
