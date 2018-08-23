@@ -144,7 +144,7 @@ Essentially, the platform container is used by the developer to issue Ansible or
 
 > Note: The app container is only used during development. It enables the developer to host the app on a local machine. In a production environment, the app container would be replaced by a host machine or a docker container manager, such as [Rancher](https://github.com/rancher/rancher).
 
-Below is a diagram displaying the gist of the lab environment.
+Below is a diagram displaying the gist of the lab environment:
 
 ![Overview](images/overview.png)
 
