@@ -96,18 +96,6 @@ ansible-playbook ./install.yml
 
 This playbook deploys the DigitalState application to the app container. It consists of downloading repositories, setting configurations, booting up containers, migrating databases and warming up caches for each microservice.
 
-## Architecture
-
-The lab environment involves two containers: **platform** and **app**. The platform container is an Alpine-based linux container with **Ansible** pre-configured with a wide variety of pre-programmed playbooks. The app container is an Alpine-based linux container with a **SSH** server pre-configured, ready to host the application.
-
-The platform container is used by the developer to issue Ansible orchestration commands to the app container.
-
-> Note: The app container is only used during development. It enables the developer to host the app on a local machine. In a production environment, the app container would be replaced by a host machine or a docker container manager, such as [Rancher](https://github.com/rancher/rancher).
-
-Below is a diagram displaying the gist of the lab environment.
-
-![Overview](images/overview.png)
-
 ### 6. Add DNS entries to your host file
 
 Locate the host file on your local machine. Under **Windows**, the file is located at `C:\Windows\System32\drivers\etc\host`. Under **Mac** or **Linux**, the file is located at `/etc/hosts`.
@@ -147,6 +135,18 @@ Add the following entries:
 127.0.0.1 ui.database.records.lab.ds
 127.0.0.1 ui.cache.records.lab.ds
 ```
+
+## Architecture
+
+The lab environment involves two containers: **platform** and **app**. The platform container is an Alpine-based linux container with **Ansible** pre-configured with a wide variety of pre-programmed playbooks. The app container is an Alpine-based linux container with a **SSH** server pre-configured, ready to host the application.
+
+The platform container is used by the developer to issue Ansible orchestration commands to the app container.
+
+> Note: The app container is only used during development. It enables the developer to host the app on a local machine. In a production environment, the app container would be replaced by a host machine or a docker container manager, such as [Rancher](https://github.com/rancher/rancher).
+
+Below is a diagram displaying the gist of the lab environment.
+
+![Overview](images/overview.png)
 
 ## Explore
 
