@@ -1,6 +1,6 @@
 # Documentation
 
-The Platform repository provides a Docker container, with Ansible pre-installed, to help orchestrate instances of the DigitalState Application. It comes with a wide variety of **Ansible playbooks** to help the developer manage local and remote deployments; from sandbox to production.
+The **Platform** repository provides a toolkit to help orchestrate instances of the DigitalState **Application**. It uses a Docker container with **Ansible** pre-configured to help the developer manage local and remote deployments; from sandbox to production.
 
 ## Table of Contents
 
