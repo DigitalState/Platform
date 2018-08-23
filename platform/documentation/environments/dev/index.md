@@ -1,6 +1,6 @@
-# Dev Environment
+# Development Environment
 
-The dev environment is typically deployed to your local machine and is used as sandbox.
+The development environment is typically deployed to your local machine and is used as sandbox.
 
 It represents a tagged release of the DigitalState application and enables the developer to run a stable version on a local machine as a dockerized application.
 
@@ -77,10 +77,10 @@ Run the following command to enter the platform container console:
 > docker exec -it platform /bin/sh
 ```
 
-Point to the lab environment directory:
+Point to the dev environment directory:
 
 ```
-$ cd /etc/ansible/env/lab
+$ cd /etc/ansible/env/dev
 ```
 
 At this point, you have the platform container running on your local machine as a bare Linux Alpine system with Ansible pre-configured and ready to run playbooks.
