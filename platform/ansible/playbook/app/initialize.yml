@@ -12,8 +12,8 @@
       vars:
         _directory: '{{ env }}'
         _host: '{{ vars["hostvars"]["app"]["ansible_host"] }}'
-        _username: root
-      when: env not in ["lab", "test"]
+        _username: '{{ vars["hostvars"]["app"]["ansible_ssh_user"] }}'
+        _password: '{{ vars["hostvars"]["app"]["ansible_ssh_pass"] }}'
   tags: [system]
 
 - name: Install ansible requirements

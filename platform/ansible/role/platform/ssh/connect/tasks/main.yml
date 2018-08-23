@@ -15,5 +15,10 @@
     recurse: yes
     mode: 0600
 
+- name: Establish ssh connection using password
+  shell: 'sshpass -p "{{ _password }}" ssh-copy-id -o StrictHostKeyChecking=no -i /root/.ssh/{{ _directory }}/key {{ _username }}@{{ _host }}'
+  when: _password != ''
+
 - name: Establish ssh connection
-  shell: 'ssh-copy-id -i /root/.ssh/{{ _directory }}/key {{ _username }}@{{ _host }}'
+  shell: 'ssh-copy-id -o StrictHostKeyChecking=no -i /root/.ssh/{{ _directory }}/key {{ _username }}@{{ _host }}'
+  when: _password == ''
