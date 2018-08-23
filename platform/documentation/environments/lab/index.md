@@ -128,6 +128,7 @@ Add the following entries:
 127.0.0.1 api.identities.lab.ds
 127.0.0.1 ui.database.identities.lab.ds
 127.0.0.1 ui.cache.identities.lab.ds
+127.0.0.1 ui.proxy.lab.ds
 127.0.0.1 api.services.lab.ds
 127.0.0.1 ui.database.services.lab.ds
 127.0.0.1 ui.cache.services.lab.ds
@@ -151,6 +152,13 @@ Below is a diagram displaying the gist of the lab environment:
 ## Explore
 
 Now that the dockerized application is up and running, it is time to test it!
+
+- [Portal](#portal)
+- [Admin](#admin)
+- [Formio](#formio)
+- [Camunda](#camunda)
+- [Portal](#portal)
+- [Portal](#portal)
 
 ### Portal
 
@@ -181,6 +189,19 @@ The Formio SPA is a private website used by staff members to manage forms.
 The Camunda SPA is a private website used by staff members to manage workflows.
 
 - **Url:** `http://api.camunda.lab.ds/camunda`
+
+### Proxy
+
+The Proxy SPA is a private website used by developers to manage the reverse-proxy.
+
+- **Url:** `http://ui.proxy.lab.ds`
+
+### Discovery
+
+The Discovery SPA is a private website used by developers to manage the services catalog, key-value configurations, etc.
+
+- **Url:** `http://ui.discovery.lab.ds`
+- **Token:** `a0500a68-c736-4e0f-a998-35380cf1791e`
 
 ### Api
 
