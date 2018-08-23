@@ -13,7 +13,7 @@
   tags: [always]
 
 - name: Configure automatic variables
-  hosts: all
+  hosts: app
   gather_facts: false
   tasks:
     - name: Obtain app container srv mount
