@@ -11,27 +11,3 @@
         dir: '/etc/ansible/env/{{ env }}/vars/app'
         name: app
   tags: [always]
-
-- name: Configure automatic variables
-  hosts: app
-  gather_facts: false
-  tasks:
-    - name: Obtain app container srv mount
-      shell: docker inspect --format '{{ '{{' }}range .Mounts{{ '}}' }}{{ '{{' }}if (eq .Destination "/srv"){{ '}}' }}{{ '{{' }}.Source{{ '}}' }}{{ '{{' }}end{{ '}}' }}{{ '{{' }}end{{ '}}' }}' app
-      register: app_container_mount_srv
-      when:
-        - directory is none
-        - hostvars['app']['ansible_host'] == 'app'
-  tags: [always]
-
-- name: Configure automatic variables
-  hosts: all
-  gather_facts: false
-  tasks:
-    - name: Define directory variable
-      set_fact:
-        directory: '{{ hostvars["app"]["app_container_mount_srv"].stdout }}'
-      when:
-        - directory is none
-        - hostvars['app']['ansible_host'] == 'app'
-  tags: [always]
