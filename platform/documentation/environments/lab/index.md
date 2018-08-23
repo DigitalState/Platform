@@ -19,7 +19,7 @@ It represents the experimental branch of the DigitalState Platform and enables t
 3. [Boot the platform container.](#3-boot-the-platform-container)
 4. [Enter the platform container console.](#4-enter-the-platform-container-console)
 5. [Add DNS entries to your host file.](#5-add-dns-entries-to-your-host-file)
-6. [Run the install command with Ansible.](#6-run-the-install-command-with-ansible)
+6. [Run the install command with Ansible.](#6-run-the-install-command-using-ansible)
 
 ## Deployment
 
@@ -123,7 +123,7 @@ Add the following entries:
 127.0.0.1 ui.cache.records.lab.ds
 ```
 
-### 6. Run the install playbook with Ansible
+### 6. Run the install playbook using Ansible
 
 Run the following command to install the dockerized application:
 
