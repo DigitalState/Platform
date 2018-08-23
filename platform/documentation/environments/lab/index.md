@@ -66,7 +66,7 @@ CONTAINER ID   IMAGE               COMMAND               CREATED         STATUS 
 e9aa40751206   platform_app        "/usr/sbin/sshd -D"   3 seconds ago   Up 2 seconds   22/tcp   app
 ```
 
-> Note: There is also an app container being created. This container is used to hold the deployed application instance when running the lab environment.
+> Note: There is also an app container being created. This container is used to hold the deployed application instance when running the environment locally.
 
 ### 4. Enter the platform container console
 
