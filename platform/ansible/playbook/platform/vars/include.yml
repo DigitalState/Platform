@@ -22,9 +22,15 @@
       when:
         - directory is none
         - hostvars['app']['ansible_host'] == 'app'
+  tags: [always]
+
+- name: Configure automatic variables
+  hosts: all
+  gather_facts: false
+  tasks:
     - name: Define directory variable
       set_fact:
-        directory: '{{ app_container_mount_srv.stdout }}'
+        directory: '{{ hostvars["app"]["app_container_mount_srv"].stdout }}'
       when:
         - directory is none
         - hostvars['app']['ansible_host'] == 'app'
