@@ -85,19 +85,7 @@ At this point, you have the platform container running on your local machine as 
 
 ### 5. Add DNS entries to your host file
 
-Locate the host file on your local machine.
-
-**Windows**
-
-Under Windows, the file is located at `C:\Windows\System32\drivers\etc\host`.
-
-**Mac**
-
-Under Mac, the file is located at `/etc/hosts`.
-
-**Linux**
-
-Under Linux, the file is located at `/etc/hosts`.
+Locate the host file on your local machine. Under **Windows**, the file is located at `C:\Windows\System32\drivers\etc\host`. Under **Mac** or **Linux**, the file is located at `/etc/hosts`.
 
 Add the following entries:
 
