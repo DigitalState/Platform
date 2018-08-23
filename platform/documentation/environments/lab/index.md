@@ -1,8 +1,8 @@
 # Lab Environment
 
-The lab environment is typically deployed to your local machine and is used to further develop the platform.
+The lab environment is typically deployed to your local machine and is used to further develop the application.
 
-It represents the experimental branch of the DigitalState Platform and enables the developer to run the latest source code on a local machine as a dockerized application.
+It represents the experimental branch of the DigitalState application and enables the developer to run the latest source code on a local machine as a dockerized application.
 
 :warning: _This environment is only compatible with the develop branch of the platform repository._
 
@@ -18,8 +18,8 @@ It represents the experimental branch of the DigitalState Platform and enables t
 2. [Download the platform repository.](#2-download-the-platform-repository)
 3. [Boot the platform container.](#3-boot-the-platform-container)
 4. [Enter the platform container console.](#4-enter-the-platform-container-console)
-5. [Add DNS entries to your host file.](#5-add-dns-entries-to-your-host-file)
-6. [Run the install command with Ansible.](#6-run-the-install-command-using-ansible)
+5. [Run the install command with Ansible.](#5-run-the-install-command-using-ansible)
+6. [Add DNS entries to your host file.](#6-add-dns-entries-to-your-host-file)
 
 ## Deployment
 
@@ -83,7 +83,29 @@ $ cd /etc/ansible/env/lab
 
 At this point, you have the platform container running on your local machine as a bare Linux Alpine system with Ansible pre-configured and ready to run playbooks.
 
-### 5. Add DNS entries to your host file
+### 5. Run the install playbook using Ansible
+
+Run the following command to install the dockerized application:
+
+```
+ansible-playbook ./install.yml
+```
+
+> Note: Depending on the power of your machine and internet speed, this command may take a while to finish.
+
+This playbook fully deploys the collection of microservices to the app container. It involves downloading source code repositories, setting configurations, booting up Docker containers, migrating databases and warming up caches for each microservice.
+
+The lab environment involves two Docker containers: **platform** and **app**. The platform container is an Alpine-based linux container with **Ansible** pre-configured with a wide variety of pre-programmed playbooks. The app container is an Alpine-based linux container with a **SSH** server pre-configured, ready to host the application.
+
+Essentially, the platform container is used by the developer to issue orchestration commands to the app container.
+
+> Note: The app container is only used in the lab environment and is not meant to be for production. In a production environment, the app container would be replaced by a host machine or a docker container manager, such as [Rancher](https://github.com/rancher/rancher).
+
+Below is a diagram displaying the gist of the lab environment.
+
+![Overview](images/overview.png)
+
+### 6. Add DNS entries to your host file
 
 Locate the host file on your local machine. Under **Windows**, the file is located at `C:\Windows\System32\drivers\etc\host`. Under **Mac** or **Linux**, the file is located at `/etc/hosts`.
 
@@ -123,28 +145,6 @@ Add the following entries:
 127.0.0.1 ui.cache.records.lab.ds
 ```
 
-### 6. Run the install playbook using Ansible
-
-Run the following command to install the dockerized application:
-
-```
-ansible-playbook ./install.yml
-```
-
-> Note: Depending on the power of your machine and internet speed, this command may take a while to finish.
-
-This playbook fully deploys the collection of microservices to the app container. It involves downloading source code repositories, setting configurations, booting up Docker containers, migrating databases and warming up caches for each microservice.
-
-The lab environment involves two Docker containers: **platform** and **app**. The platform container is an Alpine-based linux container with **Ansible** pre-configured with a wide variety of pre-programmed playbooks. The app container is an Alpine-based linux container with a **SSH** server pre-configured, ready to host the application.
-
-Essentially, the platform container is used by the developer to issue orchestration commands to the app container.
-
-> Note: The app container is only used in the lab environment and is not meant to be for production. In a production environment, the app container would be replaced by a host machine or a docker container manager, such as [Rancher](https://github.com/rancher/rancher).
-
-Below is a diagram displaying the gist of the lab environment.
-
-![Overview](images/overview.png)
-
 ## Explore
 
 Now that the dockerized application is up and running, it is time to test it!
@@ -153,31 +153,31 @@ Now that the dockerized application is up and running, it is time to test it!
 
 The Portal SPA is a public website used by citizens to access their account and explore services.
 
-**Url:** http://portal.lab.ds/
-**Username:** morgan@individual.ds
-**Password:** morgan
+- **Url:** http://portal.lab.ds/
+- **Username:** morgan@individual.ds
+- **Password:** morgan
 
 ### Admin
 
 The Admin SPA is a private website used by staff members to manage the backoffice.
 
-**Url:** http://admin.lab.ds/
-**Username:** admin@staff.ds
-**Password:** admin
+- **Url:** http://admin.lab.ds/
+- **Username:** admin@staff.ds
+- **Password:** admin
 
 ### Formio
 
 The Formio SPA is a private website used by staff members to manage forms.
 
-**Url:** http://api.formio.lab.ds/
-**Username:** admin@staff.ds
-**Password:** admin
+- **Url:** http://api.formio.lab.ds/
+- **Username:** admin@staff.ds
+- **Password:** admin
 
 ### Camunda
 
 The Camunda SPA is a private website used by staff members to manage workflows.
 
-**Url:** http://api.camunda.lab.ds/camunda
+- **Url:** http://api.camunda.lab.ds/camunda
 
 ### Api
 
