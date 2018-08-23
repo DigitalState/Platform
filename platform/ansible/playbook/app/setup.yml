@@ -1,6 +1,5 @@
 ---
 - import_playbook: /etc/ansible/playbook/platform/vars/include.yml
-- import_playbook: /etc/ansible/playbook/platform/vars/computed/include.yml
 
 - name: Install core packages
   hosts: app
