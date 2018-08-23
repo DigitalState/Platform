@@ -1,6 +1,6 @@
 ---
 namespace: ds
-directory: /srv
+directory: ~
 timezone: UTC
 encryption:
   secret: 11111111111111111111111111111111
