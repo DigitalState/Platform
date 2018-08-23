@@ -156,31 +156,31 @@ Now that the dockerized application is up and running, it is time to test it!
 
 The Portal SPA is a public website used by citizens to access their account and explore services.
 
-- **Url:** http://portal.lab.ds/
-- **Username:** morgan@individual.ds
-- **Password:** morgan
+- **Url:** `http://portal.lab.ds/`
+- **Username:** `morgan@individual.ds`
+- **Password:** `morgan`
 
 ### Admin
 
 The Admin SPA is a private website used by staff members to manage the backoffice.
 
-- **Url:** http://admin.lab.ds/
-- **Username:** admin@staff.ds
-- **Password:** admin
+- **Url:** `http://admin.lab.ds/`
+- **Username:** `admin@staff.ds`
+- **Password:** `admin`
 
 ### Formio
 
 The Formio SPA is a private website used by staff members to manage forms.
 
-- **Url:** http://api.formio.lab.ds/
-- **Username:** admin@staff.ds
-- **Password:** admin
+- **Url:** `http://api.formio.lab.ds/`
+- **Username:** `admin@staff.ds`
+- **Password:** `admin`
 
 ### Camunda
 
 The Camunda SPA is a private website used by staff members to manage workflows.
 
-- **Url:** http://api.camunda.lab.ds/camunda
+- **Url:** `http://api.camunda.lab.ds/camunda`
 
 ### Api
 
