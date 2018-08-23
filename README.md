@@ -42,7 +42,7 @@ If you are on _Mac_, **DockerForMac** is required.
 ## Documentation
 
 - [Platform Documentation](https://github.com/DigitalState/Platform/blob/develop/platform/documentation/index.md)
-- [Developer Documentation](https://github.com/DigitalState/Documentation)
+- [Application Documentation](https://github.com/DigitalState/Documentation)
 - [User Guide](https://github.com/DigitalState/Guide)
 
 ## Contributing
