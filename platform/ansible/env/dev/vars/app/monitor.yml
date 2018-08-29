@@ -2,5 +2,5 @@
 monitor:
   enabled: false
   repository: https://github.com/DigitalState/Monitor.git
-  version: 0.8.0
+  version: 0.9.0
   host: monitor.dev.ds

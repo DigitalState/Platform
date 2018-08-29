@@ -2,7 +2,7 @@
 topics:
   enabled: false
   repository: https://github.com/DigitalState/Topics.git
-  version: 0.8.0
+  version: 0.9.1
   api:
     host: api.topics.prod.ds
   database:
