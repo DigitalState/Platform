@@ -1,6 +1,6 @@
 {
   "id": "80efe45f-d1c8-4b79-bd5e-edcd6ab3634b",
-  "name": "Platform Lab 0.8.0",
+  "name": "Platform Lab 0.9.1",
   "values": [
     {
       "key": "schema",
@@ -46,7 +46,7 @@
     },
     {
       "key": "discovery",
-      "value": "{{schema}}://api.discovery.{{host}}",
+      "value": "{{schema}}://api.discovery.{{host}}:8500",
       "enabled": true,
       "type": "text"
     },
@@ -115,9 +115,15 @@
       "value": "",
       "enabled": true,
       "type": "text"
+    },
+    {
+      "key": "token_consul",
+      "value": "a0500a68-c736-4e0f-a998-35380cf1791e",
+      "enabled": true,
+      "type": "text"
     }
   ],
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2018-08-02T16:02:31.076Z",
+  "_postman_exported_at": "2018-08-27T17:49:53.033Z",
   "_postman_exported_using": "Postman/6.0.10"
 }
