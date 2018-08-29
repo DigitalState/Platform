@@ -23,9 +23,9 @@ This is the central repository and starting point for developers.
 
 ## Quickstart
 
-If you wish to test a stable release of the application in a sandbox, we suggest using the [dev environment](/platform/documentation/environments/dev/index.md) setup documentation.
+If you wish to test a stable release of the application in a sandbox, we suggest downloading a tagged release of the Platform repository and using the [dev environment](/platform/documentation/environments/dev/index.md) setup documentation.
 
-If you wish to further develop the application using the latest development efforts, we suggest using the [lab environment](/platform/documentation/environments/lab/index.md) setup documentation.
+If you wish to further develop the application using the latest development efforts, we suggest downloading the develop branch of the Platform repository and using the [lab environment](/platform/documentation/environments/lab/index.md) setup documentation.
 
 ## Requirements
 
