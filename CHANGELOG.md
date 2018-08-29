@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.1
+
+- Feature [App] Bump microservices to latest version
+
 ## 0.9.0
 
 - Feature [Docker] Restructure platform container into platform and app containers
