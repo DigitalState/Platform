@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop assets container
+      include_role:
+        name: app/assets/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.assets.enabled
+  tags: [assets]

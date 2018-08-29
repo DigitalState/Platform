@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download cms jwt keys
+      include_role:
+        name: app/cms/jwt/key/download
+      vars:
+        _private_key: '/root/jwt/{{ env }}/key'
+        _public_key: '/root/jwt/{{ env }}/key.pub'
+  when: app.cms.enabled
+  tags: [cms]

@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Configure discovery store key-value data
+      include_role:
+        name: app/discovery/config/configure
+      vars:
+        _config: {}
+        _credential: '{{ app.discovery.token.master }}'
+  when: app.discovery.enabled
+  tags: [discovery]

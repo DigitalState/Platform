@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Configure identities system settings
+      include_role:
+        name: app/identities/system/configure
+      vars:
+        _username: '{{ system.username }}'
+        _password: '{{ system.password }}'
+  when: app.identities.enabled
+  tags: [identities]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Download cases repository override directory
+      include_role:
+        name: app/cases/repository/override
+  when: app.cases.enabled
+  tags: [cases]

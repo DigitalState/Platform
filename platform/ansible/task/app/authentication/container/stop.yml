@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop authentication container
+      include_role:
+        name: app/authentication/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.authentication.enabled
+  tags: [authentication]

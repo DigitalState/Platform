@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Clear authentication cache
+      include_role:
+        name: app/authentication/cache/clear
+  when: app.authentication.enabled
+  tags: [authentication]

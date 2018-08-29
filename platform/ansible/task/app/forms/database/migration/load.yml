@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Load forms database migration
+      include_role:
+        name: app/forms/database/migration/load
+      vars:
+        _data: '{{ data }}'
+  when: app.forms.enabled
+  tags: [forms]

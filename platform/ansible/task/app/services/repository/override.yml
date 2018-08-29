@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Download services repository override directory
+      include_role:
+        name: app/services/repository/override
+  when: app.services.enabled
+  tags: [services]

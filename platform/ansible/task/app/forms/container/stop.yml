@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop forms container
+      include_role:
+        name: app/forms/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.forms.enabled
+  tags: [forms]

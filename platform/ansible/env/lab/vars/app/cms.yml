@@ -1,0 +1,18 @@
+---
+cms:
+  enabled: true
+  repository: https://github.com/DigitalState/Cms.git
+  version: develop
+  api:
+    host: api.cms.lab.ds
+  database:
+    host: cms_database
+    port: 5432
+    name: cms
+    username: cms
+    password: cms
+    ui:
+      host: ui.database.cms.lab.ds
+  cache:
+    ui:
+      host: ui.cache.cms.lab.ds

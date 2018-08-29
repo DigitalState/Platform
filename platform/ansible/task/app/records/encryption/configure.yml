@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure records encryption settings
+      include_role:
+        name: app/records/encryption/configure
+      vars:
+        _secret: '{{ encryption.secret }}'
+  when: app.records.enabled
+  tags: [records]

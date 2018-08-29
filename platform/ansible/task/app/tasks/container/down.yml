@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down tasks container
+      include_role:
+        name: app/tasks/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.tasks.enabled
+  tags: [tasks]

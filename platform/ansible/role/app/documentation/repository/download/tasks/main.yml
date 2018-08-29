@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Download documentation repository
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
+        dest: /srv/documentation
+        force: yes
+  tags: [documentation]

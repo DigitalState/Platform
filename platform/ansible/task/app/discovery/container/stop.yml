@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop discovery container
+      include_role:
+        name: app/discovery/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.discovery.enabled
+  tags: [discovery]

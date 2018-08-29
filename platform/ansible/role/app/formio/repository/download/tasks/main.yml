@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Download formio repository
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
+        dest: /srv/formio
+        force: yes
+  tags: [formio]

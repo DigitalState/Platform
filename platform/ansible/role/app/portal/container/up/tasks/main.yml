@@ -1,0 +1,15 @@
+---
+- block:
+    - name: Up portal container
+      docker_service:
+        project_src: /srv/portal
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        DIRECTORY: '{{ _directory }}'
+        UI_HOST: '{{ _ui_host }}'
+  tags: [portal]

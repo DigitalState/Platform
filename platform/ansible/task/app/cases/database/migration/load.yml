@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Load cases database migration
+      include_role:
+        name: app/cases/database/migration/load
+      vars:
+        _data: '{{ data }}'
+  when: app.cases.enabled
+  tags: [cases]

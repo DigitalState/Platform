@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Detect cms fixtures directory override
+      local_action: 'stat path=/root/fixtures/cms'
+      register: override
+    - name: Load cms database fixtures
+      include_role:
+        name: app/cms/database/fixtures/load
+      vars:
+        _fixtures: '{{ "test" if env == "test" else "dev" }}'
+        _override: '{{ "/root/fixtures/cms" if override.stat.exists == true and env != "test" else "" }}'
+  when: app.cms.enabled
+  tags: [cms]

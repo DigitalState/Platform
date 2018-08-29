@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Validate forms tests
+      include_role:
+        name: app/forms/test/validate
+  when: app.forms.enabled
+  tags: [forms]

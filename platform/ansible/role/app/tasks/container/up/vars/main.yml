@@ -1,0 +1,17 @@
+---
+_env: prod
+_compose_project_name: dstasks
+_network: dsproxy_default
+_directory: /srv/tasks
+_api_host: api.tasks.ds
+_database_host: tasks_db
+_database_port: 5432
+_database_name: tasks
+_database_username: tasks
+_database_password: tasks
+_database_ui_host: ui.database.tasks.ds
+_cache_ui_host: ui.cache.tasks.ds
+_credential:
+  email: ~
+  username: ~
+  password: ~

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Download tasks repository override directory
+      include_role:
+        name: app/tasks/repository/override
+  when: app.tasks.enabled
+  tags: [tasks]

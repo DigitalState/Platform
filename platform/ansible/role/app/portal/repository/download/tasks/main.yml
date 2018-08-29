@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download portal repository
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
+        recursive: yes
+        dest: /srv/portal
+        force: yes
+  tags: [portal]

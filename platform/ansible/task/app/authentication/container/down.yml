@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down authentication container
+      include_role:
+        name: app/authentication/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.authentication.enabled
+  tags: [authentication]

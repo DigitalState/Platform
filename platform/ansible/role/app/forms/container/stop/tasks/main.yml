@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Stop forms container
+      docker_service:
+        project_src: /srv/forms
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: present
+        stopped: yes
+  tags: [forms]

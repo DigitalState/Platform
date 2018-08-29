@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set authentication configs
+      include_role:
+        name: app/authentication/config/set
+      vars:
+        _config: '{{ config }}'
+  when: app.authentication.enabled
+  tags: [authentication]

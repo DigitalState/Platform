@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Load interactions database migration
+      include_role:
+        name: app/interactions/database/migration/load
+      vars:
+        _data: '{{ data }}'
+  when: app.interactions.enabled
+  tags: [interactions]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop services container
+      include_role:
+        name: app/services/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.services.enabled
+  tags: [services]

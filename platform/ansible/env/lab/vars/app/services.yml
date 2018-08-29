@@ -1,0 +1,18 @@
+---
+services:
+  enabled: true
+  repository: https://github.com/DigitalState/Services.git
+  version: develop
+  api:
+    host: api.services.lab.ds
+  database:
+    host: services_database
+    port: 5432
+    name: services
+    username: services
+    password: services
+    ui:
+      host: ui.database.services.lab.ds
+  cache:
+    ui:
+      host: ui.cache.services.lab.ds

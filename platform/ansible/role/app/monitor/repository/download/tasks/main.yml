@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download monitor repository
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
+        recursive: yes
+        dest: /srv/monitor
+        force: yes
+  tags: [monitor]

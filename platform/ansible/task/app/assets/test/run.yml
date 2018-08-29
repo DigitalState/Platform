@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Run assets tests
+      include_role:
+        name: app/assets/test/run
+  when: app.assets.enabled
+  tags: [assets]

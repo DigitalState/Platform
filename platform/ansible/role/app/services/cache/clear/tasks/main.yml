@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Clear services cache
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console cache:clear --no-warmup --env={{ _env }}'
+        chdir: /srv/services
+  tags: [services]

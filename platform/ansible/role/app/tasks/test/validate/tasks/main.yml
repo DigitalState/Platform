@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Run tasks tests
+      include_role:
+        name: app/tasks/test/run
+    - name: Validate tasks tests result
+      debug:
+        msg: '{{ _result[0] }} / {{ _result[1] }}'
+      failed_when: _result[0] != _result[1]
+  tags: [tasks]

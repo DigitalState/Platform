@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Configure authentication system settings
+      include_role:
+        name: app/authentication/system/configure
+      vars:
+        _username: '{{ system.username }}'
+        _password: '{{ system.password }}'
+  when: app.authentication.enabled
+  tags: [authentication]

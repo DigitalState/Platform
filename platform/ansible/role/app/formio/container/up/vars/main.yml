@@ -1,0 +1,9 @@
+---
+_env: prod
+_compose_project_name: dsformio
+_network: dsproxy_default
+_directory: /srv/formio
+_api_host: api.formio.ds
+_database_ui_host: adminer.formio.ds
+_username: admin
+_password: admin

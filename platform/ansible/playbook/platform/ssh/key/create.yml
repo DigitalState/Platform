@@ -1,0 +1,15 @@
+---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+
+- name: Create ssh private and public keys
+  hosts: platform
+  become: true
+  tasks:
+    - name: Check if the ssh private key exists
+      stat:
+        path: '/root/ssh/{{ env }}/key'
+      register: private
+    - name: Create ssh private key
+      shell:
+        cmd: 'ssh-keygen -t rsa -N "" -f /root/ssh/{{ env }}/key'
+      when: private.stat.exists == false

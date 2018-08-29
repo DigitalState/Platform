@@ -1,0 +1,13 @@
+---
+formio:
+  enabled: true
+  order: -10
+  repository: https://github.com/DigitalState/Formio.git
+  version: develop
+  api:
+    host: api.formio.test.ds
+  database:
+    ui:
+      host: adminer.formio.test.ds
+  username: admin@staff.ds
+  password: admin

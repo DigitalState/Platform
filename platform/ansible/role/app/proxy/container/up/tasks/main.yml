@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Up proxy container
+      docker_service:
+        project_src: /srv/proxy
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        DIRECTORY: '{{ _directory }}'
+        PORT: '{{ _port }}'
+        UI_PORT: '{{ _ui_port }}'
+        DISCOVERY_TOKEN: '{{ _discovery_token }}'
+  tags: [proxy]

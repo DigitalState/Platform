@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Up formio container
+      include_role:
+        name: app/formio/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}formio'
+        _network: '{{ namespace }}proxy_default'
+        _directory: '{{ directory }}/formio'
+        _api_host: '{{ app.formio.api.host }}'
+        _database_ui_host: '{{ app.formio.database.ui.host }}'
+        _username: '{{ app.formio.username }}'
+        _password: '{{ app.formio.password }}'
+  when: app.formio.enabled
+  tags: [formio]

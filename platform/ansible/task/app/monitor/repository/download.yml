@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download monitor repository
+      include_role:
+        name: app/monitor/repository/download
+      vars:
+        _repository: '{{ app.monitor.repository }}'
+        _version: '{{ app.monitor.version }}'
+  when: app.monitor.enabled
+  tags: [monitor]

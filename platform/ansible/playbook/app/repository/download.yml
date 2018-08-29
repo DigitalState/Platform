@@ -1,0 +1,24 @@
+---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+- import_playbook: /etc/ansible/playbook/platform/vars/computed/include.yml
+
+- name: Compile repository/download task list
+  hosts: platform
+  become: true
+  tasks:
+    - name: Compile files
+      compile:
+        app: '{{ app }}'
+        directory: /etc/ansible/task/app/*
+        task: repository/download
+      register: files
+  tags: [always]
+
+- name: Download repositories
+  hosts: app
+  become: true
+  tasks:
+    - name: Include compiled task list
+      include_tasks: '{{ item }}'
+      with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
+      tags: [always]

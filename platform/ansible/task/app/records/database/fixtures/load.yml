@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Detect records fixtures directory override
+      local_action: 'stat path=/root/fixtures/records'
+      register: override
+    - name: Load records database fixtures
+      include_role:
+        name: app/records/database/fixtures/load
+      vars:
+        _fixtures: '{{ "test" if env == "test" else "dev" }}'
+        _override: '{{ "/root/fixtures/records" if override.stat.exists == true and env != "test" else "" }}'
+  when: app.records.enabled
+  tags: [records]

@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Configure assets mail settings
+      include_role:
+        name: app/assets/mail/configure
+      vars:
+        _transport: '{{ mail.transport }}'
+        _host: '{{ mail.host }}'
+        _port: '{{ mail.port }}'
+        _username: '{{ mail.username }}'
+        _password: '{{ mail.password }}'
+  when: app.assets.enabled
+  tags: [assets]

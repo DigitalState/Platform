@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set tasks configs
+      include_role:
+        name: app/tasks/config/set
+      vars:
+        _config: '{{ config }}'
+  when: app.tasks.enabled
+  tags: [tasks]

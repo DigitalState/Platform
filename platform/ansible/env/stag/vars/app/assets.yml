@@ -1,0 +1,18 @@
+---
+assets:
+  enabled: true
+  repository: https://github.com/DigitalState/Assets.git
+  version: 0.9.1
+  api:
+    host: api.assets.stag.ds
+  database:
+    host: assets_database
+    port: 5432
+    name: assets
+    username: assets
+    password: ~
+    ui:
+      host: ui.database.assets.stag.ds
+  cache:
+    ui:
+      host: ui.cache.assets.stag.ds

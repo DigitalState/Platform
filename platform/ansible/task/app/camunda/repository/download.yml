@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download camunda repository
+      include_role:
+        name: app/camunda/repository/download
+      vars:
+        _repository: '{{ app.camunda.repository }}'
+        _version: '{{ app.camunda.version }}'
+  when: app.camunda.enabled
+  tags: [camunda]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down records container
+      include_role:
+        name: app/records/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.records.enabled
+  tags: [records]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set tenants configs
+      include_role:
+        name: app/tenants/config/set
+      vars:
+        _config: '{{ config }}'
+  when: app.tenants.enabled
+  tags: [tenants]

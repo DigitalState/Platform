@@ -1,0 +1,18 @@
+---
+tasks:
+  enabled: false
+  repository: https://github.com/DigitalState/Tasks.git
+  version: 0.9.1
+  api:
+    host: api.tasks.prod.ds
+  database:
+    host: tasks_database
+    port: 5432
+    name: tasks
+    username: tasks
+    password: ~
+    ui:
+      host: ui.database.tasks.prod.ds
+  cache:
+    ui:
+      host: ui.cache.tasks.prod.ds

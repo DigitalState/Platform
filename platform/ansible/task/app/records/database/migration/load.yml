@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Load records database migration
+      include_role:
+        name: app/records/database/migration/load
+      vars:
+        _data: '{{ data }}'
+  when: app.records.enabled
+  tags: [records]

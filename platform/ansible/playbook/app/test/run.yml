@@ -1,0 +1,27 @@
+---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+- import_playbook: /etc/ansible/playbook/platform/vars/computed/include.yml
+
+- name: Compile test/run task list
+  hosts: platform
+  become: true
+  tasks:
+    - name: Compile files
+      compile:
+        app: '{{ app }}'
+        directory: /etc/ansible/task/app/*
+        task: test/run
+      register: files
+  tags: [always]
+
+- name: Run tests
+  hosts: app
+  become: true
+  tasks:
+    - name: Include compiled task list
+      include_tasks: '{{ item }}'
+      with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
+      tags: [always]
+    - name: Include app tasks
+      include_tasks: /etc/ansible/task/app/test/run.yml
+      tags: [always]

@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download tenants jwt keys
+      include_role:
+        name: app/tenants/jwt/key/download
+      vars:
+        _private_key: '/root/jwt/{{ env }}/key'
+        _public_key: '/root/jwt/{{ env }}/key.pub'
+  when: app.tenants.enabled
+  tags: [tenants]

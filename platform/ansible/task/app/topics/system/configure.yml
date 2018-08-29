@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Configure topics system settings
+      include_role:
+        name: app/topics/system/configure
+      vars:
+        _username: '{{ system.username }}'
+        _password: '{{ system.password }}'
+  when: app.topics.enabled
+  tags: [topics]

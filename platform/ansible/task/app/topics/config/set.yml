@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set topics configs
+      include_role:
+        name: app/topics/config/set
+      vars:
+        _config: '{{ config }}'
+  when: app.topics.enabled
+  tags: [topics]

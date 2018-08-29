@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Run identities tests
+      include_role:
+        name: app/identities/test/run
+    - name: Validate identities tests result
+      debug:
+        msg: '{{ _result[0] }} / {{ _result[1] }}'
+      failed_when: _result[0] != _result[1]
+  tags: [identities]

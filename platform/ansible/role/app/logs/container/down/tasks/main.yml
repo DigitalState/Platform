@@ -1,0 +1,19 @@
+---
+- block:
+    - name: Down logs container
+      docker_service:
+        project_src: /srv/logs
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: absent
+        remove_volumes: '{{ "no" if _persistent else "yes" }}'
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        VIRTUAL_HOST: '{{ _virtual_host }}'
+        DISCOVERY_HOST: '{{ _discovery_host }}'
+        DISCOVERY_CREDENTIAL: '{{ _discovery_credential }}'
+        DIRECTORY: '{{ _directory }}'
+  tags: [logs]

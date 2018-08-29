@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down formio container
+      include_role:
+        name: app/formio/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.formio.enabled
+  tags: [formio]

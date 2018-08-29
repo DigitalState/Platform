@@ -1,0 +1,11 @@
+---
+proxy:
+  enabled: true
+  order: -30
+  repository: https://github.com/DigitalState/Proxy.git
+  version: 0.9.0
+  port: 443
+  discovery:
+    token: ~
+  ui:
+    port: 444

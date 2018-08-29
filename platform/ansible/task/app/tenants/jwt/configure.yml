@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure tenants jwt key pass phrase
+      include_role:
+        name: app/tenants/jwt/configure
+      vars:
+        _pass_phrase: '{{ jwt.pass_phrase }}'
+  when: app.tenants.enabled
+  tags: [tenants]

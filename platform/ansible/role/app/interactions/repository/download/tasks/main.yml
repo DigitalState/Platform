@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Download interactions repository
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
+        dest: /srv/interactions
+        force: yes
+  tags: [interactions]

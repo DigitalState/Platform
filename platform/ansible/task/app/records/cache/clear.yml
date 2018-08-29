@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Clear records cache
+      include_role:
+        name: app/records/cache/clear
+  when: app.records.enabled
+  tags: [records]

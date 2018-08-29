@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Configure cms system settings
+      include_role:
+        name: app/cms/system/configure
+      vars:
+        _username: '{{ system.username }}'
+        _password: '{{ system.password }}'
+  when: app.cms.enabled
+  tags: [cms]

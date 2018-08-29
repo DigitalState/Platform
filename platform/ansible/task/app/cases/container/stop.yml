@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop cases container
+      include_role:
+        name: app/cases/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.cases.enabled
+  tags: [cases]

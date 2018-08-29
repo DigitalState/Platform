@@ -1,0 +1,13 @@
+---
+_env: prod
+_compose_project_name: dstopics
+_network: dsproxy_default
+_directory: /srv/topics
+_api_host: api.topics.ds
+_database_host: topics_db
+_database_port: 5432
+_database_name: topics
+_database_username: topics
+_database_password: topics
+_database_ui_host: ui.database.topics.ds
+_cache_ui_host: ui.cache.topics.ds

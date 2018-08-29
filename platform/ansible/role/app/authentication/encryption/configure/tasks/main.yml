@@ -1,0 +1,8 @@
+---
+- block:
+    - name: Configure authentication encryption secret setting
+      lineinfile:
+        path: '/srv/authentication/app/config/parameters.yml'
+        regexp: '^\s{4}secret:'
+        line: '    secret: {{ _secret }}'
+  tags: [authentication]

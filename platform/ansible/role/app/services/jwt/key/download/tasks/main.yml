@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Download services jwt private key
+      copy:
+        src: '{{ _private_key }}'
+        dest: /srv/services/var/jwt/key
+        mode: 0600
+    - name: Download services jwt public key
+      copy:
+        src: '{{ _public_key }}'
+        dest: /srv/services/var/jwt/key.pub
+        mode: 0600
+  tags: [services]

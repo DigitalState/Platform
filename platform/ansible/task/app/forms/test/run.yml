@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Run forms tests
+      include_role:
+        name: app/forms/test/run
+  when: app.forms.enabled
+  tags: [forms]

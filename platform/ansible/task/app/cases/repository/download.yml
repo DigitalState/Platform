@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download cases repository
+      include_role:
+        name: app/cases/repository/download
+      vars:
+        _repository: '{{ app.cases.repository }}'
+        _version: '{{ app.cases.version }}'
+  when: app.cases.enabled
+  tags: [cases]

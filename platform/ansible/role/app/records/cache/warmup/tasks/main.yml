@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Warmup records cache
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console cache:warmup --env={{ _env }}'
+        chdir: /srv/records
+  tags: [records]

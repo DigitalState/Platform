@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Stop records container
+      docker_service:
+        project_src: /srv/records
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: present
+        stopped: yes
+  tags: [records]

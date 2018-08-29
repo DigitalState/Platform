@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Backup tenants fixtures directory
+      shell: 'mv /srv/tenants/src/AppBundle/Resources/fixtures/{{ _fixtures }} /srv/tenants/src/AppBundle/Resources/fixtures/_{{ _fixtures }}'
+    - name: Download tenants fixtures directory override
+      copy:
+        src: '{{ _override }}/'
+        dest: '/srv/tenants/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
+    - import_tasks: load.yml
+    - name: Delete tenants fixtures directory override
+      file:
+        path: '/srv/tenants/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
+        state: absent
+    - name: Restore tenants fixtures directory backup
+      shell: 'mv /srv/tenants/src/AppBundle/Resources/fixtures/_{{ _fixtures }} /srv/tenants/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
+  tags: [tenants]

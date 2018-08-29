@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure services jwt key pass phrase
+      include_role:
+        name: app/services/jwt/configure
+      vars:
+        _pass_phrase: '{{ jwt.pass_phrase }}'
+  when: app.services.enabled
+  tags: [services]

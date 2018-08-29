@@ -1,0 +1,8 @@
+---
+- block:
+    - name: Configure cases encryption secret setting
+      lineinfile:
+        path: '/srv/cases/app/config/parameters.yml'
+        regexp: '^\s{4}secret:'
+        line: '    secret: {{ _secret }}'
+  tags: [cases]

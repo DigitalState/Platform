@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down cases container
+      include_role:
+        name: app/cases/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.cases.enabled
+  tags: [cases]

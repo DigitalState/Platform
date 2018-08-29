@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Load identities database fixtures
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console doctrine:fixtures:load --env={{ _fixtures }} --fixtures=/srv/api-platform/src/AppBundle/Fixtures --no-interaction'
+        chdir: /srv/identities
+    - name: Pause while identities fixtures load
+      pause:
+        seconds: 15
+  tags: [identities]

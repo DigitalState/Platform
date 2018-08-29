@@ -1,0 +1,18 @@
+---
+interactions:
+  enabled: false
+  repository: https://github.com/DigitalState/Interactions.git
+  version: 0.9.1
+  api:
+    host: api.interactions.stag.ds
+  database:
+    host: interactions_database
+    port: 5432
+    name: interactions
+    username: interactions
+    password: ~
+    ui:
+      host: ui.database.interactions.stag.ds
+  cache:
+    ui:
+      host: ui.cache.interactions.stag.ds

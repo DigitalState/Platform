@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Download records repository
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
+        dest: /srv/records
+        force: yes
+  tags: [records]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Load assets database migration
+      include_role:
+        name: app/assets/database/migration/load
+      vars:
+        _data: '{{ data }}'
+  when: app.assets.enabled
+  tags: [assets]

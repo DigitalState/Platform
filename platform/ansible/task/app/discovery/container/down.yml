@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down discovery container
+      include_role:
+        name: app/discovery/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.discovery.enabled
+  tags: [discovery]

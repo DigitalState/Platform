@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Clear forms cache
+      include_role:
+        name: app/forms/cache/clear
+  when: app.forms.enabled
+  tags: [forms]

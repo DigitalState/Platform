@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Stop formio container
+      docker_service:
+        project_src: /srv/formio
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: present
+        stopped: yes
+  tags: [formio]

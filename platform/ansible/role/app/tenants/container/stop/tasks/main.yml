@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Stop tenants container
+      docker_service:
+        project_src: /srv/tenants
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: present
+        stopped: yes
+  tags: [tenants]

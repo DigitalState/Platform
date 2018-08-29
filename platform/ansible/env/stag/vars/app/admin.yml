@@ -1,0 +1,7 @@
+---
+admin:
+  enabled: false
+  repository: https://github.com/DigitalState/Admin.git
+  version: 0.9.0
+  ui:
+    host: admin.stag.ds

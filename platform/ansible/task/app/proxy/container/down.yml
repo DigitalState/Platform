@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down proxy container
+      include_role:
+        name: app/proxy/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.proxy.enabled
+  tags: [proxy]

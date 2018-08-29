@@ -1,0 +1,18 @@
+---
+topics:
+  enabled: false
+  repository: https://github.com/DigitalState/Topics.git
+  version: 0.9.1
+  api:
+    host: api.topics.prod.ds
+  database:
+    host: topics_database
+    port: 5432
+    name: topics
+    username: topics
+    password: ~
+    ui:
+      host: ui.database.topics.prod.ds
+  cache:
+    ui:
+      host: ui.cache.topics.prod.ds

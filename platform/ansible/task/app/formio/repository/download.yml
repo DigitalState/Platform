@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download formio repository
+      include_role:
+        name: app/formio/repository/download
+      vars:
+        _repository: '{{ app.formio.repository }}'
+        _version: '{{ app.formio.version }}'
+  when: app.formio.enabled
+  tags: [formio]

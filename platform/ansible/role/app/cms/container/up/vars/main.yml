@@ -1,0 +1,13 @@
+---
+_env: prod
+_compose_project_name: dscms
+_network: dsproxy_default
+_directory: /srv/cms
+_api_host: api.cms.ds
+_database_host: cms_db
+_database_port: 5432
+_database_name: cms
+_database_username: cms
+_database_password: cms
+_database_ui_host: ui.database.cms.ds
+_cache_ui_host: ui.cache.cms.ds

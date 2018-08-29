@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download identities jwt keys
+      include_role:
+        name: app/identities/jwt/key/download
+      vars:
+        _private_key: '/root/jwt/{{ env }}/key'
+        _public_key: '/root/jwt/{{ env }}/key.pub'
+  when: app.identities.enabled
+  tags: [identities]

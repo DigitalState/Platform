@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop formio container
+      include_role:
+        name: app/formio/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.formio.enabled
+  tags: [formio]

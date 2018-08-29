@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Backup assets fixtures directory
+      shell: 'mv /srv/assets/src/AppBundle/Resources/fixtures/{{ _fixtures }} /srv/assets/src/AppBundle/Resources/fixtures/_{{ _fixtures }}'
+    - name: Download assets fixtures directory override
+      copy:
+        src: '{{ _override }}/'
+        dest: '/srv/assets/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
+    - import_tasks: load.yml
+    - name: Delete assets fixtures directory override
+      file:
+        path: '/srv/assets/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
+        state: absent
+    - name: Restore assets fixtures directory backup
+      shell: 'mv /srv/assets/src/AppBundle/Resources/fixtures/_{{ _fixtures }} /srv/assets/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
+  tags: [assets]

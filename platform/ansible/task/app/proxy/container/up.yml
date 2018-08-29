@@ -1,0 +1,14 @@
+---
+- block:
+    - name: Up proxy container
+      include_role:
+        name: app/proxy/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}proxy'
+        _directory: '{{ directory }}/proxy'
+        _port: '{{ app.proxy.port }}'
+        _ui_port: '{{ app.proxy.ui.port }}'
+        _discovery_token: '{{ app.proxy.discovery.token }}'
+  when: app.proxy.enabled
+  tags: [proxy]

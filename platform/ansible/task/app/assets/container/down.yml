@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down assets container
+      include_role:
+        name: app/assets/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.assets.enabled
+  tags: [assets]

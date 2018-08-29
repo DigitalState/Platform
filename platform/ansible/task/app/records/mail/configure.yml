@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Configure records mail settings
+      include_role:
+        name: app/records/mail/configure
+      vars:
+        _transport: '{{ mail.transport }}'
+        _host: '{{ mail.host }}'
+        _port: '{{ mail.port }}'
+        _username: '{{ mail.username }}'
+        _password: '{{ mail.password }}'
+  when: app.records.enabled
+  tags: [records]

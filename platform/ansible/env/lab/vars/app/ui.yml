@@ -1,0 +1,5 @@
+---
+ui:
+  enabled: true
+  repository: https://github.com/DigitalState/Ui.git
+  version: develop

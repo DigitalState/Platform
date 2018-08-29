@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down forms container
+      include_role:
+        name: app/forms/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.forms.enabled
+  tags: [forms]

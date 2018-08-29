@@ -1,0 +1,18 @@
+---
+authentication:
+  enabled: true
+  repository: https://github.com/DigitalState/Authentication.git
+  version: 0.9.1
+  api:
+    host: api.authentication.prod.ds
+  database:
+    host: authentication_database
+    port: 5432
+    name: authentication
+    username: authentication
+    password: ~
+    ui:
+      host: ui.database.authentication.prod.ds
+  cache:
+    ui:
+      host: ui.cache.authentication.prod.ds

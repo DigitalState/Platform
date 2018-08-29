@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure cases encryption settings
+      include_role:
+        name: app/cases/encryption/configure
+      vars:
+        _secret: '{{ encryption.secret }}'
+  when: app.cases.enabled
+  tags: [cases]

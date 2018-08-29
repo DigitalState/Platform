@@ -1,0 +1,8 @@
+---
+- block:
+    - name: Configure assets jwt key pass phrase
+      lineinfile:
+        path: '/srv/assets/app/config/parameters.yml'
+        regexp: '^\s{4}jwt_key_pass_phrase:'
+        line: '    jwt_key_pass_phrase: ''{{ _pass_phrase }}'''
+  tags: [assets]

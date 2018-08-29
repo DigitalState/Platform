@@ -1,0 +1,20 @@
+---
+- block:
+    - name: Up interactions container
+      include_role:
+        name: app/interactions/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}interactions'
+        _network: '{{ namespace }}proxy_default'
+        _directory: '{{ directory }}/interactions'
+        _api_host: '{{ app.interactions.api.host }}'
+        _database_host: '{{ app.interactions.database.host }}'
+        _database_port: '{{ app.interactions.database.port }}'
+        _database_name: '{{ app.interactions.database.name }}'
+        _database_username: '{{ app.interactions.database.username }}'
+        _database_password: '{{ app.interactions.database.password }}'
+        _database_ui_host: '{{ app.interactions.database.ui.host }}'
+        _cache_ui_host: '{{ app.interactions.cache.ui.host }}'
+  when: app.interactions.enabled
+  tags: [interactions]

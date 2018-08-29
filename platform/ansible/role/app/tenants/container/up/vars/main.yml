@@ -1,0 +1,18 @@
+---
+_env: prod
+_compose_project_name: dstenants
+_network: dsproxy_default
+_directory: /srv/tenants
+_api_host: api.tenants.ds
+_database_host: tenants_db
+_database_port: 5432
+_database_name: tenants
+_database_username: tenants
+_database_password: tenants
+_database_ui_host: ui.database.tenants.ds
+_cache_ui_host: ui.cache.tenants.ds
+_credential:
+  email: ~
+  username: ~
+  password: ~
+

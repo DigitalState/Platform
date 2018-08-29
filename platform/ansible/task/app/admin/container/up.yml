@@ -1,0 +1,15 @@
+---
+- block:
+    - name: Gather information for admin container
+      include_tasks: /etc/ansible/task/app/proxy/container/info.yml
+    - name: Up admin container
+      include_role:
+        name: app/admin/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}admin'
+        _network: '{{ namespace }}proxy_default'
+        _directory: '{{ directory }}/admin'
+        _ui_host: '{{ app.admin.ui.host }}'
+  when: app.admin.enabled
+  tags: [admin]

@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Backup cms fixtures directory
+      shell: 'mv /srv/cms/src/AppBundle/Resources/fixtures/{{ _fixtures }} /srv/cms/src/AppBundle/Resources/fixtures/_{{ _fixtures }}'
+    - name: Download cms fixtures directory override
+      copy:
+        src: '{{ _override }}/'
+        dest: '/srv/cms/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
+    - import_tasks: load.yml
+    - name: Delete cms fixtures directory override
+      file:
+        path: '/srv/cms/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
+        state: absent
+    - name: Restore cms fixtures directory backup
+      shell: 'mv /srv/cms/src/AppBundle/Resources/fixtures/_{{ _fixtures }} /srv/cms/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
+  tags: [cms]

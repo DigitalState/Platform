@@ -1,0 +1,27 @@
+---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+
+- name: Install ssh keys
+  hosts: platform
+  become: true
+  gather_facts: false
+  tasks:
+    - name: Establish ssh connection
+      include_role:
+        name: platform/ssh/connect
+      vars:
+        _directory: '{{ env }}'
+        _host: '{{ vars["hostvars"]["app"]["ansible_host"] }}'
+        _username: '{{ vars["hostvars"]["app"]["ansible_ssh_user"] }}'
+        _password: '{{ vars["hostvars"]["app"]["ansible_ssh_pass"] }}'
+  tags: [system]
+
+- name: Install ansible requirements
+  hosts: app
+  become: true
+  gather_facts: false
+  tasks:
+    - name: Install python packages
+      include_role:
+        name: package/python
+  tags: [system]

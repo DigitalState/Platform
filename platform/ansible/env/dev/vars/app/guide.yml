@@ -1,0 +1,5 @@
+---
+guide:
+  enabled: false
+  repository: https://github.com/DigitalState/Guide.git
+  version: 0.9.0

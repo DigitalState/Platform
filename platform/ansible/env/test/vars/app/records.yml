@@ -1,0 +1,18 @@
+---
+records:
+  enabled: true
+  repository: https://github.com/DigitalState/Records.git
+  version: develop
+  api:
+    host: api.records.test.ds
+  database:
+    host: records_database
+    port: 5432
+    name: records
+    username: records
+    password: records
+    ui:
+      host: ui.database.records.test.ds
+  cache:
+    ui:
+      host: ui.cache.records.test.ds

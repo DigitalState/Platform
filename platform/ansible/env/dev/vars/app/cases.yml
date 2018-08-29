@@ -1,0 +1,18 @@
+---
+cases:
+  enabled: true
+  repository: https://github.com/DigitalState/Cases.git
+  version: 0.9.1
+  api:
+    host: api.cases.dev.ds
+  database:
+    host: cases_database
+    port: 5432
+    name: cases
+    username: cases
+    password: cases
+    ui:
+      host: ui.database.cases.dev.ds
+  cache:
+    ui:
+      host: ui.cache.cases.dev.ds

@@ -1,0 +1,18 @@
+---
+tenants:
+  enabled: false
+  repository: https://github.com/DigitalState/Tenants.git
+  version: 0.9.1
+  api:
+    host: api.tenants.prod.ds
+  database:
+    host: tenants_database
+    port: 5432
+    name: tenants
+    username: tenants
+    password: ~
+    ui:
+      host: ui.database.tenants.prod.ds
+  cache:
+    ui:
+      host: ui.cache.tenants.prod.ds

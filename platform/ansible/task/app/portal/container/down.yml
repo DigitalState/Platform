@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down portal container
+      include_role:
+        name: app/portal/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.portal.enabled
+  tags: [portal]

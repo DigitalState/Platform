@@ -1,0 +1,8 @@
+---
+- block:
+    - name: Configure cms namespace setting
+      lineinfile:
+        path: '/srv/cms/app/config/parameters.yml'
+        regexp: '^\s{4}namespace:'
+        line: '    namespace: {{ _namespace }}'
+  tags: [cms]

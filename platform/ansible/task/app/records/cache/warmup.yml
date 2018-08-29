@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Warmup records cache
+      include_role:
+        name: app/records/cache/warmup
+  when: app.records.enabled
+  tags: [records]

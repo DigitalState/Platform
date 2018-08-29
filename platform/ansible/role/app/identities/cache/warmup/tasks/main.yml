@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Warmup identities cache
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console cache:warmup --env={{ env }}'
+        chdir: /srv/identities
+  tags: [identities]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Download interactions repository override directory
+      include_role:
+        name: app/interactions/repository/override
+  when: app.interactions.enabled
+  tags: [interactions]

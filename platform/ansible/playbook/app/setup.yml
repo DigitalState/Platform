@@ -1,0 +1,23 @@
+---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+
+- name: Install core packages
+  hosts: app
+  become: true
+  tasks:
+    - name: Install git packages
+      include_role:
+        name: package/git
+    - name: Install docker packages
+      include_role:
+        name: package/docker
+  tags: [system]
+
+- name: Set platform properties
+  hosts: app
+  become: true
+  tasks:
+    - name: Set version
+      include_role:
+        name: platform/version
+  tags: [system]

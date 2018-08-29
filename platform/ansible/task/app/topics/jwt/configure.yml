@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure topics jwt key pass phrase
+      include_role:
+        name: app/topics/jwt/configure
+      vars:
+        _pass_phrase: '{{ jwt.pass_phrase }}'
+  when: app.topics.enabled
+  tags: [topics]

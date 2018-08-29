@@ -1,0 +1,6 @@
+---
+- import_tasks: ubuntu.yml
+  when: ansible_distribution == 'Ubuntu'
+
+- import_tasks: alpine.yml
+  when: ansible_distribution == 'Alpine'

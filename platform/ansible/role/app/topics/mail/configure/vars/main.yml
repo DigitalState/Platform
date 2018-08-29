@@ -1,0 +1,6 @@
+---
+_transport: smtp
+_host: 127.0.0.1
+_port: ~
+_username: admin@localhost
+_password: ~

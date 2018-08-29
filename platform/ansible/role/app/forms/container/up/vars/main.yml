@@ -1,0 +1,13 @@
+---
+_env: prod
+_compose_project_name: dsforms
+_network: dsproxy_default
+_directory: /srv/forms
+_api_host: api.forms.ds
+_database_host: forms_db
+_database_port: 5432
+_database_name: forms
+_database_username: forms
+_database_password: forms
+_database_ui_host: ui.database.forms.ds
+_cache_ui_host: ui.cache.forms.ds

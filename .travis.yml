@@ -1,0 +1,9 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker-compose up -d
+  - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test && ansible-playbook ./install.yml"
+  - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test && ansible-playbook ./app/test/validate.yml"

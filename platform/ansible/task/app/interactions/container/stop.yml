@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop interactions container
+      include_role:
+        name: app/interactions/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.interactions.enabled
+  tags: [interactions]

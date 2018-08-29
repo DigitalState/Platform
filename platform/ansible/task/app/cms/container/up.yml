@@ -1,0 +1,20 @@
+---
+- block:
+    - name: Up cms container
+      include_role:
+        name: app/cms/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}cms'
+        _network: '{{ namespace }}proxy_default'
+        _directory: '{{ directory }}/cms'
+        _api_host: '{{ app.cms.api.host }}'
+        _database_host: '{{ app.cms.database.host }}'
+        _database_port: '{{ app.cms.database.port }}'
+        _database_name: '{{ app.cms.database.name }}'
+        _database_username: '{{ app.cms.database.username }}'
+        _database_password: '{{ app.cms.database.password }}'
+        _database_ui_host: '{{ app.cms.database.ui.host }}'
+        _cache_ui_host: '{{ app.cms.cache.ui.host }}'
+  when: app.cms.enabled
+  tags: [cms]

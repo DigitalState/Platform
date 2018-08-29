@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Backup tasks fixtures directory
+      shell: 'mv /srv/tasks/src/AppBundle/Resources/fixtures/{{ _fixtures }} /srv/tasks/src/AppBundle/Resources/fixtures/_{{ _fixtures }}'
+    - name: Download tasks fixtures directory override
+      copy:
+        src: '{{ _override }}/'
+        dest: '/srv/tasks/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
+    - import_tasks: load.yml
+    - name: Delete tasks fixtures directory override
+      file:
+        path: '/srv/tasks/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
+        state: absent
+    - name: Restore tasks fixtures directory backup
+      shell: 'mv /srv/tasks/src/AppBundle/Resources/fixtures/_{{ _fixtures }} /srv/tasks/src/AppBundle/Resources/fixtures/{{ _fixtures }}'
+  tags: [tasks]

@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download ui repository
+      include_role:
+        name: app/ui/repository/download
+      vars:
+        _repository: '{{ app.ui.repository }}'
+        _version: '{{ app.ui.version }}'
+  when: app.ui.enabled
+  tags: [ui]

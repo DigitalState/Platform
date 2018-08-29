@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set forms configs
+      include_role:
+        name: app/forms/config/set
+      vars:
+        _config: '{{ config }}'
+  when: app.forms.enabled
+  tags: [forms]

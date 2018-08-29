@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop identities container
+      include_role:
+        name: app/identities/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.identities.enabled
+  tags: [identities]

@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Down records container
+      docker_service:
+        project_src: /srv/records
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: absent
+        remove_volumes: '{{ "no" if _persistent else "yes" }}'
+  tags: [records]

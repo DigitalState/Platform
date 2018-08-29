@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure interactions encryption settings
+      include_role:
+        name: app/interactions/encryption/configure
+      vars:
+        _secret: '{{ encryption.secret }}'
+  when: app.interactions.enabled
+  tags: [interactions]

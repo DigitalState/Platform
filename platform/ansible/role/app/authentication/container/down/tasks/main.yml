@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Down authentication container
+      docker_service:
+        project_src: /srv/authentication
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: absent
+        remove_volumes: '{{ "no" if _persistent else "yes" }}'
+  tags: [authentication]

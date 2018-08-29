@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set assets configs
+      include_role:
+        name: app/assets/config/set
+      vars:
+        _config: '{{ config }}'
+  when: app.assets.enabled
+  tags: [assets]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Download core repository
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
+        dest: /srv/core
+        force: yes
+  tags: [core]

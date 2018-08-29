@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop tenants container
+      include_role:
+        name: app/tenants/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.tenants.enabled
+  tags: [tenants]

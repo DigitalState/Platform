@@ -1,0 +1,13 @@
+---
+_env: prod
+_compose_project_name: dscases
+_network: dsproxy_default
+_directory: /srv/cases
+_api_host: api.cases.ds
+_database_host: cases_db
+_database_port: 5432
+_database_name: cases
+_database_username: cases
+_database_password: cases
+_database_ui_host: ui.database.cases.ds
+_cache_ui_host: ui.cache.cases.ds

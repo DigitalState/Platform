@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down services container
+      include_role:
+        name: app/services/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.services.enabled
+  tags: [services]

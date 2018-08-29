@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Download logs repository
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
+        dest: /srv/logs
+        force: yes
+  tags: [logs]

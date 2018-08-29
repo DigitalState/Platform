@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure tasks namespace settings
+      include_role:
+        name: app/tasks/namespace/configure
+      vars:
+        _namespace: '{{ namespace }}'
+  when: app.tasks.enabled
+  tags: [tasks]

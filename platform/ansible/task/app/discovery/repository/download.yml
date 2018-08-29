@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download discovery repository
+      include_role:
+        name: app/discovery/repository/download
+      vars:
+        _repository: '{{ app.discovery.repository }}'
+        _version: '{{ app.discovery.version }}'
+  when: app.discovery.enabled
+  tags: [discovery]

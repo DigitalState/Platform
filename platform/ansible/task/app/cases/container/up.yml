@@ -1,0 +1,20 @@
+---
+- block:
+    - name: Up cases container
+      include_role:
+        name: app/cases/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}cases'
+        _network: '{{ namespace }}proxy_default'
+        _directory: '{{ directory }}/cases'
+        _api_host: '{{ app.cases.api.host }}'
+        _database_host: '{{ app.cases.database.host }}'
+        _database_port: '{{ app.cases.database.port }}'
+        _database_name: '{{ app.cases.database.name }}'
+        _database_username: '{{ app.cases.database.username }}'
+        _database_password: '{{ app.cases.database.password }}'
+        _database_ui_host: '{{ app.cases.database.ui.host }}'
+        _cache_ui_host: '{{ app.cases.cache.ui.host }}'
+  when: app.cases.enabled
+  tags: [cases]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure tasks jwt key pass phrase
+      include_role:
+        name: app/tasks/jwt/configure
+      vars:
+        _pass_phrase: '{{ jwt.pass_phrase }}'
+  when: app.tasks.enabled
+  tags: [tasks]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Load cms database migration
+      include_role:
+        name: app/cms/database/migration/load
+      vars:
+        _data: '{{ data }}'
+  when: app.cms.enabled
+  tags: [cms]

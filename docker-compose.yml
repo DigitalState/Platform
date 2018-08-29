@@ -1,0 +1,38 @@
+version: '3.1'
+
+services:
+  app:
+    container_name: app
+    build:
+      context: ./app
+    environment:
+      SERVICE_IGNORE: 'true'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./app/srv:/srv
+      - ./app/behat.yml:/root/tests/behat.yml
+      - ./app/composer.json:/root/tests/composer.json
+      - ./app/composer.lock:/root/tests/composer.lock
+      - ./app/features:/root/tests/features
+
+  platform:
+    container_name: platform
+    build:
+      context: ./platform
+    environment:
+      GITHUB_USERNAME: '${GITHUB_USERNAME}'
+      GITHUB_PASSWORD: '${GITHUB_PASSWORD}'
+      DOCKERHUB_EMAIL: '${DOCKERHUB_EMAIL}'
+      DOCKERHUB_USERNAME: '${DOCKERHUB_USERNAME}'
+      DOCKERHUB_PASSWORD: '${DOCKERHUB_PASSWORD}'
+    privileged: true
+    entrypoint: /bin/sh
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./platform/ansible:/etc/ansible
+      - ./platform/ssh:/root/ssh
+      - ./app/fixtures:/root/fixtures
+      - ./app/jwt:/root/jwt
+      - ./app/repository:/root/repository
+      - ./VERSION:/root/VERSION

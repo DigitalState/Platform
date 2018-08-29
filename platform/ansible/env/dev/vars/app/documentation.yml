@@ -1,0 +1,5 @@
+---
+documentation:
+  enabled: false
+  repository: https://github.com/DigitalState/Documentation.git
+  version: 0.9.0

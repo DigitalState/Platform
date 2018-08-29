@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure topics namespace settings
+      include_role:
+        name: app/topics/namespace/configure
+      vars:
+        _namespace: '{{ namespace }}'
+  when: app.topics.enabled
+  tags: [topics]

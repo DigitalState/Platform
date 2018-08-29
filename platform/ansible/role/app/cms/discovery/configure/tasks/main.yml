@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Configure cms discovery host setting
+      lineinfile:
+        path: '/srv/cms/app/config/parameters.yml'
+        regexp: '^\s{4}discovery_host:'
+        line: '    discovery_host: {{ _host }}'
+    - name: Configure cms discovery credential setting
+      lineinfile:
+        path: '/srv/cms/app/config/parameters.yml'
+        regexp: '^\s{4}discovery_credential:'
+        line: '    discovery_credential: {{ _credential }}'
+  tags: [cms]

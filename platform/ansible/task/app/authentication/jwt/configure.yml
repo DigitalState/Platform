@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure authentication jwt key pass phrase
+      include_role:
+        name: app/authentication/jwt/configure
+      vars:
+        _pass_phrase: '{{ jwt.pass_phrase }}'
+  when: app.authentication.enabled
+  tags: [authentication]

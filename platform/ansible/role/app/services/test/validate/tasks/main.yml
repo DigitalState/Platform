@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Run services tests
+      include_role:
+        name: app/services/test/run
+    - name: Validate services tests result
+      debug:
+        msg: '{{ _result[0] }} / {{ _result[1] }}'
+      failed_when: _result[0] != _result[1]
+  tags: [services]

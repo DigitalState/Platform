@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop camunda container
+      include_role:
+        name: app/camunda/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.camunda.enabled
+  tags: [camunda]

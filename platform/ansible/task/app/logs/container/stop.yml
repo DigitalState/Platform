@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Stop logs container
+      include_role:
+        name: app/logs/container/stop
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}logs'
+        _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_info_ip.stdout }}'
+        _virtual_host: '{{ app.logs.host }}'
+        _discovery_host: '{{ app.discovery.api.host }}'
+        _discovery_credential: '{{ app.discovery.credential.master }}'
+        _directory: '{{ directory }}/logs'
+  when: app.logs.enabled
+  tags: [logs]

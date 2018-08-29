@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Download identities repository
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
+        dest: /srv/identities
+        force: yes
+  tags: [identities]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Download monitor repository override directory
+      include_role:
+        name: app/monitor/repository/override
+  when: app.monitor.enabled
+  tags: [monitor]

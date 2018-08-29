@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download interactions jwt keys
+      include_role:
+        name: app/interactions/jwt/key/download
+      vars:
+        _private_key: '/root/jwt/{{ env }}/key'
+        _public_key: '/root/jwt/{{ env }}/key.pub'
+  when: app.interactions.enabled
+  tags: [interactions]

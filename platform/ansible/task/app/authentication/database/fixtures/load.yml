@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Detect authentication fixtures directory override
+      local_action: 'stat path=/root/fixtures/authentication'
+      register: override
+    - name: Load authentication database fixtures
+      include_role:
+        name: app/authentication/database/fixtures/load
+      vars:
+        _fixtures: '{{ "test" if env == "test" else "dev" }}'
+        _override: '{{ "/root/fixtures/authentication" if override.stat.exists == true and env != "test" else "" }}'
+  when: app.authentication.enabled
+  tags: [authentication]

@@ -1,0 +1,5 @@
+---
+- block:
+    - name: Run app tests
+      include_role:
+        name: app/test/run

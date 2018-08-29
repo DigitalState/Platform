@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop proxy container
+      include_role:
+        name: app/proxy/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.proxy.enabled
+  tags: [proxy]

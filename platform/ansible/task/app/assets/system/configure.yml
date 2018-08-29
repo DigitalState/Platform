@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Configure assets system settings
+      include_role:
+        name: app/assets/system/configure
+      vars:
+        _username: '{{ system.username }}'
+        _password: '{{ system.password }}'
+  when: app.assets.enabled
+  tags: [assets]

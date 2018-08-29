@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Run cms tests
+      include_role:
+        name: app/cms/test/run
+    - name: Validate cms tests result
+      debug:
+        msg: '{{ _result[0] }} / {{ _result[1] }}'
+      failed_when: _result[0] != _result[1]
+  tags: [cms]

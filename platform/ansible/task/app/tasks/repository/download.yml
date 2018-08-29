@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Download tasks repository
+      include_role:
+        name: app/tasks/repository/download
+      vars:
+        _repository: '{{ app.tasks.repository }}'
+        _version: '{{ app.tasks.version }}'
+        _credential:
+          username: '{{ github.username }}'
+          password: '{{ github.password }}'
+  when: app.tasks.enabled
+  tags: [tasks]

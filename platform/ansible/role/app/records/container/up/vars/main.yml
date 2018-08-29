@@ -1,0 +1,13 @@
+---
+_env: prod
+_compose_project_name: dsrecords
+_network: dsproxy_default
+_directory: /srv/records
+_api_host: api.records.ds
+_database_host: records_db
+_database_port: 5432
+_database_name: records
+_database_username: records
+_database_password: records
+_database_ui_host: ui.database.records.ds
+_cache_ui_host: ui.cache.records.ds

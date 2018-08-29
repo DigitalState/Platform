@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Warmup forms cache
+      include_role:
+        name: app/forms/cache/warmup
+  when: app.forms.enabled
+  tags: [forms]

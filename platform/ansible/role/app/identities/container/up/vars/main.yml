@@ -1,0 +1,13 @@
+---
+_env: prod
+_compose_project_name: dsidentities
+_network: dsproxy_default
+_directory: /srv/identities
+_api_host: api.identities.ds
+_database_host: identities_db
+_database_port: 5432
+_database_name: identities
+_database_username: identities
+_database_password: identities
+_database_ui_host: ui.database.identities.ds
+_cache_ui_host: ui.cache.identities.ds

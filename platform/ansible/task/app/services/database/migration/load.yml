@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Load services database migration
+      include_role:
+        name: app/services/database/migration/load
+      vars:
+        _data: '{{ data }}'
+  when: app.services.enabled
+  tags: [services]

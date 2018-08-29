@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download services jwt keys
+      include_role:
+        name: app/services/jwt/key/download
+      vars:
+        _private_key: '/root/jwt/{{ env }}/key'
+        _public_key: '/root/jwt/{{ env }}/key.pub'
+  when: app.services.enabled
+  tags: [services]

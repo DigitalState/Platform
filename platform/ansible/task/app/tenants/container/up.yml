@@ -1,0 +1,24 @@
+---
+- block:
+    - name: Up tenants container
+      include_role:
+        name: app/tenants/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}tenants'
+        _network: '{{ namespace }}proxy_default'
+        _directory: '{{ directory }}/tenants'
+        _api_host: '{{ app.tenants.api.host }}'
+        _database_host: '{{ app.tenants.database.host }}'
+        _database_port: '{{ app.tenants.database.port }}'
+        _database_name: '{{ app.tenants.database.name }}'
+        _database_username: '{{ app.tenants.database.username }}'
+        _database_password: '{{ app.tenants.database.password }}'
+        _database_ui_host: '{{ app.tenants.database.ui.host }}'
+        _cache_ui_host: '{{ app.tenants.cache.ui.host }}'
+        _credential:
+          email: '{{ dockerhub.email }}'
+          username: '{{ dockerhub.username }}'
+          password: '{{ dockerhub.password }}'
+  when: app.tenants.enabled
+  tags: [tenants]

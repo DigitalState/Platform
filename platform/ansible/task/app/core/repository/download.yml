@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download core repository
+      include_role:
+        name: app/core/repository/download
+      vars:
+        _repository: '{{ app.core.repository }}'
+        _version: '{{ app.core.version }}'
+  when: app.core.enabled
+  tags: [core]

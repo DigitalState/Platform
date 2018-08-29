@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download services repository
+      include_role:
+        name: app/services/repository/download
+      vars:
+        _repository: '{{ app.services.repository }}'
+        _version: '{{ app.services.version }}'
+  when: app.services.enabled
+  tags: [services]

@@ -1,0 +1,7 @@
+---
+_env: prod
+_compose_project_name: dsadmin
+_network: dsproxy_default
+_directory: /srv/admin
+_ui_host: admin.ds
+

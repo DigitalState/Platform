@@ -1,0 +1,20 @@
+---
+- block:
+    - name: Up forms container
+      include_role:
+        name: app/forms/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}forms'
+        _network: '{{ namespace }}proxy_default'
+        _directory: '{{ directory }}/forms'
+        _api_host: '{{ app.forms.api.host }}'
+        _database_host: '{{ app.forms.database.host }}'
+        _database_port: '{{ app.forms.database.port }}'
+        _database_name: '{{ app.forms.database.name }}'
+        _database_username: '{{ app.forms.database.username }}'
+        _database_password: '{{ app.forms.database.password }}'
+        _database_ui_host: '{{ app.forms.database.ui.host }}'
+        _cache_ui_host: '{{ app.forms.cache.ui.host }}'
+  when: app.cms.enabled
+  tags: [forms]

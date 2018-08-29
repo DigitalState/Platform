@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure topics encryption settings
+      include_role:
+        name: app/topics/encryption/configure
+      vars:
+        _secret: '{{ encryption.secret }}'
+  when: app.topics.enabled
+  tags: [topics]

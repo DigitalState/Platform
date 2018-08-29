@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Stop discovery container
+      docker_service:
+        project_src: /srv/discovery
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: present
+        stopped: yes
+  tags: [discovery]

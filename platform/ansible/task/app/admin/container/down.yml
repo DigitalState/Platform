@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down admin container
+      include_role:
+        name: app/admin/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.admin.enabled
+  tags: [admin]

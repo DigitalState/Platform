@@ -1,0 +1,8 @@
+---
+- block:
+    - name: Configure forms encryption secret setting
+      lineinfile:
+        path: '/srv/forms/app/config/parameters.yml'
+        regexp: '^\s{4}secret:'
+        line: '    secret: {{ _secret }}'
+  tags: [forms]

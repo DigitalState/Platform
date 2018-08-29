@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download authentication jwt keys
+      include_role:
+        name: app/authentication/jwt/key/download
+      vars:
+        _private_key: '/root/jwt/{{ env }}/key'
+        _public_key: '/root/jwt/{{ env }}/key.pub'
+  when: app.authentication.enabled
+  tags: [authentication]

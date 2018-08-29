@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set records configs
+      include_role:
+        name: app/records/config/set
+      vars:
+        _config: '{{ config }}'
+  when: app.records.enabled
+  tags: [records]

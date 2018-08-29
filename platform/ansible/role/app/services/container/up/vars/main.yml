@@ -1,0 +1,13 @@
+---
+_env: prod
+_compose_project_name: dsservices
+_network: dsproxy_default
+_directory: /srv/services
+_api_host: api.services.ds
+_database_host: services_db
+_database_port: 5432
+_database_name: services
+_database_username: services
+_database_password: services
+_database_ui_host: ui.database.services.ds
+_cache_ui_host: ui.cache.services.ds

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Validate cases tests
+      include_role:
+        name: app/cases/test/validate
+  when: app.cases.enabled
+  tags: [cases]

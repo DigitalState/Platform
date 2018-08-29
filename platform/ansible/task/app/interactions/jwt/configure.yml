@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure interactions jwt key pass phrase
+      include_role:
+        name: app/interactions/jwt/configure
+      vars:
+        _pass_phrase: '{{ jwt.pass_phrase }}'
+  when: app.interactions.enabled
+  tags: [interactions]

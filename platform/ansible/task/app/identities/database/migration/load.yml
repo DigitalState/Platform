@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Load identities database migration
+      include_role:
+        name: app/identities/database/migration/load
+      vars:
+        _data: '{{ data }}'
+  when: app.identities.enabled
+  tags: [identities]

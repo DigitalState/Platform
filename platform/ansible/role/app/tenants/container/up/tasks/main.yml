@@ -1,0 +1,38 @@
+---
+- block:
+    - name: Log into docker
+      docker_login:
+        email: '{{ _credential.email }}'
+        username: '{{ _credential.username }}'
+        password: '{{ _credential.password }}'
+      changed_when: false
+    - name: Up tenants container
+      docker_service:
+        project_src: /srv/tenants
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        DIRECTORY: '{{ _directory }}'
+        API_HOST: '{{ _api_host }}'
+        DATABASE_HOST: '{{ _database_host }}'
+        DATABASE_PORT: '{{ _database_port }}'
+        DATABASE_NAME: '{{ _database_name }}'
+        DATABASE_USERNAME: '{{ _database_username }}'
+        DATABASE_PASSWORD: '{{ _database_password }}'
+        DATABASE_UI_HOST: '{{ _database_ui_host }}'
+        CACHE_UI_HOST: '{{ _cache_ui_host }}'
+    - name: Waiting for tenants container to finalize installation
+      shell:
+        cmd: docker-compose exec -T php pidof php-fpm | cat
+        chdir: /srv/tenants
+      register: _output
+      until: _output.stdout is match('^[0-9]+(\s[0-9]+)*$')
+      retries: 60
+      delay: 10
+      changed_when: false
+  tags: [tenants]

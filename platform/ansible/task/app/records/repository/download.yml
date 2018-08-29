@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download records repository
+      include_role:
+        name: app/records/repository/download
+      vars:
+        _repository: '{{ app.records.repository }}'
+        _version: '{{ app.records.version }}'
+  when: app.records.enabled
+  tags: [records]

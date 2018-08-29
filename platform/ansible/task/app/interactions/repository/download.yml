@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download interactions repository
+      include_role:
+        name: app/interactions/repository/download
+      vars:
+        _repository: '{{ app.interactions.repository }}'
+        _version: '{{ app.interactions.version }}'
+  when: app.interactions.enabled
+  tags: [interactions]

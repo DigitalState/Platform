@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Download proxy repository override directory
+      include_role:
+        name: app/proxy/repository/override
+  when: app.proxy.enabled
+  tags: [proxy]

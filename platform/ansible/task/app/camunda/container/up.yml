@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Up camunda container
+      include_role:
+        name: app/camunda/container/up
+      vars:
+        _env: '{{ env }}'
+        _compose_project_name: '{{ namespace }}camunda'
+        _network: '{{ namespace }}proxy_default'
+        _directory: '{{ directory }}/camunda'
+        _api_host: '{{ app.camunda.api.host }}'
+        _timezone: '{{ timezone }}'
+        _username: '{{ app.camunda.username }}'
+        _password: '{{ app.camunda.password }}'
+  when: app.camunda.enabled
+  tags: [camunda]

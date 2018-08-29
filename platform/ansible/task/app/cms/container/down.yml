@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Down cms container
+      include_role:
+        name: app/cms/container/down
+      vars:
+        _env: '{{ env }}'
+  when: app.cms.enabled
+  tags: [cms]

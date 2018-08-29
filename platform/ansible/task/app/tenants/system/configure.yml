@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Configure tenants system settings
+      include_role:
+        name: app/tenants/system/configure
+      vars:
+        _username: '{{ system.username }}'
+        _password: '{{ system.password }}'
+  when: app.tenants.enabled
+  tags: [tenants]

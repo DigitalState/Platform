@@ -1,0 +1,9 @@
+---
+_env: prod
+_compose_project_name: dslogs
+_network: dsproxy_default
+_proxy_host: 127.0.0.1
+_virtual_host: api.logs.ds
+_discovery_host: api.discovery.ds
+_discovery_credential: ~
+_directory: /srv/logs

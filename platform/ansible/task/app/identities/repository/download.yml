@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download identities repository
+      include_role:
+        name: app/identities/repository/download
+      vars:
+        _repository: '{{ app.identities.repository }}'
+        _version: '{{ app.identities.version }}'
+  when: app.identities.enabled
+  tags: [identities]

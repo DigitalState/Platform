@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure cms encryption settings
+      include_role:
+        name: app/cms/encryption/configure
+      vars:
+        _secret: '{{ encryption.secret }}'
+  when: app.cms.enabled
+  tags: [cms]

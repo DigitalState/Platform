@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download logs repository
+      include_role:
+        name: app/logs/repository/download
+      vars:
+        _repository: '{{ app.logs.repository }}'
+        _version: '{{ app.logs.version }}'
+  when: app.logs.enabled
+  tags: [logs]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop admin container
+      include_role:
+        name: app/admin/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.admin.enabled
+  tags: [admin]

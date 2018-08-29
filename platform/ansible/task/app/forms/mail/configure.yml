@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Configure forms mail settings
+      include_role:
+        name: app/forms/mail/configure
+      vars:
+        _transport: '{{ mail.transport }}'
+        _host: '{{ mail.host }}'
+        _port: '{{ mail.port }}'
+        _username: '{{ mail.username }}'
+        _password: '{{ mail.password }}'
+  when: app.forms.enabled
+  tags: [forms]

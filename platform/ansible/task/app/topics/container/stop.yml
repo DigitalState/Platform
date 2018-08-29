@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop topics container
+      include_role:
+        name: app/topics/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.topics.enabled
+  tags: [topics]

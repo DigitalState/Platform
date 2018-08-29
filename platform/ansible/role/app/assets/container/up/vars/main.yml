@@ -1,0 +1,13 @@
+---
+_env: prod
+_compose_project_name: dsassets
+_network: dsproxy_default
+_directory: /srv/assets
+_api_host: api.assets.ds
+_database_host: assets_db
+_database_port: 5432
+_database_name: assets
+_database_username: assets
+_database_password: assets
+_database_ui_host: ui.database.assets.ds
+_cache_ui_host: ui.cache.assets.ds

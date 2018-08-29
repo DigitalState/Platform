@@ -1,0 +1,9 @@
+---
+_env: prod
+_compose_project_name: dscamunda
+_network: dsproxy_default
+_directory: /srv/camunda
+_api_host: api.camunda.ds
+_timezone: UTC
+_username: admin
+_password: admin

@@ -1,0 +1,17 @@
+---
+- block:
+    - name: Up discovery container
+      docker_service:
+        project_src: /srv/discovery
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        NETWORK: '{{ _network }}'
+        DIRECTORY: '{{ _directory }}'
+        CONFIG: '{{ _config|to_json }}'
+        UI_HOST: '{{ _ui_host }}'
+        DISCOVERY_TOKEN: '{{ _discovery_token }}'
+  tags: [discovery]

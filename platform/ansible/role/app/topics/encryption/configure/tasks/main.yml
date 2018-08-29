@@ -1,0 +1,8 @@
+---
+- block:
+    - name: Configure topics encryption secret setting
+      lineinfile:
+        path: '/srv/topics/app/config/parameters.yml'
+        regexp: '^\s{4}secret:'
+        line: '    secret: {{ _secret }}'
+  tags: [topics]

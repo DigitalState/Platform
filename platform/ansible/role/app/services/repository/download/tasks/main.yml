@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Download services repository
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _version }}'
+        dest: /srv/services
+        force: yes
+  tags: [services]

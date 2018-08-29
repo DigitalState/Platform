@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop tasks container
+      include_role:
+        name: app/tasks/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.tasks.enabled
+  tags: [tasks]
