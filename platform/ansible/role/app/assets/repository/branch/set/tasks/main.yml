@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set assets repository active branch
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _branch }}'
+        dest: /srv/assets
+        update: no
+  tags: [assets]

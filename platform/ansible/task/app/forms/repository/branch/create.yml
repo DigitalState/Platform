@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Create forms repository branch
+      include_role:
+        name: app/forms/repository/branch/create
+      vars:
+        _repository: '{{ app.forms.repository }}'
+        _branch: '{{ branch }}'
+  when: app.forms.enabled
+  tags: [forms]

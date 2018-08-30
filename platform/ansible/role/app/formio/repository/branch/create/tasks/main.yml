@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Set formio repository active branch
+      shell: 'git checkout -b {{ _branch }}'
+      args:
+        chdir: /srv/formio
+  tags: [formio]

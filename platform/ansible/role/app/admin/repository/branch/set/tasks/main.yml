@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set admin repository active branch
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _branch }}'
+        dest: /srv/admin
+        update: no
+  tags: [admin]

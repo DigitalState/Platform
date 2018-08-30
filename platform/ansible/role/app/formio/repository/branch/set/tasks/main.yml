@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set formio repository active branch
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _branch }}'
+        dest: /srv/formio
+        update: no
+  tags: [formio]

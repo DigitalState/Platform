@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Set assets repository active branch
+      include_role:
+        name: app/assets/repository/branch/set
+      vars:
+        _repository: '{{ app.assets.repository }}'
+        _branch: '{{ branch }}'
+  when: app.assets.enabled
+  tags: [assets]

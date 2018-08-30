@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Create admin repository branch
+      include_role:
+        name: app/admin/repository/branch/create
+      vars:
+        _repository: '{{ app.admin.repository }}'
+        _branch: '{{ branch }}'
+  when: app.admin.enabled
+  tags: [admin]

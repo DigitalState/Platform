@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set authentication repository active branch
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _branch }}'
+        dest: /srv/authentication
+        update: no
+  tags: [authentication]

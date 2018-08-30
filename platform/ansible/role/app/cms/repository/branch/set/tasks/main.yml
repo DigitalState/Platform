@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set cms repository active branch
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _branch }}'
+        dest: /srv/cms
+        update: no
+  tags: [cms]

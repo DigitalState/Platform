@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set forms repository active branch
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _branch }}'
+        dest: /srv/forms
+        update: no
+  tags: [forms]

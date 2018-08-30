@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Create core repository branch
+      include_role:
+        name: app/core/repository/branch/create
+      vars:
+        _repository: '{{ app.core.repository }}'
+        _branch: '{{ branch }}'
+  when: app.core.enabled
+  tags: [core]

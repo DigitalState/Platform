@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set proxy repository active branch
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _branch }}'
+        dest: /srv/proxy
+        update: no
+  tags: [proxy]

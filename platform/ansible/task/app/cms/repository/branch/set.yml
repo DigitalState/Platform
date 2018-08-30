@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Set cms repository active branch
+      include_role:
+        name: app/cms/repository/branch/set
+      vars:
+        _repository: '{{ app.cms.repository }}'
+        _branch: '{{ branch }}'
+  when: app.cms.enabled
+  tags: [cms]

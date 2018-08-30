@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Create discovery repository branch
+      include_role:
+        name: app/discovery/repository/branch/create
+      vars:
+        _repository: '{{ app.discovery.repository }}'
+        _branch: '{{ branch }}'
+  when: app.discovery.enabled
+  tags: [discovery]

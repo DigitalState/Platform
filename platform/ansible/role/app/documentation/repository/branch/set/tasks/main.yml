@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set documentation repository active branch
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _branch }}'
+        dest: /srv/documentation
+        update: no
+  tags: [documentation]

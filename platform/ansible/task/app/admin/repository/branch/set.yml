@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Set admin repository active branch
+      include_role:
+        name: app/admin/repository/branch/set
+      vars:
+        _repository: '{{ app.admin.repository }}'
+        _branch: '{{ branch }}'
+  when: app.admin.enabled
+  tags: [admin]

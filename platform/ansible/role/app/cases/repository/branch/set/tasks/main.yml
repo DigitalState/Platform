@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set cases repository active branch
+      git:
+        repo: '{{ _repository }}'
+        version: '{{ _branch }}'
+        dest: /srv/cases
+        update: no
+  tags: [cases]

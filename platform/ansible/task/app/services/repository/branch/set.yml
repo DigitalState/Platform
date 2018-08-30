@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Set services repository active branch
+      include_role:
+        name: app/services/repository/branch/set
+      vars:
+        _repository: '{{ app.services.repository }}'
+        _branch: '{{ branch }}'
+  when: app.services.enabled
+  tags: [services]

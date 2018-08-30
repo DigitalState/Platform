@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Create records repository branch
+      include_role:
+        name: app/records/repository/branch/create
+      vars:
+        _repository: '{{ app.records.repository }}'
+        _branch: '{{ branch }}'
+  when: app.records.enabled
+  tags: [records]

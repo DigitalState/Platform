@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Set documentation repository active branch
+      shell: 'git checkout -b {{ _branch }}'
+      args:
+        chdir: /srv/documentation
+  tags: [documentation]

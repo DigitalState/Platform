@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Set records repository active branch
+      shell: 'git checkout -b {{ _branch }}'
+      args:
+        chdir: /srv/records
+  tags: [records]
