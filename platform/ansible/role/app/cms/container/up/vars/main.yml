@@ -2,6 +2,7 @@
 _env: prod
 _compose_project_name: dscms
 _network: dsproxy_default
+_proxy_host: 127.0.0.1
 _directory: /srv/cms
 _api_host: api.cms.ds
 _database_host: cms_db
