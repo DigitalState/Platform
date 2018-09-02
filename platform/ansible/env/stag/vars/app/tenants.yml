@@ -2,7 +2,7 @@
 tenants:
   enabled: false
   repository: https://github.com/DigitalState/Tenants.git
-  version: 0.9.1
+  version: 0.10.0
   api:
     host: api.tenants.stag.ds
   database:
