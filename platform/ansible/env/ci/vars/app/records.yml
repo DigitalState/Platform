@@ -4,7 +4,7 @@ records:
   repository: https://github.com/DigitalState/Records.git
   version: develop
   api:
-    host: api.records.test.ds
+    host: api.records.ci.ds
   database:
     host: records_database
     port: 5432
@@ -12,7 +12,7 @@ records:
     username: records
     password: records
     ui:
-      host: ui.database.records.test.ds
+      host: ui.database.records.ci.ds
   cache:
     ui:
-      host: ui.cache.records.test.ds
+      host: ui.cache.records.ci.ds

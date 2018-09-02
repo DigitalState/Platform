@@ -4,4 +4,4 @@ portal:
   repository: https://github.com/DigitalState/Portal.git
   version: develop
   ui:
-    host: portal.test.ds
+    host: portal.ci.ds

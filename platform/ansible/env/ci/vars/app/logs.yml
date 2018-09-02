@@ -4,4 +4,4 @@ logs:
   repository: https://github.com/DigitalState/Logs.git
   version: develop
   api:
-    host: api.logs.test.ds
+    host: api.logs.ci.ds

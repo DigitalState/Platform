@@ -4,7 +4,7 @@ topics:
   repository: https://github.com/DigitalState/Topics.git
   version: develop
   api:
-    host: api.topics.test.ds
+    host: api.topics.ci.ds
   database:
     host: topics_database
     port: 5432
@@ -12,7 +12,7 @@ topics:
     username: topics
     password: topics
     ui:
-      host: ui.database.topics.test.ds
+      host: ui.database.topics.ci.ds
   cache:
     ui:
-      host: ui.cache.topics.test.ds
+      host: ui.cache.topics.ci.ds
