@@ -2,6 +2,7 @@
 _env: prod
 _compose_project_name: dsauthentication
 _network: dsproxy_default
+_proxy_host: 127.0.0.1
 _directory: /srv/authentication
 _api_host: api.authentication.ds
 _database_host: authentication_db

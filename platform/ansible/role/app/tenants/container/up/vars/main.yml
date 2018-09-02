@@ -2,6 +2,7 @@
 _env: prod
 _compose_project_name: dstenants
 _network: dsproxy_default
+_proxy_host: 127.0.0.1
 _directory: /srv/tenants
 _api_host: api.tenants.ds
 _database_host: tenants_db

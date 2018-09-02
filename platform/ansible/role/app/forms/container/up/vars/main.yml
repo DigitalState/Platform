@@ -2,6 +2,7 @@
 _env: prod
 _compose_project_name: dsforms
 _network: dsproxy_default
+_proxy_host: 127.0.0.1
 _directory: /srv/forms
 _api_host: api.forms.ds
 _database_host: forms_db

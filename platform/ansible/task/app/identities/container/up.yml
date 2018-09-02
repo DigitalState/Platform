@@ -1,5 +1,7 @@
 ---
 - block:
+    - name: Retrieve proxy container ip
+      include_tasks: /etc/ansible/task/app/proxy/container/property/ip.yml
     - name: Up identities container
       include_role:
         name: app/identities/container/up
@@ -7,6 +9,7 @@
         _env: '{{ env }}'
         _compose_project_name: '{{ namespace }}identities'
         _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_ip.stdout }}'
         _directory: '{{ directory }}/identities'
         _api_host: '{{ app.identities.api.host }}'
         _database_host: '{{ app.identities.database.host }}'

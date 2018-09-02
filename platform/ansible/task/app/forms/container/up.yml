@@ -1,5 +1,7 @@
 ---
 - block:
+    - name: Retrieve proxy container ip
+      include_tasks: /etc/ansible/task/app/proxy/container/property/ip.yml
     - name: Up forms container
       include_role:
         name: app/forms/container/up
@@ -7,6 +9,7 @@
         _env: '{{ env }}'
         _compose_project_name: '{{ namespace }}forms'
         _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_ip.stdout }}'
         _directory: '{{ directory }}/forms'
         _api_host: '{{ app.forms.api.host }}'
         _database_host: '{{ app.forms.database.host }}'
@@ -16,5 +19,5 @@
         _database_password: '{{ app.forms.database.password }}'
         _database_ui_host: '{{ app.forms.database.ui.host }}'
         _cache_ui_host: '{{ app.forms.cache.ui.host }}'
-  when: app.cms.enabled
+  when: app.forms.enabled
   tags: [forms]
