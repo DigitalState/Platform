@@ -6,7 +6,7 @@
 !/app/jwt/lab/.gitkeep
 !/app/jwt/prod/.gitkeep
 !/app/jwt/stag/.gitkeep
-!/app/jwt/test/.gitkeep
+!/app/jwt/ci/.gitkeep
 /app/srv/*
 !/app/srv/.gitkeep
 /app/vendor
@@ -17,4 +17,4 @@
 !/platform/ssh/lab/.gitkeep
 !/platform/ssh/prod/.gitkeep
 !/platform/ssh/stag/.gitkeep
-!/platform/ssh/test/.gitkeep
+!/platform/ssh/ci/.gitkeep
