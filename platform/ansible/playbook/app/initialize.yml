@@ -17,6 +17,17 @@
   tags: [system]
 
 - name: Install ansible requirements
+  hosts: platform
+  become: true
+  gather_facts: false
+  tasks:
+    - name: Install python packages
+      include_role:
+        name: package/python
+  tags: [system]
+
+
+- name: Install ansible requirements
   hosts: app
   become: true
   gather_facts: false
