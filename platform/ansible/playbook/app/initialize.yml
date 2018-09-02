@@ -16,23 +16,33 @@
         _password: '{{ vars["hostvars"]["app"]["ansible_ssh_pass"] }}'
   tags: [system]
 
-- name: Install ansible requirements
+- name: Test
   hosts: platform
   become: true
   gather_facts: false
   tasks:
-    - name: Install python packages
-      include_role:
-        name: package/python
-  tags: [system]
+    - raw: uname -a
+      register: _os
+    - debug:
+        var: _os
 
-
-- name: Install ansible requirements
+- name: Test
   hosts: app
   become: true
   gather_facts: false
   tasks:
-    - name: Install python packages
-      include_role:
-        name: package/python
-  tags: [system]
+    - raw: uname -a
+      register: _os
+    - debug:
+        var: _os
+
+
+#- name: Install ansible requirements
+#  hosts: app
+#  become: true
+#  gather_facts: false
+#  tasks:
+#    - name: Install python packages
+#      include_role:
+#        name: package/python
+#  tags: [system]
