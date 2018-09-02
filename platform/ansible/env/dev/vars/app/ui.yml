@@ -2,4 +2,4 @@
 ui:
   enabled: false
   repository: https://github.com/DigitalState/Ui.git
-  version: 0.9.0
+  version: 0.10.0

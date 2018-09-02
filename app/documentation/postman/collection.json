@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "8d62d24f-017b-4687-bc23-4ca40ed3afe5",
-		"name": "DigitalState 0.9.1",
+		"name": "DigitalState 0.10.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -9353,7 +9353,7 @@
 							},
 							"response": [
 								{
-									"id": "772e5bc0-d923-4fb2-ab4f-88ae116a2423",
+									"id": "2b8b59fb-9102-4ea6-95c2-367c7787f9f9",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9513,7 +9513,7 @@
 							},
 							"response": [
 								{
-									"id": "60197910-ab14-49f9-b9bf-863d619f2812",
+									"id": "ae6d9909-a16a-4507-8242-caf12abd54fe",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -9674,7 +9674,7 @@
 							},
 							"response": [
 								{
-									"id": "10b2ecd0-6c88-40a6-bc3f-f386ed7dd611",
+									"id": "92f50b63-db6f-465b-a5ed-46b5cd0b19e2",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10104,7 +10104,7 @@
 							},
 							"response": [
 								{
-									"id": "3afc7bd1-c1fc-44d9-bd8b-39209840eb18",
+									"id": "232ebadc-f108-4e77-aa7a-96c29b54ac07",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10264,7 +10264,7 @@
 							},
 							"response": [
 								{
-									"id": "d8a6f80f-e785-492e-812a-b00e2e788240",
+									"id": "701f2f26-53d7-444f-93f0-706a79358d29",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -10425,7 +10425,7 @@
 							},
 							"response": [
 								{
-									"id": "e2ce82f7-049c-4fde-8f8d-931e38a4dbcc",
+									"id": "418aad9e-d3d5-4d34-bf0a-0fc4303a52c6",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12178,7 +12178,7 @@
 							},
 							"response": [
 								{
-									"id": "b968e5c7-4031-46d2-b257-d4b800dd4466",
+									"id": "9ec7cd52-7f2a-4549-857a-197888eeab61",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12338,7 +12338,7 @@
 							},
 							"response": [
 								{
-									"id": "83983c86-54a4-409f-abe3-6893a99b9be0",
+									"id": "b1d97940-5e04-43d2-8d9d-9042100d646f",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -12499,7 +12499,7 @@
 							},
 							"response": [
 								{
-									"id": "860dc168-ba74-4676-9c7d-be47c6c44dc4",
+									"id": "593479c3-8076-4499-821b-a7c5ffc0af37",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12920,7 +12920,7 @@
 							},
 							"response": [
 								{
-									"id": "08e0295f-5732-4e3e-b2fe-3a76d330f61a",
+									"id": "5f59a413-4846-4e18-8c98-fab9e1f06566",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -13080,7 +13080,7 @@
 							},
 							"response": [
 								{
-									"id": "affb0295-ab9c-4744-b75b-e83c6df7e262",
+									"id": "e831b0bd-a29a-436f-9569-33ea9323f465",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -13241,7 +13241,7 @@
 							},
 							"response": [
 								{
-									"id": "f779fb7e-c0be-455e-9116-87860ebb91ff",
+									"id": "5da1c3ac-b809-4f2b-b297-6c5dbd4a1a69",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -13621,7 +13621,7 @@
 							},
 							"response": [
 								{
-									"id": "f6bb3453-19a2-48cf-a4be-a92c277675d9",
+									"id": "3027a5a1-28ac-4413-afa3-a5e8518768fe",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -13781,7 +13781,7 @@
 							},
 							"response": [
 								{
-									"id": "dc1b2a74-a8ae-452b-8c4c-c0971b7587a4",
+									"id": "e06b7bb9-5365-432e-98c9-c53271a66bd2",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -13942,7 +13942,7 @@
 							},
 							"response": [
 								{
-									"id": "78f4f899-c36e-43dd-999c-29d95caf00f6",
+									"id": "076f362a-b9e0-48be-a711-f6ba5b6ea7ea",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -14313,7 +14313,7 @@
 							},
 							"response": [
 								{
-									"id": "8c964760-2df7-4a98-9a4d-0edfd3318d3a",
+									"id": "d42c26e7-1f90-4045-a9c3-aead5457689c",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -14473,7 +14473,7 @@
 							},
 							"response": [
 								{
-									"id": "44b17250-5ba6-408e-8e71-39adbe1d0b39",
+									"id": "e42093a7-d417-4e01-98d0-9e013130357d",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -14634,7 +14634,7 @@
 							},
 							"response": [
 								{
-									"id": "bba5a01b-749e-4781-81e1-0cb2828c9b3c",
+									"id": "375bc1f8-c103-49c6-84e1-c89418874a8a",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -14816,7 +14816,7 @@
 							},
 							"response": [
 								{
-									"id": "9ffc1f2a-827e-4eaf-813c-ff5e06e2196c",
+									"id": "c7820c2b-c50b-4265-97cf-486ddc3f3db1",
 									"name": "Created",
 									"originalRequest": {
 										"method": "GET",

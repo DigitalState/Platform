@@ -1,6 +1,6 @@
 {
   "id": "80efe45f-d1c8-4b79-bd5e-edcd6ab3634b",
-  "name": "Platform Lab 0.9.1",
+  "name": "Platform Lab 0.10.0",
   "values": [
     {
       "key": "schema",
@@ -124,6 +124,6 @@
     }
   ],
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2018-08-27T17:49:53.033Z",
+  "_postman_exported_at": "2018-09-02T15:12:08.051Z",
   "_postman_exported_using": "Postman/6.0.10"
 }
