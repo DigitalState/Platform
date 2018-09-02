@@ -13,11 +13,11 @@
 - debug:
     msg: "{{ _os.stdout.find('Ubuntu') != -1 }}"
 
-- import_tasks: alpine.yml
-  when: _os.stdout.find('moby') != -1
-
-- import_tasks: ubuntu.yml
-  when: _os.stdout.find('Ubuntu') != -1
+#- import_tasks: alpine.yml
+#  when: _os.stdout.find('moby') != -1
+#
+#- import_tasks: ubuntu.yml
+#  when: _os.stdout.find('Ubuntu') != -1
 
 - name: Gather facts
   setup:
