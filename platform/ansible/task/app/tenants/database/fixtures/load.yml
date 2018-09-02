@@ -7,7 +7,7 @@
       include_role:
         name: app/tenants/database/fixtures/load
       vars:
-        _fixtures: '{{ "test" if env == "test" else "dev" }}'
-        _override: '{{ "/root/fixtures/tenants" if override.stat.exists == true and env != "test" else "" }}'
+        _fixtures: '{{ "test" if env == "ci" else "dev" }}'
+        _override: '{{ "/root/fixtures/tenants" if override.stat.exists == true and env != "ci" else "" }}'
   when: app.tenants.enabled
   tags: [tenants]

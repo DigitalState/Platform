@@ -7,7 +7,7 @@
       include_role:
         name: app/tasks/database/fixtures/load
       vars:
-        fixtures: '{{ "test" if env == "test" else "dev" }}'
-        override: '{{ "/root/fixtures/tasks" if override.stat.exists == true and env != "test" else "" }}'
+        fixtures: '{{ "test" if env == "ci" else "dev" }}'
+        override: '{{ "/root/fixtures/tasks" if override.stat.exists == true and env != "ci" else "" }}'
   when: app.tasks.enabled
   tags: [tasks]
