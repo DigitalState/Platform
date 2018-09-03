@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.11.0
+
+- Feature [Test] Refactor continious integration
+
 ## 0.9.1
 
 - Feature [App] Bump microservices to latest version
