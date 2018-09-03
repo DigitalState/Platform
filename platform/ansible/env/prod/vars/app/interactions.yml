@@ -2,7 +2,7 @@
 interactions:
   enabled: false
   repository: https://github.com/DigitalState/Interactions.git
-  version: 0.10.0
+  version: 0.11.0
   api:
     host: api.interactions.prod.ds
   database:

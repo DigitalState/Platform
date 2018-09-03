@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.11.0
+
+- Feature [Platform] Refactor continuous integration
+- Feature [Platform] Upgrade inventory versions
+
 ## 0.9.1
 
 - Feature [App] Bump microservices to latest version
