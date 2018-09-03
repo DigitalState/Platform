@@ -2,7 +2,8 @@
 
 ## 0.11.0
 
-- Feature [Test] Refactor continious integration
+- Feature [Platform] Refactor continuous integration
+- Feature [Platform] Upgrade inventory versions
 
 ## 0.9.1
 
