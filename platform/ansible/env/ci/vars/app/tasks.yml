@@ -4,7 +4,7 @@ tasks:
   repository: https://github.com/DigitalState/Tasks.git
   version: develop
   api:
-    host: api.tasks.test.ds
+    host: api.tasks.ci.ds
   database:
     host: tasks_database
     port: 5432
@@ -12,7 +12,7 @@ tasks:
     username: tasks
     password: tasks
     ui:
-      host: ui.database.tasks.test.ds
+      host: ui.database.tasks.ci.ds
   cache:
     ui:
-      host: ui.cache.tasks.test.ds
+      host: ui.cache.tasks.ci.ds

@@ -4,7 +4,7 @@ cases:
   repository: https://github.com/DigitalState/Cases.git
   version: develop
   api:
-    host: api.cases.test.ds
+    host: api.cases.ci.ds
   database:
     host: cases_database
     port: 5432
@@ -12,7 +12,7 @@ cases:
     username: cases
     password: cases
     ui:
-      host: ui.database.cases.test.ds
+      host: ui.database.cases.ci.ds
   cache:
     ui:
-      host: ui.cache.cases.test.ds
+      host: ui.cache.cases.ci.ds

@@ -9,4 +9,4 @@ all:
     platform:
       ansible_connection: local
   vars:
-    env: test
+    env: ci

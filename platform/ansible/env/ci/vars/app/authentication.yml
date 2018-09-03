@@ -4,7 +4,7 @@ authentication:
   repository: https://github.com/DigitalState/Authentication.git
   version: develop
   api:
-    host: api.authentication.test.ds
+    host: api.authentication.ci.ds
   database:
     host: authentication_database
     port: 5432
@@ -12,7 +12,7 @@ authentication:
     username: authentication
     password: authentication
     ui:
-      host: ui.database.authentication.test.ds
+      host: ui.database.authentication.ci.ds
   cache:
     ui:
-      host: ui.cache.authentication.test.ds
+      host: ui.cache.authentication.ci.ds
