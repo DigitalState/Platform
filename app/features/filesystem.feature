@@ -18,6 +18,4 @@ Feature: Navigate app filesystem
       proxy
       records
       services
-      tasks
-      tenants
       """
