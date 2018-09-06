@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create core repository tag
+      shell: 'git tag {{ _tag }}'
+      args:
+        chdir: /srv/core
+  tags: [core]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create services repository tag
+      shell: 'git tag {{ _tag }}'
+      args:
+        chdir: /srv/services
+  tags: [services]

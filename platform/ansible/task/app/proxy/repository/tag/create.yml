@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Create proxy repository tag
+      include_role:
+        name: app/proxy/repository/tag/create
+      vars:
+        _repository: '{{ app.proxy.repository }}'
+        _tag: '{{ tag }}'
+  when: app.proxy.enabled
+  tags: [proxy]

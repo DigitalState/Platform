@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create identities repository tag
+      shell: 'git tag {{ _tag }}'
+      args:
+        chdir: /srv/identities
+  tags: [identities]

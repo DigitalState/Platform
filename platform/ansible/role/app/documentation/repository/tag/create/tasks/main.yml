@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create documentation repository tag
+      shell: 'git tag {{ _tag }}'
+      args:
+        chdir: /srv/documentation
+  tags: [documentation]

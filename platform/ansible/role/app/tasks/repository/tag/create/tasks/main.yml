@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create tasks repository tag
+      shell: 'git tag {{ _tag }}'
+      args:
+        chdir: /srv/tasks
+  tags: [tasks]

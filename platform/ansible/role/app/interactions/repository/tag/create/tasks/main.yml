@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create interactions repository tag
+      shell: 'git tag {{ _tag }}'
+      args:
+        chdir: /srv/interactions
+  tags: [interactions]

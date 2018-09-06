@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create cms repository tag
+      shell: 'git tag {{ _tag }}'
+      args:
+        chdir: /srv/cms
+  tags: [cms]

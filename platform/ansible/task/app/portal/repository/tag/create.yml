@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Create portal repository tag
+      include_role:
+        name: app/portal/repository/tag/create
+      vars:
+        _repository: '{{ app.portal.repository }}'
+        _tag: '{{ tag }}'
+  when: app.portal.enabled
+  tags: [portal]

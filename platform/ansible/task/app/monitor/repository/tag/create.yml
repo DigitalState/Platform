@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Create monitor repository tag
+      include_role:
+        name: app/monitor/repository/tag/create
+      vars:
+        _repository: '{{ app.monitor.repository }}'
+        _tag: '{{ tag }}'
+  when: app.monitor.enabled
+  tags: [monitor]

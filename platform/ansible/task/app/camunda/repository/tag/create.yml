@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Create camunda repository tag
+      include_role:
+        name: app/camunda/repository/tag/create
+      vars:
+        _repository: '{{ app.camunda.repository }}'
+        _tag: '{{ tag }}'
+  when: app.camunda.enabled
+  tags: [camunda]
