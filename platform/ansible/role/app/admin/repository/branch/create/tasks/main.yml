@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set admin repository active branch
+    - name: Create admin repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/admin

@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Delete topics repository branch
+      include_role:
+        name: app/topics/repository/branch/delete
+      vars:
+        _repository: '{{ app.topics.repository }}'
+        _branch: '{{ branch }}'
+  when: app.topics.enabled
+  tags: [topics]

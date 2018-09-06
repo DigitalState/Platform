@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set tenants repository active branch
+    - name: Create tenants repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/tenants

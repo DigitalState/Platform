@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set guide repository active branch
+    - name: Create guide repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/guide

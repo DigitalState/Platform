@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set proxy repository active branch
+    - name: Create proxy repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/proxy

@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Delete portal repository branch
+      include_role:
+        name: app/portal/repository/branch/delete
+      vars:
+        _repository: '{{ app.portal.repository }}'
+        _branch: '{{ branch }}'
+  when: app.portal.enabled
+  tags: [portal]

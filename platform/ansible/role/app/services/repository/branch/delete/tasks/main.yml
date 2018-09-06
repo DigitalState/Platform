@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Delete services repository branch
+      shell: 'git delete -D {{ _branch }}'
+      args:
+        chdir: /srv/services
+  tags: [services]

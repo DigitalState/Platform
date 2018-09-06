@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set cases repository active branch
+    - name: Create cases repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/cases

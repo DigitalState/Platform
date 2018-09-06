@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set topics repository active branch
+    - name: Create topics repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/topics

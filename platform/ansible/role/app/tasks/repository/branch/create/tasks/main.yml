@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set tasks repository active branch
+    - name: Create tasks repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/tasks

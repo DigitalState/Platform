@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Delete identities repository branch
+      shell: 'git delete -D {{ _branch }}'
+      args:
+        chdir: /srv/identities
+  tags: [identities]

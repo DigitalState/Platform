@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Delete documentation repository branch
+      include_role:
+        name: app/documentation/repository/branch/delete
+      vars:
+        _repository: '{{ app.documentation.repository }}'
+        _branch: '{{ branch }}'
+  when: app.documentation.enabled
+  tags: [documentation]

@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set authentication repository active branch
+    - name: Create authentication repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/authentication

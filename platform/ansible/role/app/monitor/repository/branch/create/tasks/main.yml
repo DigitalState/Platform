@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set monitor repository active branch
+    - name: Create monitor repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/monitor

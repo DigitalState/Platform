@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set services repository active branch
+    - name: Create services repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/services

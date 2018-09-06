@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set records repository active branch
+    - name: Create records repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/records

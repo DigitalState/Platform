@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set identities repository active branch
+    - name: Create identities repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/identities

@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set discovery repository active branch
+    - name: Create discovery repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/discovery

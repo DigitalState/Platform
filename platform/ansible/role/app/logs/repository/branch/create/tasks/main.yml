@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set logs repository active branch
+    - name: Create logs repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/logs

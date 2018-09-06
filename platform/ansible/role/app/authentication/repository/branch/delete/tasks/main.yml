@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Delete authentication repository branch
+      shell: 'git delete -D {{ _branch }}'
+      args:
+        chdir: /srv/authentication
+  tags: [authentication]

@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Delete camunda repository branch
+      include_role:
+        name: app/camunda/repository/branch/delete
+      vars:
+        _repository: '{{ app.camunda.repository }}'
+        _branch: '{{ branch }}'
+  when: app.camunda.enabled
+  tags: [camunda]

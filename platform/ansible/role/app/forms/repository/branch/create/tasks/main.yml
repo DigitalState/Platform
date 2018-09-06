@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set forms repository active branch
+    - name: Create forms repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/forms

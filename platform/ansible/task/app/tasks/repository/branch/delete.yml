@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Delete tasks repository branch
+      include_role:
+        name: app/tasks/repository/branch/delete
+      vars:
+        _repository: '{{ app.tasks.repository }}'
+        _branch: '{{ branch }}'
+  when: app.tasks.enabled
+  tags: [tasks]

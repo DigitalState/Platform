@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set portal repository active branch
+    - name: Create portal repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/portal

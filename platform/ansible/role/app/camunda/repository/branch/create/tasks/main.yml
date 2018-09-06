@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set camunda repository active branch
+    - name: Create camunda repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/camunda

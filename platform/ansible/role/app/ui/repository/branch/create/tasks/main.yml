@@ -1,6 +1,6 @@
 ---
 - block:
-    - name: Set ui repository active branch
+    - name: Create ui repository branch
       shell: 'git checkout -b {{ _branch }}'
       args:
         chdir: /srv/ui

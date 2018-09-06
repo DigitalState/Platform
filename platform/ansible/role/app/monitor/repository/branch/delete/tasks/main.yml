@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Delete monitor repository branch
+      shell: 'git delete -D {{ _branch }}'
+      args:
+        chdir: /srv/monitor
+  tags: [monitor]
