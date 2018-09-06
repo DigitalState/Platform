@@ -6,5 +6,8 @@
       vars:
         _repository: '{{ app.cases.repository }}'
         _version: '{{ app.cases.version }}'
+        _credential:
+          username: '{{ github.username }}'
+          password: '{{ github.password }}'
   when: app.cases.enabled
   tags: [cases]
