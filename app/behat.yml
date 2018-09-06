@@ -8,4 +8,4 @@ default:
         - %paths.base%/features
       contexts:
         - FeatureContext
-        - FileSystemContext
+        - ConsoleContext

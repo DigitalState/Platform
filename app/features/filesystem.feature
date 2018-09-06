@@ -1,9 +1,9 @@
 Feature: Navigate app filesystem
 
   Scenario: Listing all app directories and files
-    Given I am in a directory "/srv"
-    When I run "ls"
-    Then I should get:
+    Given I have a console at "/srv"
+    When I run the command "ls"
+    Then I should get the following output:
       """
       VERSION
       assets
@@ -18,6 +18,4 @@ Feature: Navigate app filesystem
       proxy
       records
       services
-      tasks
-      tenants
       """
