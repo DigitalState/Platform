@@ -5,6 +5,6 @@ camunda:
   repository: https://github.com/DigitalState/Camunda.git
   version: develop
   api:
-    host: api.camunda.test.ds
+    host: api.camunda.ci.ds
   username: admin@staff.ds
   password: admin

@@ -1,5 +1,7 @@
 ---
 - block:
+    - name: Retrieve proxy container ip
+      include_tasks: /etc/ansible/task/app/proxy/container/property/ip.yml
     - name: Up records container
       include_role:
         name: app/records/container/up
@@ -7,6 +9,7 @@
         _env: '{{ env }}'
         _compose_project_name: '{{ namespace }}records'
         _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_ip.stdout }}'
         _directory: '{{ directory }}/records'
         _api_host: '{{ app.records.api.host }}'
         _database_host: '{{ app.records.database.host }}'

@@ -1,5 +1,7 @@
 ---
 - block:
+    - name: Retrieve proxy container ip
+      include_tasks: /etc/ansible/task/app/proxy/container/property/ip.yml
     - name: Up formio container
       include_role:
         name: app/formio/container/up
@@ -7,6 +9,7 @@
         _env: '{{ env }}'
         _compose_project_name: '{{ namespace }}formio'
         _network: '{{ namespace }}proxy_default'
+        _proxy_host: '{{ proxy_container_ip.stdout }}'
         _directory: '{{ directory }}/formio'
         _api_host: '{{ app.formio.api.host }}'
         _database_ui_host: '{{ app.formio.database.ui.host }}'

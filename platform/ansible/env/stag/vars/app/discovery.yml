@@ -3,7 +3,7 @@ discovery:
   enabled: true
   order: -20
   repository: https://github.com/DigitalState/Discovery.git
-  version: 0.9.0
+  version: 0.11.1
   token:
     master: ~
   ui:

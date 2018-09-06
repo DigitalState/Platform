@@ -4,7 +4,7 @@ cms:
   repository: https://github.com/DigitalState/Cms.git
   version: develop
   api:
-    host: api.cms.test.ds
+    host: api.cms.ci.ds
   database:
     host: cms_database
     port: 5432
@@ -12,7 +12,7 @@ cms:
     username: cms
     password: cms
     ui:
-      host: ui.database.cms.test.ds
+      host: ui.database.cms.ci.ds
   cache:
     ui:
-      host: ui.cache.cms.test.ds
+      host: ui.cache.cms.ci.ds

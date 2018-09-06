@@ -11,6 +11,7 @@
       environment:
         COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
         NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
         DIRECTORY: '{{ _directory }}'
         API_HOST: '{{ _api_host }}'
         JAVA_OPTS: '-Djava.security.egd=file:/dev/./urandom -Duser.timezone={{ _timezone }}'

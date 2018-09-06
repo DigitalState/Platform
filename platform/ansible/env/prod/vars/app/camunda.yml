@@ -3,7 +3,7 @@ camunda:
   enabled: true
   order: -10
   repository: https://github.com/DigitalState/Camunda.git
-  version: 0.9.1
+  version: 0.11.0
   api:
     host: api.camunda.prod.ds
   username: admin@staff.ds

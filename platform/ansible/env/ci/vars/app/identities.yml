@@ -4,7 +4,7 @@ identities:
   repository: https://github.com/DigitalState/Identities.git
   version: develop
   api:
-    host: api.identities.test.ds
+    host: api.identities.ci.ds
   database:
     host: identities_database
     port: 5432
@@ -12,7 +12,7 @@ identities:
     username: identities
     password: identities
     ui:
-      host: ui.database.identities.test.ds
+      host: ui.database.identities.ci.ds
   cache:
     ui:
-      host: ui.cache.identities.test.ds
+      host: ui.cache.identities.ci.ds

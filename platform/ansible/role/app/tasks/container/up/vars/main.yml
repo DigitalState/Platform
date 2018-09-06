@@ -2,6 +2,7 @@
 _env: prod
 _compose_project_name: dstasks
 _network: dsproxy_default
+_proxy_host: 127.0.0.1
 _directory: /srv/tasks
 _api_host: api.tasks.ds
 _database_host: tasks_db

@@ -4,7 +4,7 @@ services:
   repository: https://github.com/DigitalState/Services.git
   version: develop
   api:
-    host: api.services.test.ds
+    host: api.services.ci.ds
   database:
     host: services_database
     port: 5432
@@ -12,7 +12,7 @@ services:
     username: services
     password: services
     ui:
-      host: ui.database.services.test.ds
+      host: ui.database.services.ci.ds
   cache:
     ui:
-      host: ui.cache.services.test.ds
+      host: ui.cache.services.ci.ds

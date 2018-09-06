@@ -2,6 +2,7 @@
 _env: prod
 _compose_project_name: dscases
 _network: dsproxy_default
+_proxy_host: 127.0.0.1
 _directory: /srv/cases
 _api_host: api.cases.ds
 _database_host: cases_db

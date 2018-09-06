@@ -2,6 +2,7 @@
 _env: prod
 _compose_project_name: dstopics
 _network: dsproxy_default
+_proxy_host: 127.0.0.1
 _directory: /srv/topics
 _api_host: api.topics.ds
 _database_host: topics_db

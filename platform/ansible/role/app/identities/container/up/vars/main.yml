@@ -2,6 +2,7 @@
 _env: prod
 _compose_project_name: dsidentities
 _network: dsproxy_default
+_proxy_host: 127.0.0.1
 _directory: /srv/identities
 _api_host: api.identities.ds
 _database_host: identities_db

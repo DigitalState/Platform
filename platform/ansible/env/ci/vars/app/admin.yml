@@ -4,4 +4,4 @@ admin:
   repository: https://github.com/DigitalState/Admin.git
   version: develop
   ui:
-    host: admin.test.ds
+    host: admin.ci.ds

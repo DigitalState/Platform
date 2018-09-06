@@ -5,10 +5,14 @@
   changed_when: false
 
 - import_tasks: alpine.yml
-  when: _os.stdout.find('moby')
+  when:
+    - _os.stdout.find('moby') != -1
+    - env != 'ci'
 
 - import_tasks: ubuntu.yml
-  when: _os.stdout.find('Ubuntu')
+  when:
+    - _os.stdout.find('Ubuntu') != -1
+    - env != 'ci'
 
 - name: Gather facts
   setup:

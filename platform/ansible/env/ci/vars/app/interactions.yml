@@ -4,7 +4,7 @@ interactions:
   repository: https://github.com/DigitalState/Interactions.git
   version: develop
   api:
-    host: api.interactions.test.ds
+    host: api.interactions.ci.ds
   database:
     host: interactions_database
     port: 5432
@@ -12,7 +12,7 @@ interactions:
     username: interactions
     password: interactions
     ui:
-      host: ui.database.interactions.test.ds
+      host: ui.database.interactions.ci.ds
   cache:
     ui:
-      host: ui.cache.interactions.test.ds
+      host: ui.cache.interactions.ci.ds
