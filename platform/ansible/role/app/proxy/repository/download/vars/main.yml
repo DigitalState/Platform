@@ -1,3 +1,6 @@
 ---
 _repository: https://github.com/DigitalState/Proxy.git
 _version: master
+_credential:
+  username: ~
+  password: ~
