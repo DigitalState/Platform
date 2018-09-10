@@ -6,5 +6,8 @@
       vars:
         _repository: '{{ app.camunda.repository }}'
         _version: '{{ app.camunda.version }}'
+        _credential:
+          username: '{{ github.username }}'
+          password: '{{ github.password }}'
   when: app.camunda.enabled
   tags: [camunda]

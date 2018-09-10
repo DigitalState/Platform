@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Delete interactions repository branch
+      include_role:
+        name: app/interactions/repository/branch/delete
+      vars:
+        _branch: '{{ branch }}'
+  when: app.interactions.enabled
+  tags: [interactions]

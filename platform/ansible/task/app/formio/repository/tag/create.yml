@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create formio repository tag
+      include_role:
+        name: app/formio/repository/tag/create
+      vars:
+        _tag: '{{ tag }}'
+  when: app.formio.enabled
+  tags: [formio]

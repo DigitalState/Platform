@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push logs repository branch
+      include_role:
+        name: app/logs/repository/branch/push
+  when: app.logs.enabled
+  tags: [logs]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push forms repository branch
+      shell: 'git push'
+      args:
+        chdir: /srv/forms
+  tags: [forms]

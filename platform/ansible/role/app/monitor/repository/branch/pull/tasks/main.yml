@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull monitor repository branch
+      shell: 'git pull'
+      args:
+        chdir: /srv/monitor
+  tags: [monitor]

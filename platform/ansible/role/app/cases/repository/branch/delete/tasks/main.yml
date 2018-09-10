@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Delete cases repository branch
+      shell: 'git delete -D {{ _branch }}'
+      args:
+        chdir: /srv/cases
+  tags: [cases]

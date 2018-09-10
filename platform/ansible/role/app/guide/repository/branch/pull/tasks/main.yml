@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull guide repository branch
+      shell: 'git pull'
+      args:
+        chdir: /srv/guide
+  tags: [guide]

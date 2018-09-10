@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create core repository tag
+      include_role:
+        name: app/core/repository/tag/create
+      vars:
+        _tag: '{{ tag }}'
+  when: app.core.enabled
+  tags: [core]

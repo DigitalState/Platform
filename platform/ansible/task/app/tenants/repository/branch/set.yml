@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Set tenants repository active branch
+      include_role:
+        name: app/tenants/repository/branch/set
+      vars:
+        _repository: '{{ app.tenants.repository }}'
+        _branch: '{{ branch }}'
+  when: app.tenants.enabled
+  tags: [tenants]

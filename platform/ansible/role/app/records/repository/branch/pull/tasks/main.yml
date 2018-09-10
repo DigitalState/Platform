@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull records repository branch
+      shell: 'git pull'
+      args:
+        chdir: /srv/records
+  tags: [records]

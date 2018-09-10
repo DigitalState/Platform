@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create portal repository tag
+      shell: 'git tag {{ _tag }}'
+      args:
+        chdir: /srv/portal
+  tags: [portal]

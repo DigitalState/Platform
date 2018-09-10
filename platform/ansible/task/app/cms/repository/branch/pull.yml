@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull cms repository branch
+      include_role:
+        name: app/cms/repository/branch/pull
+  when: app.cms.enabled
+  tags: [cms]

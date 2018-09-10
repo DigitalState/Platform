@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Set monitor repository active branch
+      include_role:
+        name: app/monitor/repository/branch/set
+      vars:
+        _repository: '{{ app.monitor.repository }}'
+        _branch: '{{ branch }}'
+  when: app.monitor.enabled
+  tags: [monitor]

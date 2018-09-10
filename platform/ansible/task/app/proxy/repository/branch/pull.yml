@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull proxy repository branch
+      include_role:
+        name: app/proxy/repository/branch/pull
+  when: app.proxy.enabled
+  tags: [proxy]

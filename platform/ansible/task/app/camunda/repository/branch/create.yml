@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create camunda repository branch
+      include_role:
+        name: app/camunda/repository/branch/create
+      vars:
+        _branch: '{{ branch }}'
+  when: app.camunda.enabled
+  tags: [camunda]

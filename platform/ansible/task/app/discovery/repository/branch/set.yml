@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Set discovery repository active branch
+      include_role:
+        name: app/discovery/repository/branch/set
+      vars:
+        _repository: '{{ app.discovery.repository }}'
+        _branch: '{{ branch }}'
+  when: app.discovery.enabled
+  tags: [discovery]

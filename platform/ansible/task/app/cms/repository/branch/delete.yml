@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Delete cms repository branch
+      include_role:
+        name: app/cms/repository/branch/delete
+      vars:
+        _branch: '{{ branch }}'
+  when: app.cms.enabled
+  tags: [cms]

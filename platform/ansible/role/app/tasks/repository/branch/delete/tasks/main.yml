@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Delete tasks repository branch
+      shell: 'git delete -D {{ _branch }}'
+      args:
+        chdir: /srv/tasks
+  tags: [tasks]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Delete tenants repository branch
+      include_role:
+        name: app/tenants/repository/branch/delete
+      vars:
+        _branch: '{{ branch }}'
+  when: app.tenants.enabled
+  tags: [tenants]

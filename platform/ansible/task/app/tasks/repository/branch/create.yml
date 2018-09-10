@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create tasks repository branch
+      include_role:
+        name: app/tasks/repository/branch/create
+      vars:
+        _branch: '{{ branch }}'
+  when: app.tasks.enabled
+  tags: [tasks]

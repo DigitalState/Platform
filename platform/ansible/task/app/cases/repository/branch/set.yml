@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Set cases repository active branch
+      include_role:
+        name: app/cases/repository/branch/set
+      vars:
+        _repository: '{{ app.cases.repository }}'
+        _branch: '{{ branch }}'
+  when: app.cases.enabled
+  tags: [cases]

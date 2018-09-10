@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Set proxy repository active branch
+      include_role:
+        name: app/proxy/repository/branch/set
+      vars:
+        _repository: '{{ app.proxy.repository }}'
+        _branch: '{{ branch }}'
+  when: app.proxy.enabled
+  tags: [proxy]

@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Create monitor repository branch
+      include_role:
+        name: app/monitor/repository/branch/create
+      vars:
+        _repository: '{{ app.monitor.repository }}'
+        _branch: '{{ branch }}'
+  when: app.monitor.enabled
+  tags: [monitor]

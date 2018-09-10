@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create admin repository tag
+      include_role:
+        name: app/admin/repository/tag/create
+      vars:
+        _tag: '{{ tag }}'
+  when: app.admin.enabled
+  tags: [admin]

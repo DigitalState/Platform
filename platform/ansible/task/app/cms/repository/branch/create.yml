@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create cms repository branch
+      include_role:
+        name: app/cms/repository/branch/create
+      vars:
+        _branch: '{{ branch }}'
+  when: app.cms.enabled
+  tags: [cms]

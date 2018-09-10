@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create logs repository branch
+      include_role:
+        name: app/logs/repository/branch/create
+      vars:
+        _branch: '{{ branch }}'
+  when: app.logs.enabled
+  tags: [logs]

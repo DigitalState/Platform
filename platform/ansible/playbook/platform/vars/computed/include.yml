@@ -9,6 +9,7 @@
       when:
         - directory is none
         - hostvars['app']['ansible_host'] == 'app'
+      changed_when: false
   tags: [always]
 
 - name: Configure computed variables

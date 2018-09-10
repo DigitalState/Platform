@@ -1,3 +1,6 @@
 ---
 _repository: https://github.com/DigitalState/Guide.git
 _version: master
+_credential:
+  username: ~
+  password: ~

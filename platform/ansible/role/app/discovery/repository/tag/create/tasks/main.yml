@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create discovery repository tag
+      shell: 'git tag {{ _tag }}'
+      args:
+        chdir: /srv/discovery
+  tags: [discovery]

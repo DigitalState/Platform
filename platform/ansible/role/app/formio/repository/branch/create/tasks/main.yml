@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create formio repository branch
+      shell: 'git checkout -b {{ _branch }}'
+      args:
+        chdir: /srv/formio
+  tags: [formio]

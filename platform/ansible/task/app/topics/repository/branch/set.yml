@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Set topics repository active branch
+      include_role:
+        name: app/topics/repository/branch/set
+      vars:
+        _repository: '{{ app.topics.repository }}'
+        _branch: '{{ branch }}'
+  when: app.topics.enabled
+  tags: [topics]

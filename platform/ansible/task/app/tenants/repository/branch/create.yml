@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create tenants repository branch
+      include_role:
+        name: app/tenants/repository/branch/create
+      vars:
+        _branch: '{{ branch }}'
+  when: app.tenants.enabled
+  tags: [tenants]

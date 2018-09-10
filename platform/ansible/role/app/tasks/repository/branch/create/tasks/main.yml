@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create tasks repository branch
+      shell: 'git checkout -b {{ _branch }}'
+      args:
+        chdir: /srv/tasks
+  tags: [tasks]

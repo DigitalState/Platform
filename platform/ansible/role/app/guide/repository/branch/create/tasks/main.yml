@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create guide repository branch
+      shell: 'git checkout -b {{ _branch }}'
+      args:
+        chdir: /srv/guide
+  tags: [guide]

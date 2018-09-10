@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull ui repository branch
+      include_role:
+        name: app/ui/repository/branch/pull
+  when: app.ui.enabled
+  tags: [ui]

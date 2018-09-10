@@ -2,7 +2,7 @@
 - block:
     - name: Download logs repository
       git:
-        repo: '{{ _repository }}'
+        repo: '{{ _repository|replace("//", "//"+_credential.username+":"+_credential.password+"@") }}'
         version: '{{ _version }}'
         dest: /srv/logs
         force: yes

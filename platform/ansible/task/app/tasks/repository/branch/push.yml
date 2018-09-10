@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push tasks repository branch
+      include_role:
+        name: app/tasks/repository/branch/push
+  when: app.tasks.enabled
+  tags: [tasks]

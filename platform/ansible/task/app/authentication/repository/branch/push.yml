@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push authentication repository branch
+      include_role:
+        name: app/authentication/repository/branch/push
+  when: app.authentication.enabled
+  tags: [authentication]

@@ -6,5 +6,8 @@
       vars:
         _repository: '{{ app.authentication.repository }}'
         _version: '{{ app.authentication.version }}'
+        _credential:
+          username: '{{ github.username }}'
+          password: '{{ github.password }}'
   when: app.authentication.enabled
   tags: [authentication]

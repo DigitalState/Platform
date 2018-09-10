@@ -1,0 +1,28 @@
+---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+- import_playbook: /etc/ansible/playbook/platform/vars/computed/include.yml
+
+- name: Compile repository/branch/create task list
+  hosts: platform
+  become: true
+  tasks:
+    - name: Compile files
+      compile:
+        app: '{{ app }}'
+        directory: /etc/ansible/task/app/*
+        task: repository/branch/create
+      register: files
+  tags: [always]
+
+- name: Create repositories branch
+  hosts: app
+  become: true
+  vars_prompt:
+    - name: branch
+      prompt: The name of the branch you want to create?
+      private: no
+  tasks:
+    - name: Include compiled task list
+      include_tasks: '{{ item }}'
+      with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
+      tags: [always]

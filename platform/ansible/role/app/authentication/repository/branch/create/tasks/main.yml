@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create authentication repository branch
+      shell: 'git checkout -b {{ _branch }}'
+      args:
+        chdir: /srv/authentication
+  tags: [authentication]

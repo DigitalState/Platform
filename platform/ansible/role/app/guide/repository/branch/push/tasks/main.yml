@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push guide repository branch
+      shell: 'git push'
+      args:
+        chdir: /srv/guide
+  tags: [guide]

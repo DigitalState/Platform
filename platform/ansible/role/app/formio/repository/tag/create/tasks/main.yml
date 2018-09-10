@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create formio repository tag
+      shell: 'git tag {{ _tag }}'
+      args:
+        chdir: /srv/formio
+  tags: [formio]

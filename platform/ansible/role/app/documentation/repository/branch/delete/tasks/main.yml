@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Delete documentation repository branch
+      shell: 'git delete -D {{ _branch }}'
+      args:
+        chdir: /srv/documentation
+  tags: [documentation]

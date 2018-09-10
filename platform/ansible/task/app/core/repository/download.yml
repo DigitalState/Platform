@@ -6,5 +6,8 @@
       vars:
         _repository: '{{ app.core.repository }}'
         _version: '{{ app.core.version }}'
+        _credential:
+          username: '{{ github.username }}'
+          password: '{{ github.password }}'
   when: app.core.enabled
   tags: [core]

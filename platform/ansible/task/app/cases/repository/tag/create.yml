@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create cases repository tag
+      include_role:
+        name: app/cases/repository/tag/create
+      vars:
+        _tag: '{{ tag }}'
+  when: app.cases.enabled
+  tags: [cases]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create core repository branch
+      shell: 'git checkout -b {{ _branch }}'
+      args:
+        chdir: /srv/core
+  tags: [core]

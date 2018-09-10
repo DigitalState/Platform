@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull camunda repository branch
+      include_role:
+        name: app/camunda/repository/branch/pull
+  when: app.camunda.enabled
+  tags: [camunda]

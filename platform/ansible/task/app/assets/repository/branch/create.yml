@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create assets repository branch
+      include_role:
+        name: app/assets/repository/branch/create
+      vars:
+        _branch: '{{ branch }}'
+  when: app.assets.enabled
+  tags: [assets]

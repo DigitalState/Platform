@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull discovery repository branch
+      include_role:
+        name: app/discovery/repository/branch/pull
+  when: app.discovery.enabled
+  tags: [discovery]

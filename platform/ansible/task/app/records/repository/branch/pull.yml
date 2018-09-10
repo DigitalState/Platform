@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull records repository branch
+      include_role:
+        name: app/records/repository/branch/pull
+  when: app.records.enabled
+  tags: [records]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create services repository branch
+      shell: 'git checkout -b {{ _branch }}'
+      args:
+        chdir: /srv/services
+  tags: [services]

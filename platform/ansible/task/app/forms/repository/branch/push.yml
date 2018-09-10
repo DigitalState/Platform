@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push forms repository branch
+      include_role:
+        name: app/forms/repository/branch/push
+  when: app.forms.enabled
+  tags: [forms]

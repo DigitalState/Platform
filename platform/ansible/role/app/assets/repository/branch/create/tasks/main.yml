@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create assets repository branch
+      shell: 'git checkout -b {{ _branch }}'
+      args:
+        chdir: /srv/assets
+  tags: [assets]

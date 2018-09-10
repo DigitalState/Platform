@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push records repository branch
+      include_role:
+        name: app/records/repository/branch/push
+  when: app.records.enabled
+  tags: [records]

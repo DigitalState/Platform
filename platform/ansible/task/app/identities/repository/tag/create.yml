@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create identities repository tag
+      include_role:
+        name: app/identities/repository/tag/create
+      vars:
+        _tag: '{{ tag }}'
+  when: app.identities.enabled
+  tags: [identities]

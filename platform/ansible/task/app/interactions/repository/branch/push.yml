@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push interactions repository branch
+      include_role:
+        name: app/interactions/repository/branch/push
+  when: app.interactions.enabled
+  tags: [interactions]

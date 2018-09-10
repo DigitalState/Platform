@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create guide repository branch
+      include_role:
+        name: app/guide/repository/branch/create
+      vars:
+        _branch: '{{ branch }}'
+  when: app.guide.enabled
+  tags: [guide]

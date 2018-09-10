@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Set formio repository active branch
+      include_role:
+        name: app/formio/repository/branch/set
+      vars:
+        _repository: '{{ app.formio.repository }}'
+        _branch: '{{ branch }}'
+  when: app.formio.enabled
+  tags: [formio]

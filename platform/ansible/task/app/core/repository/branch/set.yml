@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Set core repository active branch
+      include_role:
+        name: app/core/repository/branch/set
+      vars:
+        _repository: '{{ app.core.repository }}'
+        _branch: '{{ branch }}'
+  when: app.core.enabled
+  tags: [core]

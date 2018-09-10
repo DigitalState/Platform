@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push topics repository branch
+      include_role:
+        name: app/topics/repository/branch/push
+  when: app.topics.enabled
+  tags: [topics]

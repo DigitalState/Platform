@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull identities repository branch
+      include_role:
+        name: app/identities/repository/branch/pull
+  when: app.identities.enabled
+  tags: [identities]

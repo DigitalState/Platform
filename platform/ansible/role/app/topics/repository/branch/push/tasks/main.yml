@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push topics repository branch
+      shell: 'git push'
+      args:
+        chdir: /srv/topics
+  tags: [topics]
