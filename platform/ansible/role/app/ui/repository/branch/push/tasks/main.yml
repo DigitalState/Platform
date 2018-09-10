@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push ui repository branch
+      shell: 'git push'
+      args:
+        chdir: /srv/ui
+  tags: [ui]

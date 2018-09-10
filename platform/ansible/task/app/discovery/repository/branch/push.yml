@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push discovery repository branch
+      include_role:
+        name: app/discovery/repository/branch/push
+  when: app.discovery.enabled
+  tags: [discovery]

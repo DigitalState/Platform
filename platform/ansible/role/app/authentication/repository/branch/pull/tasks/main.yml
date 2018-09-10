@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull authentication repository branch
+      shell: 'git pull'
+      args:
+        chdir: /srv/authentication
+  tags: [authentication]

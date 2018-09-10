@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push proxy repository branch
+      include_role:
+        name: app/proxy/repository/branch/push
+  when: app.proxy.enabled
+  tags: [proxy]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull monitor repository branch
+      include_role:
+        name: app/monitor/repository/branch/pull
+  when: app.monitor.enabled
+  tags: [monitor]

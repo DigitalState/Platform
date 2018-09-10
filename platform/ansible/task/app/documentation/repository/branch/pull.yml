@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull documentation repository branch
+      include_role:
+        name: app/documentation/repository/branch/pull
+  when: app.documentation.enabled
+  tags: [documentation]

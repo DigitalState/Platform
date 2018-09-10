@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull formio repository branch
+      include_role:
+        name: app/formio/repository/branch/pull
+  when: app.formio.enabled
+  tags: [formio]

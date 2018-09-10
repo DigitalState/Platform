@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull core repository branch
+      include_role:
+        name: app/core/repository/branch/pull
+  when: app.core.enabled
+  tags: [core]

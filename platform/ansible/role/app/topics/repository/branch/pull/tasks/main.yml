@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull topics repository branch
+      shell: 'git pull'
+      args:
+        chdir: /srv/topics
+  tags: [topics]

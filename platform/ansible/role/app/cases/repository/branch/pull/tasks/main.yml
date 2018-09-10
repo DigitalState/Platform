@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull cases repository branch
+      shell: 'git pull'
+      args:
+        chdir: /srv/cases
+  tags: [cases]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push ui repository branch
+      include_role:
+        name: app/ui/repository/branch/push
+  when: app.ui.enabled
+  tags: [ui]

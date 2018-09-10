@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Push portal repository branch
+      include_role:
+        name: app/portal/repository/branch/push
+  when: app.portal.enabled
+  tags: [portal]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull authentication repository branch
+      include_role:
+        name: app/authentication/repository/branch/pull
+  when: app.authentication.enabled
+  tags: [authentication]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull admin repository branch
+      shell: 'git pull'
+      args:
+        chdir: /srv/admin
+  tags: [admin]

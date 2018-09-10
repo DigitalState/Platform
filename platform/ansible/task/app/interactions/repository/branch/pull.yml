@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Pull interactions repository branch
+      include_role:
+        name: app/interactions/repository/branch/pull
+  when: app.interactions.enabled
+  tags: [interactions]
