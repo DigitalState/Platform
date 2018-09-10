@@ -1,9 +1,7 @@
 ---
 - block:
     - name: Set discovery repository active branch
-      git:
-        repo: '{{ _repository }}'
-        version: '{{ _branch }}'
-        dest: /srv/discovery
-        update: no
+      shell: 'git checkout {{ _branch }}'
+      args:
+        chdir: /srv/discovery
   tags: [discovery]

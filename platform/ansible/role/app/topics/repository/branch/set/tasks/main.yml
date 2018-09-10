@@ -1,9 +1,7 @@
 ---
 - block:
     - name: Set topics repository active branch
-      git:
-        repo: '{{ _repository }}'
-        version: '{{ _branch }}'
-        dest: /srv/topics
-        update: no
+      shell: 'git checkout {{ _branch }}'
+      args:
+        chdir: /srv/topics
   tags: [topics]

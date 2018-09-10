@@ -1,9 +1,7 @@
 ---
 - block:
     - name: Set monitor repository active branch
-      git:
-        repo: '{{ _repository }}'
-        version: '{{ _branch }}'
-        dest: /srv/monitor
-        update: no
+      shell: 'git checkout {{ _branch }}'
+      args:
+        chdir: /srv/monitor
   tags: [monitor]

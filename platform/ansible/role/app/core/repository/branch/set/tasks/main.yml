@@ -1,9 +1,7 @@
 ---
 - block:
     - name: Set core repository active branch
-      git:
-        repo: '{{ _repository }}'
-        version: '{{ _branch }}'
-        dest: /srv/core
-        update: no
+      shell: 'git checkout {{ _branch }}'
+      args:
+        chdir: /srv/core
   tags: [core]

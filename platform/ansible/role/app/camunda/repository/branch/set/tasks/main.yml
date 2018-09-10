@@ -1,9 +1,7 @@
 ---
 - block:
     - name: Set camunda repository active branch
-      git:
-        repo: '{{ _repository }}'
-        version: '{{ _branch }}'
-        dest: /srv/camunda
-        update: no
+      shell: 'git checkout {{ _branch }}'
+      args:
+        chdir: /srv/camunda
   tags: [camunda]

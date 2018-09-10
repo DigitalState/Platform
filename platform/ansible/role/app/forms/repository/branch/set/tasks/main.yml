@@ -1,9 +1,7 @@
 ---
 - block:
     - name: Set forms repository active branch
-      git:
-        repo: '{{ _repository }}'
-        version: '{{ _branch }}'
-        dest: /srv/forms
-        update: no
+      shell: 'git checkout {{ _branch }}'
+      args:
+        chdir: /srv/forms
   tags: [forms]

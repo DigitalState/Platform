@@ -1,9 +1,7 @@
 ---
 - block:
     - name: Set admin repository active branch
-      git:
-        repo: '{{ _repository }}'
-        version: '{{ _branch }}'
-        dest: /srv/admin
-        update: no
+      shell: 'git checkout {{ _branch }}'
+      args:
+        chdir: /srv/admin
   tags: [admin]

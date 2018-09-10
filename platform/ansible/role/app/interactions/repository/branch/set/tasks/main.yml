@@ -1,9 +1,7 @@
 ---
 - block:
     - name: Set interactions repository active branch
-      git:
-        repo: '{{ _repository }}'
-        version: '{{ _branch }}'
-        dest: /srv/interactions
-        update: no
+      shell: 'git checkout {{ _branch }}'
+      args:
+        chdir: /srv/interactions
   tags: [interactions]
