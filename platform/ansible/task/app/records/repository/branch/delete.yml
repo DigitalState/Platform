@@ -4,7 +4,6 @@
       include_role:
         name: app/records/repository/branch/delete
       vars:
-        _repository: '{{ app.records.repository }}'
         _branch: '{{ branch }}'
   when: app.records.enabled
   tags: [records]

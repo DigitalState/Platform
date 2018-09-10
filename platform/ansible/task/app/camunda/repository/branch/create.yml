@@ -4,7 +4,6 @@
       include_role:
         name: app/camunda/repository/branch/create
       vars:
-        _repository: '{{ app.camunda.repository }}'
         _branch: '{{ branch }}'
   when: app.camunda.enabled
   tags: [camunda]

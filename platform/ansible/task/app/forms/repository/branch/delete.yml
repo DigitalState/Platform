@@ -4,7 +4,6 @@
       include_role:
         name: app/forms/repository/branch/delete
       vars:
-        _repository: '{{ app.forms.repository }}'
         _branch: '{{ branch }}'
   when: app.forms.enabled
   tags: [forms]

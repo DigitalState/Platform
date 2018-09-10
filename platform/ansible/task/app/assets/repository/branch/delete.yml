@@ -4,7 +4,6 @@
       include_role:
         name: app/assets/repository/branch/delete
       vars:
-        _repository: '{{ app.assets.repository }}'
         _branch: '{{ branch }}'
   when: app.assets.enabled
   tags: [assets]

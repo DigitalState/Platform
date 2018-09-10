@@ -4,7 +4,6 @@
       include_role:
         name: app/tenants/repository/branch/create
       vars:
-        _repository: '{{ app.tenants.repository }}'
         _branch: '{{ branch }}'
   when: app.tenants.enabled
   tags: [tenants]

@@ -4,7 +4,6 @@
       include_role:
         name: app/topics/repository/branch/create
       vars:
-        _repository: '{{ app.topics.repository }}'
         _branch: '{{ branch }}'
   when: app.topics.enabled
   tags: [topics]

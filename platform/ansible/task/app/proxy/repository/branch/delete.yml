@@ -4,7 +4,6 @@
       include_role:
         name: app/proxy/repository/branch/delete
       vars:
-        _repository: '{{ app.proxy.repository }}'
         _branch: '{{ branch }}'
   when: app.proxy.enabled
   tags: [proxy]

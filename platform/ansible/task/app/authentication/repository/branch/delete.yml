@@ -4,7 +4,6 @@
       include_role:
         name: app/authentication/repository/branch/delete
       vars:
-        _repository: '{{ app.authentication.repository }}'
         _branch: '{{ branch }}'
   when: app.authentication.enabled
   tags: [authentication]

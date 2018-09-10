@@ -4,7 +4,6 @@
       include_role:
         name: app/discovery/repository/branch/delete
       vars:
-        _repository: '{{ app.discovery.repository }}'
         _branch: '{{ branch }}'
   when: app.discovery.enabled
   tags: [discovery]

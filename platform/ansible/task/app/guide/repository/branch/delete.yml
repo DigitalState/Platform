@@ -4,7 +4,6 @@
       include_role:
         name: app/guide/repository/branch/delete
       vars:
-        _repository: '{{ app.guide.repository }}'
         _branch: '{{ branch }}'
   when: app.guide.enabled
   tags: [guide]

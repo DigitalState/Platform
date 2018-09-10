@@ -4,7 +4,6 @@
       include_role:
         name: app/admin/repository/branch/delete
       vars:
-        _repository: '{{ app.admin.repository }}'
         _branch: '{{ branch }}'
   when: app.admin.enabled
   tags: [admin]

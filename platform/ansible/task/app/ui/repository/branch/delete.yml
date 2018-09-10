@@ -4,7 +4,6 @@
       include_role:
         name: app/ui/repository/branch/delete
       vars:
-        _repository: '{{ app.ui.repository }}'
         _branch: '{{ branch }}'
   when: app.ui.enabled
   tags: [ui]

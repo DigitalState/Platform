@@ -4,7 +4,6 @@
       include_role:
         name: app/interactions/repository/branch/delete
       vars:
-        _repository: '{{ app.interactions.repository }}'
         _branch: '{{ branch }}'
   when: app.interactions.enabled
   tags: [interactions]

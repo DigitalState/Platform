@@ -4,7 +4,6 @@
       include_role:
         name: app/logs/repository/branch/create
       vars:
-        _repository: '{{ app.logs.repository }}'
         _branch: '{{ branch }}'
   when: app.logs.enabled
   tags: [logs]
