@@ -4,7 +4,6 @@
       include_role:
         name: app/cms/repository/tag/create
       vars:
-        _repository: '{{ app.cms.repository }}'
         _tag: '{{ tag }}'
   when: app.cms.enabled
   tags: [cms]

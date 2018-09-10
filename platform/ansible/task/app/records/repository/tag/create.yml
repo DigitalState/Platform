@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create records repository tag
+      include_role:
+        name: app/records/repository/tag/create
+      vars:
+        _tag: '{{ tag }}'
+  when: app.records.enabled
+  tags: [records]

@@ -4,7 +4,6 @@
       include_role:
         name: app/forms/repository/tag/create
       vars:
-        _repository: '{{ app.forms.repository }}'
         _tag: '{{ tag }}'
   when: app.forms.enabled
   tags: [forms]

@@ -4,7 +4,6 @@
       include_role:
         name: app/cases/repository/tag/create
       vars:
-        _repository: '{{ app.cases.repository }}'
         _tag: '{{ tag }}'
   when: app.cases.enabled
   tags: [cases]

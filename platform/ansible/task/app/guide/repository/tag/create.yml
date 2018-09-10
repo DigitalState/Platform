@@ -4,7 +4,6 @@
       include_role:
         name: app/guide/repository/tag/create
       vars:
-        _repository: '{{ app.guide.repository }}'
         _tag: '{{ tag }}'
   when: app.guide.enabled
   tags: [guide]

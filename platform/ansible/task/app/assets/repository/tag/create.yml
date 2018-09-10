@@ -4,7 +4,6 @@
       include_role:
         name: app/assets/repository/tag/create
       vars:
-        _repository: '{{ app.assets.repository }}'
         _tag: '{{ tag }}'
   when: app.assets.enabled
   tags: [assets]
