@@ -1,4 +1,4 @@
-@filesystem
+@enterprise @filesystem
 Feature: Navigate app filesystem
 
   Scenario: Listing all app directories and files
@@ -22,4 +22,6 @@ Feature: Navigate app filesystem
       proxy
       records
       services
+      tasks
+      tenants
       """
