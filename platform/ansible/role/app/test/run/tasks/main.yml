@@ -2,7 +2,7 @@
 - block:
     - name: Run app tests
       shell:
-        cmd: ./vendor/bin/behat --suite=default
+        cmd: ./vendor/bin/behat --suite=community
         chdir: /root/tests
       register: _result
       changed_when: false

@@ -1,4 +1,4 @@
-@filesystem
+@community @filesystem
 Feature: Navigate app filesystem
 
   Scenario: Listing all app directories and files

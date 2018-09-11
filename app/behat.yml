@@ -3,7 +3,7 @@ default:
     error_reporting: 16383 # E_ALL & ~E_USER_DREPRECATED
 
   suites:
-    default:
+    community:
       paths:
         - %paths.base%/features
       filters:
@@ -11,9 +11,15 @@ default:
       contexts:
         - FeatureContext
         - ConsoleContext
+        - FixtureContext
+        - MigrationContext
     enterprise:
       paths:
         - %paths.base%/features
+      filters:
+        tags: '~@community'
       contexts:
         - FeatureContext
         - ConsoleContext
+        - FixtureContext
+        - MigrationContext
