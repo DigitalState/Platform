@@ -11,7 +11,10 @@ default:
       contexts:
         - FeatureContext
         - ConsoleContext
-        - FixtureContext
+        - FixtureContext:
+            services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
+        - MigrationContext:
+            services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
         - MigrationContext
     enterprise:
       paths:
@@ -21,5 +24,7 @@ default:
       contexts:
         - FeatureContext
         - ConsoleContext
-        - FixtureContext
-        - MigrationContext
+        - FixtureContext:
+            services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
+        - MigrationContext:
+            services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
