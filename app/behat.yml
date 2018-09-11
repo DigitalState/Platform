@@ -6,6 +6,8 @@ default:
     default:
       paths:
         - %paths.base%/features
+      filters:
+        tags: '~@enterprise'
       contexts:
         - FeatureContext
         - ConsoleContext
