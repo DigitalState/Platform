@@ -11,3 +11,9 @@ default:
       contexts:
         - FeatureContext
         - ConsoleContext
+    enterprise:
+      paths:
+        - %paths.base%/features
+      contexts:
+        - FeatureContext
+        - ConsoleContext
