@@ -1,5 +1,4 @@
 {
-  "name": "bergil/docker-behat",
   "minimum-stability": "stable",
   "require": {
     "behat/behat": "3.1.0",
