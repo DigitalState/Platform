@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Retrieve proxy container gateway
+      include_tasks: /etc/ansible/task/app/proxy/container/property/gateway.yml
+    - name: Configure tenants dns
+      include_role:
+        name: app/dns/configure
+      vars:
+        _dns:
+          - host: '{{ app.tenants.api.host }}'
+            ip: '{{ proxy_container_gateway.stdout }}'
+  when: app.tenants.enabled
+  tags: [tenants]
