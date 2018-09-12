@@ -1,43 +1,41 @@
 FROM alpine:3.8
 
-RUN \
-    # SUDO
-    apk --update add sudo && \
+# SUDO
+RUN  apk --update add sudo
+# BASH
+RUN  apk --update add bash
 
-    # BASH
-    apk --update add bash && \
-
-    # SSH server
-    apk --update add --no-cache openssh && \
+# SSH server
+RUN apk --update add --no-cache openssh && \
     sed -i "s/#PermitRootLogin.*/PermitRootLogin\ yes/g" /etc/ssh/sshd_config && \
     sed -i "s/#Port 22/Port 22/g" /etc/ssh/sshd_config && \
     sed -i "s/#HostKey \/etc\/ssh\/ssh_host_key/HostKey \/etc\/ssh\/ssh_host_key/g" /etc/ssh/sshd_config && \
     sed -i "s/#HostKey \/etc\/ssh\/ssh_host_rsa_key/HostKey \/etc\/ssh\/ssh_host_rsa_key/g" /etc/ssh/sshd_config && \
     sed -i "s/#HostKey \/etc\/ssh\/ssh_host_dsa_key/HostKey \/etc\/ssh\/ssh_host_dsa_key/g" /etc/ssh/sshd_config && \
     sed -i "s/#HostKey \/etc\/ssh\/ssh_host_ecdsa_key/HostKey \/etc\/ssh\/ssh_host_ecdsa_key/g" /etc/ssh/sshd_config && \
-    sed -i "s/#HostKey \/etc\/ssh\/ssh_host_ed25519_key/HostKey \/etc\/ssh\/ssh_host_ed25519_key/g" /etc/ssh/sshd_config && \
+    sed -i "s/#HostKey \/etc\/ssh\/ssh_host_ed25519_key/HostKey \/etc\/ssh\/ssh_host_ed25519_key/g" /etc/ssh/sshd_config
 
-    # Keys
-    ssh-keygen -A && \
+# Keys
+RUN ssh-keygen -A
 
-    # Python
-    apk --update add python py-pip openssl ca-certificates && \
+# Python
+RUN apk --update add python py-pip openssl ca-certificates && \
     apk --update add --virtual build-dependencies python-dev libffi-dev openssl-dev build-base && \
-    pip install --upgrade pip cffi && \
+    pip install --upgrade pip cffi
 
-    # PHP
-    apk --update add php7 php7-fpm && \
-    apk --update add php7-opcache php7-dom php7-curl php7-json php7-phar php7-openssl php7-mbstring php7-ctype php7-session php7-xml php7-xmlwriter php7-tokenizer curl && \
+# PHP
+RUN apk --update add php7 php7-fpm && \
+    apk --update add php7-opcache php7-dom php7-curl php7-json php7-phar php7-openssl php7-mbstring php7-ctype php7-session php7-xml php7-xmlwriter php7-tokenizer curl
 
-    # Composer
-    curl -sS https://getcomposer.org/installer | php -- --filename=composer  --install-dir=/usr/bin --version=1.0.0 && \
-    composer global require "hirak/prestissimo:^0.3" && \
+# Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --filename=composer  --install-dir=/usr/bin --version=1.0.0 && \
+    composer global require "hirak/prestissimo:^0.3"
 
-    # ROOT password
-    echo "root:root" | chpasswd && \
+# ROOT password
+RUN    echo "root:root" | chpasswd
 
-    # Clean up
-    apk del build-dependencies && \
+# Clean up
+RUN apk del build-dependencies && \
     rm -rf /var/cache/apk/*
 
 RUN mkdir /root/tests
