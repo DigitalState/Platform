@@ -26,6 +26,7 @@ default:
             services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
         - FixtureContext:
             services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
+        - SystemContext
     enterprise:
       paths:
         - %paths.base%/features
@@ -41,5 +42,4 @@ default:
             services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
         - FixtureContext:
             services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
-
-                                                                                           
+        - SystemContext                                                                    
