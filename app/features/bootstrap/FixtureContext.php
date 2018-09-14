@@ -17,7 +17,7 @@ class FixtureContext implements Context
      *
      * @param array $services
      */
-    public function __construct(array $services)
+    public function __construct(array $services = [])
     {
         $this->services = $services;
     }
