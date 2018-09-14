@@ -2,6 +2,14 @@ default:
   calls:
     error_reporting: 16383 # E_ALL & ~E_USER_DREPRECATED
 
+  extensions:
+    Behat\MinkExtension:
+      base_url: "http://ci.ds/"
+      sessions:
+        default:
+          goutte: ~
+    Sanpi\Behatch\Extension: ~
+
   suites:
     community:
       paths:
@@ -10,6 +18,9 @@ default:
         tags: '~@enterprise'
       contexts:
         - FeatureContext
+        - Behat\MinkExtension\Context\MinkContext
+        - Sanpi\Behatch\Context\RestContext
+        - Sanpi\Behatch\Context\JsonContext
         - ConsoleContext
         - FixtureContext:
             services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
@@ -23,8 +34,13 @@ default:
         tags: '~@community'
       contexts:
         - FeatureContext
+        - Behat\MinkExtension\Context\MinkContext
+        - Sanpi\Behatch\Context\RestContext
+        - Sanpi\Behatch\Context\JsonContext
         - ConsoleContext
         - FixtureContext:
             services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
         - MigrationContext:
             services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
+
+                                                                                           
