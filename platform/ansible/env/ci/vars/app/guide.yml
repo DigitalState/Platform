@@ -1,5 +1,5 @@
 ---
 guide:
-  enabled: false
+  enabled: true
   repository: https://github.com/DigitalState/Guide.git
   version: develop

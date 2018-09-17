@@ -9,6 +9,7 @@
 - import_playbook: app/container/up.yml
 - import_playbook: app/discovery/config/configure.yml
 - import_playbook: app/discovery/configure.yml
+- import_playbook: app/dns/configure.yml
 - import_playbook: app/encryption/configure.yml
 - import_playbook: app/integration/configure.yml
 - import_playbook: app/jwt/configure.yml

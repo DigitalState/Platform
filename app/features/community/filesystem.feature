@@ -1,3 +1,4 @@
+@community @filesystem
 Feature: Navigate app filesystem
 
   Scenario: Listing all app directories and files
@@ -11,9 +12,12 @@ Feature: Navigate app filesystem
       camunda
       cases
       cms
+      core
       discovery
+      documentation
       formio
       forms
+      guide
       identities
       proxy
       records
