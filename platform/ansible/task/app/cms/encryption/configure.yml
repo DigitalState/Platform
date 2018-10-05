@@ -4,6 +4,7 @@
       include_role:
         name: app/cms/encryption/configure
       vars:
+        _encryption: '{{ encryption.encryption }}'
         _secret: '{{ encryption.secret }}'
   when: app.cms.enabled
   tags: [cms]

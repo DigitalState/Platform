@@ -4,6 +4,7 @@
       include_role:
         name: app/assets/encryption/configure
       vars:
+        _encryption: '{{ encryption.encryption }}'
         _secret: '{{ encryption.secret }}'
   when: app.assets.enabled
   tags: [assets]

@@ -1,5 +1,10 @@
 ---
 - block:
+    - name: Configure interactions encryption setting
+      lineinfile:
+        path: '/srv/interactions/app/config/parameters.yml'
+        regexp: '^\s{4}encryption:'
+        line: '    encryption: {{ _encryption }}'
     - name: Configure interactions encryption secret setting
       lineinfile:
         path: '/srv/interactions/app/config/parameters.yml'

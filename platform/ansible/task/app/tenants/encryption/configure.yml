@@ -4,6 +4,7 @@
       include_role:
         name: app/tenants/encryption/configure
       vars:
+        _encryption: '{{ encryption.encryption }}'
         _secret: '{{ encryption.secret }}'
   when: app.tenants.enabled
   tags: [tenants]

@@ -3,6 +3,7 @@ namespace: ds
 directory: ~
 timezone: UTC
 encryption:
+  encryption: def000006079b073199527ea8124797109c2f4a7fa2256edae5636aaa39df0d94b8358007bf20dc37b0dc6765e192832eff7a1cd8379f29cac4caefe04231901446be535
   secret: 11111111111111111111111111111111
 jwt:
   pass_phrase: 1111
