@@ -3,10 +3,10 @@ namespace: ds
 directory: ~
 timezone: UTC
 encryption:
-  encryption: def000006079b073199527ea8124797109c2f4a7fa2256edae5636aaa39df0d94b8358007bf20dc37b0dc6765e192832eff7a1cd8379f29cac4caefe04231901446be535
-  secret: 11111111111111111111111111111111
+  encryption: def00000b66cdea17be03154351b285554884f1cba050541781f535bce839d31e315a82771d5dc5c32a8634ba1d7831ce5f1ec0a29e4a17344216eb038745acd63d3149f
+  secret: byzxl36nl289x6yu71hdie2euf19vm3r
 jwt:
-  pass_phrase: 1111
+  pass_phrase: 00ix4gk15tgvh6hl7z8nlj0r2xvlxczj
 mail:
   transport: smtp
   host: 127.0.0.1
