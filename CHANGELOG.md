@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.12.0
+
+- Feature [Ansible] Add encryption key variable
+
 ## 0.11.0
 
 - Feature [Platform] Refactor continuous integration
