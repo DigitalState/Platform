@@ -1,5 +1,10 @@
 ---
 - block:
+    - name: Configure cms encryption setting
+      lineinfile:
+        path: '/srv/cms/app/config/parameters.yml'
+        regexp: '^\s{4}encryption:'
+        line: '    encryption: {{ _encryption }}'
     - name: Configure cms encryption secret setting
       lineinfile:
         path: '/srv/cms/app/config/parameters.yml'

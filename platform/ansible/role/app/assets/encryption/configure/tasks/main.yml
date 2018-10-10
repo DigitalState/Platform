@@ -1,5 +1,10 @@
 ---
 - block:
+    - name: Configure assets encryption setting
+      lineinfile:
+        path: '/srv/assets/app/config/parameters.yml'
+        regexp: '^\s{4}encryption:'
+        line: '    encryption: {{ _encryption }}'
     - name: Configure assets encryption secret setting
       lineinfile:
         path: '/srv/assets/app/config/parameters.yml'

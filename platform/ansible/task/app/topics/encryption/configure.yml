@@ -4,6 +4,7 @@
       include_role:
         name: app/topics/encryption/configure
       vars:
+        _encryption: '{{ encryption.encryption }}'
         _secret: '{{ encryption.secret }}'
   when: app.topics.enabled
   tags: [topics]

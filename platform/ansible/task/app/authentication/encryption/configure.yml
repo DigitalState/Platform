@@ -4,6 +4,7 @@
       include_role:
         name: app/authentication/encryption/configure
       vars:
+        _encryption: '{{ encryption.encryption }}'
         _secret: '{{ encryption.secret }}'
   when: app.authentication.enabled
   tags: [authentication]

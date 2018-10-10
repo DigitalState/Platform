@@ -4,6 +4,7 @@
       include_role:
         name: app/records/encryption/configure
       vars:
+        _encryption: '{{ encryption.encryption }}'
         _secret: '{{ encryption.secret }}'
   when: app.records.enabled
   tags: [records]

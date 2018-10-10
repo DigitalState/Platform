@@ -3,6 +3,7 @@ namespace: ds
 directory: /srv
 timezone: UTC
 encryption:
+  encryption: ~
   secret: ~
 jwt:
   pass_phrase: ~
