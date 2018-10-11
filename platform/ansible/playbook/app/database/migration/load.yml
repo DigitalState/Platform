@@ -56,10 +56,12 @@
             config:
               app.spa.admin:
                 value: 'http://{{ app.admin.ui.host }}'
+              app.spa.admin.oauth:
+                value: 'http://{{ app.admin.ui.host }}/oauth'
               app.spa.portal:
                 value: 'http://{{ app.portal.ui.host }}'
-              app.spa.portal.oauth.success:
-                value: 'http://{{ app.portal.ui.host }}/oauth/success'
+              app.spa.portal.oauth:
+                value: 'http://{{ app.portal.ui.host }}/oauth'
       tags: [always]
 
 - name: Load database migration
