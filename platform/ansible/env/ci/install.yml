@@ -16,4 +16,5 @@
 - import_playbook: app/mail/configure.yml
 - import_playbook: app/namespace/configure.yml
 - import_playbook: app/system/configure.yml
-
+- import_playbook: app/database/migration/load.yml
+- import_playbook: app/database/fixtures/load.yml
