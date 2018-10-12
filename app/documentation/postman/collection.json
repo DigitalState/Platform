@@ -3894,6 +3894,62 @@
 									"response": []
 								},
 								{
+									"name": "/oauth/individual/github",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
+												"type": "text/javascript",
+												"exec": [
+													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+												]
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{authentication}}/oauth/individual/github?code=",
+											"host": [
+												"{{authentication}}"
+											],
+											"path": [
+												"oauth",
+												"individual",
+												"github"
+											],
+											"query": [
+												{
+													"key": "tenant",
+													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+													"description": "Tenant 1",
+													"disabled": true
+												},
+												{
+													"key": "code",
+													"value": ""
+												}
+											]
+										},
+										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+									},
+									"response": []
+								},
+								{
 									"name": "/oauth/organization/github/redirect",
 									"event": [
 										{
@@ -3942,6 +3998,62 @@
 									"response": []
 								},
 								{
+									"name": "/oauth/organization/github",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
+												"type": "text/javascript",
+												"exec": [
+													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+												]
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{authentication}}/oauth/organization/github?code=",
+											"host": [
+												"{{authentication}}"
+											],
+											"path": [
+												"oauth",
+												"organization",
+												"github"
+											],
+											"query": [
+												{
+													"key": "tenant",
+													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+													"description": "Tenant 1",
+													"disabled": true
+												},
+												{
+													"key": "code",
+													"value": ""
+												}
+											]
+										},
+										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+									},
+									"response": []
+								},
+								{
 									"name": "/oauth/staff/github/redirect",
 									"event": [
 										{
@@ -3982,6 +4094,62 @@
 													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
 													"description": "Tenant 1",
 													"disabled": true
+												}
+											]
+										},
+										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+									},
+									"response": []
+								},
+								{
+									"name": "/oauth/staff/github",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
+												"type": "text/javascript",
+												"exec": [
+													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+												]
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{authentication}}/oauth/staff/github?code=",
+											"host": [
+												"{{authentication}}"
+											],
+											"path": [
+												"oauth",
+												"staff",
+												"github"
+											],
+											"query": [
+												{
+													"key": "tenant",
+													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+													"description": "Tenant 1",
+													"disabled": true
+												},
+												{
+													"key": "code",
+													"value": ""
 												}
 											]
 										},
@@ -4068,6 +4236,62 @@
 									"response": []
 								},
 								{
+									"name": "/oauth/individual/google",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
+												"type": "text/javascript",
+												"exec": [
+													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+												]
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{authentication}}/oauth/individual/google?code=",
+											"host": [
+												"{{authentication}}"
+											],
+											"path": [
+												"oauth",
+												"individual",
+												"google"
+											],
+											"query": [
+												{
+													"key": "tenant",
+													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+													"description": "Tenant 1",
+													"disabled": true
+												},
+												{
+													"key": "code",
+													"value": ""
+												}
+											]
+										},
+										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+									},
+									"response": []
+								},
+								{
 									"name": "/oauth/organization/google/redirect",
 									"event": [
 										{
@@ -4139,6 +4363,62 @@
 									"response": []
 								},
 								{
+									"name": "/oauth/organization/google",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
+												"type": "text/javascript",
+												"exec": [
+													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+												]
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{authentication}}/oauth/organization/google?code=",
+											"host": [
+												"{{authentication}}"
+											],
+											"path": [
+												"oauth",
+												"organization",
+												"google"
+											],
+											"query": [
+												{
+													"key": "tenant",
+													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+													"description": "Tenant 1",
+													"disabled": true
+												},
+												{
+													"key": "code",
+													"value": ""
+												}
+											]
+										},
+										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+									},
+									"response": []
+								},
+								{
 									"name": "/oauth/staff/google/redirect",
 									"event": [
 										{
@@ -4202,6 +4482,62 @@
 													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
 													"description": "Tenant 1",
 													"disabled": true
+												}
+											]
+										},
+										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+									},
+									"response": []
+								},
+								{
+									"name": "/oauth/staff/google",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
+												"type": "text/javascript",
+												"exec": [
+													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+												]
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{authentication}}/oauth/staff/google?code=",
+											"host": [
+												"{{authentication}}"
+											],
+											"path": [
+												"oauth",
+												"staff",
+												"google"
+											],
+											"query": [
+												{
+													"key": "tenant",
+													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+													"description": "Tenant 1",
+													"disabled": true
+												},
+												{
+													"key": "code",
+													"value": ""
 												}
 											]
 										},
@@ -4288,6 +4624,62 @@
 									"response": []
 								},
 								{
+									"name": "/oauth/individual/twitter",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
+												"type": "text/javascript",
+												"exec": [
+													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+												]
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{authentication}}/oauth/individual/twitter?code=",
+											"host": [
+												"{{authentication}}"
+											],
+											"path": [
+												"oauth",
+												"individual",
+												"twitter"
+											],
+											"query": [
+												{
+													"key": "tenant",
+													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+													"description": "Tenant 1",
+													"disabled": true
+												},
+												{
+													"key": "code",
+													"value": ""
+												}
+											]
+										},
+										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+									},
+									"response": []
+								},
+								{
 									"name": "/oauth/organization/twitter/redirect",
 									"event": [
 										{
@@ -4359,6 +4751,62 @@
 									"response": []
 								},
 								{
+									"name": "/oauth/organization/twitter",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
+												"type": "text/javascript",
+												"exec": [
+													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+												]
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{authentication}}/oauth/organization/twitter?code=",
+											"host": [
+												"{{authentication}}"
+											],
+											"path": [
+												"oauth",
+												"organization",
+												"twitter"
+											],
+											"query": [
+												{
+													"key": "tenant",
+													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+													"description": "Tenant 1",
+													"disabled": true
+												},
+												{
+													"key": "code",
+													"value": ""
+												}
+											]
+										},
+										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+									},
+									"response": []
+								},
+								{
 									"name": "/oauth/staff/twitter/redirect",
 									"event": [
 										{
@@ -4422,6 +4870,62 @@
 													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
 													"description": "Tenant 1",
 													"disabled": true
+												}
+											]
+										},
+										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
+									},
+									"response": []
+								},
+								{
+									"name": "/oauth/staff/twitter",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
+												"type": "text/javascript",
+												"exec": [
+													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+												]
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{authentication}}/oauth/staff/twitter?code=",
+											"host": [
+												"{{authentication}}"
+											],
+											"path": [
+												"oauth",
+												"staff",
+												"twitter"
+											],
+											"query": [
+												{
+													"key": "tenant",
+													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+													"description": "Tenant 1",
+													"disabled": true
+												},
+												{
+													"key": "code",
+													"value": ""
 												}
 											]
 										},
@@ -7409,7 +7913,7 @@
 							},
 							"response": [
 								{
-									"id": "05a3bc13-3b49-4e23-9596-4f8d6eff837b",
+									"id": "8b83d99b-7dc2-4adb-bd30-9b2b9d24d46d",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7569,7 +8073,7 @@
 							},
 							"response": [
 								{
-									"id": "caf372d0-8be6-4371-9f08-067d9a547c68",
+									"id": "6f5ff80e-74a5-49e9-a232-37320fe78e03",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -7730,7 +8234,7 @@
 							},
 							"response": [
 								{
-									"id": "0bb0d3a2-070b-4909-8354-5d8ceb2d023c",
+									"id": "4eedfc0c-c8d0-4e86-bca9-c97a76e5401b",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8160,7 +8664,7 @@
 							},
 							"response": [
 								{
-									"id": "4e8bc2f7-5b50-4e76-848e-ec00f1c67d20",
+									"id": "f825f8aa-776a-4127-ba9a-c0c7a152741b",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8320,7 +8824,7 @@
 							},
 							"response": [
 								{
-									"id": "ac6a79a8-e93c-4407-b536-4485c681a83f",
+									"id": "2ecffa99-d74f-430b-96eb-65d400a4fb4f",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8481,7 +8985,7 @@
 							},
 							"response": [
 								{
-									"id": "8c0dcbf9-f427-4bba-b142-20206791d878",
+									"id": "22352059-2d84-4928-8d1d-d28640fdd331",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10234,7 +10738,7 @@
 							},
 							"response": [
 								{
-									"id": "555710db-bca2-4748-843c-c8da1dadecd3",
+									"id": "ff5044ba-d935-42a3-904f-851f430fc051",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10394,7 +10898,7 @@
 							},
 							"response": [
 								{
-									"id": "07fc3e90-9282-4996-be11-0ee7bc096ae7",
+									"id": "9afece56-8092-423e-a4af-58dac01938b1",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -10555,7 +11059,7 @@
 							},
 							"response": [
 								{
-									"id": "6e274775-9e0d-4808-a7f1-4e64b1263f38",
+									"id": "a8cedfb1-ae72-445c-958c-d6fa46adfde8",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10976,7 +11480,7 @@
 							},
 							"response": [
 								{
-									"id": "0952b522-2516-46bb-ad67-e70af7c0d6a3",
+									"id": "9905cc17-f37f-424b-96ca-24cc00c18ce1",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -11136,7 +11640,7 @@
 							},
 							"response": [
 								{
-									"id": "f9f6071a-0605-4e0b-b953-6171f1b7d277",
+									"id": "36c7c909-63f2-46d1-a409-36dfca001189",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -11297,7 +11801,7 @@
 							},
 							"response": [
 								{
-									"id": "9d51f29a-1d4d-47f5-b4ae-753eca6a14c0",
+									"id": "59f451bf-4e9a-4ae9-bf2e-b44add999faa",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -11677,7 +12181,7 @@
 							},
 							"response": [
 								{
-									"id": "04ec51f9-d602-4945-a83d-c7d8f0dbd708",
+									"id": "534bacb5-99d6-45fb-baf7-eab12fdcc4bf",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -11837,7 +12341,7 @@
 							},
 							"response": [
 								{
-									"id": "30363332-2423-4870-9fe1-4129f4658e8a",
+									"id": "93890807-9811-4d56-b386-fb2a7bed7e86",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -11998,7 +12502,7 @@
 							},
 							"response": [
 								{
-									"id": "0c6e13b0-c4ee-4d7a-aae5-6bb54f49e328",
+									"id": "a689e128-e607-48cb-9fe8-31c9ccc6dc9f",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12369,7 +12873,7 @@
 							},
 							"response": [
 								{
-									"id": "6d14b1c1-cdba-45e3-9a7f-5eedade40d28",
+									"id": "945d2c07-97cf-4f95-a8f8-02bef1b55119",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12529,7 +13033,7 @@
 							},
 							"response": [
 								{
-									"id": "7e2c0ec9-dac0-43f7-8525-43a5e267b62f",
+									"id": "3eeed380-e97e-4522-929f-ec9b98da4fad",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -12690,7 +13194,7 @@
 							},
 							"response": [
 								{
-									"id": "6c4b339a-9ecf-43b8-87c5-008ce6f6a958",
+									"id": "4e6eb685-4c6b-4640-8217-a48495a63eec",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12872,7 +13376,7 @@
 							},
 							"response": [
 								{
-									"id": "44c1ea46-694a-48f9-9128-f58e4ae71abf",
+									"id": "cf27808e-3997-454e-b6e3-2f29c2055f91",
 									"name": "Created",
 									"originalRequest": {
 										"method": "GET",
