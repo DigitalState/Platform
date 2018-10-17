@@ -2,7 +2,7 @@
 forms:
   enabled: true
   repository: https://github.com/DigitalState/Forms.git
-  version: 0.12.0
+  version: 0.13.0
   api:
     host: api.forms.prod.ds
   database:
