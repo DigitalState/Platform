@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "8d62d24f-017b-4687-bc23-4ca40ed3afe5",
-		"name": "DigitalState 0.12.0",
+		"name": "DigitalState 0.13.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -7913,7 +7913,7 @@
 							},
 							"response": [
 								{
-									"id": "8b83d99b-7dc2-4adb-bd30-9b2b9d24d46d",
+									"id": "7f3485e1-ca42-4af2-a941-412b896b468c",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8073,7 +8073,7 @@
 							},
 							"response": [
 								{
-									"id": "6f5ff80e-74a5-49e9-a232-37320fe78e03",
+									"id": "83aa8214-3d66-42e5-a5f7-868ecd0fbe67",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8234,7 +8234,7 @@
 							},
 							"response": [
 								{
-									"id": "4eedfc0c-c8d0-4e86-bca9-c97a76e5401b",
+									"id": "7602f40a-49dd-4849-ab88-c369deebc85a",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8664,7 +8664,7 @@
 							},
 							"response": [
 								{
-									"id": "f825f8aa-776a-4127-ba9a-c0c7a152741b",
+									"id": "8a004bc8-7570-4b4e-99d5-ef9508d1c0fe",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8824,7 +8824,7 @@
 							},
 							"response": [
 								{
-									"id": "2ecffa99-d74f-430b-96eb-65d400a4fb4f",
+									"id": "62f59c2f-686c-4ac2-a560-e1a7dcc8d35b",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8985,7 +8985,7 @@
 							},
 							"response": [
 								{
-									"id": "22352059-2d84-4928-8d1d-d28640fdd331",
+									"id": "f7c666c2-bb6c-4ee1-af21-70155d801675",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10738,7 +10738,7 @@
 							},
 							"response": [
 								{
-									"id": "ff5044ba-d935-42a3-904f-851f430fc051",
+									"id": "d3dc0ac9-a659-41e7-8cbc-a79c90d20bff",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10898,7 +10898,7 @@
 							},
 							"response": [
 								{
-									"id": "9afece56-8092-423e-a4af-58dac01938b1",
+									"id": "82ed7dce-f7d3-4b6e-9ee2-3b1d9aa40731",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -11059,7 +11059,7 @@
 							},
 							"response": [
 								{
-									"id": "a8cedfb1-ae72-445c-958c-d6fa46adfde8",
+									"id": "1552a3c4-9c2b-410b-9e42-e802bed091fc",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -11480,7 +11480,7 @@
 							},
 							"response": [
 								{
-									"id": "9905cc17-f37f-424b-96ca-24cc00c18ce1",
+									"id": "5472b62d-2aab-498c-a50c-96633da98f2c",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -11640,7 +11640,7 @@
 							},
 							"response": [
 								{
-									"id": "36c7c909-63f2-46d1-a409-36dfca001189",
+									"id": "3e5c5310-868a-4434-8f88-99f6c1c9ed3f",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -11801,7 +11801,7 @@
 							},
 							"response": [
 								{
-									"id": "59f451bf-4e9a-4ae9-bf2e-b44add999faa",
+									"id": "0d89651e-96bf-41a3-a509-0b071891c1c9",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12181,7 +12181,7 @@
 							},
 							"response": [
 								{
-									"id": "534bacb5-99d6-45fb-baf7-eab12fdcc4bf",
+									"id": "d0bb1d62-b9ca-418e-b69a-b74e028e3775",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12341,7 +12341,7 @@
 							},
 							"response": [
 								{
-									"id": "93890807-9811-4d56-b386-fb2a7bed7e86",
+									"id": "3e947099-6f47-4ae4-9e61-cf063c62d7ea",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -12502,7 +12502,7 @@
 							},
 							"response": [
 								{
-									"id": "a689e128-e607-48cb-9fe8-31c9ccc6dc9f",
+									"id": "72d4cfe3-b81a-44ad-ac47-8c4beaffc2cf",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12873,7 +12873,7 @@
 							},
 							"response": [
 								{
-									"id": "945d2c07-97cf-4f95-a8f8-02bef1b55119",
+									"id": "93a4b739-314b-4c55-a79a-283087a004e4",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -13033,7 +13033,7 @@
 							},
 							"response": [
 								{
-									"id": "3eeed380-e97e-4522-929f-ec9b98da4fad",
+									"id": "64d94f5e-2e31-43c3-8f51-5b21a53bb397",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -13194,7 +13194,7 @@
 							},
 							"response": [
 								{
-									"id": "4e6eb685-4c6b-4640-8217-a48495a63eec",
+									"id": "193b7814-8de3-4565-98f1-4f41e7156da1",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -13376,7 +13376,7 @@
 							},
 							"response": [
 								{
-									"id": "cf27808e-3997-454e-b6e3-2f29c2055f91",
+									"id": "ced109fa-7bba-4691-a7ee-d2a40b7cf10b",
 									"name": "Created",
 									"originalRequest": {
 										"method": "GET",
@@ -28534,7 +28534,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"title\": {\n        \"en\": \"Tenant 2\"\n    },\n    \"data\": {\n\t\t\"user\": {\n\t\t\t\"system\": {\n\t\t\t\t\"password\": \"system\"\n\t\t\t},\n\t\t\t\"anonymous\": {\n\t\t\t\t\"password\": \"anonymous\"\n\t\t\t},\n\t\t\t\"admin\": {\n\t\t\t\t\"password\": \"admin\"\n\t\t\t}\n\t\t},\n\t\t\"config\": {\n\t\t\t\"app.spa.admin\": {\n\t\t\t\t\"value\": \"http://admin.lab.ds\"\n\t\t\t},\n\t\t\t\"app.spa.admin.oauth\": {\n\t\t\t\t\"value\": \"http://admin.lab.ds/oauth\"\n\t\t\t},\n\t\t\t\"app.spa.portal\": {\n\t\t\t\t\"value\": \"http://portal.lab.ds\"\n\t\t\t},\n\t\t\t\"app.spa.portal.oauth\": {\n\t\t\t\t\"value\": \"http://portal.lab.ds/oauth\"\n\t\t\t}\n\t\t}\n    },\n    \"version\": 1\n}"
+									"raw": "{\n    \"title\": {\n        \"en\": \"Tenant 2\"\n    },\n    \"data\": {\n\t\t\"user\": {\n\t\t\t\"system\": {\n\t\t\t\t\"password\": \"system\"\n\t\t\t},\n\t\t\t\"anonymous\": {\n\t\t\t\t\"password\": \"anonymous\"\n\t\t\t},\n\t\t\t\"admin\": {\n\t\t\t\t\"password\": \"admin\"\n\t\t\t}\n\t\t},\n\t\t\"config\": {\n\t\t\t\"app.spa.admin\": {\n\t\t\t\t\"value\": \"http://admin.lab.ds\"\n\t\t\t},\n\t\t\t\"app.spa.admin.oauth\": {\n\t\t\t\t\"value\": \"http://admin.lab.ds/oauth\"\n\t\t\t},\n\t\t\t\"app.spa.portal\": {\n\t\t\t\t\"value\": \"http://portal.lab.ds\"\n\t\t\t},\n\t\t\t\"app.spa.portal.oauth\": {\n\t\t\t\t\"value\": \"http://portal.lab.ds/oauth\"\n\t\t\t}\n\t\t}\n    },\n    \"plan\": \"/app_dev.php/plans/d66089d2-a1df-45e3-8959-990e8d0f3335\",\n    \"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{tenants}}/tenants",
@@ -28637,6 +28637,318 @@
 									"path": [
 										"tenants",
 										"e5a2120d-6bf7-4c58-a900-bac1e55e986b"
+									]
+								},
+								"description": "This endpoint deletes a specific user from the list."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Plan",
+					"description": null,
+					"item": [
+						{
+							"name": "/plans",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{system_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{system_username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{tenants}}/plans?",
+									"host": [
+										"{{tenants}}"
+									],
+									"path": [
+										"plans"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "deletedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "deletedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "Tenant 1",
+											"disabled": true
+										},
+										{
+											"key": "title[0]",
+											"value": "Tenant 1",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of users."
+							},
+							"response": []
+						},
+						{
+							"name": "/plans/{uuid}",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{system_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{system_username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{tenants}}/plans/d66089d2-a1df-45e3-8959-990e8d0f3335",
+									"host": [
+										"{{tenants}}"
+									],
+									"path": [
+										"plans",
+										"d66089d2-a1df-45e3-8959-990e8d0f3335"
+									]
+								},
+								"description": "This endpoint returns a specific user."
+							},
+							"response": []
+						},
+						{
+							"name": "/plans",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{system_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{system_username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": {\n        \"en\": \"Plan 1\"\n    },\n    \"data\": {\n\t\t\"test\": \"test\"\n    },\n    \"version\": 1\n}"
+								},
+								"url": {
+									"raw": "{{tenants}}/plans",
+									"host": [
+										"{{tenants}}"
+									],
+									"path": [
+										"plans"
+									]
+								},
+								"description": "This endpoint adds a user to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/plans/{uuid}",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{system_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{system_username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": {\n        \"en\": \"Plan 1 - edit\"\n    },\n    \"version\": 1\n}"
+								},
+								"url": {
+									"raw": "{{tenants}}/plans/d66089d2-a1df-45e3-8959-990e8d0f3335",
+									"host": [
+										"{{tenants}}"
+									],
+									"path": [
+										"plans",
+										"d66089d2-a1df-45e3-8959-990e8d0f3335"
+									]
+								},
+								"description": "This endpoint edits a specific user."
+							},
+							"response": []
+						},
+						{
+							"name": "/plans/{uuid}",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "{{system_password}}",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "{{system_username}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{tenants}}/plans/d66089d2-a1df-45e3-8959-990e8d0f3335",
+									"host": [
+										"{{tenants}}"
+									],
+									"path": [
+										"plans",
+										"d66089d2-a1df-45e3-8959-990e8d0f3335"
 									]
 								},
 								"description": "This endpoint deletes a specific user from the list."
