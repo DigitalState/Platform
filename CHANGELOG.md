@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.13.0 (2018-10-17)
+
 ## 0.12.0 (2018-10-10)
 
 - Feature [Ansible] Add encryption key variable
