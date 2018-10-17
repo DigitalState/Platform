@@ -35,5 +35,5 @@ The **Platform** repository provides a toolkit to help orchestrate instances of 
 ## Build Status
 
 - [Develop Branch](status/branches/develop.md)<br>The build status of the latest development efforts.
-- [Latest Release (0.12.0)](status/releases/0.12.0.md)<br>The build status of the latest release.
+- [Latest Release (0.13.0)](status/releases/0.13.0.md)<br>The build status of the latest release.
 - [Previous Releases](status/releases/index.md)<br>The build statuses of previous releases.
