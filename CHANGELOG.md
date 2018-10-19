@@ -1,6 +1,12 @@
 # Changelog
 
+## 0.13.1 (2018-10-19)
+
+- Upgrade [Ansible] Update inventory to latest version
+
 ## 0.13.0 (2018-10-17)
+
+- Upgrade [Ansible] Update inventory to latest version
 
 ## 0.12.0 (2018-10-10)
 
