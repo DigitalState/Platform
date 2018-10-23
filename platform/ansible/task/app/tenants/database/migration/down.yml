@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Execute tenants database down migration
+      include_role:
+        name: app/tenants/database/migration/down
+      vars:
+        _version: '{{ version }}'
+  when: app.tenants.enabled
+  tags: [tenants]

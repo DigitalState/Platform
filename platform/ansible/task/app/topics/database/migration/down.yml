@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Execute topics database down migration
+      include_role:
+        name: app/topics/database/migration/down
+      vars:
+        _version: '{{ version }}'
+  when: app.topics.enabled
+  tags: [topics]

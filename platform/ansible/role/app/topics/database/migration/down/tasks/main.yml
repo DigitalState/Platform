@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Execute topics database down migration
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:execute --down {{ _version }} --no-interaction'
+        chdir: /srv/topics
+  tags: [topics]

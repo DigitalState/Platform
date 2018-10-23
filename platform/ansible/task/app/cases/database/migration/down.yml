@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Execute cases database down migration
+      include_role:
+        name: app/cases/database/migration/down
+      vars:
+        _version: '{{ version }}'
+  when: app.cases.enabled
+  tags: [cases]
