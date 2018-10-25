@@ -20,7 +20,7 @@
   tasks:
     - set_fact:
         data:
-          1.0.0:
+          0.13.0:
             tenant:
               uuid: '{{ (ansible_date_time.iso8601_micro + "1")|to_uuid }}'
               title:
