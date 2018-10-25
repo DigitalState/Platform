@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.13.2 ()
+
+
+
 ## 0.13.1 (2018-10-19)
 
 - Upgrade [Ansible] Update inventory to latest version
