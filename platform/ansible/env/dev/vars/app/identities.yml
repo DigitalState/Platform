@@ -2,7 +2,7 @@
 identities:
   enabled: true
   repository: https://github.com/DigitalState/Identities.git
-  version: 0.13.1
+  version: 0.13.2
   api:
     host: api.identities.dev.ds
   database:
