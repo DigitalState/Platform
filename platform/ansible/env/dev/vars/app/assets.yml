@@ -2,7 +2,7 @@
 assets:
   enabled: true
   repository: https://github.com/DigitalState/Assets.git
-  version: 0.13.1
+  version: 0.13.2
   api:
     host: api.assets.dev.ds
   database:

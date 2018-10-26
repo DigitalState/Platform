@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Execute forms database down migration
+      include_role:
+        name: app/forms/database/migration/down
+      vars:
+        _version: '{{ version }}'
+  when: app.forms.enabled
+  tags: [forms]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Execute cms database down migration
+      include_role:
+        name: app/cms/database/migration/down
+      vars:
+        _version: '{{ version }}'
+  when: app.cms.enabled
+  tags: [cms]

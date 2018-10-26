@@ -25,7 +25,7 @@ integration:
     secret: ~
 system:
   username: system
-  password: '$2y$12$dDJ1PEFFEpS/Vy9YovKbA.3S8Eh7xJVQ.PGUcWTvp1h8QCQaL/6JS'
+  password: system
 user:
   system:
     username: system@system.ds

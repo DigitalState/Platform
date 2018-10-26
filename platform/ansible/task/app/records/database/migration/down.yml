@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Execute records database down migration
+      include_role:
+        name: app/records/database/migration/down
+      vars:
+        _version: '{{ version }}'
+  when: app.records.enabled
+  tags: [records]

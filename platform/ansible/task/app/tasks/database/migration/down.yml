@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Execute tasks database down migration
+      include_role:
+        name: app/tasks/database/migration/down
+      vars:
+        _version: '{{ version }}'
+  when: app.tasks.enabled
+  tags: [tasks]

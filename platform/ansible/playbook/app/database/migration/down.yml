@@ -1,0 +1,28 @@
+---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+- import_playbook: /etc/ansible/playbook/platform/vars/computed/include.yml
+
+- name: Compile database/migration/down task list
+  hosts: platform
+  become: true
+  tasks:
+    - name: Compile files
+      compile:
+        app: '{{ app }}'
+        directory: /etc/ansible/task/app/*
+        task: database/migration/down
+      register: files
+  tags: [always]
+
+- name: Execute database down migration
+  hosts: app
+  become: true
+  vars_prompt:
+    - name: version
+      prompt: The migration version you want to down to?
+      private: no
+  tasks:
+    - name: Include compiled task list
+      include_tasks: '{{ item }}'
+      with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
+      tags: [always]
