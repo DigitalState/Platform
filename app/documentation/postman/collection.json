@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "8d62d24f-017b-4687-bc23-4ca40ed3afe5",
-		"name": "DigitalState 0.13.2",
+		"name": "DigitalState 0.14.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -7913,7 +7913,7 @@
 							},
 							"response": [
 								{
-									"id": "b8720674-5837-4b6c-b115-4de62c631f07",
+									"id": "b4f90907-61fa-456e-918a-708912823294",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8073,7 +8073,7 @@
 							},
 							"response": [
 								{
-									"id": "2d1f2cd5-e068-4d32-b0d2-07d9eba3b64b",
+									"id": "b80198b3-aa23-4779-8b98-0887e4017c64",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8234,7 +8234,7 @@
 							},
 							"response": [
 								{
-									"id": "d7e5b62b-00e3-45c0-ad5c-f2c2845a2249",
+									"id": "a16a524f-443c-4d7e-a73c-00d2bfb4b8e7",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8664,7 +8664,7 @@
 							},
 							"response": [
 								{
-									"id": "5ac387d4-94cf-4ee7-8bd2-47e346f56bb3",
+									"id": "e207954f-cd27-4e91-b6b6-49a351736989",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8824,7 +8824,7 @@
 							},
 							"response": [
 								{
-									"id": "bf494ec5-5e52-4ca8-ae77-37cecd8b986e",
+									"id": "c3a2634f-4d63-4d4b-8592-1f66aefcdadb",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8985,7 +8985,7 @@
 							},
 							"response": [
 								{
-									"id": "c4a0c810-7ae9-42ab-9a79-577c338159f5",
+									"id": "38915dd4-f5b0-4790-96cd-fe0e48a33f7a",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10738,7 +10738,7 @@
 							},
 							"response": [
 								{
-									"id": "d6d58716-3824-45e8-988e-7422138c54f0",
+									"id": "c515c5c8-6471-41b0-a85b-f012d8c57bc9",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10898,7 +10898,7 @@
 							},
 							"response": [
 								{
-									"id": "9d3fbec5-b6e9-4ad8-9d32-9aa81c23e60a",
+									"id": "02e50c0f-fdf7-4c06-99e4-ab44e832e1e0",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -11059,7 +11059,7 @@
 							},
 							"response": [
 								{
-									"id": "b413363a-c392-48fb-beb7-07edb814a42f",
+									"id": "3b12b702-e01e-432c-af7a-9bb621c69372",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -11480,7 +11480,7 @@
 							},
 							"response": [
 								{
-									"id": "24c8973d-dc03-4b07-b4a2-2181bed90418",
+									"id": "9fca6ab0-764c-47e3-81b3-315b4577570d",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -11640,7 +11640,7 @@
 							},
 							"response": [
 								{
-									"id": "10f242e4-3508-4233-b98c-1f526a413b84",
+									"id": "83529631-5b23-41f9-aa97-0396c3c35a00",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -11801,7 +11801,7 @@
 							},
 							"response": [
 								{
-									"id": "523a05bd-d33b-4fb2-a4e1-0f2ec39d9314",
+									"id": "471fbff4-f20a-4c6e-983d-4c7f28fb30f8",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12181,7 +12181,7 @@
 							},
 							"response": [
 								{
-									"id": "c263a2a7-79ef-4523-8695-c919b42e5c7d",
+									"id": "0a0764e7-162b-4baa-9a2f-9b1df6ba9cb8",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12341,7 +12341,7 @@
 							},
 							"response": [
 								{
-									"id": "779ebb58-2103-4dd9-ab75-69a5cef3463e",
+									"id": "c7d4cdaf-492c-4196-aaa3-3f42dc572843",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -12502,7 +12502,7 @@
 							},
 							"response": [
 								{
-									"id": "7f036082-8147-4cb5-8d06-2d686a06728c",
+									"id": "9c64dfcd-7291-40ae-a0a6-4757c2a26472",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12873,7 +12873,7 @@
 							},
 							"response": [
 								{
-									"id": "da02b58e-ff61-4daf-89de-6e66869abcc0",
+									"id": "c70594b0-c5a6-4e39-92a5-c095fc57a81b",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -13033,7 +13033,7 @@
 							},
 							"response": [
 								{
-									"id": "1777260b-4889-4eb8-bdda-f1886e0d13e2",
+									"id": "ca3e67fb-aac8-4906-92f9-5a22afd9e810",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -13194,7 +13194,7 @@
 							},
 							"response": [
 								{
-									"id": "11bf0070-90f7-4018-b681-7d828b030893",
+									"id": "179d42d7-1c10-4f1a-81bf-ce118481e35d",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -13376,7 +13376,7 @@
 							},
 							"response": [
 								{
-									"id": "de8a9e5d-da61-4b27-abb4-8b7b9a330db6",
+									"id": "c436966b-6e56-4740-8be7-090c2a828c63",
 									"name": "Created",
 									"originalRequest": {
 										"method": "GET",
@@ -28534,7 +28534,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"title\": {\n        \"en\": \"Tenant 2\"\n    },\n    \"data\": {\n\t\t\"user\": {\n\t\t\t\"system\": {\n\t\t\t\t\"password\": \"system\"\n\t\t\t},\n\t\t\t\"anonymous\": {\n\t\t\t\t\"password\": \"anonymous\"\n\t\t\t},\n\t\t\t\"admin\": {\n\t\t\t\t\"password\": \"admin\"\n\t\t\t}\n\t\t},\n\t\t\"config\": {\n\t\t\t\"app.spa.admin\": {\n\t\t\t\t\"value\": \"http://admin.lab.ds\"\n\t\t\t},\n\t\t\t\"app.spa.admin.oauth\": {\n\t\t\t\t\"value\": \"http://admin.lab.ds/oauth\"\n\t\t\t},\n\t\t\t\"app.spa.portal\": {\n\t\t\t\t\"value\": \"http://portal.lab.ds\"\n\t\t\t},\n\t\t\t\"app.spa.portal.oauth\": {\n\t\t\t\t\"value\": \"http://portal.lab.ds/oauth\"\n\t\t\t}\n\t\t}\n    },\n    \"plan\": null,\n    \"version\": 1\n}"
+									"raw": "{\n    \"title\": {\n        \"en\": \"Tenant 2\"\n    },\n    \"data\": {},\n    \"propagation\": {\n\t\t\"user\": {\n\t\t\t\"system\": {\n\t\t\t\t\"password\": \"system\"\n\t\t\t},\n\t\t\t\"anonymous\": {\n\t\t\t\t\"password\": \"anonymous\"\n\t\t\t},\n\t\t\t\"admin\": {\n\t\t\t\t\"password\": \"admin\"\n\t\t\t}\n\t\t},\n\t\t\"config\": {\n\t\t\t\"app.spa.admin\": {\n\t\t\t\t\"value\": \"http://admin.lab.ds\"\n\t\t\t},\n\t\t\t\"app.spa.admin.oauth\": {\n\t\t\t\t\"value\": \"http://admin.lab.ds/oauth\"\n\t\t\t},\n\t\t\t\"app.spa.portal\": {\n\t\t\t\t\"value\": \"http://portal.lab.ds\"\n\t\t\t},\n\t\t\t\"app.spa.portal.oauth\": {\n\t\t\t\t\"value\": \"http://portal.lab.ds/oauth\"\n\t\t\t}\n\t\t}\n    },\n    \"plan\": null,\n    \"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{tenants}}/tenants",
