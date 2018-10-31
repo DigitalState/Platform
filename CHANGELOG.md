@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.14.1 (2018-10-31)
+
+- Bug [Ansible] Fix playbooks that uses precise container names due to recent changes in Docker container generated names
+
 ## 0.14.0 (2018-10-29)
 
 - Upgrade [Ansible] Update inventory to latest version
