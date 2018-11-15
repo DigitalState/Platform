@@ -1,9 +1,0 @@
----
-- block:
-    - name: Delete admin repository branch
-      include_role:
-        name: app/admin/repository/branch/delete
-      vars:
-        _branch: '{{ branch }}'
-  when: app.admin.enabled
-  tags: [admin]

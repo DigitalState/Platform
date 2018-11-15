@@ -1,7 +1,0 @@
----
-- block:
-    - name: Delete assets repository branch
-      shell: 'git delete -D {{ _branch }}'
-      args:
-        chdir: /srv/assets
-  tags: [assets]

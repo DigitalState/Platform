@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create authentication repository branch
-      include_role:
-        name: app/authentication/repository/branch/create
-      vars:
-        _branch: '{{ branch }}'
-  when: app.authentication.enabled
-  tags: [authentication]

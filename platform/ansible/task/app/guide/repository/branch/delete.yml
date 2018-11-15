@@ -1,9 +1,0 @@
----
-- block:
-    - name: Delete guide repository branch
-      include_role:
-        name: app/guide/repository/branch/delete
-      vars:
-        _branch: '{{ branch }}'
-  when: app.guide.enabled
-  tags: [guide]

@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create authentication repository tag
-      include_role:
-        name: app/authentication/repository/tag/create
-      vars:
-        _tag: '{{ tag }}'
-  when: app.authentication.enabled
-  tags: [authentication]

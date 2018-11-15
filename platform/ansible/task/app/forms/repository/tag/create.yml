@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create forms repository tag
-      include_role:
-        name: app/forms/repository/tag/create
-      vars:
-        _tag: '{{ tag }}'
-  when: app.forms.enabled
-  tags: [forms]

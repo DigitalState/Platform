@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create identities repository branch
-      include_role:
-        name: app/identities/repository/branch/create
-      vars:
-        _branch: '{{ branch }}'
-  when: app.identities.enabled
-  tags: [identities]

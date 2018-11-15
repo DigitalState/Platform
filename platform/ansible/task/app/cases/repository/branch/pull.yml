@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull cases repository branch
-      include_role:
-        name: app/cases/repository/branch/pull
-  when: app.cases.enabled
-  tags: [cases]

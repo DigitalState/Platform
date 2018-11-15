@@ -1,9 +1,0 @@
----
-- block:
-    - name: Delete logs repository branch
-      include_role:
-        name: app/logs/repository/branch/delete
-      vars:
-        _branch: '{{ branch }}'
-  when: app.logs.enabled
-  tags: [logs]

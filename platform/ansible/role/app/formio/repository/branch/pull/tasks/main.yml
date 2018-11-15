@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull formio repository branch
-      shell: 'git pull'
-      args:
-        chdir: /srv/formio
-  tags: [formio]

@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create discovery repository tag
-      include_role:
-        name: app/discovery/repository/tag/create
-      vars:
-        _tag: '{{ tag }}'
-  when: app.discovery.enabled
-  tags: [discovery]

@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push admin repository branch
-      include_role:
-        name: app/admin/repository/branch/push
-  when: app.admin.enabled
-  tags: [admin]

@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create documentation repository tag
-      include_role:
-        name: app/documentation/repository/tag/create
-      vars:
-        _tag: '{{ tag }}'
-  when: app.documentation.enabled
-  tags: [documentation]

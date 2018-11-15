@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push discovery repository branch
-      shell: 'git push'
-      args:
-        chdir: /srv/discovery
-  tags: [discovery]

@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull admin repository branch
-      include_role:
-        name: app/admin/repository/branch/pull
-  when: app.admin.enabled
-  tags: [admin]

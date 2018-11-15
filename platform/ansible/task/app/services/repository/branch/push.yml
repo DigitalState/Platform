@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push services repository branch
-      include_role:
-        name: app/services/repository/branch/push
-  when: app.services.enabled
-  tags: [services]

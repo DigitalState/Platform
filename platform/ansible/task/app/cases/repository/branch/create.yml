@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create cases repository branch
-      include_role:
-        name: app/cases/repository/branch/create
-      vars:
-        _branch: '{{ branch }}'
-  when: app.cases.enabled
-  tags: [cases]

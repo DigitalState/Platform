@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push documentation repository branch
-      shell: 'git push'
-      args:
-        chdir: /srv/documentation
-  tags: [documentation]

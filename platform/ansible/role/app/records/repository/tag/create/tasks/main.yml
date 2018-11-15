@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create records repository tag
-      shell: 'git tag {{ _tag }}'
-      args:
-        chdir: /srv/records
-  tags: [records]

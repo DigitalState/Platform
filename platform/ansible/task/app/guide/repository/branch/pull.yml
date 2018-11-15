@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull guide repository branch
-      include_role:
-        name: app/guide/repository/branch/pull
-  when: app.guide.enabled
-  tags: [guide]

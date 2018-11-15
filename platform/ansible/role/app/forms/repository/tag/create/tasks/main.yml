@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create forms repository tag
-      shell: 'git tag {{ _tag }}'
-      args:
-        chdir: /srv/forms
-  tags: [forms]

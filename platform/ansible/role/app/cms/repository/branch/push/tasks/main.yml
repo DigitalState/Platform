@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push cms repository branch
-      shell: 'git push'
-      args:
-        chdir: /srv/cms
-  tags: [cms]

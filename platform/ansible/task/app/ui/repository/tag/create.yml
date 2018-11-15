@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create ui repository tag
-      include_role:
-        name: app/ui/repository/tag/create
-      vars:
-        _tag: '{{ tag }}'
-  when: app.ui.enabled
-  tags: [ui]

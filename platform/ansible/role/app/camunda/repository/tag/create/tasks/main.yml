@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create camunda repository tag
-      shell: 'git tag {{ _tag }}'
-      args:
-        chdir: /srv/camunda
-  tags: [camunda]

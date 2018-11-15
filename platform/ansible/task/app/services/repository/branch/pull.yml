@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull services repository branch
-      include_role:
-        name: app/services/repository/branch/pull
-  when: app.services.enabled
-  tags: [services]

@@ -1,9 +1,0 @@
----
-- block:
-    - name: Delete services repository branch
-      include_role:
-        name: app/services/repository/branch/delete
-      vars:
-        _branch: '{{ branch }}'
-  when: app.services.enabled
-  tags: [services]

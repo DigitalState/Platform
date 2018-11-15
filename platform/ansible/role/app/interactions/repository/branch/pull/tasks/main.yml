@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull interactions repository branch
-      shell: 'git pull'
-      args:
-        chdir: /srv/interactions
-  tags: [interactions]

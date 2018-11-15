@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull portal repository branch
-      include_role:
-        name: app/portal/repository/branch/pull
-  when: app.portal.enabled
-  tags: [portal]

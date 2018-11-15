@@ -1,7 +1,0 @@
----
-- block:
-    - name: Delete records repository branch
-      shell: 'git delete -D {{ _branch }}'
-      args:
-        chdir: /srv/records
-  tags: [records]

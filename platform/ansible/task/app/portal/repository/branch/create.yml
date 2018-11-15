@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create portal repository branch
-      include_role:
-        name: app/portal/repository/branch/create
-      vars:
-        _branch: '{{ branch }}'
-  when: app.portal.enabled
-  tags: [portal]

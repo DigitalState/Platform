@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull tasks repository branch
-      include_role:
-        name: app/tasks/repository/branch/pull
-  when: app.tasks.enabled
-  tags: [tasks]

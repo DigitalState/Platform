@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull forms repository branch
-      shell: 'git pull'
-      args:
-        chdir: /srv/forms
-  tags: [forms]

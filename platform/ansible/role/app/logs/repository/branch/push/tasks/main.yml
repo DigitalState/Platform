@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push logs repository branch
-      shell: 'git push'
-      args:
-        chdir: /srv/logs
-  tags: [logs]

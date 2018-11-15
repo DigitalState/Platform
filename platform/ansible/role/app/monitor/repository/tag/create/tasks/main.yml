@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create monitor repository tag
-      shell: 'git tag {{ _tag }}'
-      args:
-        chdir: /srv/monitor
-  tags: [monitor]

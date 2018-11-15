@@ -1,7 +1,0 @@
----
-- block:
-    - name: Set cms repository active branch
-      shell: 'git checkout {{ _branch }}'
-      args:
-        chdir: /srv/cms
-  tags: [cms]

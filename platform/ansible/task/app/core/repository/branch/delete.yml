@@ -1,9 +1,0 @@
----
-- block:
-    - name: Delete core repository branch
-      include_role:
-        name: app/core/repository/branch/delete
-      vars:
-        _branch: '{{ branch }}'
-  when: app.core.enabled
-  tags: [core]

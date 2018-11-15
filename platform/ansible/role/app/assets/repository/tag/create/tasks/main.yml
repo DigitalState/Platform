@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create assets repository tag
-      shell: 'git tag {{ _tag }}'
-      args:
-        chdir: /srv/assets
-  tags: [assets]

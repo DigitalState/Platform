@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push proxy repository branch
-      shell: 'git push'
-      args:
-        chdir: /srv/proxy
-  tags: [proxy]

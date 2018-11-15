@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create services repository tag
-      include_role:
-        name: app/services/repository/tag/create
-      vars:
-        _tag: '{{ tag }}'
-  when: app.services.enabled
-  tags: [services]
