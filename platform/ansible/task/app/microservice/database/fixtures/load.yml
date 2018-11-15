@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Detect microservice fixtures directory override
+      local_action: 'stat path=/root/fixtures/microservice'
+      register: override
+    - name: Load microservice database fixtures
+      include_role:
+        name: app/microservice/database/fixtures/load
+      vars:
+        _fixtures: '{{ "test" if env == "ci" else "dev" }}'
+        _override: '{{ "/root/fixtures/microservice" if override.stat.exists == true and env != "ci" else "" }}'
+  when: app.microservice.enabled
+  tags: [microservice]

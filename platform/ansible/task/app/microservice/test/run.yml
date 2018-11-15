@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Run microservice tests
+      include_role:
+        name: app/microservice/test/run
+  when: app.microservice.enabled
+  tags: [microservice]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Configure microservice namespace settings
+      include_role:
+        name: app/microservice/namespace/configure
+      vars:
+        _namespace: '{{ namespace }}'
+  when: app.microservice.enabled
+  tags: [microservice]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Validate microservice tests
+      include_role:
+        name: app/microservice/test/validate
+  when: app.microservice.enabled
+  tags: [microservice]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Stop microservice container
+      include_role:
+        name: app/microservice/container/stop
+      vars:
+        _env: '{{ env }}'
+  when: app.microservice.enabled
+  tags: [microservice]

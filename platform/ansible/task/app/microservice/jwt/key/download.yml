@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Download microservice jwt keys
+      include_role:
+        name: app/microservice/jwt/key/download
+      vars:
+        _private_key: '/root/jwt/{{ env }}/key'
+        _public_key: '/root/jwt/{{ env }}/key.pub'
+  when: app.microservice.enabled
+  tags: [microservice]

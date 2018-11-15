@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Execute microservice database down migration
+      include_role:
+        name: app/microservice/database/migration/down
+      vars:
+        _version: '{{ version }}'
+  when: app.microservice.enabled
+  tags: [microservice]

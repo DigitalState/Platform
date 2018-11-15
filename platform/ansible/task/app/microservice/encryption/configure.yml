@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Configure microservice encryption settings
+      include_role:
+        name: app/microservice/encryption/configure
+      vars:
+        _encryption: '{{ encryption.encryption }}'
+        _secret: '{{ encryption.secret }}'
+  when: app.microservice.enabled
+  tags: [microservice]

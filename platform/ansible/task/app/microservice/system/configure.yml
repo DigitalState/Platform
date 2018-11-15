@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Configure microservice system settings
+      include_role:
+        name: app/microservice/system/configure
+      vars:
+        _username: '{{ system.username }}'
+        _password: '{{ system.password }}'
+  when: app.microservice.enabled
+  tags: [microservice]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Clear microservice cache
+      include_role:
+        name: app/microservice/cache/clear
+  when: app.microservice.enabled
+  tags: [microservice]

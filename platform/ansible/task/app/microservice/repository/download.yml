@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Download microservice repository
+      include_role:
+        name: app/microservice/repository/download
+      vars:
+        _repository: '{{ app.microservice.repository }}'
+        _version: '{{ app.microservice.version }}'
+        _credential:
+          username: '{{ github.username }}'
+          password: '{{ github.password }}'
+  when: app.microservice.enabled
+  tags: [microservice]

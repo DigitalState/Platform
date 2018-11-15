@@ -1,0 +1,18 @@
+---
+microservice:
+  enabled: true
+  repository: https://github.com/DigitalState/Microservice.git
+  version: develop
+  api:
+    host: api.microservice.lab.ds
+  database:
+    host: microservice_database
+    port: 5432
+    name: microservice
+    username: microservice
+    password: microservice
+    ui:
+      host: ui.database.microservice.lab.ds
+  cache:
+    ui:
+      host: ui.cache.microservice.lab.ds

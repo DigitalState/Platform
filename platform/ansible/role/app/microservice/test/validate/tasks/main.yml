@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Run microservice tests
+      include_role:
+        name: app/microservice/test/run
+    - name: Validate microservice tests result
+      debug:
+        msg: '{{ _result[0] }} / {{ _result[1] }}'
+      failed_when: _result[0] != _result[1]
+  tags: [microservice]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Load microservice database fixtures
+      import_tasks: default.yml
+      when: _override == ""
+    - name: Load microservice database fixtures override
+      import_tasks: override.yml
+      when: _override != ""
+  tags: [microservice]

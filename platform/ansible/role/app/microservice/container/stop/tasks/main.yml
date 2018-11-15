@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Stop microservice container
+      docker_service:
+        project_src: /srv/microservice
+        files:
+          - docker-compose.yml
+          - 'docker-compose.{{ _env }}.yml'
+        state: present
+        stopped: yes
+  tags: [microservice]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Load microservice database migration
+      include_role:
+        name: app/microservice/database/migration/load
+      vars:
+        _data: '{{ data }}'
+  when: app.microservice.enabled
+  tags: [microservice]
