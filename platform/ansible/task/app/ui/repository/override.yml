@@ -1,7 +1,0 @@
----
-- block:
-    - name: Download ui repository override directory
-      include_role:
-        name: app/ui/repository/override
-  when: app.ui.enabled
-  tags: [ui]

@@ -1,7 +1,0 @@
----
-- block:
-    - name: Download assets repository override directory
-      include_role:
-        name: app/assets/repository/override
-  when: app.assets.enabled
-  tags: [assets]

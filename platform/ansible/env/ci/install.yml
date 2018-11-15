@@ -4,7 +4,6 @@
 - import_playbook: app/initialize.yml
 - import_playbook: app/setup.yml
 - import_playbook: app/repository/download.yml
-- import_playbook: app/repository/override.yml
 - import_playbook: app/jwt/key/download.yml
 - import_playbook: app/container/up.yml
 - import_playbook: app/discovery/config/configure.yml
