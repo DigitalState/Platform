@@ -1,9 +1,0 @@
----
-- block:
-    - name: Set interactions configs
-      include_role:
-        name: app/interactions/config/set
-      vars:
-        _config: '{{ config }}'
-  when: app.interactions.enabled
-  tags: [interactions]

@@ -1,9 +1,0 @@
----
-- block:
-    - name: Configure interactions namespace settings
-      include_role:
-        name: app/interactions/namespace/configure
-      vars:
-        _namespace: '{{ namespace }}'
-  when: app.interactions.enabled
-  tags: [interactions]

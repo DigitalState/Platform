@@ -1,9 +1,0 @@
----
-- block:
-    - name: Stop portal container
-      include_role:
-        name: app/portal/container/stop
-      vars:
-        _env: '{{ env }}'
-  when: app.portal.enabled
-  tags: [portal]

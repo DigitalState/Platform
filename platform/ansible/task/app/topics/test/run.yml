@@ -1,7 +1,0 @@
----
-- block:
-    - name: Run topics tests
-      include_role:
-        name: app/topics/test/run
-  when: app.topics.enabled
-  tags: [topics]

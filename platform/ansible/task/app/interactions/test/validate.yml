@@ -1,7 +1,0 @@
----
-- block:
-    - name: Validate interactions tests
-      include_role:
-        name: app/interactions/test/validate
-  when: app.interactions.enabled
-  tags: [interactions]

@@ -1,8 +1,0 @@
----
-- block:
-    - name: Configure interactions namespace setting
-      lineinfile:
-        path: '/srv/interactions/app/config/parameters.yml'
-        regexp: '^\s{4}namespace:'
-        line: '    namespace: {{ _namespace }}'
-  tags: [interactions]
