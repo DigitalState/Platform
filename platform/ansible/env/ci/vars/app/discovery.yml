@@ -11,4 +11,4 @@ discovery:
   docker:
     - docker-compose.yml
     - docker-compose.test.yml
-    - /root/docker/docker-compose.discovery.yml
+    - /root/docker/discovery.yml
