@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  client:
+    environment:
+      SERVICE_IGNORE: 'true'
+
+  bootstrap:
+    labels:
+      traefik.enable: 'true'
+      traefik.frontend.entryPoints: http
+      traefik.port: '8500'
+      traefik.frontend.rule: 'Host:${UI_HOST}'
+
+  registrator:
+    image: gliderlabs/registrator:master
+    depends_on:
+      - bootstrap
+    environment:
+      CONSUL_HTTP_TOKEN: '${DISCOVERY_TOKEN}'
+    command: '-internal consul://bootstrap:8500'
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+networks:
+  default:
+    external:
+      name: '${NETWORK}'
