@@ -3,12 +3,10 @@
     - name: Up proxy container
       docker_service:
         project_src: /srv/proxy
-        files:
-          - docker-compose.yml
-          - 'docker-compose.{{ _env }}.yml'
+        files: '{{ _files|list }}'
         state: present
       environment:
-        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        COMPOSE_PROJECT_NAME: '{{ _namespace }}'
         DIRECTORY: '{{ _directory }}'
         PORT: '{{ _port }}'
         UI_PORT: '{{ _ui_port }}'

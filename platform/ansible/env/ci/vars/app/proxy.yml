@@ -9,3 +9,7 @@ proxy:
     token: 740a4d9d-fd25-4371-ac48-ff3fc7879be0
   ui:
     port: 81
+  docker:
+    - docker-compose.yml
+    - docker-compose.test.yml
+    - /root/docker/docker-compose.proxy.yml
