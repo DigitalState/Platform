@@ -1,24 +1,5 @@
 ---
 - block:
-#    - name: test
-#      shell:
-#        cmd: 'docker-compose config'
-#        chdir: /srv/microservice
-#      environment:
-#        COMPOSE_PROJECT_NAME: '{{ _namespace }}'
-#        NETWORK: '{{ _network }}'
-#        PROXY_HOST: '{{ _proxy_host }}'
-#        API_HOST: '{{ _api_host }}'
-#        DATABASE_URL: 'postgres://{{ _database_username }}:{{ _database_password }}@{{ _database_host }}/{{ _database_name }}'
-#        DATABASE_HOST: '{{ _database_host }}'
-#        DATABASE_PORT: '{{ _database_port }}'
-#        DATABASE_NAME: '{{ _database_name }}'
-#        DATABASE_USER: '{{ _database_username }}'
-#        DATABASE_PASSWORD: '{{ _database_password }}'
-#        DATABASE_UI_HOST: '{{ _database_ui_host }}'
-#      register: _test
-#    - debug:
-#        var: _test
     - name: Up microservice container
       docker_service:
         project_src: /srv/microservice
@@ -37,13 +18,13 @@
         DATABASE_USER: '{{ _database_username }}'
         DATABASE_PASSWORD: '{{ _database_password }}'
         DATABASE_UI_HOST: '{{ _database_ui_host }}'
-#    - name: Waiting for microservice container to finalize installation
-#      shell:
-#        cmd: docker-compose exec -T php pidof php-fpm | cat
-#        chdir: /srv/microservice
-#      register: _output
-#      until: _output.stdout is match('^[0-9]+(\s[0-9]+)*$')
-#      retries: 60
-#      delay: 10
-#      changed_when: false
+    - name: Waiting for microservice container to finalize installation
+      shell:
+        cmd: docker-compose exec -T php pidof php-fpm | cat
+        chdir: /srv/microservice
+      register: _output
+      until: _output.stdout is match('^[0-9]+(\s[0-9]+)*$')
+      retries: 60
+      delay: 10
+      changed_when: false
   tags: [microservice]
