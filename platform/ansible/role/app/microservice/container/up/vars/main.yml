@@ -1,14 +1,13 @@
 ---
-_env: prod
-_compose_project_name: dsauthentication
-_network: dsproxy_default
+_namespace: ds_microservice
+_network: ds_proxy_default
 _proxy_host: 127.0.0.1
-_directory: /srv/authentication
-_api_host: api.authentication.ds
-_database_host: authentication_db
+_directory: /srv/microservice
+_files: ['docker-compose.yml']
+_api_host: api.microservice.ds
+_database_host: microservice_database
 _database_port: 5432
-_database_name: authentication
-_database_username: authentication
-_database_password: authentication
-_database_ui_host: ui.database.authentication.ds
-_cache_ui_host: ui.cache.authentication.ds
+_database_name: microservice
+_database_username: microservice
+_database_password: microservice
+_database_ui_host: ui.database.microservice.ds

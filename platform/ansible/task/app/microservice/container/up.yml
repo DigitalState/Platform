@@ -6,11 +6,11 @@
       include_role:
         name: app/microservice/container/up
       vars:
-        _env: '{{ env }}'
-        _compose_project_name: '{{ namespace }}microservice'
-        _network: '{{ namespace }}proxy_default'
+        _namespace: '{{ namespace }}_microservice'
+        _network: '{{ namespace }}_proxy_default'
         _proxy_host: '{{ proxy_container_ip.stdout }}'
         _directory: '{{ directory }}/microservice'
+        _files: '{{ app.microservice.docker|list }}'
         _api_host: '{{ app.microservice.api.host }}'
         _database_host: '{{ app.microservice.database.host }}'
         _database_port: '{{ app.microservice.database.port }}'
@@ -18,6 +18,5 @@
         _database_username: '{{ app.microservice.database.username }}'
         _database_password: '{{ app.microservice.database.password }}'
         _database_ui_host: '{{ app.microservice.database.ui.host }}'
-        _cache_ui_host: '{{ app.microservice.cache.ui.host }}'
   when: app.microservice.enabled
   tags: [microservice]

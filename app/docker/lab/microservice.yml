@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  php:
+    environment:
+      APP_ENV: dev
+    extra_hosts:
+      - 'api.assets.lab.ds:${PROXY_HOST}'
+      - 'api.authentication.lab.ds:${PROXY_HOST}'
+      - 'api.camunda.lab.ds:${PROXY_HOST}'
+      - 'api.cases.lab.ds:${PROXY_HOST}'
+      - 'api.cms.lab.ds:${PROXY_HOST}'
+      - 'api.discovery.lab.ds:${PROXY_HOST}'
+      - 'api.formio.lab.ds:${PROXY_HOST}'
+      - 'api.forms.lab.ds:${PROXY_HOST}'
+      - 'api.identities.lab.ds:${PROXY_HOST}'
+      - 'api.microservice.lab.ds:${PROXY_HOST}'
+      - 'api.records.lab.ds:${PROXY_HOST}'
+      - 'api.services.lab.ds:${PROXY_HOST}'
+      - 'api.tasks.lab.ds:${PROXY_HOST}'
+      - 'api.tenants.lab.ds:${PROXY_HOST}'

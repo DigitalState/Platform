@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  database_ui:
+    environment:
+      SERVICE_8080_ID: '${COMPOSE_PROJECT_NAME}_database_ui_http'
+      SERVICE_8080_NAME: '${COMPOSE_PROJECT_NAME}_database_ui_http'
+      SERVICE_8080_TAGS: 'proxy.enable=true,proxy.tags=external,proxy.frontend.entryPoints=http,proxy.frontend.rule=Host:${DATABASE_UI_HOST}'
+    links:
+      - database:microservice_database
+
+  php:
+    environment:
+      SERVICE_IGNORE: 'true'
+    links:
+      - database:microservice_database
+
+  api:
+    environment:
+      SERVICE_ENTRYPOINT-PROD: '$${url}'
+      SERVICE_ENTRYPOINT-DEV: '$${url}/app_dev.php'
+      SERVICE_ENTRYPOINT-TEST: '$${url}/app_test.php'
+      SERVICE_443_ID: '${COMPOSE_PROJECT_NAME}_api_https'
+      SERVICE_443_NAME: '${COMPOSE_PROJECT_NAME}_api_https'
+      SERVICE_443_TAGS: 'proxy.enable=true,proxy.tags=external,proxy.frontend.entryPoints=https,proxy.frontend.rule=Host:${API_HOST}'
+      SERVICE_80_ID: '${COMPOSE_PROJECT_NAME}_api_http'
+      SERVICE_80_NAME: '${COMPOSE_PROJECT_NAME}_api_http'
+      SERVICE_80_TAGS: 'proxy.enable=true,proxy.tags=external,proxy.frontend.entryPoints=http,proxy.frontend.rule=Host:${API_HOST}'
+    links:
+      - php:microservice_php
+
+networks:
+  default:
+    external:
+      name: '${NETWORK}'
