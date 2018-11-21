@@ -1,4 +1,4 @@
 ---
 - name: Obtain proxy container gateway
-  shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.{{ namespace }}proxy_default.Gateway {{ '}}' }}' $(docker ps -aqf "name={{ namespace }}proxy_proxy")
+  shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.{{ namespace }}_proxy_default.Gateway {{ '}}' }}' $(docker ps -aqf "name={{ namespace }}_proxy_proxy")
   register: proxy_container_gateway
