@@ -5,6 +5,10 @@ services:
     environment:
       SERVICE_IGNORE: 'true'
 
+  server:
+    environment:
+      SERVICE_IGNORE: 'true'
+
   bootstrap:
     labels:
       traefik.enable: 'true'
