@@ -7,12 +7,14 @@ microservice:
     host: api.microservice.lab.ds
   database:
     host: microservice_database
-    port: 5432
     name: microservice
     username: microservice
     password: microservice
     ui:
       host: ui.database.microservice.lab.ds
-  cache:
-    ui:
-      host: ui.cache.microservice.lab.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.dev.yml
+    - /root/docker/microservice.yml
+    - /root/docker/lab/microservice.yml
+
