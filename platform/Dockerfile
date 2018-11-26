@@ -18,4 +18,4 @@ RUN pip install ansible
 RUN apk del build-dependencies && \
     rm -rf /var/cache/apk/*
 
-WORKDIR /etc/ansible/env/lab
+WORKDIR /etc/ansible/env/dev
