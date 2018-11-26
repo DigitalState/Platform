@@ -13,6 +13,8 @@ microservice:
     password: microservice
     ui:
       host: ui.database.microservice.ci.ds
-  cache:
-    ui:
-      host: ui.cache.microservice.ci.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.test.yml
+    - /root/docker/microservice.yml
+    - /root/docker/ci/microservice.yml
