@@ -2,19 +2,18 @@
 microservice:
   enabled: true
   repository: https://github.com/DigitalState/Microservice.git
-  version: develop
+  version: 0.14.0
   api:
-    host: api.microservice.lab.ds
+    host: api.microservice.dev.ds
   database:
     host: microservice_database
     name: microservice
     username: microservice
     password: microservice
     ui:
-      host: ui.database.microservice.lab.ds
+      host: ui.database.microservice.dev.ds
   docker:
     - docker-compose.yml
     - docker-compose.dev.yml
     - /root/docker/microservice.yml
-    - /root/docker/lab/microservice.yml
-
+    - /root/docker/dev/microservice.yml

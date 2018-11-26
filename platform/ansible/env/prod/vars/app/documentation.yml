@@ -1,5 +1,5 @@
 ---
 documentation:
-  enabled: true
+  enabled: false
   repository: https://github.com/DigitalState/Documentation.git
-  version: master
+  version: 0.14.0

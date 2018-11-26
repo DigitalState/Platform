@@ -3,11 +3,11 @@ formio:
   enabled: true
   order: -10
   repository: https://github.com/DigitalState/Formio.git
-  version: develop
+  version: 0.14.0
   api:
-    host: api.formio.lab.ds
+    host: api.formio.dev.ds
   database:
     ui:
-      host: adminer.formio.lab.ds
+      host: adminer.formio.dev.ds
   username: admin@staff.ds
   password: admin

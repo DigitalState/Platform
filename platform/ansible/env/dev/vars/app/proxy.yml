@@ -3,7 +3,7 @@ proxy:
   enabled: true
   order: -30
   repository: https://github.com/DigitalState/Proxy.git
-  version: 0.14.0
+  version: develop
   port: 80
   discovery:
     token: a0500a68-c736-4e0f-a998-35380cf1791e

@@ -2,9 +2,9 @@
 assets:
   enabled: true
   repository: https://github.com/DigitalState/Assets.git
-  version: 0.14.0
+  version: develop
   api:
-    host: api.assets.dev.ds
+    host: api.assets.lab.ds
   database:
     host: assets_database
     port: 5432
@@ -12,7 +12,7 @@ assets:
     username: assets
     password: assets
     ui:
-      host: ui.database.assets.dev.ds
+      host: ui.database.assets.lab.ds
   cache:
     ui:
-      host: ui.cache.assets.dev.ds
+      host: ui.cache.assets.lab.ds

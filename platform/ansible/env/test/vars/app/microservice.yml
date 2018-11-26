@@ -7,7 +7,6 @@ microservice:
     host: api.microservice.ci.ds
   database:
     host: microservice_database
-    port: 5432
     name: microservice
     username: microservice
     password: microservice

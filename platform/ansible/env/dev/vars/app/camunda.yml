@@ -3,8 +3,8 @@ camunda:
   enabled: true
   order: -10
   repository: https://github.com/DigitalState/Camunda.git
-  version: 0.14.0
+  version: develop
   api:
-    host: api.camunda.dev.ds
+    host: api.camunda.lab.ds
   username: admin@staff.ds
   password: admin

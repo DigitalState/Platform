@@ -1,6 +1,10 @@
 version: '3.4'
 
 services:
+  database:
+    environment:
+      SERVICE_IGNORE: 'true'
+
   database_ui:
     environment:
       SERVICE_8080_ID: '${COMPOSE_PROJECT_NAME}_database_ui_http'

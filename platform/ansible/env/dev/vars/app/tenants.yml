@@ -2,9 +2,9 @@
 tenants:
   enabled: false
   repository: https://github.com/DigitalState/Tenants.git
-  version: 0.14.0
+  version: develop
   api:
-    host: api.tenants.dev.ds
+    host: api.tenants.lab.ds
   database:
     host: tenants_database
     port: 5432
@@ -12,7 +12,7 @@ tenants:
     username: tenants
     password: tenants
     ui:
-      host: ui.database.tenants.dev.ds
+      host: ui.database.tenants.lab.ds
   cache:
     ui:
-      host: ui.cache.tenants.dev.ds
+      host: ui.cache.tenants.lab.ds

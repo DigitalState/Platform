@@ -2,9 +2,9 @@
 forms:
   enabled: true
   repository: https://github.com/DigitalState/Forms.git
-  version: 0.14.0
+  version: develop
   api:
-    host: api.forms.dev.ds
+    host: api.forms.lab.ds
   database:
     host: forms_database
     port: 5432
@@ -12,7 +12,7 @@ forms:
     username: forms
     password: forms
     ui:
-      host: ui.database.forms.dev.ds
+      host: ui.database.forms.lab.ds
   cache:
     ui:
-      host: ui.cache.forms.dev.ds
+      host: ui.cache.forms.lab.ds
