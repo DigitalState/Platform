@@ -1,0 +1,71 @@
+---
+- import_playbook: /etc/ansible/playbook/platform/vars/include.yml
+- import_playbook: /etc/ansible/playbook/platform/vars/computed/include.yml
+
+- name: Compile database/migration/parameters/create task list
+  hosts: platform
+  become: true
+  tasks:
+    - name: Compile files
+      compile:
+        app: '{{ app }}'
+        directory: /etc/ansible/task/app/*
+        task: database/migration/parameters/create
+      register: files
+  tags: [always]
+
+- name: Define database migration parameters
+  hosts: app
+  become: true
+  tasks:
+    - set_fact:
+        parameters:
+          tenant:
+            uuid: '{{ (ansible_date_time.iso8601_micro + "1")|to_uuid }}'
+          system:
+            username: '{{ system.username }}'
+            password: '{{ system.password }}'
+          user:
+            system:
+              uuid: '{{ (ansible_date_time.iso8601_micro + "2")|to_uuid }}'
+              username: '{{ user.system.username }}'
+              password: '{{ user.system.password }}'
+            anonymous:
+              uuid: '{{ (ansible_date_time.iso8601_micro + "3")|to_uuid }}'
+              username: '{{ user.anonymous.username }}'
+              password: '{{ user.anonymous.password }}'
+            admin:
+              uuid: '{{ (ansible_date_time.iso8601_micro + "4")|to_uuid }}'
+              username: '{{ user.admin.username }}'
+              password: '{{ user.admin.password }}'
+          identity:
+            system:
+              uuid: '{{ (ansible_date_time.iso8601_micro + "5")|to_uuid }}'
+            admin:
+              uuid: '{{ (ansible_date_time.iso8601_micro + "6")|to_uuid }}'
+          business_unit:
+            administration:
+              uuid: '{{ (ansible_date_time.iso8601_micro + "7")|to_uuid }}'
+            backoffice:
+              uuid: '{{ (ansible_date_time.iso8601_micro + "8")|to_uuid }}'
+            portal:
+              uuid: '{{ (ansible_date_time.iso8601_micro + "9")|to_uuid }}'
+          config: []
+#            app.spa.admin:
+#              value: 'http://{{ app.admin.ui.host }}'
+#            app.spa.admin.oauth:
+#              value: 'http://{{ app.admin.ui.host }}/oauth'
+#            app.spa.portal:
+#              value: 'http://{{ app.portal.ui.host }}'
+#            app.spa.portal.oauth:
+#              value: 'http://{{ app.portal.ui.host }}/oauth'
+      tags: [always]
+
+- name: Create migration parameters files
+  hosts: app
+  become: true
+  tasks:
+    - name: Include compiled task list
+      include_tasks: '{{ item }}'
+      with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
+      tags: [always]
