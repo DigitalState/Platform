@@ -16,5 +16,5 @@ microservice:
     - docker-compose.yml
     - docker-compose.dev.yml
     - /root/docker/microservice.yml
-    - /root/docker/lab/microservice.yml
+    - /root/docker/microservice.dev.yml
 
