@@ -16,5 +16,5 @@ _api_host: api.microservice.ds
 _api_discovery_host: api.discovery.ds
 _api_discovery_credential: ~
 _api_encryption: ''
-_api_system_user: system
+_api_system_username: system
 _api_system_password: ''

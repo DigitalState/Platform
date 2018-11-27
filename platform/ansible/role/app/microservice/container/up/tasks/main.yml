@@ -24,7 +24,7 @@
         API_DISCOVERY_HOST: '{{ _api_discovery_host }}'
         API_DISCOVERY_CREDENTIAL: '{{ _api_discovery_host }}'
         API_ENCRYPTION: '{{ _api_encryption }}'
-        API_SYSTEM_USER: '{{ _api_system_user }}'
+        API_SYSTEM_USERNAME: '{{ _api_system_username }}'
         API_SYSTEM_PASSWORD: '{{ _api_system_password }}'
     - name: Waiting for microservice container to finalize installation
       shell:
