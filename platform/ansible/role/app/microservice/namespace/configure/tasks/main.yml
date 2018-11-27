@@ -1,8 +1,0 @@
----
-- block:
-    - name: Configure microservice namespace setting
-      lineinfile:
-        path: '/srv/microservice/app/config/parameters.yml'
-        regexp: '^\s{4}namespace:'
-        line: '    namespace: {{ _namespace }}'
-  tags: [microservice]
