@@ -7,7 +7,7 @@
       include_role:
         name: app/microservice/database/fixtures/load
       vars:
-        _fixtures: '{{ "test" if env == "ci" else "dev" }}'
-        _override: '{{ "/root/fixtures/microservice" if override.stat.exists == true and env != "ci" else "" }}'
+        _fixtures: '{{ "test" if env == "test" else "dev" }}'
+        _override: '{{ "/root/fixtures/microservice" if override.stat.exists == true and env != "test" else "" }}'
   when: app.microservice.enabled
   tags: [microservice]
