@@ -4,6 +4,7 @@
 - import_playbook: app/container/down.yml
 - import_playbook: app/repository/download.yml
 - import_playbook: app/jwt/key/download.yml
+- import_playbook: app/database/migration/parameters/create.yml
 - import_playbook: app/container/up.yml
 - import_playbook: app/database/migration/load.yml
 - import_playbook: app/database/fixtures/load.yml
