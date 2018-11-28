@@ -11,6 +11,6 @@
         _directory: '{{ fixtures }}'
       when: custom.stat.exists
   when:
-    - fixtures
+    - fixtures is not none
     - app.microservice.enabled
   tags: [microservice]
