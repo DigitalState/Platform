@@ -10,5 +10,7 @@
         _source: '{{ custom.stat.path }}'
         _directory: '{{ fixtures }}'
       when: custom.stat.exists
-  when: app.microservice.enabled
+  when:
+    - fixtures
+    - app.microservice.enabled
   tags: [microservice]

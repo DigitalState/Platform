@@ -5,5 +5,7 @@
         name: app/microservice/database/fixtures/load
       vars:
         _fixtures: '{{ fixtures }}'
-  when: app.microservice.enabled
+  when:
+    - fixtures
+    - app.microservice.enabled
   tags: [microservice]
