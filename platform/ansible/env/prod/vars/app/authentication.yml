@@ -2,17 +2,18 @@
 authentication:
   enabled: true
   repository: https://github.com/DigitalState/Authentication.git
-  version: 0.14.0
+  version: 0.15.0
   api:
-    host: api.authentication.dev.ds
+    host: api.authentication.prod.ds
   database:
     host: authentication_database
-    port: 5432
     name: authentication
     username: authentication
     password: authentication
     ui:
-      host: ui.database.authentication.dev.ds
-  cache:
-    ui:
-      host: ui.cache.authentication.dev.ds
+      host: ui.database.authentication.prod.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.prod.yml
+    - /root/docker/prod.yml
+    - /root/docker/authentication.yml

@@ -1,13 +1,11 @@
 ---
 - block:
-    - name: Detect services fixtures directory override
-      local_action: 'stat path=/root/fixtures/services'
-      register: override
     - name: Load services database fixtures
       include_role:
         name: app/services/database/fixtures/load
       vars:
-        _fixtures: '{{ "test" if env == "ci" else "dev" }}'
-        _override: '{{ "/root/fixtures/services" if override.stat.exists == true and env != "ci" else "" }}'
-  when: app.services.enabled
+        _fixtures: '{{ fixtures }}'
+  when:
+    - fixtures is not none
+    - app.services.enabled
   tags: [services]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create authentication custom fixtures
+      copy:
+        src: '{{ _source }}/'
+        dest: '/srv/authentication/api/config/fixtures/{{ _directory }}'
+  tags: [authentication]

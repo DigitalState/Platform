@@ -4,15 +4,16 @@ assets:
   repository: https://github.com/DigitalState/Assets.git
   version: develop
   api:
-    host: api.assets.ci.ds
+    host: api.assets.test.ds
   database:
     host: assets_database
-    port: 5432
     name: assets
     username: assets
     password: assets
     ui:
-      host: ui.database.assets.ci.ds
-  cache:
-    ui:
-      host: ui.cache.assets.ci.ds
+      host: ui.database.assets.test.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.test.yml
+    - /root/docker/test.yml
+    - /root/docker/assets.yml

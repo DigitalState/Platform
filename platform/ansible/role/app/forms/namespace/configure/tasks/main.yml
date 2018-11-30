@@ -1,8 +1,0 @@
----
-- block:
-    - name: Configure forms namespace setting
-      lineinfile:
-        path: '/srv/forms/app/config/parameters.yml'
-        regexp: '^\s{4}namespace:'
-        line: '    namespace: {{ _namespace }}'
-  tags: [forms]

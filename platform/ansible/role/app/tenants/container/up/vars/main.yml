@@ -1,19 +1,20 @@
 ---
-_env: prod
-_compose_project_name: dstenants
-_network: dsproxy_default
-_proxy_host: 127.0.0.1
+_files: ['docker-compose.yml']
+_namespace: ds
 _directory: /srv/tenants
-_api_host: api.tenants.ds
-_database_host: tenants_db
-_database_port: 5432
+_network: ds_proxy_default
+_proxy_host: 127.0.0.1
+_database_host: tenants_database
 _database_name: tenants
-_database_username: tenants
+_database_user: tenants
 _database_password: tenants
 _database_ui_host: ui.database.tenants.ds
-_cache_ui_host: ui.cache.tenants.ds
-_credential:
-  email: ~
-  username: ~
-  password: ~
-
+_api_name: tenants
+_api_env: prod
+_api_secret: ''
+_api_host: api.tenants.ds
+_api_discovery_host: api.discovery.ds
+_api_discovery_credential: ~
+_api_encryption: ''
+_api_system_username: system
+_api_system_password: ''

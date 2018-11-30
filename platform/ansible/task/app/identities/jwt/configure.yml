@@ -1,9 +1,0 @@
----
-- block:
-    - name: Configure identities jwt key pass phrase
-      include_role:
-        name: app/identities/jwt/configure
-      vars:
-        _pass_phrase: '{{ jwt.pass_phrase }}'
-  when: app.identities.enabled
-  tags: [identities]

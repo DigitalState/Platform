@@ -1,9 +1,0 @@
----
-- block:
-    - name: Execute authentication database down migration
-      include_role:
-        name: app/authentication/database/migration/down
-      vars:
-        _version: '{{ version }}'
-  when: app.authentication.enabled
-  tags: [authentication]

@@ -1,9 +1,10 @@
 ---
 - block:
     - name: Load forms database fixtures
-      import_tasks: default.yml
-      when: _override == ""
-    - name: Load forms database fixtures override
-      import_tasks: override.yml
-      when: _override != ""
+      shell:
+        cmd: 'docker-compose exec -T -e FIXTURES={{ _fixtures }} php php bin/console doctrine:fixtures:load --no-interaction'
+        chdir: /srv/forms
+    - name: Pause while forms fixtures load
+      pause:
+        seconds: 15
   tags: [forms]

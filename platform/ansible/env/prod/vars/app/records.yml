@@ -2,17 +2,18 @@
 records:
   enabled: true
   repository: https://github.com/DigitalState/Records.git
-  version: 0.14.0
+  version: 0.15.0
   api:
-    host: api.records.dev.ds
+    host: api.records.prod.ds
   database:
     host: records_database
-    port: 5432
     name: records
     username: records
     password: records
     ui:
-      host: ui.database.records.dev.ds
-  cache:
-    ui:
-      host: ui.cache.records.dev.ds
+      host: ui.database.records.prod.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.prod.yml
+    - /root/docker/prod.yml
+    - /root/docker/records.yml

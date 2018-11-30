@@ -1,9 +1,0 @@
----
-- block:
-    - name: Configure forms namespace settings
-      include_role:
-        name: app/forms/namespace/configure
-      vars:
-        _namespace: '{{ namespace }}'
-  when: app.forms.enabled
-  tags: [forms]

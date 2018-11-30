@@ -1,9 +1,0 @@
----
-- block:
-    - name: Configure identities namespace settings
-      include_role:
-        name: app/identities/namespace/configure
-      vars:
-        _namespace: '{{ namespace }}'
-  when: app.identities.enabled
-  tags: [identities]

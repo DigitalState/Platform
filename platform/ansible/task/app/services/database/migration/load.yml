@@ -4,6 +4,6 @@
       include_role:
         name: app/services/database/migration/load
       vars:
-        _data: '{{ data }}'
+        _parameters: '{{ parameters }}'
   when: app.services.enabled
   tags: [services]

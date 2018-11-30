@@ -5,9 +5,9 @@ formio:
   repository: https://github.com/DigitalState/Formio.git
   version: develop
   api:
-    host: api.formio.ci.ds
+    host: api.formio.test.ds
   database:
     ui:
-      host: adminer.formio.ci.ds
+      host: adminer.formio.test.ds
   username: admin@staff.ds
   password: admin

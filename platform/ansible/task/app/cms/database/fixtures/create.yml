@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Detect cms custom fixtures
+      local_action: 'stat path=/root/fixtures/{{ fixtures }}/cms'
+      register: custom
+    - name: Create cms custom fixtures
+      include_role:
+        name: app/cms/database/fixtures/create
+      vars:
+        _source: '{{ custom.stat.path }}'
+        _directory: '{{ fixtures }}'
+      when: custom.stat.exists
+  when:
+    - fixtures is not none
+    - app.cms.enabled
+  tags: [cms]

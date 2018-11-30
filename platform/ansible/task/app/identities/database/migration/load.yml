@@ -4,6 +4,6 @@
       include_role:
         name: app/identities/database/migration/load
       vars:
-        _data: '{{ data }}'
+        _parameters: '{{ parameters }}'
   when: app.identities.enabled
   tags: [identities]

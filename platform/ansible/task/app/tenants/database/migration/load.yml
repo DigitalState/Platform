@@ -4,6 +4,6 @@
       include_role:
         name: app/tenants/database/migration/load
       vars:
-        _data: '{{ data }}'
+        _parameters: '{{ parameters }}'
   when: app.tenants.enabled
   tags: [tenants]

@@ -4,6 +4,6 @@
       include_role:
         name: app/assets/database/migration/load
       vars:
-        _data: '{{ data }}'
+        _parameters: '{{ parameters }}'
   when: app.assets.enabled
   tags: [assets]

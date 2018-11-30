@@ -4,6 +4,7 @@
       include_role:
         name: app/tenants/container/down
       vars:
-        _env: '{{ env }}'
+        _network: '{{ namespace }}_proxy_default'
+        _files: '{{ app.tenants.docker|list }}'
   when: app.tenants.enabled
   tags: [tenants]

@@ -4,15 +4,16 @@ records:
   repository: https://github.com/DigitalState/Records.git
   version: develop
   api:
-    host: api.records.lab.ds
+    host: api.records.dev.ds
   database:
     host: records_database
-    port: 5432
     name: records
     username: records
     password: records
     ui:
-      host: ui.database.records.lab.ds
-  cache:
-    ui:
-      host: ui.cache.records.lab.ds
+      host: ui.database.records.dev.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.dev.yml
+    - /root/docker/dev.yml
+    - /root/docker/records.yml

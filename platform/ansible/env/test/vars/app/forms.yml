@@ -4,15 +4,16 @@ forms:
   repository: https://github.com/DigitalState/Forms.git
   version: develop
   api:
-    host: api.forms.ci.ds
+    host: api.forms.test.ds
   database:
     host: forms_database
-    port: 5432
     name: forms
     username: forms
     password: forms
     ui:
-      host: ui.database.forms.ci.ds
-  cache:
-    ui:
-      host: ui.cache.forms.ci.ds
+      host: ui.database.forms.test.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.test.yml
+    - /root/docker/test.yml
+    - /root/docker/forms.yml

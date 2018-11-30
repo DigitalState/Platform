@@ -3,23 +3,29 @@
     - name: Up cases container
       docker_service:
         project_src: /srv/cases
-        files:
-          - docker-compose.yml
-          - 'docker-compose.{{ _env }}.yml'
+        files: '{{ _files|list }}'
         state: present
       environment:
-        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        COMPOSE_PROJECT_NAME: '{{ _namespace }}_{{ _api_name }}'
+        DIRECTORY: '{{ _directory }}'
         NETWORK: '{{ _network }}'
         PROXY_HOST: '{{ _proxy_host }}'
-        DIRECTORY: '{{ _directory }}'
-        API_HOST: '{{ _api_host }}'
         DATABASE_HOST: '{{ _database_host }}'
-        DATABASE_PORT: '{{ _database_port }}'
         DATABASE_NAME: '{{ _database_name }}'
-        DATABASE_USERNAME: '{{ _database_username }}'
+        DATABASE_USER: '{{ _database_user }}'
         DATABASE_PASSWORD: '{{ _database_password }}'
         DATABASE_UI_HOST: '{{ _database_ui_host }}'
-        CACHE_UI_HOST: '{{ _cache_ui_host }}'
+        API_NAME: '{{ _api_name }}'
+        API_ENV: '{{ _api_env }}'
+        API_SECRET: '{{ _api_secret }}'
+        API_HOST: '{{ _api_host }}'
+        API_NAMESPACE: '{{ _namespace }}'
+        API_DATABASE_URL: 'postgres://{{ _database_user }}:{{ _database_password }}@{{ _database_host }}/{{ _database_name }}'
+        API_DISCOVERY_HOST: '{{ _api_discovery_host }}'
+        API_DISCOVERY_CREDENTIAL: '{{ _api_discovery_host }}'
+        API_ENCRYPTION: '{{ _api_encryption }}'
+        API_SYSTEM_USERNAME: '{{ _api_system_username }}'
+        API_SYSTEM_PASSWORD: '{{ _api_system_password }}'
     - name: Waiting for cases container to finalize installation
       shell:
         cmd: docker-compose exec -T php pidof php-fpm | cat
@@ -30,3 +36,5 @@
       delay: 10
       changed_when: false
   tags: [cases]
+
+

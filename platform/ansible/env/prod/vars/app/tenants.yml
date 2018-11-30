@@ -1,18 +1,19 @@
 ---
 tenants:
-  enabled: false
+  enabled: true
   repository: https://github.com/DigitalState/Tenants.git
-  version: 0.14.0
+  version: 0.15.0
   api:
-    host: api.tenants.dev.ds
+    host: api.tenants.prod.ds
   database:
     host: tenants_database
-    port: 5432
     name: tenants
     username: tenants
     password: tenants
     ui:
-      host: ui.database.tenants.dev.ds
-  cache:
-    ui:
-      host: ui.cache.tenants.dev.ds
+      host: ui.database.tenants.prod.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.prod.yml
+    - /root/docker/prod.yml
+    - /root/docker/tenants.yml

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create cases database migration parameters file
+      include_role:
+        name: app/cases/database/migration/parameters/create
+      vars:
+        _parameters: '{{ parameters }}'
+  when: app.cases.enabled
+  tags: [cases]

@@ -1,13 +1,11 @@
 ---
 - block:
-    - name: Detect assets fixtures directory override
-      local_action: 'stat path=/root/fixtures/assets'
-      register: override
     - name: Load assets database fixtures
       include_role:
         name: app/assets/database/fixtures/load
       vars:
-        _fixtures: '{{ "test" if env == "ci" else "dev" }}'
-        _override: '{{ "/root/fixtures/assets" if override.stat.exists == true and env != "ci" else "" }}'
-  when: app.assets.enabled
+        _fixtures: '{{ fixtures }}'
+  when:
+    - fixtures is not none
+    - app.assets.enabled
   tags: [assets]

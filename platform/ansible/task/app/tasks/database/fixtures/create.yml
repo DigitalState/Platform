@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Detect tasks custom fixtures
+      local_action: 'stat path=/root/fixtures/{{ fixtures }}/tasks'
+      register: custom
+    - name: Create tasks custom fixtures
+      include_role:
+        name: app/tasks/database/fixtures/create
+      vars:
+        _source: '{{ custom.stat.path }}'
+        _directory: '{{ fixtures }}'
+      when: custom.stat.exists
+  when:
+    - fixtures is not none
+    - app.tasks.enabled
+  tags: [tasks]

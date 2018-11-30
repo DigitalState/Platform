@@ -1,9 +1,0 @@
----
-- block:
-    - name: Configure records namespace settings
-      include_role:
-        name: app/records/namespace/configure
-      vars:
-        _namespace: '{{ namespace }}'
-  when: app.records.enabled
-  tags: [records]

@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Detect cases custom fixtures
+      local_action: 'stat path=/root/fixtures/{{ fixtures }}/cases'
+      register: custom
+    - name: Create cases custom fixtures
+      include_role:
+        name: app/cases/database/fixtures/create
+      vars:
+        _source: '{{ custom.stat.path }}'
+        _directory: '{{ fixtures }}'
+      when: custom.stat.exists
+  when:
+    - fixtures is not none
+    - app.cases.enabled
+  tags: [cases]

@@ -1,13 +1,11 @@
 ---
 - block:
-    - name: Detect cases fixtures directory override
-      local_action: 'stat path=/root/fixtures/cases'
-      register: override
     - name: Load cases database fixtures
       include_role:
         name: app/cases/database/fixtures/load
       vars:
-        _fixtures: '{{ "test" if env == "ci" else "dev" }}'
-        _override: '{{ "/root/fixtures/cases" if override.stat.exists == true and env != "ci" else "" }}'
-  when: app.cases.enabled
+        _fixtures: '{{ fixtures }}'
+  when:
+    - fixtures is not none
+    - app.cases.enabled
   tags: [cases]

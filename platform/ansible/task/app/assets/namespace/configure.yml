@@ -1,9 +1,0 @@
----
-- block:
-    - name: Configure assets namespace settings
-      include_role:
-        name: app/assets/namespace/configure
-      vars:
-        _namespace: '{{ namespace }}'
-  when: app.assets.enabled
-  tags: [assets]

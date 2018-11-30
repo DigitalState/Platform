@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create tenants database migration parameters file
+      include_role:
+        name: app/tenants/database/migration/parameters/create
+      vars:
+        _parameters: '{{ parameters }}'
+  when: app.tenants.enabled
+  tags: [tenants]

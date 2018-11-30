@@ -4,6 +4,6 @@
       include_role:
         name: app/cases/database/migration/load
       vars:
-        _data: '{{ data }}'
+        _parameters: '{{ parameters }}'
   when: app.cases.enabled
   tags: [cases]

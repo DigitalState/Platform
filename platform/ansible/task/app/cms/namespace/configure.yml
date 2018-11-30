@@ -1,9 +1,0 @@
----
-- block:
-    - name: Configure cms namespace settings
-      include_role:
-        name: app/cms/namespace/configure
-      vars:
-        _namespace: '{{ namespace }}'
-  when: app.cms.enabled
-  tags: [cms]

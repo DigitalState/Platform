@@ -4,16 +4,16 @@ microservice:
   repository: https://github.com/DigitalState/Microservice.git
   version: develop
   api:
-    host: api.microservice.ci.ds
+    host: api.microservice.test.ds
   database:
     host: microservice_database
     name: microservice
     username: microservice
     password: microservice
     ui:
-      host: ui.database.microservice.ci.ds
+      host: ui.database.microservice.test.ds
   docker:
     - docker-compose.yml
     - docker-compose.test.yml
+    - /root/docker/test.yml
     - /root/docker/microservice.yml
-    - /root/docker/ci/microservice.yml

@@ -4,6 +4,7 @@
       include_role:
         name: app/tasks/container/down
       vars:
-        _env: '{{ env }}'
+        _network: '{{ namespace }}_proxy_default'
+        _files: '{{ app.tasks.docker|list }}'
   when: app.tasks.enabled
   tags: [tasks]

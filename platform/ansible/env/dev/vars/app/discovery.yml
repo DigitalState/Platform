@@ -7,7 +7,7 @@ discovery:
   token:
     master: a0500a68-c736-4e0f-a998-35380cf1791e
   ui:
-    host: ui.discovery.lab.ds
+    host: ui.discovery.dev.ds
   docker:
     - docker-compose.yml
     - docker-compose.dev.yml

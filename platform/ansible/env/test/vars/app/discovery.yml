@@ -5,10 +5,10 @@ discovery:
   repository: https://github.com/DigitalState/Discovery.git
   version: develop
   token:
-    master: 740a4d9d-fd25-4371-ac48-ff3fc7879be0
+    master: a0500a68-c736-4e0f-a998-35380cf1791e
   ui:
-    host: ui.discovery.ci.ds
+    host: ui.discovery.test.ds
   docker:
     - docker-compose.yml
-    - docker-compose.test.yml
+    - docker-compose.dev.yml
     - /root/docker/discovery.yml

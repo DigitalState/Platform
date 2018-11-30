@@ -4,15 +4,16 @@ cases:
   repository: https://github.com/DigitalState/Cases.git
   version: develop
   api:
-    host: api.cases.lab.ds
+    host: api.cases.dev.ds
   database:
     host: cases_database
-    port: 5432
     name: cases
     username: cases
     password: cases
     ui:
-      host: ui.database.cases.lab.ds
-  cache:
-    ui:
-      host: ui.cache.cases.lab.ds
+      host: ui.database.cases.dev.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.dev.yml
+    - /root/docker/dev.yml
+    - /root/docker/cases.yml

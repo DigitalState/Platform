@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Detect assets custom fixtures
+      local_action: 'stat path=/root/fixtures/{{ fixtures }}/assets'
+      register: custom
+    - name: Create assets custom fixtures
+      include_role:
+        name: app/assets/database/fixtures/create
+      vars:
+        _source: '{{ custom.stat.path }}'
+        _directory: '{{ fixtures }}'
+      when: custom.stat.exists
+  when:
+    - fixtures is not none
+    - app.assets.enabled
+  tags: [assets]

@@ -10,6 +10,8 @@ services:
       SERVICE_IGNORE: 'true'
 
   bootstrap:
+    environment:
+      SERVICE_IGNORE: 'true'
     labels:
       traefik.enable: 'true'
       traefik.frontend.entryPoints: http

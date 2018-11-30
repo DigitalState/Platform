@@ -2,17 +2,18 @@
 assets:
   enabled: true
   repository: https://github.com/DigitalState/Assets.git
-  version: 0.14.0
+  version: 0.15.0
   api:
-    host: api.assets.dev.ds
+    host: api.assets.prod.ds
   database:
     host: assets_database
-    port: 5432
     name: assets
     username: assets
     password: assets
     ui:
-      host: ui.database.assets.dev.ds
-  cache:
-    ui:
-      host: ui.cache.assets.dev.ds
+      host: ui.database.assets.prod.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.prod.yml
+    - /root/docker/prod.yml
+    - /root/docker/assets.yml

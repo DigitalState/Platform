@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create cms database migration parameters file
+      include_role:
+        name: app/cms/database/migration/parameters/create
+      vars:
+        _parameters: '{{ parameters }}'
+  when: app.cms.enabled
+  tags: [cms]

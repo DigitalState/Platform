@@ -2,22 +2,29 @@
 - block:
     - name: Retrieve proxy container ip
       include_tasks: /etc/ansible/task/app/proxy/container/property/ip.yml
+    - name: Retrieve discovery container ip
+      include_tasks: /etc/ansible/task/app/discovery/container/property/ip.yml
     - name: Up assets container
       include_role:
         name: app/assets/container/up
       vars:
-        _env: '{{ env }}'
-        _compose_project_name: '{{ namespace }}assets'
-        _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_ip.stdout }}'
+        _files: '{{ app.assets.docker|list }}'
+        _namespace: '{{ namespace }}'
         _directory: '{{ directory }}/assets'
-        _api_host: '{{ app.assets.api.host }}'
+        _network: '{{ namespace }}_proxy_default'
+        _proxy_host: '{{ proxy_container_ip.stdout }}'
         _database_host: '{{ app.assets.database.host }}'
-        _database_port: '{{ app.assets.database.port }}'
         _database_name: '{{ app.assets.database.name }}'
         _database_username: '{{ app.assets.database.username }}'
         _database_password: '{{ app.assets.database.password }}'
         _database_ui_host: '{{ app.assets.database.ui.host }}'
-        _cache_ui_host: '{{ app.assets.cache.ui.host }}'
+        _api_env: '{{ env }}'
+        _api_secret: '{{ encryption.secret }}'
+        _api_host: '{{ app.assets.api.host }}'
+        _api_discovery_host: '{{ discovery_container_ip.stdout }}:8500'
+        _api_discovery_credential: '{{ app.discovery.token.master }}'
+        _api_encryption: '{{ encryption.encryption }}'
+        _api_system_username: '{{ system.username }}'
+        _api_system_password: '{{ system.password }}'
   when: app.assets.enabled
   tags: [assets]

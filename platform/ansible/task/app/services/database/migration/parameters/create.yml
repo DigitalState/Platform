@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create services database migration parameters file
+      include_role:
+        name: app/services/database/migration/parameters/create
+      vars:
+        _parameters: '{{ parameters }}'
+  when: app.services.enabled
+  tags: [services]

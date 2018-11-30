@@ -1,9 +1,10 @@
 ---
 - block:
     - name: Load identities database fixtures
-      import_tasks: default.yml
-      when: _override == ""
-    - name: Load identities database fixtures override
-      import_tasks: override.yml
-      when: _override != ""
+      shell:
+        cmd: 'docker-compose exec -T -e FIXTURES={{ _fixtures }} php php bin/console doctrine:fixtures:load --no-interaction'
+        chdir: /srv/identities
+    - name: Pause while identities fixtures load
+      pause:
+        seconds: 15
   tags: [identities]

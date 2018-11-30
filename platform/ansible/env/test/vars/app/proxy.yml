@@ -6,10 +6,10 @@ proxy:
   version: develop
   port: 80
   discovery:
-    token: 740a4d9d-fd25-4371-ac48-ff3fc7879be0
+    token: a0500a68-c736-4e0f-a998-35380cf1791e
   ui:
     port: 81
   docker:
     - docker-compose.yml
-    - docker-compose.test.yml
+    - docker-compose.dev.yml
     - /root/docker/proxy.yml

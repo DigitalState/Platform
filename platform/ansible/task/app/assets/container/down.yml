@@ -4,6 +4,7 @@
       include_role:
         name: app/assets/container/down
       vars:
-        _env: '{{ env }}'
+        _network: '{{ namespace }}_proxy_default'
+        _files: '{{ app.assets.docker|list }}'
   when: app.assets.enabled
   tags: [assets]

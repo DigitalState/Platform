@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create tasks database migration parameters file
+      include_role:
+        name: app/tasks/database/migration/parameters/create
+      vars:
+        _parameters: '{{ parameters }}'
+  when: app.tasks.enabled
+  tags: [tasks]

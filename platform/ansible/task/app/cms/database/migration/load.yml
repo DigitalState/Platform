@@ -4,6 +4,6 @@
       include_role:
         name: app/cms/database/migration/load
       vars:
-        _data: '{{ data }}'
+        _parameters: '{{ parameters }}'
   when: app.cms.enabled
   tags: [cms]

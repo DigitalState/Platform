@@ -4,15 +4,16 @@ authentication:
   repository: https://github.com/DigitalState/Authentication.git
   version: develop
   api:
-    host: api.authentication.lab.ds
+    host: api.authentication.dev.ds
   database:
     host: authentication_database
-    port: 5432
     name: authentication
     username: authentication
     password: authentication
     ui:
-      host: ui.database.authentication.lab.ds
-  cache:
-    ui:
-      host: ui.cache.authentication.lab.ds
+      host: ui.database.authentication.dev.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.dev.yml
+    - /root/docker/dev.yml
+    - /root/docker/authentication.yml

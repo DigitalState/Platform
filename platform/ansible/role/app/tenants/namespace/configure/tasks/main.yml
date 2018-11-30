@@ -1,8 +1,0 @@
----
-- block:
-    - name: Configure tenants namespace setting
-      lineinfile:
-        path: '/srv/tenants/app/config/parameters.yml'
-        regexp: '^\s{4}namespace:'
-        line: '    namespace: {{ _namespace }}'
-  tags: [tenants]
