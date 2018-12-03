@@ -15,7 +15,7 @@ services:
     labels:
       traefik.enable: 'true'
       traefik.frontend.entryPoints: http
-      traefik.port: '8500'
+      traefik.port: '8500' # Must be a string
       traefik.frontend.rule: 'Host:${UI_HOST}'
 
   registrator:
@@ -27,6 +27,10 @@ services:
     command: '-internal consul://bootstrap:8500'
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      default:
+        aliases:
+          - discovery_registrator
 
 networks:
   default:
