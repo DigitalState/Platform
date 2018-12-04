@@ -13,8 +13,9 @@ _api_name: assets
 _api_env: prod
 _api_secret: ''
 _api_host: api.assets.ds
+_api_jwt_pass_phrase: ~
 _api_discovery_host: api.discovery.ds
 _api_discovery_credential: ~
-_api_encryption: ''
+_api_encryption: ~
 _api_system_username: system
-_api_system_password: ''
+_api_system_password: ~
