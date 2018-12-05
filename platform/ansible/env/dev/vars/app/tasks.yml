@@ -15,5 +15,5 @@ tasks:
   docker:
     - docker-compose.yml
     - docker-compose.dev.yml
-    - /root/docker/dev.yml
+    - /root/docker/app.dev.yml
     - /root/docker/tasks.yml
