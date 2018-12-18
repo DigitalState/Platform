@@ -21,9 +21,6 @@ services:
 
   api:
     environment:
-      SERVICE_ENTRYPOINT-PROD: '$${url}'
-      SERVICE_ENTRYPOINT-DEV: '$${url}/app_dev.php'
-      SERVICE_ENTRYPOINT-TEST: '$${url}/app_test.php'
       SERVICE_443_ID: '${COMPOSE_PROJECT_NAME}_api_https'
       SERVICE_443_NAME: '${COMPOSE_PROJECT_NAME}_api_https'
       SERVICE_443_TAGS: 'proxy.enable=true,proxy.tags=external,proxy.frontend.entryPoints=https,proxy.frontend.rule=Host:${API_HOST}'
