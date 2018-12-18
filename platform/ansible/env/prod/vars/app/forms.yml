@@ -15,5 +15,5 @@ forms:
   docker:
     - docker-compose.yml
     - docker-compose.prod.yml
-    - /root/docker/app.prod.yml
+    - /root/docker/dns.prod.yml
     - /root/docker/forms.yml

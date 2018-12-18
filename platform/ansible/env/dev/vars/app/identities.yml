@@ -15,5 +15,5 @@ identities:
   docker:
     - docker-compose.yml
     - docker-compose.dev.yml
-    - /root/docker/app.dev.yml
+    - /root/docker/dns.dev.yml
     - /root/docker/identities.yml

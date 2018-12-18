@@ -15,6 +15,7 @@ services:
 
   php:
     environment:
+      <<: *dns
       SERVICE_IGNORE: 'true'
     links:
       - database:microservice_database
