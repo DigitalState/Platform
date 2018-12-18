@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Load microservice database fixture
+      include_role:
+        name: app/microservice/database/fixture/load
+      vars:
+        _fixture: '{{ fixture }}'
+  when:
+    - fixture is not none
+    - app.microservice.enabled
+  tags: [microservice]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create forms custom fixture
+      copy:
+        src: '{{ _source }}/'
+        dest: '/srv/forms/api/config/fixtures/{{ _directory }}'
+  tags: [forms]

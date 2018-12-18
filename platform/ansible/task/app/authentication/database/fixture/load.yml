@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Load authentication database fixture
+      include_role:
+        name: app/authentication/database/fixture/load
+      vars:
+        _fixture: '{{ fixture }}'
+  when:
+    - fixture is not none
+    - app.authentication.enabled
+  tags: [authentication]

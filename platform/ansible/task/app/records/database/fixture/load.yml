@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Load records database fixture
+      include_role:
+        name: app/records/database/fixture/load
+      vars:
+        _fixture: '{{ fixture }}'
+  when:
+    - fixture is not none
+    - app.records.enabled
+  tags: [records]

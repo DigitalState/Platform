@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Load forms database fixture
+      include_role:
+        name: app/forms/database/fixture/load
+      vars:
+        _fixture: '{{ fixture }}'
+  when:
+    - fixture is not none
+    - app.forms.enabled
+  tags: [forms]

@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Detect authentication custom fixture
+      local_action: 'stat path=/root/fixtures/{{ fixture }}/authentication'
+      register: custom
+    - name: Create authentication custom fixture
+      include_role:
+        name: app/authentication/database/fixture/create
+      vars:
+        _source: '{{ custom.stat.path }}'
+        _directory: '{{ fixture }}'
+      when: custom.stat.exists
+  when:
+    - fixture is not none
+    - app.authentication.enabled
+  tags: [authentication]

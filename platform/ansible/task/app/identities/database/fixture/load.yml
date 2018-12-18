@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Load identities database fixture
+      include_role:
+        name: app/identities/database/fixture/load
+      vars:
+        _fixture: '{{ fixture }}'
+  when:
+    - fixture is not none
+    - app.identities.enabled
+  tags: [identities]

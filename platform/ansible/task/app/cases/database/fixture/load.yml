@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Load cases database fixture
+      include_role:
+        name: app/cases/database/fixture/load
+      vars:
+        _fixture: '{{ fixture }}'
+  when:
+    - fixture is not none
+    - app.cases.enabled
+  tags: [cases]

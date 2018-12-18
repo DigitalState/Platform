@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create cms custom fixtures
-      copy:
-        src: '{{ _source }}/'
-        dest: '/srv/cms/api/config/fixtures/{{ _directory }}'
-  tags: [cms]

@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Detect records custom fixture
+      local_action: 'stat path=/root/fixtures/{{ fixture }}/records'
+      register: custom
+    - name: Create records custom fixture
+      include_role:
+        name: app/records/database/fixture/create
+      vars:
+        _source: '{{ custom.stat.path }}'
+        _directory: '{{ fixture }}'
+      when: custom.stat.exists
+  when:
+    - fixture is not none
+    - app.records.enabled
+  tags: [records]

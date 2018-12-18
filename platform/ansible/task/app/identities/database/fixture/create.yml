@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Detect identities custom fixture
+      local_action: 'stat path=/root/fixtures/{{ fixture }}/identities'
+      register: custom
+    - name: Create identities custom fixture
+      include_role:
+        name: app/identities/database/fixture/create
+      vars:
+        _source: '{{ custom.stat.path }}'
+        _directory: '{{ fixture }}'
+      when: custom.stat.exists
+  when:
+    - fixture is not none
+    - app.identities.enabled
+  tags: [identities]

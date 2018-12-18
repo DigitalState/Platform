@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Load cms database fixture
+      shell:
+        cmd: 'docker-compose exec -T -e FIXTURES={{ _fixture }} php php bin/console doctrine:fixtures:load --no-interaction'
+        chdir: /srv/cms
+    - name: Pause while cms fixture load
+      pause:
+        seconds: 15
+  tags: [cms]

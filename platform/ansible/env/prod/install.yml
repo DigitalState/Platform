@@ -8,4 +8,4 @@
 - import_playbook: app/database/migration/parameters/create.yml
 - import_playbook: app/container/up.yml
 - import_playbook: app/database/migration/load.yml
-- import_playbook: app/database/fixtures/load.yml
+- import_playbook: app/database/fixture/load.yml

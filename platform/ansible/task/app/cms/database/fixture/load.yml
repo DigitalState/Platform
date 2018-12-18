@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Load cms database fixture
+      include_role:
+        name: app/cms/database/fixture/load
+      vars:
+        _fixture: '{{ fixture }}'
+  when:
+    - fixture is not none
+    - app.cms.enabled
+  tags: [cms]

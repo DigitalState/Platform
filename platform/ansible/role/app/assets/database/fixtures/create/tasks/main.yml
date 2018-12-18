@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create assets custom fixtures
-      copy:
-        src: '{{ _source }}/'
-        dest: '/srv/assets/api/config/fixtures/{{ _directory }}'
-  tags: [assets]

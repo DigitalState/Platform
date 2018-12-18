@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create identities custom fixture
+      copy:
+        src: '{{ _source }}/'
+        dest: '/srv/identities/api/config/fixtures/{{ _directory }}'
+  tags: [identities]

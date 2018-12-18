@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Detect services custom fixture
+      local_action: 'stat path=/root/fixtures/{{ fixture }}/services'
+      register: custom
+    - name: Create services custom fixture
+      include_role:
+        name: app/services/database/fixture/create
+      vars:
+        _source: '{{ custom.stat.path }}'
+        _directory: '{{ fixture }}'
+      when: custom.stat.exists
+  when:
+    - fixture is not none
+    - app.services.enabled
+  tags: [services]

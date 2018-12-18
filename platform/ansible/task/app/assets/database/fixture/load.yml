@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Load assets database fixture
+      include_role:
+        name: app/assets/database/fixture/load
+      vars:
+        _fixture: '{{ fixture }}'
+  when:
+    - fixture is not none
+    - app.assets.enabled
+  tags: [assets]

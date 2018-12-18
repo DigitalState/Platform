@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Load tenants database fixture
+      include_role:
+        name: app/tenants/database/fixture/load
+      vars:
+        _fixture: '{{ fixture }}'
+  when:
+    - fixture is not none
+    - app.tenants.enabled
+  tags: [tenants]

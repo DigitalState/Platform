@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Detect microservice custom fixture
+      local_action: 'stat path=/root/fixtures/{{ fixture }}/microservice'
+      register: custom
+    - name: Create microservice custom fixture
+      include_role:
+        name: app/microservice/database/fixture/create
+      vars:
+        _source: '{{ custom.stat.path }}'
+        _directory: '{{ fixture }}'
+      when: custom.stat.exists
+  when:
+    - fixture is not none
+    - app.microservice.enabled
+  tags: [microservice]
