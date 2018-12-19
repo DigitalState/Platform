@@ -7,8 +7,8 @@ workflow:
   api:
     host: api.workflow.dev.ds
     admin:
-      user: admin123
-      password: admin456
+      user: admin
+      password: admin
   database:
     host: workflow_database
     port: 5432
