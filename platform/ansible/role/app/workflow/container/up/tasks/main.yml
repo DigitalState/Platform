@@ -1,0 +1,23 @@
+---
+- block:
+    - name: Up workflow container
+      docker_service:
+        project_src: /srv/workflow
+        files: '{{ _files|list }}'
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ _namespace }}_{{ _api_name }}'
+        DIRECTORY: '{{ _directory }}'
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        DATABASE_HOST: '{{ _database_host }}'
+        DATABASE_NAME: '{{ _database_name }}'
+        DATABASE_USER: '{{ _database_user }}'
+        DATABASE_PASSWORD: '{{ _database_password }}'
+        DATABASE_UI_HOST: '{{ _database_ui_host }}'
+        API_NAME: '{{ _api_name }}'
+        API_HOST: '{{ _api_host }}'
+        API_DATABASE_URL: 'postgresql://{{ _database_host }}:{{ _database_port }}/{{ _database_name }}?createDatabaseIfNotExist=true'
+        API_ADMIN_USER: '{{ _api_admin_user }}'
+        API_ADMIN_PASSWORD: '{{ _api_admin_password }}'
+  tags: [workflow]

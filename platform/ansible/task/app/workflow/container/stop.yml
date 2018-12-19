@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Stop workflow container
+      include_role:
+        name: app/workflow/container/stop
+      vars:
+        _network: '{{ namespace }}_proxy_default'
+        _proxy_host: '{{ proxy_container_ip.stdout }}'
+        _files: '{{ app.workflow.docker|list }}'
+  when: app.workflow.enabled
+  tags: [workflow]

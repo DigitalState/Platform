@@ -1,0 +1,4 @@
+---
+_network: ds_proxy_default
+_files: ['docker-compose.yml']
+_persistent: false

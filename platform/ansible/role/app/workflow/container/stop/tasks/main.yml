@@ -1,0 +1,12 @@
+---
+- block:
+    - name: Stop workflow container
+      docker_service:
+        project_src: /srv/workflow
+        files: '{{ _files|list }}'
+        state: present
+        stopped: yes
+      environment:
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+  tags: [workflow]

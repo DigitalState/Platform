@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Down workflow container
+      include_role:
+        name: app/workflow/container/down
+      vars:
+        _network: '{{ namespace }}_proxy_default'
+        _files: '{{ app.workflow.docker|list }}'
+  when: app.workflow.enabled
+  tags: [workflow]

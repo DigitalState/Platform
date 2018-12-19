@@ -1,0 +1,24 @@
+---
+workflow:
+  enabled: true
+  order: -10
+  repository: https://github.com/DigitalState/Workflow.git
+  version: develop
+  api:
+    host: api.workflow.dev.ds
+    admin:
+      user: admin123
+      password: admin456
+  database:
+    host: workflow_database
+    port: 5432
+    name: workflow
+    user: workflow
+    password: workflow
+    ui:
+      host: ui.database.workflow.dev.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.dev.yml
+    - /root/docker/config/api/extra_hosts.dev.yml
+    - /root/docker/workflow.yml

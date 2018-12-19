@@ -1,5 +1,5 @@
 ---
-_repository: https://github.com/DigitalState/Camunda.git
+_repository: https://github.com/DigitalState/Workflow.git
 _version: master
 _credential:
   username: ~

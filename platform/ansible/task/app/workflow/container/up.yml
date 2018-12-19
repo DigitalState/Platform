@@ -1,0 +1,25 @@
+---
+- block:
+    - name: Retrieve proxy container ip
+      include_tasks: /etc/ansible/task/app/proxy/container/property/ip.yml
+    - name: Up workflow container
+      include_role:
+        name: app/workflow/container/up
+      vars:
+        _files: '{{ app.workflow.docker|list }}'
+        _namespace: '{{ namespace }}'
+        _directory: '{{ directory }}/workflow'
+        _network: '{{ namespace }}_proxy_default'
+        _proxy_host: '{{ proxy_container_ip.stdout }}'
+        _database_host: '{{ app.workflow.database.host }}'
+        _database_port: '{{ app.workflow.database.port }}'
+        _database_name: '{{ app.workflow.database.name }}'
+        _database_user: '{{ app.workflow.database.user }}'
+        _database_password: '{{ app.workflow.database.password }}'
+        _database_ui_host: '{{ app.workflow.database.ui.host }}'
+        _api_host: '{{ app.workflow.api.host }}'
+        _api_timezone: '{{ timezone }}'
+        _api_admin_user: '{{ app.workflow.api.admin.user }}'
+        _api_admin_password: '{{ app.workflow.api.admin.password }}'
+  when: app.workflow.enabled
+  tags: [workflow]

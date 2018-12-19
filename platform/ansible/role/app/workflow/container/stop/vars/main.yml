@@ -1,0 +1,4 @@
+---
+_network: ds_proxy_default
+_proxy_host: 127.0.0.1
+_files: ['docker-compose.yml']
