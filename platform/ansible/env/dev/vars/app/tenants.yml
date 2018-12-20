@@ -8,7 +8,7 @@ tenants:
   database:
     host: tenants_database
     name: tenants
-    username: tenants
+    user: tenants
     password: tenants
     ui:
       host: ui.database.tenants.dev.ds

@@ -8,8 +8,8 @@ cases:
   database:
     host: cases_database
     name: cases
-    username: cases
-    password: cases
+    user: cases
+    password: ~
     ui:
       host: ui.database.cases.prod.ds
   docker:

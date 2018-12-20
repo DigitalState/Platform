@@ -8,7 +8,7 @@ _database_host: workflow_database
 _database_port: 5432
 _database_name: workflow
 _database_user: workflow
-_database_password: workflow
+_database_password: ~
 _database_ui_host: ui.database.workflow.ds
 _api_name: workflow
 _api_host: api.workflow.ds

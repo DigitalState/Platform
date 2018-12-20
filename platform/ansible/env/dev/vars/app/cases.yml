@@ -8,7 +8,7 @@ cases:
   database:
     host: cases_database
     name: cases
-    username: cases
+    user: cases
     password: cases
     ui:
       host: ui.database.cases.dev.ds

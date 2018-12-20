@@ -7,7 +7,7 @@ _proxy_host: 127.0.0.1
 _database_host: cms_database
 _database_name: cms
 _database_user: cms
-_database_password: cms
+_database_password: ~
 _database_ui_host: ui.database.cms.ds
 _api_name: cms
 _api_env: prod

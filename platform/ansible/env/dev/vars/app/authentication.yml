@@ -8,7 +8,7 @@ authentication:
   database:
     host: authentication_database
     name: authentication
-    username: authentication
+    user: authentication
     password: authentication
     ui:
       host: ui.database.authentication.dev.ds

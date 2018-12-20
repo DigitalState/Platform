@@ -15,7 +15,7 @@
         _proxy_host: '{{ proxy_container_ip.stdout }}'
         _database_host: '{{ app.records.database.host }}'
         _database_name: '{{ app.records.database.name }}'
-        _database_username: '{{ app.records.database.username }}'
+        _database_user: '{{ app.records.database.user }}'
         _database_password: '{{ app.records.database.password }}'
         _database_ui_host: '{{ app.records.database.ui.host }}'
         _api_env: '{{ env }}'

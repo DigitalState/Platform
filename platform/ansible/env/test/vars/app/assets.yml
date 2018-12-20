@@ -8,7 +8,7 @@ assets:
   database:
     host: assets_database
     name: assets
-    username: assets
+    user: assets
     password: assets
     ui:
       host: ui.database.assets.test.ds

@@ -8,7 +8,7 @@ identities:
   database:
     host: identities_database
     name: identities
-    username: identities
+    user: identities
     password: identities
     ui:
       host: ui.database.identities.dev.ds

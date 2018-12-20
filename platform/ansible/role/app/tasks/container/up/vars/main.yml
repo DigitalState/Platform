@@ -7,7 +7,7 @@ _proxy_host: 127.0.0.1
 _database_host: tasks_database
 _database_name: tasks
 _database_user: tasks
-_database_password: tasks
+_database_password: ~
 _database_ui_host: ui.database.tasks.ds
 _api_name: tasks
 _api_env: prod

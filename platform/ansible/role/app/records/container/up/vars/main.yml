@@ -7,7 +7,7 @@ _proxy_host: 127.0.0.1
 _database_host: records_database
 _database_name: records
 _database_user: records
-_database_password: records
+_database_password: ~
 _database_ui_host: ui.database.records.ds
 _api_name: records
 _api_env: prod

@@ -8,8 +8,8 @@ services:
   database:
     host: services_database
     name: services
-    username: services
-    password: services
+    user: services
+    password: ~
     ui:
       host: ui.database.services.prod.ds
   docker:

@@ -8,8 +8,8 @@ microservice:
   database:
     host: microservice_database
     name: microservice
-    username: microservice
-    password: microservice
+    user: microservice
+    password: ~
     ui:
       host: ui.database.microservice.prod.ds
   docker:

@@ -7,7 +7,7 @@ _proxy_host: 127.0.0.1
 _database_host: identities_database
 _database_name: identities
 _database_user: identities
-_database_password: identities
+_database_password: ~
 _database_ui_host: ui.database.identities.ds
 _api_name: identities
 _api_env: prod

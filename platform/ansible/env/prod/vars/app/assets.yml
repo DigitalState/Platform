@@ -8,8 +8,8 @@ assets:
   database:
     host: assets_database
     name: assets
-    username: assets
-    password: assets
+    user: assets
+    password: ~
     ui:
       host: ui.database.assets.prod.ds
   docker:

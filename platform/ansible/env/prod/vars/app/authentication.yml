@@ -8,8 +8,8 @@ authentication:
   database:
     host: authentication_database
     name: authentication
-    username: authentication
-    password: authentication
+    user: authentication
+    password: ~
     ui:
       host: ui.database.authentication.prod.ds
   docker:

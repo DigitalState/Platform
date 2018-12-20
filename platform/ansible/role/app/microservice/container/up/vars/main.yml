@@ -7,7 +7,7 @@ _proxy_host: 127.0.0.1
 _database_host: microservice_database
 _database_name: microservice
 _database_user: microservice
-_database_password: microservice
+_database_password: ~
 _database_ui_host: ui.database.microservice.ds
 _api_name: microservice
 _api_env: prod

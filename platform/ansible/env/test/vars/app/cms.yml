@@ -8,7 +8,7 @@ cms:
   database:
     host: cms_database
     name: cms
-    username: cms
+    user: cms
     password: cms
     ui:
       host: ui.database.cms.test.ds

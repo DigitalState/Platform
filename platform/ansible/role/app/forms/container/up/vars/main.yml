@@ -7,7 +7,7 @@ _proxy_host: 127.0.0.1
 _database_host: forms_database
 _database_name: forms
 _database_user: forms
-_database_password: forms
+_database_password: ~
 _database_ui_host: ui.database.forms.ds
 _api_name: forms
 _api_env: prod

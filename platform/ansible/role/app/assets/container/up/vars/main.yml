@@ -7,7 +7,7 @@ _proxy_host: 127.0.0.1
 _database_host: assets_database
 _database_name: assets
 _database_user: assets
-_database_password: assets
+_database_password: ~
 _database_ui_host: ui.database.assets.ds
 _api_name: assets
 _api_env: prod

@@ -8,7 +8,7 @@ records:
   database:
     host: records_database
     name: records
-    username: records
+    user: records
     password: records
     ui:
       host: ui.database.records.test.ds

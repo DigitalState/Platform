@@ -8,7 +8,7 @@ services:
   database:
     host: services_database
     name: services
-    username: services
+    user: services
     password: services
     ui:
       host: ui.database.services.dev.ds

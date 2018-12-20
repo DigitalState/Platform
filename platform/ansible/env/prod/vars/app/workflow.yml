@@ -14,7 +14,7 @@ workflow:
     port: 5432
     name: workflow
     user: workflow
-    password: workflow
+    password: ~
     ui:
       host: ui.database.workflow.prod.ds
   docker:

@@ -7,7 +7,7 @@ _proxy_host: 127.0.0.1
 _database_host: authentication_database
 _database_name: authentication
 _database_user: authentication
-_database_password: authentication
+_database_password: ~
 _database_ui_host: ui.database.authentication.ds
 _api_name: authentication
 _api_env: prod

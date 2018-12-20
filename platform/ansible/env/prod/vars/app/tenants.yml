@@ -8,8 +8,8 @@ tenants:
   database:
     host: tenants_database
     name: tenants
-    username: tenants
-    password: tenants
+    user: tenants
+    password: ~
     ui:
       host: ui.database.tenants.prod.ds
   docker:

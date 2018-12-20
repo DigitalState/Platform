@@ -8,7 +8,7 @@ forms:
   database:
     host: forms_database
     name: forms
-    username: forms
+    user: forms
     password: forms
     ui:
       host: ui.database.forms.test.ds

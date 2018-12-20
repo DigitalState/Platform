@@ -8,7 +8,7 @@ tasks:
   database:
     host: tasks_database
     name: tasks
-    username: tasks
+    user: tasks
     password: tasks
     ui:
       host: ui.database.tasks.test.ds

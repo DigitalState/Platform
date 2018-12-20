@@ -8,8 +8,8 @@ tasks:
   database:
     host: tasks_database
     name: tasks
-    username: tasks
-    password: tasks
+    user: tasks
+    password: ~
     ui:
       host: ui.database.tasks.prod.ds
   docker:

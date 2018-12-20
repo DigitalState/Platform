@@ -8,8 +8,8 @@ identities:
   database:
     host: identities_database
     name: identities
-    username: identities
-    password: identities
+    user: identities
+    password: ~
     ui:
       host: ui.database.identities.prod.ds
   docker:

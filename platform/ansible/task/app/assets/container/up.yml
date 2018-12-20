@@ -15,7 +15,7 @@
         _proxy_host: '{{ proxy_container_ip.stdout }}'
         _database_host: '{{ app.assets.database.host }}'
         _database_name: '{{ app.assets.database.name }}'
-        _database_username: '{{ app.assets.database.username }}'
+        _database_user: '{{ app.assets.database.user }}'
         _database_password: '{{ app.assets.database.password }}'
         _database_ui_host: '{{ app.assets.database.ui.host }}'
         _api_env: '{{ env }}'

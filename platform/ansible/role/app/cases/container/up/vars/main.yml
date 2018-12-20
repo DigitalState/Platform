@@ -7,7 +7,7 @@ _proxy_host: 127.0.0.1
 _database_host: cases_database
 _database_name: cases
 _database_user: cases
-_database_password: cases
+_database_password: ~
 _database_ui_host: ui.database.cases.ds
 _api_name: cases
 _api_env: prod

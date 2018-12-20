@@ -8,8 +8,8 @@ forms:
   database:
     host: forms_database
     name: forms
-    username: forms
-    password: forms
+    user: forms
+    password: ~
     ui:
       host: ui.database.forms.prod.ds
   docker:

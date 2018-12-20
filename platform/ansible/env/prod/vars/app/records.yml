@@ -8,8 +8,8 @@ records:
   database:
     host: records_database
     name: records
-    username: records
-    password: records
+    user: records
+    password: ~
     ui:
       host: ui.database.records.prod.ds
   docker:

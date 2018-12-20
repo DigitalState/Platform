@@ -7,7 +7,7 @@ _proxy_host: 127.0.0.1
 _database_host: tenants_database
 _database_name: tenants
 _database_user: tenants
-_database_password: tenants
+_database_password: ~
 _database_ui_host: ui.database.tenants.ds
 _api_name: tenants
 _api_env: prod

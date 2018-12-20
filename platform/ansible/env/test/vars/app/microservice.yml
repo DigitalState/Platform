@@ -8,7 +8,7 @@ microservice:
   database:
     host: microservice_database
     name: microservice
-    username: microservice
+    user: microservice
     password: microservice
     ui:
       host: ui.database.microservice.test.ds

@@ -8,8 +8,8 @@ cms:
   database:
     host: cms_database
     name: cms
-    username: cms
-    password: cms
+    user: cms
+    password: ~
     ui:
       host: ui.database.cms.prod.ds
   docker:
