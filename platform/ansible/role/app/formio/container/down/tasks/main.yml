@@ -3,9 +3,9 @@
     - name: Down formio container
       docker_service:
         project_src: /srv/formio
-        files:
-          - docker-compose.yml
-          - 'docker-compose.{{ _env }}.yml'
+        files: '{{ _files|list }}'
         state: absent
         remove_volumes: '{{ "no" if _persistent else "yes" }}'
+      environment:
+        NETWORK: '{{ _network }}'
   tags: [formio]

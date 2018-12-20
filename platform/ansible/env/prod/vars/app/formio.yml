@@ -6,8 +6,13 @@ formio:
   version: 0.15.0
   api:
     host: api.formio.prod.ds
+    admin:
+      user: admin
+      password: ~
   database:
     ui:
-      host: adminer.formio.prod.ds
-  username: admin@staff.ds
-  password: ~
+      host: ui.database.formio.prod.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.prod.yml
+    - /root/docker/formio.yml

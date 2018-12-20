@@ -13,17 +13,15 @@
     - name: Up formio container
       docker_service:
         project_src: /srv/formio
-        files:
-          - docker-compose.yml
-          - 'docker-compose.{{ _env }}.yml'
+        files: '{{ _files|list }}'
         state: present
       environment:
-        COMPOSE_PROJECT_NAME: '{{ _compose_project_name }}'
+        COMPOSE_PROJECT_NAME: '{{ _namespace }}_{{ _api_name }}'
+        DIRECTORY: '{{ _directory }}'
         NETWORK: '{{ _network }}'
         PROXY_HOST: '{{ _proxy_host }}'
-        DIRECTORY: '{{ _directory }}'
-        API_HOST: '{{ _api_host }}'
         DATABASE_UI_HOST: '{{ _database_ui_host }}'
-        USERNAME: '{{ _username }}'
-        PASSWORD: '{{ _password }}'
+        API_HOST: '{{ _api_host }}'
+        API_ADMIN_USER: '{{ _api_admin_user }}'
+        API_ADMIN_PASSWORD: '{{ _api_admin_password }}'
   tags: [formio]
