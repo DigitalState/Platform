@@ -15,5 +15,6 @@ cms:
   docker:
     - docker-compose.yml
     - docker-compose.test.yml
-    - /root/docker/dns.test.yml
+    - /root/docker/config/api/extra_hosts.test.yml
+    - /root/docker/config/php/extra_hosts.test.yml
     - /root/docker/cms.yml

@@ -15,5 +15,6 @@ assets:
   docker:
     - docker-compose.yml
     - docker-compose.dev.yml
-    - /root/docker/dns.dev.yml
+    - /root/docker/config/api/extra_hosts.dev.yml
+    - /root/docker/config/php/extra_hosts.dev.yml
     - /root/docker/assets.yml
