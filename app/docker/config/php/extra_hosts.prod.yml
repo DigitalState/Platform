@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  api:
+  php:
     extra_hosts:
       - 'api.assets.prod.ds:${PROXY_HOST}'
       - 'api.authentication.prod.ds:${PROXY_HOST}'
