@@ -12,6 +12,9 @@ cases:
     password: cases
     ui:
       host: ui.database.cases.test.ds
+  mock:
+    discovery:
+      host: discovery.mock.cases.test.ds
   docker:
     - docker-compose.yml
     - docker-compose.test.yml

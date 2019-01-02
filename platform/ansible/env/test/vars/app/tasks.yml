@@ -12,6 +12,9 @@ tasks:
     password: tasks
     ui:
       host: ui.database.tasks.test.ds
+  mock:
+    discovery:
+      host: discovery.mock.tasks.test.ds
   docker:
     - docker-compose.yml
     - docker-compose.test.yml

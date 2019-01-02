@@ -27,6 +27,7 @@
         API_ENCRYPTION: '{{ _api_encryption }}'
         API_SYSTEM_USERNAME: '{{ _api_system_username }}'
         API_SYSTEM_PASSWORD: '{{ _api_system_password }}'
+        MOCK_DISCOVERY_HOST: '{{ _mock_discovery_host }}'
     - name: Waiting for identities container to finalize installation
       shell:
         cmd: docker-compose exec -T php pidof php-fpm | cat

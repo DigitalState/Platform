@@ -12,6 +12,9 @@ microservice:
     password: ~
     ui:
       host: ui.database.microservice.prod.ds
+  mock:
+    discovery:
+      host: discovery.mock.microservice.prod.ds
   docker:
     - docker-compose.yml
     - docker-compose.prod.yml

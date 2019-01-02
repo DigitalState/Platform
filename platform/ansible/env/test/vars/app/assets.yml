@@ -12,6 +12,9 @@ assets:
     password: assets
     ui:
       host: ui.database.assets.test.ds
+  mock:
+    discovery:
+      host: discovery.mock.assets.test.ds
   docker:
     - docker-compose.yml
     - docker-compose.test.yml

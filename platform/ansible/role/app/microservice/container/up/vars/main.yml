@@ -19,3 +19,4 @@ _api_discovery_credential: ~
 _api_encryption: ~
 _api_system_username: system
 _api_system_password: ~
+_mock_discovery_host: discovery.mock.microservice.ds

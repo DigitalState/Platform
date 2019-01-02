@@ -12,6 +12,9 @@ identities:
     password: identities
     ui:
       host: ui.database.identities.dev.ds
+  mock:
+    discovery:
+      host: discovery.mock.identities.dev.ds
   docker:
     - docker-compose.yml
     - docker-compose.dev.yml

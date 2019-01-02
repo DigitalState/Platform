@@ -27,5 +27,6 @@
         _api_encryption: '{{ encryption.encryption }}'
         _api_system_username: '{{ system.username }}'
         _api_system_password: '{{ system.password }}'
+        _mock_discovery_host: '{{ app.records.mock.discovery.host }}'
   when: app.records.enabled
   tags: [records]

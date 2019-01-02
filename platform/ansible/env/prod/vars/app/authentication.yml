@@ -12,6 +12,9 @@ authentication:
     password: ~
     ui:
       host: ui.database.authentication.prod.ds
+  mock:
+    discovery:
+      host: discovery.mock.authentication.prod.ds
   docker:
     - docker-compose.yml
     - docker-compose.prod.yml

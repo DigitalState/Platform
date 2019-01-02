@@ -12,6 +12,9 @@ forms:
     password: ~
     ui:
       host: ui.database.forms.prod.ds
+  mock:
+    discovery:
+      host: discovery.mock.forms.prod.ds
   docker:
     - docker-compose.yml
     - docker-compose.prod.yml

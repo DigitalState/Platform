@@ -12,6 +12,9 @@ records:
     password: records
     ui:
       host: ui.database.records.dev.ds
+  mock:
+    discovery:
+      host: discovery.mock.records.dev.ds
   docker:
     - docker-compose.yml
     - docker-compose.dev.yml

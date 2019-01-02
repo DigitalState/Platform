@@ -12,6 +12,9 @@ cms:
     password: cms
     ui:
       host: ui.database.cms.dev.ds
+  mock:
+    discovery:
+      host: discovery.mock.cms.dev.ds
   docker:
     - docker-compose.yml
     - docker-compose.dev.yml

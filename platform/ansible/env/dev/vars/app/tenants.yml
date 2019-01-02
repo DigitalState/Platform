@@ -12,6 +12,9 @@ tenants:
     password: tenants
     ui:
       host: ui.database.tenants.dev.ds
+  mock:
+    discovery:
+      host: discovery.mock.tenants.dev.ds
   docker:
     - docker-compose.yml
     - docker-compose.dev.yml
