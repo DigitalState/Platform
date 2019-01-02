@@ -15,6 +15,7 @@ records:
   docker:
     - docker-compose.yml
     - docker-compose.dev.yml
-    - /root/docker/config/api/extra_hosts.dev.yml
-    - /root/docker/config/php/extra_hosts.dev.yml
-    - /root/docker/records.yml
+    - /root/docker/records/docker-compose.yml
+    - /root/docker/records/docker-compose.dev.yml
+    - /root/docker/api.dev.yml
+    - /root/docker/php.dev.yml

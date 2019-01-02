@@ -15,6 +15,7 @@ forms:
   docker:
     - docker-compose.yml
     - docker-compose.prod.yml
-    - /root/docker/config/api/extra_hosts.prod.yml
-    - /root/docker/config/php/extra_hosts.prod.yml
-    - /root/docker/forms.yml
+    - /root/docker/forms/docker-compose.yml
+    - /root/docker/forms/docker-compose.prod.yml
+    - /root/docker/api.prod.yml
+    - /root/docker/php.prod.yml

@@ -15,6 +15,7 @@ tasks:
   docker:
     - docker-compose.yml
     - docker-compose.test.yml
-    - /root/docker/config/api/extra_hosts.test.yml
-    - /root/docker/config/php/extra_hosts.test.yml
-    - /root/docker/tasks.yml
+    - /root/docker/tasks/docker-compose.yml
+    - /root/docker/tasks/docker-compose.test.yml
+    - /root/docker/api.test.yml
+    - /root/docker/php.test.yml

@@ -20,5 +20,6 @@ workflow:
   docker:
     - docker-compose.yml
     - docker-compose.prod.yml
-    - /root/docker/config/api/extra_hosts.prod.yml
-    - /root/docker/workflow.yml
+    - /root/docker/workflow/docker-compose.yml
+    - /root/docker/workflow/docker-compose.prod.yml
+    - /root/docker/api.prod.yml

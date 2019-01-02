@@ -10,5 +10,6 @@ discovery:
     host: ui.discovery.test.ds
   docker:
     - docker-compose.yml
-    - docker-compose.dev.yml
-    - /root/docker/discovery.yml
+    - docker-compose.test.yml
+    - /root/docker/discovery/docker-compose.yml
+    - /root/docker/discovery/docker-compose.test.yml

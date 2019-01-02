@@ -12,4 +12,5 @@ proxy:
   docker:
     - docker-compose.yml
     - docker-compose.dev.yml
-    - /root/docker/proxy.yml
+    - /root/docker/proxy/docker-compose.yml
+    - /root/docker/proxy/docker-compose.dev.yml

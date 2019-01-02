@@ -12,9 +12,15 @@ services:
     password: services
     ui:
       host: ui.database.services.dev.ds
+  mock:
+    discovery:
+      host: discovery.mock.services.dev.ds
+    workflow:
+      host: workflow.mock.services.dev.ds
   docker:
     - docker-compose.yml
     - docker-compose.dev.yml
-    - /root/docker/config/api/extra_hosts.dev.yml
-    - /root/docker/config/php/extra_hosts.dev.yml
-    - /root/docker/services.yml
+    - /root/docker/services/docker-compose.yml
+    - /root/docker/services/docker-compose.dev.yml
+    - /root/docker/api.dev.yml
+    - /root/docker/php.dev.yml

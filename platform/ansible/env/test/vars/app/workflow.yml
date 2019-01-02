@@ -19,6 +19,7 @@ workflow:
       host: ui.database.workflow.test.ds
   docker:
     - docker-compose.yml
-    - docker-compose.prod.yml
-    - /root/docker/config/api/extra_hosts.test.yml
-    - /root/docker/workflow.yml
+    - docker-compose.test.yml
+    - /root/docker/workflow/docker-compose.yml
+    - /root/docker/workflow/docker-compose.test.yml
+    - /root/docker/api.test.yml

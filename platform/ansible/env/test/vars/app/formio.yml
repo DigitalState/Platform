@@ -15,4 +15,5 @@ formio:
   docker:
     - docker-compose.yml
     - docker-compose.test.yml
-    - /root/docker/formio.yml
+    - /root/docker/formio/docker-compose.yml
+    - /root/docker/formio/docker-compose.test.yml

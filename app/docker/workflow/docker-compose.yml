@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  database:
+    environment:
+      SERVICE_IGNORE: 'true'
+
+  api:
+    environment:
+      SERVICE_80_ID: ${COMPOSE_PROJECT_NAME}_api_http
+      SERVICE_80_NAME: ${COMPOSE_PROJECT_NAME}_api_http
+      SERVICE_80_TAGS: proxy.enable=true,proxy.tags=external,proxy.frontend.entryPoints=http,proxy.frontend.rule=Host:${API_HOST}
+
+networks:
+  default:
+    external:
+      name: ${NETWORK}

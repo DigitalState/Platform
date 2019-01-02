@@ -11,5 +11,6 @@ proxy:
     port: 81
   docker:
     - docker-compose.yml
-    - docker-compose.dev.yml
-    - /root/docker/proxy.yml
+    - docker-compose.test.yml
+    - /root/docker/proxy/docker-compose.yml
+    - /root/docker/proxy/docker-compose.test.yml
