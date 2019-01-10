@@ -11,7 +11,7 @@ Feature: Add tenants
   Scenario: Add a tenant
     When I add "Accept" header equal to "application/json"
     And I add "Content-Type" header equal to "application/json"
-    And I send a "POST" request to "http://api.tenants.ci.ds/app_test.php/tenants" with body:
+    And I send a "POST" request to "http://api.tenants.test.ds/app_test.php/tenants" with body:
     """
     {
       "uuid": "8fd282bc-d752-4a6e-8eef-e78ce496e0f1",
@@ -28,51 +28,51 @@ Feature: Add tenants
 
   Scenario: Read the added tenant
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "http://api.assets.ci.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
+    And I send a "GET" request to "http://api.assets.test.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
     Then the response status code should be 200
 
   Scenario: Read the added tenant
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "http://api.authentication.ci.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
+    And I send a "GET" request to "http://api.authentication.test.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
     Then the response status code should be 200
 
   Scenario: Read the added tenant
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "http://api.cases.ci.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
+    And I send a "GET" request to "http://api.cases.test.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
     Then the response status code should be 200
 
   Scenario: Read the added tenant
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "http://api.cms.ci.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
+    And I send a "GET" request to "http://api.cms.test.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
     Then the response status code should be 200
 
   Scenario: Read the added tenant
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "http://api.forms.ci.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
+    And I send a "GET" request to "http://api.forms.test.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
     Then the response status code should be 200
 
   Scenario: Read the added tenant
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "http://api.identities.ci.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
+    And I send a "GET" request to "http://api.identities.test.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
     Then the response status code should be 200
 
   Scenario: Read the added tenant
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "http://api.records.ci.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
+    And I send a "GET" request to "http://api.records.test.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
     Then the response status code should be 200
 
   Scenario: Read the added tenant
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "http://api.services.ci.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
+    And I send a "GET" request to "http://api.services.test.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
     Then the response status code should be 200
 
   Scenario: Read the added tenant
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "http://api.tasks.ci.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
+    And I send a "GET" request to "http://api.tasks.test.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
     Then the response status code should be 200
 
   @downMigrations
   Scenario: Read the added tenant
     When I add "Accept" header equal to "application/json"
-    And I send a "GET" request to "http://api.tenants.ci.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
+    And I send a "GET" request to "http://api.tenants.test.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
     Then the response status code should be 200
