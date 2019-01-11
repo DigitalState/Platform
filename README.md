@@ -30,8 +30,8 @@ If you wish to further develop the application using the latest development effo
 ## Requirements
 
 - **Git**
-- **Docker**
-- **Docker Compose**
+- **Docker 18.06.1~ce**
+- **Docker Compose 1.22.0**
 
 If you are on _Windows_, **Windows Pro** with **HyperV** and **DockerForWindows** are required.
 
