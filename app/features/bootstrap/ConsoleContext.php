@@ -21,7 +21,7 @@ class ConsoleContext implements Context
     public function iHaveACconsoleAt($directory)
     {
         if (!is_dir($directory)) {
-            throw new Exception('Directory does not exist.');
+            throw new Exception('Directory "'.$directory.'" does not exist.');
         }
 
         chdir($directory);
@@ -37,7 +37,7 @@ class ConsoleContext implements Context
         exec($command, $output, $status);
 
         if (0 !== $status) {
-            throw new Exception('Command did not execute successfully.');
+            throw new Exception('Command "'.$command.'" did not execute successfully.');
         }
 
         $this->output = $output;
@@ -51,6 +51,24 @@ class ConsoleContext implements Context
     public function iShouldGetTheFollowingOutput(PyStringNode $string)
     {
         if (implode("\n", $this->output) !== (string) $string) {
+            throw new Exception('Command output does not match expected output.');
+        }
+    }
+
+    /**
+     * @Then I should get the following output on line :line:
+     * @param \Behat\Gherkin\Node\PyStringNode $string
+     * @throws \Exception
+     */
+    public function iShouldGetTheFollowingOutputOnLine($line, PyStringNode $string)
+    {
+        if (0 > $line) {
+            $key = count($this->output) + $line;
+        } else {
+            $key = $line - 1;
+        }
+
+        if ($this->output[$key] !== (string) $string) {
             throw new Exception('Command output does not match expected output.');
         }
     }
