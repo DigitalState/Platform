@@ -2,7 +2,7 @@
 records:
   enabled: true
   repository: https://github.com/DigitalState/Records.git
-  version: develop
+  version: feature/apip-2-3-3-upgrade
   api:
     host: api.records.test.ds
   database:
