@@ -1,6 +1,6 @@
 ---
 workflow:
-  enabled: true
+  enabled: false
   order: -10
   repository: https://github.com/DigitalState/Workflow.git
   version: feature/standalone
