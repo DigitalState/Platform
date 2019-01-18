@@ -7,7 +7,6 @@ Feature: Add tenants
   Background:
     Given I am authenticated as the "system" user
 
-  @upMigrations @loadFixtures
   Scenario: Add a tenant
     When I add "Accept" header equal to "application/json"
     And I add "Content-Type" header equal to "application/json"
@@ -71,7 +70,6 @@ Feature: Add tenants
     And I send a "GET" request to "http://api.tasks.test.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"
     Then the response status code should be 200
 
-  @downMigrations
   Scenario: Read the added tenant
     When I add "Accept" header equal to "application/json"
     And I send a "GET" request to "http://api.tenants.test.ds/app_test.php/system/tenants/8fd282bc-d752-4a6e-8eef-e78ce496e0f1"

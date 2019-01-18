@@ -23,7 +23,9 @@ class MigrationContext implements Context
     }
 
     /**
-     * @BeforeScenario @upMigrations
+     * Up migrations
+     *
+     * @BeforeSuite
      */
     public function upMigrations()
     {
@@ -35,12 +37,12 @@ class MigrationContext implements Context
     /**
      * Down migrations
      *
-     * @AfterScenario @downMigrations
+     * @AfterSuite
      */
     public function downMigrations()
     {
         foreach ($this->services as $service) {
-            shell_exec('cd /srv/'.$service.' && docker-compose exec -T php php bin/console doctrine:migrations:execute --env=test --no-interaction --down 1_0_0');
+            shell_exec('cd /srv/'.$service.' && docker-compose exec -T php bin/console doctrine:migrations:migrate --env=test --no-interaction first');
         }
     }
 }
