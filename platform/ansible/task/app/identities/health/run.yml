@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Run identities health check
+      include_role:
+        name: app/identities/health/run
+      vars:
+        _host: '{{ system.username }}:{{ system.password }}@localhost/system/health'
+  when: app.identities.enabled
+  tags: [identities]

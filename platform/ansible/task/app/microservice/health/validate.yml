@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Validate microservice health check
+      include_role:
+        name: app/microservice/health/validate
+      vars:
+        _host: '{{ system.username }}:{{ system.password }}@localhost/system/health'
+  when: app.microservice.enabled
+  tags: [microservice]

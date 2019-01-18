@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Run cms health check
+      include_role:
+        name: app/cms/health/run
+      vars:
+        _host: '{{ system.username }}:{{ system.password }}@localhost/system/health'
+  when: app.cms.enabled
+  tags: [cms]

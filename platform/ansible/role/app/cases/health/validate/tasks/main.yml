@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Run cases health check
+      include_role:
+        name: app/cases/health/run
+    - name: Validate cases health check result
+      debug:
+        msg: '{{ "Healthy" if (_result.stdout|from_json).healthy else "Not Health" }}'
+      failed_when: (_result.stdout|from_json).healthy != true
+  tags: [cases]

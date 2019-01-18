@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Run tasks health check
+      include_role:
+        name: app/tasks/health/run
+      vars:
+        _host: '{{ system.username }}:{{ system.password }}@localhost/system/health'
+  when: app.tasks.enabled
+  tags: [tasks]
