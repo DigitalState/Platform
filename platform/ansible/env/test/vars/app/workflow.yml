@@ -1,7 +1,7 @@
 ---
 workflow:
   enabled: true
-  order: -9
+  order: -10
   repository: https://github.com/DigitalState/Workflow.git
   version: feature/standalone
   api:
