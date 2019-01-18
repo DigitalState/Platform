@@ -2,7 +2,7 @@
 forms:
   enabled: true
   repository: https://github.com/DigitalState/Forms.git
-  version: feature/apip-2-3-3-upgrade
+  version: develop
   api:
     host: api.forms.dev.ds
   database:

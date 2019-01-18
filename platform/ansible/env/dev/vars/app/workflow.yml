@@ -3,7 +3,7 @@ workflow:
   enabled: true
   order: -10
   repository: https://github.com/DigitalState/Workflow.git
-  version: feature/standalone
+  version: develop
   api:
     host: api.workflow.dev.ds
     admin:

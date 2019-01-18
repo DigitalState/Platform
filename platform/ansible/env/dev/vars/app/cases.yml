@@ -2,7 +2,7 @@
 cases:
   enabled: true
   repository: https://github.com/DigitalState/Cases.git
-  version: feature/apip-2-3-3-upgrade
+  version: develop
   api:
     host: api.cases.dev.ds
   database:

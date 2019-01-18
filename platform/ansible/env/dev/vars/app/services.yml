@@ -2,7 +2,7 @@
 services:
   enabled: true
   repository: https://github.com/DigitalState/Services.git
-  version: feature/apip-2-3-3-upgrade
+  version: develop
   api:
     host: api.services.dev.ds
   database:
