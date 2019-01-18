@@ -2,7 +2,7 @@
 microservice:
   enabled: true
   repository: https://github.com/DigitalState/Microservice.git
-  version: feature/apip-2-3-3-upgrade
+  version: feature/apip-2-3-3
   api:
     host: api.microservice.test.ds
   database:
