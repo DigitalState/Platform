@@ -4,7 +4,4 @@
       shell:
         cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:migrate {{ _version }} --no-interaction'
         chdir: /srv/tenants
-    - name: Pause while tenants database migration executes
-      pause:
-        seconds: 15
   tags: [tenants]
