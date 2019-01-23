@@ -4,7 +4,4 @@
       shell:
         cmd: 'docker-compose exec -T -e FIXTURES={{ _fixture }} php php bin/console doctrine:fixtures:load --no-interaction'
         chdir: /srv/identities
-    - name: Pause while identities fixture load
-      pause:
-        seconds: 15
   tags: [identities]
