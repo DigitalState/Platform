@@ -1,9 +1,9 @@
 ---
 - block:
-    - name: Load forms database migration
+    - name: Unload forms database migration
       include_role:
         name: app/forms/database/migration/execute
       vars:
-        _version: latest
+        _version: first
   when: app.forms.enabled
   tags: [forms]

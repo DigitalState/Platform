@@ -1,9 +1,9 @@
 ---
 - block:
-    - name: Load authentication database migration
+    - name: Unload authentication database migration
       include_role:
         name: app/authentication/database/migration/execute
       vars:
-        _version: latest
+        _version: first
   when: app.authentication.enabled
   tags: [authentication]

@@ -1,9 +1,9 @@
 ---
 - block:
-    - name: Load assets database migration
+    - name: Unload assets database migration
       include_role:
         name: app/assets/database/migration/execute
       vars:
-        _version: latest
+        _version: first
   when: app.assets.enabled
   tags: [assets]

@@ -1,9 +1,9 @@
 ---
 - block:
-    - name: Load identities database migration
+    - name: Unload identities database migration
       include_role:
         name: app/identities/database/migration/execute
       vars:
-        _version: latest
+        _version: first
   when: app.identities.enabled
   tags: [identities]

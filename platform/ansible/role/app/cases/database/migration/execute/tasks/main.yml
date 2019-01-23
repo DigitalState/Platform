@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Execute cases database migration
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:migrate {{ _version }} --no-interaction'
+        chdir: /srv/cases
+    - name: Pause while cases database migration executes
+      pause:
+        seconds: 15
+  tags: [cases]

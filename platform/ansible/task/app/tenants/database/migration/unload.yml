@@ -1,9 +1,9 @@
 ---
 - block:
-    - name: Load tenants database migration
+    - name: Unload tenants database migration
       include_role:
         name: app/tenants/database/migration/execute
       vars:
-        _version: latest
+        _version: first
   when: app.tenants.enabled
   tags: [tenants]

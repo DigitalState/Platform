@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Execute microservice database migration
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:migrate {{ _version }} --no-interaction'
+        chdir: /srv/microservice
+    - name: Pause while microservice database migration executes
+      pause:
+        seconds: 15
+  tags: [microservice]

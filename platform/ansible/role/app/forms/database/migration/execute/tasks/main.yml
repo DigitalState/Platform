@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Execute forms database migration
+      shell:
+        cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:migrate {{ _version }} --no-interaction'
+        chdir: /srv/forms
+    - name: Pause while forms database migration executes
+      pause:
+        seconds: 15
+  tags: [forms]

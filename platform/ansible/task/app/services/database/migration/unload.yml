@@ -1,9 +1,9 @@
 ---
 - block:
-    - name: Load services database migration
+    - name: Unload services database migration
       include_role:
         name: app/services/database/migration/execute
       vars:
-        _version: latest
+        _version: first
   when: app.services.enabled
   tags: [services]

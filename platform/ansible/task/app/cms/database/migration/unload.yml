@@ -1,9 +1,9 @@
 ---
 - block:
-    - name: Load cms database migration
+    - name: Unload cms database migration
       include_role:
         name: app/cms/database/migration/execute
       vars:
-        _version: latest
+        _version: first
   when: app.cms.enabled
   tags: [cms]
