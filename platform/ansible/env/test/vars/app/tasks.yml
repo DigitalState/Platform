@@ -2,7 +2,7 @@
 tasks:
   enabled: true
   repository: https://github.com/DigitalState/Tasks.git
-  version: feature/apip-2-3-3-upgrade
+  version: develop
   api:
     host: api.tasks.test.ds
   database:

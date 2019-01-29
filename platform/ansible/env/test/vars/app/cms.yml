@@ -2,7 +2,7 @@
 cms:
   enabled: true
   repository: https://github.com/DigitalState/Cms.git
-  version: feature/apip-2-3-3-upgrade
+  version: develop
   api:
     host: api.cms.test.ds
   database:

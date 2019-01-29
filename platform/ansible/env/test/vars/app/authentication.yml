@@ -2,7 +2,7 @@
 authentication:
   enabled: true
   repository: https://github.com/DigitalState/Authentication.git
-  version: feature/apip-2-3-3-upgrade
+  version: develop
   api:
     host: api.authentication.test.ds
   database:

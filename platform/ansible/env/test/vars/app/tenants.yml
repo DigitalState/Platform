@@ -2,7 +2,7 @@
 tenants:
   enabled: true
   repository: https://github.com/DigitalState/Tenants.git
-  version: feature/apip-2-3-3-upgrade
+  version: develop
   api:
     host: api.tenants.test.ds
   database:
