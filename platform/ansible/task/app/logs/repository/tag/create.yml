@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create logs repository tag
-      include_role:
-        name: app/logs/repository/tag/create
-      vars:
-        _tag: '{{ tag }}'
-  when: app.logs.enabled
-  tags: [logs]

@@ -2,8 +2,8 @@
 - block:
     - name: Load tenants database migration
       include_role:
-        name: app/tenants/database/migration/load
+        name: app/tenants/database/migration/execute
       vars:
-        _data: '{{ data }}'
+        _version: latest
   when: app.tenants.enabled
   tags: [tenants]

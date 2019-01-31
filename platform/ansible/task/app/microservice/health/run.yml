@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Run microservice health check
+      include_role:
+        name: app/microservice/health/run
+      vars:
+        _host: '{{ system.username }}:{{ system.password }}@localhost/system/health'
+  when: app.microservice.enabled
+  tags: [microservice]

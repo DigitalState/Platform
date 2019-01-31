@@ -1,0 +1,12 @@
+---
+- block:
+    - name: Stop microservice container
+      docker_service:
+        project_src: /srv/microservice
+        files: '{{ _files|list }}'
+        state: present
+        stopped: yes
+      environment:
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+  tags: [microservice]

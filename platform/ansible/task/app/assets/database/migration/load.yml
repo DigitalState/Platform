@@ -2,8 +2,8 @@
 - block:
     - name: Load assets database migration
       include_role:
-        name: app/assets/database/migration/load
+        name: app/assets/database/migration/execute
       vars:
-        _data: '{{ data }}'
+        _version: latest
   when: app.assets.enabled
   tags: [assets]

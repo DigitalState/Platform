@@ -1,7 +1,0 @@
----
-- block:
-    - name: Download formio repository override directory
-      include_role:
-        name: app/formio/repository/override
-  when: app.formio.enabled
-  tags: [formio]

@@ -1,0 +1,24 @@
+---
+assets:
+  enabled: true
+  repository: https://github.com/DigitalState/Assets.git
+  version: develop
+  api:
+    host: api.assets.test.ds
+  database:
+    host: assets_database
+    name: assets
+    user: assets
+    password: assets
+    ui:
+      host: ui.database.assets.test.ds
+  mock:
+    discovery:
+      host: discovery.mock.assets.test.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.test.yml
+    - /root/docker/assets/docker-compose.yml
+    - /root/docker/assets/docker-compose.test.yml
+    - /root/docker/api.test.yml
+    - /root/docker/php.test.yml

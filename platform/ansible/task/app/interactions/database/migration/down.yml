@@ -1,9 +1,0 @@
----
-- block:
-    - name: Execute interactions database down migration
-      include_role:
-        name: app/interactions/database/migration/down
-      vars:
-        _version: '{{ version }}'
-  when: app.interactions.enabled
-  tags: [interactions]

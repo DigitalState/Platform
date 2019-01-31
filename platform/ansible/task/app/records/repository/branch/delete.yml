@@ -1,9 +1,0 @@
----
-- block:
-    - name: Delete records repository branch
-      include_role:
-        name: app/records/repository/branch/delete
-      vars:
-        _branch: '{{ branch }}'
-  when: app.records.enabled
-  tags: [records]

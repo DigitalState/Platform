@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Unload microservice database migration
+      include_role:
+        name: app/microservice/database/migration/execute
+      vars:
+        _version: first
+  when: app.microservice.enabled
+  tags: [microservice]

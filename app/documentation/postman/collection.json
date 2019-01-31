@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "8d62d24f-017b-4687-bc23-4ca40ed3afe5",
-		"name": "DigitalState 0.14.0",
+		"_postman_id": "bbf91c18-aa48-434c-9aa0-ae50aa560f6a",
+		"name": "DigitalState 0.15.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -213,12 +213,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -307,7 +307,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.admin.oauth\": {\n\t\t        \"value\": \"http://admin.ds/oauth\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    },\n\t\t    \"app.spa.portal.oauth\": {\n\t\t        \"value\": \"http://portal.ds/oauth\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
+											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"anonymous\": {\n            \t\"uuid\": \"2c9dfd09-f2c4-4025-bd1c-2b4fd4fa5290\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"anonymous\": {\n\t\t        \"uuid\": \"57b04682-f91c-44ec-b171-9c025ea7b0cf\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"role\": {\n\t\t    \"administrator\": {\n\t\t        \"uuid\": \"077bc934-24af-42e6-a6ae-39ad1a2bd2a6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
 										},
 										"url": {
 											"raw": "{{assets}}/system/tenants",
@@ -566,17 +566,12 @@
 											"disabled": true
 										},
 										{
-											"key": "enabled",
-											"value": "true",
-											"disabled": true
-										},
-										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -775,12 +770,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -1022,12 +1017,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -1432,13 +1427,13 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"type": "text",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"type": "text",
 											"disabled": true
@@ -1761,13 +1756,13 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"type": "text",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"type": "text",
 											"disabled": true
@@ -1913,7 +1908,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/sandbox (dev)",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -2156,12 +2151,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -2250,7 +2245,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.admin.oauth\": {\n\t\t        \"value\": \"http://admin.ds/oauth\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    },\n\t\t    \"app.spa.portal.oauth\": {\n\t\t        \"value\": \"http://portal.ds/oauth\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
+											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"anonymous\": {\n            \t\"uuid\": \"2c9dfd09-f2c4-4025-bd1c-2b4fd4fa5290\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"anonymous\": {\n\t\t        \"uuid\": \"57b04682-f91c-44ec-b171-9c025ea7b0cf\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"role\": {\n\t\t    \"administrator\": {\n\t\t        \"uuid\": \"077bc934-24af-42e6-a6ae-39ad1a2bd2a6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
 										},
 										"url": {
 											"raw": "{{authentication}}/system/tenants",
@@ -2509,17 +2504,12 @@
 											"disabled": true
 										},
 										{
-											"key": "enabled",
-											"value": "true",
-											"disabled": true
-										},
-										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -2718,12 +2708,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -2965,12 +2955,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -3318,12 +3308,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -3468,7 +3458,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/auth/system",
+							"name": "/auth/system (dev)",
 							"event": [
 								{
 									"listen": "test",
@@ -3517,7 +3507,7 @@
 										},
 										{
 											"key": "password",
-											"value": "bpmn",
+											"value": "bpm",
 											"type": "text",
 											"disabled": true
 										}
@@ -3838,1108 +3828,6 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "OAuth",
-					"description": null,
-					"item": [
-						{
-							"name": "Github",
-							"description": null,
-							"item": [
-								{
-									"name": "/oauth/individual/github/redirect",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/individual/github/redirect?",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"individual",
-												"github",
-												"redirect"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/individual/github",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/x-www-form-urlencoded"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/individual/github?code=",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"individual",
-												"github"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												},
-												{
-													"key": "code",
-													"value": ""
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/organization/github/redirect",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/organization/github/redirect?",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"organization",
-												"github",
-												"redirect"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/organization/github",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/x-www-form-urlencoded"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/organization/github?code=",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"organization",
-												"github"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												},
-												{
-													"key": "code",
-													"value": ""
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/staff/github/redirect",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/staff/github/redirect?",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"staff",
-												"github",
-												"redirect"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/staff/github",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/x-www-form-urlencoded"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/staff/github?code=",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"staff",
-												"github"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												},
-												{
-													"key": "code",
-													"value": ""
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								}
-							],
-							"_postman_isSubFolder": true
-						},
-						{
-							"name": "Google",
-							"description": null,
-							"item": [
-								{
-									"name": "/oauth/individual/google/redirect",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "urlencoded",
-											"urlencoded": [
-												{
-													"key": "username",
-													"value": "morgan@individual.ds",
-													"type": "text"
-												},
-												{
-													"key": "password",
-													"value": "morgan",
-													"type": "text"
-												},
-												{
-													"key": "username",
-													"value": "taylor@individual.ds",
-													"type": "text",
-													"disabled": true
-												},
-												{
-													"key": "password",
-													"value": "taylor",
-													"type": "text",
-													"disabled": true
-												}
-											]
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/individual/google/redirect?",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"individual",
-												"google",
-												"redirect"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/individual/google",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/x-www-form-urlencoded"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/individual/google?code=",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"individual",
-												"google"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												},
-												{
-													"key": "code",
-													"value": ""
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/organization/google/redirect",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "urlencoded",
-											"urlencoded": [
-												{
-													"key": "username",
-													"value": "morgan@individual.ds",
-													"type": "text"
-												},
-												{
-													"key": "password",
-													"value": "morgan",
-													"type": "text"
-												},
-												{
-													"key": "username",
-													"value": "taylor@individual.ds",
-													"type": "text",
-													"disabled": true
-												},
-												{
-													"key": "password",
-													"value": "taylor",
-													"type": "text",
-													"disabled": true
-												}
-											]
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/organization/google/redirect?",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"organization",
-												"google",
-												"redirect"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/organization/google",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/x-www-form-urlencoded"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/organization/google?code=",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"organization",
-												"google"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												},
-												{
-													"key": "code",
-													"value": ""
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/staff/google/redirect",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "urlencoded",
-											"urlencoded": [
-												{
-													"key": "username",
-													"value": "morgan@individual.ds",
-													"type": "text"
-												},
-												{
-													"key": "password",
-													"value": "morgan",
-													"type": "text"
-												},
-												{
-													"key": "username",
-													"value": "taylor@individual.ds",
-													"type": "text",
-													"disabled": true
-												},
-												{
-													"key": "password",
-													"value": "taylor",
-													"type": "text",
-													"disabled": true
-												}
-											]
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/staff/google/redirect?",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"staff",
-												"google",
-												"redirect"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/staff/google",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/x-www-form-urlencoded"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/staff/google?code=",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"staff",
-												"google"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												},
-												{
-													"key": "code",
-													"value": ""
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								}
-							],
-							"_postman_isSubFolder": true
-						},
-						{
-							"name": "Twitter",
-							"description": null,
-							"item": [
-								{
-									"name": "/oauth/individual/twitter/redirect",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "urlencoded",
-											"urlencoded": [
-												{
-													"key": "username",
-													"value": "morgan@individual.ds",
-													"type": "text"
-												},
-												{
-													"key": "password",
-													"value": "morgan",
-													"type": "text"
-												},
-												{
-													"key": "username",
-													"value": "taylor@individual.ds",
-													"type": "text",
-													"disabled": true
-												},
-												{
-													"key": "password",
-													"value": "taylor",
-													"type": "text",
-													"disabled": true
-												}
-											]
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/individual/twitter/redirect?",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"individual",
-												"twitter",
-												"redirect"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/individual/twitter",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/x-www-form-urlencoded"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/individual/twitter?code=",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"individual",
-												"twitter"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												},
-												{
-													"key": "code",
-													"value": ""
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/organization/twitter/redirect",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "urlencoded",
-											"urlencoded": [
-												{
-													"key": "username",
-													"value": "morgan@individual.ds",
-													"type": "text"
-												},
-												{
-													"key": "password",
-													"value": "morgan",
-													"type": "text"
-												},
-												{
-													"key": "username",
-													"value": "taylor@individual.ds",
-													"type": "text",
-													"disabled": true
-												},
-												{
-													"key": "password",
-													"value": "taylor",
-													"type": "text",
-													"disabled": true
-												}
-											]
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/organization/twitter/redirect?",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"organization",
-												"twitter",
-												"redirect"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/organization/twitter",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/x-www-form-urlencoded"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/organization/twitter?code=",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"organization",
-												"twitter"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												},
-												{
-													"key": "code",
-													"value": ""
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/staff/twitter/redirect",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "urlencoded",
-											"urlencoded": [
-												{
-													"key": "username",
-													"value": "morgan@individual.ds",
-													"type": "text"
-												},
-												{
-													"key": "password",
-													"value": "morgan",
-													"type": "text"
-												},
-												{
-													"key": "username",
-													"value": "taylor@individual.ds",
-													"type": "text",
-													"disabled": true
-												},
-												{
-													"key": "password",
-													"value": "taylor",
-													"type": "text",
-													"disabled": true
-												}
-											]
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/staff/twitter/redirect?",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"staff",
-												"twitter",
-												"redirect"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								},
-								{
-									"name": "/oauth/staff/twitter",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "093d8632-6ec5-4222-a875-7d6c13ee7099",
-												"type": "text/javascript",
-												"exec": [
-													"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
-												]
-											}
-										}
-									],
-									"request": {
-										"auth": {
-											"type": "noauth"
-										},
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/x-www-form-urlencoded"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
-										"url": {
-											"raw": "{{authentication}}/oauth/staff/twitter?code=",
-											"host": [
-												"{{authentication}}"
-											],
-											"path": [
-												"oauth",
-												"staff",
-												"twitter"
-											],
-											"query": [
-												{
-													"key": "tenant",
-													"value": "e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-													"description": "Tenant 1",
-													"disabled": true
-												},
-												{
-													"key": "code",
-													"value": ""
-												}
-											]
-										},
-										"description": "This endpoint returns an individual jwt token. The jwt token returned from this request is automatically added to the postman environment token variable."
-									},
-									"response": []
-								}
-							],
-							"_postman_isSubFolder": true
-						}
-					],
-					"_postman_isSubFolder": true
-				},
-				{
 					"name": "Registration",
 					"description": null,
 					"item": [
@@ -5061,12 +3949,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -5251,7 +4139,7 @@
 									"urlencoded": [
 										{
 											"key": "username",
-											"value": "morgan@individual",
+											"value": "morgan@individual.ds",
 											"type": "text"
 										}
 									]
@@ -5332,7 +4220,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/sandbox (dev)",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -5359,967 +4247,6 @@
 									]
 								},
 								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
-							},
-							"response": []
-						}
-					],
-					"_postman_isSubFolder": true
-				}
-			]
-		},
-		{
-			"name": "Camunda",
-			"description": null,
-			"item": [
-				{
-					"name": "Deployment",
-					"description": null,
-					"item": [
-						{
-							"name": "/deployment",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/deployment",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"deployment"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/deployment/{id}",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/deployment/051e15ae-99b4-11e7-92b2-0242ac110002",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"deployment",
-										"051e15ae-99b4-11e7-92b2-0242ac110002"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/deployment/create",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"type": "text/javascript",
-										"exec": [
-											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "deployment-name",
-											"value": "My Deployment",
-											"type": "text"
-										},
-										{
-											"key": "enable-duplicate-filtering",
-											"value": "false",
-											"type": "text"
-										},
-										{
-											"key": "deploy-changed-only",
-											"value": "false",
-											"type": "text"
-										},
-										{
-											"key": "deployment-source",
-											"value": "local",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "tenant-id",
-											"value": "My Tenant",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "MyBPMNFileName.bpmn",
-											"value": "",
-											"type": "file"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{camunda}}/deployment/create",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"deployment",
-										"create"
-									]
-								},
-								"description": "Create a Camunda Deployment.\n\nUpdate the Deployment Name and Key/Value of the .bpmn file in the Body."
-							},
-							"response": []
-						}
-					],
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Process Instance",
-					"description": null,
-					"item": [
-						{
-							"name": "/process-instance",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/process-instance",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"process-instance"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/process-instance/{id}",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/process-instance/3fde771b-9aed-11e7-92b2-0242ac110002",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"process-instance",
-										"3fde771b-9aed-11e7-92b2-0242ac110002"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/process-instance/{id}/variables",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/process-instance/3fde771b-9aed-11e7-92b2-0242ac110002/variables",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"process-instance",
-										"3fde771b-9aed-11e7-92b2-0242ac110002",
-										"variables"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Process Definition",
-					"description": null,
-					"item": [
-						{
-							"name": "/process-definition",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/process-definition",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"process-definition"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/process-definition/{id}/diagram",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/process-definition/PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002/diagram",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"process-definition",
-										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
-										"diagram"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/process-definition/{id}/startForm",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/process-definition/PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002/startForm",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"process-definition",
-										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
-										"startForm"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/process-definition/key/{key}/startForm",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/process-definition/key/PayTaxes/startForm",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"process-definition",
-										"key",
-										"PayTaxes",
-										"startForm"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/process-definition/key/{key}/start",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"withVariablesInReturn\": true\r\n}\r\n"
-								},
-								"url": {
-									"raw": "{{camunda}}/process-definition/key/pothole-report/start",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"process-definition",
-										"key",
-										"pothole-report",
-										"start"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/process-definition/key/{key}/xml",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/process-definition/key/PayTaxes/xml",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"process-definition",
-										"key",
-										"PayTaxes",
-										"xml"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/process-definition/{id}/statistics",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/process-definition/PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002/statistics",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"process-definition",
-										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
-										"statistics"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/process-definition/{id}/xml",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/process-definition/PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002/xml",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"process-definition",
-										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
-										"xml"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/process-definition/{id}",
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/process-definition/PayTaxes:1:608cd76b-9e4e-11e7-b8b7-0242ac110002",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"process-definition",
-										"PayTaxes:1:608cd76b-9e4e-11e7-b8b7-0242ac110002"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Task",
-					"description": null,
-					"item": [
-						{
-							"name": "/task",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/task?sortBy=created&sortOrder=desc",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"task"
-									],
-									"query": [
-										{
-											"key": "candidateGroup",
-											"value": "8454c987-cbc5-4a24-ba1a-d420283caabd",
-											"disabled": true
-										},
-										{
-											"key": "includeAssignedTasks",
-											"value": "true",
-											"disabled": true
-										},
-										{
-											"key": "involvedUser",
-											"value": "true",
-											"disabled": true
-										},
-										{
-											"key": "assignee",
-											"value": "Individual",
-											"disabled": true
-										},
-										{
-											"key": "assigneeLike",
-											"value": "Individual%25",
-											"disabled": true
-										},
-										{
-											"key": "sortBy",
-											"value": "created"
-										},
-										{
-											"key": "sortOrder",
-											"value": "desc"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/task",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"candidateGroup\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\"\n}"
-								},
-								"url": {
-									"raw": "{{camunda}}/task",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"task"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/task/{id}",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/hal+json",
-										"disabled": true
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/task/8f9d8732-968d-11e7-b233-0242ac110002",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"task",
-										"8f9d8732-968d-11e7-b233-0242ac110002"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/task/{id}/variables",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/hal+json",
-										"disabled": true
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/task/3fde9e43-9aed-11e7-92b2-0242ac110002/variables?deserializeValues=false",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"task",
-										"3fde9e43-9aed-11e7-92b2-0242ac110002",
-										"variables"
-									],
-									"query": [
-										{
-											"key": "deserializeValues",
-											"value": "false"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/task/create",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"id\": \"2b18bc01-a02b-4b54-9bff-2259cb421d0b\",\r\n  \"name\": \"Review something!\",\r\n  \"description\": \"This have to be done very urgent\",\r\n  \"priority\" : 30,\r\n  \"assignee\" : \"Staff:e32f09b7-e1cf-4a91-a0e1-6822bf47a662\",\r\n  \"owner\" : null,\r\n  \"delegationState\" : \"PENDING\",\r\n  \"due\" : \"2014-08-30T10:00:00.165+0100\",\r\n  \"followUp\" : \"2014-08-25T10:00:00.165+0100\",\r\n  \"candidateGroup\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\r\n  \"tenantId\" : \"a3770b9c-7844-4baa-a5b6-1a4539127b8b\"\r\n}"
-								},
-								"url": {
-									"raw": "{{camunda}}/task/create",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"task",
-										"create"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/task/{id}",
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"name\": \"Review Tax Submission\",\n\t\"assignee\": \"Individual:d0daa7e4-07d1-47e6-93f2-0629adaa3b49\"\n}"
-								},
-								"url": {
-									"raw": "{{camunda}}/task/8f9d8732-968d-11e7-b233-0242ac110002",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"task",
-										"8f9d8732-968d-11e7-b233-0242ac110002"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/task/{id}/complete",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{}"
-								},
-								"url": {
-									"raw": "{{camunda}}/task/11111111-1111-1111-1111-111111111111/complete",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"task",
-										"11111111-1111-1111-1111-111111111111",
-										"complete"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Group",
-					"description": null,
-					"item": [
-						{
-							"name": "/group",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/group",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"group"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/group/{id}",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/group/8454c987-cbc5-4a24-ba1a-d420283caabd",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"group",
-										"8454c987-cbc5-4a24-ba1a-d420283caabd"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/group/create",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"id\":\"8454c987-cbc5-4a24-ba1a-d420283caabd\",\r\n\t\"name\":\"Public Works 1\",\r\n\t\"type\":\"Business Unit\"\r\n}"
-								},
-								"url": {
-									"raw": "{{camunda}}/group/create",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"group",
-										"create"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/group/{id}",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/group/8454c987-cbc5-4a24-ba1a-d420283caabd",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"group",
-										"8454c987-cbc5-4a24-ba1a-d420283caabd"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Tenant",
-					"description": null,
-					"item": [
-						{
-							"name": "/tenant",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/tenant",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"tenant"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/tenant/{id}",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/tenant/e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"tenant",
-										"e5a2120d-6bf7-4c58-a900-bac1e55e986b"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/tenant/create",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									},
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"id\":\"e5a2120d-6bf7-4c58-a900-bac1e55e986b\",\r\n\t\"name\":\"Tenant 1\"\r\n}"
-								},
-								"url": {
-									"raw": "{{camunda}}/tenant/create",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"tenant",
-										"create"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "/tenant/{id}",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{camunda}}/tenant/e5a2120d-6bf7-4c58-a900-bac1e55e986b",
-									"host": [
-										"{{camunda}}"
-									],
-									"path": [
-										"tenant",
-										"e5a2120d-6bf7-4c58-a900-bac1e55e986b"
-									]
-								}
 							},
 							"response": []
 						}
@@ -6536,12 +4463,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -6630,7 +4557,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.admin.oauth\": {\n\t\t        \"value\": \"http://admin.ds/oauth\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    },\n\t\t    \"app.spa.portal.oauth\": {\n\t\t        \"value\": \"http://portal.ds/oauth\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
+											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"anonymous\": {\n            \t\"uuid\": \"2c9dfd09-f2c4-4025-bd1c-2b4fd4fa5290\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"anonymous\": {\n\t\t        \"uuid\": \"57b04682-f91c-44ec-b171-9c025ea7b0cf\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"role\": {\n\t\t    \"administrator\": {\n\t\t        \"uuid\": \"077bc934-24af-42e6-a6ae-39ad1a2bd2a6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
 										},
 										"url": {
 											"raw": "{{cases}}/system/tenants",
@@ -6889,17 +4816,12 @@
 											"disabled": true
 										},
 										{
-											"key": "enabled",
-											"value": "true",
-											"disabled": true
-										},
-										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -7098,12 +5020,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -7345,12 +5267,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -7828,12 +5750,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -7913,7 +5835,7 @@
 							},
 							"response": [
 								{
-									"id": "b4f90907-61fa-456e-918a-708912823294",
+									"id": "780ba8a8-a963-40e5-8e51-4e40d19bd5ce",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8073,7 +5995,7 @@
 							},
 							"response": [
 								{
-									"id": "b80198b3-aa23-4779-8b98-0887e4017c64",
+									"id": "48ed16c0-fb35-4fcf-9ba0-d247dd242f71",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8234,7 +6156,7 @@
 							},
 							"response": [
 								{
-									"id": "a16a524f-443c-4d7e-a73c-00d2bfb4b8e7",
+									"id": "db5f717f-4322-4036-8324-4b77f431fa8c",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8579,12 +6501,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -8649,22 +6571,22 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"case\": \"/cases/82184661-3aa4-4c68-a130-e07dc2e0d974\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"d0daa7e4-07d1-47e6-93f2-0629adaa3b49\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case Status 1\",\r\n\t\t\"fr\": \"Cas Status 1\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description\",\r\n\t\t\"fr\": \"Description\" \r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test\" },\r\n\t\t\"fr\": { \"test\": \"test\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"case\": \"/cases/303495e1-4605-4993-a63a-5fbb028d729e\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"d0daa7e4-07d1-47e6-93f2-0629adaa3b49\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case Status 1\",\r\n\t\t\"fr\": \"Cas Status 1\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description\",\r\n\t\t\"fr\": \"Description\" \r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test\" },\r\n\t\t\"fr\": { \"test\": \"test\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
-									"raw": "{{cases}}/case-statuses",
+									"raw": "{{cases}}/case_statuses",
 									"host": [
 										"{{cases}}"
 									],
 									"path": [
-										"case-statuses"
+										"case_statuses"
 									]
 								},
 								"description": "This endpoint adds a case status to the list."
 							},
 							"response": [
 								{
-									"id": "e207954f-cd27-4e91-b6b6-49a351736989",
+									"id": "95d12b77-8e23-4066-9d36-8d92e5f54e6c",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8824,7 +6746,7 @@
 							},
 							"response": [
 								{
-									"id": "c3a2634f-4d63-4d4b-8592-1f66aefcdadb",
+									"id": "0af235dc-ccd6-467d-8505-917c57be48a7",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8985,7 +6907,7 @@
 							},
 							"response": [
 								{
-									"id": "38915dd4-f5b0-4790-96cd-fe0e48a33f7a",
+									"id": "56b02d7d-6467-464f-bce2-3cdc2a85bc1b",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9120,7 +7042,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/sandbox (dev)",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -9363,12 +7285,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -9457,7 +7379,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.admin.oauth\": {\n\t\t        \"value\": \"http://admin.ds/oauth\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    },\n\t\t    \"app.spa.portal.oauth\": {\n\t\t        \"value\": \"http://portal.ds/oauth\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
+											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"anonymous\": {\n            \t\"uuid\": \"2c9dfd09-f2c4-4025-bd1c-2b4fd4fa5290\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"anonymous\": {\n\t\t        \"uuid\": \"57b04682-f91c-44ec-b171-9c025ea7b0cf\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"role\": {\n\t\t    \"administrator\": {\n\t\t        \"uuid\": \"077bc934-24af-42e6-a6ae-39ad1a2bd2a6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
 										},
 										"url": {
 											"raw": "{{cms}}/system/tenants",
@@ -9716,17 +7638,12 @@
 											"disabled": true
 										},
 										{
-											"key": "enabled",
-											"value": "true",
-											"disabled": true
-										},
-										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -9925,12 +7842,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -10172,12 +8089,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -10653,12 +8570,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -10738,7 +8655,7 @@
 							},
 							"response": [
 								{
-									"id": "c515c5c8-6471-41b0-a85b-f012d8c57bc9",
+									"id": "1da43eb3-0dbc-42d5-9ffc-284be592ae00",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10898,7 +8815,7 @@
 							},
 							"response": [
 								{
-									"id": "02e50c0f-fdf7-4c06-99e4-ab44e832e1e0",
+									"id": "9a103223-c3b0-42d1-b036-3b1578750a1a",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -11059,7 +8976,7 @@
 							},
 							"response": [
 								{
-									"id": "3b12b702-e01e-432c-af7a-9bb621c69372",
+									"id": "74e95505-28f9-4d85-a21d-06fbe4bd1c73",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -11355,12 +9272,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -11480,7 +9397,7 @@
 							},
 							"response": [
 								{
-									"id": "9fca6ab0-764c-47e3-81b3-315b4577570d",
+									"id": "feb6d9a1-c01e-4a3f-bad8-0beed3e36234",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -11640,7 +9557,7 @@
 							},
 							"response": [
 								{
-									"id": "83529631-5b23-41f9-aa97-0396c3c35a00",
+									"id": "d476ad0b-36f7-44be-bdf0-654b6a0bcb0f",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -11801,7 +9718,7 @@
 							},
 							"response": [
 								{
-									"id": "471fbff4-f20a-4c6e-983d-4c7f28fb30f8",
+									"id": "fdff8318-f95e-49d7-89fe-7c6432bb490f",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12096,12 +10013,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -12181,7 +10098,7 @@
 							},
 							"response": [
 								{
-									"id": "0a0764e7-162b-4baa-9a2f-9b1df6ba9cb8",
+									"id": "dc380c03-c7de-41cb-960d-a00b4de80fd5",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12341,7 +10258,7 @@
 							},
 							"response": [
 								{
-									"id": "c7d4cdaf-492c-4196-aaa3-3f42dc572843",
+									"id": "005c5b58-0727-4ecf-a2db-c08bb30a0eae",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -12502,7 +10419,7 @@
 							},
 							"response": [
 								{
-									"id": "9c64dfcd-7291-40ae-a0a6-4757c2a26472",
+									"id": "5faffcb9-fbd0-4da4-8bc9-d6f4bd3bfa46",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -12873,7 +10790,7 @@
 							},
 							"response": [
 								{
-									"id": "c70594b0-c5a6-4e39-92a5-c095fc57a81b",
+									"id": "9385dcb7-2e23-4282-9710-fc8fdac619a3",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -13033,7 +10950,7 @@
 							},
 							"response": [
 								{
-									"id": "ca3e67fb-aac8-4906-92f9-5a22afd9e810",
+									"id": "f5e25b24-eb5e-42eb-ad1c-c8a20d8ba2ca",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -13194,7 +11111,7 @@
 							},
 							"response": [
 								{
-									"id": "179d42d7-1c10-4f1a-81bf-ce118481e35d",
+									"id": "67291ff7-5c76-4fde-a64a-eee46d90299c",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -13376,7 +11293,7 @@
 							},
 							"response": [
 								{
-									"id": "c436966b-6e56-4740-8be7-090c2a828c63",
+									"id": "d9656f49-b3f5-413d-968b-01e3fa26abef",
 									"name": "Created",
 									"originalRequest": {
 										"method": "GET",
@@ -13529,7 +11446,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/sandbox (dev)",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -13566,11 +11483,11 @@
 		},
 		{
 			"name": "Discovery",
-			"description": "",
+			"description": null,
 			"item": [
 				{
 					"name": "Catalog",
-					"description": "",
+					"description": null,
 					"item": [
 						{
 							"name": "/catalog/datacenters",
@@ -13585,7 +11502,10 @@
 										"value": "{{token_consul}}"
 									}
 								],
-								"body": {},
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
 									"raw": "{{discovery}}/v1/catalog/datacenters",
 									"host": [
@@ -13613,7 +11533,10 @@
 										"value": "{{token_consul}}"
 									}
 								],
-								"body": {},
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
 									"raw": "{{discovery}}/v1/catalog/nodes",
 									"host": [
@@ -13641,7 +11564,10 @@
 										"value": "{{token_consul}}"
 									}
 								],
-								"body": {},
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
 									"raw": "{{discovery}}/v1/catalog/services?",
 									"host": [
@@ -13676,9 +11602,12 @@
 										"value": "{{token_consul}}"
 									}
 								],
-								"body": {},
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
-									"raw": "{{discovery}}/v1/catalog/service/dsauthentication_api_http",
+									"raw": "{{discovery}}/v1/catalog/service/ds_assets_api_http",
 									"host": [
 										"{{discovery}}"
 									],
@@ -13686,7 +11615,7 @@
 										"v1",
 										"catalog",
 										"service",
-										"dsauthentication_api_http"
+										"ds_assets_api_http"
 									]
 								}
 							},
@@ -13697,7 +11626,7 @@
 				},
 				{
 					"name": "Store",
-					"description": "",
+					"description": null,
 					"item": [
 						{
 							"name": "/kv/{key}",
@@ -13716,7 +11645,10 @@
 										"value": "{{token_consul}}"
 									}
 								],
-								"body": {},
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
 									"raw": "{{discovery}}/v1/kv/services?recurse=true",
 									"host": [
@@ -13792,7 +11724,10 @@
 										"value": "{{token_consul}}"
 									}
 								],
-								"body": {},
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
 								"url": {
 									"raw": "{{discovery}}/v1/kv/test",
 									"host": [
@@ -14129,6 +12064,47 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Role",
+					"description": null,
+					"item": [
+						{
+							"name": "/role",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "x-jwt-token",
+										"value": "{{token_formio}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{formio}}/role",
+									"host": [
+										"{{formio}}"
+									],
+									"path": [
+										"role"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		},
@@ -14340,12 +12316,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -14434,7 +12410,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.admin.oauth\": {\n\t\t        \"value\": \"http://admin.ds/oauth\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    },\n\t\t    \"app.spa.portal.oauth\": {\n\t\t        \"value\": \"http://portal.ds/oauth\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
+											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"anonymous\": {\n            \t\"uuid\": \"2c9dfd09-f2c4-4025-bd1c-2b4fd4fa5290\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"anonymous\": {\n\t\t        \"uuid\": \"57b04682-f91c-44ec-b171-9c025ea7b0cf\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"role\": {\n\t\t    \"administrator\": {\n\t\t        \"uuid\": \"077bc934-24af-42e6-a6ae-39ad1a2bd2a6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
 										},
 										"url": {
 											"raw": "{{forms}}/system/tenants",
@@ -14693,17 +12669,12 @@
 											"disabled": true
 										},
 										{
-											"key": "enabled",
-											"value": "true",
-											"disabled": true
-										},
-										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -14902,12 +12873,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -15149,12 +13120,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -15520,13 +13491,13 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"type": "text",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"type": "text",
 											"disabled": true
@@ -15672,7 +13643,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/sandbox (dev)",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -15915,12 +13886,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -16009,7 +13980,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.admin.oauth\": {\n\t\t        \"value\": \"http://admin.ds/oauth\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    },\n\t\t    \"app.spa.portal.oauth\": {\n\t\t        \"value\": \"http://portal.ds/oauth\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
+											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"anonymous\": {\n            \t\"uuid\": \"2c9dfd09-f2c4-4025-bd1c-2b4fd4fa5290\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"anonymous\": {\n\t\t        \"uuid\": \"57b04682-f91c-44ec-b171-9c025ea7b0cf\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"role\": {\n\t\t    \"administrator\": {\n\t\t        \"uuid\": \"077bc934-24af-42e6-a6ae-39ad1a2bd2a6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
 										},
 										"url": {
 											"raw": "{{identities}}/system/tenants",
@@ -16268,17 +14239,12 @@
 											"disabled": true
 										},
 										{
-											"key": "enabled",
-											"value": "true",
-											"disabled": true
-										},
-										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -16477,12 +14443,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -16724,12 +14690,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -17095,12 +15061,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}/business-units?",
+									"raw": "{{identities}}/business_units?",
 									"host": [
 										"{{identities}}"
 									],
 									"path": [
-										"business-units"
+										"business_units"
 									],
 									"query": [
 										{
@@ -17236,13 +15202,13 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"type": "text",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"type": "text",
 											"disabled": true
@@ -17514,12 +15480,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -17815,12 +15781,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -18087,12 +16053,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -18388,12 +16354,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -18679,12 +16645,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -18970,12 +16936,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -19269,12 +17235,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -19560,12 +17526,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -19851,12 +17817,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -20136,12 +18102,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -20199,7 +18165,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\r\n\t\"title\": {\r\n\t\t\"en\": \"Staff Member\",\r\n\t\t\"fr\": \"Membre du personnel\"\r\n\t},\r\n\t\"slug\": \"staff-member\",\r\n\t\"permissions\": {\r\n\t\t\"assets\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"authentication\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"cases\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"cms\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"identities\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"records\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"services\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"tasks\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"tenants\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\r\n\t\"title\": {\r\n\t\t\"en\": \"Staff Member\",\r\n\t\t\"fr\": \"Membre du personnel\"\r\n\t},\r\n\t\"slug\": \"staff-member\",\r\n\t\"permissions\": {\r\n\t\t\"assets\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"authentication\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"cases\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"cms\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"forms\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"identities\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"identities\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"records\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"services\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"tasks\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"tenants\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{identities}}/roles",
@@ -20286,7 +18252,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/sandbox (dev)",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -20307,6 +18273,1274 @@
 									"raw": "{{identities}}/sandbox",
 									"host": [
 										"{{identities}}"
+									],
+									"path": [
+										"sandbox"
+									]
+								},
+								"description": "This endpoint provides a sandbox to test and debug functionality. It is only available in the DEV environment."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Microservice",
+			"description": null,
+			"item": [
+				{
+					"name": "System",
+					"description": null,
+					"item": [
+						{
+							"name": "Health",
+							"description": null,
+							"item": [
+								{
+									"name": "/system/health",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "{{system_password}}",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "{{system_username}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{microservice}}/system/health",
+											"host": [
+												"{{microservice}}"
+											],
+											"path": [
+												"system",
+												"health"
+											]
+										},
+										"description": "This endpoint returns the list of health check statuses and the overall health status of the microservice."
+									},
+									"response": []
+								},
+								{
+									"name": "/system/health/{status}",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "{{system_password}}",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "{{system_username}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{microservice}}/system/health/ping",
+											"host": [
+												"{{microservice}}"
+											],
+											"path": [
+												"system",
+												"health",
+												"ping"
+											]
+										},
+										"description": "This endpoint returns a specific health check status."
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Tenant",
+							"description": null,
+							"item": [
+								{
+									"name": "/system/tenants",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "{{system_password}}",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "{{system_username}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{microservice}}/system/tenants?",
+											"host": [
+												"{{microservice}}"
+											],
+											"path": [
+												"system",
+												"tenants"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "id[0]",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "uuid",
+													"value": "40759f94-3e8b-41a1-8a3c-dd84393da5b9",
+													"disabled": true
+												},
+												{
+													"key": "uuid[0]",
+													"value": "40759f94-3e8b-41a1-8a3c-dd84393da5b9",
+													"disabled": true
+												},
+												{
+													"key": "createdAt[before]",
+													"value": "2017-01-01",
+													"disabled": true
+												},
+												{
+													"key": "createdAt[after]",
+													"value": "2017-01-01",
+													"disabled": true
+												},
+												{
+													"key": "updatedAt[before]",
+													"value": "2017-01-01",
+													"disabled": true
+												},
+												{
+													"key": "updatedAt[after]",
+													"value": "2017-01-01",
+													"disabled": true
+												},
+												{
+													"key": "deletedAt[before]",
+													"value": "2017-01-01",
+													"disabled": true
+												},
+												{
+													"key": "deletedAt[after]",
+													"value": "2017-01-01",
+													"disabled": true
+												},
+												{
+													"key": "_page",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "_limit",
+													"value": "10",
+													"disabled": true
+												}
+											]
+										},
+										"description": "This endpoint returns a list of users."
+									},
+									"response": []
+								},
+								{
+									"name": "/system/tenants/{uuid}",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "{{system_password}}",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "{{system_username}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{microservice}}/system/tenants/e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+											"host": [
+												"{{microservice}}"
+											],
+											"path": [
+												"system",
+												"tenants",
+												"e5a2120d-6bf7-4c58-a900-bac1e55e986b"
+											]
+										},
+										"description": "This endpoint returns a specific user."
+									},
+									"response": []
+								},
+								{
+									"name": "/system/tenants",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "{{system_password}}",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "{{system_username}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"anonymous\": {\n            \t\"uuid\": \"2c9dfd09-f2c4-4025-bd1c-2b4fd4fa5290\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"anonymous\": {\n\t\t        \"uuid\": \"57b04682-f91c-44ec-b171-9c025ea7b0cf\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"role\": {\n\t\t    \"administrator\": {\n\t\t        \"uuid\": \"077bc934-24af-42e6-a6ae-39ad1a2bd2a6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
+										},
+										"url": {
+											"raw": "{{microservice}}/system/tenants",
+											"host": [
+												"{{microservice}}"
+											],
+											"path": [
+												"system",
+												"tenants"
+											]
+										},
+										"description": "This endpoint adds a user to the list."
+									},
+									"response": []
+								},
+								{
+									"name": "/system/tenants/{uuid}",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "{{system_password}}",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "{{system_username}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"data\": {},\n    \"version\": 1\n}"
+										},
+										"url": {
+											"raw": "{{microservice}}/system/tenants/e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+											"host": [
+												"{{microservice}}"
+											],
+											"path": [
+												"system",
+												"tenants",
+												"e5a2120d-6bf7-4c58-a900-bac1e55e986b"
+											]
+										},
+										"description": "This endpoint edits a specific user."
+									},
+									"response": []
+								},
+								{
+									"name": "/system/tenants/{uuid}",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "{{system_password}}",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "{{system_username}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{microservice}}/system/tenants/e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+											"host": [
+												"{{microservice}}"
+											],
+											"path": [
+												"system",
+												"tenants",
+												"e5a2120d-6bf7-4c58-a900-bac1e55e986b"
+											]
+										},
+										"description": "This endpoint deletes a specific user from the list."
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Reference",
+					"description": null,
+					"item": [
+						{
+							"name": "/reference/permissions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\":\"user@ds\",\n\t\"password\":\"ds\"\n}"
+								},
+								"url": {
+									"raw": "{{microservice}}/reference/permissions",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"reference",
+										"permissions"
+									]
+								},
+								"description": "This endpoint returns the list of available permissions."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Config",
+					"description": null,
+					"item": [
+						{
+							"name": "/configs",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{microservice}}/configs?",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"configs"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "key",
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "key[0]",
+											"value": "ds_api.user.username",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "_page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "_limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns the list of configurations."
+							},
+							"response": []
+						},
+						{
+							"name": "/configs/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{microservice}}/configs/6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"configs",
+										"6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33"
+									]
+								},
+								"description": "This endpoint returns a specific configuration."
+							},
+							"response": []
+						},
+						{
+							"name": "/configs/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"value\": \"system@system.ds\",\n\t\"version\": 1\n}"
+								},
+								"url": {
+									"raw": "{{microservice}}/configs/6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"configs",
+										"6f40a9f9-1a8f-46aa-a1cd-73dfb50e5b33"
+									]
+								},
+								"description": "This endpoint edits a specific configuration."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Metadata",
+					"description": null,
+					"item": [
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{microservice}}/metadatas?",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"metadatas"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "11111111-1111-1111-1111-111111111111",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "title[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "slug[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "type[]",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "_page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "_limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{microservice}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint returns a specific metadata."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{microservice}}/metadatas",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"metadatas"
+									]
+								},
+								"description": "This endpoint adds a metadata to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
+								},
+								"url": {
+									"raw": "{{microservice}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/metadatas/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{microservice}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"metadatas",
+										"11111111-1111-1111-1111-111111111111"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Access",
+					"description": null,
+					"item": [
+						{
+							"name": "/accesses",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{microservice}}/accesses?",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"accesses"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "id[0]",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "uuid",
+											"value": "9b5e8f50-f153-4b00-b0a9-d9f24c09e0af",
+											"disabled": true
+										},
+										{
+											"key": "uuid[0]",
+											"value": "9b5e8f50-f153-4b00-b0a9-d9f24c09e0af",
+											"disabled": true
+										},
+										{
+											"key": "owner",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "owner[0]",
+											"value": "BusinessUnit",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "ownerUuid[0]",
+											"value": "c11c546e-bd01-47cf-97da-e25388357b5a",
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
+											"disabled": true
+										},
+										{
+											"key": "assigneeUuid[0]",
+											"value": "5ab54dd5-56ed-4e96-bd8b-1d60ab668a75",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "createdAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "updatedAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "_page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "_limit",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								},
+								"description": "This endpoint returns a list of access cards."
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{microservice}}/accesses/9b5e8f50-f153-4b00-b0a9-d9f24c09e0af",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"accesses",
+										"9b5e8f50-f153-4b00-b0a9-d9f24c09e0af"
+									]
+								},
+								"description": "This endpoint returns a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"assignee\": \"Staff\",\n    \"assigneeUuid\": \"e32f09b7-e1cf-4a91-a0e1-6822bf47a662\",\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n            \"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"asset\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+								},
+								"url": {
+									"raw": "{{microservice}}/accesses",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"accesses"
+									]
+								},
+								"description": "This endpoint adds an access card to the list."
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"permissions\": [\n        {\n        \t\"scope\": \"owner\",\n        \t\"entity\": \"BusinessUnit\",\n            \"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n            \"key\": \"asset\",\n            \"attributes\": [\n                \"BROWSE\",\n                \"READ\"\n            ]\n        }\n    ],\n    \"version\": 1\n}"
+								},
+								"url": {
+									"raw": "{{microservice}}/accesses/9b5e8f50-f153-4b00-b0a9-d9f24c09e0af",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"accesses",
+										"9b5e8f50-f153-4b00-b0a9-d9f24c09e0af"
+									]
+								},
+								"description": "This endpoint edits a specific access card."
+							},
+							"response": []
+						},
+						{
+							"name": "/accesses/{uuid}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{microservice}}/accesses/9b5e8f50-f153-4b00-b0a9-d9f24c09e0af",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"accesses",
+										"9b5e8f50-f153-4b00-b0a9-d9f24c09e0af"
+									]
+								},
+								"description": "This endpoint deletes a specific access card from the list."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Statistic",
+					"description": null,
+					"item": [
+						{
+							"name": "/statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{microservice}}/statistics",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"statistics"
+									]
+								},
+								"description": "This endpoint returns a list of statistics."
+							},
+							"response": []
+						},
+						{
+							"name": "/statistics/asset/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{microservice}}/statistics/asset/count",
+									"host": [
+										"{{microservice}}"
+									],
+									"path": [
+										"statistics",
+										"asset",
+										"count"
+									]
+								},
+								"description": "This endpoint returns the asset count statistic."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Debug",
+					"description": null,
+					"item": [
+						{
+							"name": "/sandbox (dev)",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{microservice}}/sandbox",
+									"host": [
+										"{{microservice}}"
 									],
 									"path": [
 										"sandbox"
@@ -20529,12 +19763,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -20623,7 +19857,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.admin.oauth\": {\n\t\t        \"value\": \"http://admin.ds/oauth\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    },\n\t\t    \"app.spa.portal.oauth\": {\n\t\t        \"value\": \"http://portal.ds/oauth\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
+											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"anonymous\": {\n            \t\"uuid\": \"2c9dfd09-f2c4-4025-bd1c-2b4fd4fa5290\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"anonymous\": {\n\t\t        \"uuid\": \"57b04682-f91c-44ec-b171-9c025ea7b0cf\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"role\": {\n\t\t    \"administrator\": {\n\t\t        \"uuid\": \"077bc934-24af-42e6-a6ae-39ad1a2bd2a6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
 										},
 										"url": {
 											"raw": "{{records}}/system/tenants",
@@ -20882,17 +20116,12 @@
 											"disabled": true
 										},
 										{
-											"key": "enabled",
-											"value": "true",
-											"disabled": true
-										},
-										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -21091,12 +20320,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -21338,12 +20567,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -21748,13 +20977,13 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"type": "text",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"type": "text",
 											"disabled": true
@@ -22077,13 +21306,13 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"type": "text",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"type": "text",
 											"disabled": true
@@ -22229,7 +21458,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/sandbox (dev)",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -22472,12 +21701,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -22566,7 +21795,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.admin.oauth\": {\n\t\t        \"value\": \"http://admin.ds/oauth\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    },\n\t\t    \"app.spa.portal.oauth\": {\n\t\t        \"value\": \"http://portal.ds/oauth\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
+											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"anonymous\": {\n            \t\"uuid\": \"2c9dfd09-f2c4-4025-bd1c-2b4fd4fa5290\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"anonymous\": {\n\t\t        \"uuid\": \"57b04682-f91c-44ec-b171-9c025ea7b0cf\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"role\": {\n\t\t    \"administrator\": {\n\t\t        \"uuid\": \"077bc934-24af-42e6-a6ae-39ad1a2bd2a6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.admin.oauth\": {\n\t\t        \"value\": \"http://admin.ds/oauth\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    },\n\t\t    \"app.spa.portal.oauth\": {\n\t\t        \"value\": \"http://portal.ds/oauth\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
 										},
 										"url": {
 											"raw": "{{services}}/system/tenants",
@@ -22825,17 +22054,12 @@
 											"disabled": true
 										},
 										{
-											"key": "enabled",
-											"value": "true",
-											"disabled": true
-										},
-										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -23034,12 +22258,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -23281,12 +22505,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -23773,12 +22997,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -24124,12 +23348,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -24481,12 +23705,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -24921,12 +24145,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -25110,7 +24334,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/sandbox (dev)",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -25353,12 +24577,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -25447,7 +24671,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.admin.oauth\": {\n\t\t        \"value\": \"http://admin.ds/oauth\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    },\n\t\t    \"app.spa.portal.oauth\": {\n\t\t        \"value\": \"http://portal.ds/oauth\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
+											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"anonymous\": {\n            \t\"uuid\": \"2c9dfd09-f2c4-4025-bd1c-2b4fd4fa5290\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"anonymous\": {\n\t\t        \"uuid\": \"57b04682-f91c-44ec-b171-9c025ea7b0cf\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"role\": {\n\t\t    \"administrator\": {\n\t\t        \"uuid\": \"077bc934-24af-42e6-a6ae-39ad1a2bd2a6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
 										},
 										"url": {
 											"raw": "{{tasks}}/system/tenants",
@@ -25706,17 +24930,12 @@
 											"disabled": true
 										},
 										{
-											"key": "enabled",
-											"value": "true",
-											"disabled": true
-										},
-										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -25915,12 +25134,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -26162,12 +25381,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -26539,13 +25758,13 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"type": "text",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"type": "text",
 											"disabled": true
@@ -26800,16 +26019,16 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"data\": {\r\n\t\t\"test\":\"test\"\r\n    }\r\n}"
+									"raw": "{\r\n\t\"data\": {\r\n\t\t\"approved\": true\r\n    }\r\n}"
 								},
 								"url": {
-									"raw": "{{tasks}}/tasks/11111111-1111-1111-1111-111111111111/submission",
+									"raw": "{{tasks}}/tasks/d4927db5-1d9a-11e9-a34d-0242ac13000c/submission",
 									"host": [
 										"{{tasks}}"
 									],
 									"path": [
 										"tasks",
-										"11111111-1111-1111-1111-111111111111",
+										"d4927db5-1d9a-11e9-a34d-0242ac13000c",
 										"submission"
 									]
 								},
@@ -27011,13 +26230,13 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"type": "text",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"type": "text",
 											"disabled": true
@@ -27099,7 +26318,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/sandbox (dev)",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -27342,12 +26561,12 @@
 													"disabled": true
 												},
 												{
-													"key": "page",
+													"key": "_page",
 													"value": "1",
 													"disabled": true
 												},
 												{
-													"key": "limit",
+													"key": "_limit",
 													"value": "10",
 													"disabled": true
 												}
@@ -27436,7 +26655,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.admin.oauth\": {\n\t\t        \"value\": \"http://admin.ds/oauth\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    },\n\t\t    \"app.spa.portal.oauth\": {\n\t\t        \"value\": \"http://portal.ds/oauth\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
+											"raw": "{\n\t\"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\",\n    \"data\": {\n    \t\"user\": {\n            \"system\": {\n            \t\"uuid\": \"d9e66aeb-d853-41bc-ad9e-ae6fb18fb067\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"anonymous\": {\n            \t\"uuid\": \"2c9dfd09-f2c4-4025-bd1c-2b4fd4fa5290\",\n\t\t\t\t\"password\": \"password\"\n            },\n            \"admin\": {\n\t\t\t    \"uuid\": \"28de3e41-87c1-47c9-813d-07a87278fc00\",\n\t\t\t    \"password\": \"password\"\n\t\t\t}\n        },\n        \"identity\": {\n\t\t    \"system\": {\n\t\t        \"uuid\": \"782637a1-7366-4805-a853-869f65fa3965\"\n\t\t    },\n\t\t    \"anonymous\": {\n\t\t        \"uuid\": \"57b04682-f91c-44ec-b171-9c025ea7b0cf\"\n\t\t    },\n\t\t    \"admin\": {\n\t\t        \"uuid\": \"5ace460b-8765-4f2b-b5fe-db9870715d04\"\n\t\t    }\n\t\t},\n        \"business_unit\": {\n\t\t    \"administration\": {\n\t\t        \"uuid\": \"5675406b-f2ed-453a-b3ef-5be4596e7da6\"\n\t\t    }\n\t\t},\n        \"role\": {\n\t\t    \"administrator\": {\n\t\t        \"uuid\": \"077bc934-24af-42e6-a6ae-39ad1a2bd2a6\"\n\t\t    }\n\t\t},\n        \"tenant\": {\n\t\t    \"uuid\": \"b25d89ee-ac87-4989-91fb-c24513277041\"\n\t\t},\n        \"config\": {\n\t\t    \"app.spa.admin\": {\n\t\t        \"value\": \"http://admin.ds\"\n\t\t    },\n\t\t    \"app.spa.portal\": {\n\t\t        \"value\": \"http://portal.ds\"\n\t\t    }\n        }\n    },\n    \"version\": 1\n}"
 										},
 										"url": {
 											"raw": "{{tenants}}/system/tenants",
@@ -27695,17 +26914,12 @@
 											"disabled": true
 										},
 										{
-											"key": "enabled",
-											"value": "true",
-											"disabled": true
-										},
-										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -27904,12 +27118,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -28151,12 +27365,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -28441,12 +27655,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -28534,7 +27748,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"title\": {\n        \"en\": \"Tenant 2\"\n    },\n    \"data\": {},\n    \"propagation\": {\n\t\t\"user\": {\n\t\t\t\"system\": {\n\t\t\t\t\"password\": \"system\"\n\t\t\t},\n\t\t\t\"anonymous\": {\n\t\t\t\t\"password\": \"anonymous\"\n\t\t\t},\n\t\t\t\"admin\": {\n\t\t\t\t\"password\": \"admin\"\n\t\t\t}\n\t\t},\n\t\t\"config\": {\n\t\t\t\"app.spa.admin\": {\n\t\t\t\t\"value\": \"http://admin.lab.ds\"\n\t\t\t},\n\t\t\t\"app.spa.admin.oauth\": {\n\t\t\t\t\"value\": \"http://admin.lab.ds/oauth\"\n\t\t\t},\n\t\t\t\"app.spa.portal\": {\n\t\t\t\t\"value\": \"http://portal.lab.ds\"\n\t\t\t},\n\t\t\t\"app.spa.portal.oauth\": {\n\t\t\t\t\"value\": \"http://portal.lab.ds/oauth\"\n\t\t\t}\n\t\t}\n    },\n    \"plan\": null,\n    \"version\": 1\n}"
+									"raw": "{\n    \"title\": {\n        \"en\": \"Tenant 2\"\n    },\n    \"data\": {},\n    \"propagation\": {\n\t\t\"user\": {\n\t\t\t\"system\": {\n\t\t\t\t\"password\": \"system\"\n\t\t\t},\n\t\t\t\"anonymous\": {\n\t\t\t\t\"password\": \"anonymous\"\n\t\t\t},\n\t\t\t\"admin\": {\n\t\t\t\t\"password\": \"admin\"\n\t\t\t}\n\t\t},\n\t\t\"config\": {\n\t\t\t\"app.spa.admin\": {\n\t\t\t\t\"value\": \"http://admin.lab.ds\"\n\t\t\t},\n\t\t\t\"app.spa.portal\": {\n\t\t\t\t\"value\": \"http://portal.lab.ds\"\n\t\t\t}\n\t\t}\n    },\n    \"plan\": null,\n    \"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{tenants}}/tenants",
@@ -28753,12 +27967,12 @@
 											"disabled": true
 										},
 										{
-											"key": "page",
+											"key": "_page",
 											"value": "1",
 											"disabled": true
 										},
 										{
-											"key": "limit",
+											"key": "_limit",
 											"value": "10",
 											"disabled": true
 										}
@@ -28963,7 +28177,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/sandbox",
+							"name": "/sandbox (dev)",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -28997,6 +28211,997 @@
 					"_postman_isSubFolder": true
 				}
 			]
+		},
+		{
+			"name": "Workflow",
+			"description": null,
+			"item": [
+				{
+					"name": "Deployment",
+					"description": null,
+					"item": [
+						{
+							"name": "/deployment",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/deployment",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"deployment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/deployment/{id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/deployment/051e15ae-99b4-11e7-92b2-0242ac110002",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"deployment",
+										"051e15ae-99b4-11e7-92b2-0242ac110002"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/deployment/create",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "deployment-name",
+											"value": "My Deployment",
+											"type": "text"
+										},
+										{
+											"key": "enable-duplicate-filtering",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "deploy-changed-only",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "deployment-source",
+											"value": "local",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tenant-id",
+											"value": "My Tenant",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "MyBPMNFileName.bpmn",
+											"value": "",
+											"type": "file"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/deployment/create",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"deployment",
+										"create"
+									]
+								},
+								"description": "Create a Camunda Deployment.\n\nUpdate the Deployment Name and Key/Value of the .bpmn file in the Body."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Process Instance",
+					"description": null,
+					"item": [
+						{
+							"name": "/process-instance",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/process-instance",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"process-instance"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/process-instance/{id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/process-instance/3fde771b-9aed-11e7-92b2-0242ac110002",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"process-instance",
+										"3fde771b-9aed-11e7-92b2-0242ac110002"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/process-instance/{id}/variables",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/process-instance/3fde771b-9aed-11e7-92b2-0242ac110002/variables",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"process-instance",
+										"3fde771b-9aed-11e7-92b2-0242ac110002",
+										"variables"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Process Definition",
+					"description": null,
+					"item": [
+						{
+							"name": "/process-definition",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/process-definition",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"process-definition"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/process-definition/{id}/diagram",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/process-definition/PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002/diagram",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"process-definition",
+										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
+										"diagram"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/process-definition/{id}/startForm",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/process-definition/PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002/startForm",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"process-definition",
+										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
+										"startForm"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/process-definition/key/{key}/startForm",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/process-definition/key/PayTaxes/startForm",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"process-definition",
+										"key",
+										"PayTaxes",
+										"startForm"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/process-definition/key/{key}/start",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"withVariablesInReturn\": true\r\n}\r\n"
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/process-definition/key/pothole-report/start",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"process-definition",
+										"key",
+										"pothole-report",
+										"start"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/process-definition/key/{key}/xml",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/process-definition/key/PayTaxes/xml",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"process-definition",
+										"key",
+										"PayTaxes",
+										"xml"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/process-definition/{id}/statistics",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/process-definition/PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002/statistics",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"process-definition",
+										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
+										"statistics"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/process-definition/{id}/xml",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/process-definition/PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002/xml",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"process-definition",
+										"PayTaxes:5:05201180-99b4-11e7-92b2-0242ac110002",
+										"xml"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/process-definition/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/process-definition/PayTaxes:1:608cd76b-9e4e-11e7-b8b7-0242ac110002",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"process-definition",
+										"PayTaxes:1:608cd76b-9e4e-11e7-b8b7-0242ac110002"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Task",
+					"description": null,
+					"item": [
+						{
+							"name": "/task",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/task?sortBy=created&sortOrder=desc",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"task"
+									],
+									"query": [
+										{
+											"key": "candidateGroup",
+											"value": "8454c987-cbc5-4a24-ba1a-d420283caabd",
+											"disabled": true
+										},
+										{
+											"key": "includeAssignedTasks",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "involvedUser",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "assignee",
+											"value": "Individual",
+											"disabled": true
+										},
+										{
+											"key": "assigneeLike",
+											"value": "Individual%25",
+											"disabled": true
+										},
+										{
+											"key": "sortBy",
+											"value": "created"
+										},
+										{
+											"key": "sortOrder",
+											"value": "desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/task",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"candidateGroup\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\"\n}"
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/task",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"task"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/task/{id}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/task/8f9d8732-968d-11e7-b233-0242ac110002",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"task",
+										"8f9d8732-968d-11e7-b233-0242ac110002"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/task/{id}/variables",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/task/3fde9e43-9aed-11e7-92b2-0242ac110002/variables?deserializeValues=false",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"task",
+										"3fde9e43-9aed-11e7-92b2-0242ac110002",
+										"variables"
+									],
+									"query": [
+										{
+											"key": "deserializeValues",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/task/create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"2b18bc01-a02b-4b54-9bff-2259cb421d0b\",\r\n  \"name\": \"Review something!\",\r\n  \"description\": \"This have to be done very urgent\",\r\n  \"priority\" : 30,\r\n  \"assignee\" : \"Staff:e32f09b7-e1cf-4a91-a0e1-6822bf47a662\",\r\n  \"owner\" : null,\r\n  \"delegationState\" : \"PENDING\",\r\n  \"due\" : \"2014-08-30T10:00:00.165+0100\",\r\n  \"followUp\" : \"2014-08-25T10:00:00.165+0100\",\r\n  \"candidateGroup\": \"8454c987-cbc5-4a24-ba1a-d420283caabd\",\r\n  \"tenantId\" : \"a3770b9c-7844-4baa-a5b6-1a4539127b8b\"\r\n}"
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/task/create",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"task",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/task/{id}",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Review Tax Submission\",\n\t\"assignee\": \"Individual:d0daa7e4-07d1-47e6-93f2-0629adaa3b49\"\n}"
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/task/8f9d8732-968d-11e7-b233-0242ac110002",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"task",
+										"8f9d8732-968d-11e7-b233-0242ac110002"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/task/{id}/complete",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/task/11111111-1111-1111-1111-111111111111/complete",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"task",
+										"11111111-1111-1111-1111-111111111111",
+										"complete"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Group",
+					"description": null,
+					"item": [
+						{
+							"name": "/group",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/group",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"group"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/group/{id}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/group/8454c987-cbc5-4a24-ba1a-d420283caabd",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"group",
+										"8454c987-cbc5-4a24-ba1a-d420283caabd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/group/create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"id\":\"8454c987-cbc5-4a24-ba1a-d420283caabd\",\r\n\t\"name\":\"Public Works 1\",\r\n\t\"type\":\"Business Unit\"\r\n}"
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/group/create",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"group",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/group/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/group/8454c987-cbc5-4a24-ba1a-d420283caabd",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"group",
+										"8454c987-cbc5-4a24-ba1a-d420283caabd"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Tenant",
+					"description": null,
+					"item": [
+						{
+							"name": "/tenant",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/tenant",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"tenant"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/tenant/{id}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/tenant/e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"tenant",
+										"e5a2120d-6bf7-4c58-a900-bac1e55e986b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/tenant/create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"id\":\"e5a2120d-6bf7-4c58-a900-bac1e55e986b\",\r\n\t\"name\":\"Tenant 1\"\r\n}"
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/tenant/create",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"tenant",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/tenant/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{workflow}}/rest/tenant/e5a2120d-6bf7-4c58-a900-bac1e55e986b",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"tenant",
+										"e5a2120d-6bf7-4c58-a900-bac1e55e986b"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
 		}
 	],
 	"auth": {
@@ -29004,7 +29209,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "{{token}}",
+				"value": "{{token_apip}}",
 				"type": "string"
 			}
 		]

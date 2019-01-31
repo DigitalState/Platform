@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull portal repository branch
-      shell: 'git pull'
-      args:
-        chdir: /srv/portal
-  tags: [portal]

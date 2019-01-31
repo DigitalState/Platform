@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Warmup microservice cache
+      include_role:
+        name: app/microservice/cache/warmup
+  when: app.microservice.enabled
+  tags: [microservice]

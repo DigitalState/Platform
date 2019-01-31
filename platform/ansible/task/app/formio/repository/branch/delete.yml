@@ -1,9 +1,0 @@
----
-- block:
-    - name: Delete formio repository branch
-      include_role:
-        name: app/formio/repository/branch/delete
-      vars:
-        _branch: '{{ branch }}'
-  when: app.formio.enabled
-  tags: [formio]

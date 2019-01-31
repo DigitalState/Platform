@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Validate tenants health check
+      include_role:
+        name: app/tenants/health/validate
+      vars:
+        _host: '{{ system.username }}:{{ system.password }}@localhost/system/health'
+  when: app.tenants.enabled
+  tags: [tenants]

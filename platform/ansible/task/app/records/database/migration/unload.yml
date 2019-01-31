@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Unload records database migration
+      include_role:
+        name: app/records/database/migration/execute
+      vars:
+        _version: first
+  when: app.records.enabled
+  tags: [records]

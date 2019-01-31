@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push documentation repository branch
-      include_role:
-        name: app/documentation/repository/branch/push
-  when: app.documentation.enabled
-  tags: [documentation]

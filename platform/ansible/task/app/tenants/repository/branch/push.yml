@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push tenants repository branch
-      include_role:
-        name: app/tenants/repository/branch/push
-  when: app.tenants.enabled
-  tags: [tenants]

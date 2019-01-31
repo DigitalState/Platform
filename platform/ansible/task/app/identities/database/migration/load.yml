@@ -2,8 +2,8 @@
 - block:
     - name: Load identities database migration
       include_role:
-        name: app/identities/database/migration/load
+        name: app/identities/database/migration/execute
       vars:
-        _data: '{{ data }}'
+        _version: latest
   when: app.identities.enabled
   tags: [identities]

@@ -3,9 +3,9 @@
     - name: Down records container
       docker_service:
         project_src: /srv/records
-        files:
-          - docker-compose.yml
-          - 'docker-compose.{{ _env }}.yml'
+        files: '{{ _files|list }}'
         state: absent
         remove_volumes: '{{ "no" if _persistent else "yes" }}'
+      environment:
+        NETWORK: '{{ _network }}'
   tags: [records]

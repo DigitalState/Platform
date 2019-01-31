@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push guide repository branch
-      include_role:
-        name: app/guide/repository/branch/push
-  when: app.guide.enabled
-  tags: [guide]

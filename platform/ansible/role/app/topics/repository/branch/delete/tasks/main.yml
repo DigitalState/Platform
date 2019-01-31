@@ -1,7 +1,0 @@
----
-- block:
-    - name: Delete topics repository branch
-      shell: 'git delete -D {{ _branch }}'
-      args:
-        chdir: /srv/topics
-  tags: [topics]

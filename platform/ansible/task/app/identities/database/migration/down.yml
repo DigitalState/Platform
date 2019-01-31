@@ -1,9 +1,0 @@
----
-- block:
-    - name: Execute identities database down migration
-      include_role:
-        name: app/identities/database/migration/down
-      vars:
-        _version: '{{ version }}'
-  when: app.identities.enabled
-  tags: [identities]

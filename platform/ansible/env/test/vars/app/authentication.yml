@@ -1,0 +1,24 @@
+---
+authentication:
+  enabled: true
+  repository: https://github.com/DigitalState/Authentication.git
+  version: develop
+  api:
+    host: api.authentication.test.ds
+  database:
+    host: authentication_database
+    name: authentication
+    user: authentication
+    password: authentication
+    ui:
+      host: ui.database.authentication.test.ds
+  mock:
+    discovery:
+      host: discovery.mock.authentication.test.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.test.yml
+    - /root/docker/authentication/docker-compose.yml
+    - /root/docker/authentication/docker-compose.test.yml
+    - /root/docker/api.test.yml
+    - /root/docker/php.test.yml

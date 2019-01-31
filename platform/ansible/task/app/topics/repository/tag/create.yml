@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create topics repository tag
-      include_role:
-        name: app/topics/repository/tag/create
-      vars:
-        _tag: '{{ tag }}'
-  when: app.topics.enabled
-  tags: [topics]

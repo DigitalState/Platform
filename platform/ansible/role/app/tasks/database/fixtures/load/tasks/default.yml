@@ -1,4 +1,0 @@
----
-- block:
-    - import_tasks: load.yml
-  tags: [tasks]

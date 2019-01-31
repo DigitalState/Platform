@@ -1,0 +1,22 @@
+---
+_files: ['docker-compose.yml']
+_namespace: ds
+_directory: /srv/microservice
+_network: ds_proxy_default
+_proxy_host: 127.0.0.1
+_database_host: microservice_database
+_database_name: microservice
+_database_user: microservice
+_database_password: ~
+_database_ui_host: ui.database.microservice.ds
+_api_name: microservice
+_api_env: prod
+_api_secret: ''
+_api_host: api.microservice.ds
+_api_jwt_pass_phrase: ~
+_api_discovery_host: api.discovery.ds
+_api_discovery_credential: ~
+_api_encryption: ~
+_api_system_username: system
+_api_system_password: ~
+_mock_discovery_host: discovery.mock.microservice.ds

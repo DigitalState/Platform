@@ -2,17 +2,23 @@
 forms:
   enabled: true
   repository: https://github.com/DigitalState/Forms.git
-  version: 0.14.0
+  version: develop
   api:
     host: api.forms.dev.ds
   database:
     host: forms_database
-    port: 5432
     name: forms
-    username: forms
+    user: forms
     password: forms
     ui:
       host: ui.database.forms.dev.ds
-  cache:
-    ui:
-      host: ui.cache.forms.dev.ds
+  mock:
+    discovery:
+      host: discovery.mock.forms.dev.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.dev.yml
+    - /root/docker/forms/docker-compose.yml
+    - /root/docker/forms/docker-compose.dev.yml
+    - /root/docker/api.dev.yml
+    - /root/docker/php.dev.yml

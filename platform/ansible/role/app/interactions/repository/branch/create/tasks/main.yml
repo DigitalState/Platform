@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create interactions repository branch
-      shell: 'git checkout -b {{ _branch }}'
-      args:
-        chdir: /srv/interactions
-  tags: [interactions]

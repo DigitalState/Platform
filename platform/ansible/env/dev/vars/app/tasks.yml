@@ -1,18 +1,24 @@
 ---
 tasks:
-  enabled: false
+  enabled: true
   repository: https://github.com/DigitalState/Tasks.git
-  version: 0.14.0
+  version: develop
   api:
     host: api.tasks.dev.ds
   database:
     host: tasks_database
-    port: 5432
     name: tasks
-    username: tasks
+    user: tasks
     password: tasks
     ui:
       host: ui.database.tasks.dev.ds
-  cache:
-    ui:
-      host: ui.cache.tasks.dev.ds
+  mock:
+    discovery:
+      host: discovery.mock.tasks.dev.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.dev.yml
+    - /root/docker/tasks/docker-compose.yml
+    - /root/docker/tasks/docker-compose.dev.yml
+    - /root/docker/api.dev.yml
+    - /root/docker/php.dev.yml

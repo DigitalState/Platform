@@ -3,9 +3,10 @@
     - name: Stop formio container
       docker_service:
         project_src: /srv/formio
-        files:
-          - docker-compose.yml
-          - 'docker-compose.{{ _env }}.yml'
+        files: '{{ _files|list }}'
         state: present
         stopped: yes
+      environment:
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
   tags: [formio]

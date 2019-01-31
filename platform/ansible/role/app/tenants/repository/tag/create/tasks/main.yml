@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create tenants repository tag
-      shell: 'git tag {{ _tag }}'
-      args:
-        chdir: /srv/tenants
-  tags: [tenants]

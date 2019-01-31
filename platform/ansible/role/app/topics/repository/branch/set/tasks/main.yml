@@ -1,7 +1,0 @@
----
-- block:
-    - name: Set topics repository active branch
-      shell: 'git checkout {{ _branch }}'
-      args:
-        chdir: /srv/topics
-  tags: [topics]

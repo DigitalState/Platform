@@ -1,9 +1,0 @@
----
-- block:
-    - name: Configure tenants namespace settings
-      include_role:
-        name: app/tenants/namespace/configure
-      vars:
-        _namespace: '{{ namespace }}'
-  when: app.tenants.enabled
-  tags: [tenants]

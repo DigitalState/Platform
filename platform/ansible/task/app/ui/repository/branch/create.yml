@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create ui repository branch
-      include_role:
-        name: app/ui/repository/branch/create
-      vars:
-        _branch: '{{ branch }}'
-  when: app.ui.enabled
-  tags: [ui]

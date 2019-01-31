@@ -1,7 +1,0 @@
----
-- block:
-    - name: Delete core repository branch
-      shell: 'git delete -D {{ _branch }}'
-      args:
-        chdir: /srv/core
-  tags: [core]

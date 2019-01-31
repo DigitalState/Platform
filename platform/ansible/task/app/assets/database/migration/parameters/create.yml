@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create assets database migration parameters file
+      include_role:
+        name: app/assets/database/migration/parameters/create
+      vars:
+        _parameters: '{{ parameters }}'
+  when: app.assets.enabled
+  tags: [assets]

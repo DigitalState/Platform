@@ -4,6 +4,7 @@
       include_role:
         name: app/records/container/down
       vars:
-        _env: '{{ env }}'
+        _network: '{{ namespace }}_proxy_default'
+        _files: '{{ app.records.docker|list }}'
   when: app.records.enabled
   tags: [records]

@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull tenants repository branch
-      include_role:
-        name: app/tenants/repository/branch/pull
-  when: app.tenants.enabled
-  tags: [tenants]

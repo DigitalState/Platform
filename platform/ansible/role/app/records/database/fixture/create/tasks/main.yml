@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create records custom fixture
+      copy:
+        src: '{{ _source }}/'
+        dest: '/srv/records/api/config/fixtures/{{ _directory }}'
+  tags: [records]

@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Down workflow container
+      docker_service:
+        project_src: /srv/workflow
+        files: '{{ _files|list }}'
+        state: absent
+        remove_volumes: '{{ "no" if _persistent else "yes" }}'
+      environment:
+        NETWORK: '{{ _network }}'
+  tags: [workflow]

@@ -1,9 +1,0 @@
----
-- block:
-    - name: Delete proxy repository branch
-      include_role:
-        name: app/proxy/repository/branch/delete
-      vars:
-        _branch: '{{ branch }}'
-  when: app.proxy.enabled
-  tags: [proxy]

@@ -1,9 +1,0 @@
----
-- block:
-    - name: Load topics database migration
-      include_role:
-        name: app/topics/database/migration/load
-      vars:
-        _data: '{{ data }}'
-  when: app.topics.enabled
-  tags: [topics]

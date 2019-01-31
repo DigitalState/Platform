@@ -1,5 +1,0 @@
----
-core:
-  enabled: false
-  repository: https://github.com/DigitalState/Core.git
-  version: 0.14.0

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create microservice custom fixture
+      copy:
+        src: '{{ _source }}/'
+        dest: '/srv/microservice/api/config/fixtures/{{ _directory }}'
+  tags: [microservice]

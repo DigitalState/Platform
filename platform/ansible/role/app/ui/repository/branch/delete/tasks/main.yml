@@ -1,7 +1,0 @@
----
-- block:
-    - name: Delete ui repository branch
-      shell: 'git delete -D {{ _branch }}'
-      args:
-        chdir: /srv/ui
-  tags: [ui]

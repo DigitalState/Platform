@@ -1,8 +1,0 @@
----
-- block:
-    - name: Configure authentication namespace setting
-      lineinfile:
-        path: '/srv/authentication/app/config/parameters.yml'
-        regexp: '^\s{4}namespace:'
-        line: '    namespace: {{ _namespace }}'
-  tags: [authentication]

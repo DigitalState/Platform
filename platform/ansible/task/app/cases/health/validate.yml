@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Validate cases health check
+      include_role:
+        name: app/cases/health/validate
+      vars:
+        _host: '{{ system.username }}:{{ system.password }}@localhost/system/health'
+  when: app.cases.enabled
+  tags: [cases]

@@ -2,17 +2,23 @@
 cms:
   enabled: true
   repository: https://github.com/DigitalState/Cms.git
-  version: 0.14.0
+  version: 0.15.0
   api:
     host: api.cms.prod.ds
   database:
     host: cms_database
-    port: 5432
     name: cms
-    username: cms
+    user: cms
     password: ~
     ui:
       host: ui.database.cms.prod.ds
-  cache:
-    ui:
-      host: ui.cache.cms.prod.ds
+  mock:
+    discovery:
+      host: discovery.mock.cms.prod.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.prod.yml
+    - /root/docker/cms/docker-compose.yml
+    - /root/docker/cms/docker-compose.prod.yml
+    - /root/docker/api.prod.yml
+    - /root/docker/php.prod.yml

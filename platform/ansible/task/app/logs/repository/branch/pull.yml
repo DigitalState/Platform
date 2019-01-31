@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull logs repository branch
-      include_role:
-        name: app/logs/repository/branch/pull
-  when: app.logs.enabled
-  tags: [logs]

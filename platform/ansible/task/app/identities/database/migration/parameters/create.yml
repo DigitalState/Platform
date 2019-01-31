@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create identities database migration parameters file
+      include_role:
+        name: app/identities/database/migration/parameters/create
+      vars:
+        _parameters: '{{ parameters }}'
+  when: app.identities.enabled
+  tags: [identities]

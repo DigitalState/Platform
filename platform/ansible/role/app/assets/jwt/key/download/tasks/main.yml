@@ -3,11 +3,11 @@
     - name: Download assets jwt private key
       copy:
         src: '{{ _private_key }}'
-        dest: /srv/assets/var/jwt/key
+        dest: /srv/assets/api/config/jwt/key
         mode: 0600
     - name: Download assets jwt public key
       copy:
         src: '{{ _public_key }}'
-        dest: /srv/assets/var/jwt/key.pub
+        dest: /srv/assets/api/config/jwt/key.pub
         mode: 0600
   tags: [assets]

@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push formio repository branch
-      include_role:
-        name: app/formio/repository/branch/push
-  when: app.formio.enabled
-  tags: [formio]

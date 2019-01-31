@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create guide repository tag
-      shell: 'git tag {{ _tag }}'
-      args:
-        chdir: /srv/guide
-  tags: [guide]

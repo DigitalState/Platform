@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create records database migration parameters file
+      include_role:
+        name: app/records/database/migration/parameters/create
+      vars:
+        _parameters: '{{ parameters }}'
+  when: app.records.enabled
+  tags: [records]

@@ -1,0 +1,13 @@
+---
+- block:
+    - name: Download workflow repository
+      include_role:
+        name: app/workflow/repository/download
+      vars:
+        _repository: '{{ app.workflow.repository }}'
+        _version: '{{ app.workflow.version }}'
+        _credential:
+          username: '{{ github.username }}'
+          password: '{{ github.password }}'
+  when: app.workflow.enabled
+  tags: [workflow]

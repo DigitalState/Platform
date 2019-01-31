@@ -2,8 +2,8 @@
 - block:
     - name: Load authentication database migration
       include_role:
-        name: app/authentication/database/migration/load
+        name: app/authentication/database/migration/execute
       vars:
-        _data: '{{ data }}'
+        _version: latest
   when: app.authentication.enabled
   tags: [authentication]

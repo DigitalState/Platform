@@ -1,7 +1,0 @@
----
-- block:
-    - name: Set identities repository active branch
-      shell: 'git checkout {{ _branch }}'
-      args:
-        chdir: /srv/identities
-  tags: [identities]

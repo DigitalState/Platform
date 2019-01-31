@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create custom tenants database migration parameters file
+      copy:
+        dest: '/srv/tenants/api/config/migrations/parameters.yaml'
+        content: '{{ _parameters|to_nice_yaml }}'
+  tags: [tenants]

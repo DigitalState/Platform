@@ -1,0 +1,24 @@
+---
+microservice:
+  enabled: true
+  repository: https://github.com/DigitalState/Microservice.git
+  version: develop
+  api:
+    host: api.microservice.test.ds
+  database:
+    host: microservice_database
+    name: microservice
+    user: microservice
+    password: microservice
+    ui:
+      host: ui.database.microservice.test.ds
+  mock:
+    discovery:
+      host: discovery.mock.microservice.test.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.test.yml
+    - /root/docker/microservice/docker-compose.yml
+    - /root/docker/microservice/docker-compose.test.yml
+    - /root/docker/api.test.yml
+    - /root/docker/php.test.yml

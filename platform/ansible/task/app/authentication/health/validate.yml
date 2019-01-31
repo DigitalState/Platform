@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Validate authentication health check
+      include_role:
+        name: app/authentication/health/validate
+      vars:
+        _host: '{{ system.username }}:{{ system.password }}@localhost/system/health'
+  when: app.authentication.enabled
+  tags: [authentication]

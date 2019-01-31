@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Set microservice configs
+      include_role:
+        name: app/microservice/config/set
+      vars:
+        _config: '{{ config }}'
+  when: app.microservice.enabled
+  tags: [microservice]

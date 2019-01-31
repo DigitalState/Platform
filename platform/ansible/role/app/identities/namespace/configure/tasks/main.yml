@@ -1,8 +1,0 @@
----
-- block:
-    - name: Configure identities namespace setting
-      lineinfile:
-        path: '/srv/identities/app/config/parameters.yml'
-        regexp: '^\s{4}namespace:'
-        line: '    namespace: {{ _namespace }}'
-  tags: [identities]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Load forms database fixture
+      shell:
+        cmd: 'docker-compose exec -T -e FIXTURES={{ _fixture }} php php bin/console doctrine:fixtures:load --no-interaction'
+        chdir: /srv/forms
+  tags: [forms]

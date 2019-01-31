@@ -1,9 +1,0 @@
----
-- block:
-    - name: Delete forms repository branch
-      include_role:
-        name: app/forms/repository/branch/delete
-      vars:
-        _branch: '{{ branch }}'
-  when: app.forms.enabled
-  tags: [forms]

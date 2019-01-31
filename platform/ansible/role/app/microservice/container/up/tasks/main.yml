@@ -1,0 +1,40 @@
+---
+- block:
+    - name: Up microservice container
+      docker_service:
+        project_src: /srv/microservice
+        files: '{{ _files|list }}'
+        state: present
+      environment:
+        COMPOSE_PROJECT_NAME: '{{ _namespace }}_{{ _api_name }}'
+        DIRECTORY: '{{ _directory }}'
+        NETWORK: '{{ _network }}'
+        PROXY_HOST: '{{ _proxy_host }}'
+        DATABASE_HOST: '{{ _database_host }}'
+        DATABASE_NAME: '{{ _database_name }}'
+        DATABASE_USER: '{{ _database_user }}'
+        DATABASE_PASSWORD: '{{ _database_password }}'
+        DATABASE_UI_HOST: '{{ _database_ui_host }}'
+        API_NAME: '{{ _api_name }}'
+        API_ENV: '{{ _api_env }}'
+        API_SECRET: '{{ _api_secret }}'
+        API_HOST: '{{ _api_host }}'
+        API_NAMESPACE: '{{ _namespace }}'
+        API_DATABASE_URL: 'postgres://{{ _database_user }}:{{ _database_password }}@{{ _database_host }}/{{ _database_name }}'
+        API_JWT_PASS_PHRASE: '{{ _api_jwt_pass_phrase }}'
+        API_DISCOVERY_HOST: '{{ _api_discovery_host }}'
+        API_DISCOVERY_CREDENTIAL: '{{ _api_discovery_credential }}'
+        API_ENCRYPTION: '{{ _api_encryption }}'
+        API_SYSTEM_USERNAME: '{{ _api_system_username }}'
+        API_SYSTEM_PASSWORD: '{{ _api_system_password }}'
+        MOCK_DISCOVERY_HOST: '{{ _mock_discovery_host }}'
+    - name: Waiting for microservice container to finalize installation
+      shell:
+        cmd: docker-compose exec -T php pidof php-fpm | cat
+        chdir: /srv/microservice
+      register: _output
+      until: _output.stdout is match('^[0-9]+(\s[0-9]+)*$')
+      retries: 60
+      delay: 10
+      changed_when: false
+  tags: [microservice]

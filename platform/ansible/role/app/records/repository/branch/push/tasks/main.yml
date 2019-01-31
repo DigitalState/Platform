@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push records repository branch
-      shell: 'git push'
-      args:
-        chdir: /srv/records
-  tags: [records]

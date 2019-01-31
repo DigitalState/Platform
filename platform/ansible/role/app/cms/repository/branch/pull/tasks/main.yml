@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull cms repository branch
-      shell: 'git pull'
-      args:
-        chdir: /srv/cms
-  tags: [cms]

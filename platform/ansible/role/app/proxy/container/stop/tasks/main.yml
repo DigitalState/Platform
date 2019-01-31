@@ -3,9 +3,7 @@
     - name: Stop proxy container
       docker_service:
         project_src: /srv/proxy
-        files:
-          - docker-compose.yml
-          - 'docker-compose.{{ _env }}.yml'
+        files: '{{ _files|list }}'
         state: present
         stopped: yes
   tags: [proxy]

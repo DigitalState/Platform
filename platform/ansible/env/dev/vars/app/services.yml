@@ -2,17 +2,25 @@
 services:
   enabled: true
   repository: https://github.com/DigitalState/Services.git
-  version: 0.14.0
+  version: develop
   api:
     host: api.services.dev.ds
   database:
     host: services_database
-    port: 5432
     name: services
-    username: services
+    user: services
     password: services
     ui:
       host: ui.database.services.dev.ds
-  cache:
-    ui:
-      host: ui.cache.services.dev.ds
+  mock:
+    discovery:
+      host: discovery.mock.services.dev.ds
+    workflow:
+      host: workflow.mock.services.dev.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.dev.yml
+    - /root/docker/services/docker-compose.yml
+    - /root/docker/services/docker-compose.dev.yml
+    - /root/docker/api.dev.yml
+    - /root/docker/php.dev.yml

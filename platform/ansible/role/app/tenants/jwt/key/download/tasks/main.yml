@@ -3,11 +3,11 @@
     - name: Download tenants jwt private key
       copy:
         src: '{{ _private_key }}'
-        dest: /srv/tenants/var/jwt/key
+        dest: /srv/tenants/api/config/jwt/key
         mode: 0600
     - name: Download tenants jwt public key
       copy:
         src: '{{ _public_key }}'
-        dest: /srv/tenants/var/jwt/key.pub
+        dest: /srv/tenants/api/config/jwt/key.pub
         mode: 0600
   tags: [tenants]

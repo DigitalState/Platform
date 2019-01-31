@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull discovery repository branch
-      shell: 'git pull'
-      args:
-        chdir: /srv/discovery
-  tags: [discovery]

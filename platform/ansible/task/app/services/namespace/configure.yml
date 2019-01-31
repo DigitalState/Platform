@@ -1,9 +1,0 @@
----
-- block:
-    - name: Configure services namespace settings
-      include_role:
-        name: app/services/namespace/configure
-      vars:
-        _namespace: '{{ namespace }}'
-  when: app.services.enabled
-  tags: [services]

@@ -2,8 +2,8 @@
 - block:
     - name: Load records database migration
       include_role:
-        name: app/records/database/migration/load
+        name: app/records/database/migration/execute
       vars:
-        _data: '{{ data }}'
+        _version: latest
   when: app.records.enabled
   tags: [records]

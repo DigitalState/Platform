@@ -4,6 +4,7 @@
       include_role:
         name: app/identities/container/down
       vars:
-        _env: '{{ env }}'
+        _network: '{{ namespace }}_proxy_default'
+        _files: '{{ app.identities.docker|list }}'
   when: app.identities.enabled
   tags: [identities]

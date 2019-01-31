@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Unload forms database migration
+      include_role:
+        name: app/forms/database/migration/execute
+      vars:
+        _version: first
+  when: app.forms.enabled
+  tags: [forms]

@@ -1,4 +1,4 @@
 ---
-- name: Obtain proxy container ip
-  shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.{{ namespace }}proxy_default.IPAddress {{ '}}' }}' $(docker ps -aqf "name={{ namespace }}proxy_proxy")
+- name: Retrieve proxy container ip
+  shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.{{ namespace }}_proxy_default.IPAddress {{ '}}' }}' $(docker ps -aqf "name={{ namespace }}_proxy_proxy")
   register: proxy_container_ip

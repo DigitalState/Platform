@@ -3,11 +3,17 @@ formio:
   enabled: true
   order: -10
   repository: https://github.com/DigitalState/Formio.git
-  version: 0.14.0
+  version: 0.15.0
   api:
     host: api.formio.prod.ds
+    admin:
+      user: admin
+      password: ~
   database:
     ui:
-      host: adminer.formio.prod.ds
-  username: admin@staff.ds
-  password: ~
+      host: ui.database.formio.prod.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.prod.yml
+    - /root/docker/formio/docker-compose.yml
+    - /root/docker/formio/docker-compose.prod.yml

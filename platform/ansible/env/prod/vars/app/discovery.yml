@@ -3,8 +3,13 @@ discovery:
   enabled: true
   order: -20
   repository: https://github.com/DigitalState/Discovery.git
-  version: 0.14.0
+  version: 0.15.0
   token:
     master: ~
   ui:
     host: ui.discovery.prod.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.prod.yml
+    - /root/docker/discovery/docker-compose.yml
+    - /root/docker/discovery/docker-compose.prod.yml

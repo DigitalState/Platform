@@ -1,4 +1,0 @@
----
-- name: Obtain discovery container ip
-  shell: docker inspect --format '{{ '{{' }} .NetworkSettings.Networks.{{ namespace }}proxy_default.IPAddress {{ '}}' }}' $(docker ps -aqf "name={{ namespace }}discovery_bootstrap")
-  register: discovery_container_info_ip

@@ -1,7 +1,0 @@
----
-- block:
-    - name: Execute interactions database down migration
-      shell:
-        cmd: 'docker-compose exec -T php php bin/console doctrine:migrations:execute --down {{ _version }} --no-interaction'
-        chdir: /srv/interactions
-  tags: [interactions]

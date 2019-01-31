@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull services repository branch
-      shell: 'git pull'
-      args:
-        chdir: /srv/services
-  tags: [services]

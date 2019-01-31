@@ -1,7 +1,0 @@
----
-logs:
-  enabled: false
-  repository: https://github.com/DigitalState/Logs.git
-  version: 0.14.0
-  api:
-    host: api.logs.stag.ds

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create custom tasks database migration parameters file
+      copy:
+        dest: '/srv/tasks/api/config/migrations/parameters.yaml'
+        content: '{{ _parameters|to_nice_yaml }}'
+  tags: [tasks]

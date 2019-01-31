@@ -1,7 +1,0 @@
----
-- block:
-    - name: Clear interactions cache
-      include_role:
-        name: app/interactions/cache/clear
-  when: app.interactions.enabled
-  tags: [interactions]

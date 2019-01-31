@@ -2,17 +2,23 @@
 identities:
   enabled: true
   repository: https://github.com/DigitalState/Identities.git
-  version: 0.14.0
+  version: develop
   api:
     host: api.identities.dev.ds
   database:
     host: identities_database
-    port: 5432
     name: identities
-    username: identities
+    user: identities
     password: identities
     ui:
       host: ui.database.identities.dev.ds
-  cache:
-    ui:
-      host: ui.cache.identities.dev.ds
+  mock:
+    discovery:
+      host: discovery.mock.identities.dev.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.dev.yml
+    - /root/docker/identities/docker-compose.yml
+    - /root/docker/identities/docker-compose.dev.yml
+    - /root/docker/api.dev.yml
+    - /root/docker/php.dev.yml

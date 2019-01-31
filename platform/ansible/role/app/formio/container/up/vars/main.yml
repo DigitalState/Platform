@@ -1,10 +1,11 @@
 ---
-_env: prod
-_compose_project_name: dsformio
-_network: dsproxy_default
-_proxy_host: 127.0.0.1
+_files: ['docker-compose.yml']
+_namespace: ds
 _directory: /srv/formio
-_api_host: api.formio.ds
+_network: ds_proxy_default
+_proxy_host: 127.0.0.1
 _database_ui_host: adminer.formio.ds
-_username: admin
-_password: admin
+_api_name: formio
+_api_host: api.formio.ds
+_api_admin_user: admin
+_api_admin_password: ~

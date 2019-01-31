@@ -4,10 +4,10 @@
       include_role:
         name: app/discovery/container/up
       vars:
-        _env: '{{ env }}'
-        _compose_project_name: '{{ namespace }}discovery'
-        _network: '{{ namespace }}proxy_default'
+        _namespace: '{{ namespace }}_discovery'
+        _network: '{{ namespace }}_proxy_default'
         _directory: '{{ directory }}/discovery'
+        _files: '{{ app.discovery.docker|list }}'
         _config:
           acl_master_token: '{{ app.discovery.token.master }}'
         _ui_host: '{{ app.discovery.ui.host }}'

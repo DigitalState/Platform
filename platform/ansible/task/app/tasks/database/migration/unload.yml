@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Unload tasks database migration
+      include_role:
+        name: app/tasks/database/migration/execute
+      vars:
+        _version: first
+  when: app.tasks.enabled
+  tags: [tasks]

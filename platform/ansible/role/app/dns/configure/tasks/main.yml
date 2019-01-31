@@ -1,8 +1,0 @@
----
-- block:
-    - name: Configure app dns
-      shell:
-        cmd: 'echo "{{ _item.ip }} {{ _item.host }}" >> /etc/hosts'
-      with_items: '{{ _dns }}'
-      loop_control:
-        loop_var: _item

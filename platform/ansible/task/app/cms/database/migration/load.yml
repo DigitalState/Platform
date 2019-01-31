@@ -2,8 +2,8 @@
 - block:
     - name: Load cms database migration
       include_role:
-        name: app/cms/database/migration/load
+        name: app/cms/database/migration/execute
       vars:
-        _data: '{{ data }}'
+        _version: latest
   when: app.cms.enabled
   tags: [cms]

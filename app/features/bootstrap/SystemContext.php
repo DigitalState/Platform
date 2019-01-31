@@ -31,7 +31,10 @@ class SystemContext implements Context
      */
     public function iAmAuthenticatedAsTheUser($username)
     {
-        $users = ['system' => 'system'];
+        $users = [
+            'system' => 'system'
+        ];
+
         $this->request->setHttpHeader('Authorization', 'Basic '.base64_encode($username.':'.$users[$username]));
     }
 }

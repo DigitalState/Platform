@@ -1,2 +1,2 @@
 ---
-_env: prod
+_files: ['docker-compose.yml']

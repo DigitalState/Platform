@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create services custom fixture
+      copy:
+        src: '{{ _source }}/'
+        dest: '/srv/services/api/config/fixtures/{{ _directory }}'
+  tags: [services]

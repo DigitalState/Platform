@@ -1,9 +1,13 @@
 ---
 - block:
+    - name: Retrieve proxy container ip
+      include_tasks: /etc/ansible/task/app/proxy/container/property/ip.yml
     - name: Stop formio container
       include_role:
         name: app/formio/container/stop
       vars:
-        _env: '{{ env }}'
+        _network: '{{ namespace }}_proxy_default'
+        _proxy_host: '{{ proxy_container_ip.stdout }}'
+        _files: '{{ app.formio.docker|list }}'
   when: app.formio.enabled
   tags: [formio]

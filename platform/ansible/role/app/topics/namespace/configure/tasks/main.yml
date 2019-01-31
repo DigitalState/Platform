@@ -1,8 +1,0 @@
----
-- block:
-    - name: Configure topics namespace setting
-      lineinfile:
-        path: '/srv/topics/app/config/parameters.yml'
-        regexp: '^\s{4}namespace:'
-        line: '    namespace: {{ _namespace }}'
-  tags: [topics]

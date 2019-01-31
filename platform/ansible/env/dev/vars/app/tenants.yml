@@ -1,18 +1,24 @@
 ---
 tenants:
-  enabled: false
+  enabled: true
   repository: https://github.com/DigitalState/Tenants.git
-  version: 0.14.0
+  version: develop
   api:
     host: api.tenants.dev.ds
   database:
     host: tenants_database
-    port: 5432
     name: tenants
-    username: tenants
+    user: tenants
     password: tenants
     ui:
       host: ui.database.tenants.dev.ds
-  cache:
-    ui:
-      host: ui.cache.tenants.dev.ds
+  mock:
+    discovery:
+      host: discovery.mock.tenants.dev.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.dev.yml
+    - /root/docker/tenants/docker-compose.yml
+    - /root/docker/tenants/docker-compose.dev.yml
+    - /root/docker/api.dev.yml
+    - /root/docker/php.dev.yml

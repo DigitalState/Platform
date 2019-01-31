@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push monitor repository branch
-      include_role:
-        name: app/monitor/repository/branch/push
-  when: app.monitor.enabled
-  tags: [monitor]

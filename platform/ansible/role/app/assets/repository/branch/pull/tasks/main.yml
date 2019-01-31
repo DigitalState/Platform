@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull assets repository branch
-      shell: 'git pull'
-      args:
-        chdir: /srv/assets
-  tags: [assets]

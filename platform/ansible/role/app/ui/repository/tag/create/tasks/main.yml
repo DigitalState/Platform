@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create ui repository tag
-      shell: 'git tag {{ _tag }}'
-      args:
-        chdir: /srv/ui
-  tags: [ui]

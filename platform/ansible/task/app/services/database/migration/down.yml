@@ -1,9 +1,0 @@
----
-- block:
-    - name: Execute services database down migration
-      include_role:
-        name: app/services/database/migration/down
-      vars:
-        _version: '{{ version }}'
-  when: app.services.enabled
-  tags: [services]

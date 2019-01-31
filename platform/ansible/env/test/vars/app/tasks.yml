@@ -1,0 +1,24 @@
+---
+tasks:
+  enabled: true
+  repository: https://github.com/DigitalState/Tasks.git
+  version: develop
+  api:
+    host: api.tasks.test.ds
+  database:
+    host: tasks_database
+    name: tasks
+    user: tasks
+    password: tasks
+    ui:
+      host: ui.database.tasks.test.ds
+  mock:
+    discovery:
+      host: discovery.mock.tasks.test.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.test.yml
+    - /root/docker/tasks/docker-compose.yml
+    - /root/docker/tasks/docker-compose.test.yml
+    - /root/docker/api.test.yml
+    - /root/docker/php.test.yml

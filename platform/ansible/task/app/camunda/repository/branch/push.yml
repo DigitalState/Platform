@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push camunda repository branch
-      include_role:
-        name: app/camunda/repository/branch/push
-  when: app.camunda.enabled
-  tags: [camunda]

@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create discovery repository branch
-      shell: 'git checkout -b {{ _branch }}'
-      args:
-        chdir: /srv/discovery
-  tags: [discovery]

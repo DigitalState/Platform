@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull camunda repository branch
-      shell: 'git pull'
-      args:
-        chdir: /srv/camunda
-  tags: [camunda]

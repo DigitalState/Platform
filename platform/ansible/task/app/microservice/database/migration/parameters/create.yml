@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Create microservice database migration parameters file
+      include_role:
+        name: app/microservice/database/migration/parameters/create
+      vars:
+        _parameters: '{{ parameters }}'
+  when: app.microservice.enabled
+  tags: [microservice]

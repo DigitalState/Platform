@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create tenants custom fixture
+      copy:
+        src: '{{ _source }}/'
+        dest: '/srv/tenants/api/config/fixtures/{{ _directory }}'
+  tags: [tenants]

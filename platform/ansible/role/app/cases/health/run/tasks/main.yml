@@ -1,0 +1,12 @@
+---
+- block:
+    - name: Run cases health check
+      shell:
+        cmd: 'docker-compose exec -T api wget -qO- http://{{ _host }}'
+        chdir: /srv/cases
+      register: _result
+      changed_when: false
+    - name: Display cases health check result
+      debug:
+        msg: '{{ "Healthy" if (_result.stdout|from_json).healthy else "Not Health" }}'
+  tags: [cases]

@@ -1,0 +1,24 @@
+---
+forms:
+  enabled: true
+  repository: https://github.com/DigitalState/Forms.git
+  version: develop
+  api:
+    host: api.forms.test.ds
+  database:
+    host: forms_database
+    name: forms
+    user: forms
+    password: forms
+    ui:
+      host: ui.database.forms.test.ds
+  mock:
+    discovery:
+      host: discovery.mock.forms.test.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.test.yml
+    - /root/docker/forms/docker-compose.yml
+    - /root/docker/forms/docker-compose.test.yml
+    - /root/docker/api.test.yml
+    - /root/docker/php.test.yml

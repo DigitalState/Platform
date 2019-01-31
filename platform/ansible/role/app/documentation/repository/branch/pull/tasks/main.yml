@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull documentation repository branch
-      shell: 'git pull'
-      args:
-        chdir: /srv/documentation
-  tags: [documentation]

@@ -1,9 +1,0 @@
----
-- block:
-    - name: Down interactions container
-      include_role:
-        name: app/interactions/container/down
-      vars:
-        _env: '{{ env }}'
-  when: app.interactions.enabled
-  tags: [interactions]

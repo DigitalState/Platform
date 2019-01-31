@@ -4,6 +4,6 @@
       include_role:
         name: app/proxy/container/down
       vars:
-        _env: '{{ env }}'
+        _files: '{{ app.proxy.docker|list }}'
   when: app.proxy.enabled
   tags: [proxy]

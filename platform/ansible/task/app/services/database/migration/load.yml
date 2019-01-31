@@ -2,8 +2,8 @@
 - block:
     - name: Load services database migration
       include_role:
-        name: app/services/database/migration/load
+        name: app/services/database/migration/execute
       vars:
-        _data: '{{ data }}'
+        _version: latest
   when: app.services.enabled
   tags: [services]

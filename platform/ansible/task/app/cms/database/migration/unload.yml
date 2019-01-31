@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Unload cms database migration
+      include_role:
+        name: app/cms/database/migration/execute
+      vars:
+        _version: first
+  when: app.cms.enabled
+  tags: [cms]

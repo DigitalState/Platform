@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create topics repository branch
-      include_role:
-        name: app/topics/repository/branch/create
-      vars:
-        _branch: '{{ branch }}'
-  when: app.topics.enabled
-  tags: [topics]

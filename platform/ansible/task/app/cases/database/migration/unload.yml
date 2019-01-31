@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Unload cases database migration
+      include_role:
+        name: app/cases/database/migration/execute
+      vars:
+        _version: first
+  when: app.cases.enabled
+  tags: [cases]

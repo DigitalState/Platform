@@ -4,6 +4,7 @@
       include_role:
         name: app/formio/container/down
       vars:
-        _env: '{{ env }}'
+        _network: '{{ namespace }}_proxy_default'
+        _files: '{{ app.formio.docker|list }}'
   when: app.formio.enabled
   tags: [formio]

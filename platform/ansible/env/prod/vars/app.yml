@@ -1,12 +1,13 @@
 ---
 namespace: ds
-directory: /srv
+directory: ~
 timezone: UTC
 encryption:
-  encryption: ~
-  secret: ~
+  encryption: def00000b66cdea17be03154351b285554884f1cba050541781f535bce839d31e315a82771d5dc5c32a8634ba1d7831ce5f1ec0a29e4a17344216eb038745acd63d3149f
+  secret: byzxl36nl289x6yu71hdie2euf19vm3r
 jwt:
-  pass_phrase: ~
+  pass_phrase: 00ix4gk15tgvh6hl7z8nlj0r2xvlxczj
+fixture: ~
 mail:
   transport: smtp
   host: 127.0.0.1
@@ -25,14 +26,14 @@ integration:
     secret: ~
 system:
   username: system
-  password: ~
+  password: system
 user:
   system:
     username: system@system.ds
-    password: ~
+    password: system
   anonymous:
     username: anonymous@anonymous.ds
-    password: ~
+    password: anonymous
   admin:
     username: admin@staff.ds
-    password: ~
+    password: admin

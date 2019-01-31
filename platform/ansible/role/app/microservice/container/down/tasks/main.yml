@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Down microservice container
+      docker_service:
+        project_src: /srv/microservice
+        files: '{{ _files|list }}'
+        state: absent
+        remove_volumes: '{{ "no" if _persistent else "yes" }}'
+      environment:
+        NETWORK: '{{ _network }}'
+  tags: [microservice]

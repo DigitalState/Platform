@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull topics repository branch
-      include_role:
-        name: app/topics/repository/branch/pull
-  when: app.topics.enabled
-  tags: [topics]

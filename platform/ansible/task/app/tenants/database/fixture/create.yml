@@ -1,0 +1,16 @@
+---
+- block:
+    - name: Detect tenants custom fixture
+      local_action: 'stat path=/root/fixtures/{{ fixture }}/tenants'
+      register: custom
+    - name: Create tenants custom fixture
+      include_role:
+        name: app/tenants/database/fixture/create
+      vars:
+        _source: '{{ custom.stat.path }}'
+        _directory: '{{ fixture }}'
+      when: custom.stat.exists
+  when:
+    - fixture is not none
+    - app.tenants.enabled
+  tags: [tenants]

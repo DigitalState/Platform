@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push cms repository branch
-      include_role:
-        name: app/cms/repository/branch/push
-  when: app.cms.enabled
-  tags: [cms]

@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create admin repository tag
-      shell: 'git tag {{ _tag }}'
-      args:
-        chdir: /srv/admin
-  tags: [admin]

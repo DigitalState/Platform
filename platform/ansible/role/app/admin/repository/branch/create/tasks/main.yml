@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create admin repository branch
-      shell: 'git checkout -b {{ _branch }}'
-      args:
-        chdir: /srv/admin
-  tags: [admin]

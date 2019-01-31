@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create cms repository branch
-      shell: 'git checkout -b {{ _branch }}'
-      args:
-        chdir: /srv/cms
-  tags: [cms]

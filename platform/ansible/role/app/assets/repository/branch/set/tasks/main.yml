@@ -1,7 +1,0 @@
----
-- block:
-    - name: Set assets repository active branch
-      shell: 'git checkout {{ _branch }}'
-      args:
-        chdir: /srv/assets
-  tags: [assets]

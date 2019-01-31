@@ -1,9 +1,0 @@
----
-- block:
-    - name: Configure assets jwt key pass phrase
-      include_role:
-        name: app/assets/jwt/configure
-      vars:
-        _pass_phrase: '{{ jwt.pass_phrase }}'
-  when: app.assets.enabled
-  tags: [assets]

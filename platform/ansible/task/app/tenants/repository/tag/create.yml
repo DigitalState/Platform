@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create tenants repository tag
-      include_role:
-        name: app/tenants/repository/tag/create
-      vars:
-        _tag: '{{ tag }}'
-  when: app.tenants.enabled
-  tags: [tenants]

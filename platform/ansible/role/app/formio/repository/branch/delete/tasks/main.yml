@@ -1,7 +1,0 @@
----
-- block:
-    - name: Delete formio repository branch
-      shell: 'git delete -D {{ _branch }}'
-      args:
-        chdir: /srv/formio
-  tags: [formio]

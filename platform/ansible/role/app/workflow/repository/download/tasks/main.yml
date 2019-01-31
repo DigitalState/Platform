@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Download workflow repository
+      git:
+        repo: '{{ _repository|replace("//", "//"+_credential.username+":"+_credential.password+"@") }}'
+        version: '{{ _version }}'
+        dest: /srv/workflow
+        force: yes
+  tags: [workflow]

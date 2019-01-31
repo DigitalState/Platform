@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push cases repository branch
-      include_role:
-        name: app/cases/repository/branch/push
-  when: app.cases.enabled
-  tags: [cases]

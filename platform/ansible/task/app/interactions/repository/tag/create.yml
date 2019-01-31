@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create interactions repository tag
-      include_role:
-        name: app/interactions/repository/tag/create
-      vars:
-        _tag: '{{ tag }}'
-  when: app.interactions.enabled
-  tags: [interactions]

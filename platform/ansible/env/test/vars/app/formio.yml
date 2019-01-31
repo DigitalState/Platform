@@ -1,0 +1,19 @@
+---
+formio:
+  enabled: true
+  order: -10
+  repository: https://github.com/DigitalState/Formio.git
+  version: develop
+  api:
+    host: api.formio.test.ds
+    admin:
+      user: admin
+      password: admin
+  database:
+    ui:
+      host: ui.database.formio.test.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.test.yml
+    - /root/docker/formio/docker-compose.yml
+    - /root/docker/formio/docker-compose.test.yml

@@ -2,17 +2,23 @@
 cases:
   enabled: true
   repository: https://github.com/DigitalState/Cases.git
-  version: 0.14.1
+  version: 0.15.0
   api:
     host: api.cases.prod.ds
   database:
     host: cases_database
-    port: 5432
     name: cases
-    username: cases
+    user: cases
     password: ~
     ui:
       host: ui.database.cases.prod.ds
-  cache:
-    ui:
-      host: ui.cache.cases.prod.ds
+  mock:
+    discovery:
+      host: discovery.mock.cases.prod.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.prod.yml
+    - /root/docker/cases/docker-compose.yml
+    - /root/docker/cases/docker-compose.prod.yml
+    - /root/docker/api.prod.yml
+    - /root/docker/php.prod.yml

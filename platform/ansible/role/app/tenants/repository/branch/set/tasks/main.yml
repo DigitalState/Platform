@@ -1,7 +1,0 @@
----
-- block:
-    - name: Set tenants repository active branch
-      shell: 'git checkout {{ _branch }}'
-      args:
-        chdir: /srv/tenants
-  tags: [tenants]

@@ -1,7 +1,0 @@
----
-- block:
-    - name: Create authentication repository tag
-      shell: 'git tag {{ _tag }}'
-      args:
-        chdir: /srv/authentication
-  tags: [authentication]

@@ -7,6 +7,7 @@ encryption:
   secret: byzxl36nl289x6yu71hdie2euf19vm3r
 jwt:
   pass_phrase: 00ix4gk15tgvh6hl7z8nlj0r2xvlxczj
+fixture: dev
 mail:
   transport: smtp
   host: 127.0.0.1

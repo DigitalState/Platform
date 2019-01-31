@@ -1,0 +1,12 @@
+---
+- block:
+    - name: Run authentication health check
+      shell:
+        cmd: 'docker-compose exec -T api wget -qO- http://{{ _host }}'
+        chdir: /srv/authentication
+      register: _result
+      changed_when: false
+    - name: Display authentication health check result
+      debug:
+        msg: '{{ "Healthy" if (_result.stdout|from_json).healthy else "Not Health" }}'
+  tags: [authentication]

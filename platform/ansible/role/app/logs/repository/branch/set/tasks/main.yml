@@ -1,7 +1,0 @@
----
-- block:
-    - name: Set logs repository active branch
-      shell: 'git checkout {{ _branch }}'
-      args:
-        chdir: /srv/logs
-  tags: [logs]

@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  api:
+    extra_hosts:
+      - 'api.assets.dev.ds:${PROXY_HOST}'
+      - 'api.authentication.dev.ds:${PROXY_HOST}'
+      - 'api.cases.dev.ds:${PROXY_HOST}'
+      - 'api.cms.dev.ds:${PROXY_HOST}'
+      - 'api.discovery.dev.ds:${PROXY_HOST}'
+      - 'api.formio.dev.ds:${PROXY_HOST}'
+      - 'api.forms.dev.ds:${PROXY_HOST}'
+      - 'api.identities.dev.ds:${PROXY_HOST}'
+      - 'api.microservice.dev.ds:${PROXY_HOST}'
+      - 'api.records.dev.ds:${PROXY_HOST}'
+      - 'api.services.dev.ds:${PROXY_HOST}'
+      - 'api.tasks.dev.ds:${PROXY_HOST}'
+      - 'api.tenants.dev.ds:${PROXY_HOST}'
+      - 'api.workflow.dev.ds:${PROXY_HOST}'

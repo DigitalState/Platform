@@ -1,0 +1,24 @@
+---
+tenants:
+  enabled: true
+  repository: https://github.com/DigitalState/Tenants.git
+  version: develop
+  api:
+    host: api.tenants.test.ds
+  database:
+    host: tenants_database
+    name: tenants
+    user: tenants
+    password: tenants
+    ui:
+      host: ui.database.tenants.test.ds
+  mock:
+    discovery:
+      host: discovery.mock.tenants.test.ds
+  docker:
+    - docker-compose.yml
+    - docker-compose.test.yml
+    - /root/docker/tenants/docker-compose.yml
+    - /root/docker/tenants/docker-compose.test.yml
+    - /root/docker/api.test.yml
+    - /root/docker/php.test.yml

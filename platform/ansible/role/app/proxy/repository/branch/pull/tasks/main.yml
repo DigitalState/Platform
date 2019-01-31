@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull proxy repository branch
-      shell: 'git pull'
-      args:
-        chdir: /srv/proxy
-  tags: [proxy]

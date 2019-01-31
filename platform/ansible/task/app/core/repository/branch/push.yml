@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push core repository branch
-      include_role:
-        name: app/core/repository/branch/push
-  when: app.core.enabled
-  tags: [core]

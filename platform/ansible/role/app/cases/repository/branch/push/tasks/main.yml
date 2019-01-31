@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push cases repository branch
-      shell: 'git push'
-      args:
-        chdir: /srv/cases
-  tags: [cases]

@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Validate services health check
+      include_role:
+        name: app/services/health/validate
+      vars:
+        _host: '{{ system.username }}:{{ system.password }}@localhost/system/health'
+  when: app.services.enabled
+  tags: [services]

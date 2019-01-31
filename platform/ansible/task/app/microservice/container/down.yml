@@ -1,0 +1,10 @@
+---
+- block:
+    - name: Down microservice container
+      include_role:
+        name: app/microservice/container/down
+      vars:
+        _network: '{{ namespace }}_proxy_default'
+        _files: '{{ app.microservice.docker|list }}'
+  when: app.microservice.enabled
+  tags: [microservice]

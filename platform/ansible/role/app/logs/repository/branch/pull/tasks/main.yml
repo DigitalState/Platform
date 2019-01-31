@@ -1,7 +1,0 @@
----
-- block:
-    - name: Pull logs repository branch
-      shell: 'git pull'
-      args:
-        chdir: /srv/logs
-  tags: [logs]

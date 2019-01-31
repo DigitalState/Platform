@@ -1,9 +1,0 @@
----
-- block:
-    - name: Create interactions repository branch
-      include_role:
-        name: app/interactions/repository/branch/create
-      vars:
-        _branch: '{{ branch }}'
-  when: app.interactions.enabled
-  tags: [interactions]

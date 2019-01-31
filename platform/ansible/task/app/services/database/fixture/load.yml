@@ -1,0 +1,11 @@
+---
+- block:
+    - name: Load services database fixture
+      include_role:
+        name: app/services/database/fixture/load
+      vars:
+        _fixture: '{{ fixture }}'
+  when:
+    - fixture is not none
+    - app.services.enabled
+  tags: [services]

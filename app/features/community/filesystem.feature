@@ -9,7 +9,6 @@ Feature: Navigate app filesystem
       VERSION
       assets
       authentication
-      camunda
       cases
       cms
       core
@@ -22,4 +21,5 @@ Feature: Navigate app filesystem
       proxy
       records
       services
+      workflow
       """

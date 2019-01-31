@@ -1,0 +1,9 @@
+---
+- block:
+    - name: Run assets health check
+      include_role:
+        name: app/assets/health/run
+      vars:
+        _host: '{{ system.username }}:{{ system.password }}@localhost/system/health'
+  when: app.assets.enabled
+  tags: [assets]

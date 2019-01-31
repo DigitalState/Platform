@@ -3,9 +3,14 @@ proxy:
   enabled: true
   order: -30
   repository: https://github.com/DigitalState/Proxy.git
-  version: 0.14.0
-  port: 443
+  version: 0.15.0
+  port: 80
   discovery:
     token: ~
   ui:
-    port: 444
+    port: 81
+  docker:
+    - docker-compose.yml
+    - docker-compose.prod.yml
+    - /root/docker/proxy/docker-compose.yml
+    - /root/docker/proxy/docker-compose.prod.yml

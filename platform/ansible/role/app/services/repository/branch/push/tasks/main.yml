@@ -1,7 +1,0 @@
----
-- block:
-    - name: Push services repository branch
-      shell: 'git push'
-      args:
-        chdir: /srv/services
-  tags: [services]

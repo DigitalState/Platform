@@ -1,7 +1,7 @@
 ---
-_env: prod
-_compose_project_name: dsproxy
+_namespace: ds_proxy
 _directory: /srv/proxy
+_files: ['docker-compose.yml']
 _port: 443
 _ui_port: 444
 _discovery_token: ~

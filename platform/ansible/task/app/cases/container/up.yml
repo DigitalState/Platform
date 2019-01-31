@@ -2,22 +2,31 @@
 - block:
     - name: Retrieve proxy container ip
       include_tasks: /etc/ansible/task/app/proxy/container/property/ip.yml
+    - name: Retrieve discovery container ip
+      include_tasks: /etc/ansible/task/app/discovery/container/property/ip.yml
     - name: Up cases container
       include_role:
         name: app/cases/container/up
       vars:
-        _env: '{{ env }}'
-        _compose_project_name: '{{ namespace }}cases'
-        _network: '{{ namespace }}proxy_default'
-        _proxy_host: '{{ proxy_container_ip.stdout }}'
+        _files: '{{ app.cases.docker|list }}'
+        _namespace: '{{ namespace }}'
         _directory: '{{ directory }}/cases'
-        _api_host: '{{ app.cases.api.host }}'
+        _network: '{{ namespace }}_proxy_default'
+        _proxy_host: '{{ proxy_container_ip.stdout }}'
         _database_host: '{{ app.cases.database.host }}'
-        _database_port: '{{ app.cases.database.port }}'
         _database_name: '{{ app.cases.database.name }}'
-        _database_username: '{{ app.cases.database.username }}'
+        _database_user: '{{ app.cases.database.user }}'
         _database_password: '{{ app.cases.database.password }}'
         _database_ui_host: '{{ app.cases.database.ui.host }}'
-        _cache_ui_host: '{{ app.cases.cache.ui.host }}'
+        _api_env: '{{ env }}'
+        _api_secret: '{{ encryption.secret }}'
+        _api_host: '{{ app.cases.api.host }}'
+        _api_jwt_pass_phrase: '{{ jwt.pass_phrase }}'
+        _api_discovery_host: '{{ discovery_container_ip.stdout }}:8500'
+        _api_discovery_credential: '{{ app.discovery.token.master }}'
+        _api_encryption: '{{ encryption.encryption }}'
+        _api_system_username: '{{ system.username }}'
+        _api_system_password: '{{ system.password }}'
+        _mock_discovery_host: '{{ app.cases.mock.discovery.host }}'
   when: app.cases.enabled
   tags: [cases]

@@ -1,0 +1,7 @@
+---
+- block:
+    - name: Create cases custom fixture
+      copy:
+        src: '{{ _source }}/'
+        dest: '/srv/cases/api/config/fixtures/{{ _directory }}'
+  tags: [cases]
