@@ -1,10 +1,8 @@
 sudo: required
 
 env:
-  - DOCKER_VERSION=18.06.1~ce~3-0~ubuntu
-  - DOCKER_COMPOSE_VERSION=1.22.0
-  - TESTS=isolated
-  - TESTS=integrated
+  DOCKER_VERSION: 18.06.1~ce~3-0~ubuntu
+  DOCKER_COMPOSE_VERSION: 1.22.0
 
 before_install:
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -20,3 +18,10 @@ script:
   - docker-compose up -d
   - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test && ansible-playbook -i inventory.yml ./install.yml"
   - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test && ansible-playbook -i inventory.yml ./app/test/validate.yml"
+
+matrix:
+  include:
+    - env:
+        TESTS: isolated
+    - env:
+        TESTS: integrated
