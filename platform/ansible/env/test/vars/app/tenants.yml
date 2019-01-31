@@ -2,7 +2,7 @@
 tenants:
   enabled: true
   repository: https://github.com/DigitalState/Tenants.git
-  version: develop
+  version: release/0.15.0
   api:
     host: api.tenants.test.ds
   database:
