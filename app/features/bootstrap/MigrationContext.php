@@ -5,7 +5,7 @@ use Behat\Behat\Context\Context;
 /**
  * Class MigrationContext
  */
-class MigrationContext implements Context
+final class MigrationContext implements Context
 {
     /**
      * @var array
@@ -31,7 +31,7 @@ class MigrationContext implements Context
     public static function upMigrations()
     {
         foreach (static::$services as $service) {
-            shell_exec('cd /srv/'.$service.' && docker-compose exec -T php php bin/console doctrine:migrations:migrate --env=test --no-interaction');
+            shell_exec('cd /srv/'.$service.' && docker-compose exec -T php php bin/console doctrine:migrations:migrate --no-interaction');
         }
     }
 
