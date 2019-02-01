@@ -1,10 +1,10 @@
 ---
 - import_playbook: platform/ssh/key/create.yml
-- import_playbook: platform/jwt/key/create.yml
-- import_playbook: app/initialize.yml
-- import_playbook: app/setup.yml
-- import_playbook: app/repository/download.yml
-- import_playbook: app/jwt/key/download.yml
-- import_playbook: app/container/up.yml
-- import_playbook: app/database/migration/load.yml
-- import_playbook: app/database/fixture/load.yml
+#- import_playbook: platform/jwt/key/create.yml
+#- import_playbook: app/initialize.yml
+#- import_playbook: app/setup.yml
+#- import_playbook: app/repository/download.yml
+#- import_playbook: app/jwt/key/download.yml
+#- import_playbook: app/container/up.yml
+#- import_playbook: app/database/migration/load.yml
+#- import_playbook: app/database/fixture/load.yml

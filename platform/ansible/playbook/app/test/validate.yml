@@ -14,7 +14,7 @@
       register: files
   tags: [always]
 
-- name: Validate tests
+- name: Validate isolated tests
   hosts: app
   become: true
   tasks:
@@ -22,6 +22,13 @@
       include_tasks: '{{ item }}'
       with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
       tags: [always]
-#    - name: Include app tasks
-#      include_tasks: /etc/ansible/task/app/test/validate.yml
-#      tags: [always]
+  when: not integrated
+
+- name: Validate integrated tests
+  hosts: app
+  become: true
+  tasks:
+    - name: Include app tasks
+      include_tasks: /etc/ansible/task/app/test/validate.yml
+      tags: [always]
+  when: integrated
