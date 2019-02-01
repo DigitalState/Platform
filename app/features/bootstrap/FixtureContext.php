@@ -26,7 +26,7 @@ class FixtureContext implements Context
     /**
      * @BeforeFeature
      */
-    public function loadFixtures()
+    public static function loadFixtures()
     {
         foreach (static::$services as $service) {
             shell_exec('cd /srv/'.$service.' && docker-compose exec -T -e FIXTURES=test php php bin/console doctrine:fixtures:load --env=test --no-interaction');
