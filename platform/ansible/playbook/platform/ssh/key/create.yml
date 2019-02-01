@@ -5,8 +5,6 @@
   hosts: platform
   become: true
   tasks:
-    - debug:
-        var: integrated
     - name: Check if the ssh private key exists
       stat:
         path: '/root/ssh/{{ env }}/key'
