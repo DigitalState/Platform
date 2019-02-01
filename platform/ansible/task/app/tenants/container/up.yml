@@ -22,7 +22,7 @@
         _api_secret: '{{ encryption.secret }}'
         _api_host: '{{ app.tenants.api.host }}'
         _api_jwt_pass_phrase: '{{ jwt.pass_phrase }}'
-        _api_discovery_host: '{{ discovery_container_ip.stdout }}:8500'
+        _api_discovery_host: '"{{ discovery_container_ip.stdout }}:8500" if integrated else "tenants_mock_discovery:8080"'
         _api_discovery_credential: '{{ app.discovery.token.master }}'
         _api_encryption: '{{ encryption.encryption }}'
         _api_system_username: '{{ system.username }}'
