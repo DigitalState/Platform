@@ -21,8 +21,8 @@
     - name: Include compiled task list
       include_tasks: '{{ item }}'
       with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
+      when: not integrated
       tags: [always]
-  when: not integrated
 
 - name: Run integrated tests
   hosts: app
@@ -30,5 +30,5 @@
   tasks:
     - name: Include app tasks
       include_tasks: /etc/ansible/task/app/test/run.yml
+      when: integrated
       tags: [always]
-  when: integrated
