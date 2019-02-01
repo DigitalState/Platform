@@ -5,6 +5,6 @@
         name: app/tasks/health/run
     - name: Validate tasks health check result
       debug:
-        msg: '{{ "Healthy" if (_result.stdout|from_json).healthy else "Not Health" }}'
+        msg: '{{ "Healthy" if (_result.stdout|from_json).healthy else "Not Healthy" }}'
       failed_when: (_result.stdout|from_json).healthy != true
   tags: [tasks]
