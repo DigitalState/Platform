@@ -18,6 +18,9 @@
   hosts: app
   become: true
   tasks:
+    - debug:
+        var: integrated
+      tags: [always]
     - name: Include compiled task list
       include_tasks: '{{ item }}'
       with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
@@ -28,6 +31,9 @@
   hosts: app
   become: true
   tasks:
+    - debug:
+        var: integrated
+      tags: [always]
     - name: Include app tasks
       include_tasks: /etc/ansible/task/app/test/validate.yml
       when: integrated
