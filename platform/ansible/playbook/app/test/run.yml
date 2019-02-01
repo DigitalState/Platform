@@ -14,21 +14,21 @@
       register: files
   tags: [always]
 
-- name: Run isolated tests
+- name: Run non-integration tests
   hosts: app
   become: true
   tasks:
     - name: Include compiled task list
       include_tasks: '{{ item }}'
       with_items: '{{ hostvars["platform"]["files"]["tasks"] }}'
-      when: not integrated
+      when: integrated == 'no'
       tags: [always]
 
-- name: Run integrated tests
+- name: Run integration tests
   hosts: app
   become: true
   tasks:
     - name: Include app tasks
       include_tasks: /etc/ansible/task/app/test/run.yml
-      when: integrated
+      when: integrated == 'yes'
       tags: [always]

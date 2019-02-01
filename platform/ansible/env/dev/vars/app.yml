@@ -1,6 +1,6 @@
 ---
 namespace: ds
-integrated: true
+integrated: yes
 directory: ~
 timezone: UTC
 encryption:
