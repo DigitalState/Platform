@@ -10,24 +10,25 @@ class FixtureContext implements Context
     /**
      * @var array
      */
-    protected $services;
-
-    /**
-     * Constructor
-     *
-     * @param array $services
-     */
-    public function __construct(array $services = [])
-    {
-        $this->services = $services;
-    }
+    static private $services = [
+        'assets',
+        'authentication',
+        'cases',
+        'cms',
+        'forms',
+        'identities',
+        'records',
+        'services',
+        'tasks',
+        'tenants'
+    ];
 
     /**
      * @BeforeFeature
      */
     public function loadFixtures()
     {
-        foreach ($this->services as $service) {
+        foreach (static::$services as $service) {
             shell_exec('cd /srv/'.$service.' && docker-compose exec -T -e FIXTURES=test php php bin/console doctrine:fixtures:load --env=test --no-interaction');
         }
     }
