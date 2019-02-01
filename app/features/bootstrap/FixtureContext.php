@@ -18,9 +18,7 @@ final class FixtureContext implements Context
         'forms',
         'identities',
         'records',
-        'services',
-        'tasks',
-        'tenants'
+        'services'
     ];
 
     /**

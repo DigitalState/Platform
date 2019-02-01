@@ -1,6 +1,6 @@
 ---
 tenants:
-  enabled: true
+  enabled: false
   repository: https://github.com/DigitalState/Tenants.git
   version: release/0.15.0
   api:
