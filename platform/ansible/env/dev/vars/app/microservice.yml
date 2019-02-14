@@ -2,7 +2,7 @@
 microservice:
   enabled: true
   repository: https://github.com/DigitalState/Microservice.git
-  version: develop
+  version: version/0.15.0
   api:
     host: api.microservice.dev.ds
   database:
