@@ -6,5 +6,6 @@
 - import_playbook: app/repository/download.yml
 - import_playbook: app/jwt/key/download.yml
 - import_playbook: app/container/up.yml
+- import_playbook: app/cache/warmup.yml
 - import_playbook: app/database/migration/load.yml
 - import_playbook: app/database/fixture/load.yml
