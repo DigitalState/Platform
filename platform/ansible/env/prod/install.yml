@@ -10,3 +10,4 @@
 - import_playbook: app/cache/warmup.yml
 - import_playbook: app/database/migration/load.yml
 - import_playbook: app/database/fixture/load.yml
+- import_playbook: app/health/run.yml
