@@ -7,12 +7,10 @@
 - import_tasks: alpine.yml
   when:
     - _os.stdout.find('alpine') != -1
-    - env != 'test'
 
 - import_tasks: ubuntu.yml
   when:
     - _os.stdout.find('ubuntu') != -1
-    - env != 'test'
 
 - name: Gather facts
   setup:
