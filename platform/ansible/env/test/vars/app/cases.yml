@@ -2,7 +2,7 @@
 cases:
   enabled: true
   repository: https://github.com/DigitalState/Cases.git
-  version: release/0.15.0
+  version: develop
   api:
     host: api.cases.test.ds
   database:

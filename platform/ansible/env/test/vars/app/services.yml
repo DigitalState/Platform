@@ -2,7 +2,7 @@
 services:
   enabled: true
   repository: https://github.com/DigitalState/Services.git
-  version: release/0.15.0
+  version: develop
   api:
     host: api.services.test.ds
   database:

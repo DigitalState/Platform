@@ -2,7 +2,7 @@
 authentication:
   enabled: true
   repository: https://github.com/DigitalState/Authentication.git
-  version: release/0.15.0
+  version: develop
   api:
     host: api.authentication.test.ds
   database:
