@@ -4,9 +4,6 @@
   register: _os
   changed_when: false
 
-- debug:
-    var: _os
-
 - import_tasks: alpine.yml
   when:
     - _os.stdout.find('alpine') != -1
