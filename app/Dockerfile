@@ -19,11 +19,6 @@ RUN apk --update add --no-cache openssh && \
 # Keys
 RUN ssh-keygen -A
 
-# Python
-RUN apk --update add python py-pip openssl ca-certificates && \
-    apk --update add --virtual build-dependencies python-dev libffi-dev openssl-dev build-base && \
-    pip install --upgrade pip cffi
-
 # PHP
 RUN apk --update add php7 php7-fpm && \
     apk --update add php7-opcache php7-dom php7-curl php7-json php7-phar php7-openssl php7-mbstring php7-ctype php7-session php7-xml php7-xmlwriter php7-tokenizer curl
