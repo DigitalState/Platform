@@ -31,8 +31,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --filename=composer  --i
 RUN echo "root:root" | chpasswd
 
 # Clean up
-RUN apk del build-dependencies && \
-    rm -rf /var/cache/apk/*
+RUN rm -rf /var/cache/apk/*
 
 RUN mkdir /root/tests
 
