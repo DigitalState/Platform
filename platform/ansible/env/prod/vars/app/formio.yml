@@ -3,7 +3,7 @@ formio:
   enabled: true
   order: -10
   repository: https://github.com/DigitalState/Formio.git
-  version: 0.15.0
+  version: 0.15.1
   api:
     host: api.formio.prod.ds
     admin:
