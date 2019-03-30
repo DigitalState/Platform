@@ -1,17 +1,17 @@
 ---
 - name: Detect remote OS
-  raw: uname -a
+  raw: cat /etc/os-release
   register: _os
   changed_when: false
 
 - import_tasks: alpine.yml
   when:
-    - _os.stdout.find('moby') != -1
+    - _os.stdout.find('ID=alpine') != -1
     - env != 'test'
 
 - import_tasks: ubuntu.yml
   when:
-    - _os.stdout.find('Ubuntu') != -1
+    - _os.stdout.find('ID=ubuntu') != -1
     - env != 'test'
 
 - name: Gather facts
