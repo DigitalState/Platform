@@ -653,7 +653,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -671,12 +671,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{assets}}/metadatas?",
+									"raw": "{{assets}}/metadata",
 									"host": [
 										"{{assets}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									],
 									"query": [
 										{
@@ -786,7 +786,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -804,12 +804,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{assets}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{assets}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{assets}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -818,7 +818,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -836,12 +836,12 @@
 									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{assets}}/metadatas",
+									"raw": "{{assets}}/metadata",
 									"host": [
 										"{{assets}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									]
 								},
 								"description": "This endpoint adds a metadata to the list."
@@ -849,7 +849,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -867,12 +867,12 @@
 									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{assets}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{assets}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{assets}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -881,7 +881,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -899,12 +899,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{assets}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{assets}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{assets}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -2591,7 +2591,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -2609,12 +2609,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{authentication}}/metadatas?",
+									"raw": "{{authentication}}/metadata?",
 									"host": [
 										"{{authentication}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									],
 									"query": [
 										{
@@ -2724,7 +2724,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -2742,12 +2742,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{authentication}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{authentication}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{authentication}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -2756,7 +2756,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -2774,12 +2774,12 @@
 									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{authentication}}/metadatas",
+									"raw": "{{authentication}}/metadata",
 									"host": [
 										"{{authentication}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									]
 								},
 								"description": "This endpoint adds a metadata to the list."
@@ -2787,7 +2787,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -2805,12 +2805,12 @@
 									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{authentication}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{authentication}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{authentication}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -2819,7 +2819,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -2837,12 +2837,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{authentication}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{authentication}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{authentication}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -3458,15 +3458,15 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/auth/system (dev)",
+							"name": "/auth/system (dev only)",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
-										"id": "216617fe-adb1-40aa-89e7-5af25377777d",
+										"id": "e28e429f-588d-4960-90e7-da196c773f47",
 										"type": "text/javascript",
 										"exec": [
-											"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+											"postman.setEnvironmentVariable(\"token_apip\", pm.response.json().token);"
 										]
 									}
 								}
@@ -3541,10 +3541,10 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "12dd1630-efa6-48ee-a771-11237f8670c0",
+										"id": "891be5f3-eb33-4c7d-b7d2-c62502f5f793",
 										"type": "text/javascript",
 										"exec": [
-											"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+											"postman.setEnvironmentVariable(\"token_apip\", pm.response.json().token);"
 										]
 									}
 								}
@@ -3631,10 +3631,10 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3f2a87d5-6fac-4338-b1ee-2c628c8f2f02",
+										"id": "c701d8d5-e3dd-4fa7-99c6-519216d24795",
 										"type": "text/javascript",
 										"exec": [
-											"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+											"postman.setEnvironmentVariable(\"token_apip\", pm.response.json().token);"
 										]
 									}
 								}
@@ -3709,10 +3709,10 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5e99aa18-e8b1-4653-9571-ffdabffec533",
+										"id": "edeb7a6c-00ee-4da0-a74c-0b779e6bf9ef",
 										"type": "text/javascript",
 										"exec": [
-											"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+											"postman.setEnvironmentVariable(\"token_apip\", pm.response.json().token);"
 										]
 									}
 								}
@@ -3775,10 +3775,10 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "7617081e-fc41-440b-af72-80e32117f8fc",
+										"id": "c9857cef-41fe-407f-bf4c-b78fea3724fc",
 										"type": "text/javascript",
 										"exec": [
-											"postman.setEnvironmentVariable(\"token\", pm.response.json().token);"
+											"postman.setEnvironmentVariable(\"token_apip\", pm.response.json().token);"
 										]
 									}
 								}
@@ -4903,7 +4903,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -4921,12 +4921,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}/metadatas?",
+									"raw": "{{cases}}/metadata?",
 									"host": [
 										"{{cases}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									],
 									"query": [
 										{
@@ -5036,7 +5036,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -5054,12 +5054,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cases}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{cases}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -5068,7 +5068,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -5086,12 +5086,12 @@
 									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{cases}}/metadatas",
+									"raw": "{{cases}}/metadata",
 									"host": [
 										"{{cases}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									]
 								},
 								"description": "This endpoint adds a metadata to the list."
@@ -5099,7 +5099,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -5117,12 +5117,12 @@
 									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{cases}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cases}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{cases}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -5131,7 +5131,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -5149,12 +5149,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cases}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{cases}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -5784,7 +5784,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}/cases/82184661-3aa4-4c68-a130-e07dc2e0d974?",
+									"raw": "{{cases}}/cases/82184661-3aa4-4c68-a130-e07dc2e0d974",
 									"host": [
 										"{{cases}}"
 									],
@@ -5820,7 +5820,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"d0daa7e4-07d1-47e6-93f2-0629adaa3b49\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 1\",\r\n\t\t\"fr\": \"Cas 1\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \r\n\t\t\t\"test\": \"test\" \r\n\t\t},\r\n\t\t\"fr\": { \r\n\t\t\t\"test\": \"test\" \r\n\t\t}\r\n\t},\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"customId\": \"GOV-123\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"d0daa7e4-07d1-47e6-93f2-0629adaa3b49\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case 1\",\r\n\t\t\"fr\": \"Cas 1\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \r\n\t\t\t\"test\": \"test\" \r\n\t\t},\r\n\t\t\"fr\": { \r\n\t\t\t\"test\": \"test\" \r\n\t\t}\r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{cases}}/cases",
@@ -5835,7 +5835,7 @@
 							},
 							"response": [
 								{
-									"id": "780ba8a8-a963-40e5-8e51-4e40d19bd5ce",
+									"id": "046970a9-3052-490d-a8c5-0cda2ccfdb4e",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -5979,7 +5979,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"data\": { \r\n\t\t\"en\": {\r\n\t\t\t\"test\": \"test1\"\r\n\t\t},\r\n\t\t\"fr\": {\r\n\t\t\t\"test\": \"test1\"\r\n\t\t}\r\n\t},\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"title\": {\r\n\t\t\"en\": \"Pothole - 123 Street - Urgent - edit\",\r\n\t\t\"fr\": \"Nid-de-poule - 123 rue - urgent - edit\"\r\n\t},\r\n\t\"state\": 2,\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{cases}}/cases/82184661-3aa4-4c68-a130-e07dc2e0d974",
@@ -5995,7 +5995,7 @@
 							},
 							"response": [
 								{
-									"id": "48ed16c0-fb35-4fcf-9ba0-d247dd242f71",
+									"id": "07b1695e-1d09-4902-9f58-95affa0229f5",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -6156,7 +6156,7 @@
 							},
 							"response": [
 								{
-									"id": "db5f717f-4322-4036-8324-4b77f431fa8c",
+									"id": "113f7019-aa78-4ab9-a7bc-779cf2b060d3",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -6291,7 +6291,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/case-statuses",
+							"name": "/case_statuses",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -6309,12 +6309,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}/case-statuses?",
+									"raw": "{{cases}}/case_statuses?",
 									"host": [
 										"{{cases}}"
 									],
 									"path": [
-										"case-statuses"
+										"case_statuses"
 									],
 									"query": [
 										{
@@ -6517,7 +6517,7 @@
 							"response": []
 						},
 						{
-							"name": "/case-statuses/{uuid}",
+							"name": "/case_statuses/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -6535,12 +6535,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}/case-statuses/21b3b72a-bd1b-4d87-9b28-7768aaea8ae6?",
+									"raw": "{{cases}}/case_statuses/21b3b72a-bd1b-4d87-9b28-7768aaea8ae6?",
 									"host": [
 										"{{cases}}"
 									],
 									"path": [
-										"case-statuses",
+										"case_statuses",
 										"21b3b72a-bd1b-4d87-9b28-7768aaea8ae6"
 									],
 									"query": [
@@ -6556,7 +6556,7 @@
 							"response": []
 						},
 						{
-							"name": "/case-statuses",
+							"name": "/case_statuses",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -6571,7 +6571,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"case\": \"/cases/303495e1-4605-4993-a63a-5fbb028d729e\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"d0daa7e4-07d1-47e6-93f2-0629adaa3b49\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case Status 1\",\r\n\t\t\"fr\": \"Cas Status 1\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description\",\r\n\t\t\"fr\": \"Description\" \r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test\" },\r\n\t\t\"fr\": { \"test\": \"test\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"case\": \"/cases/82184661-3aa4-4c68-a130-e07dc2e0d974\",\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\r\n\t\"identity\": \"Individual\",\r\n\t\"identityUuid\": \"d0daa7e4-07d1-47e6-93f2-0629adaa3b49\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Case Status 1\",\r\n\t\t\"fr\": \"Cas Status 1\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"Description\",\r\n\t\t\"fr\": \"Description\" \r\n\t},\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test\" },\r\n\t\t\"fr\": { \"test\": \"test\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{cases}}/case_statuses",
@@ -6586,7 +6586,7 @@
 							},
 							"response": [
 								{
-									"id": "95d12b77-8e23-4066-9d36-8d92e5f54e6c",
+									"id": "cc862f5d-40b4-404c-9016-1a48769a1e30",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -6715,7 +6715,7 @@
 							]
 						},
 						{
-							"name": "/case-statuses/{uuid}",
+							"name": "/case_statuses/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -6733,20 +6733,20 @@
 									"raw": "{\r\n\t\"data\": {\r\n\t\t\"en\": { \"test\": \"test3\" },\r\n\t\t\"fr\": { \"test\": \"test4\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
-									"raw": "{{cases}}/case-statuses/21b3b72a-bd1b-4d87-9b28-7768aaea8ae6",
+									"raw": "{{cases}}/case_statuses/c70a4918-551b-453c-8735-a0170ebdfe3a",
 									"host": [
 										"{{cases}}"
 									],
 									"path": [
-										"case-statuses",
-										"21b3b72a-bd1b-4d87-9b28-7768aaea8ae6"
+										"case_statuses",
+										"c70a4918-551b-453c-8735-a0170ebdfe3a"
 									]
 								},
 								"description": "This endpoint edits a specific case status."
 							},
 							"response": [
 								{
-									"id": "0af235dc-ccd6-467d-8505-917c57be48a7",
+									"id": "90b870f8-dc96-4fb1-a4af-e579169f0702",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -6876,7 +6876,7 @@
 							]
 						},
 						{
-							"name": "/case-statuses/{uuid}",
+							"name": "/case_statuses/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -6894,12 +6894,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cases}}/case-statuses/21b3b72a-bd1b-4d87-9b28-7768aaea8ae6",
+									"raw": "{{cases}}/case_statuses/21b3b72a-bd1b-4d87-9b28-7768aaea8ae6",
 									"host": [
 										"{{cases}}"
 									],
 									"path": [
-										"case-statuses",
+										"case_statuses",
 										"21b3b72a-bd1b-4d87-9b28-7768aaea8ae6"
 									]
 								},
@@ -6907,7 +6907,7 @@
 							},
 							"response": [
 								{
-									"id": "56b02d7d-6467-464f-bce2-3cdc2a85bc1b",
+									"id": "222d6c3e-4138-485e-93e2-040d68bab1c3",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -7725,7 +7725,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -7743,12 +7743,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}/metadatas?",
+									"raw": "{{cms}}/metadata",
 									"host": [
 										"{{cms}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									],
 									"query": [
 										{
@@ -7858,7 +7858,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -7876,12 +7876,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cms}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{cms}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -7890,7 +7890,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -7908,12 +7908,12 @@
 									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{cms}}/metadatas",
+									"raw": "{{cms}}/metadata",
 									"host": [
 										"{{cms}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									]
 								},
 								"description": "This endpoint adds a metadata to the list."
@@ -7921,7 +7921,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -7939,12 +7939,12 @@
 									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{cms}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cms}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{cms}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -7953,7 +7953,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -7971,12 +7971,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{cms}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{cms}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -8409,7 +8409,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/datas",
+							"name": "/data",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -8427,12 +8427,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}/datas?",
+									"raw": "{{cms}}/data?",
 									"host": [
 										"{{cms}}"
 									],
 									"path": [
-										"datas"
+										"data"
 									],
 									"query": [
 										{
@@ -8586,7 +8586,7 @@
 							"response": []
 						},
 						{
-							"name": "/datas/{uuid}",
+							"name": "/data/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -8604,12 +8604,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}/datas/c859dbd2-2fc1-4b3b-b00a-00e15b1dbac0?",
+									"raw": "{{cms}}/data/c859dbd2-2fc1-4b3b-b00a-00e15b1dbac0?",
 									"host": [
 										"{{cms}}"
 									],
 									"path": [
-										"datas",
+										"data",
 										"c859dbd2-2fc1-4b3b-b00a-00e15b1dbac0"
 									],
 									"query": [
@@ -8625,7 +8625,7 @@
 							"response": []
 						},
 						{
-							"name": "/datas",
+							"name": "/data",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -8643,19 +8643,19 @@
 									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"b20a40d9-b95b-4462-b8f1-c7453b9b7067\",\r\n\t\"slug\": \"data-1\",\r\n\t\"title\": { \r\n\t\t\"en\": \"Title 1\",\r\n\t\t\"fr\": \"Title 1\" \r\n\t},\r\n\t\"data\": { \r\n\t\t\"en\": { \"test\": \"test\" },\r\n\t\t\"fr\": { \"test\": \"test\" }\r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
-									"raw": "{{cms}}/datas",
+									"raw": "{{cms}}/data",
 									"host": [
 										"{{cms}}"
 									],
 									"path": [
-										"datas"
+										"data"
 									]
 								},
 								"description": "This endpoint adds a data to the list."
 							},
 							"response": [
 								{
-									"id": "1da43eb3-0dbc-42d5-9ffc-284be592ae00",
+									"id": "d2a95acf-fdc4-45ea-a12d-8893bdbe8233",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -8784,7 +8784,7 @@
 							]
 						},
 						{
-							"name": "/datas/{uuid}",
+							"name": "/data/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -8802,12 +8802,12 @@
 									"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"Title 2\",\r\n\t\t\"fr\": \"Title 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
-									"raw": "{{cms}}/datas/c859dbd2-2fc1-4b3b-b00a-00e15b1dbac0",
+									"raw": "{{cms}}/data/c859dbd2-2fc1-4b3b-b00a-00e15b1dbac0",
 									"host": [
 										"{{cms}}"
 									],
 									"path": [
-										"datas",
+										"data",
 										"c859dbd2-2fc1-4b3b-b00a-00e15b1dbac0"
 									]
 								},
@@ -8815,7 +8815,7 @@
 							},
 							"response": [
 								{
-									"id": "9a103223-c3b0-42d1-b036-3b1578750a1a",
+									"id": "eedd2189-8802-4fc5-9a9f-39801ce8ed19",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -8945,7 +8945,7 @@
 							]
 						},
 						{
-							"name": "/datas/{uuid}",
+							"name": "/data/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -8963,12 +8963,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{cms}}/datas/c859dbd2-2fc1-4b3b-b00a-00e15b1dbac0",
+									"raw": "{{cms}}/data/c859dbd2-2fc1-4b3b-b00a-00e15b1dbac0",
 									"host": [
 										"{{cms}}"
 									],
 									"path": [
-										"datas",
+										"data",
 										"c859dbd2-2fc1-4b3b-b00a-00e15b1dbac0"
 									]
 								},
@@ -8976,7 +8976,7 @@
 							},
 							"response": [
 								{
-									"id": "74e95505-28f9-4d85-a21d-06fbe4bd1c73",
+									"id": "7a10aae4-d350-49fe-8481-ed0d6fdafeeb",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9397,7 +9397,7 @@
 							},
 							"response": [
 								{
-									"id": "feb6d9a1-c01e-4a3f-bad8-0beed3e36234",
+									"id": "30648550-a96e-4aa6-85ed-89f78b847366",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -9557,7 +9557,7 @@
 							},
 							"response": [
 								{
-									"id": "d476ad0b-36f7-44be-bdf0-654b6a0bcb0f",
+									"id": "fd863b04-42fa-4161-910c-fa26be8422ef",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -9718,7 +9718,7 @@
 							},
 							"response": [
 								{
-									"id": "fdff8318-f95e-49d7-89fe-7c6432bb490f",
+									"id": "f795319d-2c1c-40eb-8194-7c8cdacbef4d",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10098,7 +10098,7 @@
 							},
 							"response": [
 								{
-									"id": "dc380c03-c7de-41cb-960d-a00b4de80fd5",
+									"id": "3522ac9d-18c2-457f-bc50-033450757da6",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10258,7 +10258,7 @@
 							},
 							"response": [
 								{
-									"id": "005c5b58-0727-4ecf-a2db-c08bb30a0eae",
+									"id": "a255cc31-841b-4750-b17c-908e8c203961",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -10419,7 +10419,7 @@
 							},
 							"response": [
 								{
-									"id": "5faffcb9-fbd0-4da4-8bc9-d6f4bd3bfa46",
+									"id": "01449a67-c453-4b06-844f-2d585f188722",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10790,7 +10790,7 @@
 							},
 							"response": [
 								{
-									"id": "9385dcb7-2e23-4282-9710-fc8fdac619a3",
+									"id": "b915333a-8c62-4846-9b41-f86169870e65",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -10950,7 +10950,7 @@
 							},
 							"response": [
 								{
-									"id": "f5e25b24-eb5e-42eb-ad1c-c8a20d8ba2ca",
+									"id": "be685322-e204-42c3-8424-578149dc666a",
 									"name": "Created",
 									"originalRequest": {
 										"method": "PUT",
@@ -11111,7 +11111,7 @@
 							},
 							"response": [
 								{
-									"id": "67291ff7-5c76-4fde-a64a-eee46d90299c",
+									"id": "888c1934-99cb-4e30-aa5a-fcab7f44e859",
 									"name": "Created",
 									"originalRequest": {
 										"method": "POST",
@@ -11293,7 +11293,7 @@
 							},
 							"response": [
 								{
-									"id": "d9656f49-b3f5-413d-968b-01e3fa26abef",
+									"id": "4f2655b7-7c53-4b85-913b-e00565944069",
 									"name": "Created",
 									"originalRequest": {
 										"method": "GET",
@@ -11737,6 +11737,55 @@
 										"v1",
 										"kv",
 										"test"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Status",
+					"description": "",
+					"item": [
+						{
+							"name": "/status/peers",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "X-Consul-Token",
+										"value": "{{token_consul}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{discovery}}/v1/status/peers",
+									"host": [
+										"{{discovery}}"
+									],
+									"path": [
+										"v1",
+										"status",
+										"peers"
+									],
+									"query": [
+										{
+											"key": "keys",
+											"value": null,
+											"disabled": true
+										}
 									]
 								}
 							},
@@ -12756,7 +12805,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -12774,12 +12823,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{forms}}/metadatas?",
+									"raw": "{{forms}}/metadata",
 									"host": [
 										"{{forms}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									],
 									"query": [
 										{
@@ -12889,7 +12938,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -12907,12 +12956,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{forms}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{forms}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{forms}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -12921,7 +12970,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -12939,12 +12988,12 @@
 									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{forms}}/metadatas",
+									"raw": "{{forms}}/metadata",
 									"host": [
 										"{{forms}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									]
 								},
 								"description": "This endpoint adds a metadata to the list."
@@ -12952,7 +13001,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -12970,12 +13019,12 @@
 									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{forms}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{forms}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{forms}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -12984,7 +13033,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -13002,12 +13051,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{forms}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{forms}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{forms}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -13359,7 +13408,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{forms}}/forms?",
+									"raw": "{{forms}}/forms?title=&title[0]&description&description[0]",
 									"host": [
 										"{{forms}}"
 									],
@@ -13462,6 +13511,22 @@
 											"disabled": true
 										},
 										{
+											"key": "title",
+											"value": ""
+										},
+										{
+											"key": "title[0]",
+											"value": null
+										},
+										{
+											"key": "description",
+											"value": null
+										},
+										{
+											"key": "description[0]",
+											"value": null
+										},
+										{
 											"key": "order[id]",
 											"value": "asc",
 											"disabled": true
@@ -13556,7 +13621,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\r\n\t\"type\": \"formio\",\r\n\t\"config\": { \r\n\t\t\"title\": \"Test 1\",\r\n\t\t\"type\": \"form\",\r\n\t\t\"display\": \"form\",\r\n\t\t\"name\": \"test-1\",\r\n\t\t\"path\": \"test-1\",\r\n\t\t\"components\": {},\r\n\t\t\"submissionAccess\": []\r\n\t},\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\r\n\t\"type\": \"formio\",\r\n\t\"config\": { \r\n\t\t\"title\": \"Form 1\",\r\n\t\t\"type\": \"form\",\r\n\t\t\"display\": \"form\",\r\n\t\t\"name\": \"test-1\",\r\n\t\t\"path\": \"test-1\",\r\n\t\t\"components\": {},\r\n\t\t\"submissionAccess\": []\r\n\t},\r\n\t\"title\": {\r\n\t\t\"en\": \"Test 1\"\r\n\t},\r\n\t\"description\": {\r\n\t\t\"en\": \"Description 1\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"var\": \"var 1\"\r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{forms}}/forms",
@@ -14326,7 +14391,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -14344,12 +14409,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}/metadatas?",
+									"raw": "{{identities}}/metadata",
 									"host": [
 										"{{identities}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									],
 									"query": [
 										{
@@ -14459,7 +14524,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -14477,12 +14542,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{identities}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{identities}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -14491,7 +14556,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -14509,12 +14574,12 @@
 									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{identities}}/metadatas",
+									"raw": "{{identities}}/metadata",
 									"host": [
 										"{{identities}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									]
 								},
 								"description": "This endpoint adds a metadata to the list."
@@ -14522,7 +14587,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -14540,12 +14605,12 @@
 									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{identities}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{identities}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{identities}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -14554,7 +14619,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -14572,12 +14637,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{identities}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{identities}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -15043,7 +15108,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/business-units",
+							"name": "/business_units",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -15061,7 +15126,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}/business_units?",
+									"raw": "{{identities}}/business_units",
 									"host": [
 										"{{identities}}"
 									],
@@ -15220,7 +15285,7 @@
 							"response": []
 						},
 						{
-							"name": "/business-units/{uuid}",
+							"name": "/business_units/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -15238,12 +15303,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}/business-units/a9d68bf7-5000-49fe-8b00-33dde235b327",
+									"raw": "{{identities}}/business_units/a9d68bf7-5000-49fe-8b00-33dde235b327",
 									"host": [
 										"{{identities}}"
 									],
 									"path": [
-										"business-units",
+										"business_units",
 										"a9d68bf7-5000-49fe-8b00-33dde235b327"
 									]
 								},
@@ -15252,7 +15317,7 @@
 							"response": []
 						},
 						{
-							"name": "/business-units",
+							"name": "/business_units",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -15270,12 +15335,12 @@
 									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\r\n\t\"title\": { \r\n\t\t\"en\": \"BusinessUnit 1\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
-									"raw": "{{identities}}/business-units",
+									"raw": "{{identities}}/business_units",
 									"host": [
 										"{{identities}}"
 									],
 									"path": [
-										"business-units"
+										"business_units"
 									]
 								},
 								"description": "This endpoint adds a business unit to the list."
@@ -15283,7 +15348,7 @@
 							"response": []
 						},
 						{
-							"name": "/business-units/{uuid}",
+							"name": "/business_units/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -15298,16 +15363,16 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"BusinessUnit 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"title\": { \r\n\t\t\"en\": \"BusinessUnit 2\" ,\r\n\t\t\"fr\": \"BusinessUnit 2\" \r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
-									"raw": "{{identities}}/business-units/a9d68bf7-5000-49fe-8b00-33dde235b327",
+									"raw": "{{identities}}/business_units/c11c546e-bd01-47cf-97da-e25388357b5a",
 									"host": [
 										"{{identities}}"
 									],
 									"path": [
-										"business-units",
-										"a9d68bf7-5000-49fe-8b00-33dde235b327"
+										"business_units",
+										"c11c546e-bd01-47cf-97da-e25388357b5a"
 									]
 								},
 								"description": "This endpoint edits a specific business unit."
@@ -15315,7 +15380,7 @@
 							"response": []
 						},
 						{
-							"name": "/business-units/{uuid}",
+							"name": "/business_units/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -15333,12 +15398,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{identities}}/business-units/a9d68bf7-5000-49fe-8b00-33dde235b327",
+									"raw": "{{identities}}/business_units/a9d68bf7-5000-49fe-8b00-33dde235b327",
 									"host": [
 										"{{identities}}"
 									],
 									"path": [
-										"business-units",
+										"business_units",
 										"a9d68bf7-5000-49fe-8b00-33dde235b327"
 									]
 								},
@@ -18165,7 +18230,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\r\n\t\"title\": {\r\n\t\t\"en\": \"Staff Member\",\r\n\t\t\"fr\": \"Membre du personnel\"\r\n\t},\r\n\t\"slug\": \"staff-member\",\r\n\t\"permissions\": {\r\n\t\t\"assets\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"authentication\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"cases\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"cms\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"forms\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"identities\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"identities\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"records\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"services\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"tasks\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"tenants\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\r\n\t\"title\": {\r\n\t\t\"en\": \"Staff Member\",\r\n\t\t\"fr\": \"Membre du personnel\"\r\n\t},\r\n\t\"slug\": \"staff-member\",\r\n\t\"permissions\": {\r\n\t\t\"assets\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"authentication\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"cases\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"cms\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"forms\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"identities\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"records\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"services\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"tasks\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"tenants\": [\r\n\t\t\t{\r\n\t\t\t\t\"scope\": \"owner\",\r\n\t\t\t\t\"entity\": \"BusinessUnit\", \r\n\t\t\t\t\"entityUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",  \r\n\t\t\t\t\"permissions\": [\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t},\r\n\t\t\t\t\t{ \r\n\t\t\t\t\t\t\"key\": \"config_property\", \r\n\t\t\t\t\t\t\"attributes\": [\"BROWSE\", \"READ\"] \r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{identities}}/roles",
@@ -18935,7 +19000,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -18953,12 +19018,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{microservice}}/metadatas?",
+									"raw": "{{microservice}}/metadata",
 									"host": [
 										"{{microservice}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									],
 									"query": [
 										{
@@ -19068,7 +19133,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -19086,12 +19151,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{microservice}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{microservice}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{microservice}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -19100,7 +19165,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -19118,12 +19183,12 @@
 									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{microservice}}/metadatas",
+									"raw": "{{microservice}}/metadata",
 									"host": [
 										"{{microservice}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									]
 								},
 								"description": "This endpoint adds a metadata to the list."
@@ -19131,7 +19196,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -19149,12 +19214,12 @@
 									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{microservice}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{microservice}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{microservice}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -19163,7 +19228,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -19181,12 +19246,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{microservice}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{microservice}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{microservice}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -20203,7 +20268,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -20221,12 +20286,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{records}}/metadatas?",
+									"raw": "{{records}}/metadata",
 									"host": [
 										"{{records}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									],
 									"query": [
 										{
@@ -20336,7 +20401,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -20354,12 +20419,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{records}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{records}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{records}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -20368,7 +20433,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -20386,12 +20451,12 @@
 									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{records}}/metadatas",
+									"raw": "{{records}}/metadata",
 									"host": [
 										"{{records}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									]
 								},
 								"description": "This endpoint adds a metadata to the list."
@@ -20399,7 +20464,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -20417,12 +20482,12 @@
 									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{records}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{records}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{records}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -20431,7 +20496,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -20449,12 +20514,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{records}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{records}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{records}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -22141,7 +22206,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -22159,12 +22224,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}/metadatas?",
+									"raw": "{{services}}/metadata",
 									"host": [
 										"{{services}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									],
 									"query": [
 										{
@@ -22274,7 +22339,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -22292,12 +22357,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{services}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{services}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -22306,7 +22371,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -22324,12 +22389,12 @@
 									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{services}}/metadatas",
+									"raw": "{{services}}/metadata",
 									"host": [
 										"{{services}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									]
 								},
 								"description": "This endpoint adds a metadata to the list."
@@ -22337,7 +22402,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -22355,12 +22420,12 @@
 									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{services}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{services}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{services}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -22369,7 +22434,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -22387,12 +22452,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{services}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{services}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{services}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -25017,7 +25082,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -25035,12 +25100,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}/metadatas?",
+									"raw": "{{tasks}}/metadata",
 									"host": [
 										"{{tasks}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									],
 									"query": [
 										{
@@ -25150,7 +25215,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -25168,12 +25233,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{tasks}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{tasks}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -25182,7 +25247,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -25200,12 +25265,12 @@
 									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{tasks}}/metadatas",
+									"raw": "{{tasks}}/metadata",
 									"host": [
 										"{{tasks}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									]
 								},
 								"description": "This endpoint adds a metadata to the list."
@@ -25213,7 +25278,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -25231,12 +25296,12 @@
 									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{tasks}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{tasks}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{tasks}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -25245,7 +25310,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -25263,12 +25328,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tasks}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{tasks}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{tasks}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -27001,7 +27066,7 @@
 					"description": null,
 					"item": [
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -27019,12 +27084,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tenants}}/metadatas?",
+									"raw": "{{tenants}}/metadata",
 									"host": [
 										"{{tenants}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									],
 									"query": [
 										{
@@ -27134,7 +27199,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -27152,12 +27217,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tenants}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{tenants}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{tenants}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -27166,7 +27231,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas",
+							"name": "/metadata",
 							"request": {
 								"method": "POST",
 								"header": [
@@ -27184,12 +27249,12 @@
 									"raw": "{\n    \"owner\": \"BusinessUnit\",\n    \"ownerUuid\": \"c11c546e-bd01-47cf-97da-e25388357b5a\",\n    \"title\": {\n    \t\"en\": \"Metadata 1\"\n    },\n    \"slug\": \"metadata-1\",\n    \"type\": \"type\",\n    \"data\": {},\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{tenants}}/metadatas",
+									"raw": "{{tenants}}/metadata",
 									"host": [
 										"{{tenants}}"
 									],
 									"path": [
-										"metadatas"
+										"metadata"
 									]
 								},
 								"description": "This endpoint adds a metadata to the list."
@@ -27197,7 +27262,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -27215,12 +27280,12 @@
 									"raw": "{\n    \"slug\": \"metadata-1 - edit\",\n    \"version\": 1\n}\n"
 								},
 								"url": {
-									"raw": "{{tenants}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{tenants}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{tenants}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -27229,7 +27294,7 @@
 							"response": []
 						},
 						{
-							"name": "/metadatas/{uuid}",
+							"name": "/metadata/{uuid}",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -27247,12 +27312,12 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{tenants}}/metadatas/11111111-1111-1111-1111-111111111111",
+									"raw": "{{tenants}}/metadata/11111111-1111-1111-1111-111111111111",
 									"host": [
 										"{{tenants}}"
 									],
 									"path": [
-										"metadatas",
+										"metadata",
 										"11111111-1111-1111-1111-111111111111"
 									]
 								},
@@ -28106,7 +28171,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"title\": {\n        \"en\": \"Plan 1 - edit\"\n    },\n    \"version\": 1\n}"
+									"raw": "{\n    \"title\": {\n        \"en\": \"Plan 1 - edit\",\n        \"fr\": \"Plan 1 - edit\",\n        \"es\": \"test\"\n    },\n    \"version\": 1\n}"
 								},
 								"url": {
 									"raw": "{{tenants}}/plans/d66089d2-a1df-45e3-8959-990e8d0f3335",

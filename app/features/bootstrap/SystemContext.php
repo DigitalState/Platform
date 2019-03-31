@@ -6,12 +6,12 @@ use Sanpi\Behatch\HttpCall\Request;
 /**
  * Class SystemContext
  */
-class SystemContext implements Context
+final class SystemContext implements Context
 {
     /**
      * @var \Sanpi\Behatch\HttpCall\Request
      */
-    protected $request;
+    private $request;
 
     /**
      * Constructor

@@ -22,10 +22,8 @@ default:
         - Sanpi\Behatch\Context\RestContext
         - Sanpi\Behatch\Context\JsonContext
         - ConsoleContext
-        - MigrationContext:
-            services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
-        - FixtureContext:
-            services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
+        - MigrationContext
+        - FixtureContext
         - SystemContext
     enterprise:
       paths:
@@ -38,8 +36,6 @@ default:
         - Sanpi\Behatch\Context\RestContext
         - Sanpi\Behatch\Context\JsonContext
         - ConsoleContext
-        - MigrationContext:
-            services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
-        - FixtureContext:
-            services: [assets, authentication, cases, cms, forms, identities, records, services, tasks, tenants]
+        - MigrationContext
+        - FixtureContext
         - SystemContext                                                                    

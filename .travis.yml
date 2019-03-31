@@ -1,13 +1,18 @@
 sudo: required
 
 env:
-  DOCKER_VERSION: 18.06.1~ce~3-0~ubuntu
-  DOCKER_COMPOSE_VERSION: 1.22.0
+  - DOCKER_VERSION=18.06.3~ce~3-0~ubuntu    DOCKER_COMPOSE_VERSION=1.22.0    INTEGRATED=no
+  - DOCKER_VERSION=18.06.3~ce~3-0~ubuntu    DOCKER_COMPOSE_VERSION=1.22.0    INTEGRATED=yes
+  - DOCKER_VERSION=18.06.2~ce~3-0~ubuntu    DOCKER_COMPOSE_VERSION=1.22.0    INTEGRATED=no
+  - DOCKER_VERSION=18.06.2~ce~3-0~ubuntu    DOCKER_COMPOSE_VERSION=1.22.0    INTEGRATED=yes
+  - DOCKER_VERSION=18.06.1~ce~3-0~ubuntu    DOCKER_COMPOSE_VERSION=1.22.0    INTEGRATED=no
+  - DOCKER_VERSION=18.06.1~ce~3-0~ubuntu    DOCKER_COMPOSE_VERSION=1.22.0    INTEGRATED=yes
 
 before_install:
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
   - sudo apt-get update
+  - apt-cache madison docker-ce
   - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce=${DOCKER_VERSION}
   - sudo rm /usr/local/bin/docker-compose
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
@@ -16,5 +21,5 @@ before_install:
 
 script:
   - docker-compose up -d
-  - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test && ansible-playbook -i inventory.yml ./install.yml"
-  - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test && ansible-playbook -i inventory.yml ./app/test/validate.yml"
+  - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test && ansible-playbook -i inventory.yml ./install.yml --extra-vars 'integrated=${INTEGRATED}'"
+  - docker-compose exec platform /bin/sh -c "cd /etc/ansible/env/test && ansible-playbook -i inventory.yml ./app/test/validate.yml --extra-vars 'integrated=${INTEGRATED}'"

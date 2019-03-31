@@ -18,6 +18,7 @@ Feature: Navigate app filesystem
       forms
       guide
       identities
+      microservice
       proxy
       records
       services

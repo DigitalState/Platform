@@ -4,10 +4,10 @@
       copy:
         src: '{{ _private_key }}'
         dest: /srv/authentication/api/config/jwt/key
-        mode: 0600
+        mode: 0666
     - name: Download authentication jwt public key
       copy:
         src: '{{ _public_key }}'
         dest: /srv/authentication/api/config/jwt/key.pub
-        mode: 0600
+        mode: 0666
   tags: [authentication]

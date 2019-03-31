@@ -8,5 +8,5 @@
       changed_when: false
     - name: Display tenants health check result
       debug:
-        msg: '{{ "Healthy" if (_result.stdout|from_json).healthy else "Not Health" }}'
+        msg: '{{ "Healthy" if (_result.stdout|from_json).healthy else "Not Healthy" }}'
   tags: [tenants]

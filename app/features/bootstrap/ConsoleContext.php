@@ -6,12 +6,12 @@ use Behat\Gherkin\Node\PyStringNode;
 /**
  * Class ConsoleContext
  */
-class ConsoleContext implements Context
+final class ConsoleContext implements Context
 {
     /**
      * @var string
      */
-    protected $output;
+    private $output;
 
     /**
      * @Given I have a console at :directory

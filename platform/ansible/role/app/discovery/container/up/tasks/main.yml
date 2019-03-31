@@ -12,4 +12,13 @@
         CONFIG: '{{ _config|to_json }}'
         UI_HOST: '{{ _ui_host }}'
         DISCOVERY_TOKEN: '{{ _discovery_token }}'
+    - name: Waiting for discovery container to finalize installation
+      shell:
+        cmd: docker-compose exec -T bootstrap wget -qO- localhost:8500/v1/status/peers | cat
+        chdir: /srv/discovery
+      register: _output
+      until: _output.stdout != '[]'
+      retries: 60
+      delay: 10
+      changed_when: false
   tags: [discovery]
