@@ -7,8 +7,8 @@ formio:
   api:
     host: api.formio.prod.ds
     admin:
-      user: admin
-      password: ~
+      user: admin@staff.ds
+      password: admin
   database:
     ui:
       host: ui.database.formio.prod.ds

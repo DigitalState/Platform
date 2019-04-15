@@ -2,14 +2,14 @@
 tasks:
   enabled: false
   repository: https://github.com/DigitalState/Tasks.git
-  version: 0.16.0
+  version: 0.16.2
   api:
     host: api.tasks.prod.ds
   database:
     host: tasks_database
     name: tasks
     user: tasks
-    password: ~
+    password: tasks
     ui:
       host: ui.database.tasks.prod.ds
   mock:

@@ -2,14 +2,14 @@
 forms:
   enabled: true
   repository: https://github.com/DigitalState/Forms.git
-  version: 0.16.0
+  version: 0.16.2
   api:
     host: api.forms.prod.ds
   database:
     host: forms_database
     name: forms
     user: forms
-    password: ~
+    password: forms
     ui:
       host: ui.database.forms.prod.ds
   mock:

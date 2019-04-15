@@ -2,14 +2,14 @@
 identities:
   enabled: true
   repository: https://github.com/DigitalState/Identities.git
-  version: 0.16.0
+  version: 0.16.2
   api:
     host: api.identities.prod.ds
   database:
     host: identities_database
     name: identities
     user: identities
-    password: ~
+    password: identities
     ui:
       host: ui.database.identities.prod.ds
   mock:
