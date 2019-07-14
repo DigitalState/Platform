@@ -2,14 +2,14 @@
 services:
   enabled: true
   repository: https://github.com/DigitalState/Services.git
-  version: 0.15.0
+  version: 0.16.3
   api:
     host: api.services.prod.ds
   database:
     host: services_database
     name: services
     user: services
-    password: ~
+    password: services
     ui:
       host: ui.database.services.prod.ds
   mock:

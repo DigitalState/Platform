@@ -2,14 +2,14 @@
 records:
   enabled: true
   repository: https://github.com/DigitalState/Records.git
-  version: 0.15.0
+  version: 0.16.3
   api:
     host: api.records.prod.ds
   database:
     host: records_database
     name: records
     user: records
-    password: ~
+    password: records
     ui:
       host: ui.database.records.prod.ds
   mock:

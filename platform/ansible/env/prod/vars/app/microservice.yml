@@ -2,14 +2,14 @@
 microservice:
   enabled: true
   repository: https://github.com/DigitalState/Microservice.git
-  version: 0.15.0
+  version: 0.16.3
   api:
     host: api.microservice.prod.ds
   database:
     host: microservice_database
     name: microservice
     user: microservice
-    password: ~
+    password: microservice
     ui:
       host: ui.database.microservice.prod.ds
   mock:

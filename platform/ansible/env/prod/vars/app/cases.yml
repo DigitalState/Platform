@@ -2,14 +2,14 @@
 cases:
   enabled: true
   repository: https://github.com/DigitalState/Cases.git
-  version: 0.15.1
+  version: 0.16.3
   api:
     host: api.cases.prod.ds
   database:
     host: cases_database
     name: cases
     user: cases
-    password: ~
+    password: cases
     ui:
       host: ui.database.cases.prod.ds
   mock:

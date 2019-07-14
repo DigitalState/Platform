@@ -3,7 +3,7 @@ workflow:
   enabled: true
   order: -10
   repository: https://github.com/DigitalState/Workflow.git
-  version: 0.15.1
+  version: 0.16.0
   api:
     host: api.workflow.prod.ds
     admin:
@@ -14,7 +14,7 @@ workflow:
     port: 5432
     name: workflow
     user: workflow
-    password: ~
+    password: workflow
     ui:
       host: ui.database.workflow.prod.ds
   docker:
