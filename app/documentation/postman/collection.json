@@ -10190,7 +10190,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"b20a40d9-b95b-4462-b8f1-c7453b9b7067\",\r\n\t\"slug\": \"test\",\r\n\t\"title\": { \r\n\t\t\"en\": \"title en\",\r\n\t\t\"fr\": \"title fr\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"description en\",\r\n\t\t\"fr\": \"description fr\" \r\n\t},\r\n\t\"version\": 1\r\n}"
+									"raw": "{\r\n\t\"owner\": \"BusinessUnit\",\r\n\t\"ownerUuid\": \"b20a40d9-b95b-4462-b8f1-c7453b9b7067\",\r\n\t\"slug\": \"test\",\r\n\t\"title\": { \r\n\t\t\"en\": \"title en\",\r\n\t\t\"fr\": \"title fr\" \r\n\t},\r\n\t\"description\": { \r\n\t\t\"en\": \"description en\",\r\n\t\t\"fr\": \"description fr\" \r\n\t},\r\n\t\"presentation\": { \r\n\t\t\"en\": \"presentation en\",\r\n\t\t\"fr\": \"presentation fr\" \r\n\t},\r\n\t\"data\": { \r\n\t\t\"en\": {\r\n\t\t\t\"data\": \"data en\"\r\n\t\t},\r\n\t\t\"fr\": {\r\n\t\t\t\"data\": \"data fr\"\r\n\t\t}\r\n\t},\r\n\t\"version\": 1\r\n}"
 								},
 								"url": {
 									"raw": "{{cms}}/pages",
@@ -15249,13 +15249,13 @@
 											}
 										],
 										"url": {
-											"raw": "{{identities}}/individual_roles/df67d9d4-0dc1-4393-972a-a659b24ff117",
+											"raw": "{{identities}}/individual_roles/9720acc4-17fa-40bb-a8d8-7cd2bff9af51",
 											"host": [
 												"{{identities}}"
 											],
 											"path": [
 												"individual_roles",
-												"df67d9d4-0dc1-4393-972a-a659b24ff117"
+												"9720acc4-17fa-40bb-a8d8-7cd2bff9af51"
 											]
 										},
 										"description": "This endpoint returns a specific individual persona."
@@ -15278,7 +15278,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"owner\": \"BusinessUnit\",\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n\t\"title\": {\n\t\t\"en\": \"Persona 1\"\n\t},\n\t\"individual\": \"/individuals/d0daa7e4-07d1-47e6-93f2-0629adaa3b49\",\n\t\"data\": {\n\t\t\"test\": \"test\"\n\t},\n\t\"version\": 1\n}"
+											"raw": "{\n\t\"owner\": \"BusinessUnit\",\n\t\"ownerUuid\": \"a9d68bf7-5000-49fe-8b00-33dde235b327\",\n\t\"individual\": \"/individuals/d0daa7e4-07d1-47e6-93f2-0629adaa3b49\",\n\t\"role\": \"/roles/54d82fc6-8ce7-498e-832f-3598664a9d9d\",\n\t\"businessUnits\": [\n\t\t\"/business_units/a9d68bf7-5000-49fe-8b00-33dde235b327\"\n\t],\n\t\"version\": 1\n}"
 										},
 										"url": {
 											"raw": "{{identities}}/individual_roles",
@@ -15309,16 +15309,16 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"title\": {\n        \"en\": \"Default-edit\",\n        \"fr\": \"Défaut-edit\"\n    },\n    \"version\": 1\n}"
+											"raw": "{\n\t\"businessUnits\": [\n\t\t\"/business_units/a9d68bf7-5000-49fe-8b00-33dde235b327\"\n\t],\n    \"version\": 1\n}"
 										},
 										"url": {
-											"raw": "{{identities}}/individual_roles/df67d9d4-0dc1-4393-972a-a659b24ff117",
+											"raw": "{{identities}}/individual_roles/9720acc4-17fa-40bb-a8d8-7cd2bff9af51",
 											"host": [
 												"{{identities}}"
 											],
 											"path": [
 												"individual_roles",
-												"df67d9d4-0dc1-4393-972a-a659b24ff117"
+												"9720acc4-17fa-40bb-a8d8-7cd2bff9af51"
 											]
 										},
 										"description": "This endpoint edits a specific individual persona."
@@ -15344,13 +15344,13 @@
 											"raw": ""
 										},
 										"url": {
-											"raw": "{{identities}}/individual_roles/df67d9d4-0dc1-4393-972a-a659b24ff117",
+											"raw": "{{identities}}/individual_roles/9720acc4-17fa-40bb-a8d8-7cd2bff9af51",
 											"host": [
 												"{{identities}}"
 											],
 											"path": [
 												"individual_roles",
-												"df67d9d4-0dc1-4393-972a-a659b24ff117"
+												"9720acc4-17fa-40bb-a8d8-7cd2bff9af51"
 											]
 										},
 										"description": "This endpoint deletes a specific individual persona from the list."
