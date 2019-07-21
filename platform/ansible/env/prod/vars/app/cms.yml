@@ -2,7 +2,7 @@
 cms:
   enabled: true
   repository: https://github.com/DigitalState/Cms.git
-  version: 0.17.0
+  version: 0.17.1
   api:
     host: api.cms.prod.ds
   database:
