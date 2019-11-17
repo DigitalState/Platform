@@ -2,7 +2,7 @@
 tasks:
   enabled: false
   repository: https://github.com/DigitalState/Tasks.git
-  version: 0.17.1
+  version: 0.17.3
   api:
     host: api.tasks.prod.ds
   database:
