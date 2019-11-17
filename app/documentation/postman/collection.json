@@ -24399,7 +24399,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{tasks}}/tasks?",
+									"raw": "{{tasks}}/tasks",
 									"host": [
 										"{{tasks}}"
 									],
@@ -24508,6 +24508,21 @@
 											"disabled": true
 										},
 										{
+											"key": "dueAt[before]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "dueAt[after]",
+											"value": "2017-01-01",
+											"disabled": true
+										},
+										{
+											"key": "priority",
+											"value": "50",
+											"disabled": true
+										},
+										{
 											"key": "order[uuid]",
 											"value": "asc",
 											"disabled": true
@@ -24515,6 +24530,11 @@
 										{
 											"key": "order[createdAt]",
 											"value": "asc",
+											"disabled": true
+										},
+										{
+											"key": "order[dueAt]",
+											"value": "",
 											"disabled": true
 										},
 										{
@@ -27377,12 +27397,113 @@
 											"disabled": true
 										},
 										{
+											"key": "createdBefore",
+											"value": "2017-01-01T12:00:00.000%2B0000",
+											"disabled": true
+										},
+										{
+											"key": "createdAfter",
+											"value": "2017-01-01T12:00:00.000%2B0000",
+											"disabled": true
+										},
+										{
+											"key": "dueBefore",
+											"value": "2017-01-01T12:00:00.000%2B0000",
+											"disabled": true
+										},
+										{
+											"key": "dueAfter",
+											"value": "2017-01-01T12:00:00.000%2B0000",
+											"disabled": true
+										},
+										{
+											"key": "priority",
+											"value": "50",
+											"disabled": true
+										},
+										{
 											"key": "sortBy",
 											"value": "created"
 										},
 										{
 											"key": "sortOrder",
 											"value": "desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/task/count",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{workflow}}/rest/task/count?",
+									"host": [
+										"{{workflow}}"
+									],
+									"path": [
+										"rest",
+										"task",
+										"count"
+									],
+									"query": [
+										{
+											"key": "candidateGroup",
+											"value": "8454c987-cbc5-4a24-ba1a-d420283caabd",
+											"disabled": true
+										},
+										{
+											"key": "includeAssignedTasks",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "involvedUser",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "assignee",
+											"value": "Individual",
+											"disabled": true
+										},
+										{
+											"key": "assigneeLike",
+											"value": "Individual%25",
+											"disabled": true
+										},
+										{
+											"key": "createdBefore",
+											"value": "2017-01-01T12:00:00.000%2B0000",
+											"disabled": true
+										},
+										{
+											"key": "createdAfter",
+											"value": "2017-01-01T12:00:00.000%2B0000",
+											"disabled": true
+										},
+										{
+											"key": "dueBefore",
+											"value": "2017-01-01T12:00:00.000%2B0000",
+											"disabled": true
+										},
+										{
+											"key": "dueAfter",
+											"value": "2017-01-01T12:00:00.000%2B0000",
+											"disabled": true
+										},
+										{
+											"key": "priority",
+											"value": "50",
+											"disabled": true
 										}
 									]
 								}
