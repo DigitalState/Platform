@@ -1,0 +1,27 @@
+objects:
+  - uuid: 0eaffe4d-f62b-4514-b16c-11925ed3c996
+    owner_uuid: 3709635c-5ab1-487b-84ea-23b6e282cc4d # Portal
+    slug: road-classifications
+    title:
+      en: Road Classifications
+      fr: Classifications routières
+    data:
+      en:
+        city-freeway: City Freeway
+        arterial-roads: Arterial Roads
+        major-collector-and-collector-roads: Major Collector and Collector Roads
+        local-roads: Local Roads
+      fr:
+        city-freeway: Autoroute de ville
+        arterial-roads: Artères
+        collector-roads: Routes collectrices et routes collectrices principales
+        local-roads: Rues locales
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: ~
+  slug: ~
+  title: {}
+  data: {}
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

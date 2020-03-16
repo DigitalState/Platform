@@ -1,0 +1,30 @@
+objects:
+  - uuid: c64bf657-a877-4127-bdcb-449e7e3985b3
+    identity: Individual
+    identity_uuid: 2af16e03-bbce-4ec9-b73f-8f0468a93f4b # Morgan
+    title:
+      en: Animal License
+      fr: Permis animalier
+    data:
+      id: 1
+      type: dog
+
+  - uuid: 7ddbae00-20a6-48b8-8ab8-bdf117d26586
+    identity: Organization
+    identity_uuid: 5946a069-95d4-4536-9f78-41ca96316cc5 # Acme
+    title:
+      en: Animal License
+      fr: Permis animalier
+    data:
+      id: 2
+      type: cat
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+  identity: ~
+  identity_uuid: ~
+  title: {}
+  data: {}
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

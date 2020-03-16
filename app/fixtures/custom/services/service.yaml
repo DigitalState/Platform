@@ -1,0 +1,52 @@
+objects:
+  - uuid: 4a06ea0c-705a-4481-bb9e-befe7ca0ce47
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    slug: report-pothole
+    title:
+      en: Report a Pothole
+      fr: Signaler un nids de poule
+    description:
+      en: Description ...
+      fr: Description ...
+    presentation:
+      en: Presentation ...
+      fr: Presentation ...
+
+  - uuid: e73b1d83-b660-4617-8c94-e00eea5df9db
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    slug: report-graffiti
+    title:
+      en: Report a Graffiti
+      fr: Signaler un graffiti
+    description:
+      en: Description ...
+      fr: Description ...
+    presentation:
+      en: Presentation ...
+      fr: Presentation ...
+
+  - uuid: 851dee3d-9c56-46ac-96de-1397484f7679
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    slug: recycle-bin-query
+    title:
+      en: Recycle Bin Query
+      fr: Requête pour bac de recyclage
+    description:
+      en: Description ...
+      fr: Description ...
+    presentation:
+      en: Presentation ...
+      fr: Presentation ...
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: ~
+  slug: ~
+  title: {}
+  description: {}
+  presentation: {}
+  data: {}
+  enabled: true
+  weight: 0
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

@@ -1,0 +1,13 @@
+objects:
+  - key: ds_system.user.username
+    value: system
+
+  - key: ds_system.user.password
+    value: system
+
+  - key: ds_tenant.tenant.default
+    value: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant
+
+prototype:
+  key: ~
+  value: ~

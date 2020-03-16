@@ -1,0 +1,146 @@
+objects:
+  - access: e5aec3bf-c524-4f39-b69a-37a4fad9fac5 # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: e5aec3bf-c524-4f39-b69a-37a4fad9fac5 # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: e5aec3bf-c524-4f39-b69a-37a4fad9fac5 # Administrator
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+  - access: aaf58d8b-c3b2-4354-9b9f-39e9fbfc1dfb # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - case
+      - case_status
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: aaf58d8b-c3b2-4354-9b9f-39e9fbfc1dfb # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - case_property
+      - case_status_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 4ab2f639-724d-49e0-ba75-c3ce36f72c36 # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - case
+      - case_status
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 4ab2f639-724d-49e0-ba75-c3ce36f72c36 # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - case_property
+      - case_status_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: f0300ff1-4d81-4721-8e5d-4c14e89ffceb # Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - case
+      - case_property
+      - case_status
+      - case_status_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: 12fb8b17-ba00-465b-86fa-21dacb81a13e # Backoffice Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - case
+      - case_property
+      - case_status
+      - case_status_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: b5803f52-ed62-4d1f-8e29-c00770613c0c # Individual
+    scope:
+      type: session
+    key:
+      - case
+      - case_uuid
+      - case_custom_id
+      - case_created_at
+      - case_title
+      - case_data
+      - case_state
+      - case_statuses
+      - case_version
+      - case_status
+      - case_status_uuid
+      - case_status_created_at
+      - case_status_case
+      - case_status_title
+      - case_status_description
+      - case_status_data
+      - case_status_version
+    attributes: [BROWSE, READ]
+
+  - access: ae8ec633-125a-4a24-b31d-2ef568c5a1ee # Organization
+    scope:
+      type: session
+    key:
+      - case
+      - case_uuid
+      - case_custom_id
+      - case_created_at
+      - case_title
+      - case_data
+      - case_state
+      - case_statuses
+      - case_version
+      - case_status
+      - case_status_uuid
+      - case_status_created_at
+      - case_status_case
+      - case_status_title
+      - case_status_description
+      - case_status_data
+      - case_status_version
+    attributes: [BROWSE, READ]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

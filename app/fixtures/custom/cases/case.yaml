@@ -1,0 +1,33 @@
+objects:
+  - uuid: ddec212d-3512-45b6-af39-20910db4720b
+    custom_id: GOV-82184661
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    identity: Individual
+    identity_uuid: 2af16e03-bbce-4ec9-b73f-8f0468a93f4b # Morgan
+    title:
+      en: Pothole - 123 Street - Urgent
+      fr: Nid-de-poule - 123 rue - urgent
+    state: 1 # open
+
+  - uuid: 78e00b3a-a386-48da-9373-5bcb7d9fbea2
+    custom_id: GOV-788e4c03
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    identity: Staff
+    identity_uuid: 38bf092a-b807-438f-8cc9-009fc12924cb # Remy
+    title:
+      en: Pothole - Quality Review
+      fr: Nid-de-poule - Examen de la qualité
+    state: 1 # open
+
+prototype:
+  uuid: ~
+  custom_id: ~
+  owner: BusinessUnit
+  owner_uuid: ~
+  identity: ~
+  identity_uuid: ~
+  title: {}
+  data: {}
+  state: ~
+  priority: 0
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

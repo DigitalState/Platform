@@ -1,0 +1,80 @@
+objects:
+  - uuid: 1a8dd057-1681-46ad-927e-0fd4898d4ffc
+    key: app.bpm.variables.api_url
+    value: api_url
+
+  - uuid: e27b69a2-b79a-41f1-8385-13f2b3b2c00b
+    key: app.bpm.variables.api_user
+    value: api_user
+
+  - uuid: a4130f75-6a0d-421f-a6ed-e283af003cce
+    key: app.bpm.variables.api_key
+    value: api_key
+
+  - uuid: f1ff61a9-14b9-4550-8ff7-a4eb1f20ce87
+    key: app.bpm.variables.service_uuid
+    value: service_uuid
+
+  - uuid: d344f887-210d-4b64-aab0-b56df4bcf33f
+    key: app.bpm.variables.scenario_uuid
+    value: scenario_uuid
+
+  - uuid: dc2e88d8-2b55-49a0-8a23-8f8e6a95e553
+    key: app.bpm.variables.scenario_custom_data
+    value: scenario_custom_data
+
+  - uuid: df52bff5-7091-48cb-bafb-e0a529e50e23
+    key: app.bpm.variables.identity
+    value: identity
+
+  - uuid: b340d880-92a1-455e-b5ba-f849501f28df
+    key: app.bpm.variables.identity_uuid
+    value: identity_uuid
+
+  - uuid: bb029150-8b10-4778-8f0c-17d058382f03
+    key: app.bpm.variables.submission_uuid
+    value: submission_uuid
+
+  - uuid: 460e0882-a34d-4d43-abb5-6b0e6b144ac0
+    key: app.bpm.variables.start_data
+    value: start_data
+
+  - uuid: 134eae03-f89a-4dee-8710-af3ccdd103bd
+    key: ds_api.user.username
+    value: system@system.ds
+
+  - uuid: 11bcfb34-baf5-4838-979c-b14add030fb3
+    key: ds_api.user.password
+    value: system
+
+  - uuid: 0341c60a-3c29-43ab-88c5-3a0b5297acbd
+    key: ds_api.user.uuid
+    value: 4b0237d1-0917-4d8b-af6d-2aa89be336de # System
+
+  - uuid: 6c30bfbd-fcd7-479a-b20e-fadf14d06a4e
+    key: ds_api.user.roles
+    value: []
+
+  - uuid: 56127c8e-68a9-4c34-8875-578b4cd61172
+    key: ds_api.user.identity.roles
+    value: []
+
+  - uuid: d5a5716c-3117-447e-b5d5-345063072062
+    key: ds_api.user.identity.type
+    value: System
+
+  - uuid: 797b3d2f-ea67-41c5-9818-177d71f9e809
+    key: ds_api.user.identity.uuid
+    value: fe1b94ed-783a-48d7-8bf2-2f9cea89f11e # System
+
+  - uuid: e442ee0f-f089-4e92-8771-a089a0e06679
+    key: ds_api.user.tenant
+    value: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: 9df65eca-1e81-475b-8584-df6c357edf30 # Administration
+  key: ~
+  value: ~
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

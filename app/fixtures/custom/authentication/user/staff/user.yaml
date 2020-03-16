@@ -1,0 +1,31 @@
+objects:
+  - uuid: 40759f94-3e8b-41a1-8a3c-dd84393da5b9
+    username: admin@staff.ds
+    email: admin@staff.ds
+    password: admin
+    identity_uuid: e32f09b7-e1cf-4a91-a0e1-6822bf47a662 # Admin
+
+  - uuid: 03f8c569-9c5d-43a8-83bb-9cf6c9249e63
+    username: manager@staff.ds
+    email: manager@staff.ds
+    password: manager
+    identity_uuid: 47a5a9cb-496f-4db7-8999-489ec404887f # Manager
+
+  - uuid: 6fc979ec-c210-4b10-b344-600f7ecb2aeb
+    username: agent@staff.ds
+    email: agent@staff.ds
+    password: agent
+    identity_uuid: 5449ce65-5df0-440d-aead-21a77907e59a # Agent
+
+prototype:
+  uuid: ~
+  username: ~
+  email: ~
+  password: ~
+  enabled: true
+  roles: []
+  owner: BusinessUnit
+  owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+  identity: Staff
+  identity_uuid: ~
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

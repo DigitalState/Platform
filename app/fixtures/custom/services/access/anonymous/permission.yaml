@@ -1,0 +1,45 @@
+objects:
+  - access: 6cc946b7-2ff1-4def-b203-aa361d128f9a # Anonymous
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - category
+      - category_uuid
+      - category_title
+      - category_description
+      - category_presentation
+      - category_data
+      - service
+      - service_uuid
+      - service_title
+      - service_description
+      - service_presentation
+      - service_data
+      - scenario
+      - scenario_uuid
+      - scenario_title
+      - scenario_description
+      - scenario_presentation
+      - scenario_data
+    attributes: [BROWSE, READ]
+
+  - access: 6cc946b7-2ff1-4def-b203-aa361d128f9a # Anonymous
+    scope:
+      type: session
+    key:
+      - submission
+      - submission_uuid
+      - submission_created_at
+      - submission_scenario
+      - submission_data
+    attributes: [BROWSE, READ]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

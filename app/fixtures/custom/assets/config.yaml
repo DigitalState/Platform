@@ -1,0 +1,40 @@
+objects:
+  - uuid: c8b9d2cd-b3eb-4dd1-baad-fe985136b97f
+    key: ds_api.user.username
+    value: system@system.ds
+
+  - uuid: ed54565b-060e-4f15-9f9d-8f7585d357db
+    key: ds_api.user.password
+    value: system
+
+  - uuid: 164e6695-cc40-4028-acd9-3616f0245884
+    key: ds_api.user.uuid
+    value: 4b0237d1-0917-4d8b-af6d-2aa89be336de # System
+
+  - uuid: ad905f36-44ac-4ae2-80a8-3fcaabfdd1bd
+    key: ds_api.user.roles
+    value: []
+
+  - uuid: ca5a660f-4ce8-4e20-a2b6-31cd2e508fd3
+    key: ds_api.user.identity.roles
+    value: []
+
+  - uuid: 446fa498-3106-4fe9-8b29-8811464aa7a7
+    key: ds_api.user.identity.type
+    value: System
+
+  - uuid: d53ad899-5f5d-4d0a-ace3-f0466625cfa6
+    key: ds_api.user.identity.uuid
+    value: fe1b94ed-783a-48d7-8bf2-2f9cea89f11e # System
+
+  - uuid: 13daece8-213c-417e-86f4-4dea486117f5
+    key: ds_api.user.tenant
+    value: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: 9df65eca-1e81-475b-8584-df6c357edf30 # Administration
+  key: ~
+  value: ~
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

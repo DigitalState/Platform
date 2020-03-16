@@ -1,0 +1,45 @@
+objects:
+  - uuid: 843aa477-4c0d-4505-a53c-a3a642646a9b
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    slug: infrastructure
+    title:
+      en: Infrastructure
+      fr: Infrastructure
+    description:
+      en: Description ...
+      fr: Description ...
+    presentation:
+      en: Presentation ...
+      fr: Presentation ...
+    services:
+      - 4a06ea0c-705a-4481-bb9e-befe7ca0ce47 # Report a Pothole
+      - e73b1d83-b660-4617-8c94-e00eea5df9db # Report a Graffiti
+
+  - uuid: 499b9d3d-9604-49cb-ac3f-b70e505c0f80
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    slug: environment
+    title:
+      en: Environment
+      fr: Environnement
+    description:
+      en: Description ...
+      fr: Description ...
+    presentation:
+      en: Presentation ...
+      fr: Presentation ...
+    services:
+      - 851dee3d-9c56-46ac-96de-1397484f7679 # Recycle Bin Query
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: ~
+  slug: ~
+  title: {}
+  description: {}
+  presentation: {}
+  data: {}
+  enabled: true
+  weight: 0
+  services: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

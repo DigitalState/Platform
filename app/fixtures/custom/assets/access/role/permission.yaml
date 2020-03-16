@@ -1,0 +1,128 @@
+objects:
+  - access: c4fcda7a-601e-4ad9-ad08-69f59630567e # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: c4fcda7a-601e-4ad9-ad08-69f59630567e # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: c4fcda7a-601e-4ad9-ad08-69f59630567e # Administrator
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+  - access: 081bc44e-ef70-494c-80fd-6f381a034ca7 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - asset
+      - asset_association
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 081bc44e-ef70-494c-80fd-6f381a034ca7 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - asset_property
+      - asset_association_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: c53208e7-3fbe-44a3-ab37-378bfeaaf97d # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - asset
+      - asset_association
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: c53208e7-3fbe-44a3-ab37-378bfeaaf97d # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - asset_property
+      - asset_association_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 0242cef6-d323-4b2a-be1d-33d220c16984 # Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - asset
+      - asset_property
+      - asset_association
+      - asset_association_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: 847758a3-10af-4b2a-8862-c3a0207ec0bc # Backoffice Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - asset
+      - asset_property
+      - asset_association
+      - asset_association_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: 8df3f13f-3cd6-4bb9-bc83-77df7d8c91b7 # Individual
+    scope:
+      type: session
+    key:
+      - asset
+      - asset_uuid
+      - asset_title
+      - asset_data
+      - asset_association
+      - asset_association_uuid
+      - asset_association_entity
+      - asset_association_entity_uuid
+    attributes: [BROWSE, READ]
+
+  - access: 492bad7f-8ab4-40f5-9153-0f3c059b1afd # Organization
+    scope:
+      type: session
+    key:
+      - asset
+      - asset_uuid
+      - asset_title
+      - asset_data
+      - asset_association
+      - asset_association_uuid
+      - asset_association_entity
+      - asset_association_entity_uuid
+    attributes: [BROWSE, READ]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

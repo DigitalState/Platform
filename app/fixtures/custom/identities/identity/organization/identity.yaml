@@ -1,0 +1,8 @@
+objects:
+  - uuid: 5946a069-95d4-4536-9f78-41ca96316cc5 # Acme
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

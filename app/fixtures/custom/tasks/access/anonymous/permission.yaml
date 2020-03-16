@@ -1,0 +1,30 @@
+objects:
+  - access: 3e7300a8-8ebc-42e8-b229-96e56f26ead4 # Anonymous
+    scope:
+      type: session
+    key:
+      - task
+      - task_uuid
+      - task_created_at
+      - task_due_at
+      - task_follow_up_at
+      - task_title
+      - task_description
+      - task_priority
+      - task_form
+      - submission
+      - submission_uuid
+      - submission_created_at
+      - submission_task
+      - submission_data
+      - submission_state
+      - submission_version
+    attributes: [BROWSE, READ]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

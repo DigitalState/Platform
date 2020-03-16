@@ -1,0 +1,28 @@
+objects:
+  - individual: 2af16e03-bbce-4ec9-b73f-8f0468a93f4b # Morgan
+    uuid: 39fe9947-f75a-4103-a49c-7ece3602bb84
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    data:
+      suffix: Mr
+      firstName: Morgan
+      lastName: Cole
+      address:
+        street: 111 Wellington St
+        city: Ottawa
+        province: Ontario
+        country: Canada
+        postalCode: K1A 0A4
+      phone: 1-888-111-2222
+      email: morgan@individual.ds
+      birthDate: 1972-01-08
+
+prototype:
+  individual: ~
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: ~
+  title:
+    en: Default
+    fr: Défaut
+  data: {}
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

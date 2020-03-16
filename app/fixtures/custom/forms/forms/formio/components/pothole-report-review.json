@@ -1,0 +1,88 @@
+[
+  {
+    "properties": {},
+    "tags": [],
+    "labelPosition": "top",
+    "hideLabel": false,
+    "type": "textfield",
+    "conditional": {
+      "eq": "",
+      "when": null,
+      "show": ""
+    },
+    "validate": {
+      "customPrivate": false,
+      "custom": "",
+      "pattern": "",
+      "maxLength": "",
+      "minLength": "",
+      "required": false
+    },
+    "clearOnHide": true,
+    "hidden": false,
+    "persistent": true,
+    "unique": false,
+    "protected": false,
+    "defaultValue": "",
+    "multiple": false,
+    "suffix": "",
+    "prefix": "",
+    "placeholder": "",
+    "key": "description",
+    "label": "Description",
+    "inputMask": "",
+    "inputType": "text",
+    "tableView": true,
+    "input": true
+  },
+  {
+    "conditional": {
+      "eq": "",
+      "when": null,
+      "show": ""
+    },
+    "optionsLabelPosition": "right",
+    "labelPosition": "top",
+    "hideLabel": false,
+    "type": "selectboxes",
+    "validate": {
+      "required": true
+    },
+    "clearOnHide": true,
+    "hidden": false,
+    "persistent": true,
+    "protected": false,
+    "inline": false,
+    "values": [
+      {
+        "shortcut": "",
+        "label": "yes",
+        "value": "yes"
+      },
+      {
+        "shortcut": "",
+        "label": "no",
+        "value": "no"
+      }
+    ],
+    "key": "approved",
+    "label": "Approved",
+    "tableView": true,
+    "input": true
+  },
+  {
+    "hideLabel": false,
+    "type": "button",
+    "theme": "primary",
+    "disableOnInvalid": false,
+    "action": "submit",
+    "block": false,
+    "rightIcon": "",
+    "leftIcon": "",
+    "size": "md",
+    "key": "submit",
+    "tableView": false,
+    "label": "Submit",
+    "input": true
+  }
+]

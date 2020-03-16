@@ -1,0 +1,152 @@
+objects:
+  - access: 2232d711-9e8f-4ef0-bd9f-d27a1835518a # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 2232d711-9e8f-4ef0-bd9f-d27a1835518a # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+    key: property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 2232d711-9e8f-4ef0-bd9f-d27a1835518a # Administrator
+    scope:
+      type: generic
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+  - access: b36174a8-eb28-4654-8fe8-938ba64ec758 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - user
+      - registration
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: b36174a8-eb28-4654-8fe8-938ba64ec758 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - user_property
+      - registration_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 903f2b1e-5df9-48dd-a739-0a757033f835 # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - user
+      - registration
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 903f2b1e-5df9-48dd-a739-0a757033f835 # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - user_property
+      - registration_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 2c8514ff-b13e-4df1-8036-724916bcef22 # Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - user
+      - user_property
+      - registration
+      - registration_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: 4fddbb03-ed65-4a36-a863-91716e19adfd # Backoffice Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - user
+      - user_property
+      - registration
+      - registration_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: ad2e18be-54c9-4331-8455-e56b058e8b0a # Individual
+    scope:
+      type: session
+    key: user
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: ad2e18be-54c9-4331-8455-e56b058e8b0a # Individual
+    scope:
+      type: session
+    key:
+      - user_uuid
+      - user_created_at
+      - user_username
+      - user_email
+      - user_version
+    attributes: [BROWSE, READ]
+
+  - access: ad2e18be-54c9-4331-8455-e56b058e8b0a # Individual
+    scope:
+      type: session
+    key:
+      - user_username
+      - user_email
+      - user_version
+    attributes: [EDIT]
+
+  - access: ce9add98-00ac-4dec-a860-2218300ebbea # Organization
+    scope:
+      type: session
+    key: user
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: ce9add98-00ac-4dec-a860-2218300ebbea # Organization
+    scope:
+      type: session
+    key:
+      - user_uuid
+      - user_created_at
+      - user_username
+      - user_email
+      - user_version
+    attributes: [BROWSE, READ]
+
+  - access: ce9add98-00ac-4dec-a860-2218300ebbea # Organization
+    scope:
+      type: session
+    key:
+      - user_username
+      - user_email
+      - user_version
+    attributes: [EDIT]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

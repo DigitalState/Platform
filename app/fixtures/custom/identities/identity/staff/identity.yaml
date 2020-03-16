@@ -1,0 +1,32 @@
+objects:
+  - uuid: 6c344b4b-78d3-47c4-9d8b-e67217f46569 # Admin
+    owner_uuid: 9df65eca-1e81-475b-8584-df6c357edf30 # Administration
+    business_units:
+      - 9df65eca-1e81-475b-8584-df6c357edf30 # Administration
+      - 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+      - 3709635c-5ab1-487b-84ea-23b6e282cc4d # Portal
+
+  - uuid: e9f3a831-048f-4cd3-92bf-2c77e6d34d1d # Elliot
+    business_units:
+      - 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+      - 3709635c-5ab1-487b-84ea-23b6e282cc4d # Portal
+
+  - uuid: 7281ef76-be00-42e4-ab67-fc7e0cc2e7ef # Devon
+    business_units:
+      - 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+
+  - uuid: 38bf092a-b807-438f-8cc9-009fc12924cb # Remy
+    business_units:
+      - 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+      - 3709635c-5ab1-487b-84ea-23b6e282cc4d # Portal
+
+  - uuid: 3e94c60b-34c8-4355-91c9-4b246504f110 # Blair
+    business_units:
+      - 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+  business_units: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

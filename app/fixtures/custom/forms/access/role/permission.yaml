@@ -1,0 +1,118 @@
+objects:
+  - access: 7f697307-5b58-42e9-970f-b85e8b02cd7c # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 7f697307-5b58-42e9-970f-b85e8b02cd7c # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 7f697307-5b58-42e9-970f-b85e8b02cd7c # Administrator
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+  - access: 0b865e5d-f454-4755-a449-65c4a6e20d85 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - form
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 0b865e5d-f454-4755-a449-65c4a6e20d85 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - form_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: a0a66a10-bf97-4abb-bde1-3f5dd6a99e21 # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - form
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: a0a66a10-bf97-4abb-bde1-3f5dd6a99e21 # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - form_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 61c40554-df09-4053-a778-25bc6e2093c5 # Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - form
+      - form_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: b23d13bf-8132-46d9-a616-e22f1e42fe13 # Backoffice Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - form
+      - form_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: 7fca09bc-6378-4b82-be9c-14f73c1d367a # Individual
+    scope:
+      type: session
+    key:
+      - form
+      - form_uuid
+      - form_type
+      - form_config
+      - form_title
+      - form_description
+      - form_data
+    attributes: [BROWSE, READ]
+
+  - access: eaf0f806-2f51-4351-89a6-02d0bc8d0ad8 # Organization
+    scope:
+      type: session
+    key:
+      - form
+      - form_uuid
+      - form_type
+      - form_config
+      - form_title
+      - form_description
+      - form_data
+    attributes: [BROWSE, READ]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

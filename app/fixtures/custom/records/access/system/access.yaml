@@ -1,0 +1,12 @@
+objects:
+  - uuid: 78daddec-031a-416f-8494-43cec7552d18
+    owner_uuid: 1d14cd3f-72cc-444b-8dc7-bbdba4815536 # System
+    assignee_uuid: 1d14cd3f-72cc-444b-8dc7-bbdba4815536 # System
+
+prototype:
+  uuid: ~
+  owner: System
+  owner_uuid: ~
+  assignee: System
+  assignee_uuid: ~
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

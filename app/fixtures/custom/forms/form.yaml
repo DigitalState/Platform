@@ -1,0 +1,47 @@
+objects:
+  - uuid: b27e13a7-7820-41fd-a7ff-50eaefd3b028
+    type: formio
+    config:
+      title: Pothole Report
+      display: form
+      type: form
+      name: pothole-report
+      path: pothole-report
+      tags: [pothole]
+      components: forms/formio/components/pothole-report.json
+      submissionAccess: forms/formio/submission_access/anonymous.json
+    title:
+      en: Pothole Report
+      fr: Signaler un nids de poule
+    description:
+      en: Description ...
+      fr: Description ...
+
+  - uuid: 53e1e95f-0c81-4a1f-b502-bec3084202e8
+    type: formio
+    config:
+      title: Pothole Report Review
+      display: form
+      type: form
+      name: pothole-report-review
+      path: pothole-report-review
+      tags: [pothole]
+      components: forms/formio/components/pothole-report-review.json
+      submissionAccess: forms/formio/submission_access/anonymous.json
+    title:
+      en: Pothole Report Review
+      fr: Examen du signalement d'un nids de poule
+    description:
+      en: Description ...
+      fr: Description ...
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+  type: ~
+  config: {}
+  title: {}
+  description: {}
+  data: {}
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant
