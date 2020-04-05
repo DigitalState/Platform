@@ -1,0 +1,214 @@
+objects:
+  - access: 10269f62-8ffa-4c0b-9693-0971a8fced15 # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 10269f62-8ffa-4c0b-9693-0971a8fced15 # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 10269f62-8ffa-4c0b-9693-0971a8fced15 # Administrator
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+  - access: 71b0c940-3b9b-4bc1-bdbc-e9ac9ad709b4 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - anonymous
+      - anonymous_persona
+      - individual
+      - individual_persona
+      - organization
+      - organization_persona
+      - staff
+      - staff_persona
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 71b0c940-3b9b-4bc1-bdbc-e9ac9ad709b4 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - anonymous_property
+      - anonymous_persona_property
+      - individual_property
+      - individual_persona_property
+      - organization_property
+      - organization_persona_property
+      - staff_property
+      - staff_persona_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 7111354b-a59c-4415-90bb-3e22ba15b3b9 # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - anonymous
+      - anonymous_persona
+      - individual
+      - individual_persona
+      - organization
+      - organization_persona
+      - staff
+      - staff_persona
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 7111354b-a59c-4415-90bb-3e22ba15b3b9 # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - anonymous_property
+      - anonymous_persona_property
+      - individual_property
+      - individual_persona_property
+      - organization_property
+      - organization_persona_property
+      - staff_property
+      - staff_persona_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: a1e7a267-763b-4b7d-b8ee-5a73d5e7adee # Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - anonymous
+      - anonymous_property
+      - anonymous_persona
+      - anonymous_persona_property
+      - individual
+      - individual_property
+      - individual_persona
+      - individual_persona_property
+      - organization
+      - organization_property
+      - organization_persona
+      - organization_persona_property
+      - staff
+      - staff_property
+      - staff_persona
+      - staff_persona_property
+      - business_unit
+      - business_unit_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: 9bae5401-a9ac-4813-a23f-42eb16928d87 # Backoffice Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - anonymous
+      - anonymous_property
+      - anonymous_persona
+      - anonymous_persona_property
+      - individual
+      - individual_property
+      - individual_persona
+      - individual_persona_property
+      - organization
+      - organization_property
+      - organization_persona
+      - organization_persona_property
+      - staff
+      - staff_property
+      - staff_persona
+      - staff_persona_property
+      - business_unit
+      - business_unit_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: 197231a2-1ad7-4527-8d4e-e78e4ad0efa3 # Individual
+    scope:
+      type: session
+    key:
+      - individual
+      - individual_uuid
+      - individual_created_at
+      - individual_persona
+      - individual_persona_uuid
+      - individual_persona_created_at
+      - individual_persona_title
+      - individual_persona_data
+      - individual_persona_version
+    attributes: [BROWSE, READ]
+
+  - access: 197231a2-1ad7-4527-8d4e-e78e4ad0efa3 # Individual
+    scope:
+      type: session
+    key:
+      - individual_persona
+    attributes: [EDIT, ADD]
+
+  - access: 197231a2-1ad7-4527-8d4e-e78e4ad0efa3 # Individual
+    scope:
+      type: session
+    key:
+      - individual_persona_title
+      - individual_persona_data
+      - individual_persona_version
+    attributes: [EDIT]
+
+  - access: 62d2fa06-88c9-45b3-a8da-105ae7cf21cc # Organization
+    scope:
+      type: session
+    key:
+      - organization
+      - organization_uuid
+      - organization_created_at
+      - organization_persona
+      - organization_persona_uuid
+      - organization_persona_created_at
+      - organization_persona_title
+      - organization_persona_data
+      - organization_persona_version
+    attributes: [BROWSE, READ]
+
+  - access: 62d2fa06-88c9-45b3-a8da-105ae7cf21cc # Organization
+    scope:
+      type: session
+    key:
+      - organization_persona
+    attributes: [EDIT, ADD]
+
+  - access: 62d2fa06-88c9-45b3-a8da-105ae7cf21cc # Organization
+    scope:
+      type: session
+    key:
+      - organization_persona_title
+      - organization_persona_data
+      - organization_persona_version
+    attributes: [EDIT]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

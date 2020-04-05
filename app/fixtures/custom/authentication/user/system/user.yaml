@@ -1,0 +1,27 @@
+objects:
+  - uuid: 4b0237d1-0917-4d8b-af6d-2aa89be336de
+    username: system@system.ds
+    email: system@system.ds
+    password: system
+    owner_uuid: fe1b94ed-783a-48d7-8bf2-2f9cea89f11e # System
+    identity_uuid: fe1b94ed-783a-48d7-8bf2-2f9cea89f11e # System
+
+  - uuid: 178fb5a4-2da3-4546-9dc4-f37748bf5652
+    username: bpm@system.ds
+    email: bpm@system.ds
+    password: bpm
+    owner_uuid: 60591cbd-efad-4289-9b7c-a258016e94cb # Bpm
+    identity_uuid: 60591cbd-efad-4289-9b7c-a258016e94cb # Bpm
+
+prototype:
+  uuid: ~
+  username: ~
+  email: ~
+  password: ~
+  enabled: true
+  roles: []
+  owner: System
+  owner_uuid: ~
+  identity: System
+  identity_uuid: ~
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

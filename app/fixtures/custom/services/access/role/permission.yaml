@@ -1,0 +1,194 @@
+objects:
+  - access: de1a56b6-3da7-42a6-bea4-0f7d3e3e77d0 # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: de1a56b6-3da7-42a6-bea4-0f7d3e3e77d0 # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: de1a56b6-3da7-42a6-bea4-0f7d3e3e77d0 # Administrator
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+  - access: 1b842b28-dc35-4c87-b08e-96407b2ee939 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - category
+      - service
+      - scenario
+      - submission
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 1b842b28-dc35-4c87-b08e-96407b2ee939 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - category_property
+      - service_property
+      - scenario_property
+      - submission_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 96aad66e-0dba-4829-b626-9540f97fdad9 # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - category
+      - service
+      - scenario
+      - submission
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 96aad66e-0dba-4829-b626-9540f97fdad9 # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - category_property
+      - service_property
+      - scenario_property
+      - submission_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: d8c12375-afe5-4523-a46b-3ef5630d566e # Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - category
+      - category_property
+      - service
+      - service_property
+      - scenario
+      - scenario_property
+      - submission
+      - submission_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: f4d7dcce-870e-4290-8d13-99cb273f90bc # Backoffice Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - category
+      - category_property
+      - service
+      - service_property
+      - scenario
+      - scenario_property
+      - submission
+      - submission_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: 7e7b7c0b-1a20-4deb-92ff-bd7a7117e730 # Individual
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - category
+      - category_uuid
+      - category_title
+      - category_description
+      - category_presentation
+      - category_data
+      - service
+      - service_uuid
+      - service_title
+      - service_description
+      - service_presentation
+      - service_data
+      - scenario
+      - scenario_uuid
+      - scenario_title
+      - scenario_description
+      - scenario_presentation
+      - scenario_data
+      - scenario_type
+      - scenario_data
+    attributes: [BROWSE, READ]
+
+  - access: 7e7b7c0b-1a20-4deb-92ff-bd7a7117e730 # Individual
+    scope:
+      type: session
+    key:
+      - submission
+      - submission_uuid
+      - submission_created_at
+      - submission_scenario
+      - submission_data
+    attributes: [BROWSE, READ]
+
+  - access: fcb10ed4-b6b9-4542-95be-bad277569cb1 # Organization
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - category
+      - category_uuid
+      - category_title
+      - category_description
+      - category_presentation
+      - category_data
+      - service
+      - service_uuid
+      - service_title
+      - service_description
+      - service_presentation
+      - service_data
+      - scenario
+      - scenario_uuid
+      - scenario_title
+      - scenario_description
+      - scenario_presentation
+      - scenario_data
+      - scenario_type
+      - scenario_data
+    attributes: [BROWSE, READ]
+
+  - access: fcb10ed4-b6b9-4542-95be-bad277569cb1 # Organization
+    scope:
+      type: session
+    key:
+      - submission
+      - submission_uuid
+      - submission_created_at
+      - submission_scenario
+      - submission_data
+    attributes: [BROWSE, READ]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

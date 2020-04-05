@@ -1,0 +1,20 @@
+objects:
+  - uuid: 83f5c0df-7daf-430e-87b2-2747b3f1ee91
+    title:
+      en: Bronze Plan
+      fr: Plan Bronze
+
+  - uuid: 09dc0162-6478-43c6-84ec-4847b0c825cd
+    title:
+      en: Silver Plan
+      fr: Plan Argent
+
+  - uuid: dc2ba5ed-229d-4127-9061-6d18b5e0deb8
+    title:
+      en: Gold Plan
+      fr: Plan d'or
+
+prototype:
+  uuid: ~
+  title: {}
+  data: {}

@@ -1,0 +1,108 @@
+objects:
+  - uuid: fed82698-e8cc-498a-bf88-ea7c076b690f
+    key: app.spa.admin
+    value: http://admin.ds
+
+  - uuid: 0f4a2a6f-5ef7-4281-992c-90e712481b42
+    key: app.spa.portal
+    value: http://portal.ds
+
+  - uuid: 388d89cd-3ed3-401b-8666-31052df05a30
+    key: app.registration.individual.owner.type
+    value: BusinessUnit
+
+  - uuid: c0f29892-4db3-4fdb-b41c-4fe28b799751
+    key: app.registration.individual.owner.uuid
+    value: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+
+  - uuid: c728b569-8e60-4041-9b90-2458ad1b9029
+    key: app.registration.individual.roles
+    value: [54d82fc6-8ce7-498e-832f-3598664a9d9d]
+
+  - uuid: 435b339e-8281-496e-a5cc-d2fead3473a9
+    key: app.registration.individual.enabled
+    value: true
+
+  - uuid: 89679f58-1256-4985-b98c-186599f659bc
+    key: app.registration.organization.owner.type
+    value: BusinessUnit
+
+  - uuid: 7fb6a57f-1a77-499e-96fb-ae35859c5f88
+    key: app.registration.organization.owner.uuid
+    value: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+
+  - uuid: 55253ea9-177d-4df2-8408-eeaea9f9700f
+    key: app.registration.organization.roles
+    value: [777b96e7-e183-44f7-b7e4-dc0cb7591f74]
+
+  - uuid: 650274bd-b889-429c-812b-c0af4bebddf1
+    key: app.registration.organization.enabled
+    value: true
+
+  - uuid: 891e5fea-0331-4ffa-ac52-e877167d74eb
+    key: app.registration.staff.owner.type
+    value: BusinessUnit
+
+  - uuid: 653243c7-efca-4d24-b478-a3695f729ab5
+    key: app.registration.staff.owner.uuid
+    value: 9df65eca-1e81-475b-8584-df6c357edf30 # Administration
+
+  - uuid: dd5e1d4c-8baa-4ac8-9bc6-9cccb2797a94
+    key: app.registration.staff.roles
+    value: [3e64bbd1-4d00-47e7-a35e-92691f5a6018]
+
+  - uuid: 4780ff40-5bbf-4e25-9a3d-26eef39e2c2d
+    key: app.registration.staff.enabled
+    value: false
+
+  - uuid: 25bbaff8-e3c1-4f78-bffd-b8f030672e5c
+    key: app.resetting.email.subject
+    value: app.resetting.email.subject
+
+  - uuid: 6ffd25ba-47c9-4bb9-82fb-9cd5b865bb31
+    key: app.resetting.email.body.plain
+    value: app.resetting.email.body.plain
+
+  - uuid: 00d07d5e-e123-47c8-9fc0-980c2d6ca750
+    key: app.resetting.email.body.html
+    value: app.resetting.email.body.html
+
+  - uuid: c59ec23a-6e1b-4fbd-b84f-47311c615e1e
+    key: ds_api.user.username
+    value: system@system.ds
+
+  - uuid: 74ae67fa-ae84-4337-bfc4-2346958983a3
+    key: ds_api.user.password
+    value: system
+
+  - uuid: 76211f31-5544-4d38-b11a-44e90f045076
+    key: ds_api.user.uuid
+    value: 4b0237d1-0917-4d8b-af6d-2aa89be336de # System
+
+  - uuid: 39a63591-0fba-460f-b385-20d5b7fb2661
+    key: ds_api.user.roles
+    value: []
+
+  - uuid: 1fc71c1f-d089-45b2-a8c9-a5cb4e9ce361
+    key: ds_api.user.identity.roles
+    value: []
+
+  - uuid: 4c44b547-1ded-40e3-9e64-870305b2e7e4
+    key: ds_api.user.identity.type
+    value: System
+
+  - uuid: 70ef6920-1322-484c-b987-4c1a74af6a84
+    key: ds_api.user.identity.uuid
+    value: fe1b94ed-783a-48d7-8bf2-2f9cea89f11e # System
+
+  - uuid: 1cb0c6c5-96ab-4437-b396-217309b92be0
+    key: ds_api.user.tenant
+    value: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: 9df65eca-1e81-475b-8584-df6c357edf30 # Administration
+  key: ~
+  value: ~
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

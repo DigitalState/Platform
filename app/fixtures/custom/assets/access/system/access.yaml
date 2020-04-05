@@ -1,0 +1,16 @@
+objects:
+  - uuid: ac6b6279-857d-4f02-88d8-322a3168734d
+    owner_uuid: fe1b94ed-783a-48d7-8bf2-2f9cea89f11e # System
+    assignee_uuid: fe1b94ed-783a-48d7-8bf2-2f9cea89f11e # System
+
+  - uuid: 30bda715-1bdd-4ebf-9fc1-991b90f4dc74
+    owner_uuid: 60591cbd-efad-4289-9b7c-a258016e94cb # Bpm
+    assignee_uuid: 60591cbd-efad-4289-9b7c-a258016e94cb # Bpm
+
+prototype:
+  uuid: ~
+  owner: System
+  owner_uuid: ~
+  assignee: System
+  assignee_uuid: ~
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

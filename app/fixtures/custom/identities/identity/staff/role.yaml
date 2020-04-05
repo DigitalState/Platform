@@ -1,0 +1,36 @@
+objects:
+  - staff: 6c344b4b-78d3-47c4-9d8b-e67217f46569 # Admin
+    uuid: 06101454-9d73-4280-b059-e487d8de287f
+    owner_uuid: 9df65eca-1e81-475b-8584-df6c357edf30 # Administration
+    role: 0c1228d5-63fb-4615-ada2-2b184cd753ee # Administrator
+
+  - staff: e9f3a831-048f-4cd3-92bf-2c77e6d34d1d # Elliot
+    uuid: 52005969-938a-48ce-a4ca-a24c18acd474
+    role: 81596e69-f75e-4eaa-b429-0599d181cca7 # Manager
+    business_units:
+      - 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+      - 3709635c-5ab1-487b-84ea-23b6e282cc4d # Portal
+
+  - staff: 7281ef76-be00-42e4-ab67-fc7e0cc2e7ef # Devon
+    uuid: fdc4afcd-457c-43d8-8d13-20e2ae291468
+    role: 2f0bfe5d-74cb-4d74-89b6-7272c20aca35 # Backoffice Manager
+
+  - staff: 38bf092a-b807-438f-8cc9-009fc12924cb # Remy
+    uuid: 27e82c4a-4f85-46d2-8785-5cee36aa9769
+    role: ab7ac1fa-62f4-4732-8c48-0e1785fb086d # Staff
+    business_units:
+      - 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+      - 3709635c-5ab1-487b-84ea-23b6e282cc4d # Portal
+
+  - staff: 3e94c60b-34c8-4355-91c9-4b246504f110 # Blair
+    uuid: 4fad6529-ec83-4e05-8218-91447cafeafc
+    role: c2c4a4db-e3db-4019-ac0e-73edb8aa789e # Backoffice Staff
+
+prototype:
+  staff: ~
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+  role: ~
+  business_units: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

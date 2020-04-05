@@ -4,6 +4,8 @@
       include_tasks: /etc/ansible/task/app/proxy/container/property/ip.yml
     - name: Retrieve discovery container ip
       include_tasks: /etc/ansible/task/app/discovery/container/property/ip.yml
+    - name: Assemble discovery env variables
+      include_tasks: /etc/ansible/task/app/discovery/adapter/env.yml
     - name: Up microservice container
       include_role:
         name: app/microservice/container/up
@@ -22,8 +24,11 @@
         _api_secret: '{{ encryption.secret }}'
         _api_host: '{{ app.microservice.api.host }}'
         _api_jwt_pass_phrase: '{{ jwt.pass_phrase }}'
-        _api_discovery_host: '{{ discovery_container_ip.stdout + ":8500" if integrated == "yes" else "microservice_mock_discovery:8080" }}'
-        _api_discovery_credential: '{{ app.discovery.token.master }}'
+        _api_discovery_adapter: '{{ core.component.discovery.adapter }}'
+        _api_discovery_consul_host: '{{ discovery_container_ip.stdout + ":8500" if integrated == "yes" else "microservice_mock_discovery:8080" }}'
+        _api_discovery_consul_credentials: '{{ app.discovery.token.master }}'
+        _api_discovery_env_services: '{{ discovery_env_services|to_json }}'
+        _api_discovery_env_configs: ''
         _api_encryption: '{{ encryption.encryption }}'
         _api_system_username: '{{ system.username }}'
         _api_system_password: '{{ system.password }}'

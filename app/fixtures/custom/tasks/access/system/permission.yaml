@@ -1,0 +1,20 @@
+objects:
+  - access: 11ad7c1a-b484-4b40-b839-c4c8d500e05e # System
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 11ad7c1a-b484-4b40-b839-c4c8d500e05e # System
+    key: property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 11ad7c1a-b484-4b40-b839-c4c8d500e05e # System
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

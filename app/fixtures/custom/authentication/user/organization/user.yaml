@@ -1,0 +1,19 @@
+objects:
+  - uuid: 336dcc1c-d7dc-46de-9640-e19dc567bd3f
+    username: acme@organization.ds
+    email: acme@organization.ds
+    password: acme
+    identity_uuid: c9599da5-35a8-494c-9181-975d78be9694 # Acme
+
+prototype:
+  uuid: ~
+  username: ~
+  email: ~
+  password: ~
+  enabled: true
+  roles: []
+  owner: BusinessUnit
+  owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+  identity: Organization
+  identity_uuid: ~
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

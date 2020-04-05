@@ -1,0 +1,19 @@
+objects:
+  - uuid: 42182fd0-9665-4ba4-9f5c-ec290e23814e
+    username: morgan@individual.ds
+    email: morgan@individual.ds
+    password: morgan
+    identity_uuid: d0daa7e4-07d1-47e6-93f2-0629adaa3b49 # Morgan
+
+prototype:
+  uuid: ~
+  username: ~
+  email: ~
+  password: ~
+  enabled: true
+  roles: []
+  owner: BusinessUnit
+  owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+  identity: Individual
+  identity_uuid: ~
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

@@ -3,3 +3,6 @@ core:
   enabled: true
   repository: https://github.com/DigitalState/Core.git
   version: develop
+  component:
+    discovery:
+      adapter: consul

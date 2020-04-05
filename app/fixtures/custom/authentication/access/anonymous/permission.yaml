@@ -1,0 +1,31 @@
+objects:
+  - access: 8305bdb8-b932-41e7-b29c-e1f81964b6db # Anonymous
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key: registration
+    attributes: [ADD]
+
+  - access: 8305bdb8-b932-41e7-b29c-e1f81964b6db # Anonymous
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - registration_owner
+      - registration_owner_uuid
+      - registration_identity
+      - registration_username
+      - registration_password
+      - registration_data
+      - registration_version
+    attributes: [EDIT]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

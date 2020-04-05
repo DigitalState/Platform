@@ -1,0 +1,10 @@
+objects: []
+
+prototype:
+  anonymous: ~
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: ~
+  role: ~
+  business_units: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

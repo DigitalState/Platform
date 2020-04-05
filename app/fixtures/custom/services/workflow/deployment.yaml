@@ -1,0 +1,10 @@
+objects:
+  - name: Pothole Report
+    files:
+      - bpmn/pothole-report.bpmn
+
+prototype:
+  name: ~
+  source: ~
+  files: []
+  tenant_id: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

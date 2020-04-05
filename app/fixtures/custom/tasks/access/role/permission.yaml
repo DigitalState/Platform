@@ -1,0 +1,144 @@
+objects:
+  - access: 2386a1f2-4dc6-4078-b42d-109db7258a4b # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 2386a1f2-4dc6-4078-b42d-109db7258a4b # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 2386a1f2-4dc6-4078-b42d-109db7258a4b # Administrator
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+  - access: 1a770d5c-13a4-4304-a328-f898ded37f49 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - task
+      - submission
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 1a770d5c-13a4-4304-a328-f898ded37f49 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - task_property
+      - submission_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: f3f22d87-9edb-4b27-a6f2-a30181acf38f # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - task
+      - submission
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: f3f22d87-9edb-4b27-a6f2-a30181acf38f # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - task_property
+      - submission_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: 45bafff4-dae1-4cb1-bdcf-e71f347092f2 # Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - task
+      - task_property
+      - submission
+      - submission_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: 7ce80f25-dfb5-4c12-ac8d-f04562403530 # Backoffice Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - task
+      - task_property
+      - submission
+      - submission_property
+      - metadata
+      - metadata_property
+    attributes: [BROWSE, READ]
+
+  - access: 785bd0d9-6b03-4d18-b6aa-914f268b5479 # Individual
+    scope:
+      type: session
+    key:
+      - task
+      - task_uuid
+      - task_created_at
+      - task_due_at
+      - task_follow_up_at
+      - task_title
+      - task_description
+      - task_priority
+      - task_form
+      - submission
+      - submission_uuid
+      - submission_created_at
+      - submission_task
+      - submission_data
+      - submission_state
+      - submission_version
+    attributes: [BROWSE, READ]
+
+  - access: 2ea1271a-fa3d-4448-a0d4-0a890bb3aeba # Organization
+    scope:
+      type: session
+    key:
+      - task
+      - task_uuid
+      - task_created_at
+      - task_due_at
+      - task_follow_up_at
+      - task_title
+      - task_description
+      - task_priority
+      - task_form
+      - submission
+      - submission_uuid
+      - submission_created_at
+      - submission_task
+      - submission_data
+      - submission_state
+      - submission_version
+    attributes: [BROWSE, READ]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

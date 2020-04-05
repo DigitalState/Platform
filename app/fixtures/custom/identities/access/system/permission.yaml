@@ -1,0 +1,20 @@
+objects:
+  - access: cfe91139-68e7-4ae9-87f7-df480fd18edb # System
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: cfe91139-68e7-4ae9-87f7-df480fd18edb # System
+    key: property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: cfe91139-68e7-4ae9-87f7-df480fd18edb # System
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

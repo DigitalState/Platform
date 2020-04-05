@@ -1,0 +1,104 @@
+objects:
+  - uuid: 1ab18cea-0930-432a-99f1-beeb55a26b14
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    service: 4a06ea0c-705a-4481-bb9e-befe7ca0ce47 # Report a Pothole
+    type: bpm
+    config:
+      bpm: camunda
+      process_definition_key: pothole-report
+    slug: online
+    title:
+      en: Report a Pothole Online
+      fr: Signaler un nids de poule en-ligne
+    description:
+      en: Description ...
+      fr: Description ...
+    presentation:
+      en: Presentation ...
+      fr: Présentation ...
+    data:
+      en:
+        button_text: Activate
+      fr:
+        button_text: Activer
+    weight: 0
+
+  - uuid: 320c0e14-2965-4c19-8f33-68bbac206e6b
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    service: e73b1d83-b660-4617-8c94-e00eea5df9db # Report a Graffiti
+    type: bpm
+    config:
+      bpm: camunda
+      process_definition_key: graffiti-report
+    slug: online
+    title:
+      en: Report a Graffiti Online
+      fr: Signaler un graffiti en-ligne
+    description:
+      en: Description ...
+      fr: Description ...
+    presentation:
+      en: Presentation ...
+      fr: Présentation ...
+    data:
+      en:
+        button_text: Activate
+      fr:
+        button_text: Activer
+    weight: 0
+
+  - uuid: 67412965-28a2-48aa-8d1c-9bec7f91645f
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    service: 851dee3d-9c56-46ac-96de-1397484f7679 # Recycle Bin Query
+    type: bpm
+    config:
+      bpm: camunda
+      process_definition_key: recycle-bin-query
+    slug: online
+    title:
+      en: Recycle Bin Query Online
+      fr: Requête pour bac de recyclage en-ligne
+    description:
+      en: Description ...
+      fr: Description ...
+    presentation:
+      en: Presentation ...
+      fr: Présentation ...
+    data:
+      en:
+        button_text: Activate
+      fr:
+        button_text: Activer
+    weight: 0
+
+  - uuid: 81a75204-9547-45f9-92f7-44d7d1d0eec3
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    service: 851dee3d-9c56-46ac-96de-1397484f7679 # Recycle Bin Query
+    type: info
+    slug: info
+    title:
+      en: Recycle Bin Query By Mail
+      fr: Requête pour bac de recyclage par courrier
+    description:
+      en: Description ...
+      fr: Description ...
+    presentation:
+      en: Presentation ...
+      fr: Présentation ...
+    weight: 1
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: ~
+  service: ~
+  type: ~
+  config: {}
+  slug: ~
+  title: {}
+  description: {}
+  presentation: {}
+  data: {}
+  enabled: true
+  weight: 0
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

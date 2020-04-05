@@ -1,0 +1,36 @@
+[
+  {
+    "type": "create_all",
+    "roles": []
+  },
+  {
+    "type": "read_all",
+    "roles": []
+  },
+  {
+    "type": "update_all",
+    "roles": []
+  },
+  {
+    "type": "delete_all",
+    "roles": []
+  },
+  {
+    "type": "create_own",
+    "roles": [
+      "anonymous"
+    ]
+  },
+  {
+    "type": "read_own",
+    "roles": []
+  },
+  {
+    "type": "update_own",
+    "roles": []
+  },
+  {
+    "type": "delete_own",
+    "roles": []
+  }
+]

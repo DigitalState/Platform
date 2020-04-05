@@ -1,0 +1,28 @@
+objects:
+  - organization: 5946a069-95d4-4536-9f78-41ca96316cc5 # Acme
+    uuid: 393ee599-f2ac-42b5-b1d8-9c062fac490d
+    owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    data:
+      name: Acme Corporation
+      description: The Acme Corporation is a fictional corporation.
+      businessNumber: 123456
+      anniversary: 1999-01-01
+      address:
+        street: 90 Wellington St
+        city: Ottawa
+        province: Ontario
+        country: Canada
+        postalCode: K1A 0A4
+      phone: 1-888-111-2222
+      email: acme@organization.ds
+
+prototype:
+  individual: ~
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: ~
+  title:
+    en: Default
+    fr: Défaut
+  data: {}
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

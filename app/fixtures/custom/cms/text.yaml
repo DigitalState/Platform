@@ -1,0 +1,29 @@
+objects:
+  - uuid: 890d5e21-a06e-4e85-950c-1ca6ab4dd693
+    owner_uuid: 3709635c-5ab1-487b-84ea-23b6e282cc4d # Portal
+    slug: portal-title
+    title:
+      en: Portal Title
+      fr: Titre du portail
+    value:
+      en: Merrimill
+      fr: Merrimill
+
+  - uuid: 2dd97844-ccb9-4797-a6f7-0e2929e7ed06
+    owner_uuid: 3709635c-5ab1-487b-84ea-23b6e282cc4d # Portal
+    slug: portal-description
+    title:
+      en: Portal Description
+      fr: Description du portail
+    value:
+      en: Merrimill Public Services
+      fr: Services publics Merrimill
+
+prototype:
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: ~
+  slug: ~
+  title: {}
+  value: {}
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

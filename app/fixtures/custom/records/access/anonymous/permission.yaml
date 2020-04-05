@@ -1,0 +1,22 @@
+objects:
+  - access: f0ea347d-1503-46c5-825d-747c43a4936d # Anonymous
+    scope:
+      type: session
+    key:
+      - record
+      - record_uuid
+      - record_title
+      - record_data
+      - record_association
+      - record_association_uuid
+      - record_association_entity
+      - record_association_entity_uuid
+    attributes: [BROWSE, READ]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

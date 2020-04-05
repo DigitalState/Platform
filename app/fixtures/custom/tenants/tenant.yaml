@@ -1,0 +1,12 @@
+objects:
+  - uuid: 83f5c0df-7daf-430e-87b2-2747b3f1ee91
+    title:
+      en: Tenant 1
+      fr: Tenant 1
+    plan: d66089d2-a1df-45e3-8959-990e8d0f3335 # Bronze
+
+prototype:
+  uuid: ~
+  title: {}
+  data: {}
+  plan: ~

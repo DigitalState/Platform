@@ -1,0 +1,180 @@
+objects:
+  - access: ddcaa3b8-ecce-41be-be45-1669c6748d63 # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: entity
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: ddcaa3b8-ecce-41be-be45-1669c6748d63 # Administrator
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: ~ # Any BusinessUnit
+    key: property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: ddcaa3b8-ecce-41be-be45-1669c6748d63 # Administrator
+    key: generic
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE, EXECUTE]
+
+  - access: 70368994-823b-4096-9776-675253d224a2 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - data
+      - file
+      - text
+      - page
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: 70368994-823b-4096-9776-675253d224a2 # Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - data_property
+      - file_property
+      - text_property
+      - page_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: f32d6396-9c64-4f5c-822b-180661e4d640 # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - data
+      - file
+      - text
+      - page
+      - metadata
+    attributes: [BROWSE, READ, EDIT, ADD, DELETE]
+
+  - access: f32d6396-9c64-4f5c-822b-180661e4d640 # Backoffice Manager
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - data_property
+      - file_property
+      - text_property
+      - page_property
+      - metadata_property
+    attributes: [BROWSE, READ, EDIT]
+
+  - access: b9efd3b4-8318-43d0-81c5-a4727fd9e583 # Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: '*'
+    key:
+      - data
+      - data_property
+      - file
+      - file_property
+      - text
+      - text_property
+      - page
+      - page_property
+      - metadata
+      - metadata_property
+      - content
+    attributes: [BROWSE, READ]
+
+  - access: b2b4adf7-c2a4-4cc4-a5f4-1f36184eb93b # Backoffice Staff
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+    key:
+      - data
+      - data_property
+      - file
+      - file_property
+      - text
+      - text_property
+      - page
+      - page_property
+      - metadata
+      - metadata_property
+      - content
+    attributes: [BROWSE, READ]
+
+  - access: 16c36983-7bdc-47aa-b5ac-a8be10f2e882 # Individual
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 3709635c-5ab1-487b-84ea-23b6e282cc4d # Portal
+    key:
+      - data
+      - data_uuid
+      - data_slug
+      - data_title
+      - data_data
+      - file
+      - file_uuid
+      - file_slug
+      - file_title
+      - file_description
+      - file_presentation
+      - file_type
+      - text
+      - text_uuid
+      - text_slug
+      - text_title
+      - text_value
+      - page
+      - page_uuid
+      - page_slug
+      - page_title
+      - page_description
+      - content
+    attributes: [BROWSE, READ]
+
+  - access: 1058ba1f-d01c-4c4b-a3e9-e0c5d3f6ae28 # Organization
+    scope:
+      type: owner
+      entity: BusinessUnit
+      entity_uuid: 3709635c-5ab1-487b-84ea-23b6e282cc4d # Portal
+    key:
+      - data
+      - data_uuid
+      - data_slug
+      - data_title
+      - data_data
+      - file
+      - file_uuid
+      - file_slug
+      - file_title
+      - file_description
+      - file_presentation
+      - file_type
+      - text
+      - text_uuid
+      - text_slug
+      - text_title
+      - text_value
+      - page
+      - page_uuid
+      - page_slug
+      - page_title
+      - page_description
+      - content
+    attributes: [BROWSE, READ]
+
+prototype:
+  access: ~
+  scope:
+    type: generic
+  key: ~
+  attributes: []
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

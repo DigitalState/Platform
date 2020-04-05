@@ -1,0 +1,27 @@
+objects:
+  - staff: 6c344b4b-78d3-47c4-9d8b-e67217f46569 # Admin
+    uuid: 665da880-294d-41b8-9d05-3993e22c388d
+    owner_uuid: 9df65eca-1e81-475b-8584-df6c357edf30 # Administration
+
+  - staff: e9f3a831-048f-4cd3-92bf-2c77e6d34d1d # Elliot
+    uuid: b2ec9ff8-ac84-4bed-bbd6-521e30ac7b84
+
+  - staff: 7281ef76-be00-42e4-ab67-fc7e0cc2e7ef # Devon
+    uuid: 3a190a4a-7a1e-4f06-83b4-4811e8b2dc2d
+
+  - staff: 38bf092a-b807-438f-8cc9-009fc12924cb # Remy
+    uuid: b94c2809-e9f6-418b-8acf-902c3dbbf6a8
+
+  - staff: 3e94c60b-34c8-4355-91c9-4b246504f110 # Blair
+    uuid: 70e0618c-f0d3-442a-9212-6ca10b52e9e9
+
+prototype:
+  staff: ~
+  uuid: ~
+  owner: BusinessUnit
+  owner_uuid: 1efc9d23-111a-4f9a-b703-29df95e38a7e # Backoffice
+  title:
+    en: Default
+    fr: Défaut
+  data: {}
+  tenant: 5a5dc71c-8f08-476f-b192-106637717974 # Tenant

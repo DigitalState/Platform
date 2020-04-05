@@ -14,8 +14,11 @@ _api_env: prod
 _api_secret: ''
 _api_host: api.services.ds
 _api_jwt_pass_phrase: ~
-_api_discovery_host: api.discovery.ds
-_api_discovery_credential: ~
+_api_discovery_adapter: consul
+_api_discovery_consul_host: api.discovery.ds
+_api_discovery_consul_credentials: ~
+_api_discovery_env_services: ~
+_api_discovery_env_configs: ~
 _api_encryption: ~
 _api_system_username: system
 _api_system_password: ~
