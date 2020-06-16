@@ -90,7 +90,7 @@ At this point, you have the platform container running on your local machine as 
 Run the following command to install the dockerized application:
 
 ```
-ansible-playbook ./install.yml
+ansible-playbook ./install.yml -i inventory.yml
 ```
 
 > Note: Depending on the power of your machine and internet speed, this command may take a while to finish.
